@@ -424,12 +424,16 @@ def add_translations(items, fixtures=None, max_n=200):
     todo = [i for i in items if i["category"] != "papers" and not i.get("title_ko") and not _HANGUL.search(i["title"])][:max_n]
     # 해외 글의 '주요 내용 요약'도 한 줄씩 번역해 둔다(원문 요약 아래에 보여 준다)
     dtodo = [i for i in items if brief_text(i) and not i.get("detail_ko") and not _HANGUL.search(brief_text(i))][:max_n]
-    if fixtures or not (todo or dtodo):
+    stodo = [i for i in items if i.get("summary") and not i.get("summary_ko") and not _HANGUL.search(i["summary"])][:max_n]
+    if fixtures or not (todo or dtodo or stodo):
         return
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for it, ko in zip(todo, pool.map(translate_ko, [i["title"] for i in todo])):
             if ko and ko != it["title"] and _HANGUL.search(ko):
                 it["title_ko"] = ko
+        for it, ko in zip(stodo, pool.map(translate_ko, [i["summary"] for i in stodo])):
+            if ko and _HANGUL.search(ko):
+                it["summary_ko"] = ko.strip()
         for it, ko in zip(dtodo, pool.map(translate_ko, [brief_text(i) for i in dtodo])):
             if ko and _HANGUL.search(ko):
                 it["detail_ko"] = "\n".join(x.strip() for x in ko.split("\n") if x.strip())
@@ -822,7 +826,8 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief-bg{position:fixed;inset:0;z-index:50;background:rgba(3,3,12,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;animation:bfade .18s ease}
 .brief{position:relative;width:min(560px,100%);max-height:86vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:18px;padding:26px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .brief-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--soft);color:var(--text);font-size:15px;cursor:pointer}
-.brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}.brief-tr{display:block;margin-top:4px;color:var(--muted);font-size:14.5px}.brief-trb{margin:10px 0;padding:10px 14px;border-left:3px solid var(--c);background:var(--soft);border-radius:8px;font-size:14.5px;color:var(--muted)}.brief-trb b{display:block;font-size:12.5px;margin-bottom:4px}.brief-trb p{margin:4px 0}.brief-trn{margin:4px 0 0;font-size:12px;color:var(--muted)}
+.brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.sum-ko{color:var(--muted);font-size:.94em;border-left:3px solid var(--line);padding-left:10px;margin-top:6px}
+.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}.brief-tr{display:block;margin-top:4px;color:var(--muted);font-size:14.5px}.brief-trb{margin:10px 0;padding:10px 14px;border-left:3px solid var(--c);background:var(--soft);border-radius:8px;font-size:14.5px;color:var(--muted)}.brief-trb b{display:block;font-size:12.5px;margin-bottom:4px}.brief-trb p{margin:4px 0}.brief-trn{margin:4px 0 0;font-size:12px;color:var(--muted)}
 .brief h4{margin:18px 0 8px;font-size:14px;color:var(--heading)}.brief h4::before{content:"";display:inline-block;width:4px;height:.9em;border-radius:2px;background:var(--c);margin-right:8px;vertical-align:-.1em}
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
 .brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
@@ -1815,7 +1820,7 @@ def render_editor_pages(posts, cats, sc):
                 f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
                 f'<div class="elist">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
-        title = f"에디터 글{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
+        title = f"에디터{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
         (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, active="editor",
                                          desc=f"{sc['name']} 에디터가 직접 쓴 AI 칼럼과 분석 글"), encoding="utf-8")
         pages.append(path)
@@ -1835,7 +1840,7 @@ def render_editor_pages(posts, cats, sc):
                 f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
                 f'<div class="body">{body_html}</div>'
-                f'<p style="margin-top:40px"><a class="more" href="index.html">← 에디터 글 목록</a></p></article>')
+                f'<p style="margin-top:40px"><a class="more" href="index.html">← 에디터 목록</a></p></article>')
         (out / f"{p['id']}.html").write_text(page(f"{p['title']} | {sc['name']}", body, "../", cats, search=False,
                                                   path=path, desc=p["summary"], jsonld=ld, og_type="article",
                                                   active="editor", image=cover, head=font_links(fams)), encoding="utf-8")
@@ -1914,6 +1919,11 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .plist .pt{cursor:pointer}.plist .pt:hover{color:var(--accent,#3b7bff);text-decoration:underline}.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
+def sum_ko(it):
+    """해외 글: 요약 바로 아래에 자동 번역을 붙인다."""
+    return f'<p class="sum-ko">{esc(it["summary_ko"])}</p>' if it.get("summary_ko") else ""
+
+
 def render_home(data, cats, posts):
     d = datetime.fromisoformat(data["date"])
     items = data["items"]
@@ -1923,10 +1933,10 @@ def render_home(data, cats, posts):
     parts, used = [], set()
     hero, trend = pick_featured(items)
     if hero:  # 사진은 헤드라인과 주요 소식에만
-        summ = f'<p class="sum">{esc(hero["summary"])}</p>' if hero.get("summary") else ""
+        summ = (f'<p class="sum">{esc(hero["summary"])}</p>' if hero.get("summary") else "") + sum_ko(hero)
         side = "".join(
             f'<div class="trend">{thumb_html(i, "", used)}<div><h3 class="serif">{title_link(i)}</h3>'
-            + (f"<p>{esc(i['summary'])}</p>" if i.get("summary") else "")
+            + (f"<p>{esc(i['summary'])}</p>" if i.get("summary") else "") + sum_ko(i)
             + f"{meta_html(i, cats, True)}</div></div>" for i in trend)
         parts.append(
             f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
@@ -1935,7 +1945,7 @@ def render_home(data, cats, posts):
             f'<button class="circle share" data-url="{esc(hero["link"])}" data-title="{esc(hero["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div></div>'
             f'<aside><div class="side-h"><h2>주요 소식</h2><a href="#all" data-tab="all">전체 보기</a></div>{side}</aside></div>')
     if posts:
-        parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터 글</h2><a href="editor/">전체 보기 →</a></div>'
+        parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터</h2><a href="editor/">전체 보기 →</a></div>'
                      f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:3])}</div>')
     info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · {esc(data["generated_at"][11:16])} 업데이트'
     parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
@@ -1951,7 +1961,7 @@ def render_home(data, cats, posts):
         parts.append(f'<section class="cat" data-cat="{c}" id="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h2 class="serif">{esc(name)}</h2>{body}'
                      f'<a class="more" href="{c}/">{esc(name)} 지난 기록 모두 보기 →</a></section>')
     sc = site_cfg()
-    heading = f'<h1 class="eyebrow">{day_title(data["date"])} 오늘의 AI 브리핑</h1>'
+    heading = f'<h1 class="eyebrow">{day_title(data["date"])}</h1>'
     title = f"{sc['name']} | 오늘의 AI 뉴스·논문·정책 브리핑 · {day_title(data['date'])}"
     ld = day_jsonld(data, f"{sc['url']}/")
     ld.insert(0, {"@context": "https://schema.org", "@type": "WebSite", "name": sc["name"], "url": sc["url"] + "/",
