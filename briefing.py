@@ -321,7 +321,7 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#141012;--card:#1d1619;--text:#f2e9ec;--muted:#b3a4aa;--line:#33262c;
 --accent:#e58fae;--soft:#3a2530;--shadow:0 6px 18px rgba(0,0,0,.4)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 .serif{font-family:Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -377,9 +377,25 @@ footer{margin-top:56px;padding-top:26px;padding-bottom:40px;border-top:1px solid
 details summary{cursor:pointer}ul.st{columns:3;padding-left:18px}ul.st .bad{color:#c2410c}
 ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;border-bottom:1px solid var(--line)}ul.days a{color:var(--accent)}
 [hidden]{display:none!important}
-@media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}.search{display:none}.bar nav{justify-content:flex-start}}
-@media (max-width:600px){.wrap{padding:0 16px}.hero{padding-top:22px}.hero h1{font-size:25px}.grid,.list{grid-template-columns:1fr}
-.trend{grid-template-columns:112px 1fr;gap:12px}.trend h3{font-size:15px}ul.st{columns:1}.bar .wrap{gap:16px}.logo span{display:none}.kw .info{margin-left:0;width:100%}}
+@media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
+.bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
+.bar nav{justify-content:flex-end;flex:1}.bar nav a[data-go]{display:none}
+.search{order:3;width:100%}.search input{font-size:16px}}
+@media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
+.logo{font-size:18px}.hero{padding:20px 0 16px;gap:28px}.hero h1{font-size:23px;line-height:1.4;margin-bottom:14px}
+.badge{margin:8px 0 0;top:0;display:table}.hero .thumb{aspect-ratio:16/8}.hero p.sum{font-size:16px;line-height:1.7}
+.trend{grid-template-columns:88px 1fr;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}.trend .thumb{aspect-ratio:1}
+.trend .thumb .ph b{font-size:11.5px}.trend h3{font-size:16px}.trend .meta span:last-child{display:none}
+.kw{gap:6px}.kw .info{margin-left:0;width:100%;padding-top:4px}
+.tabs{padding:10px 0;margin:0 -16px;padding-left:16px;padding-right:16px}.tabs button{padding:9px 16px;font-size:15px}
+section.cat>h2{font-size:21px;margin:26px 0 8px}
+.grid,.list{grid-template-columns:1fr;gap:0}
+.card:not(.row){display:grid;grid-template-columns:96px 1fr;column-gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.card:not(.row) .thumb{grid-row:1/span 3;aspect-ratio:1;border-radius:12px;box-shadow:none}
+.card .thumb .ph{padding:8px 10px}.card .thumb .ph i,.card .thumb .ph span{display:none}.card .thumb .ph b{font-size:11.5px}
+.card h3{font-size:16px;line-height:1.5;margin:0 0 4px}.card p{font-size:14px;-webkit-line-clamp:2;margin-bottom:6px}
+.row{padding:14px 0}.meta{font-size:12.5px}
+ul.st{columns:1}footer{margin-top:36px}}
 """
 
 JS = """
