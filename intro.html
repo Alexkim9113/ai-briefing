@@ -57,7 +57,8 @@ body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
 @media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 18px;position:relative}.mid h1{margin:0;filter:drop-shadow(0 0 18px rgba(4,3,14,.95)) drop-shadow(0 0 6px rgba(4,3,14,.9))}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
  .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}.cats{display:none}.mid{padding-bottom:6px}.enter{font-size:12.5px;letter-spacing:.26em;padding:11px 20px 11px 26px;gap:9px}.enter svg{width:14px;height:14px}}
 @media (prefers-color-scheme:dark){.fade{background:#101018}}
-</style></head><body>
+.ai-note{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+</style></head><body>{AI_NOTICE}
 <div id="bg"></div><canvas id="gl" aria-hidden="true"></canvas>
 <div class="ui">
  <div class="top"><span class="brand">{NAME}</span><span class="tr"><span class="date live">{DATE} · 실시간 수집 중</span><button class="share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></span></div>
