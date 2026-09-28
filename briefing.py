@@ -39,7 +39,9 @@ DETAIL_CHARS = 300         # '주요 내용' 창: 언론사가 피드로 공개�
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
-CAT_CAP = {"talks": 5}    # 영상·강연은 하루 최신 5개만(AI 명사 인터뷰·강연)
+CAT_CAP = {"talks": 5,    # 영상·강연은 하루 최신 5개만(AI 명사 인터뷰·강연)
+           "news_ko": 160, "news_global": 120, "papers": 100}  # 언론사·주제가 많아 하루치가 잘리지 않게
+TOPIC_CAP = 6             # 주제별 구글 뉴스 검색(사회·환경·윤리 등)은 주제마다 하루 최대 6개: 한 주제가 목록을 다 차지하지 않게
 DEDUPE_DAYS = 7            # 최근 N일 브리핑에 이미 나온 글은 제외
 DUP_SIMILARITY = 0.4       # 같은 카테고리에서 제목 글자쌍이 이만큼 겹치면 같은 글로 본다
 DUP_SIMILARITY_KO = 0.33   # 한글 제목은 언론사마다 표현이 더 달라 기준을 조금 낮춘다
@@ -884,6 +886,9 @@ def collect(fixtures=None, now=None):
     mark_hot(uniq, hot_marks)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
+    per_topic = Counter()
+    uniq = [i for i in uniq if not (i.get("field") and "news.google.com" in i["link"])
+            or (per_topic.update([(i["category"], i["field"])]) or per_topic[(i["category"], i["field"])] <= TOPIC_CAP)]
     per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
     uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
