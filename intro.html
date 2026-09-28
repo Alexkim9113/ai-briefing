@@ -25,6 +25,13 @@ a{color:inherit;text-decoration:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#eef2ff;color:#06050d;padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;white-space:nowrap}
 @media (max-width:640px){.date{font-size:11.5px}.tr{gap:10px}.share{width:34px;height:34px}}
 .mid{text-align:center}
+.mid h1 .l{display:inline-block;background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);background-size:var(--w) 100%;background-position:calc(-1 * var(--x)) 0;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform,opacity,filter}
+.mid h1.fly .l{animation:fly .9s cubic-bezier(.16,.84,.28,1) both;animation-delay:var(--d)}
+@keyframes fly{0%{opacity:0;transform:translate(var(--dx),var(--dy)) scaleX(3.2) skewX(-18deg);filter:blur(10px)}55%{opacity:1;filter:blur(2px)}80%{transform:translate(calc(var(--dx) * -.03),calc(var(--dy) * -.03)) scaleX(.94)}100%{opacity:1;transform:none;filter:none}}
+.mid h1.fly::after{content:"";position:absolute;left:-10%;right:-10%;top:50%;height:2px;background:linear-gradient(90deg,transparent,#12e3ff,#8b2cff,transparent);opacity:0;animation:flash .7s ease-out .95s both}
+@keyframes flash{0%{opacity:0;transform:scaleX(.2)}40%{opacity:.9}100%{opacity:0;transform:scaleX(1.3)}}
+@media (prefers-reduced-motion:reduce){.mid h1.fly .l,.mid h1.fly::after{animation:none}}
+.mid h1.split{background:none}@media (min-width:641px){.mid h1.split{position:relative}}
 @media (max-width:640px){.mid h1{position:fixed;left:50%;top:var(--gy,50%);transform:translate(-50%,-50%);white-space:nowrap;margin:0!important;z-index:1}}
 .mid h1{display:inline-block;margin:0 0 38px;font-family:Unbounded,"Pretendard Variable",sans-serif;font-size:clamp(38px,8.4vw,112px);font-weight:700;letter-spacing:.04em;line-height:1.05;padding-left:.04em;
  background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(59,123,255,.35))}
@@ -49,7 +56,7 @@ a{color:inherit;text-decoration:none}
 .fade{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .7s ease}
 body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
 @media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 18px;position:relative}.mid h1{margin:0;filter:drop-shadow(0 0 18px rgba(4,3,14,.95)) drop-shadow(0 0 6px rgba(4,3,14,.9))}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
- .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}.cats{display:none}.mid{padding-bottom:6px}}
+ .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}.cats{display:none}.mid{padding-bottom:6px}.enter{font-size:12.5px;letter-spacing:.26em;padding:11px 20px 11px 26px;gap:9px}.enter svg{width:14px;height:14px}}
 @media (prefers-color-scheme:dark){.fade{background:#101018}}
 </style></head><body>
 <div id="bg"></div><canvas id="gl" aria-hidden="true"></canvas>
@@ -73,6 +80,13 @@ links.forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shift
 document.querySelector('.share').onclick=async()=>{const u='{URL}/?v={OGV}',t='{NAME}';
  try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 관련 정보를 한눈에 볼 수 있는 곳',url:u});}else{await navigator.clipboard.writeText(u);const d=document.createElement('div');d.className='toast';d.textContent='사이트 링크를 복사했어요';document.body.append(d);setTimeout(()=>d.remove(),2200);}}catch(e){}};
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+(()=>{const h=document.querySelector('.mid h1');if(!h)return;const t=h.textContent;h.setAttribute('aria-label',t);
+ h.innerHTML=[...t].map(c=>`<span class="l" aria-hidden="true">${c}</span>`).join('');h.classList.add('split');
+ const ls=[...h.querySelectorAll('.l')],fit=()=>{h.style.setProperty('--w',h.offsetWidth+'px');ls.forEach(l=>l.style.setProperty('--x',l.offsetLeft+'px'));};
+ fit();addEventListener('resize',fit);document.fonts&&document.fonts.ready.then(fit);
+ ls.forEach((l,i)=>{const a=Math.random()*6.283,r=(innerWidth>640?900:420)*(.7+Math.random()*.6);
+  l.style.setProperty('--dx',Math.cos(a)*r+'px');l.style.setProperty('--dy',Math.sin(a)*r*.6+'px');l.style.setProperty('--d',(.15+i*.07+Math.random()*.08).toFixed(2)+'s');});
+ if(!reduce)h.classList.add('fly');})();
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
  const R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
