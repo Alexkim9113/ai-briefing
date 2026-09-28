@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T13:35+09:00",
+ "generated_at": "2026-09-28T13:38+09:00",
  "items": [
   {
    "id": "b163ed3fcb727529",
@@ -285,6 +285,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T03:00:13+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "3546a910b47b54d7",
+   "title": "한국 생성형 AI 사용 비중 40% 돌파…세계 12위",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tYkNjcTRvOUFnZXhiRXJhVWU3VU1yYjBCMlRuejItNG0tSGI1azgyZXQtcGtTYUt4ZXgyajNJX05LZEQ5M0staWg5TElYcmpvS1JMQUR1bVZfTXM?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T02:59:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1349,17 +1360,6 @@
    "field": "AI 일반",
    "category": "papers",
    "published": "2026-09-28T00:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "ce06e7f0067b45cf",
-   "title": "[조간브리핑] AI 위험 경고하면서 개발은 가속···美·中 '브레이크 없는 경쟁'",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1NTG05Y0NuZ1Z4R2pZTDlsSEM3bG8xRVkwNVRsMUlsQWsyV0JaMVAwX0prWDdpa1ByaHF1aFNTaF95QWNHQUhiOTJYZ2F2OENtRHZKSmlic2JrN0FqM2F6OXdBalhFRDJGaVE?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:59:21+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2596,7 +2596,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News: AI",
@@ -2608,7 +2608,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 78
+   "fetched": 80
   },
   {
    "name": "Google News: AI 기업",
@@ -2650,7 +2650,7 @@
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -2824,7 +2824,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 50
+   "fetched": 49
   },
   {
    "name": "스테이지5",
