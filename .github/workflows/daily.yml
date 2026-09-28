@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "7,37 * * * *"   # 30분마다 수집(정각은 GitHub 서버가 붐벼 7분·37분에 실행)
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
+    inputs:
+      since:
+        description: "지난 글 다시 모으기 시작 날짜(YYYY-MM-DD). 비우면 평소처럼 수집"
+        required: false
+        default: ""
   push:
     branches: [main]
     paths: ["briefing.py", "sources.json", "static/**", "posts/**", ".github/workflows/daily.yml"]
@@ -24,7 +29,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: 수집 + 사이트 생성
-        run: python briefing.py
+        env:
+          SINCE: ${{ inputs.since }}
+        run: |
+          if [ -n "$SINCE" ]; then python briefing.py backfill --since "$SINCE"; else python briefing.py; fi
       - name: 수집 데이터 저장(카테고리 아카이브 보관용)
         run: |
           git config user.name "briefing-bot"

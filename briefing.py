@@ -359,6 +359,51 @@ def collect_source(src, fixtures):
     return parse_feed(raw)
 
 
+def translate_ko(text):
+    """무료 구글 번역(키 없음)으로 제목을 한국어로. 실패하면 빈 문자열."""
+    u = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=" + urllib.parse.quote(text)
+    try:
+        j = json.loads(fetch(u))
+        return "".join(seg[0] for seg in j[0] if seg and seg[0]).strip()
+    except Exception:
+        return ""
+
+
+def add_translations(items, fixtures=None, max_n=200):
+    """해외 글(한글이 없는 제목)에 번역 제목(title_ko)을 붙인다. 논문 제목은 원문 그대로 둔다."""
+    todo = [i for i in items if i["category"] != "papers" and not i.get("title_ko") and not _HANGUL.search(i["title"])][:max_n]
+    if fixtures or not todo:
+        return
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        for it, ko in zip(todo, pool.map(translate_ko, [i["title"] for i in todo])):
+            if ko and ko != it["title"] and _HANGUL.search(ko):
+                it["title_ko"] = ko
+
+
+def make_item(src, it, keywords, now):
+    """피드 항목 하나를 브리핑 항목으로. 조건에 안 맞으면 None."""
+    title = clean_text(it["title"])
+    if not title or not it["link"]:
+        return None
+    if src.get("url", "").startswith("https://news.google.com"):
+        title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
+    d = parse_date(it["date"], src.get("tz", 0))
+    if d and d > now + timedelta(minutes=10):  # 발행 시각이 미래로 찍힌 글은 수집 시각으로 맞춘다
+        d = now
+    if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
+        return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
+    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
+        return None
+    return {
+        "id": item_id(it["link"], title), "title": title, "link": it["link"],
+        "source": label(src), "field": src.get("field", ""),
+        "category": src["category"], "published": d.isoformat() if d else None,
+        "summary": summarize(it["desc"], title),
+        "thumb": "",  # 저작권 보호: 원본의 썸네일·사진은 수집하지 않는다
+        "_d": d,
+    }
+
+
 def collect(fixtures=None, now=None):
     cfg = load_config()
     now = now or datetime.now(timezone.utc)
@@ -381,33 +426,19 @@ def collect(fixtures=None, now=None):
                 continue
             kept = []
             for it in raw_items:
-                title = clean_text(it["title"])
-                if not title or not it["link"]:
+                item = make_item(src, it, keywords, now)
+                if not item:
                     continue
-                if src.get("url", "").startswith("https://news.google.com"):
-                    title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
-                d = parse_date(it["date"], src.get("tz", 0))
-                if d and d > now + timedelta(minutes=10):  # 발행 시각이 미래로 찍힌 글은 수집 시각으로 맞춘다
-                    d = now
+                d = item["_d"]
                 if src.get("max_age_days"):  # 새 영상이 드문 채널: 더 긴 기간 허용(최근 7일 브리핑과 중복은 제외)
                     if d and d < now - timedelta(days=src["max_age_days"]):
                         continue
                 elif d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
                     continue
-                if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
-                    continue  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
-                if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
+                if history.is_dup(item):
                     continue
-                iid = item_id(it["link"], title)
-                if history.is_dup({"id": iid, "title": title, "category": src["category"]}):
-                    continue
-                kept.append({
-                    "id": iid, "title": title, "link": it["link"],
-                    "source": label(src), "field": src.get("field", ""),
-                    "category": src["category"], "published": d.isoformat() if d else None,
-                    "summary": summarize(it["desc"], title),
-                    "thumb": "",  # 저작권 보호: 원본의 썸네일·사진은 수집하지 않는다(표지는 자체 제작 디자인)
-                })
+                del item["_d"]
+                kept.append(item)
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
                     break
             status.append({"name": label(src), "ok": True, "count": len(kept), "fetched": len(raw_items)})
@@ -427,12 +458,88 @@ def collect(fixtures=None, now=None):
     uniq.sort(key=lambda x: x["published"] or "", reverse=True)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
+    add_translations(uniq, fixtures)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     ok = sum(s["ok"] for s in status)
     print(f"[collect] {today} 항목 {len(uniq)}개, 소스 {ok}/{len(status)} 성공 → {path.relative_to(ROOT)}")
     return data
+
+
+_WHEN = re.compile(r"when(?::|%3A)\d+d", re.I)
+
+
+def backfill(start, fixtures=None, now=None):
+    """지난 날짜의 글을 거슬러 모은다. 구글 뉴스는 날짜별 검색, 나머지는 피드에 남아 있는 글에서 고른다."""
+    cfg = load_config()
+    now = now or datetime.now(timezone.utc)
+    today = now.astimezone(KST).date()
+    days = [start + timedelta(days=i) for i in range((today - start).days)]
+    if not days:
+        return
+    lo = datetime.combine(start, datetime.min.time(), KST)
+    hi = datetime.combine(today, datetime.min.time(), KST)
+    keywords = cfg.get("ai_keywords", [])
+    seen = Deduper()
+    for f in sorted(DATA_DIR.glob("*.json")):
+        for it in json.loads(f.read_text(encoding="utf-8"))["items"]:
+            seen.add(it)
+
+    def urls(src):
+        u = src["url"]
+        if "news.google.com" in u and _WHEN.search(u):
+            return [(d, _WHEN.sub(f"after:{d.isoformat()}+before:{(d + timedelta(days=1)).isoformat()}", u)) for d in days]
+        if src.get("type") == "hf_papers":
+            return [(d, f"{u}?date={d.isoformat()}") for d in days]
+        return [(None, u)]
+
+    def grab(src):
+        out = []
+        for day, u in urls(src):
+            try:
+                raw = fetch_youtube(u, src.get("ua")) if "youtube.com" in u and not fixtures else fetch(u, fixtures, src.get("ua"))
+                kind = src.get("type")
+                items = parse_hf_papers(raw) if kind == "hf_papers" else parse_europepmc(raw) if kind == "europepmc" else parse_feed(raw)
+            except Exception as e:
+                print(f"[backfill] {label(src)} {day or ''} 실패: {e}", file=sys.stderr)
+                continue
+            per_day = Counter()
+            for it in items:
+                item = make_item(src, it, keywords, now)
+                if not item or not item["_d"] or not (lo <= item["_d"] < hi):
+                    continue
+                k = day or item["_d"].astimezone(KST).date()
+                if per_day[k] >= src.get("limit", DEFAULT_LIMIT):
+                    continue
+                per_day[k] += 1
+                out.append(item)
+            if "news.google.com" in u:
+                time.sleep(1)
+        return out
+
+    found = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        for items in pool.map(grab, cfg["sources"]):
+            found += items
+    by_day = {}
+    for it in sorted(found, key=lambda x: x["published"], reverse=True):
+        if seen.is_dup(it):
+            continue
+        seen.add(it)
+        by_day.setdefault(it.pop("_d").astimezone(KST).date(), []).append(it)
+    for f in sorted(DATA_DIR.glob("*.json")):  # 새 글이 없던 날도 번역 제목은 채운다
+        by_day.setdefault(datetime.fromisoformat(f.stem).date(), [])
+    for day, items in sorted(by_day.items()):
+        path = DATA_DIR / f"{day.isoformat()}.json"
+        data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else \
+            {"date": day.isoformat(), "generated_at": f"{day.isoformat()}T23:59+09:00", "items": [], "status": []}
+        merged = sorted(data["items"] + items, key=lambda x: x["published"] or "", reverse=True)
+        per_cat = Counter()
+        data["items"] = [i for i in merged if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
+        add_translations(data["items"], fixtures)
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"[backfill] {day}: +{len(items)} → {len(data['items'])}개 {dict(Counter(i['category'] for i in data['items']))}")
 
 
 # ---------------------------------------------------------------- 키워드
@@ -541,6 +648,7 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 .row{padding:14px 0}.meta{font-size:12.5px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
+.ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0}
 .bar nav a[data-go]{display:inline}
 .rows{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .rows article{padding:14px 0 12px;border-bottom:1px solid var(--line)}
@@ -833,7 +941,8 @@ def meta_html(it, cats, with_cat=False):
 
 
 def title_link(it):
-    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
+    ko = f'<span class="ko">{esc(it["title_ko"])}</span>' if it.get("title_ko") else ""  # 해외 글: 원문 제목 아래 자동 번역 제목
+    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>{ko}'
 
 
 def pick_featured(items):
@@ -908,7 +1017,7 @@ def thumb_html(it, base="", used=None, href=None, blank=True):
 
 def row_html(it, cats, with_cat=False):
     summ = f"<p>{esc(it['summary'])}</p>" if it.get("summary") else ""
-    q = esc((it["title"] + " " + it["source"] + " " + (it.get("summary") or "")).lower())
+    q = esc((it["title"] + " " + it.get("title_ko", "") + " " + it["source"] + " " + (it.get("summary") or "")).lower())
     return f'<article data-q="{q}"><h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats, with_cat)}</article>'
 
 
@@ -1268,9 +1377,14 @@ def build(keep_days=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build"])
+    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill"])
+    ap.add_argument("--since", help="backfill 시작 날짜(YYYY-MM-DD)")
     ap.add_argument("--fixtures", help="네트워크 대신 사용할 로컬 피드 폴더(테스트용)")
     a = ap.parse_args()
+    if a.cmd == "backfill":
+        backfill(datetime.fromisoformat(a.since).date(), a.fixtures)
+        build()
+        return
     if a.cmd in ("all", "collect"):
         collect(a.fixtures)
     if a.cmd in ("all", "build"):
