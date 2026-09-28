@@ -1,7 +1,8 @@
 import json, urllib.request, urllib.parse, os, time
-Q = {"medical":"medical technology","law":"courthouse","chip":"semiconductor chip","robot":"robot","energy":"solar panels","art":"art studio","edu":"classroom","security":"cyber security","invest":"stock market","llm":"laptop code","launch":"smartphone","research":"laboratory","video":"stage lights","ai":"abstract technology","city":"city night"}
+Q = {"robot2":"robot arm","robot3":"humanoid robot","law2":"gavel","law3":"court building","edu2":"library books","edu3":"students studying","lab2":"microscope","lab3":"science laboratory","art3":"concert crowd","art4":"painting brushes","gov":"government building","net":"server room"}
 UA={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
-os.makedirs("cand", exist_ok=True); meta={}
+os.makedirs("cand", exist_ok=True)
+import shutil; shutil.rmtree("cand"); os.makedirs("cand"); meta={}
 for k,q in Q.items():
     try:
         u="https://api.openverse.org/v1/images/?page_size=20&license=cc0,pdm&aspect_ratio=wide&size=large&q="+urllib.parse.quote(q)
