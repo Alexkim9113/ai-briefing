@@ -20,7 +20,10 @@ a{color:inherit;text-decoration:none}
 .ui a,.ui button{pointer-events:auto}
 .top{display:flex;justify-content:space-between;align-items:center}
 .brand{font-family:Unbounded,"Pretendard Variable",sans-serif;font-weight:700;letter-spacing:.22em;font-size:14px}
-.date{font-size:13px;opacity:.6;letter-spacing:.04em}
+.date{font-size:13px;opacity:.6;letter-spacing:.04em}.tr{display:flex;align-items:center;gap:14px}
+.share{pointer-events:auto;width:38px;height:38px;border-radius:50%;border:1px solid rgba(238,242,255,.25);background:rgba(238,242,255,.06);color:#eef2ff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px)}.share svg{width:17px;height:17px}.share:hover{border-color:#12e3ff;color:#12e3ff}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#eef2ff;color:#06050d;padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;white-space:nowrap}
+@media (max-width:640px){.date{font-size:11.5px}.tr{gap:10px}.share{width:34px;height:34px}}
 .mid{text-align:center}
 .mid h1{display:inline-block;margin:0 0 38px;font-family:Unbounded,"Pretendard Variable",sans-serif;font-size:clamp(38px,8.4vw,112px);font-weight:700;letter-spacing:.04em;line-height:1.05;padding-left:.04em;
  background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(59,123,255,.35))}
@@ -50,7 +53,7 @@ body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
 </style></head><body>
 <div id="bg"></div><canvas id="gl" aria-hidden="true"></canvas>
 <div class="ui">
- <div class="top"><span class="brand">{NAME}</span><span class="date live">{DATE} · 오늘 {TOTAL}건 수집 중</span></div>
+ <div class="top"><span class="brand">{NAME}</span><span class="tr"><span class="date live">{DATE} · 오늘 {TOTAL}건 수집 중</span><button class="share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg></button></span></div>
  <div class="mid"><h1>{NAME}</h1>
   <br><a class="enter" href="home.html" data-go>ENTER<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
  <div><nav class="cats" aria-label="카테고리">{CATS}</nav><div class="tick" aria-hidden="true"><div>{TICK}</div></div></div>
@@ -60,6 +63,8 @@ body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
 const cv=document.getElementById('gl'),links=[...document.querySelectorAll('[data-go]')];
 function go(href){document.body.classList.add('go');window.__fly&&window.__fly();setTimeout(()=>location.href=href,750);}
 links.forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();go(a.getAttribute('href'));}));
+document.querySelector('.share').onclick=async()=>{const u='{URL}/',t='{NAME}';
+ try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);const d=document.createElement('div');d.className='toast';d.textContent='사이트 링크를 복사했어요';document.body.append(d);setTimeout(()=>d.remove(),2200);}}catch(e){}};
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
@@ -123,7 +128,7 @@ try{
   if(!drag&&!hold){ry+=vy;vy+=((reduce?0:.0012)-vy)*.02;}
   G.rotation.y+=(ry+tx*.4-G.rotation.y)*.05;G.rotation.x+=(rx*.6+ty*.3-G.rotation.x)*.05;
   rings.forEach(r=>{r.rotation.z+=r.userData.s;});
-  W.lookAt;dust.rotation.y=t*.008;
+  dust.rotation.y=t*.008;
   cc.lerp(tc,.06);lm.color.copy(cc);pm.color.set(0xbfe9ff).multiply(cc);pulse.material.color.set(0x7ff3ff).lerp(cc,cc.equals(white)?0:.5);flow.material.color.set(0xa98bff).multiply(cc);
   const ap=.22+Math.sin(t*1.4)*.1;vAxis.material.opacity=ap;hAxis.material.opacity=ap;
   lm.opacity=.22+Math.sin(t*1.1)*.06;

@@ -563,6 +563,7 @@ def top_keywords(items, n=12):
 
 # ---------------------------------------------------------------- 사이트 생성
 
+ICON_SHARE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg>'
 ICON_THEME = ('<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/>'
               '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
               '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>')
@@ -590,7 +591,7 @@ a{color:inherit;text-decoration:none}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:var(--muted)}
 .theme{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--field-line);background:var(--field);color:var(--bar-text);display:grid;place-items:center;cursor:pointer}
-.theme svg{width:18px;height:18px}.theme .moon{display:none}:root[data-theme=light] .theme .sun{display:none}:root[data-theme=light] .theme .moon{display:block}
+.theme svg{width:18px;height:18px}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--heading);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;box-shadow:var(--shadow);white-space:nowrap}.theme .moon{display:none}:root[data-theme=light] .theme .sun{display:none}:root[data-theme=light] .theme .moon{display:block}
 @media (prefers-color-scheme:light){:root:not([data-theme=dark]) .theme .sun{display:none}:root:not([data-theme=dark]) .theme .moon{display:block}}
 .eyebrow{font-size:14px;font-weight:600;color:var(--muted);margin:26px 0 0;letter-spacing:.01em}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
@@ -646,7 +647,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 @media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
 .bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:wrap;overflow:visible;gap:4px 18px;margin:0;padding:2px 0}
-.search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.bar .wrap{position:relative}.bar{position:relative}}
+.search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.site-share{right:62px}.bar .wrap{position:relative}.bar{position:relative}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
 .logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
@@ -700,7 +701,10 @@ ul.st{columns:1}footer{margin-top:36px}}
 """
 
 JS = """
-document.querySelectorAll('.theme').forEach(b=>b.onclick=()=>{const r=document.documentElement,
+function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),2200);}
+document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
+ try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
+document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
  dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
@@ -900,7 +904,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>{ld}</head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
