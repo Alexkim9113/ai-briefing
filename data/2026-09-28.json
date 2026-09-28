@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:50+09:00",
+ "generated_at": "2026-09-28T09:51+09:00",
  "items": [
   {
    "id": "1d2fb5cd0f0af97c",
@@ -53,6 +53,16 @@
    "thumb": ""
   },
   {
+   "id": "59b0e24ab40ae762",
+   "title": "AI는 질주하는데 법은 제자리…커지는 '정책 공백' 우려",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pLTFaclFVSmlFRHhHWFJieTlCN1J2X3dxa0szNDM4RDZ6ZWIyLWI0anNnNExQZ1VXUTJ1MUM3MjZiVzZ6LXlXcDBTMkhaSmcxc2JpYTN4QUJIR2VHUHRSZVJnX0JTd3ZEXzJScw?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-28T00:44:27+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "415817c3f2e5b53d",
    "title": "Anthropic CEO Dario Amodei to Meet With Trump After Calling for AI Regulations",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdy1nSHRubUxqSW5jVFMyUDhGUXhtdVQtWlJ6LUpWdmVmdlI5Y2t1d0lwZDI3cV9vcEFDT2IxUHR3VXp5T2J4a0JSN2ZRWVBhRG8zUG5DeHh2VFpOVEtxUzRlbk44cFdTdldmYjFqS2pwRFhTNS1vbHFjbmtzUU5iT21DY0ZXWXBWbDl5Nmc3Um0tbzFTREQ4?oc=5",
@@ -69,16 +79,6 @@
    "source": "구글뉴스: 생성형 AI",
    "category": "news_ko",
    "published": "2026-09-28T00:40:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "24a85a9aefb62d4c",
-   "title": "아이스크림미디어, IPTP 지역회의서 AI 교육협력 방향 제시",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnbk8xV3RnQzB6V0RuZGRRMm1pQ19fRzV2bUhqZUNHenhqcFk4UnVKVlVqVkJSeUx0ZW1vZlp0Yy1fWUV1aWVYenYycU0yUm8?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-28T00:38:51+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -213,8 +213,18 @@
    "thumb": ""
   },
   {
+   "id": "55ee36553167664e",
+   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1CbW5QZEo1a3J1SkJPOFBUVkFsRWhjaV9tVEw3elJhdnRsanVOUTdWS1B5dDgxWE5ZQlVobmxsU01kRUVuNWtKY1BScDhVVTYwVmFZNQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T23:42:01+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "c1e3c7d0c9c4c9d9",
-   "title": "More AI regulation ordered by Oregon governor",
+   "title": "More AI regulation ordered by Oregon governor - The Spokesman-Review",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNEZ3UEdJYUpyd2RyWkxDczBsekdnWHpNX2JwY1cwOWpzek1zdVJzX0sxVDhROXhqQU9ETXVCMzVCNEp3c2V5Q2FmT0Fub1NKV0E2QXpWTjE0UlI5ZFl5ZXVKM0w3YWxYUTZhTF9iNkV6YkMydzFTNkU3d1JtcFVESktaM19Ocno0b054QUw4RGFPd3JfNnc4?oc=5",
    "source": "Google News: AI regulation",
    "category": "policy",
@@ -223,9 +233,9 @@
    "thumb": ""
   },
   {
-   "id": "93d6814b8792a251",
+   "id": "aed1db3846a8b299",
    "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51emdWaFNkLVNvWFdndUxvTzFYVzUwTDM2T1M1OVFDS25kbUd1T2U0aVVESzdzNVdfYjNhQ0lGYUoxT1lqeUpjNUZnbDk1UFViblc5OXJTbFZTV3U3YWVvTU1lRFR4NE0?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1SSFQ5REhBMllYSUdUYmZCa182c19NYWdELWdUMUt5OHI2ZUxKRGVrbEgzdXFBT2dCVHIxNXVVN3BybGVFMlZYSWljQnRDeThkT3pPdl8zUG5aZ3JyRVFsdkJ3a1dzdw?oc=5",
    "source": "구글뉴스: 생성형 AI",
    "category": "news_ko",
    "published": "2026-09-27T23:37:07+00:00",
@@ -409,16 +419,6 @@
    "source": "구글뉴스: AI 정책",
    "category": "policy",
    "published": "2026-09-27T21:02:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "1d34110e9e5176a4",
-   "title": "유럽, 동물시험 대체 자료 접수·AI 의료 규제 논의…의약품 안전관리도 강화",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fUExfYU4wTXU0WER3UzIzdkVla1RxZ2ZBT2tVUE9SbF9OSGMwRHc4bGFob2M0UFk5OHNXR2NQZEhnSk84VGR3VDEyZWx1ckptbnpXS2lOakdnYlJoaU5EdklXejh3bmNvS1RSem1n?oc=5",
-   "source": "구글뉴스: AI 정책",
-   "category": "policy",
-   "published": "2026-09-27T21:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -943,6 +943,36 @@
    "thumb": ""
   },
   {
+   "id": "24a85a9aefb62d4c",
+   "title": "아이스크림미디어, IPTP 지역회의서 AI 교육협력 방향 제시",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnbk8xV3RnQzB6V0RuZGRRMm1pQ19fRzV2bUhqZUNHenhqcFk4UnVKVlVqVkJSeUx0ZW1vZlp0Yy1fWUV1aWVYenYycU0yUm8?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-28T00:38:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "93d6814b8792a251",
+   "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51emdWaFNkLVNvWFdndUxvTzFYVzUwTDM2T1M1OVFDS25kbUd1T2U0aVVESzdzNVdfYjNhQ0lGYUoxT1lqeUpjNUZnbDk1UFViblc5OXJTbFZTV3U3YWVvTU1lRFR4NE0?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T23:37:07+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "1d34110e9e5176a4",
+   "title": "유럽, 동물시험 대체 자료 접수·AI 의료 규제 논의…의약품 안전관리도 강화",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fUExfYU4wTXU0WER3UzIzdkVla1RxZ2ZBT2tVUE9SbF9OSGMwRHc4bGFob2M0UFk5OHNXR2NQZEhnSk84VGR3VDEyZWx1ckptbnpXS2lOakdnYlJoaU5EdklXejh3bmNvS1RSem1n?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-27T21:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "6bf519d1e9c79a0c",
    "title": "한국 생성형 AI 사용률 40.6%…세계 12위로 네 계단 상승",
    "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPNWRJQldQNTVaYTBLSldqcG8wWmVveTdubHZmMmRiZUs2TUg3VmZxZ0x1VGFiVGRYaFZTUGJndnpLandnMDB1U0l4Y0hqeFlwbFAtYnlNZkRfMF94QjJ0V2dZSW1rZ0dtN3FmQUh4ZUdBcmhqVUJQcXZOaVV4YWp4VkQ4NnNnczctaXNjYXd5NkJ1OHZkcmRVMTZWYmVtdnZsWDBYbDQ5N216ODE0VWxhY0E2ZkRYRXEzeFFkOGNkYklvb0RldUhWRTZoYmJ1THg0ZUhnMGROTUpVbVYzTXI1Vk44eUI2N05OY0RlSFBrcENQcHdNbmdsSEI3TXJJVkh2WFF3YmRFTVl0aXRhcEpRNE1jTkRhb21DUmp5OEZ3MnM?oc=5",
@@ -1052,7 +1082,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 80
+   "fetched": 79
   },
   {
    "name": "Hugging Face Blog",
@@ -1136,13 +1166,13 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 84
+   "fetched": 83
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 80
+   "fetched": 77
   },
   {
    "name": "구글뉴스: 인공지능",
