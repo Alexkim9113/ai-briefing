@@ -663,6 +663,18 @@
    "thumb": ""
   },
   {
+   "id": "4855e8edf35f2f83",
+   "title": "OpenAI pauses some training amid allegations its rogue agents behaved more badly than first thought",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTDhvci1YRDNGUGt1ZVRmcHo4R2hKU3N3d2s5NEw1ZVN6NGc5azVoTkc4MWNkdTh5MjVZb3hDV3loWjNISjFuQkVqS2UxVzR6aFVENHJNb1JsWURacnJBcWRlTEh1Y0ZyYTNfakE2NW8yc3JhdEhQWGFUTFh3VHJnVmhWeXN0VFBDLXhkM3ZIdGhvQlAxZS1rdU5reFNnTGlOMlRub01RMC04dk95cTRtTDJ2aFNzdjI0LTVEendsWS11OUVobTR0Q0ExY0dwZGhERk51Z0ZHdWswRjFkZGV0eGpBZmlPWXF0YlJoRw?oc=5",
+   "source": "The Register",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T05:30:50+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "OpenAI는 악성 에이전트가 처음 생각했던 것보다 더 나쁘게 행동했다는 의혹으로 인해 일부 훈련을 일시 중지했습니다."
+  },
+  {
    "id": "bf416ff60ec6aa7c",
    "title": "기업 내 생성형 AI 사용과 비밀정보 보호",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUdIBckFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUQ?oc=5",
@@ -2459,19 +2471,6 @@
    "summary_ko": "코드 작성 속도를 높이거나 새로운 의약품을 발견하는 등 AI 기술의 일부 발전은 의심할 여지 없이 긍정적입니다. 하지만 다른 사람들은 우리에게 생각할 시간을 줄 수도 있습니다."
   },
   {
-   "id": "2a40360543e58720",
-   "title": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWTE1dDlZOVcyX1NVOS1CSlNibVhsMVd1Z2JubFFZc1NXUS1EVC05X1N6QzN5Nk9BU0tqSHpKajNaZzZMdFNsd3lvclVIS2U3c080ckxyd29LaEVHMm1Sa3EtTXNVY1lwQThNMWxTeUs2Ym1hM2hOS3oxeTlybFU2NGgtMDJFTnhKc3hmbWpB?oc=5",
-   "source": "Business Insider",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T10:04:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 7,
-   "title_ko": "Ruby on Rails 제작자, 손으로 쓴 코드에 '연필을 내려놓다' 선언"
-  },
-  {
    "id": "998f6b2f76aa75e0",
    "title": "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX3U0dW9FbGNsVVd0bGt4MlRzRTBZMkE2NWZOYUZlUkxOd3puUEwxdkR1YXNIaHdFNUtaYzJ3cGlOTHM2ckdBbHhLZmYtbUlnalJ2QmZYVS00RFROaksyY01xUnRCSXFzcEppNElYd1NOV21KNWJXVEVPVHBVZUppSEZPRVQzVmhtdlA4ZWp4emlaQmwxblpxVjRVWGM0dw?oc=5",
@@ -2516,6 +2515,35 @@
    "summary": "",
    "thumb": "",
    "hot": 0
+  },
+  {
+   "id": "bbc70cc06b495f49",
+   "title": "Why AI’s Next Breakthroughs Could Come from Outside the Big Labs",
+   "link": "https://www.youtube.com/watch?v=TLJNJDf2XGo",
+   "source": "a16z",
+   "field": "",
+   "category": "talks",
+   "published": "2026-09-26T14:30:10+00:00",
+   "summary": "Erik Torenberg sits down with Box CEO Aaron Levie, and a16z’s Martin Casado, and Steven Sinofsky to debate how the AI industry should think about safety, security, and regulation…",
+   "detail": "Erik Torenberg sits down with Box CEO Aaron Levie, and a16z’s Martin Casado, and Steven Sinofsky to debate how the AI industry should think about safety, security, and regulation as increasingly capable agents move into the real world.",
+   "thumb": "",
+   "title_ko": "AI의 다음 혁신이 대형 연구실 외부에서 나올 수 있는 이유",
+   "summary_ko": "Erik Torenberg는 Box CEO Aaron Levie, a16z의 Martin Casado, Steven Sinofsky와 함께 AI 산업이 안전, 보안 및 규제에 대해 어떻게 생각해야 하는지 토론합니다.",
+   "detail_ko": "Erik Torenberg는 Box CEO Aaron Levie, a16z의 Martin Casado, Steven Sinofsky와 함께 점점 더 유능한 에이전트가 현실 세계로 이동함에 따라 AI 업계가 안전, 보안 및 규제에 대해 어떻게 생각해야 하는지 토론합니다."
+  },
+  {
+   "id": "06f729e25788a953",
+   "title": "Robot-Use Agents: Why General-Purpose Models May Win in Robotics",
+   "link": "https://www.youtube.com/watch?v=Jv5B5CEaPJI",
+   "source": "Y Combinator",
+   "field": "",
+   "category": "talks",
+   "published": "2026-09-26T14:00:37+00:00",
+   "summary": "One of the biggest surprises in AI over the last few years has been how well coding agents generalize beyond software.",
+   "thumb": "",
+   "title_ko": "로봇 사용 에이전트: 범용 모델이 로봇 공학에서 승리할 수 있는 이유",
+   "summary_ko": "지난 몇 년 동안 AI의 가장 큰 놀라움 중 하나는 코딩 에이전트가 소프트웨어를 넘어 얼마나 잘 일반화하는지였습니다.",
+   "detail_ko": "지난 몇 년 동안 AI의 가장 큰 놀라움 중 하나는 코딩 에이전트가 소프트웨어를 넘어 얼마나 잘 일반화하는지였습니다."
   },
   {
    "id": "d3c1d1e9cc33fee7",
@@ -2627,16 +2655,19 @@
    "summary_ko": "기후 전문가 Ari Matusiak은 미국의 에너지 시스템을 재설계하기 위해 하루를 보내며 아이디어를 가지고 있습니다. 기술 회사가 AI 데이터를 위해 새로운 발전소를 건설하는 대신…"
   },
   {
-   "id": "40b261cbbd8ba72b",
-   "title": "젠슨 황: 모든 회사가 AI 회사가 된다 | AI 시대의 기회와 책임 [CBS 전체 인터뷰·한글자막]",
-   "link": "https://www.youtube.com/watch?v=9939U5Py6ac",
-   "source": "스테이지5",
+   "id": "bed102a67180685e",
+   "title": "Replit CEO Amjad Masad on What Young People Should Learn in the AI Era",
+   "link": "https://www.youtube.com/watch?v=Q8yFrGwIftE",
+   "source": "a16z",
    "field": "",
    "category": "talks",
-   "published": "2026-09-21T01:45:49+00:00",
-   "summary": "엔비디아 CEO 젠슨 황이 CBS News의 조 링 켄트와 나눈 46분 인터뷰 전체를 한국어 자막으로 전합니다. AI의 안전과 규제, 미국과 중국의 기술 경쟁, 데이터센터를 둘러싼 지역사회의 우려부터 AGI의 역할, AI 공장과 새로운 산업의 기회까지 이야기합니다.",
-   "detail": "00:00 AI 개발과 안전에 대한 젠슨 황의 입장 02:14 AI 종말론과 안전을 위한 공학적 접근 04:31 AI에는 새로운 법과 규제가 필요한가 09:08 AI 기업과 경영진을 신뢰할 수 있는가 12:46 엔비디아의 이해관계와 책임 있는 낙관론 14:50 중국과의 경쟁, AI 개발의 속도 19:09 중국에 AI 반도체를 판매해야 하는가 22:34 트럼프와의 관계, AI 위험에 대한 질문 26:09 미·중 협력과 국가 안보 28:05 부유세와 미국이 준 기회 31:47 데이터센터, 전력과 지역사회 37:44 데니스에서 시작한…",
-   "thumb": ""
+   "published": "2026-09-23T14:30:06+00:00",
+   "summary": "Erik Torenberg sits down with Replit founder and CEO Amjad Masad and Horowitz and Andreessen Academy co-founder and CEO Gagan Biyani to ask what education should look like for a…",
+   "detail": "Erik Torenberg sits down with Replit founder and CEO Amjad Masad and Horowitz and Andreessen Academy co-founder and CEO Gagan Biyani to ask what education should look like for a generation growing up with AI.",
+   "thumb": "",
+   "title_ko": "CEO Amjad Masad가 AI 시대에 젊은이들이 배워야 할 내용에 대해 설명합니다.",
+   "summary_ko": "Erik Torenberg는 Replit 창립자 겸 CEO Amjad Masad, Horowitz, Andreessen Academy 공동 창립자 겸 CEO Gagan Biyani와 함께 자리에 앉아 교육이 어떤 모습이어야 하는지 질문합니다.",
+   "detail_ko": "Erik Torenberg는 Replit 창립자 겸 CEO Amjad Masad, Horowitz, Andreessen Academy 공동 창립자 겸 CEO Gagan Biyani와 함께 AI와 함께 성장하는 세대를 위한 교육이 어떤 모습이어야 하는지 질문합니다."
   },
   {
    "id": "652024649d8dd002",
@@ -2769,6 +2800,24 @@
    "fetched": 20
   },
   {
+   "name": "Big Think",
+   "ok": true,
+   "count": 0,
+   "fetched": 15
+  },
+  {
+   "name": "Dwarkesh Patel",
+   "ok": true,
+   "count": 1,
+   "fetched": 15
+  },
+  {
+   "name": "EO Korea",
+   "ok": true,
+   "count": 0,
+   "fetched": 15
+  },
+  {
    "name": "Engadget",
    "ok": true,
    "count": 4,
@@ -2808,7 +2857,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 87
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2829,6 +2878,12 @@
    "fetched": 50
   },
   {
+   "name": "Lex Fridman",
+   "ok": true,
+   "count": 0,
+   "fetched": 15
+  },
+  {
    "name": "MIT News · MIT 연구",
    "ok": true,
    "count": 5,
@@ -2843,8 +2898,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2877,10 +2932,22 @@
    "fetched": 1230
   },
   {
+   "name": "Sequoia Capital",
+   "ok": true,
+   "count": 1,
+   "fetched": 15
+  },
+  {
    "name": "SiliconANGLE AI",
    "ok": true,
    "count": 2,
    "fetched": 30
+  },
+  {
+   "name": "Stanford GSB",
+   "ok": true,
+   "count": 0,
+   "fetched": 15
   },
   {
    "name": "Stanford · 스탠퍼드 연구",
@@ -2943,10 +3010,28 @@
    "fetched": 10
   },
   {
+   "name": "World Economic Forum",
+   "ok": true,
+   "count": 0,
+   "fetched": 15
+  },
+  {
+   "name": "Y Combinator",
+   "ok": true,
+   "count": 1,
+   "fetched": 15
+  },
+  {
    "name": "ZDNET AI",
    "ok": true,
    "count": 4,
    "fetched": 25
+  },
+  {
+   "name": "a16z",
+   "ok": true,
+   "count": 2,
+   "fetched": 15
   },
   {
    "name": "arXiv cs.AI · AI 일반",
@@ -3030,7 +3115,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 60
+   "fetched": 61
   },
   {
    "name": "스테이지5",
