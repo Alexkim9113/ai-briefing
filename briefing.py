@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""매일 AI 브리핑: RSS/Atom/JSON 소스를 모아 정적 사이트(site/)를 만든다.
+"""METAXIS 매일 AI 브리핑: RSS/Atom/JSON 소스를 모아 정적 사이트(site/)를 만든다.
 
 외부 라이브러리 없이 파이썬 표준 라이브러리만 사용한다.
 저작권 보호를 위해 원문 전체는 저장하지 않고, 제목 + 짧은 자동 발췌 요약 + 원문 링크만 남긴다.
@@ -323,11 +323,11 @@ CSS = """
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.serif{font-family:"Noto Serif KR",Georgia,serif}
+.serif{font-family:Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .bar{background:var(--bar);color:var(--bar-text)}
 .bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-size:21px;letter-spacing:.5px;white-space:nowrap}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}
 .logo svg{flex:none}
 .bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
 .bar nav a{opacity:.72;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap}
@@ -336,7 +336,7 @@ a{color:inherit;text-decoration:none}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:rgba(243,230,235,.55)}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:36px 0 28px}
-.hero h1{font-size:32px;line-height:1.3;font-weight:500;color:var(--accent);margin:0 0 18px}
+.hero h1{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
 .badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
 .thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--g1,#3d0f22),var(--g2,#7a1f3d))}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -344,7 +344,7 @@ a{color:inherit;text-decoration:none}
 repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
 .thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;color:#fff}
 .thumb .ph i{position:absolute;top:14px;left:16px;font-style:normal;font-size:11.5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:99px}
-.thumb .ph b{font-family:"Noto Serif KR",Georgia,serif;font-weight:500;font-size:22px;line-height:1.3}.thumb .ph span{font-size:12px;opacity:.7}
+.thumb .ph b{font-weight:700;font-size:22px;line-height:1.3}.thumb .ph span{font-size:12px;opacity:.7}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-size:13px;color:var(--muted)}
 .meta svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px}
 .hero .meta{margin:16px 0 10px}
@@ -357,7 +357,7 @@ repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14p
 .side-h h2{font-size:16px;margin:0;font-weight:600}.side-h a{font-size:13px;color:var(--muted)}
 .trend{display:grid;grid-template-columns:150px 1fr;gap:16px;margin-bottom:16px}
 .trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13.5px}.trend .thumb .ph{padding:8px 10px}.trend .thumb .ph i,.trend .thumb .ph span{display:none}
-.trend h3{font-size:16.5px;line-height:1.4;font-weight:500;color:var(--accent);margin:0 0 4px}
+.trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--accent);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
 .kw strong{font-size:14px;margin-right:4px}.kw span{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
@@ -365,9 +365,9 @@ repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14p
 .tabs{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
 .tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-section.cat>h2{font-size:24px;font-weight:500;margin:34px 0 16px;color:var(--accent)}
+section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
-.card h3{font-size:17px;line-height:1.45;font-weight:500;margin:14px 0 6px}
+.card h3{font-size:17px;line-height:1.5;font-weight:600;margin:14px 0 6px}
 .card h3 a:hover,.trend h3 a:hover,.hero h1 a:hover{text-decoration:underline}
 .card p{margin:0 0 8px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:18px}
@@ -433,13 +433,11 @@ def page(title, body, base="", cats=None, search=True):
            if search else "")
     return f"""<!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title>
-<meta name="description" content="국내외 AI 뉴스·논문·정책·유튜브를 매일 자동으로 모아 보여주는 AI 브리핑">
+<meta name="description" content="METAXIS: 국내외 AI 뉴스·논문·정책·유튜브를 매일 자동으로 모아 보여주는 AI 브리핑">
 <link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>{CSS}</style></head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>AI 브리핑</span></a><nav>{nav}</nav>{box}</div></header>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>METAXIS</span></a><nav>{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
 <script>{JS}</script></body></html>"""
@@ -532,7 +530,7 @@ def render_day(data, cats, base=""):
                   f'{str(s["count"]) + "건" if s["ok"] else "실패"}</li>' for s in st)
     parts.append(f'<details style="margin-top:40px"><summary class="meta">수집 상태: 소스 {ok}/{len(st)}개 성공</summary>'
                  f'<ul class="st meta" style="display:block">{lis}</ul></details>')
-    return page(f"AI 브리핑 {data['date']}", "\n".join(parts), base, cats)
+    return page(f"METAXIS · AI 브리핑 {data['date']}", "\n".join(parts), base, cats)
 
 
 def build(keep_days=None):
@@ -551,7 +549,7 @@ def build(keep_days=None):
         if i == 0:
             (SITE_DIR / "index.html").write_text(render_day(data, cats), encoding="utf-8")
     lis = "".join(f'<li><a href="archive/{d}.html">{d} ({WEEKDAYS[datetime.fromisoformat(d).weekday()]})</a> <span class="meta">· {n}건</span></li>' for d, n in days)
-    (SITE_DIR / "archive.html").write_text(page("지난 브리핑 - AI 브리핑", f'<h2 class="serif" style="font-weight:500;font-size:26px;margin:36px 0 12px">지난 브리핑</h2><ul class="days">{lis}</ul>', search=False), encoding="utf-8")
+    (SITE_DIR / "archive.html").write_text(page("지난 브리핑 · METAXIS", f'<h2 class="serif" style="font-weight:700;font-size:26px;margin:36px 0 12px">지난 브리핑</h2><ul class="days">{lis}</ul>', search=False), encoding="utf-8")
     (SITE_DIR / ".nojekyll").write_text("")
     print(f"[build] {len(days)}일치 페이지 생성 → {SITE_DIR.relative_to(ROOT)}/")
 
