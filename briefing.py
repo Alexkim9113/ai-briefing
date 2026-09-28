@@ -831,6 +831,8 @@ def collect(fixtures=None, now=None):
     per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
     uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
+    gone = load_removed()
+    uniq = [i for i in uniq if i["id"] not in gone]  # 운영자가 삭제한 기사는 다시 모으지 않는다
     if not fixtures:  # METAXIS 브리핑(AI)은 무료 한도 안에서 실시간 페이지(오늘 홈)에 보이는 글만
         ai_briefs(uniq, 8)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
@@ -1105,7 +1107,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
 .brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
 article:has(a[data-d]),.trend:has(a[data-d]){cursor:pointer}
-.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}.mx-s{margin:0 0 4px;line-height:1.7}.mx-v{margin:16px 0 4px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(18,227,255,.10),rgba(139,44,255,.12));border:1px solid var(--line)}.mx-v b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-v p{margin:0;line-height:1.7}.mx-t{margin:14px 0 4px}.mx-t span.tg{cursor:default}
+.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}.brief-del{display:block;width:max-content;margin:14px auto 0;font-size:13px;font-weight:600;color:#e5484d;border:1px solid currentColor;border-radius:99px;padding:6px 16px}.mx-s{margin:0 0 4px;line-height:1.7}.mx-v{margin:16px 0 4px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(18,227,255,.10),rgba(139,44,255,.12));border:1px solid var(--line)}.mx-v b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-v p{margin:0;line-height:1.7}.mx-t{margin:14px 0 4px}.mx-t span.tg{cursor:default}
 @keyframes bfade{from{opacity:0}}
 @media (max-width:600px){.brief-bg{align-items:end;justify-items:stretch;padding:0}.brief{width:100%;max-height:88vh;border-radius:20px 20px 0 0;padding:24px 18px calc(18px + env(safe-area-inset-bottom));animation:bup .22s ease}.brief h3{font-size:19px}}
 @keyframes bup{from{transform:translateY(40px);opacity:.3}}
@@ -1211,6 +1213,7 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 
 JS = """
 // 기사 제목을 누르면 '주요 내용'(언론사가 공개한 소개글 발췌, 최대 5줄)과 원문으로 가는 버튼을 먼저 보여 준다
+function isOp(){try{return !!localStorage.getItem('metaxis_op');}catch(e){return false;}}
 function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const V=!!a.dataset.v,lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
@@ -1218,7 +1221,7 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
   const AI=!!a.dataset.ai;return `<h4>${AI?'QUICK BRIEF':'요약'}</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>${AI?'METAXIS POINT':'METAXIS VIEW · 시사점'}</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
- <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p></div>`;
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p>${isOp()&&a.dataset.id?`<a class="brief-del" href="/editor/write.html#hide=${e(a.dataset.id)}&t=${encodeURIComponent(a.textContent.trim().slice(0,120))}">이 기사 삭제</a>`:''}</div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
@@ -1275,8 +1278,8 @@ WRITE_JS = r"""
 // 운영자 글쓰기: GitHub 토큰 없이 비밀번호 4자리만으로 쓴다.
 // 글은 사이트의 공개키로 암호화해 무료 중계 서버(ntfy.sh)에 맡기고, 30분마다 도는 자동 작업이 풀어서 사이트에 올린다.
 const W=document.getElementById('w'),TOPIC=W.dataset.topic,KEY=JSON.parse(W.dataset.key||'null'),enc=new TextEncoder();
-const $=s=>document.querySelector(s),views=['#v-first','#v-lock','#v-list','#v-edit'];
-let PIN=null,POSTS=[],STATUS={},cur=null,imgs={},seq=0;
+const $=s=>document.querySelector(s),views=['#v-first','#v-lock','#v-list','#v-edit','#v-hide'];
+let PIN=null,POSTS=[],STATUS={},cur=null,imgs={},seq=0,HIDE=null;
 function view(id){views.forEach(v=>$(v).hidden=v!==id);}
 function msg(el,t,bad){const m=$(el);m.textContent=t;m.style.color=bad?'#e5484d':'';}
 const b64=u8=>{let s='';for(let i=0;i<u8.length;i+=8192)s+=String.fromCharCode.apply(null,u8.subarray(i,i+8192));return btoa(s);};
@@ -1303,12 +1306,21 @@ function showPending(){const done=Object.fromEntries((STATUS.results||[]).map(r=
  savePending(pd);$('#pend').innerHTML=out.join('');}
 async function start(){await loadStatus();PIN=null;try{PIN=sessionStorage.getItem('metaxis_pin');}catch(e){}
  if(!KEY){view('#v-lock');msg('#lock-msg','글쓰기 준비 중이에요. 30분 뒤 다시 열어 주세요.',1);return;}
+ const hm=location.hash.match(/^#hide=([\w-]{1,40})(?:&t=(.*))?$/);  // 기사 창의 '삭제'로 왔을 때: 비밀번호를 다시 받아야 지운다
+ if(hm){HIDE={id:hm[1],title:decodeURIComponent(hm[2]||'')};history.replaceState(null,'',location.pathname);
+  $('#hide-t').textContent=HIDE.title||HIDE.id;msg('#hide-msg','');view('#v-hide');$('#hide-pin').focus();return;}
  if(PIN)return openList();view(STATUS.pin_set?'#v-lock':'#v-first');}
 $('#first-go').onclick=async()=>{const p1=$('#pin1').value,p2=$('#pin2').value;
  if(!pinOk(p1))return msg('#first-msg','비밀번호는 숫자 4자리예요.',1);if(p1!==p2)return msg('#first-msg','두 번 입력한 값이 달라요.',1);
  PIN=p1;msg('#first-msg','저장 중…');try{await send('setpin',{});try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}opOn();openList();}
  catch(e){msg('#first-msg',e.message,1);}};
 $('#pin').oninput=()=>{const p=$('#pin').value;if(!pinOk(p))return;PIN=p;$('#pin').value='';try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}opOn();openList();};
+$('#hide-go').onclick=async()=>{const p=$('#hide-pin').value;if(!pinOk(p))return msg('#hide-msg','운영자 비밀번호 4자리를 입력해 주세요.',1);
+ PIN=p;$('#hide-pin').value='';$('#hide-go').disabled=true;msg('#hide-msg','보내는 중…');
+ try{await send('hide',{id:HIDE.id,title:HIDE.title});try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}opOn();
+  msg('#hide-msg','삭제 요청을 보냈어요. 비밀번호가 맞으면 보통 1~2분 안에 사이트에서 사라져요.');setTimeout(openList,1600);}
+ catch(e){msg('#hide-msg',e.message,1);}finally{$('#hide-go').disabled=false;}};
+$('#hide-no').onclick=()=>{history.length>1?history.back():location.href='../home.html';};
 function opOn(){try{localStorage.setItem('metaxis_op','1');}catch(e){}}
 $('#logout').onclick=()=>{try{sessionStorage.removeItem('metaxis_pin');localStorage.removeItem('metaxis_op');}catch(e){}PIN=null;view(STATUS.pin_set?'#v-lock':'#v-first');};
 const CATN={news_ko:'국내 뉴스',news_global:'해외 뉴스',papers:'논문·연구',policy:'정책·규제',talks:'영상·강연'};
@@ -1324,14 +1336,18 @@ async function openList(){view('#v-list');msg('#list-msg','');loadStats();
  showPending();renderList();
  const want=(location.hash.match(/edit=([\w-]+)/)||[])[1];if(want){history.replaceState(null,'',location.pathname);const p=POSTS.find(x=>x.id===want);if(p)return edit(p);}
  const bad=(STATUS.results||[]).slice(-1)[0];if(bad&&!bad.ok&&/비밀번호/.test(bad.msg))msg('#list-msg','최근 요청이 비밀번호가 달라서 처리되지 않았어요. 다시 로그인해 주세요.',1);}
-function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b class="pt" data-e="${i}" role="button" tabindex="0" title="눌러서 수정">${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
+function renderHidden(){const h=STATUS.removed||[];$('#hidden-box').hidden=!h.length;
+ $('#hlist').innerHTML=h.map((x,i)=>`<li><b>${esc(x.title||x.id)}</b> <span class="meta">${esc((x.at||'').slice(0,16).replace('T',' '))} 삭제</span> <button data-u="${i}">되돌리기</button></li>`).join('');
+ $('#hlist').querySelectorAll('[data-u]').forEach(b=>b.onclick=async()=>{const x=h[+b.dataset.u];if(!confirm(`'${x.title||x.id}' 기사를 다시 보이게 할까요?`))return;
+  try{await send('unhide',{id:x.id,title:x.title});msg('#list-msg','되돌리기 요청을 보냈어요. 보통 1~2분 안에 다시 보여요.');showPending();}catch(e){msg('#list-msg',e.message,1);}});}
+function renderList(){renderHidden();$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b class="pt" data-e="${i}" role="button" tabindex="0" title="눌러서 수정">${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
   <button data-e="${i}">수정</button> <button data-d="${i}">삭제</button></li>`).join('')||'<li class="meta">아직 쓴 글이 없어요.</li>';
  $('#plist').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(POSTS[+b.dataset.e]));
  $('#plist').querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(POSTS[+b.dataset.d]));}
 function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}${z(d.getMonth()+1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;}
 $('#new').onclick=()=>edit(null);
 function edit(p){cur=p?{...p}:{id:newId(),title:'',body:'',cover:'',images:[],date:''};imgs={};seq=(cur.images||[]).length;
- $('#title').value=cur.title;setBody(cur.body||'',cur.format);msg('#edit-msg','');drawThumbs();view('#v-edit');}
+ $('#title').value=cur.title;setBody(cur.body||'',cur.format);histReset();msg('#edit-msg','');drawThumbs();view('#v-edit');}
 const srcOf=n=>imgs[n]||('img/'+n);
 function drawThumbs(){ // 대표 썸네일: 따로 올리거나, 본문 사진 중에서 고르거나, 뺄 수 있다
  const inBody=[...ED.querySelectorAll('figure')].map(f=>f.dataset.n).filter(n=>!/^https:/.test(n)),cv=cur.cover?cur.cover.replace(/^img\//,''):'';
@@ -1415,6 +1431,18 @@ $('#t-link').onclick=()=>{const u=prompt('연결할 주소(https://…)를 넣�
 function syncTools(){['bold','italic','underline','strikeThrough','justifyLeft','justifyCenter','justifyRight','justifyFull','insertUnorderedList','insertOrderedList'].forEach(c=>{
   const b=T.querySelector(`[data-c="${c}"]`);if(b){let on=false;try{on=document.queryCommandState(c);}catch(e){}b.classList.toggle('on',on);}});}
 document.addEventListener('selectionchange',()=>{if(ED.contains(getSelection().anchorNode))syncTools();});
+// 실행 취소·다시 실행: 본문이 바뀔 때마다 모습을 기록해 두고(최대 100단계) 앞뒤로 오간다. 사진 넣기·빼기·크기 바꾸기도 포함
+let HIST=[],HI=-1,HT=0,HOLD=false;
+const shot=()=>ED.innerHTML.replace(/ class="sel"/g,'');
+function snap(){clearTimeout(HT);HT=0;const h=shot();if(HIST[HI]===h)return;HIST=HIST.slice(0,HI+1);HIST.push(h);if(HIST.length>100)HIST.shift();HI=HIST.length-1;histBtns();}
+function histBtns(){$('#t-undo').disabled=HI<=0;$('#t-redo').disabled=HI>=HIST.length-1;}
+function histReset(){HIST=[];HI=-1;snap();}
+function histGo(d){if(HT)snap();const n=HI+d;if(n<0||n>=HIST.length)return;HI=n;HOLD=true;ED.innerHTML=HIST[HI];HOLD=false;
+ const last=ED.lastElementChild;if(last)placeCaret(last,false);drawThumbs();histBtns();}
+new MutationObserver(()=>{if(HOLD)return;clearTimeout(HT);HT=setTimeout(snap,400);}).observe(ED,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['style']});
+$('#t-undo').onclick=()=>histGo(-1);$('#t-redo').onclick=()=>histGo(1);
+ED.addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey))return;const k=e.key.toLowerCase();
+ if(k==='z'){e.preventDefault();histGo(e.shiftKey?1:-1);}else if(k==='y'){e.preventDefault();histGo(1);}});
 $('#cancel').onclick=()=>{view('#v-list');renderList();};
 $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBody();
  if(!title||!body)return msg('#edit-msg','제목과 내용을 모두 써 주세요.',1);
@@ -1479,7 +1507,7 @@ SOCIAL_ICONS = {
 
 def connect_links(sc, base):
     """하단 CONNECT: Contact · Instagram · X · Policy. 주소가 아직 없는 SNS는 아이콘만 보이고 링크는 걸리지 않는다."""
-    contact = f'mailto:{sc["email"]}' if sc.get("email") else f"{base}policy.html#contact"
+    contact = f'mailto:{sc["email"]}' if sc.get("email") else ""  # 문의 창구는 아직 비워 둔다
     links = [("Contact", contact, False), ("Instagram", sc.get("instagram"), True), ("X", sc.get("x"), True),
              ("Policy", f"{base}policy.html", False)]
     out = []
@@ -2238,6 +2266,15 @@ def post_html(p):
     return sanitize_html(p.get("body", "")) if p.get("format") == "html" else render_md(p.get("body", ""))
 
 
+def load_removed():
+    """운영자가 사이트에서 삭제한 기사 id → {title, at}. 데이터는 남겨 두고 사이트에서만 뺀다(되돌리기 가능)."""
+    f = POSTS_DIR / "removed.json"
+    try:
+        return json.loads(f.read_text(encoding="utf-8")).get("ids", {}) if f.exists() else {}
+    except ValueError:
+        return {}
+
+
 def load_posts():
     posts = []
     for f in sorted(POSTS_DIR.glob("*.json")):
@@ -2396,9 +2433,13 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <p id="lock-msg" class="meta"></p></section>
 <section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
 <ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul>
+<details class="stats" id="hidden-box" hidden><summary>삭제한 기사 <span class="meta">되돌릴 수 있어요</span></summary><ul id="hlist" class="plist"></ul></details>
 <details class="stats"><summary>수집 현황 <span class="meta">관리자에게만 보여요</span></summary><div id="stats"></div></details></section>
+<section id="v-hide" hidden><p>이 기사를 사이트에서 삭제할까요? 운영자 비밀번호가 맞아야 삭제돼요.</p><p><b id="hide-t"></b></p>
+<p><input id="hide-pin" class="inp pin" inputmode="numeric" maxlength="4" type="password" autocomplete="off" placeholder="비밀번호 4자리"></p>
+<p><button id="hide-go" class="btn">삭제하기</button> <button id="hide-no" class="btn ghost">취소</button></p><p id="hide-msg" class="meta"></p></section>
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
-<div class="tools" id="tools"><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="undo" title="되돌리기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></button><button type="button" class="tb ic" data-c="redo" title="다시 하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg></button><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
+<div class="tools" id="tools"><button type="button" class="tb" id="t-undo" title="실행 취소 (Ctrl+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>실행 취소</button><button type="button" class="tb" id="t-redo" title="다시 실행 (Ctrl+Shift+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg>다시 실행</button><span class="tsep"></span><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
 <div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
 <p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 본문 사진을 누르면 크기 버튼과 ✕(빼기)가 나오고, 오른쪽 아래 동그라미를 끌면 비율 그대로 크기가 바뀌어요.</p>
 <div class="cover"><h3>대표 썸네일</h3><div id="cover-box" class="cover-box"></div>
@@ -2406,7 +2447,7 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <div id="thumbs" class="thumbs"></div></div>
 <p><button id="publish" class="btn">게시하기</button> <button id="cancel" class="btn ghost">목록으로</button> <span id="edit-msg" class="meta"></span></p></section>
 </div>
-<style>.inp{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
+<style>.inp{box-sizing:border-box;width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
 .pin{width:160px;letter-spacing:.4em;text-align:center}.pin::placeholder{letter-spacing:normal}textarea.inp{line-height:1.7;resize:vertical}
 .tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 8px;position:sticky;top:64px;z-index:6;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line)}
 .tb.ic{width:38px;height:38px;padding:0;justify-content:center;font-size:16px}.tb.on{border-color:var(--accent);color:var(--accent)}.tsep{width:1px;height:24px;background:var(--line);margin:0 2px}
@@ -2427,11 +2468,11 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .cover{margin:18px 0;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.cover h3{margin:0 0 10px;font-size:16px}
 .cover-box img{display:block;width:100%;max-width:360px;aspect-ratio:16/9;object-fit:cover;border-radius:10px}.cover p{margin:10px 0 0;display:flex;gap:8px}
 .btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--grad);color:#fff;cursor:pointer;display:inline-block}
-.btn.ghost{background:var(--soft);color:var(--accent)}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
+.btn.ghost{background:var(--soft);color:var(--accent)}.tb:disabled{opacity:.35;cursor:default}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
 .thumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 0}.thumbs .meta{flex:1 0 100%}
 .thumbs button{padding:0;border:2px solid transparent;border-radius:10px;background:none;cursor:pointer}.thumbs button.on{border-color:var(--accent)}
 .thumbs img{display:block;width:96px;height:64px;object-fit:cover;border-radius:8px}
-@media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
+@media (max-width:600px){#w{overflow-x:clip}.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
 #setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
 .plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.pend li{font-size:14px;color:var(--muted)}.pend li.bad{color:#e5484d}.plist button{margin:0;padding:8px 14px}
 .tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;top:0;margin:0 -16px 8px;padding:8px 16px}.tools::-webkit-scrollbar{display:none}.tools>*{flex:none}
@@ -2635,9 +2676,12 @@ def build(keep_days=None):
         return
     (SITE_DIR / "data").mkdir(parents=True, exist_ok=True)
     latest, every, seen = None, {c: [] for c in cats}, set()
+    gone, days = load_removed(), []
     for i, f in enumerate(files):
         data = json.loads(f.read_text(encoding="utf-8"))
-        (SITE_DIR / "data" / f.name).write_text(f.read_text(encoding="utf-8"), encoding="utf-8")  # 원본 데이터도 함께 공개(백업·이전용)
+        data["items"] = [x for x in data["items"] if x["id"] not in gone]  # 운영자가 삭제한 기사는 사이트 어디에도 싣지 않는다
+        days.append((data["date"], data["items"]))
+        (SITE_DIR / "data" / f.name).write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")  # 공개 데이터(백업·이전용)
         if i == 0:
             latest = data
         for it in data["items"]:  # 모든 날짜의 글을 카테고리별 아카이브로
@@ -2645,7 +2689,7 @@ def build(keep_days=None):
                 seen.add(it["id"])
                 every[it["category"]].append(it)
     _MX["cats"] = dict(cats)
-    mx_prepare([(json.loads(f.read_text(encoding="utf-8"))["date"], json.loads(f.read_text(encoding="utf-8"))["items"]) for f in files])
+    mx_prepare(days)
     posts = load_posts()
     # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
     (SITE_DIR / "version.json").write_text(json.dumps({"v": BUILD_VER}), encoding="utf-8")
@@ -2671,8 +2715,8 @@ def build(keep_days=None):
         '<div class="post"><h1 class="serif">사진 출처</h1><p>기사 표지에 쓰는 사진은 모두 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. '
         '기사 원본의 사진은 사용하지 않습니다.</p><ul class="credits">' + credits + "</ul></div>",
         "", cats, search=False, path="credits.html"), encoding="utf-8")
-    contact = (f'<a class="more" href="mailto:{esc(sc["email"])}">{esc(sc["email"])}</a>' if sc.get("email")
-               else "문의 창구는 곧 열립니다.")
+    contact = (f'<h2 class="serif" style="font-size:21px;margin-top:30px" id="contact">문의</h2><p><a class="more" href="mailto:{esc(sc["email"])}">{esc(sc["email"])}</a></p>'
+               if sc.get("email") else "")
     policy = f"""<div class="post"><h1 class="serif">정책</h1>
 <h2 class="serif" style="font-size:21px;margin-top:30px">저작권 안내</h2>
 <p>이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝히며,
@@ -2681,7 +2725,7 @@ def build(keep_days=None):
 <p>저작권 관련 문의나 삭제 요청이 있으면 바로 반영하겠습니다.</p>
 <h2 class="serif" style="font-size:21px;margin-top:30px">개인정보</h2>
 <p>이 사이트는 회원가입·댓글이 없고 방문자의 개인정보를 수집하지 않습니다.</p>
-<h2 class="serif" style="font-size:21px;margin-top:30px" id="contact">문의</h2><p>{contact}</p>
+{contact}
 <h2 class="serif" style="font-size:21px;margin-top:30px">업데이트</h2>
 <p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))} ·
 <a href="{sc["url"]}/feed.xml">RSS 구독</a></p></div>"""
@@ -2841,6 +2885,21 @@ def editor_inbox():
             old_f.write_text(json.dumps(clean, ensure_ascii=False, indent=1), encoding="utf-8")
             result(ref, True, "게시했어요")
             changed = True
+        elif op in ("hide", "unhide"):  # 뉴스·논문·정책·영상 기사를 사이트에서 빼기 / 되돌리기
+            iid = str(req.get("id", ""))
+            if not re.fullmatch(r"[\w-]{1,40}", iid):
+                result(ref, False, "기사 형식이 잘못됐어요")
+                continue
+            rf = POSTS_DIR / "removed.json"
+            gone = load_removed()
+            if op == "hide":
+                gone[iid] = {"title": str(req.get("title") or "")[:200], "at": datetime.now(KST).isoformat(timespec="minutes")}
+            else:
+                gone.pop(iid, None)
+            POSTS_DIR.mkdir(exist_ok=True)
+            rf.write_text(json.dumps({"ids": gone}, ensure_ascii=False, indent=1), encoding="utf-8")
+            result(ref, True, "기사를 삭제했어요" if op == "hide" else "기사를 되돌렸어요")
+            changed = True
         elif op == "delete":
             pid = str(req.get("id", ""))
             f = POSTS_DIR / f"{pid}.json"
@@ -2853,6 +2912,7 @@ def editor_inbox():
                 result(ref, False, "지울 글을 찾지 못했어요")
             changed = True
     status["pin_set"] = bool(st.get("pin"))
+    status["removed"] = sorted(({"id": k, **v} for k, v in load_removed().items()), key=lambda x: x.get("at", ""), reverse=True)[:100]
     POSTS_DIR.mkdir(exist_ok=True)
     status_f.write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf-8")
     sf.write_text(json.dumps(st), encoding="utf-8")
