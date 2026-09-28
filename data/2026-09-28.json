@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:09+09:00",
+ "generated_at": "2026-09-28T14:10+09:00",
  "items": [
   {
    "id": "5a871f1b164a4c7d",
@@ -302,6 +302,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "트럼프의 AI 제국, 감시받는 연회장, 그리고 9살 아이의 118,000달러 실수"
+  },
+  {
+   "id": "aa966ee7aff20552",
+   "title": "필요한 시스템, 이제 AI로 직접 만든다",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYaTRYVXdqOTFHbmVJR2dDczVHZkRwWFBpYWFxYTFhSmo3YllWVnpEcWZ4TkVjMFpkQ3N2d21qLW9jVWdnVXBEcERVcXhxZEk?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T03:12:27+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "6f8075c506f73a26",
@@ -1111,17 +1122,6 @@
    "source": "구글뉴스: 생성형 AI",
    "category": "news_ko",
    "published": "2026-09-28T00:24:41+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "853d1064b10d3503",
-   "title": "\"잊고 있던 자동결제 잡아낸다\"…'구독 경제' 위협하는 AI",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE51UGRreGF3NXg3bDRqU0R4U2NUbllQQV9QbVR1TWVFcWNlNUszSkFZREpSdnl4Wi1LQUdHbFd6SXJuNmx4MUJTZDY0Yjdvdlk?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:21:50+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2604,7 +2604,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 81
   },
   {
    "name": "Google News: AI 기업",
@@ -2639,8 +2639,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2651,8 +2651,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2692,9 +2692,9 @@
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2814,7 +2814,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
