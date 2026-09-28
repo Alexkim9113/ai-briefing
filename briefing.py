@@ -655,8 +655,8 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .kw .info{background:none;color:var(--muted);margin-left:auto;padding:0}
 .tabs{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
-.tabs button.on{background:var(--grad);border-color:transparent;color:#fff}
-section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--heading)}section.cat>h2::before,.ph h1::before,.editor-h h2::before{content:"";display:inline-block;width:5px;height:.85em;border-radius:3px;background:var(--grad);margin-right:10px;vertical-align:-.06em}
+.tabs button.on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--heading);font-weight:700}
+section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--heading)}section.cat>h2::before,.ph h1::before,.editor-h h2::before{content:"";display:inline-block;width:5px;height:.85em;border-radius:3px;background:var(--c,var(--grad));margin-right:10px;vertical-align:-.06em}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .card h3{font-size:17px;line-height:1.5;font-weight:600;margin:14px 0 6px}
 .card h3 a:hover,.trend h3 a:hover,.hero h2 a:hover{text-decoration:underline}
@@ -692,7 +692,10 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 .card:not(.row) .thumb{grid-row:1/span 3;aspect-ratio:1;border-radius:12px;box-shadow:none}
 .card .thumb .tag{display:none}.card .thumb .ico{display:grid;place-items:center;position:absolute;inset:0;color:#fff}.card .thumb .ico svg{width:36%;height:36%;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}
 .card h3{font-size:16px;line-height:1.5;margin:0 0 4px}.card p{font-size:14px;-webkit-line-clamp:2;margin-bottom:6px}
-.row{padding:14px 0}.meta{font-size:12.5px}
+.row{padding:14px 0}.meta{font-size:13px}
+.trend:last-child{border-bottom:0;margin-bottom:0}.card h3,.rows h3,.trend h3{font-size:17px;line-height:1.5;letter-spacing:-.01em}
+.card p,.rows p{font-size:15px;line-height:1.6}.rows article{padding:16px 0 14px}.hero p.sum{font-size:16.5px;line-height:1.75}
+.kw span{font-size:14px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
 .ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0}
@@ -703,7 +706,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .rows p{margin:0 0 6px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pager{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:22px 0 4px}
 .pager a,.pager button,.pager span{min-width:38px;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:14px;display:inline-grid;place-items:center;cursor:pointer}
-.pager .on{background:var(--grad);border-color:transparent;color:#fff}.pager span{border:0;cursor:default;min-width:20px;padding:0}
+.pager .on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--heading);font-weight:700}.pager span{border:0;cursor:default;min-width:20px;padding:0}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
@@ -724,7 +727,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .post .body a{color:var(--accent);text-decoration:underline}
 .credits li{margin-bottom:6px;font-size:14px}
 @media (max-width:960px){.egrid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.rows{grid-template-columns:1fr}.rows h3{font-size:16px}
+@media (max-width:600px){.rows{grid-template-columns:1fr}
 .egrid{grid-template-columns:1fr;gap:18px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
 .elist .thumb .tag{display:none}.ph h1{font-size:23px}.post h1{font-size:25px;margin-top:26px}.post .body{font-size:17px}
 .pager a,.pager button{min-width:40px;height:40px}}
@@ -1467,7 +1470,7 @@ def render_home(data, cats, posts):
         rows = sorted(by_cat.get(c, []), key=lambda x: x.get("published") or "", reverse=True)
         body = (f'<div class="rows" data-pg>{"".join(row_html(it, cats) for it in rows)}</div><div class="pager"></div>'
                 if rows else '<p class="empty">오늘은 새 소식이 없습니다.</p>')
-        parts.append(f'<section class="cat" data-cat="{c}" id="{c}"><h2 class="serif">{esc(name)}</h2>{body}'
+        parts.append(f'<section class="cat" data-cat="{c}" id="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h2 class="serif">{esc(name)}</h2>{body}'
                      f'<a class="more" href="{c}/">{esc(name)} 지난 기록 모두 보기 →</a></section>')
     sc = site_cfg()
     heading = f'<h1 class="eyebrow">{day_title(data["date"])} 오늘의 AI 브리핑</h1>'
@@ -1488,7 +1491,7 @@ def render_category(c, name, items, cats, sc):
     for pg in range(n):
         chunk = items[pg * PER_PAGE:(pg + 1) * PER_PAGE]
         rows = "".join(row_html(it, cats) for it in chunk) or '<p class="empty">아직 모인 글이 없어요.</p>'
-        body = (f'<div class="ph"><h1 class="serif">{esc(name)}</h1><span>지금까지 {len(items)}건 · {pg + 1}/{n}쪽</span></div>'
+        body = (f'<div class="ph" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h1 class="serif">{esc(name)}</h1><span>지금까지 {len(items)}건 · {pg + 1}/{n}쪽</span></div>'
                 f'<div class="rows">{rows}</div>{pager_html(pg, n, href)}')
         path = f"{c}/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"AI {name}{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
