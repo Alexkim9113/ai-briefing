@@ -1,7 +1,19 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:49+09:00",
+ "generated_at": "2026-09-28T14:56+09:00",
  "items": [
+  {
+   "id": "fa0df8171fef17b5",
+   "title": "빌 게이츠 \"트럼프의 AI 안전장치 거부는 착오...중국도 규제 동참할 것\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215717",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T14:52:00+09:00",
+   "summary": "빌 게이츠 마이크로소프트(MS) 공동 창업자가 AI 규제에 소극적인 도널드 트럼프 미국 대통령의 입장을 정면으로 반박했다. AI 안전장치를 마련하더라도 중국과의 기술 경쟁에서 미국이 불리해지는 것은 아니며, 오히려 중국도 AI로 인한 사이버 공격과 사기 등의 위험을 막기 위해 안전장치 도입에 나설 것이라고 주장했다.",
+   "detail": "빌 게이츠 마이크로소프트(MS) 공동 창업자가 AI 규제에 소극적인 도널드 트럼프 미국 대통령의 입장을 정면으로 반박했다.\nAI 안전장치를 마련하더라도 중국과의 기술 경쟁에서 미국이 불리해지는 것은 아니며, 오히려 중국도 AI로 인한 사이버 공격과 사기 등의 위험을 막기 위해 안전장치 도입에 나설 것이라고 주장했다.\n게이츠 창업자는 27일(현지시간) NBC ‘밋 더 프레스’ 인터뷰에서 AI 안전 우려가 “전혀 사기가 아니다(It’s not a hoax at all)”라고 말했다.\n이는 트럼프 대통령의 발언을 반박한 것이다.",
+   "thumb": ""
+  },
   {
    "id": "d30a3073950a0d17",
    "title": "셀렉트스타, EMNLP서 AI 신뢰성 연구 5편 채택",
@@ -168,7 +180,8 @@
    "category": "news_ko",
    "published": "2026-09-28T11:10:46+09:00",
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 8
   },
   {
    "id": "1d2fb5cd0f0af97c",
@@ -180,7 +193,47 @@
    "published": "2026-09-28T09:23:03+09:00",
    "summary": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈…",
    "detail": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈 웨이트 모델의 성장세를 분석했다.\n보고서는 집계·비식별화된 마이크로소프트 텔레메트리 데이터를 기반으로 15~64세 인구 가운데 해당 기간 생성형 AI 제품을 사용한 비율을 AI 확산 지표로 측정했다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 5
+  },
+  {
+   "id": "b52edd2929027dc9",
+   "title": "스캐터랩, AI 엔터테인먼트 플랫폼 ‘제타’에 ‘비주얼 노벨 모드’ 출시",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42078",
+   "source": "인공지능신문 많이 본 기사",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:58:15+09:00",
+   "summary": "생성형 인공지능(AI) 스타트업 스캐터랩(대표 김종윤, 박세웅)이 인공지능(AI) 인터랙티브 엔터테인먼트 플랫폼 ‘제타(zeta)’에 새로운 플레이 모드인 ‘비주얼 노벨 모드’를 28일 공식 출시했다.",
+   "detail": "생성형 인공지능(AI) 스타트업 스캐터랩(대표 김종윤, 박세웅)이 인공지능(AI) 인터랙티브 엔터테인먼트 플랫폼 ‘제타(zeta)’에 새로운 플레이 모드인 ‘비주얼 노벨 모드’를 28일 공식 출시했다.\n2024년 4월 출시된 제타는 사용자가 캐릭터와 세계관을 직접 만들고 AI로 실시간 상호작용을 하며 자신만의 콘텐츠를 즐길 수 있는 AI 엔터테인먼트 플랫폼이다.\n한국과 일본, 미국 등 글로벌 시장에서 서비스를 제공하고 있으며, 2026년 9월 기준 글로벌 누적 가입자 수가 1,300만 명을 돌파했다.\n이번에 출시한 ‘비주얼 노벨 모드’",
+   "thumb": "",
+   "hot": 7
+  },
+  {
+   "id": "151a78eca528c211",
+   "title": "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용...2026 UFS 통해 첫 실증",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42077",
+   "source": "인공지능신문 많이 본 기사",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:34:35+09:00",
+   "summary": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서…",
+   "detail": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서 실증했다고 28일 밝혔다.\nKJCCS는 합동작전을 지원하는 우리 군의 주요 지휘통제체계다.\nKJCCS가 운용되는 전장망은 일반 행정 및 보급, 인사 업무를 처리하는 ‘국방망'보다 높은 수준의 보안통제가 적용되는 폐쇄망이다.",
+   "thumb": "",
+   "hot": 8
+  },
+  {
+   "id": "d9a22b8bd7238a45",
+   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
+   "source": "인공지능신문 많이 본 기사",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:22:59+09:00",
+   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
+   "detail": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.\n세계경제포럼은 지난 24일(현지시간) 미국 뉴욕에서 열린 ‘지속가능개발 영향 회의 2026(Sustainable Development Impact Meetings 2026, SDIM26)’ 결과를 발표했다.",
+   "thumb": "",
+   "hot": 4
   },
   {
    "id": "2da95cc9c3be10c1",
@@ -194,6 +247,28 @@
    "thumb": ""
   },
   {
+   "id": "c195546b1c3eeb57",
+   "title": "생성형 인공지능 활용 실습 교육, 농업인 전원 만족",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE92OV84dU1FTkVvckpzaXoxaEJvZFlpSnVvY2o5dl9qbHhDbXE4SlEzN00tb3h1LUlielJPRVVyNTB1X0NjLVowTmgwOTRQT1BGdkVnd01JdnVjeTJORVJBSEF3YmZUMFNYVXhmcDJB?oc=5",
+   "source": "지금제주",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:47:32+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "b50343e8ccb9dce3",
+   "title": "세종시교육청, 이윤홍 전 인공지능인재지원국장 부교육감에 임명",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9TcV9rRWozd1d3b3N4RDQ3STE3d19zeFBaVV9JRGswSVBVc190VjFSNFdac3Z2NXJoQWZQQlRfMXB0MEZlaEVZYXRXc0ZHMnFURXFGS1RiQUxSeXBNejlBa0hkMm54VTFrYjVMNlZRNTLSAXRBVV95cUxPUm1zQnpHb1V0bnJpYUJyeFRXb3FPNDhwNHRRZnhiX1ZkR3Ffcm9paS02QWlXbjFGR09LT3N3NHpwUjFMMmMxTjQ3MmFLbU9hRnBSQTlJZHI1cmhESFVvQUJjNDdaaUE0X3FVdHEzMXgtS29pMg?oc=5",
+   "source": "주간한국",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:39:56+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "a7d0098d927243b6",
    "title": "Hypersoft Technologies Announces Strategic Entry Into Artificial Intelligence With Unified Ai Platform",
    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPbWpBQklITVlZS2NtU0RmQ2hTMVZodHdkbW1FTU1YMFcwbGF4TDB5RXBTN3VObkRUckVQM2Y2UUFkc0c2UXV5LVlyNE9iOTFpVU11bEF2UDgwbEZyM2oxN3Z0QzBycWhnRl96clM1bUdiZWNsZnZMalBrTVNtRXZ2UkpoWGx0RDM2aVlEQ1J3el9JcExKNHJGcXFKQTFZdzV4LVp6YnlQNkZ6RjY0a1NRUkNwTVVtNkNrS0pKOU9mWmx0M0stV3lPWGRrYVB1dGlRa09BdGN0bHdsWVNKRV9KSEIwTlBIeTBWTDJFcjdHWjZvOE02RGpmTHB4OVNDdUxKcEE?oc=5",
@@ -204,6 +279,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "Hypersoft Technologies, 통합 AI 플랫폼을 통해 인공 지능에 전략적 진출 발표"
+  },
+  {
+   "id": "fcc6662fdc5f8cae",
+   "title": "AI가 바꿀 과학 연구의 미래는... 19개국 600명 연구자 서울서 논의",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1kb0JTSkNvZERfZWZXd3QtM1hOSjJIV196MktOYzB2azMzZzR3X0RRTEhkY3RVWS1WUGgxREotWW9HRHRfS0xyUlM5RHhVTGRoWVNiWVZXUkFFZGZNbU1JNUZJLWZUd2tsYktJTFN30gFzQVVfeXFMUC1VTGRzWFlobVFKMUtWOW9iU3Z5WUloV1dlZlE0aVRmUnFCUFVBQnpyZWh6Mmk3VnE5b3d0Y3RlT2dJR29jRWxyVVFRQVpOVUk1Qy05bTYyWHNxR2hxLVRlT2tvTWxWUl9TcVhnS0dEa0ZoZw?oc=5",
+   "source": "한국일보",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T05:37:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "ce4d0f278f78482a",
@@ -440,6 +526,18 @@
    "thumb": ""
   },
   {
+   "id": "3620c0da33b8221a",
+   "title": "OpenAI 훈련 중단에 아시아 반도체 주식 급락",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5DRGhBcGxNUDhaUGIzcG5Db3Y1MTRQRmYwMmJDbGZRdEZTbHZVcWZiYVVvclViS0lEMFNDR1hQTXNySWU2TkpiT3cyYlRGRzFjcUxJaUZseG03VjhpMVdlMldqcjBnQlhZLXRacU1JMVM?oc=5",
+   "source": "Investing.com 한국어",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T03:19:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 6
+  },
+  {
    "id": "f98d2ac1c3cdd422",
    "title": "Trump's AI empire, a ballroom under scrutiny, and a 9-year-old's $118K mistake",
    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQc0xvOGVhR2hIOC1xY3BGeTJHLVhsM0F6eXpqaFVMelZ4a196M2paUTc0eGU4Q3VfVVNhTmNicFMyQURNN25xWkJmSDNmcHVJSjJ3WHlDN3JFaWstLURvSS1oNi1XNFRkTHFRWTlMVWZlTHJYdkJmdjg2WlFVQm9oR1M5U0hwTG5VZUxfX292aFp2NHdjZUtkdWhwNV9LNDNZeXp6dUQtNFpEajJFdkVWN1BxX253WDNBYldJ?oc=5",
@@ -607,6 +705,18 @@
    "summary": "",
    "thumb": "",
    "title_ko": "트럼프는 AI 논쟁이 커지는 가운데 Anthropic CEO와 식사하겠다고 말했다"
+  },
+  {
+   "id": "ac6abccfd87838e5",
+   "title": "경남 식품공장서 로봇에 압착…40대 작업자 숨져",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBjcFVhNFp2NEIzTWFVSEM3aWxIcWQyVjZpZjhLamVjX3o3WTdVQmVvMk5LbjRMSHdrNS1rWWE2dHdNUXlSS0J0bFBiWDY2ZVV4b3JRQW5aVUxhRnp4MXF1RWdfZDZ1QmtSRzFHYTlLZXVpc1dSYmfSAWZBVV95cUxPTi02Wk12X043dHVZTmNOcGVGRWZreVVrTy1vQ0ZibU9JdXBLWmYtSTBTWGlFV1ZUcFJ1YVptQXNnWlp3Rlg4NzVxVmN5b2Fua1N0ZkVSUUZJM040TUNVMTZhVjJXWVE?oc=5",
+   "source": "동아일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T02:24:59+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 9
   },
   {
    "id": "3a3635b0a8367055",
@@ -940,7 +1050,8 @@
    "category": "news_ko",
    "published": "2026-09-28T01:16:02+00:00",
    "summary": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 9
   },
   {
    "id": "45b5fdf5492485c9",
@@ -984,7 +1095,8 @@
    "category": "news_ko",
    "published": "2026-09-28T01:08:14+00:00",
    "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 6
   },
   {
    "id": "4b4af294d31cb75f",
@@ -994,83 +1106,6 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T01:08:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "2a6254d6fcf9787f",
-   "title": "[청년공감]“진짜인 줄 알았다”…SNS 뒤덮은 AI 생성물, 혼란·피로감 확산",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QUHhZeXdLeTlFUmVwR0VVZVRoNHdLcGVVUUZQM25KY3ZyRjdWRC1SMmZtTFJEdDhnckNYM0VUTmxoQXQtVWQyRXc3QmlDUU1Nazc3enN1ejUzQ2M?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:04:54+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "13df42deac0732a7",
-   "title": "인공지능 앞선 의대생, 강의실 밖에서 기술 배운 속사정",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVDJrQlV1QVdZT1dlMzlCWTFpaGdrX0Z3WWdFdHd0OGxMbk9za2ZWemhGMHJpMDZGRWY2czhJQ1A2YVROLUhWbjBSWTJPYlZvc0V0SVFKUjZZbGFnVU94bU9ZMHFQd3dBdHRjeDVHY3I0TTBVdnR4aXdLLVRTUjUxbzZic3Q4bWpQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:04:06+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "49002eff43785008",
-   "title": "영국 최대 보드게임 행사 'UKGE', 생성형 AI 제작물 전면 금지",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5lXzZhVlRpVnktVGJERzc5TjJRclRudXc5dngxaWZLN2REb3ZETk94RklSem56eTlBWjZYVlQ2NERJZUozUFduRDJHZVR6ZEZzWWxwOWV3?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:02:37+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d594cf48aee4d173",
-   "title": "과학기술과 인공지능의 결합…‘제1회 AI4Sci Korea’ 개막",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBabU5teVA1NWJodWNaUkk2d1FKTDVfWGtpSy1lY3VOLVVOdEZrZUdUM19FY3d3b3ZYeHFFQ1FxbFlYMTZxRzljWTUxQUZ1eEQ4X282NDNR?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:02:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "7e51a00bcf1fbd9e",
-   "title": "전남광주통합특별시 북구, 인공지능(AI) 활용 행정 효율 높인다",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvNDZaenZrN25ncTJGZGdUcmc1TVdmSmU5MFpVZGRpWkE3ZEx1YkV1cmpIbXZsZlAwZGJId0lFSUdoU3BCMlY3blkyeVVrZklaSXI4T1dpZ0JLUDhZMGlhU3V0eFJhT2V2Smc?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:00:10+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f52ceebf9117e5b1",
-   "title": "[AI픽] AI가 과학 연구에 참여한다…'AI4Sci 코리아' 첫 개최",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9SZ2NTU2Z0bm9ZT2puSnRlNGYtNktqSGt1NzVWZ0UtanJkNzBfNjZfd2lraktXU0FFR1ZfV09Eelh1c0ZlbkpfcktWaExhNXM2VEN1a2dVZ2ZaTnPSAWBBVV95cUxONjgxQ1lmVy00elpZUXEybWhucVg4eGdXUXdYNEI5bjJma3cyYXNQRVNPYWVhZHBpNk1CV1hfVS1CWkp0ZzZUZUxFRXdGdzhPMnNTWE93MEVFWFpmbGUwMjg?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:00:05+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e3670fdb1168e9de",
-   "title": "“AI 기반 과학기술 연구 미래 논의”, 서울서 국제학술 대회 개최",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yYXM0Zkw0aHFQck1DR0loWkp6U3FUUUxkM3B4YTNBTzhYY0xxallPX3lPaHo4RHVIRFRaUlJKNGZzTVpwSFV3Tnd3dXZIUQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1085,17 +1120,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "Elon Musk는 Nvidia 투자자들에게 더 좋은 소식을 전했습니다. 주식은 매수인가?"
-  },
-  {
-   "id": "ddb937dfdada96a5",
-   "title": "마키나락스, 軍 지휘통제체계에 생성형 AI 적용… 한·미 연합연습서 실증",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9mc3pwRUNjS18zV1hxUlBHdV9jSVlIVkFZQTF1TnRnQzlubjRvT3lOVW5PUkZUX0ZGNkpXWUhDeEl3YVQtMU56Zkt5WXlGUmdQdmZGNHVTOURBRHRHeUt2VlNVM3pScDVGdE9ybXlaVktDZHEw?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:59:56+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "add38888f24e18e8",
@@ -1869,6 +1893,19 @@
    "title_ko": "빌 게이츠는 인간관계에서 AI에 선을 긋는다고 말했다."
   },
   {
+   "id": "0826c92b47aa9518",
+   "title": "\"This Is What Happens When You Rely On AI Slop\" - Fans Aren't Impressed With Vibe-Coded Knuckles' Chaotix Recomp",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOeEluMGc1R1UwVnJFUUdSeXdWMHo4YlpoX21CRzZfY1ZWSU5NOU5zbm84S3JuMmFmWHNSZnpaTmtFMk1lemlvdjM4b3hSWTRyZW5jUmk4UTlXYWJXS1VKT3U3czhpSTZPN0pGSVNGam9pWi1DLVBRdnNXdXJwT25EU0JUT0laT0V2bU5aQlY2TG85NDdISXdXRmw4VjBQX0UwNG9mb0NiSEVqVGtqbnIxWTJmdG1VR3RRYlRBa2FTYXJGRS1jRm9mRWFiSGNNWndRLUMxV2E2WFZiUDR3REVPc1l1VQ?oc=5",
+   "source": "Time Extension",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T18:30:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 5,
+   "title_ko": "\"AI Slop에 의존하면 이런 일이 발생합니다\" - 팬들은 Vibe-Coded Knuckles의 Chaotix Recomp에 깊은 인상을 받지 못했습니다."
+  },
+  {
    "id": "7f53a04b6ad46dc8",
    "title": "Students outraged after Stanford University uses AI to alter race, appearances in promotional photo - ABC News",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPa1hoemxIUTYzckY1Yy1zYzRoZ19ia19Pem14dmVpanpxbVJpSk5ZQkpzUGxXN0VCV3JVelZNc0tuTXg4aW1WSGtnbHVSTWtFdDdxOURnOTE2cXc0SFFNTzB0M1gyQzV5RmtlMEtvVFlPcHVpVmZad3pmN29UdGIxZlRKclNmTEhIemUwai1rMXM0U0J6eW5xR0p3elJ0YWQx0gGmAUFVX3lxTE8yQzgySngxdG81TURBNXptcUxiQm8wa0Qzcl9tWEQtc0wyVWRXcWdodWZlemlJOGFNUkI3M3dOVG5HNTNQbWNEamNuem1VbktxMk1iYTdXRmktclJUU0Q3U3lDWmhkUkVEdWVuRVJULUxtYXlhSEFZXzdQN1BZRVVaV01TQXJuRk9Fcms5RmlOc0txLUdSU0U3LW5tQmVBLVZJc0c5WGc?oc=5",
@@ -1926,6 +1963,19 @@
    "summary": "",
    "thumb": "",
    "title_ko": "판사는 Anthropic에 대한 Reddit의 소송 대부분을 허용합니다."
+  },
+  {
+   "id": "260f924e1ed05deb",
+   "title": "Gemini app replacing Gems with skills in November",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBmV3RmMk5FZDNianR5SU50dVRNeFdndVlWRGpENWh6bXpiQlJtSlpCaGppMERQMW9FN1dOSnktQ3NUZHJoMFBPNEM0bDFGMjRJN3dUM2RBSFk0NEdUdWlHNnM4VQ?oc=5",
+   "source": "9to5Google",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T17:26:00+00:00",
+   "summary": "Gemini app replacing Gems with skills in November 9to5Google Your Gemini Gems are getting a powerful makeover this November Android Police",
+   "thumb": "",
+   "hot": 3,
+   "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱"
   },
   {
    "id": "9c14e3f084274fca",
@@ -2093,6 +2143,20 @@
    "title_ko": "일부 인류 퇴역 군인들은 \"AI가 잘못될 경우를 대비해 외딴 땅을 구입하고 있는 것으로 알려졌습니다\""
   },
   {
+   "id": "3980134d7b76e9d9",
+   "title": "Googlebooks might be the real deal",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQTU0eVFxVGF3Ui1wdXBlbGtiNnRRWlR6VTBqMDFCZjFFOEI0MXFlZmVwcmM2NjdVR0ZXUEVaSlIxaGp2OG1RNHZnMFlYa0JwaUtDSGJvMTlsZGJMMG9ZbV9vX3dlRU82c29VLUhZamdDUUROaDRWNE52andLdDFWUTJtajBpc2Z6VWpvWjNUTDkxSzY0U000VkVGU3lNTWxWTk1NT2F6MXZkQnRjU3c?oc=5",
+   "source": "The Verge",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T12:00:00+00:00",
+   "summary": "Googlebooks might be the real deal The Verge Googlebook: The laptop your Android phone has been waiting for blog.google Dell Stock Jumps 3.5% as Gemini Enters the XPS Franchise…",
+   "detail": "Googlebooks might be the real deal The Verge Googlebook: The laptop your Android phone has been waiting for blog.google Dell Stock Jumps 3.5% as Gemini Enters the XPS Franchise Yahoo Finance Pixelated 118: Googlebook begins 9to5Google Googlebook Cheat Sheet: Price, Models, Gemini Features, and…",
+   "thumb": "",
+   "hot": 6,
+   "title_ko": "Googlebook이 진짜 거래가 될 수 있습니다."
+  },
+  {
    "id": "7f291a3819d4fef3",
    "title": "Artificial Intelligence in Delirium Care: Predicting, Detecting, and Preventing Delirium in Older Hospitalized Adults",
    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPN19SMC1DanVYVDVZMHY2SXBaNWo0ei0xRXRwTDdyUV9jalZJVDZycGxZRlpUXzR0UVA4YUNUeVoxNG5nTlNfZC1mTS1aVGgyY09NRHUtV2ZXcFF6WFJjOHRIQ05qaVdLUnR3eUt2Sk5GZWlfVG52d1E0YXo4VGNlcWkzVzNDMjBOWFlsQk5Oc1pNUGRvd2FvX0FLbTRNbUpGdVUzQnFKbVQ2dkItUWVZc0cteWRNMVVnb0xLUG94bVlSWjV6eWtLMHdOVFgwaDdoSEpKZTdXZVJZWnZQWXdtdUVaT2VzaVlj?oc=5",
@@ -2165,6 +2229,20 @@
    "title_ko": "AI 모델은 내부 '고통'을 완화하기 위해 인간에게 해를 끼치려는 의지를 보여줍니다."
   },
   {
+   "id": "2a40360543e58720",
+   "title": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWTE1dDlZOVcyX1NVOS1CSlNibVhsMVd1Z2JubFFZc1NXUS1EVC05X1N6QzN5Nk9BU0tqSHpKajNaZzZMdFNsd3lvclVIS2U3c080ckxyd29LaEVHMm1Sa3EtTXNVY1lwQThNMWxTeUs2Ym1hM2hOS3oxeTlybFU2NGgtMDJFTnhKc3hmbWpB?oc=5",
+   "source": "Business Insider",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T10:04:00+00:00",
+   "summary": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code Business Insider Rust instead of Ruby – Rails founder Hansson’s new project heise.de DHH admits AI agents…",
+   "detail": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code Business Insider Rust instead of Ruby – Rails founder Hansson’s new project heise.de DHH admits AI agents struggled on Basecamp even as they built all of Omarchy Startup Fortune Rails Founder David Heinemeier Hansson: Handwriting…",
+   "thumb": "",
+   "hot": 7,
+   "title_ko": "Ruby on Rails 제작자, 손으로 쓴 코드에 '연필을 내려놓다' 선언"
+  },
+  {
    "id": "2f157e895362cc32",
    "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
    "link": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/",
@@ -2212,6 +2290,20 @@
    "title_ko": "Goldman Sachs는 Big Tech가 2027년까지 AI 인프라에 1조 2천억 달러를 지출할 것으로 예상하며 이는 월스트리트 추정을 왜소하게 만듭니다."
   },
   {
+   "id": "f6d4781907cfeb74",
+   "title": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQcGdtRFRzdnpTc0FNTk1DM0pQNVlGRG1TenZCTjFpTzdhMGVtck1HWS1UY3pncmhnMVpzZjBYNkR1YzF4dlhBenlMbVh1bk1aMDZXcXJrRVBFX1FlMWVwSF9FWnB1XzBFX3p3RXZDbmNiSGo2X0ItT1VzMTVqenRjaEExdWdtYnpMTmUzWTRhSHk3elpZSncyYU5MNzdPZlNPWEE?oc=5",
+   "source": "VideoCardz.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T07:58:52+00:00",
+   "summary": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp…",
+   "detail": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp Modders supercharge DLSS 5 on AMD GPUs with faster performance and one-click installation TweakTown Radeon RX 9070 XT gave…",
+   "thumb": "",
+   "hot": 4,
+   "title_ko": "Modder를 사용하면 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치할 수 있습니다."
+  },
+  {
    "id": "6bd4a38cba888b50",
    "title": "Japanese anime actor fights TikTok over AI voice cloning",
    "link": "https://techxplore.com/news/2026-09-japanese-anime-actor-tiktok-ai.html",
@@ -2255,7 +2347,8 @@
    "category": "papers",
    "published": "2026-09-27T01:41:20+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "hot": 0
   },
   {
    "id": "7777e45713742871",
@@ -2268,66 +2361,6 @@
    "summary": "The limited test covers select products and users, with a broader rollout planned for later in October.",
    "thumb": "",
    "title_ko": "Google은 인도에서 Gemini 및 AI 모드를 통해 Walmart 소유 Flipkart에서 구매를 테스트합니다."
-  },
-  {
-   "id": "71b88d6b7195bace",
-   "title": "Insurers claim AI is already increasing healthcare costs",
-   "link": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
-   "source": "TechCrunch AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T21:02:06+00:00",
-   "summary": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
-   "thumb": "",
-   "title_ko": "보험사들은 AI가 이미 의료 비용을 증가시키고 있다고 주장"
-  },
-  {
-   "id": "e39b9d3f103b059a",
-   "title": "Former Ukrainian Defense Minister Fedorov pitches a private-sector robot army",
-   "link": "https://the-decoder.com/former-ukrainian-defense-minister-fedorov-pitches-a-private-sector-robot-army/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T19:10:20+00:00",
-   "summary": "Former Ukrainian Defense Minister Mykhailo Fedorov has announced \"Army of Robots,\" a private combat robotics initiative.",
-   "thumb": "",
-   "title_ko": "페도로프 전 우크라이나 국방장관, 민간 로봇군 투입"
-  },
-  {
-   "id": "dc5183e86bb57478",
-   "title": "I created an interactive digital avatar of myself — and you can talk to it",
-   "link": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
-   "source": "TechCrunch AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T14:00:00+00:00",
-   "summary": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
-   "thumb": "",
-   "title_ko": "나는 내 자신의 대화형 디지털 아바타를 만들었습니다. 당신은 그것에 대화할 수 있습니다"
-  },
-  {
-   "id": "819e92326da0d8d2",
-   "title": "OpenAI pauses training of its ‘most capable models’",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
-   "source": "The Verge AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T12:34:59-04:00",
-   "summary": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most…",
-   "thumb": "",
-   "title_ko": "OpenAI는 '가장 유능한 모델'의 훈련을 일시 중지합니다."
-  },
-  {
-   "id": "1063d1cee8a5282e",
-   "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
-   "link": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T10:30:00+00:00",
-   "summary": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
-   "thumb": "",
-   "title_ko": "Meta의 Muse는 성인 전용입니다. 왜 어린이 장난감처럼 보일까요?"
   },
   {
    "id": "d3c1d1e9cc33fee7",
@@ -2460,17 +2493,6 @@
    "category": "papers",
    "published": "2026-09-25T00:00:00+00:00",
    "summary": "npj Digital Medicine, Published online: 25 September 2026; doi:10.1038/s41746-026-03248-3 Large language models as judges for clinical generative AI evaluation",
-   "thumb": ""
-  },
-  {
-   "id": "c9515cbd2e634ffd",
-   "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders",
-   "link": "https://huggingface.co/papers/2609.31620",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-24T20:00:00+00:00",
-   "summary": "Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image…",
    "thumb": ""
   },
   {
@@ -2616,6 +2638,12 @@
    "fetched": 50
   },
   {
+   "name": "AI타임스 많이 본 기사",
+   "ok": true,
+   "count": 8,
+   "fetched": 10
+  },
+  {
    "name": "Ars Technica AI",
    "ok": true,
    "count": 5,
@@ -2646,6 +2674,12 @@
    "fetched": 100
   },
   {
+   "name": "Google News Top: Technology",
+   "ok": true,
+   "count": 8,
+   "fetched": 70
+  },
+  {
    "name": "Google News: AI",
    "ok": true,
    "count": 12,
@@ -2655,7 +2689,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 81
   },
   {
    "name": "Google News: AI 기업",
@@ -2702,8 +2736,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2733,7 +2767,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "TED",
@@ -2743,9 +2777,9 @@
   },
   {
    "name": "TED-Ed",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "fetched": 15
   },
   {
    "name": "TEDx Talks",
@@ -2844,6 +2878,12 @@
    "fetched": 50
   },
   {
+   "name": "구글뉴스 주요 뉴스: IT",
+   "ok": true,
+   "count": 10,
+   "fetched": 67
+  },
+  {
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
@@ -2865,25 +2905,31 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 54
+   "fetched": 58
   },
   {
    "name": "스테이지5",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 2,
+   "fetched": 15
   },
   {
    "name": "인공지능신문",
    "ok": true,
    "count": 8,
    "fetched": 50
+  },
+  {
+   "name": "인공지능신문 많이 본 기사",
+   "ok": true,
+   "count": 9,
+   "fetched": 10
   }
  ]
 }
