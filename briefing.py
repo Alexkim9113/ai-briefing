@@ -295,6 +295,7 @@ def item_id(link, title):
     return hashlib.sha1((norm_link(link) or title).encode()).hexdigest()[:16]
 
 
+HOT_DAYS = 2  # '많이 본 기사' 목록에서 이보다 오래된 글은 순위에 넣지 않는다
 _TITLE_SUFFIX = re.compile(r"\s+-\s+[^-]{1,40}$")
 
 
@@ -429,8 +430,12 @@ def make_item(src, it, keywords, now):
     title = clean_text(it["title"])
     if not title or not it["link"]:
         return None
+    outlet = ""
     if src.get("url", "").startswith("https://news.google.com"):
-        title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
+        m = _TITLE_SUFFIX.search(title)  # "제목 - 언론사": 언론사는 출처로 쓰고 제목에서는 뺀다
+        if m:
+            outlet = m.group(0).strip(" -")
+            title = title[:m.start()]
     d = parse_date(it["date"], src.get("tz", 0))
     if d and d > now + timedelta(minutes=10):  # 발행 시각이 미래로 찍힌 글은 수집 시각으로 맞춘다
         d = now
@@ -442,7 +447,7 @@ def make_item(src, it, keywords, now):
     detail = detail_lines(it["desc"], title, summary)
     return {
         "id": item_id(it["link"], title), "title": title, "link": it["link"],
-        "source": label(src), "field": src.get("field", ""),
+        "source": outlet or label(src), "field": src.get("field", ""),
         "category": src["category"], "published": d.isoformat() if d else None,
         "summary": summary,
         **({"detail": detail} if detail else {}),
@@ -488,6 +493,7 @@ def collect(fixtures=None, now=None):
     keywords = cfg.get("ai_keywords", [])
 
     results, status = [], []
+    hot_marks, hot_marks_src = [], {s["name"]: [] for s in cfg["sources"]}
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         futs = {pool.submit(collect_source, s, fixtures): s for s in cfg["sources"]}
         for fut in concurrent.futures.as_completed(futs):
@@ -503,6 +509,10 @@ def collect(fixtures=None, now=None):
                 if not item:
                     continue
                 d = item["_d"]
+                if src.get("hot") and not (d and d < now - timedelta(days=HOT_DAYS)):
+                    # 언론사 '많이 본 기사'·'주요 뉴스' 목록: 순위를 기억해 두고 헤드라인 고를 때 쓴다
+                    hot_marks.append((item["id"], title_key(item["title"]), item["category"], len(hot_marks_src[src["name"]])))
+                    hot_marks_src[src["name"]].append(1)
                 if src.get("max_age_days"):  # 새 영상이 드문 채널: 더 긴 기간 허용(최근 7일 브리핑과 중복은 제외)
                     if d and d < now - timedelta(days=src["max_age_days"]):
                         continue
@@ -532,6 +542,7 @@ def collect(fixtures=None, now=None):
         today_seen.add(it)
         uniq.append(it)
     uniq.sort(key=lambda x: x["published"] or "", reverse=True)
+    mark_hot(uniq, hot_marks)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
     add_translations(uniq, fixtures)
@@ -541,6 +552,25 @@ def collect(fixtures=None, now=None):
     ok = sum(s["ok"] for s in status)
     print(f"[collect] {today} 항목 {len(uniq)}개, 소스 {ok}/{len(status)} 성공 → {path.relative_to(ROOT)}")
     return data
+
+
+def mark_hot(items, marks):
+    """언론사가 '많이 본 기사'·'주요 뉴스'로 올린 글에 순위(hot, 0이 가장 높음)를 붙인다. 같은 기사를 다른 곳에서 모았어도 제목이 비슷하면 표시."""
+    if not marks:
+        return
+    by_id, by_key = {}, {}
+    for mid, key, cat, rank in marks:
+        by_id[mid] = min(rank, by_id.get(mid, 99))
+        by_key[key[:60]] = min(rank, by_key.get(key[:60], 99))
+    gm = [(grams(key), cat, rank) for _, key, cat, rank in marks]
+    for it in items:
+        key = title_key(it["title"])
+        ranks = [by_id.get(it["id"], 99), by_key.get(key[:60], 99)]
+        g = grams(key)
+        ranks += [rank for og, cat, rank in gm if cat == it["category"] and similar(g, og)]
+        r = min(ranks + [it.get("hot", 99)])
+        if r < 99:
+            it["hot"] = r
 
 
 _WHEN = re.compile(r"when(?::|%3A)\d+d", re.I)
@@ -821,6 +851,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
+.op-edit{font-size:13px;font-weight:600;color:#ff4fd8;border:1px solid currentColor;border-radius:99px;padding:2px 10px;margin-left:8px}.op-edit[hidden]{display:none}
 .ph h1{font-size:28px;font-weight:700;margin:0;color:var(--heading)}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
 .editor-h h2{font-size:22px;margin:0;color:var(--heading);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
@@ -870,6 +901,7 @@ document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopIm
 document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
  dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
+try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
 function pageLinks(p,n){const s=new Set([0,n-1,p-1,p,p+1]);let h=p>0?`<button data-p="${p-1}" aria-label="이전">‹</button>`:'',last=-1;
  for(let i=0;i<n;i++){if(!s.has(i))continue;if(i-last>1)h+='<span>…</span>';h+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;last=i;}
@@ -942,10 +974,11 @@ async function start(){await loadStatus();PIN=null;try{PIN=sessionStorage.getIte
  if(PIN)return openList();view(STATUS.pin_set?'#v-lock':'#v-first');}
 $('#first-go').onclick=async()=>{const p1=$('#pin1').value,p2=$('#pin2').value;
  if(!pinOk(p1))return msg('#first-msg','비밀번호는 숫자 4자리예요.',1);if(p1!==p2)return msg('#first-msg','두 번 입력한 값이 달라요.',1);
- PIN=p1;msg('#first-msg','저장 중…');try{await send('setpin',{});try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}openList();}
+ PIN=p1;msg('#first-msg','저장 중…');try{await send('setpin',{});try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}opOn();openList();}
  catch(e){msg('#first-msg',e.message,1);}};
-$('#pin').oninput=()=>{const p=$('#pin').value;if(!pinOk(p))return;PIN=p;$('#pin').value='';try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}openList();};
-$('#logout').onclick=()=>{try{sessionStorage.removeItem('metaxis_pin');}catch(e){}PIN=null;view(STATUS.pin_set?'#v-lock':'#v-first');};
+$('#pin').oninput=()=>{const p=$('#pin').value;if(!pinOk(p))return;PIN=p;$('#pin').value='';try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}opOn();openList();};
+function opOn(){try{localStorage.setItem('metaxis_op','1');}catch(e){}}
+$('#logout').onclick=()=>{try{sessionStorage.removeItem('metaxis_pin');localStorage.removeItem('metaxis_op');}catch(e){}PIN=null;view(STATUS.pin_set?'#v-lock':'#v-first');};
 const CATN={news_ko:'국내 뉴스',news_global:'해외 뉴스',papers:'논문·연구',policy:'정책·규제',talks:'영상·강연'};
 async function loadStats(){const z=n=>String(n).padStart(2,'0'),k=new Date(Date.now()+9*3600e3),day=`${k.getUTCFullYear()}-${z(k.getUTCMonth()+1)}-${z(k.getUTCDate())}`;
  let d=null;try{d=await (await fetch('../data/'+day+'.json?'+Date.now())).json();}catch(e){}
@@ -957,8 +990,9 @@ async function loadStats(){const z=n=>String(n).padStart(2,'0'),k=new Date(Date.
 async function openList(){view('#v-list');msg('#list-msg','');loadStats();
  try{POSTS=await (await fetch('posts.json?'+Date.now())).json();}catch(e){POSTS=[];}
  showPending();renderList();
+ const want=(location.hash.match(/edit=([\w-]+)/)||[])[1];if(want){history.replaceState(null,'',location.pathname);const p=POSTS.find(x=>x.id===want);if(p)return edit(p);}
  const bad=(STATUS.results||[]).slice(-1)[0];if(bad&&!bad.ok&&/비밀번호/.test(bad.msg))msg('#list-msg','최근 요청이 비밀번호가 달라서 처리되지 않았어요. 다시 로그인해 주세요.',1);}
-function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
+function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b class="pt" data-e="${i}" role="button" tabindex="0" title="눌러서 수정">${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
   <button data-e="${i}">수정</button> <button data-d="${i}">삭제</button></li>`).join('')||'<li class="meta">아직 쓴 글이 없어요.</li>';
  $('#plist').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(POSTS[+b.dataset.e]));
  $('#plist').querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(POSTS[+b.dataset.d]));}
@@ -1151,10 +1185,10 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <meta name="robots" content="{"index,follow,max-image-preview:large" if index else "noindex"}">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{esc(sc["name"])}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{esc(image or sc["url"] + "/og-main.png")}">
+<meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{esc(image or sc["url"] + "/" + og_main())}">
 {"" if image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
-<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/og-main.png")}">
+<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/" + og_main())}">
 <meta name="theme-color" content="#06050d" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><script>try{{var m=localStorage.getItem("metaxis_theme");if(m)document.documentElement.dataset.theme=m}}catch(e){{}}</script>{verify}
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
@@ -1257,9 +1291,13 @@ def title_link(it):
 
 
 def pick_featured(items):
-    """헤드라인 1개 + 주요 소식 4개. 요약이 있는 뉴스를 우선하고 분야가 겹치지 않게 고른다."""
+    """헤드라인 1개 + 주요 소식 4개. 언론사가 '많이 본 기사'·'주요 뉴스'로 올린 글(hot)만 쓰고,
+    그런 글이 모자랄 때만 요약이 있는 최신 뉴스로 채운다. 분야가 겹치지 않게 고른다."""
     pri = {"news_ko": 0, "news_global": 1, "policy": 2, "talks": 3, "papers": 4}
-    ranked = sorted(items, key=lambda i: (not i.get("summary"), pri.get(i["category"], 9)))
+    hot = sorted((i for i in items if "hot" in i), key=lambda i: (not i.get("summary"), i["hot"], pri.get(i["category"], 9)))
+    rest = sorted((i for i in items if "hot" not in i and i["category"] in ("news_ko", "news_global", "policy")),
+                  key=lambda i: (not i.get("summary"), pri.get(i["category"], 9)))
+    ranked = hot + (rest if len(hot) < 5 else [])
     if not ranked:
         return None, []
     hero, trend, used = ranked[0], [], set()
@@ -1677,6 +1715,12 @@ def render_md(body):
     return "\n".join(out)
 
 
+def og_main():
+    """공유 미리보기 사진 주소. 사진이 바뀌면 주소 끝(?v=)도 바뀌어 카카오톡 등이 옛 사진을 다시 쓰지 않는다."""
+    f = ROOT / "static" / "og-main.png"
+    return "og-main.png" + (f"?v={hashlib.sha1(f.read_bytes()).hexdigest()[:8]}" if f.exists() else "")
+
+
 def post_item(p):
     """에디터 글을 표지·목록에서 기사처럼 다루기 위한 형태."""
     return {"id": hashlib.sha1(p["id"].encode()).hexdigest(), "title": p["title"], "link": f'editor/{p["id"]}.html',
@@ -1704,9 +1748,10 @@ def render_editor_pages(posts, cats, sc):
         rows = "".join(
             f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
-            f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span></div></div></article>' for p in chunk)
+            f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
+            f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a></div></div></article>' for p in chunk)
         rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 위의 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
-        body = (f'<div class="ph"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
+        body = (f'<div class="ph" style="--c:{EDITOR_COLOR}"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
                 f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
                 f'<div class="elist">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
@@ -1716,7 +1761,7 @@ def render_editor_pages(posts, cats, sc):
         pages.append(path)
     for p in posts:
         path = f"editor/{p['id']}.html"
-        cover = f'{sc["url"]}/editor/{p["cover"]}' if p.get("cover") else f'{sc["url"]}/og-main.png'
+        cover = f'{sc["url"]}/editor/{p["cover"]}' if p.get("cover") else f'{sc["url"]}/{og_main()}'
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": p["title"][:110], "image": cover,
                "datePublished": p.get("date"), "dateModified": p.get("updated", p.get("date")),
                "author": {"@type": "Organization", "name": sc["name"]}, "publisher": {"@type": "Organization", "name": sc["name"]},
@@ -1725,6 +1770,7 @@ def render_editor_pages(posts, cats, sc):
         fams = [f for f in POST_FONTS if f in body_html]
         body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
                 f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
+                f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
                 f'<div class="body">{body_html}</div>'
                 f'<p style="margin-top:40px"><a class="more" href="index.html">← 에디터 글 목록</a></p></article>')
@@ -1803,7 +1849,7 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .stab{border-collapse:collapse;margin:8px 0;font-size:15px}.stab td{padding:5px 18px 5px 0;border-bottom:1px solid var(--line)}.slist{columns:2;font-size:13px;color:var(--muted);padding-left:1.1em}.slist .bad{color:#e5484d}
 @media (max-width:600px){.slist{columns:1}}
 .plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
-.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
+.plist .pt{cursor:pointer}.plist .pt:hover{color:var(--accent,#3b7bff);text-decoration:underline}.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
 def render_home(data, cats, posts):
@@ -1827,7 +1873,7 @@ def render_home(data, cats, posts):
             f'<button class="circle share" data-url="{esc(hero["link"])}" data-title="{esc(hero["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div></div>'
             f'<aside><div class="side-h"><h2>주요 소식</h2><a href="#all" data-tab="all">전체 보기</a></div>{side}</aside></div>')
     if posts:
-        parts.append('<div class="editor-h"><h2 class="serif">에디터 글</h2><a href="editor/">전체 보기 →</a></div>'
+        parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터 글</h2><a href="editor/">전체 보기 →</a></div>'
                      f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:3])}</div>')
     info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · {esc(data["generated_at"][11:16])} 업데이트'
     parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
@@ -1914,6 +1960,7 @@ def write_feed(latest, sc):
 
 
 DEFAULT_TINT = "#3b7bff"
+EDITOR_COLOR = "#ff4fd8"  # 에디터 글 표시색(네온 분홍): 뉴스 분야 색들과 겹치지 않게
 INTRO_COLORS = {"news_ko": "#12e3ff", "news_global": "#3b7bff", "papers": "#a24bff", "policy": "#ffb020", "talks": "#2ff5a0"}  # 분야별로 확실히 다른 색(첫 화면 점·제목 막대·탭 공통)
 
 
@@ -1945,7 +1992,7 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     if sc["naver"]:
         verify += f'<meta name="naver-site-verification" content="{esc(sc["naver"])}">'
     page_ = (ROOT / "intro.html").read_text(encoding="utf-8")
-    for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{VERIFY}": verify,
+    for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{OG}": og_main(), "{VERIFY}": verify,
                  "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else "", "{FAVICON}": FAVICON,
                  "{DATE}": f"{d.month}월 {d.day}일", "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
         page_ = page_.replace(k, v)

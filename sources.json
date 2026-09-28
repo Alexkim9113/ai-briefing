@@ -42,6 +42,10 @@
     {"name": "Ars Technica AI", "category": "news_global", "url": "https://arstechnica.com/ai/feed/", "max_age_days": 4, "limit": 5},
     {"name": "WIRED AI", "category": "news_global", "url": "https://www.wired.com/feed/tag/ai/latest/rss", "max_age_days": 4, "limit": 5},
     {"name": "ZDNET AI", "category": "news_global", "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml", "max_age_days": 4, "limit": 5},
+    {"name": "AI타임스 많이 본 기사", "category": "news_ko", "url": "https://www.aitimes.com/rss/clickTop.xml", "tz": 9, "hot": true, "max_age_days": 2, "limit": 10},
+    {"name": "인공지능신문 많이 본 기사", "category": "news_ko", "url": "https://www.aitimes.kr/rss/clickTop.xml", "tz": 9, "hot": true, "max_age_days": 2, "limit": 10},
+    {"name": "구글뉴스 주요 뉴스: IT", "category": "news_ko", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "hot": true, "max_age_days": 2, "limit": 10},
+    {"name": "Google News Top: Technology", "category": "news_global", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en", "require_ai": true, "hot": true, "max_age_days": 2, "limit": 10},
 
     {"name": "Hugging Face 오늘의 논문", "category": "papers", "field": "AI 일반", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 10},
     {"name": "arXiv cs.AI", "category": "papers", "field": "AI 일반", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 6},
