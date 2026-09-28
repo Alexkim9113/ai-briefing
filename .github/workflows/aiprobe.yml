@@ -11,20 +11,7 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 - <<'PY'
-          import os, json, urllib.request, glob
-          d = json.load(open(sorted(glob.glob("data/*.json"))[-1]))
-          items = [i for i in d["items"] if i.get("summary")][:3]
-          inp = [{"id": i["id"], "category": i["category"], "source": i["source"], "title": i["title"], "description": i.get("summary", "")} for i in items]
-          sysmsg = "너는 METAXIS의 AI 브리핑 에디터다. 각 항목마다 QUICK_BRIEF(2~3문장), METAXIS_POINT(2문장), TAGS(3~5개)를 한국어로 쓴다. JSON 배열만 출력: [{\"id\":..., \"brief\":..., \"point\":..., \"tags\":[...]}]"
-          for model in ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1"]:
-              body = json.dumps({"model": model, "temperature": 0.3, "messages": [{"role": "system", "content": sysmsg}, {"role": "user", "content": json.dumps(inp, ensure_ascii=False)}]}).encode()
-              r = urllib.request.Request("https://models.github.ai/inference/chat/completions", body,
-                  {"Authorization": "Bearer " + os.environ["GITHUB_TOKEN"], "Content-Type": "application/json", "Accept": "application/json"})
-              try:
-                  resp = urllib.request.urlopen(r, timeout=90)
-                  print("==", model, resp.status, {k: v for k, v in resp.headers.items() if "limit" in k.lower() or "remaining" in k.lower()})
-                  j = json.load(resp); print(j["choices"][0]["message"]["content"][:1500]); print("usage", j.get("usage"))
-              except urllib.error.HTTPError as e:
-                  print("==", model, "HTTP", e.code, dict(e.headers), e.read()[:400])
-          PY
+          B='{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"한 문장으로 인사해"}]}'
+          echo "== models.github.ai"; curl -sS -i -m 60 https://models.github.ai/inference/chat/completions -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -d "$B" | head -c 1500; echo
+          echo "== catalog"; curl -sS -m 60 https://models.github.ai/catalog/models -H "Authorization: Bearer $GITHUB_TOKEN" | python3 -c "import json,sys;d=json.load(sys.stdin);[print(m.get('id'),m.get('rate_limit_tier')) for m in d[:60]]" || true
+          echo "== azure endpoint"; curl -sS -i -m 60 https://models.inference.ai.azure.com/chat/completions -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{"model":"gpt-4o-mini","messages":[{"role":"user","content":"한 문장으로 인사해"}]}' | head -c 1500; echo
