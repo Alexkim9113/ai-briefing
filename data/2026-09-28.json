@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:12+09:00",
+ "generated_at": "2026-09-28T16:13+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -2790,7 +2790,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
@@ -2808,7 +2808,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 83
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2855,8 +2855,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
