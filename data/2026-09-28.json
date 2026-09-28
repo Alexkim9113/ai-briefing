@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:49+09:00",
+ "generated_at": "2026-09-28T20:50+09:00",
  "items": [
   {
    "id": "8345a2704767261f",
@@ -851,6 +851,18 @@
    "thumb": ""
   },
   {
+   "id": "cc17b1da34acd061",
+   "title": "“원자 하나에 거대한 ‘신경망’ 숨어있었다”…韓 연구진, 양자세계 비밀 규명",
+   "link": "https://biz.heraldcorp.com/article/10886063",
+   "source": "헤럴드경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:00:00+09:00",
+   "summary": "[헤럴드경제=구본혁 기자] 눈에 보이지 않는 원자와 빛의 세계 속에 인간의 뇌 신경망처럼 거대한 연결망이 숨어 있었다. 국내 연구진이 복잡하게 얽혀 있는 양자 상태를 마치 ‘지하철 노선도’처럼 한눈에 파악할 수 있는 새로운 방법을 찾아냈다.",
+   "detail": "국내 연구진이 복잡하게 얽혀 있는 양자 상태를 마치 ‘지하철 노선도’처럼 한눈에 파악할 수 있는 새로운 방법을 찾아냈다.\n한국연구재단은 서울대 박남규·유선규 교수와 서울시립대 박현희 교수 연구팀이 원자와 빛의 복잡한 상호작용을 하나의 틀로 설명하는 ‘자기 그래프(magnetic graph)’ 이론을 개발했다고 28일 밝혔다.\n결합이 약할 때는 기존 계산법이 통하지만 ‘초강결합’, ‘심층강결합’으로 갈수록 근사법이 맞지 않는다.\n이 때문에 결합 세기에 따라 서로 다른 계산법을 사용해야 했다.\n연구팀은 ‘지하철 노선도’에서 해법을 찾았다.",
+   "thumb": ""
+  },
+  {
    "id": "b8e5b445454ffd24",
    "title": "삼성전자, '서비스 혁신으로 AI 구독 새 시대 선언'...신혼·시니어·기업 맞춤 서비스 강화",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42085",
@@ -1038,7 +1050,7 @@
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
    "detail": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다.\n오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.\n26일(현지시간) AI 정보 유출 전문 계정 라이라(Lyra)에 따르면, 앤트로픽은 최근 파트너사들을 대상으로 소네트 5.5의 두 번째 체크포인트 빌드를 배포하고 스텔스 테스트를 진행하고 있다.\n라이라는 이르면 28일 오전 중 정식 출시될 가능성을 언급했다.",
    "thumb": "",
-   "hot": 5
+   "hot": 4
   },
   {
    "id": "d5e92818650c7525",
@@ -1063,6 +1075,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "8cd64ca0e58500d6",
+   "title": "[과기원NOW] 포스텍, 산소 방출 조절해 전기차 배터리 수명 늘린다 外",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xRE5VeFlKNDZwM2pFUmc5RDhhNk0yOFhxWnFCM1MyeXV2VWs3UWlGY2xzTmhTMEMzclM1aWR0dTdrZk5GbFJ2QlpnVXdFNWRFbkNTSg?oc=5",
+   "source": "DongA Science",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T11:05:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "ca6d89c27fc0a2e0",
@@ -1103,6 +1126,17 @@
    "title_ko": "존 조지스는 메타의 AI 협상이 ‘저널리즘을 구할 것’이라고 믿는다 — 그리고 루이지애나주 최대 일간지",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "fd62032abae488e2",
+   "title": "AI in Peer Review: Practices & Policies",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9PMTdLRTZROWk5UGN5SlR5ZWVRVU1jd2ZfUzBiVXZCT0JXajRzVm5UY1hpa1pTMFFLLXJPY3pBWEN2RkZGaFZHWXYxZGxScjVPMVUtRnZOeWpYdm16NTcwY1hScVJwaE81TGNF?oc=5",
+   "source": "Daily Nous",
+   "field": "윤리·철학",
+   "category": "papers",
+   "published": "2026-09-28T11:00:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "7acd87b22f3e4693",
@@ -2127,6 +2161,17 @@
    "thumb": ""
   },
   {
+   "id": "63c48180738119d8",
+   "title": "[환경용어] AI 시대 전력 먹는 하마 잡는 열쇠... '그린 데이터센터 인증'",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5pNFdBdFJuS2liYnBXWTd1WnVqaVBkd3dYMTlmT1g3czBwSEF5VWwtMFRhUWwtZ2J3Q0RuMUxTNEk4XzhEZVhHMWNRMm1pY0FIbFR6ZVBoZmhsNHJPb2x3QW1UNHVGSnPSAWpBVV95cUxPX0kzcmRldjZQeDBFaG40bVBoSUdTV0RmNDV6UG1teHVCRHc1b1g3bzlFZzBVUDdzRXV5Nmk5Ny1aaDlGTFQ3eDdyWXJZdDFxY0UybGNQcS1WamVuXy0wY09wX2czNUVEQWJ3?oc=5",
+   "source": "파인드비",
+   "field": "에너지·환경",
+   "category": "news_ko",
+   "published": "2026-09-28T08:46:57+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "c9b5c0c9b9961d6e",
    "title": "세계 각국, AI 규제 뒤쳐져...美中 선례 대기 중",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE90UzVhUkpPWmlvNk5Ma0RwcWVhUjFLS2p0dXdrNDVUOU0yaWp0bjZWSG01VnQ4UlhHbmJBcElmZzNiVV9jT01nUDh1YmMzQXJrNmNydGNLS213Zw?oc=5",
@@ -2264,6 +2309,20 @@
    "published": "2026-09-28T08:36:19+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "4011bf384bef6582",
+   "title": "How Trump and AI Data Centers Are Boosting Nuclear Power",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHlPNnRFRUJ1Qnh5azFRSVRfdmx2YjNXakw0UUFQTTJhM2VLMTlRcERENlRycTFVRWgzNTNZUlpvRklJWFBvSW1BZU5XeUtzTG8zLU5wTWJHOHk1NndIYWJwWjZpWWoxYVBWdFZCVnZVUWR3Q3M4NlI2cTB0Z2N4T2Z6aWIwck03Y09RZmlwYmg?oc=5",
+   "source": "EnergyNow.com",
+   "field": "에너지·환경",
+   "category": "news_global",
+   "published": "2026-09-28T08:36:10+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "트럼프와 AI 데이터 센터가 원자력 발전을 어떻게 활성화하고 있는가",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "d639efd33e5f67f3",
@@ -2485,28 +2544,6 @@
    "thumb": ""
   },
   {
-   "id": "6e9cca0181588640",
-   "title": "전남대 인공지능융합학과 연구팀, NeurIPS 2026 논문 채택",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE43cGo0MEtGNjdPMGs0Y2VDZjR5T1RGSFFRQnRBQ3NKUU0yOXhENXk2LUhHZjRhVnQ2VmVWYjRaTFJjZGlwVjZDTW5oaVJKVjloZlFjR0RzUzh6Qkxy?oc=5",
-   "source": "누리일보",
-   "field": "국내 연구",
-   "category": "papers",
-   "published": "2026-09-28T08:10:32+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "전남대학교 인공지능융합학과 연구팀의 학술 연구 논문이 최고 권위의 국제 인공지능 학회인 NeurIPS 2026에 채택되었다. 연구팀은 이번 채택을 통해 고도화된 AI 원천 기술 연구 역량을 입증했다.",
-    "p": "지역 거점 국립대를 중심으로 첨단 AI 연구 성과가 글로벌 최고 수준의 학회에서 검증받으며 지역 AI 인재 양성과 연구 생태계 확장의 기반을 넓히고 있다.",
-    "t": [
-     "전남대학교",
-     "NeurIPS",
-     "인공지능연구",
-     "AI원천기술"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "33ba2a0960af30ec",
    "title": "[월드픽&톡] 'AI 인류 멸망' 세가지 시나리오…\"다 나가\" 트럼프·美언론 '전면전'",
    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBkVy00ZV9xQ3l5OFg2Q3Q0R1BsUGdsQmNyODhlOGVRcFFvSHhYcjljbTlUR1hFcFQxLW9TNW5aMTdQc3AyUF84X20wQ2hUblRsdDZENHZTN2Ytb0VRRW1XYlc1Y3dFd2xLWGxWQi1TQXR2eU9U?oc=5",
@@ -2514,6 +2551,17 @@
    "field": "미디어",
    "category": "news_ko",
    "published": "2026-09-28T08:07:58+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "8048f818cbe18a27",
+   "title": "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용…‘2026 UFS’서 첫 실증",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxWnBNLTFPQ3FVVXhrMXhjazRnZ0g0SHBTUDdYSmtRTUpsVzBmSnJicGpPMUlXNm9pc0xGaFhzWVJ5ZFpaV1hJX2tOYWNXMlBwR1ViSmtUYkdUWkttampzWTJDYUhkZVZmNEtCeA?oc=5",
+   "source": "로봇신문",
+   "field": "에너지·환경",
+   "category": "news_ko",
+   "published": "2026-09-28T08:06:48+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -3012,6 +3060,18 @@
    "thumb": ""
   },
   {
+   "id": "562e6995f8d16f57",
+   "title": "AI 계정 훔쳐 팔고, 남의 서버서 공짜로 돌리고…해커들의 ‘연산 도둑질’",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRWdYNzBEeWt2T1FXSDdUOTdtRjhyTUk4TFlQc19wcWpLNkR1U3dZV1BTMFU4Smg3QnpVN3JYa3RfSGdLNlNZTUJmLWVIbU11SmR4MDhLYVZQUzFObGdJVHpRWjQzMjgxUHBQSkNfcmRwVFgxVXpSMllEZVlUNlYyQ2wxYw?oc=5",
+   "source": "조선일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:47:45+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 9
+  },
+  {
    "id": "402b5453964c27e4",
    "title": "Pepperdine Hosts Two-Day Human-Centered AI Conference",
    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRnlVdXhzbHMyRlZXUDk4R3lyNkctMEFwYl9yTjRKQUt6NGYybFZrcENiOFpnN3kzZWRNREpiOGgyeHkwZ3cwcjhpb054VWxPUjNiLVZwNkR0c1JGS25hVHFQSEJlLU1YVVQ2VWdBMl81ekxyUWxlQXlxSWd2TV9NNlVTTEpvOWNfZUpsb193?oc=5",
@@ -3336,28 +3396,6 @@
    "thumb": ""
   },
   {
-   "id": "ce44cf91060af495",
-   "title": "한국석유공사, AI로 현업 문제 푼다…업무혁신 경진대회 시상",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE42czFuaGdsbVRBanMya3lnd1JCeHZpNDlYR2RWVUljQ3k0cnVzNWdGV1RmQmc1Ynl5SkVlbG1hX3MwTzRiWHBPN3YyWE9BQUFrdGwzLXh5Q2Fvb1Q2MVhfcjktWHBWNVQySFZn?oc=5",
-   "source": "프레시안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:48:15+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "37917b310c80262e",
-   "title": "아이스크림미디어, 중남미·카리브 IPTP 지역회의서 AI 교육협력 방향 기조발표",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ramcwYXlxb05JZzhwLVM4WXUzamdvSFcyak9qcG1iM1oyaGZwbThzQjNvR0ZDMzB3d24tNkdGTmpDRHVoMVg0b1RwLUVRREZKMVp1NW1TVEtKUVJjbkRj?oc=5",
-   "source": "헬로티",
-   "field": "미디어",
-   "category": "news_ko",
-   "published": "2026-09-28T05:47:07+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "aa5e3e547eac71d3",
    "title": "대전시-육군, '국방 AI' 맞손…방산기업 기술 전환 지원",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5WYXE0bnpfY2NnbVdkTHR0c3RqcXBBNGJxdWV5SndkMFYwTzl6TzFlNW9kSXJpc0tBVER6OS1Rb3Y5MTVCblllcERsNzFFRGh1U2VwX2NxUWg2aUdBZUF1VjBQUkdhLUFPS3c?oc=5",
@@ -3365,17 +3403,6 @@
    "field": "국방·안보",
    "category": "papers",
    "published": "2026-09-28T05:43:59+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "ce15bf0693cef6da",
-   "title": "충남형 AI 대전환, ‘산업과 사람’ 등 3대 균형으로 추진한다",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1RLUpoR1pma0pobGFMeE9pREJjcnYxWFRTWmpqbnROeERMd2E3bkc4RmpEU19ya1lEdVFadFRYM0lPRWhMU1RZbTNQN3ZGWGgt?oc=5",
-   "source": "문화일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:41:38+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -3953,6 +3980,17 @@
    "trv": 2
   },
   {
+   "id": "da426871438a7360",
+   "title": "생성형 AI 썼다면 모델·버전 공개해야… 국가R&D 책임은 연구자",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fWDFHNE9ycXVYZkxlalg0ckNMN2RSbURubFVGUmJ3UkpNV3BJS2piVF80NWx6VW90LUFiWFhuLURQNzN3LXJRWmhNNnNRdU0?oc=5",
+   "source": "v.daum.net",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-09-28T02:04:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "d9174ae236f11b26",
    "title": "트럼프 ‘AI Force’ 이끌 새 AI 총괄 누구…美 기술정책 핵심 인선 경쟁",
    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVN3pGMjBhTnphWjEzaHBVajMzSXVDNFE1aUh5QjhCenhzWDBteVhoYjhBWWVPaDJVeU52bjFKTDFCRXowMWpwaHFNTEtuZ0lhOW0zQzJqQWhvUFRSbmpaVXhVVnktN2M0blI3Ug?oc=5",
@@ -4017,6 +4055,17 @@
    "trv": 2
   },
   {
+   "id": "e3670fdb1168e9de",
+   "title": "“AI 기반 과학기술 연구 미래 논의”, 서울서 국제학술 대회 개최",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yYXM0Zkw0aHFQck1DR0loWkp6U3FUUUxkM3B4YTNBTzhYY0xxallPX3lPaHo4RHVIRFRaUlJKNGZzTVpwSFV3Tnd3dXZIUQ?oc=5",
+   "source": "전자신문",
+   "field": "환경·에너지·동물",
+   "category": "papers",
+   "published": "2026-09-28T01:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "add38888f24e18e8",
    "title": "OpenAI Slows AI Training Following Latest Security Incident",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVlNNM043YXpZNlp2d1M1MlotcTN2cjlob085RHpjcGs0QXJhbFN6R0E0dDJCVnBTSk45andHUmZJclUzT0VqZkdlNndXVkJ3aEUxZVJfcWdlMWsyUjBzOWhaMkVMMmtuUy1jVXFfUUxvMTNQWEZZbC1TQmpoeTB2TlJsQTE1bHozUTROSk8xNEdSN1JyOTZud0xhSFZoclp0VkhSMl9lUWVRTW5TbWdyR3ZRUzFpQTlQ?oc=5",
@@ -4065,6 +4114,17 @@
    "title_ko": "설문조사 결과, AI 도입에 따른 비용이 발생하고 있음에도 의료계 경영진들은 여전히 기술에 투자하고 있는 것으로 나타났다",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "ba35de9dcfd1f152",
+   "title": "AI가 만든 연구결과, 책임은 연구자에게…국가 R&D 윤리 가이드 확정",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wWk1HLUVSUVhpb1NCM3lmZTJmNl9reUY5UUoxQXA4R25QeEZFb3E1T0x6alF1bXJCWmM5OWo2ZG56LS1kelRHSkRrWTFCdHhCVmJYMEhqZzFaOEZKSFQya1BFMHc5d20weWR3?oc=5",
+   "source": "산학뉴스",
+   "field": "윤리·철학·법",
+   "category": "papers",
+   "published": "2026-09-28T00:34:30+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "663a777ff2b4ac30",
@@ -5148,6 +5208,17 @@
    "detail_ko": "이번 제한적 테스트는 일부 제품과 사용자를 대상으로 진행되며, 10월 말경에 더 광범위한 서비스가 시작될 예정이다."
   },
   {
+   "id": "84a207763785416d",
+   "title": "Scoop: Top AI companies probing tens of thousands of security incidents",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaUlRV1JkUEZFRkRINVBlWTR1SWxkZ1hjcUdOMkJDNzF4UXdBVHd2LVlqQmlwb0R3cTVuTFk3MEp1eHlUT0hsRTAzekszcl81ZjNoWDZCMkZBTlk4Z3dlV1RoZnd3YVZSQmpUWWEyc3EyWUFnRHFiQjNacUVEYmxuYXFxVldIdVJ3?oc=5",
+   "source": "Axios",
+   "field": "환경·동물",
+   "category": "papers",
+   "published": "2026-09-26T22:39:13+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "af27f66cc5ec6ee5",
    "title": "Behold the horrors of DLSS 5, NVidia's real-time AI graphics improver",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclJDVDBhdzhDQUhPNlhVRDFET19kZjc4NDBXM2N0SjNfZkIxZ2ZBWGJiVms2UmRoZERJSUQ4emhxUlRLaWk3RmpLcWtKaERMbzI3blhIVXdjX3NsN1p3NTNNT3dndWEtVklLYjhmVXVwOUt1UnIwSzg4amdaR0lQazNsejloM19XSGM3RGdIR29iMnBVMW1IbG5uc3NQRENWWTZBNkREbzZsd9IBrwFBVV95cUxQR3o0ZU9IZENJOUNra0pPMi1hS2pxTm1BS05yRk1QWFp1S1ZYLWh4bmlIc3oxdEtkZ0JVQmRNN3VkVC1lbm1CbEVYUmZrOGlZcm1SclpmNFhPZjlaQzIyYzJ3WGh0QVdIaHlJQm1TZm5oV0tLcDRiQ2RRTTEwc0JNZDJ1Umkybk9KUDhIcmtvMDlwZE1YSnZIY0NmTFh5TmRnejRzNnQwTVBNTndkQXFj?oc=5",
@@ -5157,7 +5228,7 @@
    "published": "2026-09-26T16:04:09+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 1,
+   "hot": 0,
    "title_ko": "엔비디아의 실시간 AI 그래픽 향상 기술, DLSS 5가 보여주는 끔찍한 모습",
    "tr": "deepl",
    "trv": 2
@@ -5716,6 +5787,65 @@
    "detail_ko": "사물의 영속성과 실체성은 인간 인지 선입견의 대표적인 특징이다.\n우리는 6가지 인지 범주로 분류된, 인지과학에서 영감을 받아 수작업으로 설계된 150개의 과제로 구성된 데이터 인프라인 WROP(World Reasoning with Object Permanence)를 소개합니다."
   },
   {
+   "id": "07b58d37b3acc6ca",
+   "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
+   "link": "https://huggingface.co/papers/2609.28416",
+   "source": "Hugging Face 오늘의 논문 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-22T20:00:00+00:00",
+   "summary": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments.",
+   "thumb": "",
+   "summary_ko": "최근 대규모 언어 모델(LLM)의 발전으로 인해 에이전트가 다양한 환경에서 장기적인 과제를 수행할 수 있게 되었다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "최근 대규모 언어 모델(LLM)의 발전으로 인해 에이전트가 다양한 환경에서 장기적인 과제를 수행할 수 있게 되었다."
+  },
+  {
+   "id": "409ed6e622c5fe69",
+   "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+   "link": "https://huggingface.co/papers/2609.23407",
+   "source": "Hugging Face 오늘의 논문 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-19T20:00:00+00:00",
+   "summary": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents.",
+   "thumb": "",
+   "summary_ko": "인간은 음원의 방향을 쉽게 파악하고 추론을 위한 시각적 단서와 통합할 수 있지만, 이는 구현된 에이전트에게는 여전히 어려운 일입니다.",
+   "tr": "g",
+   "detail_ko": "인간은 음원의 방향을 쉽게 파악하고 추론을 위한 시각적 단서와 통합할 수 있지만, 이는 구현된 에이전트에게는 여전히 어려운 일입니다."
+  },
+  {
+   "id": "3f70b2fc346fe7d5",
+   "title": "Cybernetics, interoception, and the art of embodiment",
+   "link": "https://www.nature.com/articles/s42256-026-01312-x",
+   "source": "Nature Machine Intelligence · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-18T00:00:00+00:00",
+   "summary": "Nature Machine Intelligence, Published online: 18 September 2026; doi:10.1038/s42256-026-01312-x Living organisms continuously monitor their internal physiological states while…",
+   "detail": "Nature Machine Intelligence, Published online: 18 September 2026; doi:10.1038/s42256-026-01312-x Living organisms continuously monitor their internal physiological states while interacting with complex environments and adapt their actions in response to changes in these internal signals.",
+   "thumb": "",
+   "summary_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 18일; doi:10.1038/s42256-026-01312-x 살아있는 유기체는 내부 생리학적 상태를 지속적으로 모니터링하면서…",
+   "tr": "g",
+   "detail_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 18일; doi:10.1038/s42256-026-01312-x 살아있는 유기체는 복잡한 환경과 상호 작용하면서 내부 생리적 상태를 지속적으로 모니터링하고 이러한 내부 신호의 변화에 ​​반응하여 행동을 조정합니다."
+  },
+  {
+   "id": "58601c7ca2624210",
+   "title": "RayOrch: Programming and Executing Lineage-Controlled Multi-Grain Dataflows for Foundation-Model Data Preparation",
+   "link": "https://huggingface.co/papers/2609.18703",
+   "source": "Hugging Face 오늘의 논문 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-15T20:00:00+00:00",
+   "summary": "Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records.",
+   "detail": "Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records.\nThe compiler validates each pair, while the runtime records child membership, immediate parents, immutable ordinals, and terminal states.",
+   "thumb": "",
+   "summary_ko": "기초 모델을 위한 고품질 훈련 데이터를 준비하려면 이기종 문서와 비디오를 구조화된 기록으로 변환하는 확장 가능한 파이프라인이 필요합니다.",
+   "tr": "g",
+   "detail_ko": "기초 모델을 위한 고품질 훈련 데이터를 준비하려면 이기종 문서와 비디오를 구조화된 기록으로 변환하는 확장 가능한 파이프라인이 필요합니다.\n컴파일러는 각 쌍의 유효성을 검사하는 반면 런타임은 하위 구성원, 직계 상위, 불변 서수 및 터미널 상태를 기록합니다."
+  },
+  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -5849,9 +5979,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": true,
-   "count": 3,
-   "fetched": 10
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
   },
   {
    "name": "Google AI Blog",
@@ -5863,12 +5993,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 2,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -5940,8 +6070,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -5977,7 +6107,7 @@
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
@@ -5989,7 +6119,7 @@
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 55
   },
   {
    "name": "Sequoia Capital",
@@ -6061,13 +6191,13 @@
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 70
+   "fetched": 73
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "Topic: 여성 · 여성",
@@ -6079,13 +6209,13 @@
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 37
+   "fetched": 39
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 41
+   "fetched": 43
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -6097,7 +6227,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "VentureBeat AI",
@@ -6211,7 +6341,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -6241,19 +6371,19 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 37
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 30
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 27
+   "fetched": 26
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
@@ -6361,7 +6491,7 @@
    "name": "문화일보",
    "ok": true,
    "count": 5,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "법률저널",
@@ -6391,7 +6521,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "아주경제",
@@ -6451,7 +6581,7 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "주제: 동물 · 동물",
@@ -6475,7 +6605,7 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 66
+   "fetched": 68
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -6493,7 +6623,7 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 26
+   "fetched": 28
   },
   {
    "name": "주제: 정신건강 · 정신건강",
@@ -6511,7 +6641,7 @@
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 38
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -6529,7 +6659,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 538
+   "fetched": 537
   },
   {
    "name": "프레시안",
