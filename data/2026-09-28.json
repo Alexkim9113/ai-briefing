@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:58+09:00",
+ "generated_at": "2026-09-28T13:09+09:00",
  "items": [
+  {
+   "id": "b163ed3fcb727529",
+   "title": "스캐터랩, AI 캐릭터챗 '제타' 신규 기능 출시...\"대화 따라 표정·배경 바뀐다\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215708",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:57:36+09:00",
+   "summary": "스캐터랩(대표 김종윤·박세웅)은 AI 인터랙티브 엔터테인먼트 플랫폼 '제타'에 새로운 플레이 모드인 '비주얼 노벨 모드'를 출시했다고 28일 밝혔다. 비주얼 노벨 모드는 대화 맥락과 스토리에 따라 캐릭터와 배경이 실시간으로 변화하는 플레이 모드다.",
+   "thumb": ""
+  },
   {
    "id": "a0a4059ef341dc1d",
    "title": "포지큐브, 하나은행에 AI 에이전트 서비스 구축...\"금융 AX 가속\"",
@@ -113,6 +124,17 @@
    "thumb": ""
   },
   {
+   "id": "f388d2dfd421a7c2",
+   "title": "인천시교육청 신트리도서관, 교육기부 프로그램 ‘인공지능(AI) 디지털 배움터’ 참여자 모집",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE56MUhLMEk2WmtlUjM0Ny1xOGNhNHFxb2Fxb3NfQVAzWm90MThKMWwtUHR1NFA0Mk5rT1VTRHR2dmZCcnY5cG5pWXE4ajdHanNBSGlCMTYzMjlubkxlbnJDczB2ZXdqSFhGVnpr?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T03:56:58+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "655bd5362be42b9c",
    "title": "행안부, 루마니아·조지아에 'AI 정부' 알린다…디지털 협력 확대",
    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBTc1llT2JxaVAtN2IyMXRhaGdnYkFKejNfemJBTk5TVlgyWGd6R1BHOXpqSkUxSUo1TXJzdHNsRkU2c1B2R2lBZWpyS2M0QnRRSEROd0l3?oc=5",
@@ -142,6 +164,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T03:06:55+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "a20f43cd01f528d4",
+   "title": "Artificial Intelligence in Contemporary Dentistry: Applications Across Dental Specialties and Future Challenges",
+   "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPNXlXWENjMk56UG9fYi1qT2NwODJuWDRGT1g2cldlVGhQQ2J4cW9MTzN2dXhoU00wZ1NMazZ3SjZ3bTJiNmI4alBTaXRXRzh3dXUyem85MlBvaExQdGY1aWpCaGhrVUlyY2xxdDF4VWdkMXM2SlZleUZTcl9YTnB5QkxjQ05BazNITXdDSHhwY1ZDWnpwWV9WWGZXUjgwUlJQdkg5ejlxc3dsV0IzX0NvZXBwV2UwZnZtaUlwRXROZkdoaWtnd2xaV0gyNHotSTZ5dGlqMENRSXdyNjlWUjdTWjVBdHk5LUZ1NC1jeEZnSVpoaDkzMWRPOTktZ3c?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T03:04:15+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -635,6 +668,17 @@
    "thumb": ""
   },
   {
+   "id": "49002eff43785008",
+   "title": "영국 최대 보드게임 행사 'UKGE', 생성형 AI 제작물 전면 금지",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5lXzZhVlRpVnktVGJERzc5TjJRclRudXc5dngxaWZLN2REb3ZETk94RklSem56eTlBWjZYVlQ2NERJZUozUFduRDJHZVR6ZEZzWWxwOWV3?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:02:37+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "d594cf48aee4d173",
    "title": "과학기술과 인공지능의 결합…‘제1회 AI4Sci Korea’ 개막",
    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBabU5teVA1NWJodWNaUkk2d1FKTDVfWGtpSy1lY3VOLVVOdEZrZUdUM19FY3d3b3ZYeHFFQ1FxbFlYMTZxRzljWTUxQUZ1eEQ4X282NDNR?oc=5",
@@ -910,6 +954,17 @@
    "thumb": ""
   },
   {
+   "id": "b6c53925c5aa08b7",
+   "title": "오픈AI·앤트로픽, 보안 사고 수만 건 조사…‘통제 능력’ 의문",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CSk9ZdGRuMHRYMHBJRV9Jank2ZEN3ZklaenZSM2t6VUtSalRtZkN3dE52RkI2NXNxZHM3UnJKdk9ZSEx0eUJobWdQek5nRkczZkp5Y1NQU2ZTbndkWGZuVmE3UkUyVU41OWZWV0J2NA?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:21:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "044efe812f4dc4da",
    "title": "Trump To Meet Anthropic CEO As AI Regulation Debate Deepens",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQUZPQm1xU2JMY1B4UTJJZ19XdUhiTVAtTXhkb2h3WWxkUTd2cEdjRXdTR0Z6aU5aNkctMmNGNXJsbDdYT0x5RFdLcUtQU2ozWFN6TG9OTEtHZmE1bWRIWXgtRDZQVng4U2RBN3R0bmNfaEZ6bWdsdTVfZFpINFhJby0tbl9LQWhRZ0NLa3ktM2VsVkRHRnFUamRiWjJZZEtLWUwyLWpxMA?oc=5",
@@ -990,6 +1045,204 @@
    "thumb": ""
   },
   {
+   "id": "9b75262a4813d73c",
+   "title": "A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID",
+   "link": "https://arxiv.org/abs/2609.30287",
+   "source": "arXiv cs.CL · 언어·LLM",
+   "field": "언어·LLM",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "AI-generated text detectors achieve high accuracy on standard benchmarks, yet the internal representations that drive these predictions remain poorly understood.",
+   "thumb": ""
+  },
+  {
+   "id": "13eddd2d548f927d",
+   "title": "Manifold Projection and Iterative Autoencoder Refinement for Masked Language Modeling",
+   "link": "https://arxiv.org/abs/2609.30288",
+   "source": "arXiv cs.CL · 언어·LLM",
+   "field": "언어·LLM",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "In Transformer-based masked language models, attention is the primary mechanism for context mixing, but there are other ways to mix data across tokens.",
+   "thumb": ""
+  },
+  {
+   "id": "a72f36c603737ac3",
+   "title": "Not All Memories Are Equal: Hierarchical Collaborative Memory for Validity-Aware Retrieval in LLM Agents",
+   "link": "https://arxiv.org/abs/2609.30289",
+   "source": "arXiv cs.CL · 언어·LLM",
+   "field": "언어·LLM",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "In team collaboration scenarios, memory is heterogeneous and continually evolving.",
+   "thumb": ""
+  },
+  {
+   "id": "89cfa475c2cdfc02",
+   "title": "Auditing and Repairing LLM-as-Judge Failures in a Production Text-to-SQL Pipeline",
+   "link": "https://arxiv.org/abs/2609.30290",
+   "source": "arXiv cs.CL · 언어·LLM",
+   "field": "언어·LLM",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Production text-to-SQL pipelines often end with an LLM-as-judge whose agreement with human annotators has never actually been measured.",
+   "thumb": ""
+  },
+  {
+   "id": "9f727f4c6d89ac2e",
+   "title": "Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
+   "link": "https://arxiv.org/abs/2609.30291",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "The purpose of this article is to highlight the central role of autonomous systems as the ultimate stage in the development of AI, to explain the underlying technical challenges…",
+   "thumb": ""
+  },
+  {
+   "id": "3b64b7e40e5ebfea",
+   "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+   "link": "https://arxiv.org/abs/2609.30325",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Agents are increasingly deployed with real autonomy in web application and network penetration testing, where a single out-of-scope action can breach a client's engagement…",
+   "thumb": ""
+  },
+  {
+   "id": "3e75f2a25891f6ef",
+   "title": "When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
+   "link": "https://arxiv.org/abs/2609.30328",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "When one language model judges whether another's code is correct, it does not report the absence of evidence.",
+   "thumb": ""
+  },
+  {
+   "id": "b8fa13cceb3fef09",
+   "title": "Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
+   "link": "https://arxiv.org/abs/2609.30341",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Data Spaces enable sovereign and governed data sharing across organizational boundaries, but their integration with AI agents remains challenging due to mismatches between…",
+   "thumb": ""
+  },
+  {
+   "id": "378c7e6a655962f9",
+   "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
+   "link": "https://arxiv.org/abs/2609.30383",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "A skill is a modular package of natural-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a…",
+   "thumb": ""
+  },
+  {
+   "id": "8ce8f265fed36edb",
+   "title": "A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods",
+   "link": "https://arxiv.org/abs/2609.30397",
+   "source": "arXiv cs.AI · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Evaluating explainable Artificial Intelligence (XAI) methods is a challenging task due to the lack of reliable evaluation procedures and, in particular, the absence of ground…",
+   "thumb": ""
+  },
+  {
+   "id": "5d646df0760783f2",
+   "title": "How can AI accelerate the green transition?",
+   "link": "https://arxiv.org/abs/2609.31188",
+   "source": "arXiv cs.CY · 법·윤리·정책",
+   "field": "법·윤리·정책",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "In his essay The Gift, published in 1925, the sociologist Marcel Mauss emphasised the 'total' scope of the phenomenon of gift-and counter-gift-giving, noting that it 'expresses…",
+   "thumb": ""
+  },
+  {
+   "id": "1bdda2b5527a0269",
+   "title": "Small Is Enough: Per-User Style Rewriting of AI-Edited Text via LoRA Adapters",
+   "link": "https://arxiv.org/abs/2607.29238",
+   "source": "arXiv cs.CY · 법·윤리·정책",
+   "field": "법·윤리·정책",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "InMyStyle is a privacy-first, single-user system that adapts small language models to rewrite AI-edited text towards an individual user's writing style without an instruction…",
+   "thumb": ""
+  },
+  {
+   "id": "788d01ac3691ff08",
+   "title": "AC Power Flow Contingency Analysis Using a Single Deep Neural Network",
+   "link": "https://arxiv.org/abs/2609.30859",
+   "source": "arXiv eess.SY · 에너지·환경",
+   "field": "에너지·환경",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Contingency analysis using the AC power flow (AC-PF) model is a critical tool for accurate grid security assessment, but its computational burden increases with the number of…",
+   "thumb": ""
+  },
+  {
+   "id": "4fddb8d043851dec",
+   "title": "Job Class Thermal Intent Aware Liquid Cooling Allocation for AI Data Centers",
+   "link": "https://arxiv.org/abs/2609.30785",
+   "source": "arXiv eess.SY · 에너지·환경",
+   "field": "에너지·환경",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "GPU-dense AI data centers need to run on liquid cooling as air simply cannot shed the heat at these power densities.",
+   "thumb": ""
+  },
+  {
+   "id": "a541b3b3913208a4",
+   "title": "Neural Parameter Estimation of RC Thermal Building Models for Model Predictive Control",
+   "link": "https://arxiv.org/abs/2604.05904",
+   "source": "arXiv eess.SY · 에너지·환경",
+   "field": "에너지·환경",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Gray-box RC models are widely used to enable energy-efficient model predictive control (MPC) in buildings.",
+   "thumb": ""
+  },
+  {
+   "id": "6bb04d3a16411126",
+   "title": "Agentic Workflows for Resolving Conflict Over Shared Resources: A Power Grid Application",
+   "link": "https://arxiv.org/abs/2604.09823",
+   "source": "arXiv eess.SY · 에너지·환경",
+   "field": "에너지·환경",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "The increasing use of LLM-based agents to support decision-making and control across diverse domains motivates the need for systematic deconfliction of their proposed actions.",
+   "thumb": ""
+  },
+  {
+   "id": "1e10ea1539c7c6e3",
+   "title": "BuildOcc: A Large Language Model Occupant Agent Platform for Building Energy Research",
+   "link": "https://arxiv.org/abs/2609.02729",
+   "source": "arXiv 음악·미디어·HCI · 문화·예술",
+   "field": "문화·예술",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Occupants are a primary source of uncertainty in building energy consumption and management, yet existing occupant behavior models cannot capture adaptive and reasoning responses…",
+   "thumb": ""
+  },
+  {
+   "id": "7b365b59d25c5367",
+   "title": "MM-ContextFold: Context Folding for Multimodal Agentic Retrieval",
+   "link": "https://arxiv.org/abs/2609.23121",
+   "source": "arXiv 음악·미디어·HCI · 문화·예술",
+   "field": "문화·예술",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00-04:00",
+   "summary": "Multimodal Agentic Retrieval (MAR) requires agents to solve complex information-seeking tasks by iteratively invoking external tools.",
+   "thumb": ""
+  },
+  {
    "id": "372e8bff03862797",
    "title": "[AI리더의 서가] 한 땀 한 땀 나의 첫 AI 에이전트",
    "link": "https://www.aitimes.com/news/articleView.html?idxno=215621",
@@ -998,6 +1251,17 @@
    "category": "news_ko",
    "published": "2026-09-28T00:00:00+00:00",
    "summary": "한 땀 한 땀 나의 첫 AI 에이전트허정준·송영희 | 책만2026년 9월 29일추천이유이 책은 프레임워크 없이 파이썬으로 AI 에이전트를 처음부터 끝까지 직접 구현하며 에이전트의 본질과 설계 원리를 완전히 이해하도록 합니다.",
+   "thumb": ""
+  },
+  {
+   "id": "40c546b01b8f0823",
+   "title": "mHolmes improves cross anatomical cadaveric microbiome forecasting for postmortem interval estimation",
+   "link": "https://www.nature.com/articles/s41467-026-77510-3",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-28T00:00:00+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -1144,39 +1408,6 @@
    "thumb": ""
   },
   {
-   "id": "788549971de6d7be",
-   "title": "충남도, 생성형 인공지능으로 농업 분야 업무 지원 시스템 개발·활용",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1SMTNidWRVSmhzQkNQRThZY1FXTlNjTkstbXc3VzJ3S3BKSlFZMk42MXFqUHVsNjRwQ1B5STdfZVlCVlNDaFdGSThLWjVWQy1kbjh2NWNmSXU0ODVqTlhjcE5nd09WQmdZTnVF?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:36:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "151a78eca528c211",
-   "title": "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용...2026 UFS 통해 첫 실증",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42077",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:34:35+00:00",
-   "summary": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서…",
-   "thumb": ""
-  },
-  {
-   "id": "0a4e99bc8689a5e0",
-   "title": "한국해양교통안전공단(KOMSA), 인공지능(AI)이 예측한 ‘72시간 해상 혼잡도’ 데이터 개방",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10cWd1ZVF4UHIxM2F2ZjhXdEctU1JRSlV2NUJqZmxvV0pZMVpsci1oQjVSdktYTnI3bTZ2SEJJSHRkZG9Lb0xGMWstVGJoVTRVMzk0aUZtaklSZVZzYkVIdHg0dmJsWUZmWkpoVGpuVEhPdVU?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:32:16+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "1bac18041a5e99a9",
    "title": "“DNA 다른 대장균·효모, 동시 작동”…KAIST, 유전자 조절 장치 개발",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0tRjczUGM5WWFSclJpQndDNXh5SXYyTEhUZC1yeXNJMTRScDRyUkd2N0kwV0dzRGRNRDBzSGpFZHVsXzd0OHh6OXh2VTU5TEk?oc=5",
@@ -1264,17 +1495,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-27T23:12:49+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "06e33c41f023f97c",
-   "title": "AI도 아프다?... ‘고통’ 반응 키우니 사용자 피해 있어도 ‘진통 버튼’ 선택",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWXBHd3pFSHN6VVU4UmhiLWMzN3ZScjdlX0tMT0c2Q0pIajBOakwzbkFUOUJXZkFBNkZGdThDN0NzajJEd0NsbnAwSVQwcFdZMVVDbVFlTGJlc2hnMERJLWd5RnczQTlybUFVcU93cUlCMld2UWs0N09pSWh6TEN4b05uUQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:10:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2098,18 +2318,6 @@
    "title_ko": "Codex를 통해 Proaction으로 매출이 60% 증가하고 75시간 이상 절약"
   },
   {
-   "id": "9366ee5bcbcd9057",
-   "title": "Microsoft stops insisting you need a \"Copilot+ PC\"",
-   "link": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
-   "source": "Ars Technica AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-25T17:57:37+00:00",
-   "summary": "Microsoft's new Surface laptops forgo Copilot+ PC branding.",
-   "thumb": "",
-   "title_ko": "Microsoft는 \"Copilot+ PC\"가 필요하다고 주장하지 않습니다."
-  },
-  {
    "id": "6d63f788451a5bae",
    "title": "UPDATE: Stanford apologizes for using AI to alter student’s race, gender in photo",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2ZpTFh4X25ZUGd0QjM3cE90alhSZ2lrbWhwOWUzMldzVWVnczBaeTdvc2R4ZXdGeDN1Uk9tWlVLOHBOT2s4djV4MGNiOFo5ZU5uUF9yM2VjS3lLelIzNU1kMjQyYmVYMTNscWlEUzdWcjZEVnJDamV2a2t0VXZDRWFLM2pHT2ZqdElCZ1dqR2lQbXZteUpoWjVBMTRuSDk3Z1BDRA?oc=5",
@@ -2221,210 +2429,6 @@
    "summary": "Climate expert Ari Matusiak spends his days working to rewire America's energy system, and he has an idea: instead of tech companies building new power plants for their AI data…",
    "thumb": "",
    "title_ko": "AI가 만들어내는 에너지 혼란과 해결 방법 | 아리 마투시아크 | TED"
-  },
-  {
-   "id": "f6fad453b0cdb1b6",
-   "title": "The promise and peril of using visual AI to study cities",
-   "link": "https://news.mit.edu/2026/studying-cities-using-visual-ai-fabio-duarte-martina-mazzarello-carlo-ratti-fan-zhang-book-0924",
-   "source": "MIT News · MIT 연구",
-   "field": "MIT 연구",
-   "category": "papers",
-   "published": "2026-09-24T00:00:00-04:00",
-   "summary": "In their new book, “How AI Sees the City,” the leaders of MIT’s Senseable City Lab examine the technology’s implications for researching urban life.",
-   "thumb": ""
-  },
-  {
-   "id": "c96ccba9c8a0c63c",
-   "title": "UpTCR: a unified progressive knowledge transfer foundation model for robust T-cell receptor-antigen binding recognition",
-   "link": "https://www.nature.com/articles/s41467-026-78075-x",
-   "source": "Nature 머신러닝 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-24T00:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "c39d3732b86df64a",
-   "title": "Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs",
-   "link": "https://huggingface.co/papers/2609.29845",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-23T20:00:00+00:00",
-   "summary": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text…",
-   "thumb": ""
-  },
-  {
-   "id": "48ed5d53175a2a3a",
-   "title": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
-   "link": "https://huggingface.co/papers/2609.30221",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-23T20:00:00+00:00",
-   "summary": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels.",
-   "thumb": ""
-  },
-  {
-   "id": "92e245d70511c8ea",
-   "title": "Rufus-Air: An Open LLM Post-Training Recipe",
-   "link": "https://huggingface.co/papers/2609.29421",
-   "source": "Hugging Face 오늘의 논문",
-   "category": "papers",
-   "published": "2026-09-23T20:00:00+00:00",
-   "summary": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL…",
-   "thumb": ""
-  },
-  {
-   "id": "931c28839e384d7d",
-   "title": "MIT welcomes David Siegel SM ’86, PhD ’91 as its next Innovation Fellow",
-   "link": "https://news.mit.edu/2026/mit-welcomes-david-siegel-innovation-fellow-0923",
-   "source": "MIT News · MIT 연구",
-   "field": "MIT 연구",
-   "category": "papers",
-   "published": "2026-09-23T11:30:00-04:00",
-   "summary": "Computer scientist, entrepreneur, and philanthropist will collaborate with the MIT Schwarzman College of Computing to advance AI and scientific discovery.",
-   "thumb": ""
-  },
-  {
-   "id": "2fbd6da2279c8d51",
-   "title": "Guiding large language models to predict edit sequences for molecular synthesizability optimization",
-   "link": "https://www.nature.com/articles/s42256-026-01304-x",
-   "source": "Nature Machine Intelligence · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-23T00:00:00+00:00",
-   "summary": "Nature Machine Intelligence, Published online: 23 September 2026; doi:10.1038/s42256-026-01304-x Computational drug design often generates molecules that cannot be synthesized.",
-   "thumb": ""
-  },
-  {
-   "id": "d862aca1901364c6",
-   "title": "Training Object Permanence in World Models",
-   "link": "https://huggingface.co/papers/2609.28654",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-22T20:00:00+00:00",
-   "summary": "Object permanence and solidity are hallmarks of human cognitive priors.",
-   "thumb": ""
-  },
-  {
-   "id": "56b35df7aa8226f1",
-   "title": "The Past Frames the Future: Memory for Autoregressive Video Generation",
-   "link": "https://huggingface.co/papers/2609.28466",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-22T20:00:00+00:00",
-   "summary": "Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments.",
-   "thumb": ""
-  },
-  {
-   "id": "8f308b0e1d8ffeb1",
-   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
-   "link": "https://huggingface.co/papers/2609.27334",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-22T20:00:00+00:00",
-   "summary": "Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is…",
-   "thumb": ""
-  },
-  {
-   "id": "07b58d37b3acc6ca",
-   "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
-   "link": "https://huggingface.co/papers/2609.28416",
-   "source": "Hugging Face 오늘의 논문",
-   "category": "papers",
-   "published": "2026-09-22T20:00:00+00:00",
-   "summary": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments.",
-   "thumb": ""
-  },
-  {
-   "id": "1500813625f0d22c",
-   "title": "Poitras Center to fuel early careers of 50 young scientists dedicated to psychiatric disorders research",
-   "link": "https://news.mit.edu/2026/poitras-center-to-fuel-early-careers-50-young-scientists-psychiatric-disorders-research-0922",
-   "source": "MIT News · MIT 연구",
-   "field": "MIT 연구",
-   "category": "papers",
-   "published": "2026-09-22T15:00:00-04:00",
-   "summary": "Patricia and James Poitras ’63 provide fellowships for graduate students and postdocs who will shape the future of mental health research.",
-   "thumb": ""
-  },
-  {
-   "id": "1d00d76af2ce26d4",
-   "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
-   "link": "https://huggingface.co/papers/2609.26780",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-21T20:00:00+00:00",
-   "summary": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each…",
-   "thumb": ""
-  },
-  {
-   "id": "11e69b866c879181",
-   "title": "PACT: From Credit Assignment to Critic Alignment",
-   "link": "https://huggingface.co/papers/2609.26355",
-   "source": "Hugging Face 오늘의 논문",
-   "category": "papers",
-   "published": "2026-09-21T20:00:00+00:00",
-   "summary": "Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition…",
-   "thumb": ""
-  },
-  {
-   "id": "2352af9e9764aed7",
-   "title": "Capable yet Parsimonious: Extracting and Characterizing Hidden Chain-of-Thought in Frontier Models",
-   "link": "https://huggingface.co/papers/2609.26637",
-   "source": "Hugging Face 오늘의 논문",
-   "category": "papers",
-   "published": "2026-09-21T20:00:00+00:00",
-   "summary": "The rapid capability gains of frontier language models are widely attributed to improved reasoning abilities, yet this cannot be verified as raw CoT traces in closed-source…",
-   "thumb": ""
-  },
-  {
-   "id": "f2fc2dab3ae3ca26",
-   "title": "GeoPair: Geometry-Preserving Cross-Layer Factorization for Training-Free Transformer Compression",
-   "link": "https://huggingface.co/papers/2609.25963",
-   "source": "Hugging Face 오늘의 논문",
-   "category": "papers",
-   "published": "2026-09-21T20:00:00+00:00",
-   "summary": "Transformer architectures exhibit cross-layer redundancies, yet post-training compression pipelines typically optimize layers in isolation or rely on heuristic grouping strategies…",
-   "thumb": ""
-  },
-  {
-   "id": "fa4018eec153851b",
-   "title": "HappyWorld-Bench",
-   "link": "https://huggingface.co/papers/2609.24308",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-20T20:00:00+00:00",
-   "summary": "Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification.",
-   "thumb": ""
-  },
-  {
-   "id": "409ed6e622c5fe69",
-   "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
-   "link": "https://huggingface.co/papers/2609.23407",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-19T20:00:00+00:00",
-   "summary": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents.",
-   "thumb": ""
-  },
-  {
-   "id": "6fb67b6b8e291bb5",
-   "title": "Spatial-Interactor: Learning Spatial Reasoning through Interaction with the Observable Physical World",
-   "link": "https://huggingface.co/papers/2609.23038",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-18T20:00:00+00:00",
-   "summary": "Spatial reasoning is essential for vision-language models (VLMs) to understand and act in the physical world.",
-   "thumb": ""
   },
   {
    "id": "652024649d8dd002",
@@ -2584,7 +2588,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 79
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -2631,8 +2635,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2666,9 +2670,9 @@
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 2,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
@@ -2727,38 +2731,38 @@
   {
    "name": "arXiv cs.AI · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 6,
+   "fetched": 331
   },
   {
    "name": "arXiv cs.CL · 언어·LLM",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 4,
+   "fetched": 132
   },
   {
    "name": "arXiv cs.CY · 교육",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 19
   },
   {
    "name": "arXiv cs.CY · 법·윤리·정책",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 2,
+   "fetched": 19
   },
   {
    "name": "arXiv eess.SY · 에너지·환경",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 4,
+   "fetched": 44
   },
   {
    "name": "arXiv 음악·미디어·HCI · 문화·예술",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 2,
+   "fetched": 74
   },
   {
    "name": "npj Digital Medicine · 의료",
@@ -2768,9 +2772,9 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": false,
-   "count": 0,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2800,7 +2804,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 48
+   "fetched": 46
   },
   {
    "name": "스테이지5",
