@@ -2094,6 +2094,7 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     count = {c: sum(1 for it in items if it["category"] == c) for c in cats}
     links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b></a>'
                     for c, n in cats.items())
+    links += f'<a href="editor/" data-go style="--c:{EDITOR_COLOR}"><i></i><b>에디터</b></a>'
     tick = tick_html(ticker_items(items))
     d = datetime.fromisoformat(latest["date"])
     verify = ""

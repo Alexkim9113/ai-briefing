@@ -47,7 +47,7 @@ a{color:inherit;text-decoration:none}
 @keyframes pl{50%{opacity:.25}}
 .fade{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .7s ease}
 body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
-@media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:26px 0 18px}.mid h1{margin:0}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 18px;position:relative}.mid h1{margin:0;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;filter:drop-shadow(0 0 18px rgba(4,3,14,.95)) drop-shadow(0 0 6px rgba(4,3,14,.9))}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
  .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}.cats{display:none}.mid{padding-bottom:6px}}
 @media (prefers-color-scheme:dark){.fade{background:#101018}}
 </style></head><body>
@@ -115,7 +115,7 @@ try{
  const DN=400,dp=new Float32Array(DN*3);for(let i=0;i<DN*3;i++)dp[i]=(Math.random()-.5)*24;
  const dg=new T.BufferGeometry();dg.setAttribute('position',new T.BufferAttribute(dp,3));const dust=new T.Points(dg,pmat(.03,0xffffff,.45));S.add(dust);
  // 카테고리마다 다른 관점(각도)에서 세계를 본다
- const VIEWS=[[.35,0],[.1,1.2],[-.5,2.4],[.9,3.3],[-.2,4.5],[.5,5.5]];
+ const VIEWS=[[.35,0],[.1,1.2],[-.5,2.4],[.9,3.3],[-.2,4.5],[.5,5.5],[-.4,.6]];
  let tx=0,ty=0,rx=.35,ry=0,vy=reduce?0:.0012,drag=null,zoom=7.2,tz=7.2,fly=false,hold=false;const tc=new T.Color(0xffffff),cc=new T.Color(0xffffff);
  addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5);
   if(drag){ry+=(e.clientX-drag.x)*.006;rx+=(e.clientY-drag.y)*.004;rx=Math.max(-1.3,Math.min(1.3,rx));vy=(e.clientX-drag.x)*.0008;drag={x:e.clientX,y:e.clientY};}});
@@ -126,7 +126,7 @@ try{
   a.addEventListener('pointerenter',()=>{tc.set(c.trim());tz=6.4;hold=true;rx=VIEWS[i+1][0];ry=Math.round(ry/6.283)*6.283+VIEWS[i+1][1];});
   a.addEventListener('pointerleave',()=>{tc.set(0xffffff);tz=7.2;hold=false;});});
  window.__fly=()=>{fly=true;tz=.4;vy=.03;hold=false;};
- function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();G.scale.setScalar(Math.min(1,Math.tan(.436)*7.2*(w/h)*.88/RAD));G.position.y=w<640&&h>w?.35:0;}
+ function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();G.scale.setScalar(Math.min(1,Math.tan(.436)*7.2*(w/h)*.88/RAD));G.position.y=0;}
  size();addEventListener('resize',size);
  const clock=new T.Clock(),white=new T.Color(0xffffff),tmp=new T.Vector3();
  let last=0;
