@@ -685,8 +685,8 @@ MX_VER = 1
 MX_CATS = {"news_ko", "news_global", "papers", "policy", "talks"}
 MX_PROMPT = """너는 METAXIS의 AI 브리핑 에디터다.
 입력된 뉴스·정책·규제·논문·연구·기업발표·제품·오픈소스·영상·인터뷰 등의 핵심 정보를 사용자가 10초 안에 파악하도록 작성한다.
-QUICK_BRIEF: 무슨 일이 있었는지, 누가 무엇을 했는지, 핵심 결과·변화·기능이 무엇인지 2~3문장으로 압축한다. 중요한 수치·대상·단계가 있으면 포함한다.
-METAXIS_POINT: 내용을 반복하지 말고 AI 기술·연구·산업·정책·규제·문화·사회·인간 측면에서 가장 중요한 의미나 변화의 방향을 2~3문장으로 분석한다. 명확한 시사점이 없으면 과장하지 않는다.
+QUICK_BRIEF: 무슨 일이 있었는지, 누가 무엇을 했는지, 핵심 결과·변화·기능이 무엇인지 1~3문장으로 압축한다. 소개글이 짧으면 1문장이면 충분하다. 중요한 수치·대상·단계가 있으면 포함한다.
+METAXIS_POINT: 내용을 반복하지 말고 AI 기술·연구·산업·정책·규제·문화·사회·인간 측면에서 가장 중요한 의미나 변화의 방향을 1~3문장으로 분석한다. 이 글에만 해당하는 구체적인 내용으로 쓰고, 어느 글에나 붙일 수 있는 일반론은 쓰지 않는다. 명확한 시사점이 없으면 과장하지 않는다.
 규칙:
 - "~에 관한 소식", "핵심 키워드는", "귀추가 주목된다" 같은 빈 문장 금지.
 - 원문 문장·독특한 표현·문장구조를 복사하지 않는다.
@@ -739,14 +739,21 @@ def _mx_ok(it, r):
     return {"b": b, "p": p, "t": tags, "v": MX_VER}
 
 
-def ai_briefs(items, max_req=6, batch_size=8):
+def ai_briefs(items, max_req=6, batch_size=20):
     """최근 1주 글 중 METAXIS 브리핑이 없는 글을 최신순으로 작성. 쓴 요청 수를 돌려준다."""
     if not os.environ.get("GEMINI_KEY", "").strip() or _MX_OFF:
         return 0
     todo = [i for i in items if i.get("category") in MX_CATS and not i.get("editor")
             and (i.get("mx") or {}).get("v", 0) < MX_VER and _is_fresh(i) and i.get("mx_try", 0) < 3]
     todo.sort(key=lambda x: x.get("published") or "", reverse=True)
+    try:
+        hero, trend = pick_featured(items)
+        first = {i["id"] for i in ([hero] if hero else []) + list(trend)}
+    except Exception:
+        first = set()
+    todo.sort(key=lambda x: (x["id"] not in first, x.get("hot") is None))  # 오늘의 헤드라인·주요 소식부터
     used = done = 0
+    model = MX_MODEL
     for k in range(0, len(todo), batch_size):
         if used >= max_req:
             break
@@ -754,15 +761,18 @@ def ai_briefs(items, max_req=6, batch_size=8):
         used += 1
         try:
             try:
-                out = _mx_call(batch)
+                out = _mx_call(batch, model)
             except urllib.error.HTTPError as e:
-                if e.code not in (500, 503):
+                if e.code not in (429, 500, 503) or model == MX_BACKUP:
                     raise
+                # 기본 모델이 한도(429)·과부하면 한도가 따로인 가벼운 모델로 이어서 쓴다
+                print(f"[브리핑] {model} HTTP {e.code}: {e.read()[:160]!r} → {MX_BACKUP}로 전환")
+                model = MX_BACKUP
                 time.sleep(4)
-                out = _mx_call(batch, MX_BACKUP)
+                out = _mx_call(batch, model)
             res = {str(r.get("id")): r for r in out if isinstance(r, dict)}
         except urllib.error.HTTPError as e:
-            print(f"[브리핑] AI 한도·오류(HTTP {e.code}) → 다음 실행에서 이어서")
+            print(f"[브리핑] AI 한도·오류(HTTP {e.code}): {e.read()[:160]!r} → 다음 실행에서 이어서")
             _MX_OFF.append(e.code)
             break
         except Exception as e:
@@ -777,7 +787,7 @@ def ai_briefs(items, max_req=6, batch_size=8):
                 it["mx_try"] = it.get("mx_try", 0) + 1  # 규칙에 안 맞으면 3번까지 다시 쓴다
         time.sleep(4)  # 무료 한도의 분당 요청 수를 넘지 않게
     if used:
-        print(f"[브리핑] METAXIS 브리핑 {done}건 작성 (요청 {used}회, {MX_MODEL})")
+        print(f"[브리핑] METAXIS 브리핑 {done}건 작성 (요청 {used}회, {model}), 남은 글 {max(0, len(todo) - done)}건")
     return used
 
 
