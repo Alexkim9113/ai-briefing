@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:15+09:00",
+ "generated_at": "2026-09-28T20:19+09:00",
  "items": [
   {
    "id": "72b702204c5f16e0",
@@ -12,7 +12,8 @@
    "published": "2026-09-28T20:12:48+09:00",
    "summary": "과학기술정보통신부(장관 배경훈)가 독자 AI 파운데이션 모델(독파모) 프로젝트를 중단하고 특수목적법인(SPC)을 설립한다는 보도에 대한 일축에 나섰다.",
    "detail": "과학기술정보통신부(장관 배경훈)가 독자 AI 파운데이션 모델(독파모) 프로젝트를 중단하고 특수목적법인(SPC)을 설립한다는 보도에 대한 일축에 나섰다.\n과기정통부는 28일 설명자료를 통해 \"정부는 최상위급 AI 모델 개발을 위한 재원 집중 지원 필요성을 깊이 인식하고 있다\"면서도 \"독자 AI 파운데이션 모델 프로젝트 중단 및 최상위급 AI 모델 개발 관련 SPC 설립 여부 등은 아직 정해진 바 없다\"고 입장을 정리했다.",
-   "thumb": ""
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "199616a539405542",
@@ -223,7 +224,7 @@
    "summary": "국가데이터처(처장 안형준)는 지난 3일 발표된 공공기관 기능개혁 추진방안의 일환으로, 소관 기관인 한국통계정보원과 한국통계진흥원을 통합한 특수법인 '한국데이터원' 설립을 추진한다. 이번 통합은 단순한 기관간 물리적 통합을 넘어, 통계 중심의 지원체계를 데이터 영역으로 확장하는 기능개혁이라는 데 의미가 있다.",
    "detail": "국가데이터처(처장 안형준)는 지난 3일 발표된 공공기관 기능개혁 추진방안의 일환으로, 소관 기관인 한국통계정보원과 한국통계진흥원을 통합한 특수법인 '한국데이터원' 설립을 추진한다.\n이번 통합은 단순한 기관간 물리적 통합을 넘어, 통계 중심의 지원체계를 데이터 영역으로 확장하는 기능개혁이라는 데 의미가 있다.\n이를 통해 양 기관에 분산된 통계·데이터 관련 기능과 전문역량을 유기적으로 연계하고 국가데이터 정책의 실행 기반을 강화한다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "8b35d97e500de3dd",
@@ -236,7 +237,7 @@
    "summary": "리퀴드 AI가 소형 초안 모델이 여러 토큰을 예측하고 대형 모델이 이를 한꺼번에 검증하는 '추측적 디코딩' 방식을 비전-언어 모델(VLM)에 적용한 '디스파크(DSpark)'를 공개했다.",
    "detail": "리퀴드 AI가 소형 초안 모델이 여러 토큰을 예측하고 대형 모델이 이를 한꺼번에 검증하는 '추측적 디코딩' 방식을 비전-언어 모델(VLM)에 적용한 '디스파크(DSpark)'를 공개했다.\n이는 기존에 텍스트 중심으로 쓰이던 추측적 디코딩 기술을 시각 정보 처리가 결합된 멀티모달 영역으로 확장해 추론 속도를 높였다는 점에서 의미가 있다.\n리퀴드 AI는 24일(현지시간) ‘LFM2.5-VL-3B’를 위한 실험용 초안 모델 ‘LFM2.5-VL-3B-디스파크’를 공개했다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "d6d0a40244ce8576",
@@ -249,7 +250,7 @@
    "summary": "개인정보보호위원회(위원장 송경희, 이하 ‘개인정보위’)는 29일, 서울 양재 엘타워에서 국내외 개인정보 보호·인공지능(AI) 분야의 정부·국제기구·기업·학계 전문가들이 참여하는 '글로벌 AI 프라이버시 포럼(Global AI Privacy Forum)'을 개최한다.",
    "detail": "개인정보보호위원회(위원장 송경희, 이하 ‘개인정보위’)는 29일, 서울 양재 엘타워에서 국내외 개인정보 보호·인공지능(AI) 분야의 정부·국제기구·기업·학계 전문가들이 참여하는 '글로벌 AI 프라이버시 포럼(Global AI Privacy Forum)'을 개최한다.\n이번 포럼은 ‘개인정보보호가 이끄는 혁신, 협력으로 높이는 대응 역량(Privacy for Innovation, Partnership for Cooperation)’을 주제로, 인공지능 혁신과 개인정보 보호의 교차점을 모색한다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "3db86af38953f48b",
@@ -262,7 +263,7 @@
    "summary": "모빌린트가 LG전자, 두산로보틱스, 대동과 온디바이스 AI 반도체 개발 협업에 나선다. 국내 대표 제조기업들과 개발 초기 단계부터 요구사항을 맞춰가며 ‘제품 최적화 반도체’를 개발한다는 점에서 차별화된다.",
    "detail": "모빌린트가 LG전자, 두산로보틱스, 대동과 온디바이스 AI 반도체 개발 협업에 나선다.\n국내 대표 제조기업들과 개발 초기 단계부터 요구사항을 맞춰가며 ‘제품 최적화 반도체’를 개발한다는 점에서 차별화된다.\nAI 반도체 전문 모빌린트(대표 신동주)는 산업통상부(한국산업기술기획평가원)가 추진하는 ‘K-온디바이스 AI 반도체 기술개발사업’ 4개 과제에 참여해 LG전자·두산로보틱스·대동과 온디바이스 AI 반도체 기술 개발에 나선다고 28일 밝혔다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "7168433343067ae3",
@@ -275,7 +276,7 @@
    "summary": "다리오 아모데이 앤트로픽 CEO가 미국 인기 코미디 프로그램 ‘새터데이 나이트 라이브(SNL)’의 풍자 대상으로 등장했다. 26일(현지시간) 방송된 SNL에서는 AI의 위험성을 경고하면서도 개발 경쟁을 멈추지 못하는 테크 업계의 모순적인 모습을 아모데이의 캐릭터를 통해 꼬집었다.",
    "detail": "다리오 아모데이 앤트로픽 CEO가 미국 인기 코미디 프로그램 ‘새터데이 나이트 라이브(SNL)’의 풍자 대상으로 등장했다.\n26일(현지시간) 방송된 SNL에서는 AI의 위험성을 경고하면서도 개발 경쟁을 멈추지 못하는 테크 업계의 모순적인 모습을 아모데이의 캐릭터를 통해 꼬집었다.\n배우 제인 위클라인은 아모데이를 연기하면서 한 사람 안에 두 개의 자아가 있는 것처럼 표현했다.\n하나는 언론 대응에 익숙한 차분한 모습이고, 다른 하나는 AI의 위험성을 두려워하면서 감정을 통제하지 못하는 어두운 자아다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "d729869c6d2683f2",
@@ -381,7 +382,17 @@
    "summary": "AI 생성 영상목포시가 지역 기업과 구직자를 연결하는 현장 채용행사를 연다. 목포는 30일 오후 1시 목포미식문화갤러리 해관1897에서 ‘2026 목포시 구인·구직 만남의 날’을 개최한다고 밝혔다. 이번 행사는 목포가 주최하고 사단법인 전남고용노동연구원이 주관한다.",
    "detail": "AI 생성 영상목포시가 지역 기업과 구직자를 연결하는 현장 채용행사를 연다.\n목포는 30일 오후 1시 목포미식문화갤러리 해관1897에서 ‘2026 목포시 구인·구직 만남의 날’을 개최한다고 밝혔다.\n이번 행사는 목포가 주최하고 사단법인 전남고용노동연구원이 주관한다.\n현장에는 지역 구인기업 20개사가 참여해 기업 설명과 현장면접을 진행한다.\n구직자를 위한 부대 프로그램도 마련된다.",
    "thumb": "",
-   "mx_try": 2
+   "mx": {
+    "b": "목포시가 전남고용노동연구원과 함께 지역 구인·구직 만남의 날 행사를 개최한다. 20개의 지역 기업이 참여해 현장 면접과 기업 설명회를 진행하며 구직자를 위한 부대 프로그램도 운영된다.",
+    "p": "지방자치단체가 고용 기관과 연계해 지역 중소기업의 구인난을 해소하고 대면 채용 기회를 확대하는 고용 촉진 활동이다.",
+    "t": [
+     "목포시",
+     "채용행사",
+     "고용",
+     "지역경제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "fa0df8171fef17b5",
@@ -529,7 +540,7 @@
    "published": "2026-09-28T12:56:41+09:00",
    "summary": "포지큐브(대표 오성조)는 자체 멀티 에이전트 기반 AI 플랫폼 '로비 G 맥스'를 활용해 하나은행의 AI 에이전트 서비스를 구축했다고 28일 밝혔다. 로비 G 맥스는 멀티 에이전트 기반 아키텍처로 기업 환경에 최적화된 생성형 AI 서비스를 제공한다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "a79f4f1b97a1867f",
@@ -667,6 +678,20 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "8014983b39946eda",
+   "title": "AI Threatens Democracy, but Not in the Way Experts Think",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOc0FFcndrSnRSUVVDV0hfbnNvN2VrU0tsei1DSnJuQUUzQlR4dVBBel9reGdPRVlvMloxVFJMR3hWS3NOckNma3F1RDNUSFFqYWtYUVp3LVhtQUtrWDR2X0tvZkduc2ZsTmsydG1Sa2k1b210dTN4M1FYTlZmWHJXS2tfRHlMSUxpYXZkX0ZZQlFrUGtYNXAya21OenF0bXM?oc=5",
+   "source": "The National Interest",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T11:17:39+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI가 민주주의를 위협하지만, 전문가들이 생각하는 방식과는 다르다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "f979042d322b7327",
@@ -1901,6 +1926,17 @@
    }
   },
   {
+   "id": "9e2709441c7d8f35",
+   "title": "[정보통신 미래모임] “행정 전면 AI로 재설계”…'AI 민주정부' 속도",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1HRHBFY0xTSkhLa2Nua2xXT2xuUkdRZ1h6THZMMV9Wb0F6MU5aRWYxSGZoeWFDdk9QSm5JVDMxOWFmTGZtTnZvM1NFUU9fUQ?oc=5",
+   "source": "전자신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "a503f173e1a7cd6d",
    "title": "이소영표 중기부, ‘지원 부처’ 넘어선다…AI·규제·자본시장까지 역할 확대",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KLVd0Zk01Y3RNeTFPS2dBV1NPMmRmWGxQZ0s4TjdYVWlvN19tMlBQWTl0djY3SUJNOGpNQ0RGQlo1QkpFdHVBVDJsbmN6NEk?oc=5",
@@ -1921,6 +1957,28 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "e9ae4b80e60c3511",
+   "title": "울산소방본부, 생성형 인공지능(AI) 활용 역량 강화",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1PbkJ5UWdXR3h0TFJzQUNaTHJfZTVuMEt3UXFpcDdUakc0VlNnOEZrSFBnTGhpa0VHT3JTVkI1U0pZNm5TNHZvTHZxckUyLUU?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:54:50+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "8b3d2caad2e8114f",
+   "title": "전기안전공사,인공지능 시스템 개발…흩어진 재난정보 '한눈에'",
+   "link": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE5ucGVURDZ3Zjlpcl9BQW1nejRDcmtfcXpPcEQyQ2pvdkM0bFJDR3FMTEhIU3V6b0lmWWoxY0lIV00?oc=5",
+   "source": "전북금강일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:54:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "79a580960f1c16d9",
@@ -1946,6 +2004,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "895418f1fe94a7b6",
+   "title": "제주교육, 한국마이크로소프트와 손잡고 인공지능 미래인재 키운다",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1HWERYQWxVQnNSQ2NiT1NRclRzREEybUFOOVctZVhOa3BXR0djUTJWb1pJeTBnelVWcUZ0eVdXbEhCc2JyOG4zY2tDN2dSbldIQkhXeWM5VGlVZGZWY0ZYeWlHMW5FdGRuazRLVlQzWQ?oc=5",
+   "source": "youngjuilbo.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:45:44+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "295c8e6fc3bcd548",
@@ -2631,31 +2700,6 @@
      "전력수요",
      "AI인프라",
      "에너지위기"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "45366ac4a4bbd075",
-   "title": "Donald Trump hosts Anthropic CEO Dario Amodei at White House",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZUROdWNMUGsxV1hBZHlmY3lJaXd2dXI5eERXWVU5QVc1Y3lEVW55amtjSEZUdkNVV0VITHViN1ZOcm91VWI4TC1OaXNrVHlMN1hJdXFob1VlcWRGaVJUUTZycThma0tCTThlUjlNUGtuT1QtdFJzZGI0V1JDUWExb3I0TlM?oc=5",
-   "source": "Google News: AI 기업",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T03:29:55+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "도널드 트럼프, 백악관에서 앤트로픽 CEO 다리오 아모데이 접견",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "도널드 트럼프 전 대통령이 백악관에서 앤스로픽의 최고경영자 다리오 아모데이를 초청해 면담을 진행했다. 주요 AI 기술 패권과 기업 규제 기조를 둘러싼 논의가 오간 것으로 파악된다.",
-    "p": "차세대 생성형 AI의 대표 주자인 앤스로픽이 백악관과의 공식 소통을 통해 정책적 영향력을 직접 타진하기 시작했다. 향후 정권 교체나 정책 변화 속에서도 안전 중심 AI 연구 기업들의 입지가 어떻게 반영될지 가늠하는 신호다.",
-    "t": [
-     "앤스로픽",
-     "다리오아모데이",
-     "백악관",
-     "AI규제"
     ],
     "v": 1
    }
@@ -3847,6 +3891,38 @@
    "trv": 2
   },
   {
+   "id": "63f85032962dd035",
+   "title": "Anthropic’s CEO is about to have dinner with President Trump",
+   "link": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T20:34:28+00:00",
+   "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+   "thumb": "",
+   "title_ko": "Anthropic CEO, 트럼프 대통령과 저녁 식사 예정",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "이번 만남은 다리오 아모데이와 도널드 트럼프 간의 첫 일대일 회담이 될 것이다.",
+   "detail_ko": "이번 만남은 다리오 아모데이와 도널드 트럼프 간의 첫 일대일 회담이 될 것이다."
+  },
+  {
+   "id": "80032e73c06a7a2a",
+   "title": "Can Muse overcome Meta’s trust issues?",
+   "link": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T19:57:30+00:00",
+   "summary": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
+   "thumb": "",
+   "title_ko": "뮤즈는 메타의 신뢰 문제를 극복할 수 있을까?",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Equity에서는 메타의 AI 발표가 어떻게 오픈AI와 앤트로픽의 주목을 빼앗았는지에 대해 논의했습니다.",
+   "detail_ko": "Equity에서는 메타의 AI 발표가 어떻게 오픈AI와 앤트로픽의 주목을 빼앗았는지에 대해 논의했습니다."
+  },
+  {
    "id": "79b976d981ecb781",
    "title": "Bill Gates says AI without regulation is ‘completely irresponsible’",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVXZLY1Y0ZUxmbmQ1aHZIdUs2MHZSTlhDUXJibXlkdkJXcll3M0dtN1dHVHFzRldZc2dRRHlzdWdMdlhFaWZnay1XLWF0M1Z4MFZqbDRvYnBfVzllNlV2TU83dlJIbVFIaTFNN2dVclcwcW83TTltcjQyN215RDMwSEtfUzZocEg0T1ZvSWVfNjI2V0UtNFloVUQweTY1UGxrSkE0ODJUM1Bnd9IBrwFBVV95cUxPS29KMUZlVnFLc1ExUndoclYtZ2NWVVVmRk5YSXNrNk8zS0JIdGRTbWhDV3l6MmJyZnNJMkxlV2Zpb0c1YVNLMVFLb2JGYU5BOUd5MmdZd25FbHFkZ0xOTmpEWmcxbzZkd0NCLWU2MjRRY1ZXN1M2YkFBMUZ0OEctRjhaaHhEdVRwTC1YVzlXUldaay1YSDFJUk51NExrZXUzcVZzNENfUkkyTkZvWkhF?oc=5",
@@ -3859,6 +3935,22 @@
    "title_ko": "빌 게이츠, “규제 없는 AI는 ‘전적으로 무책임한’ 일”이라고 말하다",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "c43351a9d43aeabe",
+   "title": "Bill Gates says it's 'completely irresponsible' for AI to not have safeguards",
+   "link": "https://www.engadget.com/2270166/bill-gates-says-that-its-completely-irresponsible-for-ai-to-not-have-safeguards/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T19:12:29+00:00",
+   "summary": "The Microsoft co-founder said that the more present danger is bad actors with access to AI tools.",
+   "thumb": "",
+   "title_ko": "빌 게이츠, “AI에 안전 장치가 없는 것은 ‘전적으로 무책임한 일’”이라고 말해",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "마이크로소프트 공동 창업자는 AI 도구에 접근할 수 있는 악의적인 행위자들이 더 시급한 위협이라고 말했다.",
+   "detail_ko": "마이크로소프트의 공동 창업자는 AI 도구에 접근할 수 있는 악의적인 행위자들이 더 시급한 위협이라고 말했다."
   },
   {
    "id": "2809059b0209e060",
@@ -3886,6 +3978,21 @@
    "thumb": ""
   },
   {
+   "id": "260f924e1ed05deb",
+   "title": "Gemini app replacing Gems with skills in November",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBmV3RmMk5FZDNianR5SU50dVRNeFdndVlWRGpENWh6bXpiQlJtSlpCaGppMERQMW9FN1dOSnktQ3NUZHJoMFBPNEM0bDFGMjRJN3dUM2RBSFk0NEdUdWlHNnM4VQ?oc=5",
+   "source": "9to5Google",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T17:26:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 1,
+   "title_ko": "11월부터 Gems 대신 스킬을 도입하는 Gemini 앱",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "d79b1aaf39ee63ce",
    "title": "At the UN and in Washington, Leaders Clash on Approach to AI",
    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUlNBaGZXdTgtMEIyZjZpZ3VPWnRpM2pFWmFTTzFRc01QOTZodW44RnFPcFNCQkJyT1pVVXkyOHd5dEVpX0lBbGZTM3RYbGRweDhwa0lzd1BoRDZwaUM4bExuZ3l4Z2VvLS1ZVWQ5bTZmWGUxWEtTdV8xdjNTZVEzVjdiRE0wbXhDRUNkdWJ0YWRKbTQ?oc=5",
@@ -3898,6 +4005,22 @@
    "title_ko": "유엔과 워싱턴에서, 지도자들 간 AI 접근 방식에 대한 의견 대립",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "39e6d83733f34b5b",
+   "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+   "link": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T16:30:00+00:00",
+   "summary": "\"AI is the devil and I its maker.\"",
+   "thumb": "",
+   "title_ko": "Anthropic의 다리오 아모데이, SNL에 등장하다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "\"AI는 악마이고, 나는 그 창조자다.\"",
+   "detail_ko": "\"AI는 악마이며, 나는 그 창조자다.\""
   },
   {
    "id": "6de0efa96e17d673",
@@ -4049,6 +4172,39 @@
    "published": null,
    "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속 - 사실관계 검증, 투명성 확보, 결과 신뢰성 관리 등 7대 권고사항 제시",
    "thumb": ""
+  },
+  {
+   "id": "393f541a11da5633",
+   "title": "과거와 미래가 공존하는 가을 과학축제 국립과천과학관, 10월-11월 「레트로 & 퓨처」",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187811",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "- 개천절부터 한글날, 할로윈, 수능까지 가을의 특별한 날을 과학관에서 - ‘레트로&퓨처 페스티벌’, ‘재즈와 물리’, ‘AI 신과거제’ 등 온 가족 참여 프로그램 풍성",
+   "thumb": ""
+  },
+  {
+   "id": "ccb35b4497ec3666",
+   "title": "구혁채 과기정통부 제1차관, 「Nobel Prize Dialogue Seoul 2026」 참석",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187793",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환 - 우수 과학기술 인재의 성장과 창의·도전적 연구환경 조성 방향 논의",
+   "thumb": ""
+  },
+  {
+   "id": "690ce799e6b7052b",
+   "title": "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원!",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187795",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상 - 상위 8개사에게 상금 8천만원에 더해 투자유치 기회·입주공간 등 지원",
+   "thumb": ""
   }
  ],
  "status": [
@@ -4110,12 +4266,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 3,
    "fetched": 70
   },
   {
@@ -4181,8 +4337,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
