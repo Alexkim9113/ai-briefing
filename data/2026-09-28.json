@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T18:04+09:00",
+ "generated_at": "2026-09-28T18:11+09:00",
  "items": [
   {
    "id": "67dd4805323458d6",
@@ -463,6 +463,59 @@
    "hot": 3
   },
   {
+   "id": "1bdc1f260b416720",
+   "title": "EU Faces AI Regulation Dilemma, Calls for Action Amidst Rapid Te",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPT0xwWHNpdElEMkNxR1YzVEdfTXNYOHB2SE9GSjZpSnBKQ0ltRF9RLU00LUZJMlUtSUUzUjJ1b19wa2dpUmxlOC1pNXJ4dlVOWXV0ZjZJeTNzRUtDNzl5ZTJ1bnduQU5tWHJnR1RIYzIxRHhqcWtjZDRhQ0x4SDE1dWdOQkhMdU43NUlDdS1nZ3ptdnlNczVwLUtRM0dlZkVGZi1qamVraWlOaUF6Y3lFLTZuVkFmNHByZG1zdFAtZnE?oc=5",
+   "source": "GuruFocus",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T09:08:19+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "EU, AI 규제 딜레마에 직면…급속한 기술 발전 속 조치 촉구",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "f6dfbe64f52ffc59",
+   "title": "NVIDIA Launches Open Agent Safety Platform to Secure Agents From Testing to Deployment",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAxdzBTN1hGTnNfZXZNWUU1MjhzQnpHUndjNkNYMGZiRGc1TDR5NExfTmtrbkFvZU5Fakp1eG1CVVFOZ0tpYzJ2aFVVY1pCSFY4Vl80Tkhqbkp3blMyejJkUXdpTVlBZWdzd2VKdVdR?oc=5",
+   "source": "NVIDIA Newsroom",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:07:50+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "NVIDIA, 테스트부터 배포까지 에이전트의 안전성을 보장하는 ‘Open Agent Safety’ 플랫폼 출시",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "7538c487a93fa159",
+   "title": "Nvidia releases AI safety software it says could have stopped Hugging Face hack",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSVREakRaN2V6OWo0bzNFcVBHb1VZMzRVS29mcWF4XzZwSmdxLVRublBqSTE5ZlNBaHBKb0lTU1o2SWV0V0t1U3M3TVl1ZnlJWGVJRGxKclM5RkphYzhzU3FlNkZHNDk3TUZhdW54dGtydmR3MFR2ZFVZdWItaVpsNjZYX2hIbjVHcTM0ZTVqLVd6UHV2OGY4eFM4ZW1va1pCSF90VzlZd3BSUjVkY1RJRzV2ZGFEUnlnbDY1d0ZjOFZoYXBVRU5YZEM0Zmk?oc=5",
+   "source": "Reuters",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:07:32+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "엔비디아, ‘허깅 페이스 해킹을 막을 수 있었을 것’이라며 AI 안전 소프트웨어 출시",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "eecff868c49652bb",
+   "title": "생성형 AI로 일상 속 ESG 해법 제시… 의정부시, 'ESG×AI 챌린지 해커톤' 성료",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xVktQa290bmp4aFJtMVV0TGVrRTB5N3FCQy1Mcl9seU5PTTlZdkdSTXZld0h6SFd5XzJwN29GRGFfV0M0RjhYTWdJRHVvcWM?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:07:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "aeeb7f8f83949e1e",
    "title": "Add Runtime Controls to AI Agents with NVIDIA OpenShell",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMjV4aUk4SjhLSWVqbnQ3UzJtOWRyR1hLOXhmZVNEYXh1aGlCamU4elI2UVA5TWJRVlhjR2pWN3FhRHJjN293SDc4MnZqSnJUTHp1VWNyYnc2d1lMNmVldEZSUkVIR3hSbW5DLWRtTzA2SXdYMmJ0LWc0ZjJkYjRoRDhGMWJyLXdoYmNDNHBvaGNpaUls?oc=5",
@@ -489,6 +542,38 @@
    "title_ko": "드디어 메타 AI에 기회를 주기로 한 이유",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "c046a3ae71a54d9f",
+   "title": "The Next Evolution of AI Is Learning From Your Dodgy Gaming Skills",
+   "link": "https://www.wired.com/story/the-next-evolution-of-ai-is-learning-from-your-dodgy-gaming-skills/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:00:00+00:00",
+   "summary": "A British startup is shaping video game inputs into training data for AI models that can navigate the physical world.",
+   "thumb": "",
+   "title_ko": "AI의 다음 진화는 당신의 형편없는 게임 실력에서 배운다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "영국의 한 스타트업이 비디오 게임 입력 데이터를 실제 세계를 탐색할 수 있는 AI 모델의 훈련 데이터로 가공하고 있다.",
+   "detail_ko": "영국의 한 스타트업이 비디오 게임 입력 데이터를 실제 세상을 탐색할 수 있는 AI 모델의 훈련 데이터로 가공하고 있다."
+  },
+  {
+   "id": "d2dc8eda0e2789e7",
+   "title": "Nvidia’s Answer to Rogue Agents Is an Open-Source AI Security System",
+   "link": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:00:00+00:00",
+   "summary": "In the wake of a series of high-profile AI safety incidents, Nvidia is introducing a new software tool that helps keep agents from escaping containment.",
+   "thumb": "",
+   "title_ko": "Nvidia가 ‘불량 에이전트’에 내놓은 해법은 오픈소스 AI 보안 시스템이다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "일련의 주목할 만한 AI 안전 사고들이 발생한 가운데, 엔비디아는 에이전트가 격리 구역을 벗어나는 것을 방지하는 데 도움이 되는 새로운 소프트웨어 도구를 선보이고 있다.",
+   "detail_ko": "일련의 주목할 만한 AI 안전 사고가 잇따른 가운데, 엔비디아는 에이전트가 격리 구역을 벗어나지 못하도록 막아주는 새로운 소프트웨어 도구를 선보이고 있다."
   },
   {
    "id": "b52edd2929027dc9",
@@ -835,6 +920,20 @@
    "thumb": ""
   },
   {
+   "id": "295c8e6fc3bcd548",
+   "title": "Canada Debates AI’s Place In Animation At OIAF’s The Animation Conference",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX19teDVsQXVPcUE2RDJMY0Q4MnAzejMzeVMxS0J1SVE5c1NqUEVFMEtHSnRvRWh3dS1STDAyR3hIZmhyR09CMTJwbU41VGN4YmxFN0dzWnVBRjB4U0xvZDJCNWl6aUt5NjZmQUcydzMwZXFDUGV5VklzWWJmNDZaQklBY3lrc2lVY0tFOW5mNzB3UDc1Rmlqdi1BeFZSN0czdHpITmdwT1NyQlBDMGJSbnZ3WEIxdGpt?oc=5",
+   "source": "Cartoon Brew",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T07:26:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "OIAF ‘더 애니메이션 컨퍼런스’에서 캐나다, 애니메이션 분야 내 AI의 역할에 대한 논의",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "d9a22b8bd7238a45",
    "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
@@ -927,17 +1026,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T07:00:14+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "ab5676fb003650b0",
-   "title": "하정우 부위원장, AI 현장 소리 직접 듣는다…정책 토크쇼 개최",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zV19mVGhpWWxVTWw4Z01yaDZZaVJqZ21iM2ptTWRyaW5jREhFSDdielBQSDJBSklQaFg2OGs4aWR4TUo0UFNrVkE3RUQ3NW5fN3lxSUdn?oc=5",
-   "source": "지디넷코리아",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:57:54+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2720,69 +2808,6 @@
    "thumb": ""
   },
   {
-   "id": "e337930f82fa0ed1",
-   "title": "Why letting Claude clean your TV's bloatware isn't the best idea",
-   "link": "https://www.engadget.com/2267074/why-claude-cleaning-tv-bloatware-not-best-idea/",
-   "source": "Engadget",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T14:15:00+00:00",
-   "summary": "Don't let an AI bot potentially crash your TV.",
-   "thumb": "",
-   "title_ko": "클로드에게 TV의 불필요한 앱을 정리하게 하는 것이 최선의 선택이 아닌 이유",
-   "hot": 0,
-   "detail_ko": "AI 봇 때문에 TV가 고장 날 수도 있으니 주의하세요.",
-   "summary_ko": "AI 봇 때문에 TV가 고장 날 수도 있으니 주의하세요.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
-   "id": "6daaf5280d745f3b",
-   "title": "Will artificial intelligence really kill us all?",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYnNRUHNqeU5NNTVIVVhEd3F1QnY1d3JlYVZaUUJPejViZ0ZuU2c5dkNFS0F2M2x0Y1dDYUFaU3hXV2NkMk5scksteWRROHNMQjV5UEU4cnQzSU5BWW5uNHIzX1Q4TmhjWFRBVFNlYlUzLUhRVmt3RjdNT3psaUREdzRUNA?oc=5",
-   "source": "Google News: AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T13:48:22+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "인공지능이 정말 우리 모두를 죽일까요?",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
-   "id": "e3526b33a0b8784e",
-   "title": "Gemini Live vs. ChatGPT Voice: Which AI offers a more natural conversation?",
-   "link": "https://www.engadget.com/2266889/gemini-live-vs-gpt-live-which-offers-more-natural-conversation/",
-   "source": "Engadget",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T13:45:00+00:00",
-   "summary": "Speaking with an AI chatbot can be a little awkward, but companies like Google and OpenAI are working on fixing that.",
-   "thumb": "",
-   "title_ko": "Gemini Live 대 ChatGPT Voice: 어느 AI가 더 자연스러운 대화를 제공할까?",
-   "detail_ko": "AI 챗봇과 대화하는 것은 다소 어색할 수 있지만, 구글이나 오픈AI와 같은 기업들은 이러한 문제를 해결하기 위해 노력하고 있습니다.",
-   "summary_ko": "AI 챗봇과 대화하는 것은 다소 어색할 수 있지만, 구글이나 오픈AI와 같은 기업들은 이러한 문제를 해결하기 위해 노력하고 있습니다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
-   "id": "ed2cbcca51ab9ede",
-   "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website",
-   "source": "The Verge AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T13:21:07-04:00",
-   "summary": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and…",
-   "thumb": "",
-   "title_ko": "OpenAI 에이전트들이 유엔 웹사이트에 ‘무차별 대입 공격’을 시도했다",
-   "detail_ko": "보안 연구원 로완 하워드-존스(Rowan Howard-Jones)는 OpenAI 에이전트들이 4월부터…까지 유엔 무역개발회의(UNCTAD) 통계 사이트를 16,000회 이상 스캔했다고 밝혔습니다.",
-   "summary_ko": "보안 연구원 로완 하워드-존스(Rowan Howard-Jones)는 OpenAI 에이전트들이 4월부터…까지 유엔 무역개발회의(UNCTAD) 통계 사이트를 16,000회 이상 스캔했다고 밝혔습니다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "b80e0134147289f7",
    "title": "[AI 패권 전쟁] 美 비자 빗장에 유턴하는 두뇌들… KAIST, MIT·스탠퍼드 제치고 세계 3위",
    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBrMzJYZWhySlBmMjBQZVJrSXFUV2xfVm80cy1qQlZDQl9tNnBzNV8yUWhWakx1bW56MVhVMm1Oc2VZMnpjZkhIY2l3ZENjbHRfMTZsYWJEaWxyYWx0ZFlXblRrZFdTQWY4?oc=5",
@@ -2792,22 +2817,6 @@
    "published": "2026-09-27T13:20:00+00:00",
    "summary": "",
    "thumb": ""
-  },
-  {
-   "id": "c0191b48b3163970",
-   "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
-   "link": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T13:03:05+00:00",
-   "summary": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remote parts of the US as a refuge in case AI goes awry.",
-   "thumb": "",
-   "title_ko": "일부 앤트로픽(Anthropic) 베테랑 직원들이 “AI가 통제 불능 상태가 될 경우”를 대비해 외딴 지역의 토지를 매입하고 있는 것으로 알려졌다",
-   "detail_ko": "월스트리트저널에 따르면, 앤트로픽(Anthropic)의 장기 근속 직원 중 일부는 AI가 통제 불능 상태에 빠질 경우를 대비해 피난처로 삼을 목적으로 미국 외딴 지역에 토지를 매입하는 것을 고려하고 있다.",
-   "summary_ko": "월스트리트저널에 따르면, 앤트로픽(Anthropic)의 장기 근속 직원 중 일부는 AI가 통제 불능 상태에 빠질 경우를 대비해 피난처로 삼기 위해 미국 외딴 지역의 토지를 매입하는 것을 고려하고 있다.",
-   "tr": "deepl",
-   "trv": 2
   },
   {
    "id": "6de0efa96e17d673",
@@ -3152,7 +3161,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 92
+   "fetched": 93
   },
   {
    "name": "Google News: AI 기업",
@@ -3193,8 +3202,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -3205,8 +3214,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -3301,7 +3310,7 @@
   {
    "name": "WIRED AI",
    "ok": true,
-   "count": 3,
+   "count": 5,
    "fetched": 10
   },
   {
@@ -3367,20 +3376,20 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
