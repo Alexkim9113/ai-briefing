@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:38+09:00",
+ "generated_at": "2026-09-28T12:40+09:00",
  "items": [
   {
    "id": "c54492f4dae2d495",
@@ -66,6 +66,17 @@
    "category": "news_ko",
    "published": "2026-09-28T11:10:46+09:00",
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
+   "thumb": ""
+  },
+  {
+   "id": "2da95cc9c3be10c1",
+   "title": "트럼프, 아모데이와 백악관 첫 일대일 만찬 개최",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215694",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:15:40+09:00",
+   "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
    "thumb": ""
   },
   {
@@ -221,6 +232,17 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T02:15:02+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "1396482fb4c5af42",
+   "title": "\"지역완결형 암 치료 체계 구축\"…화순전남대병원, AI 연구 착수",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE54ZWQ4MFVvN0I1cUxianptNXREX19HcHJDcnJvQXhTUHpFTzhrUGdsdFJPWlBhOVl4U0RlRE5NcGFFRDlxeWtRXzh0b3NRUEZFY2U2QlZuODI4aVRQQ3hKSTZIVHZ6RDhFWmU5d3N0RQ?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T02:14:19+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1289,17 +1311,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "진보주의자들이 인공지능을 가장 걱정하는 것은 무엇인가"
-  },
-  {
-   "id": "cd18f316871d4581",
-   "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T21:36:00+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "3c3e945beb5b087a",
@@ -2392,17 +2403,6 @@
    "thumb": ""
   },
   {
-   "id": "3f70b2fc346fe7d5",
-   "title": "Cybernetics, interoception, and the art of embodiment",
-   "link": "https://www.nature.com/articles/s42256-026-01312-x",
-   "source": "Nature Machine Intelligence · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-18T00:00:00+00:00",
-   "summary": "Nature Machine Intelligence, Published online: 18 September 2026; doi:10.1038/s42256-026-01312-x Living organisms continuously monitor their internal physiological states while…",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -2560,7 +2560,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 80
+   "fetched": 81
   },
   {
    "name": "Google News: AI 기업",
@@ -2770,13 +2770,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 42
+   "fetched": 41
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "스테이지5",
