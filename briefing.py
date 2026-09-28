@@ -35,6 +35,7 @@ SUMMARY_CHARS = 180        # 발췌 요약 최대 길이(저작권상 짧게 유
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
+CAT_CAP = {"talks": 3}    # 영상·강연은 하루 최신 3개만
 DEDUPE_DAYS = 7            # 최근 N일 브리핑에 이미 나온 글은 제외
 DUP_SIMILARITY = 0.4       # 같은 카테고리에서 제목 글자쌍이 이만큼 겹치면 같은 글로 본다
 DUP_SIMILARITY_KO = 0.33   # 한글 제목은 언론사마다 표현이 더 달라 기준을 조금 낮춘다
@@ -404,6 +405,32 @@ def make_item(src, it, keywords, now):
     }
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+_SHORTS = {}
+
+
+def is_youtube_short(link, fixtures=None):
+    """세로형 쇼츠인지. 피드 주소에 /shorts/ 가 있거나, 쇼츠 주소로 열었을 때 일반 영상으로 넘어가지 않으면 쇼츠."""
+    if "/shorts/" in link:
+        return True
+    m = re.search(r"(?:[?&]v=|youtu\.be/)([\w-]{11})", link)
+    if not m or fixtures:
+        return False
+    vid = m.group(1)
+    if vid not in _SHORTS:
+        req = urllib.request.Request(f"https://www.youtube.com/shorts/{vid}", method="HEAD", headers={"User-Agent": USER_AGENT})
+        try:
+            with urllib.request.build_opener(_NoRedirect).open(req, timeout=15) as r:
+                _SHORTS[vid] = r.status == 200
+        except Exception:  # 일반 영상은 /watch 로 넘겨 보낸다(3xx)
+            _SHORTS[vid] = False
+    return _SHORTS[vid]
+
+
 def collect(fixtures=None, now=None):
     cfg = load_config()
     now = now or datetime.now(timezone.utc)
@@ -437,6 +464,8 @@ def collect(fixtures=None, now=None):
                     continue
                 if history.is_dup(item):
                     continue
+                if "youtube.com" in item["link"] and is_youtube_short(item["link"], fixtures):
+                    continue  # 가로형 긴 영상만
                 del item["_d"]
                 kept.append(item)
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
@@ -448,6 +477,7 @@ def collect(fixtures=None, now=None):
     path = DATA_DIR / f"{today.isoformat()}.json"
     # 오늘 이미 올린 글을 먼저 두고, 새 글은 그것들·서로와 겹치지 않을 때만 더한다
     old = json.loads(path.read_text(encoding="utf-8"))["items"] if path.exists() else []
+    old = [i for i in old if not ("youtube.com" in i["link"] and is_youtube_short(i["link"], fixtures))]
     new = sorted(results, key=lambda x: x["published"] or "", reverse=True)
     today_seen, uniq = Deduper(), []
     for it in old + new:
@@ -457,7 +487,7 @@ def collect(fixtures=None, now=None):
         uniq.append(it)
     uniq.sort(key=lambda x: x["published"] or "", reverse=True)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
-    uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
+    uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
     add_translations(uniq, fixtures)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
@@ -729,53 +759,52 @@ document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dat
 """
 
 WRITE_JS = r"""
-const REPO=document.getElementById('w').dataset.repo,VK='metaxis_vault',enc=new TextEncoder(),dec=new TextDecoder();
-const $=s=>document.querySelector(s),views=['#v-setup','#v-lock','#v-list','#v-edit'];
-let TOKEN=null,POSTS=[],cur=null,imgs={},seq=0;
+// 운영자 글쓰기: GitHub 토큰 없이 비밀번호 4자리만으로 쓴다.
+// 글은 사이트의 공개키로 암호화해 무료 중계 서버(ntfy.sh)에 맡기고, 30분마다 도는 자동 작업이 풀어서 사이트에 올린다.
+const W=document.getElementById('w'),TOPIC=W.dataset.topic,KEY=JSON.parse(W.dataset.key||'null'),enc=new TextEncoder();
+const $=s=>document.querySelector(s),views=['#v-first','#v-lock','#v-list','#v-edit'];
+let PIN=null,POSTS=[],STATUS={},cur=null,imgs={},seq=0;
 function view(id){views.forEach(v=>$(v).hidden=v!==id);}
-function msg(el,t,bad){const m=$(el);m.textContent=t;m.style.color=bad?'#c2410c':'';}
+function msg(el,t,bad){const m=$(el);m.textContent=t;m.style.color=bad?'#e5484d':'';}
 const b64=u8=>{let s='';for(let i=0;i<u8.length;i+=8192)s+=String.fromCharCode.apply(null,u8.subarray(i,i+8192));return btoa(s);};
-const unb64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
-async function kdf(pin,salt){const k=await crypto.subtle.importKey('raw',enc.encode(pin),'PBKDF2',false,['deriveKey']);
- return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:600000,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);}
-function vault(){try{return JSON.parse(localStorage.getItem(VK)||'null');}catch(e){return null;}}
-function saveVault(v){try{localStorage.setItem(VK,JSON.stringify(v));}catch(e){}}
-async function gh(path,opt={}){const r=await fetch('https://api.github.com/repos/'+REPO+path,{...opt,
- headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'}});
- if(!r.ok)throw new Error(r.status+' '+(await r.text()).slice(0,160));return r.status===204?null:r.json();}
-async function commit(files,message){const tree=[];
- for(const f of files){if(f.del){tree.push({path:f.path,mode:'100644',type:'blob',sha:null});continue;}
-  const b=await gh('/git/blobs',{method:'POST',body:JSON.stringify({content:f.b64,encoding:'base64'})});tree.push({path:f.path,mode:'100644',type:'blob',sha:b.sha});}
- for(let t=0;;t++){const ref=await gh('/git/ref/heads/main'),c=await gh('/git/commits/'+ref.object.sha);
-  const tr=await gh('/git/trees',{method:'POST',body:JSON.stringify({base_tree:c.tree.sha,tree})});
-  const nc=await gh('/git/commits',{method:'POST',body:JSON.stringify({message,tree:tr.sha,parents:[ref.object.sha]})});
-  try{await gh('/git/refs/heads/main',{method:'PATCH',body:JSON.stringify({sha:nc.sha})});return;}
-  catch(e){if(t>=3)throw e;await new Promise(r=>setTimeout(r,2000));}}}
-function pinOk(p){return /^\d{4}$/.test(p);}
-$('#setup-go').onclick=async()=>{const tok=$('#tok').value.trim(),p1=$('#pin1').value,p2=$('#pin2').value;
- if(!tok)return msg('#setup-msg','토큰을 붙여넣어 주세요.',1);if(!pinOk(p1))return msg('#setup-msg','비밀번호는 숫자 4자리예요.',1);
- if(p1!==p2)return msg('#setup-msg','비밀번호 두 번 입력한 값이 달라요.',1);
- msg('#setup-msg','확인 중…');TOKEN=tok;
- try{const r=await gh('');if(!r.permissions||!r.permissions.push)throw new Error('이 토큰에는 쓰기 권한이 없어요.');}
- catch(e){TOKEN=null;return msg('#setup-msg','토큰을 확인할 수 없어요: '+e.message,1);}
- const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
- const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},await kdf(p1,salt),enc.encode(tok)));
- saveVault({salt:b64(salt),iv:b64(iv),ct:b64(ct),fails:0});$('#tok').value='';openList();};
-$('#pin').oninput=async()=>{const p=$('#pin').value;if(!pinOk(p))return;const v=vault();
- try{TOKEN=dec.decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:unb64(v.iv)},await kdf(p,unb64(v.salt)),unb64(v.ct)));
-  v.fails=0;saveVault(v);$('#pin').value='';openList();}
- catch(e){v.fails=(v.fails||0)+1;$('#pin').value='';
-  if(v.fails>=5){localStorage.removeItem(VK);msg('#lock-msg','5번 틀려서 이 기기의 로그인 정보를 지웠어요. 처음 설정을 다시 해주세요.',1);setTimeout(start,2500);}
-  else{saveVault(v);msg('#lock-msg',`비밀번호가 달라요. (${v.fails}/5)`,1);}}};
-$('#reset').onclick=()=>{if(confirm('이 기기에 저장된 로그인 정보를 지울까요?')){localStorage.removeItem(VK);start();}};
-async function openList(){view('#v-list');msg('#list-msg','글 목록을 불러오는 중…');
+function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+const pinOk=p=>/^\d{4}$/.test(p);
+function pending(){try{return JSON.parse(localStorage.getItem('metaxis_pending')||'[]');}catch(e){return [];}}
+function savePending(a){try{localStorage.setItem('metaxis_pending',JSON.stringify(a.slice(-20)));}catch(e){}}
+async function send(op,data){
+ if(!KEY||!TOPIC)throw new Error('글쓰기 준비가 아직 안 됐어요. 30분 뒤 다시 시도해 주세요.');
+ const ref=Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+ const pub=await crypto.subtle.importKey('jwk',KEY,{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
+ const k=crypto.getRandomValues(new Uint8Array(32)),iv=crypto.getRandomValues(new Uint8Array(12));
+ const ak=await crypto.subtle.importKey('raw',k,'AES-GCM',false,['encrypt']);
+ const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},ak,enc.encode(JSON.stringify({op,pin:PIN,ref,at:new Date().toISOString(),...data}))));
+ const ek=new Uint8Array(await crypto.subtle.encrypt({name:'RSA-OAEP'},pub,k));
+ const body=JSON.stringify({v:1,kid:KEY.kid,k:b64(ek),iv:b64(iv),ct:b64(ct)});
+ const r=await fetch('https://ntfy.sh/'+TOPIC+'?filename=post.bin',{method:'PUT',body:new Blob([body])});
+ if(!r.ok)throw new Error('보내지 못했어요 ('+r.status+')');
+ const pd=pending();pd.push({ref,op,title:data.post?data.post.title:(data.title||''),at:Date.now()});savePending(pd);return ref;}
+async function loadStatus(){try{STATUS=await (await fetch('status.json?'+Date.now())).json();}catch(e){STATUS={};}}
+function showPending(){const done=Object.fromEntries((STATUS.results||[]).map(r=>[r.ref,r]));let pd=pending(),out=[];
+ pd=pd.filter(x=>{const r=done[x.ref];if(r){out.push(`<li class="${r.ok?'':'bad'}">${r.ok?'✓':'✕'} ${esc(x.title||x.op)} · ${esc(r.msg)}</li>`);return false;}
+  if(Date.now()-x.at>86400000*2)return false;out.push(`<li>⏳ ${esc(x.title||x.op)} · 사이트에 올리는 중이에요 (최대 30분)</li>`);return true;});
+ savePending(pd);$('#pend').innerHTML=out.join('');}
+async function start(){await loadStatus();PIN=null;try{PIN=sessionStorage.getItem('metaxis_pin');}catch(e){}
+ if(!KEY){view('#v-lock');msg('#lock-msg','글쓰기 준비 중이에요. 30분 뒤 다시 열어 주세요.',1);return;}
+ if(PIN)return openList();view(STATUS.pin_set?'#v-lock':'#v-first');}
+$('#first-go').onclick=async()=>{const p1=$('#pin1').value,p2=$('#pin2').value;
+ if(!pinOk(p1))return msg('#first-msg','비밀번호는 숫자 4자리예요.',1);if(p1!==p2)return msg('#first-msg','두 번 입력한 값이 달라요.',1);
+ PIN=p1;msg('#first-msg','저장 중…');try{await send('setpin',{});try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}openList();}
+ catch(e){msg('#first-msg',e.message,1);}};
+$('#pin').oninput=()=>{const p=$('#pin').value;if(!pinOk(p))return;PIN=p;$('#pin').value='';try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}openList();};
+$('#logout').onclick=()=>{try{sessionStorage.removeItem('metaxis_pin');}catch(e){}PIN=null;view(STATUS.pin_set?'#v-lock':'#v-first');};
+async function openList(){view('#v-list');msg('#list-msg','');
  try{POSTS=await (await fetch('posts.json?'+Date.now())).json();}catch(e){POSTS=[];}
- msg('#list-msg','');renderList();}
-function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.title)}</b> <span class="meta">${p.date.slice(0,10)}</span>
+ showPending();renderList();
+ const bad=(STATUS.results||[]).slice(-1)[0];if(bad&&!bad.ok&&/비밀번호/.test(bad.msg))msg('#list-msg','최근 요청이 비밀번호가 달라서 처리되지 않았어요. 다시 로그인해 주세요.',1);}
+function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.title)}</b> <span class="meta">${(p.date||'').slice(0,10)}</span>
   <button data-e="${i}">수정</button> <button data-d="${i}">삭제</button></li>`).join('')||'<li class="meta">아직 쓴 글이 없어요.</li>';
  $('#plist').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(POSTS[+b.dataset.e]));
  $('#plist').querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(POSTS[+b.dataset.d]));}
-function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}${z(d.getMonth()+1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;}
 $('#new').onclick=()=>edit(null);
 function edit(p){cur=p?{...p}:{id:newId(),title:'',body:'',cover:'',images:[],date:''};imgs={};seq=(cur.images||[]).length;
@@ -792,22 +821,19 @@ $('#file').onchange=async e=>{const ta=$('#body');for(const f of e.target.files)
 $('#cancel').onclick=()=>{view('#v-list');renderList();};
 $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=$('#body').value.trim();
  if(!title||!body)return msg('#edit-msg','제목과 내용을 모두 써 주세요.',1);
- const used=n=>body.includes('img/'+n)||cur.cover==='img/'+n,files=[];
- const keep=(cur.images||[]).filter(used);(cur.images||[]).filter(n=>!used(n)).forEach(n=>files.push({path:'posts/img/'+n,del:1}));
- for(const [n,d] of Object.entries(imgs))if(used(n)){files.push({path:'posts/img/'+n,b64:d.split(',')[1]});keep.push(n);}
+ const used=n=>body.includes('img/'+n)||cur.cover==='img/'+n,up={};
+ const keep=(cur.images||[]).filter(used);
+ for(const [n,d] of Object.entries(imgs))if(used(n)){up[n]=d.split(',')[1];keep.push(n);}
  if(cur.cover&&!keep.includes(cur.cover.slice(4)))cur.cover=keep.length?'img/'+keep[0]:'';
  const post={id:cur.id,title,body,cover:cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
- files.push({path:`posts/${cur.id}.json`,b64:b64(enc.encode(JSON.stringify(post,null,1)))});
- $('#publish').disabled=true;msg('#edit-msg','올리는 중…');
- try{await commit(files,'에디터 글: '+title);msg('#edit-msg','게시했어요! 1~2분 뒤 사이트에 보여요.');
-  const i=POSTS.findIndex(p=>p.id===post.id);if(i>=0)POSTS[i]=post;else POSTS.unshift(post);cur=post;imgs={};drawThumbs();}
- catch(e){msg('#edit-msg','올리지 못했어요: '+e.message,1);}finally{$('#publish').disabled=false;}};
-async function del(p){if(!confirm(`'${p.title}' 글을 삭제할까요?`))return;msg('#list-msg','삭제하는 중…');
- try{await commit([{path:`posts/${p.id}.json`,del:1},...(p.images||[]).map(n=>({path:'posts/img/'+n,del:1}))],'에디터 글 삭제: '+p.title);
-  POSTS=POSTS.filter(x=>x.id!==p.id);msg('#list-msg','삭제했어요. 1~2분 뒤 사이트에서 사라져요.');
-  renderList();}
- catch(e){msg('#list-msg','삭제하지 못했어요: '+e.message,1);}}
-function start(){TOKEN=null;view(vault()?'#v-lock':'#v-setup');msg('#lock-msg','');if(vault())$('#pin').focus();}
+ $('#publish').disabled=true;msg('#edit-msg','보내는 중…');
+ try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 30분 안에 사이트에 올라가요.');
+  const i=POSTS.findIndex(p=>p.id===post.id);if(i<0)POSTS.unshift(post);cur=post;imgs={};
+  setTimeout(()=>{openList();},1400);}
+ catch(e){msg('#edit-msg',e.message,1);}finally{$('#publish').disabled=false;}};
+async function del(p){if(!confirm(`'${p.title}' 글을 삭제할까요?`))return;msg('#list-msg','보내는 중…');
+ try{await send('delete',{id:p.id,title:p.title});msg('#list-msg','삭제 요청을 보냈어요. 30분 안에 사이트에서 사라져요.');showPending();}
+ catch(e){msg('#list-msg',e.message,1);}}
 start();
 """
 
@@ -842,7 +868,8 @@ def site_cfg():
     return {"name": s.get("name", "METAXIS"), "url": url, "domain": s.get("domain", ""),
             "description": s.get("description", ""), "google": s.get("google_verification", ""),
             "naver": s.get("naver_verification", ""), "repo": s.get("repo", "Alexkim9113/ai-briefing"),
-            "email": s.get("contact_email", ""), "instagram": s.get("instagram", ""), "x": s.get("x", "")}
+            "email": s.get("contact_email", ""), "instagram": s.get("instagram", ""), "x": s.get("x", ""),
+            "editor_topic": s.get("editor_topic", "")}
 
 
 SOCIAL_ICONS = {
@@ -1361,27 +1388,28 @@ def render_editor_pages(posts, cats, sc):
     (out / "posts.json").write_text(json.dumps(
         [{k: p.get(k) for k in ("id", "title", "body", "cover", "images", "date", "updated")} for p in posts],
         ensure_ascii=False), encoding="utf-8")
-    write = (WRITE_HTML.replace("{REPO}", esc(sc["repo"])))
+    key = ROOT / "static" / "editor-key.json"
+    write = (WRITE_HTML.replace("{TOPIC}", esc(sc.get("editor_topic", "")))
+             .replace("{KEY}", esc(key.read_text(encoding="utf-8").strip()) if key.exists() else "null"))
+    st = POSTS_DIR / "status.json"
+    (out / "status.json").write_text(st.read_text(encoding="utf-8") if st.exists() else '{"pin_set": false, "results": []}',
+                                     encoding="utf-8")
     (out / "write.html").write_text(page(f"글쓰기 | {sc['name']}", write, "../", cats, search=False, path="editor/write.html",
                                          index=False, active="editor", script=WRITE_JS), encoding="utf-8")
     return pages
 
 
-WRITE_HTML = """<div class="post" id="w" data-repo="{REPO}"><h1 class="serif">에디터 글쓰기</h1>
-<section id="v-setup" hidden><p>이 기기에서 처음 쓰는 거라 한 번만 설정이 필요해요.</p>
-<ol class="meta" style="display:block;line-height:1.9"><li><a class="more" href="https://github.com/settings/personal-access-tokens/new?name=METAXIS+editor&amp;description=METAXIS+%EC%97%90%EB%94%94%ED%84%B0+%EA%B8%80%EC%93%B0%EA%B8%B0&amp;target_name=Alexkim9113&amp;expires_in=none&amp;contents=write" target="_blank" rel="noopener">GitHub 토큰 만들기 페이지</a>를 열어요.</li>
-<li>Repository access에서 <b>Only select repositories</b> → <b>ai-briefing</b> 선택</li>
-<li>Permissions에 <b>Contents: Read and write</b>가 들어가 있는지 확인 (링크로 열면 자동으로 채워져요)</li>
-<li>맨 아래 Generate token을 누르고 나온 토큰을 복사해서 아래에 붙여넣어요.</li></ol>
-<p><input id="tok" class="inp" placeholder="github_pat_로 시작하는 토큰" autocomplete="off"></p>
+WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><h1 class="serif">에디터 글쓰기</h1>
+<section id="v-first" hidden><p>처음이라 운영자 비밀번호를 정해요. 숫자 4자리를 두 번 입력해 주세요.</p>
 <p><input id="pin1" class="inp pin" inputmode="numeric" maxlength="4" type="password" placeholder="비밀번호 4자리">
 <input id="pin2" class="inp pin" inputmode="numeric" maxlength="4" type="password" placeholder="한 번 더"></p>
-<p><button id="setup-go" class="btn">저장하고 시작</button> <span id="setup-msg" class="meta"></span></p>
-<p class="meta">토큰은 이 기기 안에만 비밀번호로 잠가서 저장돼요. 비밀번호를 5번 틀리면 자동으로 지워져요.</p></section>
-<section id="v-lock" hidden><p>비밀번호 4자리를 입력하세요.</p>
+<p><button id="first-go" class="btn">비밀번호 정하고 시작</button> <span id="first-msg" class="meta"></span></p>
+<p class="meta">비밀번호는 사이트 서버 쪽에만 보관돼요. 어느 기기에서든 이 비밀번호로 글을 쓸 수 있어요.</p></section>
+<section id="v-lock" hidden><p>운영자 비밀번호 4자리를 입력하세요.</p>
 <p><input id="pin" class="inp pin" inputmode="numeric" maxlength="4" type="password" autocomplete="off" placeholder="••••"></p>
-<p id="lock-msg" class="meta"></p><p><button id="reset" class="linkbtn">이 기기 로그인 정보 지우기</button></p></section>
-<section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <span id="list-msg" class="meta"></span></p><ul id="plist" class="plist"></ul></section>
+<p id="lock-msg" class="meta"></p></section>
+<section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
+<ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul></section>
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
 <p><textarea id="body" class="inp" rows="16" placeholder="내용을 쓰세요. 빈 줄로 문단을 나눠요. ## 로 시작하면 소제목, **굵게**, [글자](https://주소) 는 링크가 돼요."></textarea></p>
 <p><label class="btn ghost">사진 넣기<input id="file" type="file" accept="image/*" multiple hidden></label>
@@ -1397,7 +1425,7 @@ WRITE_HTML = """<div class="post" id="w" data-repo="{REPO}"><h1 class="serif">�
 .thumbs label{font-size:12.5px;color:var(--muted)}
 @media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
 #setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
-.plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.plist button{margin:0;padding:8px 14px}
+.plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.pend li{font-size:14px;color:var(--muted)}.pend li.bad{color:#e5484d}.plist button{margin:0;padding:8px 14px}
 #v-edit label.btn{display:block;text-align:center;padding:12px;margin-bottom:8px}#body{min-height:40vh}
 .thumbs figure,.thumbs img{width:calc((100vw - 56px)/3)}.thumbs img{height:auto;aspect-ratio:3/2}
 #v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
@@ -1520,7 +1548,7 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     """사이트 앞에 두는 3D 입장 페이지(intro.html 템플릿). 오늘 모인 글 수와 제목 몇 개를 띄운다."""
     items = latest["items"]
     count = {c: sum(1 for it in items if it["category"] == c) for c in cats}
-    links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b><span>오늘 {count[c]}건</span></a>'
+    links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b></a>'
                     for c, n in cats.items())
     heads = sorted(items, key=lambda x: x.get("published") or "", reverse=True)[:14]
     tick = "".join(f"<span>{esc(it.get('title_ko') or it['title'])}</span>" for it in heads)
@@ -1616,13 +1644,162 @@ def build(keep_days=None):
     (SITE_DIR / ".nojekyll").write_text("")
     print(f"[build] 홈 + 카테고리·에디터 {len(paths)}쪽 생성 → {SITE_DIR.relative_to(ROOT)}/")
 
+# ---------------------------------------------------------------- 운영자 글 받기(비밀번호만으로 글쓰기)
+# 글쓰기 화면은 글을 사이트 공개키로 암호화해 ntfy.sh(무료 중계)에 맡긴다. 여기서 30분마다 꺼내 풀고,
+# 비밀번호가 맞으면 posts/ 에 저장한다. 비밀키와 비밀번호 확인값은 저장소가 아닌 .editor/(GitHub 캐시)에만 둔다.
+EDITOR_DIR = ROOT / ".editor"
+MAX_PIN_FAILS = 10  # 하루에 비밀번호를 이만큼 틀리면 그날은 더 받지 않는다
+
+
+def _b64d(s):
+    import base64
+    return base64.b64decode(s)
+
+
+def editor_inbox():
+    try:
+        from cryptography.hazmat.primitives import hashes, serialization
+        from cryptography.hazmat.primitives.asymmetric import padding, rsa
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    except ImportError:
+        print("[inbox] cryptography 가 없어 건너뜀")
+        return
+    import base64
+    import hmac
+    import secrets
+    topic = site_cfg().get("editor_topic")
+    if not topic:
+        return
+    EDITOR_DIR.mkdir(exist_ok=True)
+    kf, sf = EDITOR_DIR / "key.pem", EDITOR_DIR / "state.json"
+    pub_file = ROOT / "static" / "editor-key.json"
+    if not kf.exists():  # 처음 한 번 열쇠 한 쌍을 만든다(비밀번호도 새로 정해야 함)
+        key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        kf.write_bytes(key.private_bytes(serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8,
+                                         serialization.NoEncryption()))
+        sf.unlink(missing_ok=True)
+    key = serialization.load_pem_private_key(kf.read_bytes(), password=None)
+    nums = key.public_key().public_numbers()
+    to64 = lambda n: base64.urlsafe_b64encode(n.to_bytes((n.bit_length() + 7) // 8, "big")).rstrip(b"=").decode()
+    kid = hashlib.sha256(str(nums.n).encode()).hexdigest()[:12]
+    jwk = {"kty": "RSA", "n": to64(nums.n), "e": to64(nums.e), "alg": "RSA-OAEP-256", "ext": True, "kid": kid}
+    if not pub_file.exists() or json.loads(pub_file.read_text(encoding="utf-8")).get("kid") != kid:
+        pub_file.write_text(json.dumps(jwk), encoding="utf-8")
+    st = json.loads(sf.read_text(encoding="utf-8")) if sf.exists() else {}
+    status_f = POSTS_DIR / "status.json"
+    status = json.loads(status_f.read_text(encoding="utf-8")) if status_f.exists() else {"results": []}
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    fails = st.get("fails", {}).get(today, 0)
+
+    def pin_hash(pin, salt):
+        return hashlib.pbkdf2_hmac("sha256", pin.encode(), salt.encode(), 200000).hex()
+
+    def result(ref, ok, text):
+        status["results"] = (status.get("results", []) + [{"ref": str(ref)[:40], "ok": ok, "msg": text,
+                                                           "at": datetime.now(KST).isoformat(timespec="minutes")}])[-30:]
+        print("[inbox]", "OK" if ok else "거절", text)
+
+    since = st.get("since") or "12h"
+    try:
+        raw = fetch(f"https://ntfy.sh/{topic}/json?poll=1&since={since}").decode("utf-8", "replace")
+    except Exception as e:
+        print("[inbox] 중계 서버에 연결 실패:", e)
+        return
+    changed = False
+    for line in raw.splitlines():
+        try:
+            m = json.loads(line)
+        except ValueError:
+            continue
+        if m.get("event") != "message":
+            continue
+        st["since"] = m.get("id") or st.get("since")
+        try:
+            blob = fetch(m["attachment"]["url"]) if m.get("attachment") else (m.get("message") or "").encode()
+            env = json.loads(blob)
+            if env.get("kid") != kid:
+                continue  # 예전 열쇠로 잠근 글(열쇠가 바뀌기 전 것)
+            aes = key.decrypt(_b64d(env["k"]), padding.OAEP(mgf=padding.MGF1(hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+            req = json.loads(AESGCM(aes).decrypt(_b64d(env["iv"]), _b64d(env["ct"]), None))
+        except Exception as e:
+            print("[inbox] 읽을 수 없는 메시지 건너뜀:", type(e).__name__)
+            continue
+        ref, op, pin = req.get("ref", ""), req.get("op"), str(req.get("pin") or "")
+        if fails >= MAX_PIN_FAILS:
+            result(ref, False, "비밀번호를 너무 많이 틀려서 오늘은 잠겨 있어요")
+            continue
+        if not re.fullmatch(r"\d{4}", pin):
+            result(ref, False, "비밀번호 형식이 달라요")
+            continue
+        if op == "setpin":
+            if st.get("pin"):
+                result(ref, False, "비밀번호가 이미 정해져 있어요")
+            else:
+                salt = secrets.token_hex(16)
+                st["pin"] = {"salt": salt, "hash": pin_hash(pin, salt)}
+                result(ref, True, "비밀번호를 정했어요")
+            changed = True
+            continue
+        if not st.get("pin") or not hmac.compare_digest(pin_hash(pin, st["pin"]["salt"]), st["pin"]["hash"]):
+            fails += 1
+            st.setdefault("fails", {})[today] = fails
+            result(ref, False, "비밀번호가 달라요")
+            changed = True
+            continue
+        if op == "publish":
+            post, up = req.get("post") or {}, req.get("upload") or {}
+            pid = str(post.get("id", ""))
+            if not re.fullmatch(r"[\w-]{1,40}", pid) or not post.get("title"):
+                result(ref, False, "글 형식이 잘못됐어요")
+                continue
+            (POSTS_DIR / "img").mkdir(parents=True, exist_ok=True)
+            imgs = [n for n in post.get("images", []) if re.fullmatch(re.escape(pid) + r"-\d{1,3}\.jpg", str(n))]
+            old_f = POSTS_DIR / f"{pid}.json"
+            old = json.loads(old_f.read_text(encoding="utf-8")) if old_f.exists() else {}
+            for n in old.get("images", []):
+                if n not in imgs:
+                    (POSTS_DIR / "img" / n).unlink(missing_ok=True)
+            for n, data in up.items():
+                if n in imgs:
+                    b = _b64d(data)
+                    if b[:3] == b"\xff\xd8\xff" and len(b) < 8_000_000:  # JPEG 만
+                        (POSTS_DIR / "img" / n).write_bytes(b)
+            imgs = [n for n in imgs if (POSTS_DIR / "img" / n).exists()]
+            cover = post.get("cover") if str(post.get("cover", "")).removeprefix("img/") in imgs else (f"img/{imgs[0]}" if imgs else "")
+            clean = {"id": pid, "title": str(post["title"])[:200], "body": str(post.get("body", ""))[:60000], "cover": cover,
+                     "images": imgs, "date": old.get("date") or str(post.get("date", ""))[:40] or datetime.now(KST).isoformat(),
+                     "updated": datetime.now(KST).isoformat(timespec="seconds")}
+            old_f.write_text(json.dumps(clean, ensure_ascii=False, indent=1), encoding="utf-8")
+            result(ref, True, "게시했어요")
+            changed = True
+        elif op == "delete":
+            pid = str(req.get("id", ""))
+            f = POSTS_DIR / f"{pid}.json"
+            if re.fullmatch(r"[\w-]{1,40}", pid) and f.exists():
+                for n in json.loads(f.read_text(encoding="utf-8")).get("images", []):
+                    (POSTS_DIR / "img" / n).unlink(missing_ok=True)
+                f.unlink()
+                result(ref, True, "삭제했어요")
+            else:
+                result(ref, False, "지울 글을 찾지 못했어요")
+            changed = True
+    status["pin_set"] = bool(st.get("pin"))
+    POSTS_DIR.mkdir(exist_ok=True)
+    status_f.write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf-8")
+    sf.write_text(json.dumps(st), encoding="utf-8")
+    print("[inbox] 처리 완료" if changed else "[inbox] 새 글 없음")
+
+
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill", "photos"])
+    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill", "photos", "inbox"])
     ap.add_argument("--since", help="backfill 시작 날짜(YYYY-MM-DD)")
     ap.add_argument("--fixtures", help="네트워크 대신 사용할 로컬 피드 폴더(테스트용)")
     a = ap.parse_args()
+    if a.cmd == "inbox":
+        editor_inbox()
+        return
     if a.cmd == "photos":
         collect_photos()
         return
