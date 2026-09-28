@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T10:23+09:00",
+ "generated_at": "2026-09-28T10:30+09:00",
  "items": [
   {
    "id": "4c30431d125b111f",
@@ -33,6 +33,17 @@
    "category": "news_ko",
    "published": "2026-09-28T09:23:03+00:00",
    "summary": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈…",
+   "thumb": ""
+  },
+  {
+   "id": "372e8bff03862797",
+   "title": "[AI리더의 서가] 한 땀 한 땀 나의 첫 AI 에이전트",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215621",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:00:00+00:00",
+   "summary": "한 땀 한 땀 나의 첫 AI 에이전트허정준·송영희 | 책만2026년 9월 29일추천이유이 책은 프레임워크 없이 파이썬으로 AI 에이전트를 처음부터 끝까지 직접 구현하며 에이전트의 본질과 설계 원리를 완전히 이해하도록 합니다.",
    "thumb": ""
   },
   {
@@ -201,6 +212,17 @@
    "thumb": ""
   },
   {
+   "id": "6d992b1527418012",
+   "title": "‘모두를 위한 AI 춘천’…2026년 제1회 춘천 AI 포럼 29일 개최",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tNGVmV3FKYTdHUmRDZEZ3clFkbDZ1VWRLMzNvN1RWanoxMFloY0thaC04RmdmS29iY3dja2EtenV2cDVHNkZfQUo4SHFVQ2VL?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T00:48:54+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b9a0d07b32022c06",
    "title": "의료AI주, 인공지능 모멘텀 계속…쓰리빌리언 23%↑ - 머니투데이",
    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5Ld1ppWHdoQVhRVHZhQi14bGdwNHphVXRwWEhxSjNUOXlsOGI2Z3pZTGUtSFN1NTJsNEdNWDZCelZKeTJXMU1HUHNrOWI3aFNBVGJ3dGFMU1ZiOWFWQmdwMkZXc2s2V3NkMjlJUi1pU05wV2dTdHfSAXtBVV95cUxQQjdhRG9vMk40YW9LQmtzUXB4Mi15TkdmeTREVFcxMWhKdGx4dzF6ZTZQYjczUjhSYjlfUlRqNXY4VVJiX0dfc2NydlRWM2pxLVNWUGpZN0liamUyd2NFVW5JSDhmVnd1a2NiRnpwUVJBUU83MnQ5bWxYdE0?oc=5",
@@ -252,6 +274,17 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T00:41:39+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "fc6704cb92b710aa",
+   "title": "\"주 전체로\"…루닛, 스웨덴 스톡홀름주 'AI 도입'",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9DNTI0UW5BeFhmNWR5UVROUDMtR3ZtLXlzeWpvb3NIQkl1NjM4M0U0TW9YVU1tR2pwdDNrMjYwNkJ4WFBLS3Zla0JsbUpDVG9oemlUR1UxT0FBNEtQdFRZTXhBc3owR3VBM0tNb2ttYWhNVWo2YUVJVtIBeEFVX3lxTE9DNTI0UW5BeFhmNWR5UVROUDMtR3ZtLXlzeWpvb3NIQkl1NjM4M0U0TW9YVU1tR2pwdDNrMjYwNkJ4WFBLS3Zla0JsbUpDVG9oemlUR1UxT0FBNEtQdFRZTXhBc3owR3VBM0tNb2ttYWhNVWo2YUVJVg?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T00:41:27+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -730,6 +763,17 @@
    "thumb": ""
   },
   {
+   "id": "9d0df9462b82b119",
+   "title": "\"트럼프, 앤트로픽 CEO와 단독 만찬\"...AI 규제갈등 해빙 신호? - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYTGI5NVUwb2ZzMkt0TlJmdEcteWVUeUNHMGRySUx0UjZzbWl6SS1hZEtzWjNmUWJVQTBKLXVhQXBWU0pZMkI3bEhsVWNjaHhBdkVYOUVQdElGQ05RaXF4cmNHdExwamEt0gFuQVVfeXFMTl85T3FaUzBSVmNhYW5uTmhTTWd3TkRKQ0I2eTJPZUFOeS10WEdrLWoyUjlvSzIwR2djYS03Y0RTZHRXa3FraHpnQUJIekVJQUNBTE91VmRWS2M2V3JPX1RTeTNLZm5La1ZPbnJQOVE?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-27T22:02:19+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b91ae65d6d7d8b9d",
    "title": "\"트럼프, 앤트로픽 CEO와 단독 만찬\"...AI 규제갈등 해빙 신호? - 머니투데이",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fOU9xWlMwUlZjYWFubk5oU01nd05ESkNCNnkyT2VBTnktdFhHay1qMlI5b0syMEdnY2EtN2NEU2R0V2txa2h6Z0FCSHpFSUFDQUxPdVZkVktjNldyT19UU3kzS2ZuS2tWT25yUDlR0gFuQVVfeXFMTl85T3FaUzBSVmNhYW5uTmhTTWd3TkRKQ0I2eTJPZUFOeS10WEdrLWoyUjlvSzIwR2djYS03Y0RTZHRXa3FraHpnQUJIekVJQUNBTE91VmRWS2M2V3JPX1RTeTNLZm5La1ZPbnJQOVE?oc=5",
@@ -747,6 +791,17 @@
    "source": "구글뉴스: AI 정책",
    "category": "policy",
    "published": "2026-09-27T22:01:46+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "bf33028066a8e7c5",
+   "title": "[AI 프리즘] 'AI 규제 갈등' 앤트로픽 CEO, 트럼프와 백악관 단독 만찬...껄끄러운 관계 청산할까",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtMjN6UDJvMnVVZ2JhR3RtNzY2djZkRjRpTHkwX0N6TjZ5enJtRVZ2SjRHU2stUWNiWUM3RkVfUDBnMk5ydHVkZU15d2ljcldWR0FGYkhhejNyUmtKMWFETFd6UnhOdURGZ3fSAW5BVV95cUxNb0NXQ0VsZ0EtVzV6ZGFjTEVUbkRxdXFKM19sUXJqSWpHWC1hVlNITEZrSXJqS2ZPclFpVWJHS1ljZUY1aHc2ZGU5R3RaT3FqNmllUVhnMGZOZ0JfODBnQ2ZFa2ZydlYtaC1fcVRwQQ?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-27T21:51:07+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1275,28 +1330,6 @@
    "thumb": ""
   },
   {
-   "id": "5eebb2f3e34f2b6e",
-   "title": "Quantifying the plausibility gap in generative AI for surgical video generation with expert assessment",
-   "link": "https://www.nature.com/articles/s41746-026-03276-z",
-   "source": "npj Digital Medicine · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-09-26T00:00:00+00:00",
-   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03276-z Quantifying the plausibility gap in generative AI for surgical video generation with…",
-   "thumb": ""
-  },
-  {
-   "id": "39f2e2c4d7fac698",
-   "title": "Development and validation of a parsimonious AI-based mortality risk score for heart failure",
-   "link": "https://www.nature.com/articles/s41746-026-03258-1",
-   "source": "npj Digital Medicine · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-09-26T00:00:00+00:00",
-   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03258-1 Development and validation of a parsimonious AI-based mortality risk score for heart…",
-   "thumb": ""
-  },
-  {
    "id": "f35ec71916650795",
    "title": "Physics informed machine learning predicts binding free energy changes in protein-RNA complexes upon mutations",
    "link": "https://www.nature.com/articles/s42003-026-10948-9",
@@ -1316,6 +1349,28 @@
    "category": "papers",
    "published": "2026-09-26T00:00:00+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "5eebb2f3e34f2b6e",
+   "title": "Quantifying the plausibility gap in generative AI for surgical video generation with expert assessment",
+   "link": "https://www.nature.com/articles/s41746-026-03276-z",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03276-z Quantifying the plausibility gap in generative AI for surgical video generation with…",
+   "thumb": ""
+  },
+  {
+   "id": "39f2e2c4d7fac698",
+   "title": "Development and validation of a parsimonious AI-based mortality risk score for heart failure",
+   "link": "https://www.nature.com/articles/s41746-026-03258-1",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03258-1 Development and validation of a parsimonious AI-based mortality risk score for heart…",
    "thumb": ""
   },
   {
@@ -1352,17 +1407,6 @@
    "thumb": ""
   },
   {
-   "id": "f152ff388e7cf4bd",
-   "title": "Large language models as judges for clinical generative AI evaluation",
-   "link": "https://www.nature.com/articles/s41746-026-03248-3",
-   "source": "npj Digital Medicine · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-09-25T00:00:00+00:00",
-   "summary": "npj Digital Medicine, Published online: 25 September 2026; doi:10.1038/s41746-026-03248-3 Large language models as judges for clinical generative AI evaluation",
-   "thumb": ""
-  },
-  {
    "id": "e58cbdc1b9c75977",
    "title": "Anthropic’s AI biolab finds ‘CRISPR-like’ DNA in viruses. What’s next?",
    "link": "https://www.nature.com/articles/d41586-026-03039-6",
@@ -1382,6 +1426,17 @@
    "category": "papers",
    "published": "2026-09-25T00:00:00+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "f152ff388e7cf4bd",
+   "title": "Large language models as judges for clinical generative AI evaluation",
+   "link": "https://www.nature.com/articles/s41746-026-03248-3",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-25T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 25 September 2026; doi:10.1038/s41746-026-03248-3 Large language models as judges for clinical generative AI evaluation",
    "thumb": ""
   },
   {
@@ -1688,17 +1743,6 @@
    "thumb": ""
   },
   {
-   "id": "9c310ab7eca632c7",
-   "title": "Stage-aware deep learning with adversarial data synthesis enables prospective season-scale A/H1N1 influenza forecasting in China.",
-   "link": "https://europepmc.org/article/MED/42571518",
-   "source": "Europe PMC · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-07-28T00:00:00+00:00",
-   "summary": "Accurate influenza forecasting is essential for public health preparedness, yet many models require future covariates, provide limited interpretability, and degrade under…",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -1833,7 +1877,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 77
+   "fetched": 76
   },
   {
    "name": "Hugging Face Blog",
@@ -1862,8 +1906,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -1874,8 +1918,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -1887,7 +1931,7 @@
    "name": "Nature 에너지 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "OpenAI",
@@ -1910,14 +1954,14 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 3,
+   "count": 1,
    "fetched": 10
   },
   {
    "name": "Two Minute Papers",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "VentureBeat AI",
@@ -1929,7 +1973,7 @@
    "name": "Yannic Kilcher",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 500: Internal Server Error"
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "arXiv cs.AI · AI 일반",
@@ -1983,13 +2027,13 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 91
+   "fetched": 90
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 88
+   "fetched": 93
   },
   {
    "name": "구글뉴스: 인공지능",
@@ -2001,13 +2045,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 40
+   "fetched": 42
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "인공지능신문",
@@ -2017,9 +2061,9 @@
   },
   {
    "name": "조코딩",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 500: Internal Server Error"
+   "ok": true,
+   "count": 1,
+   "fetched": 15
   }
  ]
 }
