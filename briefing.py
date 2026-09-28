@@ -408,14 +408,15 @@ a{color:inherit;text-decoration:none}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
 .hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
 .badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 "Pretendard Variable",Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
-.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--g1,#3d0f22),var(--g2,#7a1f3d))}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.22),transparent 45%),
-repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
-.thumb .ico{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:34%;height:auto;max-height:62%;color:rgba(255,255,255,.88)}
-.thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;color:#fff}
-.thumb .ph i{position:absolute;top:14px;left:16px;font-style:normal;font-size:11.5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:99px}
-.thumb .ph b{font-weight:700;font-size:22px;line-height:1.3}.thumb .ph span{font-size:12px;opacity:.7}
+.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:#2a0b17}
+.thumb .art{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s}
+.thumb:hover .art{transform:scale(1.04)}
+.thumb .ico{display:none}
+.trend .thumb .ico{display:grid;place-items:center;position:absolute;inset:0;color:#fff}
+.trend .thumb .ico svg{width:30%;height:30%;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}
+.thumb .tag{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:6px;color:#fff;font-size:13px;font-weight:600;
+background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:5px 12px 5px 9px;border-radius:99px}
+.thumb .tag svg{width:16px;height:16px}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-size:13px;color:var(--muted)}
 .meta svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px}
 .hero .meta{margin:16px 0 10px}
@@ -427,7 +428,7 @@ repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14p
 .side-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
 .side-h h2{font-size:16px;margin:0;font-weight:600}.side-h a{font-size:13px;color:var(--muted)}
 .trend{display:grid;grid-template-columns:150px 1fr;gap:16px;margin-bottom:16px}
-.trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13.5px}.trend .thumb .ph{padding:8px 10px}.trend .thumb .ph i,.trend .thumb .ph span,.trend .thumb .ph b{display:none}.trend .thumb .ico{right:50%;transform:translate(50%,-50%);width:38%}
+.trend .thumb{border-radius:12px}.trend .thumb .tag{display:none}
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--accent);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
@@ -456,14 +457,14 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 .logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
 .badge{margin:8px 0 0;top:0;display:table}.hero .thumb{aspect-ratio:16/8}.hero p.sum{font-size:16px;line-height:1.7}
 .trend{grid-template-columns:88px 1fr;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}.trend .thumb{aspect-ratio:1}
-.trend .thumb .ph b{font-size:11.5px}.trend h3{font-size:16px}.trend .meta span:last-child{display:none}
+.trend h3{font-size:16px}.trend .meta span:last-child{display:none}
 .kw{gap:6px}.kw .info{margin-left:0;width:100%;padding-top:4px}
 .tabs{padding:10px 0;margin:0 -16px;padding-left:16px;padding-right:16px}.tabs button{padding:9px 16px;font-size:15px}
 section.cat>h2{font-size:21px;margin:26px 0 8px}
 .grid,.list{grid-template-columns:1fr;gap:0}
 .card:not(.row){display:grid;grid-template-columns:96px 1fr;column-gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .card:not(.row) .thumb{grid-row:1/span 3;aspect-ratio:1;border-radius:12px;box-shadow:none}
-.card .thumb .ph{padding:8px 10px}.card .thumb .ph{display:none}.card .thumb .ico{right:50%;transform:translate(50%,-50%);width:46%}
+.card .thumb .tag{display:none}.card .thumb .ico{display:grid;place-items:center;position:absolute;inset:0;color:#fff}.card .thumb .ico svg{width:36%;height:36%;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}
 .card h3{font-size:16px;line-height:1.5;margin:0 0 4px}.card p{font-size:14px;-webkit-line-clamp:2;margin-bottom:6px}
 .row{padding:14px 0}.meta{font-size:12.5px}
 ul.st{columns:1}footer{margin-top:36px}}
@@ -484,11 +485,6 @@ document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dat
 
 WEEKDAYS = "월화수목금토일"
 CARDS_PER_CAT = 6  # 분야별로 표지 카드로 보여줄 개수(나머지는 목록)
-CAT_COLORS = {"news_ko": ("#3d0f22", "#8a2748"), "news_global": ("#2a1030", "#6b2d6b"), "papers": ("#1c1636", "#4b3a8c"),
-              "policy": ("#10262a", "#2f6b67"), "youtube": ("#2b0d0d", "#9b2c2c")}
-# 표지 이미지 대신 쓰는 자체 제작 그라데이션(기사마다 다르게)
-COVER_COLORS = [("#3d0f22", "#8a2748"), ("#2a1030", "#6b2d6b"), ("#1c1636", "#4b3a8c"), ("#10262a", "#2f6b67"),
-                ("#2b0d0d", "#9b2c2c"), ("#2d1a0c", "#9a5b24"), ("#0f1f33", "#2f5d8c"), ("#261022", "#a3456f")]
 ICON_CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
 ICON_SRC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>'
 ICON_SHARE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>'
@@ -600,15 +596,40 @@ def topic_of(it):
     return best or TOPIC_DEFAULT.get(it["category"], ("AI", TOPIC_SPARK))
 
 
+# 표지 그림: 기사마다 다른 추상 그라데이션(자체 생성 SVG)과 주제 아이콘. 외부 이미지는 쓰지 않는다.
+ART_PALETTES = {
+    "의료": ("#0f2a33", ["#2bb3a3", "#6fd3c3", "#1d6f8c"]), "법·정책": ("#1f1830", ["#7a5cc2", "#c9a5ff", "#4b3a8c"]),
+    "반도체": ("#0d1b2e", ["#3b82f6", "#7dd3fc", "#1e3a8a"]), "로봇": ("#1a1f2b", ["#64748b", "#cbd5e1", "#38bdf8"]),
+    "에너지·환경": ("#10261c", ["#34d399", "#bef264", "#0f766e"]), "문화·예술": ("#2a1026", ["#f472b6", "#fbbf24", "#a855f7"]),
+    "교육": ("#2a1d0c", ["#f59e0b", "#fde68a", "#b45309"]), "보안": ("#101826", ["#475569", "#94a3b8", "#0ea5e9"]),
+    "투자·기업": ("#0f2419", ["#22c55e", "#86efac", "#15803d"]), "언어모델": ("#2a0b17", ["#e58fae", "#a33a5c", "#f9c6d6"]),
+    "신제품·서비스": ("#2b1208", ["#fb923c", "#fca5a5", "#c2410c"]), "연구": ("#141a33", ["#6366f1", "#a5b4fc", "#312e81"]),
+    "영상": ("#2b0d0d", ["#ef4444", "#fca5a5", "#7f1d1d"]), "AI": ("#2a0b17", ["#a33a5c", "#e58fae", "#5b1a33"]),
+}
+
+
+def cover_svg(seed, topic):
+    base, cols = ART_PALETTES.get(topic, ART_PALETTES["AI"])
+    r = int(seed[:12], 16) if seed else 7
+    blobs = ""
+    for k in range(4):
+        r, x = divmod(r, 160)
+        r, y = divmod(r, 90)
+        r, rad = divmod(r, 30)
+        blobs += f'<circle cx="{x}" cy="{y}" r="{28 + rad}" fill="{cols[k % 3]}" opacity="{.55 + (k % 2) * .25}"/>'
+    fid = "f" + (seed[:8] if seed else "0")
+    return (f'<svg class="art" viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+            f'<defs><filter id="{fid}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter></defs>'
+            f'<rect width="160" height="90" fill="{base}"/><g filter="url(#{fid})">{blobs}</g></svg>')
+
+
 def thumb_html(it, cats):
-    g1, g2 = COVER_COLORS[int(it["id"][:6], 16) % len(COVER_COLORS)] if it.get("id") else CAT_COLORS["news_ko"]
     topic, icon = topic_of(it)
-    img = (f'<img src="{esc(it["thumb"])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
-           if it.get("thumb") else "")
-    return (f'<a class="thumb" href="{esc(it["link"])}" target="_blank" rel="noopener" style="--g1:{g1};--g2:{g2}" tabindex="-1" aria-hidden="true">'
-            f'<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">{icon}</svg>'
-            f'<div class="ph"><i>{esc(topic)}</i><b>{esc(it.get("field") or re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
-            f'<span>{fmt_time(it.get("published"))}</span></div>{img}</a>')
+    svg_icon = (f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
+                f'stroke-linecap="round" stroke-linejoin="round">{icon}</svg>')
+    return (f'<a class="thumb" href="{esc(it["link"])}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">'
+            f'{cover_svg(it.get("id", ""), topic)}<span class="ico">{svg_icon}</span>'
+            f'<span class="tag">{svg_icon}{esc(topic)}</span></a>')
 
 
 def meta_html(it, cats, with_cat=False):
