@@ -73,6 +73,18 @@
    "thumb": ""
   },
   {
+   "id": "ba7d3a731f417a0d",
+   "title": "마키나락스, 'AI 참모' 군 지휘통제체계 적용...을지연습서 실증 나서",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215711",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:58:04+09:00",
+   "summary": "마키나락스(대표 윤성호)는 AI 운영체제 '런웨이'를 한국군합동지휘통제체계(KJCCS)에 적용, 을지 자유의 방패(UFS) 연습에서 실증했다고 28일 밝혔다. KJCCS는 합동참모본부가 각 군 및 한미연합사령부와 군사·전술 정보를 실시간으로 교류하는 지휘통제시스템이다.",
+   "detail": "마키나락스(대표 윤성호)는 AI 운영체제 '런웨이'를 한국군합동지휘통제체계(KJCCS)에 적용, 을지 자유의 방패(UFS) 연습에서 실증했다고 28일 밝혔다.\nKJCCS는 합동참모본부가 각 군 및 한미연합사령부와 군사·전술 정보를 실시간으로 교류하는 지휘통제시스템이다.\n마키나락스는 '생성형 AI 적용 KJCCS 정보 검색 및 운영 기술 실증' 사업에서 KJCCS 내부에 런웨이 2.0 기반 폐쇄망 AI 개발·운영 환경을 제공했다.",
+   "thumb": ""
+  },
+  {
    "id": "b163ed3fcb727529",
    "title": "스캐터랩, AI 캐릭터챗 '제타' 신규 기능 출시...\"대화 따라 표정·배경 바뀐다\"",
    "link": "https://www.aitimes.com/news/articleView.html?idxno=215708",
@@ -389,6 +401,18 @@
    "published": "2026-09-28T04:15:18+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "9a47cecddfd15ef1",
+   "title": "Transparency From AI Labs Is Key to a U.S.–China AI Agreement",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY3BteHpKOHVUY3pHcnZVc1hJcDJYTldCVkpNaDJrbUhUU2hnLVBLMEZnY3FPQmpyWElDSWhxZzNtRmlXZkVlRi13R1EyYWRGTjVBcXlZcU1VNEJZdXJWZERBclhMeDR3ak9QSW1vaEMyN0ZLQ1hONFp6eXBrS2NRc3BfWEt5cWF6SWNUWkdTRkRTMHJqazZlcWtsVHM2czJEanJjTm5tTmRTbXZuVkE?oc=5",
+   "source": "The Regulatory Review",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T04:13:37+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 연구소의 투명성은 미-중 AI 협정의 핵심입니다"
   },
   {
    "id": "0c39c4abbbf57fc7",
@@ -1087,18 +1111,6 @@
    "thumb": ""
   },
   {
-   "id": "294ca0bb52496e50",
-   "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42081",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:08:14+00:00",
-   "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
-   "thumb": "",
-   "hot": 6
-  },
-  {
    "id": "4b4af294d31cb75f",
    "title": "AI 연구인력 소속 비중 중국이 미국 앞서…KAIST 기관 순위 3위",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KN1NJWEczQk95bUJNQTZlZnVxWU02UnRTaW9OTmNNTDY1d2RUMVRMSEkzbVloYlR2UFUyMUhIeHh6QmtHZk1XTWdwLThIcXJ2N3lfVlBtS043bHo5YkhTS0t5NmlGNXlwY2E1X1dnY2FlQQ?oc=5",
@@ -1106,6 +1118,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T01:08:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "803a4734a3fbe2b8",
+   "title": "[AI픽] AI가 과학 연구에 참여한다…'AI4Sci 코리아' 첫 개최",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE42ODFDWWZXLTR6WllRcTJtaG5xWDh4Z1dRd1g0QjluMmZrdzJhc1BFU09hZWFkcGk2TUJXWF9VLUJaSnRnNlRlTEVFd0Z3OE8yc1NYT3cwRUVYWmZsZTAyONIBYEFVX3lxTE42ODFDWWZXLTR6WllRcTJtaG5xWDh4Z1dRd1g0QjluMmZrdzJhc1BFU09hZWFkcGk2TUJXWF9VLUJaSnRnNlRlTEVFd0Z3OE8yc1NYT3cwRUVYWmZsZTAyOA?oc=5",
+   "source": "연합뉴스",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T01:00:05+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1120,6 +1143,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "Elon Musk는 Nvidia 투자자들에게 더 좋은 소식을 전했습니다. 주식은 매수인가?"
+  },
+  {
+   "id": "e3670fdb1168e9de",
+   "title": "“AI 기반 과학기술 연구 미래 논의”, 서울서 국제학술 대회 개최",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yYXM0Zkw0aHFQck1DR0loWkp6U3FUUUxkM3B4YTNBTzhYY0xxallPX3lPaHo4RHVIRFRaUlJKNGZzTVpwSFV3Tnd3dXZIUQ?oc=5",
+   "source": "전자신문",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T01:00:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "add38888f24e18e8",
@@ -2081,7 +2115,8 @@
    "published": "2026-09-27T14:15:00+00:00",
    "summary": "Don't let an AI bot potentially crash your TV.",
    "thumb": "",
-   "title_ko": "Claude에게 TV의 블로트웨어를 청소하도록 하는 것이 최선의 아이디어가 아닌 이유"
+   "title_ko": "Claude에게 TV의 블로트웨어를 청소하도록 하는 것이 최선의 아이디어가 아닌 이유",
+   "hot": 8
   },
   {
    "id": "6daaf5280d745f3b",
@@ -2474,28 +2509,6 @@
    "thumb": ""
   },
   {
-   "id": "6c420acafc929d3b",
-   "title": "A structure-informed deep learning framework for modeling TCR-peptide-HLA interactions",
-   "link": "https://www.nature.com/articles/s41467-026-78063-1",
-   "source": "Nature 머신러닝 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-25T00:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f152ff388e7cf4bd",
-   "title": "Large language models as judges for clinical generative AI evaluation",
-   "link": "https://www.nature.com/articles/s41746-026-03248-3",
-   "source": "npj Digital Medicine · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-09-25T00:00:00+00:00",
-   "summary": "npj Digital Medicine, Published online: 25 September 2026; doi:10.1038/s41746-026-03248-3 Large language models as judges for clinical generative AI evaluation",
-   "thumb": ""
-  },
-  {
    "id": "d55cbe9ac3674b8a",
    "title": "The Energy Mess AI Is Creating — and How to Fix It | Ari Matusiak | TED",
    "link": "https://www.youtube.com/watch?v=270q4aF0qU8",
@@ -2676,7 +2689,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 8,
+   "count": 9,
    "fetched": 70
   },
   {
@@ -2689,7 +2702,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 81
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -2724,8 +2737,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2767,7 +2780,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "TED",
@@ -2777,9 +2790,9 @@
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2868,8 +2881,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2881,7 +2894,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 67
+   "fetched": 66
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2911,13 +2924,13 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "스테이지5",
-   "ok": true,
-   "count": 2,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "인공지능신문",
