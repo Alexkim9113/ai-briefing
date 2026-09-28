@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{NAME} | AI 브리핑</title>
+<meta name="description" content="{DESC}">
+<link rel="canonical" href="{URL}/">
+<meta property="og:type" content="website"><meta property="og:title" content="{NAME}"><meta property="og:description" content="{DESC}">
+<meta property="og:url" content="{URL}/"><meta property="og:image" content="{URL}/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12040a">{VERIFY}{ROBOTS}
+<link rel="icon" href="{FAVICON}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#12040a;color:#f6e9ee;overflow:hidden}
+body{font:16px/1.5 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+#bg{position:fixed;inset:0;background:radial-gradient(ellipse at 50% 45%,#4a1428 0%,#22070f 45%,#0d0307 100%)}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}#gl:active{cursor:grabbing}
+.ui{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(28px + env(safe-area-inset-top)) 40px calc(30px + env(safe-area-inset-bottom));pointer-events:none}
+.ui a,.ui button{pointer-events:auto}
+.top{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:800;letter-spacing:.32em;font-size:15px}
+.date{font-size:13px;opacity:.6;letter-spacing:.04em}
+.mid{text-align:center}
+.mid h1{margin:0;font-size:clamp(46px,9vw,120px);font-weight:800;letter-spacing:.14em;line-height:1;padding-left:.14em;
+ background:linear-gradient(180deg,#fff 20%,#e58fae 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px rgba(229,143,174,.25)}
+.mid p{text-shadow:0 1px 12px #12040a,0 0 4px #12040a;margin:18px 0 34px;font-size:clamp(14px,1.6vw,17px);opacity:.78}
+.enter{display:inline-flex;align-items:center;gap:12px;font:inherit;font-weight:700;font-size:16px;letter-spacing:.3em;padding:16px 30px 16px 38px;
+ border-radius:99px;border:1px solid rgba(246,233,238,.5);background:rgba(246,233,238,.06);color:#fff;cursor:pointer;backdrop-filter:blur(6px);
+ transition:background .25s,border-color .25s,transform .25s}
+.enter:hover,.enter:focus-visible{background:#e58fae;border-color:#e58fae;color:#22070f;transform:scale(1.04)}
+.enter svg{width:18px;height:18px}
+.cats{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.cats a{display:flex;flex-direction:column;align-items:center;min-width:128px;padding:12px 18px;border-radius:16px;border:1px solid rgba(246,233,238,.16);
+ background:rgba(18,4,10,.35);backdrop-filter:blur(8px);transition:border-color .25s,background .25s,transform .25s}
+.cats a:hover,.cats a:focus-visible{border-color:var(--c);background:rgba(18,4,10,.6);transform:translateY(-3px)}
+.cats b{font-size:15px;font-weight:600}.cats span{font-size:12px;opacity:.6;margin-top:2px}
+.cats i{width:6px;height:6px;border-radius:50%;background:var(--c);margin-bottom:8px;box-shadow:0 0 12px var(--c)}
+.hint{text-align:center;font-size:12px;opacity:.45;margin-top:14px;letter-spacing:.05em}
+.tick{overflow:hidden;white-space:nowrap;font-size:12.5px;opacity:.55;margin-top:16px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.tick div{display:inline-block;padding-left:100%;animation:tk 90s linear infinite}.tick span{margin-right:44px}.tick span::before{content:"● ";color:#e58fae}
+@keyframes tk{to{transform:translateX(-100%)}}@media (prefers-reduced-motion:reduce){.tick div{animation:none;padding-left:0}}
+.live{display:inline-flex;align-items:center;gap:7px}.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#ff5d8f;box-shadow:0 0 10px #ff5d8f;animation:pl 1.6s infinite}
+@keyframes pl{50%{opacity:.25}}
+.fade{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .7s ease}
+body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
+@media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}}
+@media (prefers-color-scheme:dark){.fade{background:#1a1215}}
+</style></head><body>
+<div id="bg"></div><canvas id="gl" aria-hidden="true"></canvas>
+<div class="ui">
+ <div class="top"><span class="brand">{NAME}</span><span class="date live">{DATE} · 오늘 {TOTAL}건 수집 중</span></div>
+ <div class="mid"><h1>{NAME}</h1><p>세상을 종(縱)과 횡(橫)으로 엮어, 데이터로 AI를 여러 관점에서 읽다</p>
+  <a class="enter" href="home.html" data-go>입장하기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+ <div><nav class="cats" aria-label="카테고리">{CATS}</nav><div class="tick" aria-hidden="true"><div>{TICK}</div></div><p class="hint">드래그해서 돌려 보세요</p></div>
+</div>
+<div class="fade"></div>
+<script type="module">
+const cv=document.getElementById('gl'),links=[...document.querySelectorAll('[data-go]')];
+function go(href){document.body.classList.add('go');window.__fly&&window.__fly();setTimeout(()=>location.href=href,750);}
+links.forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();go(a.getAttribute('href'));}));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+try{
+ const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+ const R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+ const S=new T.Scene(),C=new T.PerspectiveCamera(50,1,.1,100);C.position.z=7.2;
+ const G=new T.Group();S.add(G);
+ const mob=innerWidth<640,RAD=2.2,add=T.AdditiveBlending;
+ const dot=(()=>{const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);
+  gr.addColorStop(0,'rgba(255,255,255,1)');gr.addColorStop(.3,'rgba(255,255,255,.8)');gr.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=gr;g.fillRect(0,0,64,64);return new T.CanvasTexture(c);})();
+ const pmat=(size,color,op=1)=>new T.PointsMaterial({size,map:dot,transparent:true,opacity:op,depthWrite:false,blending:add,color});
+ // 종(經, 세로 경선)과 횡(緯, 가로 위선)으로 짠 세계
+ const MER=mob?18:24,PAR=mob?9:11,STEP=96,paths=[],seg=[],nodes=[];
+ const sph=(lat,lon)=>new T.Vector3(RAD*Math.cos(lat)*Math.cos(lon),RAD*Math.sin(lat),RAD*Math.cos(lat)*Math.sin(lon));
+ for(let m=0;m<MER;m++){const lon=m/MER*Math.PI*2,pts=[];for(let k=0;k<=STEP/2;k++)pts.push(sph(-Math.PI/2+k/(STEP/2)*Math.PI,lon));paths.push({pts,v:1});}
+ for(let q=1;q<=PAR;q++){const lat=-Math.PI/2+q/(PAR+1)*Math.PI,pts=[];for(let k=0;k<=STEP;k++)pts.push(sph(lat,k/STEP*Math.PI*2));paths.push({pts,v:0});}
+ paths.forEach(p=>{for(let k=0;k<p.pts.length-1;k++){const a=p.pts[k],b=p.pts[k+1];seg.push(a.x,a.y,a.z,b.x,b.y,b.z);}});
+ for(let m=0;m<MER;m++)for(let q=1;q<=PAR;q++){const v=sph(-Math.PI/2+q/(PAR+1)*Math.PI,m/MER*Math.PI*2);nodes.push(v.x,v.y,v.z);}
+ const lg=new T.BufferGeometry();lg.setAttribute('position',new T.Float32BufferAttribute(seg,3));
+ const lm=new T.LineBasicMaterial({color:0xe58fae,transparent:true,opacity:.28,blending:add,depthWrite:false});G.add(new T.LineSegments(lg,lm));
+ const ng=new T.BufferGeometry();ng.setAttribute('position',new T.Float32BufferAttribute(nodes,3));
+ const pm=pmat(.09,0xf2b8cc);G.add(new T.Points(ng,pm));
+ // 선을 따라 흐르는 데이터: 세로로 흐르는 신호와 가로로 흐르는 신호
+ const PN=mob?120:220,pp=new Float32Array(PN*3),pd=[];
+ for(let i=0;i<PN;i++)pd.push({p:Math.floor(Math.random()*paths.length),t:Math.random(),v:(.0015+Math.random()*.004)*(Math.random()<.5?1:-1)});
+ const pgeo=new T.BufferGeometry();pgeo.setAttribute('position',new T.BufferAttribute(pp,3));
+ const pulse=new T.Points(pgeo,pmat(.15,0xffffff));G.add(pulse);
+ // 세상을 꿰뚫는 두 축(세로축·가로축)
+ const beam=(w,h)=>{const m=new T.Mesh(new T.PlaneGeometry(w,h),new T.MeshBasicMaterial({color:0xe58fae,transparent:true,opacity:.35,blending:add,depthWrite:false}));S.add(m);return m;};
+ const vAxis=beam(.012,40),hAxis=beam(60,.012);
+ // 여러 관점: 각기 다른 기울기로 도는 궤도
+ const rings=[];for(let i=0;i<4;i++){const m=new T.Mesh(new T.TorusGeometry(2.75+i*.38,.005,8,220),new T.MeshBasicMaterial({color:0xf6e9ee,transparent:true,opacity:.2-i*.035,blending:add,depthWrite:false}));
+  m.rotation.set(Math.PI/2+(i-1.5)*.5,i*.8,0);m.userData.s=(i%2?-1:1)*(.0015+i*.0006);rings.push(m);S.add(m);}
+ // 바깥에서 세계로 모여드는 정보(가로·세로 방향으로만 흘러 들어옴)
+ const FN=mob?240:480,fp=new Float32Array(FN*3),fd=[];
+ const reset=d=>{d.ax=Math.random()<.5;d.o=(Math.random()-.5)*2*RAD*1.1;d.z=(Math.random()-.5)*2;d.pos=(Math.random()<.5?-1:1)*(7+Math.random()*7);d.v=.03+Math.random()*.06;};
+ for(let i=0;i<FN;i++){const d={};reset(d);d.pos*=Math.random();fd.push(d);}
+ const fgeo=new T.BufferGeometry();fgeo.setAttribute('position',new T.BufferAttribute(fp,3));
+ const flow=new T.Points(fgeo,pmat(.05,0xf2b8cc,.8));S.add(flow);
+ const DN=400,dp=new Float32Array(DN*3);for(let i=0;i<DN*3;i++)dp[i]=(Math.random()-.5)*24;
+ const dg=new T.BufferGeometry();dg.setAttribute('position',new T.BufferAttribute(dp,3));const dust=new T.Points(dg,pmat(.03,0xffffff,.45));S.add(dust);
+ // 카테고리마다 다른 관점(각도)에서 세계를 본다
+ const VIEWS=[[.35,0],[.1,1.2],[-.5,2.4],[.9,3.3],[-.2,4.5],[.5,5.5]];
+ let tx=0,ty=0,rx=.35,ry=0,vy=reduce?0:.0012,drag=null,zoom=7.2,tz=7.2,fly=false,hold=false;const tc=new T.Color(0xe58fae),cc=new T.Color(0xe58fae);
+ addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5);
+  if(drag){ry+=(e.clientX-drag.x)*.006;rx+=(e.clientY-drag.y)*.004;rx=Math.max(-1.3,Math.min(1.3,rx));vy=(e.clientX-drag.x)*.0008;drag={x:e.clientX,y:e.clientY};}});
+ cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};cv.setPointerCapture(e.pointerId);});
+ addEventListener('pointerup',()=>{drag=null;});
+ cv.addEventListener('wheel',e=>{tz=Math.max(5,Math.min(10,tz+e.deltaY*.004));},{passive:true});
+ document.querySelectorAll('.cats a').forEach((a,i)=>{const c=a.style.getPropertyValue('--c')||'#e58fae';
+  a.addEventListener('pointerenter',()=>{tc.set(c.trim());tz=6.4;hold=true;rx=VIEWS[i+1][0];ry=Math.round(ry/6.283)*6.283+VIEWS[i+1][1];});
+  a.addEventListener('pointerleave',()=>{tc.set(0xe58fae);tz=7.2;hold=false;});});
+ window.__fly=()=>{fly=true;tz=.4;vy=.03;hold=false;};
+ function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();G.scale.setScalar(Math.min(1,Math.tan(.436)*7.2*(w/h)*.88/RAD));}
+ size();addEventListener('resize',size);
+ const clock=new T.Clock(),white=new T.Color(0xffffff),tmp=new T.Vector3();
+ (function loop(){const t=clock.getElapsedTime();
+  if(!drag&&!hold){ry+=vy;vy+=((reduce?0:.0012)-vy)*.02;}
+  G.rotation.y+=(ry+tx*.4-G.rotation.y)*.05;G.rotation.x+=(rx*.6+ty*.3-G.rotation.x)*.05;
+  rings.forEach(r=>{r.rotation.z+=r.userData.s;});dust.rotation.y=t*.008;
+  cc.lerp(tc,.06);lm.color.copy(cc);pm.color.copy(cc).lerp(white,.5);pulse.material.color.copy(cc).lerp(white,.75);flow.material.color.copy(cc).lerp(white,.35);
+  vAxis.material.color.copy(cc);hAxis.material.color.copy(cc);const ap=.22+Math.sin(t*1.4)*.1;vAxis.material.opacity=ap;hAxis.material.opacity=ap;
+  lm.opacity=.22+Math.sin(t*1.1)*.06;
+  for(let i=0;i<PN;i++){const d=pd[i],P=paths[d.p].pts;d.t+=d.v*(fly?5:1);if(d.t>1||d.t<0){d.p=Math.floor(Math.random()*paths.length);d.t=d.v>0?0:1;}
+   const f=d.t*(P.length-1),k=Math.min(P.length-2,Math.floor(f));tmp.copy(P[k]).lerp(P[k+1],f-k);pp[i*3]=tmp.x;pp[i*3+1]=tmp.y;pp[i*3+2]=tmp.z;}
+  pgeo.attributes.position.needsUpdate=true;
+  for(let i=0;i<FN;i++){const d=fd[i];const sg=Math.sign(d.pos);d.pos-=sg*d.v*(fly?3:1);if(Math.abs(d.pos)<RAD*.2||Math.sign(d.pos)!==sg)reset(d);
+   if(d.ax){fp[i*3]=d.pos;fp[i*3+1]=d.o;}else{fp[i*3]=d.o;fp[i*3+1]=d.pos;}fp[i*3+2]=d.z;}
+  fgeo.attributes.position.needsUpdate=true;
+  zoom+=(tz-zoom)*.05;C.position.z=zoom;C.position.x+=(tx*.6-C.position.x)*.05;C.position.y+=(-ty*.4-C.position.y)*.05;C.lookAt(0,0,0);
+  R.render(S,C);requestAnimationFrame(loop);})();
+}catch(e){cv.remove();}
+</script></body></html>

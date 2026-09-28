@@ -15,7 +15,7 @@ on:
         default: ""
   push:
     branches: [main]
-    paths: ["briefing.py", "sources.json", "static/**", "posts/**", ".github/workflows/daily.yml"]
+    paths: ["briefing.py", "intro.html", "sources.json", "static/**", "posts/**", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write

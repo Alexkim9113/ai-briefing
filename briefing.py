@@ -1494,6 +1494,32 @@ def write_feed(latest, sc):
     (SITE_DIR / "feed.xml").write_text(xml, encoding="utf-8")
 
 
+DEFAULT_TINT = "#e58fae"
+INTRO_COLORS = {"news_ko": "#ff7aa8", "news_global": "#8fb8ff", "papers": "#b99bff", "policy": "#ffc36b", "talks": "#6fe0c2"}
+
+
+def render_intro(latest, cats, sc, enter="home.html", preview=False):
+    """사이트 앞에 두는 3D 입장 페이지(intro.html 템플릿). 오늘 모인 글 수와 제목 몇 개를 띄운다."""
+    items = latest["items"]
+    count = {c: sum(1 for it in items if it["category"] == c) for c in cats}
+    links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b><span>오늘 {count[c]}건</span></a>'
+                    for c, n in cats.items())
+    heads = sorted(items, key=lambda x: x.get("published") or "", reverse=True)[:14]
+    tick = "".join(f"<span>{esc(it.get('title_ko') or it['title'])}</span>" for it in heads)
+    d = datetime.fromisoformat(latest["date"])
+    verify = ""
+    if sc["google"]:
+        verify += f'<meta name="google-site-verification" content="{esc(sc["google"])}">'
+    if sc["naver"]:
+        verify += f'<meta name="naver-site-verification" content="{esc(sc["naver"])}">'
+    page_ = (ROOT / "intro.html").read_text(encoding="utf-8")
+    for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{VERIFY}": verify,
+                 "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else "", "{FAVICON}": FAVICON,
+                 "{DATE}": f"{d.month}월 {d.day}일", "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
+        page_ = page_.replace(k, v)
+    return page_.replace('href="home.html"', f'href="{enter}"')
+
+
 def build(keep_days=None):
     cfg = load_config()
     cats = cfg["categories"]
@@ -1515,6 +1541,8 @@ def build(keep_days=None):
                 every[it["category"]].append(it)
     posts = load_posts()
     (SITE_DIR / "index.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
+    # 입장 페이지 미리보기(운영자 확인용). 확정되면 index.html 로 옮긴다.
+    (SITE_DIR / "intro.html").write_text(render_intro(latest, cats, sc, enter="index.html", preview=True), encoding="utf-8")
     paths = []
     for c, name in cats.items():
         items = sorted(every[c], key=lambda x: x.get("published") or "", reverse=True)
