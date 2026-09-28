@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:44+09:00",
+ "generated_at": "2026-09-28T12:45+09:00",
  "items": [
   {
    "id": "c54492f4dae2d495",
@@ -2560,7 +2560,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 79
+   "fetched": 76
   },
   {
    "name": "Google News: AI 기업",
@@ -2595,20 +2595,20 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2776,7 +2776,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 51
+   "fetched": 49
   },
   {
    "name": "스테이지5",
