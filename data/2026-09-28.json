@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:58+09:00",
+ "generated_at": "2026-09-28T21:06+09:00",
  "items": [
+  {
+   "id": "0bd0bb6d9469f3d9",
+   "title": "“신앙 있지만 교회는 안 나가요”…발길 끊는 신자들…개신교 ‘고민’",
+   "link": "https://www.khan.co.kr/article/202609282059005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T20:59:00+09:00",
+   "summary": "목회데이터연구소 설문조사예배 참석자 수 줄고 직분 기피외부 설교 듣고 AI 활용도 늘어지용근 목회데이터연구소 대표가 28일 서울 중구 서울YWCA 대강당에서 주요 내용을 소개하고 있다.",
+   "thumb": ""
+  },
   {
    "id": "8345a2704767261f",
    "title": "국채 vs 빅테크 회사채…AI 붐, 채권시장 구조까지 바꾼다",
@@ -942,6 +953,37 @@
    "thumb": ""
   },
   {
+   "id": "bc8cb8c023f350b7",
+   "title": "Autoheal raises $7.9M to evaluate and fix AI agents with… AI agents",
+   "link": "https://siliconangle.com/2026/09/28/autoheal-raises-7-9m-to-evaluate-and-fix-ai-agents-with-ai-agents/",
+   "source": "SiliconANGLE AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T12:00:16+00:00",
+   "summary": "Autoheal AI Inc., an artificial intelligence-native platform engineering startup that’s trying to pioneer the concept of “self-improving software factories,” said today it has…",
+   "detail": "Autoheal AI Inc., an artificial intelligence-native platform engineering startup that’s trying to pioneer the concept of “self-improving software factories,” said today it has raised $7.9 million in seed funding to make that happen.",
+   "thumb": "",
+   "title_ko": "Autoheal, AI 에이전트를 평가하고 수정하기 위해… AI 에이전트를 활용해 790만 달러 투자 유치",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "“자가 개선형 소프트웨어 팩토리”라는 개념을 선도하고자 하는 인공지능 네이티브 플랫폼 엔지니어링 스타트업인 Autoheal AI Inc.는 오늘 다음과 같이 밝혔습니다…",
+   "detail_ko": "“자가 개선형 소프트웨어 팩토리”라는 개념을 선도하고자 하는 인공지능 네이티브 플랫폼 엔지니어링 스타트업인 Autoheal AI Inc.는 오늘, 이를 실현하기 위해 790만 달러의 시드 펀딩을 유치했다고 밝혔다."
+  },
+  {
+   "id": "a118c3f0ef961232",
+   "title": "After months with Gemini, I found an Android AI tool that actually works the way I need it to",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb1JjMmhJZk02cFpGLXNENnlvZEFLY0dxaFV6d0RxcXhEOUxhZmxMUElOR0tDd0RpdzFMd25KSWhlai12bVZfWjlDYUlwUjBaYUY0SUJzcmZJeG4wM256V0hqTGh0U1o0Q0Y2elh6MWFtVHNxcTk1SXVmeG0tbkw2MmRRMXhTLTVFYVd3RTM3MFRqVnV2UUFDLWFLQXpSaWVtQUVCMW1iTGFFV2VIVjJBOWNoZEZCVWp6Rzln?oc=5",
+   "source": "Android Police",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T12:00:10+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "몇 달 동안 Gemini를 사용해 본 끝에, 제가 원하는 대로 실제로 작동하는 안드로이드 AI 도구를 찾았습니다",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "cc17b1da34acd061",
    "title": "“원자 하나에 거대한 ‘신경망’ 숨어있었다”…韓 연구진, 양자세계 비밀 규명",
    "link": "https://biz.heraldcorp.com/article/10886063",
@@ -951,6 +993,28 @@
    "published": "2026-09-28T12:00:00+09:00",
    "summary": "[헤럴드경제=구본혁 기자] 눈에 보이지 않는 원자와 빛의 세계 속에 인간의 뇌 신경망처럼 거대한 연결망이 숨어 있었다. 국내 연구진이 복잡하게 얽혀 있는 양자 상태를 마치 ‘지하철 노선도’처럼 한눈에 파악할 수 있는 새로운 방법을 찾아냈다.",
    "detail": "국내 연구진이 복잡하게 얽혀 있는 양자 상태를 마치 ‘지하철 노선도’처럼 한눈에 파악할 수 있는 새로운 방법을 찾아냈다.\n한국연구재단은 서울대 박남규·유선규 교수와 서울시립대 박현희 교수 연구팀이 원자와 빛의 복잡한 상호작용을 하나의 틀로 설명하는 ‘자기 그래프(magnetic graph)’ 이론을 개발했다고 28일 밝혔다.\n결합이 약할 때는 기존 계산법이 통하지만 ‘초강결합’, ‘심층강결합’으로 갈수록 근사법이 맞지 않는다.\n이 때문에 결합 세기에 따라 서로 다른 계산법을 사용해야 했다.\n연구팀은 ‘지하철 노선도’에서 해법을 찾았다.",
+   "thumb": ""
+  },
+  {
+   "id": "c6f0290502f08b10",
+   "title": "中.민간 AI기업과 반도체 전문가들 해외여행 제한",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0REdmN1NsS3FsbVVwWWRUdTVEa1h0YVI4NXhLUVUxZUtWcENpekt5TDZsTmVMT0laelF2NmU4dHU1VFVDMmdxYU05M3paSXFsamVSVlQ1SURfdw?oc=5",
+   "source": "한국경제",
+   "field": "가족·출산",
+   "category": "news_ko",
+   "published": "2026-09-28T11:55:46+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e5449a8431cd49c4",
+   "title": "경복대학교 영상미디어콘텐츠과, 뉴라이프그룹과 MOU 기반 AI 영상 연구과제 수행하고 논문 게재",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE51ZVpGenBFamdPbmZ3ZVljUmh0Vmt2MWlBUmEyUFNvOGl3bG9XdzlwekxlelpKV015S0JOMTVWLVk3X0lGd3Y3bXNUd29rSlNYRkxVM2UzMnVWM2FCV3hQQklQTjZ2Um85dzUw?oc=5",
+   "source": "CNB뉴스",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-09-28T11:54:14+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -1105,6 +1169,17 @@
    "title_ko": "할리우드, 인공지능 배우 도입에 반발",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "4686aa6aaf8a87a5",
+   "title": "\"나는 무슨 날씨야?\"…당신의 챗GPT는 당신을 얼마나 아나요",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZ21CMWhtd0V5Z2d3V1NiRVRkdk9rcmVsbko3Z2NybVk1RU9LVEFtQmRfTlFqcVk4NkFtMEJHWkw0OVlnM0dHa0tLX0txZEtOTlY1MDkwSzZQdXhlckJ0YzFRN2ZTczlLZ2c2T28xWWhGWWh6NUFXYldWaEs3YlUwTjZpWQ?oc=5",
+   "source": "조선일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T11:20:29+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "8014983b39946eda",
@@ -2616,6 +2691,17 @@
    }
   },
   {
+   "id": "88dc5aa0ffc0a038",
+   "title": "통신 3사, AI 사업 확대 발맞춰 개인정보 보호도 강화…사고 전 위험부터 막는다",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OTDY2UnlEdXRZdGlOTGpfREVJQ0tOU3JxNGdUUFdkMzNZMUg3aHZtZUYzT1kwQ1FQT2o2TjJMWExhQUVxU2NqQlFMYjU5ZG5SemxIeFNOMVB1d9IBWEFVX3lxTE1kVjBvNnFTNjc3Y0o3NmxVSVhPQUpjRlFobkdDd1ZLaG5sb2NtZ0pzc2pVbjU3NmpTVUc4a2JadFRyYl9TNDhiWTFoQmdjZC11TzRZUDlpQnk?oc=5",
+   "source": "아주경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:25:30+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "032039fd0df65be7",
    "title": "울산·전남광주, 자동차 공장 ‘AI 전환’ 손잡았다",
    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUXI3bzEzODhwV2Z5Y0hLRndrdm1mTEV0RTFiQ2s4Q3hZRmlmblB0T01pdEc3TkpXMlRXeGtINWxiVDl5QVBReFJDNWJaRVRMbE5CeE85Mm5IOHhzSTgxTFZmak5PY2dBTXZKS2lhYV9MUFJHQ21KcjJUTkNZRXk1cEJwUEJXZw?oc=5",
@@ -2858,6 +2944,28 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "99f1b78bfd0cfda4",
+   "title": "NIA·국방부, '장병e음' 10월 정식 서비스…AI 챗봇 탑재 - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WMEU3MlgxZkpNdUpEMUg2R3I2c3lKa0FTSjBReEV4Q3RnWFAzUEFsXzBoOHhoeW5uOUFqYzI5VnFweDVuVEYwc3l2VkRXd29yT0c0MlJWU3dabmNQZmJmaTJlUTNYTWthSU1GS9IBbEFVX3lxTE1WMEU3MlgxZkpNdUpEMUg2R3I2c3lKa0FTSjBReEV4Q3RnWFAzUEFsXzBoOHhoeW5uOUFqYzI5VnFweDVuVEYwc3l2VkRXd29yT0c0MlJWU3dabmNQZmJmaTJlUTNYTWthSU1GSw?oc=5",
+   "source": "머니투데이",
+   "field": "가족·출산",
+   "category": "news_ko",
+   "published": "2026-09-28T07:46:55+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "222c66d36dddb166",
+   "title": "일본 중고책 50t이 왜 미국으로?…헌책방 큰손 된 AI",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tVmRQU3NfMW9oTFg3ME8xZEFoc25oSE9GNldlcGUtLWhoY3hXdVBIMjRJOUt4dVoxd2tFSVd6NDNHbzNLME0zWmFzdzVHcXJSalNWcU1R?oc=5",
+   "source": "중앙일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:42:13+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "b4d86615b350d873",
@@ -3278,40 +3386,6 @@
    "thumb": ""
   },
   {
-   "id": "d0738e051d906c9d",
-   "title": "SK하이닉스, TSMC 기술 행사서 차세대 AI 메모리 공개",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5HMmRwTEY4c3NfV0xZbWRkZVFkeF9mV1BqNk5RcXN1VmpxejZFSlNiTlhQNzRQa3FwbHdkQ1BHa3VBY3dQRlJ3RjJlcEM5LU8zMWRSTi1haGVkYUxxblRmV3ZLRkJPWjA?oc=5",
-   "source": "연합뉴스TV",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:37:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 3
-  },
-  {
-   "id": "3a63fbbf1bf50f3f",
-   "title": "통신 3사 CEO, 개인정보 보호 직접 챙긴다…AI 신뢰 확보 나서",
-   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNc1luWk5MNHMzMmFGN3BTZ00zNzRjc2pTZ2lhV1d6cF95Zjd1THp4dGl1eDZEN3JpS09YeWZvcGdESEx1OEpja0F6NURBNzlQenl2SE1zWFRTR2kwUmlPSG0xbldXYXcyNmpVRzc5cGlMdFluc2dfb2pqX3BoNUdXUUZDWW1xQ0ZXeG1lWUxsWGhBaVh5MzVzWmFFWGYwVndLdUU2SlJxeHYzRURRdmh2WDJHSWdFVGJuZnFtYmpxMmluNDdQcTJWdEp1ZHBsUzBNLUdzNlktdkJrUHpFaWJ1RV9sdTZURExiUTRLT0Zn?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:30:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "31aee0c7ad844cd6",
-   "title": "[오늘 AI] 9.4조 'AI 국가' 예산 국회 심사대…10원 중 4원 꼴 GPU 확보에 투입",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5QnZzclVsZGtQQng5T0c5cmhHTXBNanp1RWFWMDRfTWRfY1dDNDRfVzJPYmo4Ykd5VnVJMF9RMW90Qm53bG10eXZIZl9wcU9RVFFGWEcyYjhoWjQzX3Jfag?oc=5",
-   "source": "메트로신문",
-   "field": "정치",
-   "category": "news_ko",
-   "published": "2026-09-28T06:22:21+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "e4781ecbb6f40965",
    "title": "군포시의회, ‘AI 혁신 연구회’ 연구용역 착수",
    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5jQ25pWEZJY2x0dlFQS2ZmcWZac3NOUG1DRHoxYXlHWjlSZHhsTV9yNGViY0p4RWwxRTNlZWh4ZE1uaHVLRnZVZUdTcXdQMmU5cmtiWkdWc1VFdWQ3TlRIcUpnQXZ3bzA10gFrQVVfeXFMTjVTMENCdlhwVW5MdXZBaURvNTBVX0FiTFhTeDc2RVp1dlVCa3hXY3M4VjJOaWE4Mi1JYmQydFpMZnYyLXFJZlNPcWFvOW01dzJzTTV4THYzOTBlMzdfdTZ4Z3V3SXltS0lpeDg?oc=5",
@@ -3345,17 +3419,6 @@
     ],
     "v": 1
    }
-  },
-  {
-   "id": "8affb0beaf8b07e5",
-   "title": "성균관 \"인의예지가 AI 시대 상생 길잡이\"…유교 AI 윤리선언",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE04cExxdGZoNmNiM0VFMDJGaTh6WE12X0d5WmozRzh4UFJVNHFRbUtiSjljTTBqM1I5ZFF5T3pJdWYyWW0tVzBGeHhBNlZuUWJKbjVuLWhpM1ZzTmPSAWBBVV95cUxNTFV1X2I1Z2RlT3k5Wk44YUhiUmZmQzJWM0RDaWVUeWQyYW8xOGlGSzFBcHhRRmlhb3BUNXYxWFdtcHpkNGFrNDc2UDNkNkZDRlhHb2FlRjFjbm41TlduMGk?oc=5",
-   "source": "연합뉴스",
-   "field": "철학·윤리",
-   "category": "news_ko",
-   "published": "2026-09-28T06:06:30+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "13b2ecb05be9b676",
@@ -6202,7 +6265,7 @@
   {
    "name": "Engadget",
    "ok": true,
-   "count": 4,
+   "count": 3,
    "fetched": 20
   },
   {
@@ -6226,7 +6289,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "fetched": 70
   },
   {
@@ -6298,8 +6361,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -6329,7 +6392,7 @@
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 58
+   "fetched": 59
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -6358,7 +6421,7 @@
   {
    "name": "SiliconANGLE AI",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "fetched": 30
   },
   {
@@ -6419,7 +6482,7 @@
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 70
+   "fetched": 68
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
@@ -6443,19 +6506,19 @@
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 41
+   "fetched": 44
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 62
+   "fetched": 63
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "VentureBeat AI",
@@ -6605,31 +6668,31 @@
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 31
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 26
+   "fetched": 27
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 34
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 50
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
@@ -6693,9 +6756,9 @@
   },
   {
    "name": "동아일보",
-   "ok": false,
-   "count": 0,
-   "error": "RemoteDisconnected: Remote end closed connection without response"
+   "ok": true,
+   "count": 4,
+   "fetched": 50
   },
   {
    "name": "로리더",
@@ -6797,7 +6860,7 @@
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 19
+   "fetched": 20
   },
   {
    "name": "주제: 경제 · 경제",
@@ -6809,7 +6872,7 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "주제: 동물 · 동물",
@@ -6821,13 +6884,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 43
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
@@ -6845,7 +6908,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -6857,7 +6920,7 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "주제: 정치 · 정치",
@@ -6875,7 +6938,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 45
   },
   {
    "name": "중앙일보",
@@ -6887,7 +6950,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 532
+   "fetched": 525
   },
   {
    "name": "프레시안",
