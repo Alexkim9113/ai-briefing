@@ -2,7 +2,7 @@
   "categories": {
     "news_ko": "국내 뉴스",
     "news_global": "해외 뉴스",
-    "papers": "논문",
+    "papers": "논문·연구",
     "policy": "정책·규제",
     "youtube": "유튜브"
   },
@@ -21,10 +21,19 @@
     {"name": "Google DeepMind", "category": "news_global", "url": "https://deepmind.google/blog/rss.xml"},
     {"name": "Hugging Face Blog", "category": "news_global", "url": "https://huggingface.co/blog/feed.xml"},
 
-    {"name": "Hugging Face 오늘의 논문", "category": "papers", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 15},
-    {"name": "arXiv cs.AI", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 10},
-    {"name": "arXiv cs.CL", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.CL", "limit": 8},
-    {"name": "arXiv cs.LG", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.LG", "limit": 8},
+    {"name": "Hugging Face 오늘의 논문", "category": "papers", "field": "AI 일반", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 10},
+    {"name": "arXiv cs.AI", "category": "papers", "field": "AI 일반", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 6},
+    {"name": "arXiv cs.CL", "category": "papers", "field": "언어·LLM", "url": "https://rss.arxiv.org/rss/cs.CL", "limit": 4},
+    {"name": "arXiv", "category": "papers", "field": "의료", "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22artificial+intelligence%22+OR+abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22+OR+abs%3A%22large+language+model%22%29+AND+%28abs%3Aclinical+OR+abs%3Amedical+OR+abs%3Apatient+OR+abs%3Ahealthcare%29&sortBy=submittedDate&sortOrder=descending&max_results=6", "limit": 6},
+    {"name": "Europe PMC", "category": "papers", "field": "의료", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE%3A%22artificial+intelligence%22+OR+TITLE%3A%22machine+learning%22+OR+TITLE%3A%22deep+learning%22+OR+TITLE%3A%22large+language+model%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=10&sort=P_PDATE_D+desc", "type": "europepmc", "limit": 6},
+    {"name": "arXiv", "category": "papers", "field": "법·윤리·정책", "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.CY+AND+%28abs%3Alaw+OR+abs%3Alegal+OR+abs%3Aregulation+OR+abs%3Agovernance+OR+abs%3Aethics%29&sortBy=submittedDate&sortOrder=descending&max_results=6", "limit": 6},
+    {"name": "arXiv", "category": "papers", "field": "에너지·환경", "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22artificial+intelligence%22+OR+abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22+OR+abs%3A%22large+language+model%22%29+AND+%28abs%3Aclimate+OR+abs%3Aenergy+OR+abs%3A%22power+grid%22+OR+abs%3Aenvironmental+OR+abs%3Acarbon%29&sortBy=submittedDate&sortOrder=descending&max_results=6", "limit": 6},
+    {"name": "arXiv", "category": "papers", "field": "문화·예술", "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22artificial+intelligence%22+OR+abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22+OR+abs%3A%22large+language+model%22%29+AND+%28abs%3Aart+OR+abs%3Amusic+OR+abs%3Aartist+OR+abs%3Acultural+OR+abs%3Acreativity%29&sortBy=submittedDate&sortOrder=descending&max_results=6", "limit": 6},
+    {"name": "arXiv", "category": "papers", "field": "교육", "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22artificial+intelligence%22+OR+abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22+OR+abs%3A%22large+language+model%22%29+AND+%28abs%3Aeducation+OR+abs%3Astudent+OR+abs%3Alearning+analytics%29&sortBy=submittedDate&sortOrder=descending&max_results=6", "limit": 4},
+    {"name": "Nature 머신러닝", "category": "papers", "field": "AI 일반", "url": "https://www.nature.com/subjects/machine-learning.rss", "limit": 5},
+    {"name": "MIT News", "category": "papers", "field": "MIT 연구", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "limit": 5},
+    {"name": "Stanford", "category": "papers", "field": "스탠퍼드 연구", "url": "https://news.google.com/rss/search?q=Stanford+%28AI+OR+%22artificial+intelligence%22%29+%28study+OR+research+OR+researchers%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen", "limit": 5},
+    {"name": "국내 대학·연구소", "category": "papers", "field": "국내 연구", "url": "https://news.google.com/rss/search?q=AI+%28%EC%97%B0%EA%B5%AC%ED%8C%80+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84%29+%28KAIST+OR+%EC%84%9C%EC%9A%B8%EB%8C%80+OR+%ED%8F%AC%EC%8A%A4%ED%85%8D+OR+%EC%97%B0%EC%84%B8%EB%8C%80+OR+%EA%B3%A0%EB%A0%A4%EB%8C%80+OR+ETRI%29+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako", "limit": 8},
 
     {"name": "구글뉴스: AI 정책", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(%EC%A0%95%EC%B1%85+OR+%EA%B7%9C%EC%A0%9C+OR+%EA%B8%B0%EB%B3%B8%EB%B2%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 12},
     {"name": "Google News: AI regulation", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},

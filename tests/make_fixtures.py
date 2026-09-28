@@ -41,6 +41,11 @@ for src in cfg["sources"]:
         rows = [{"publishedAt": now.isoformat(), "paper": {"id": f"2609.0{i}123", "title": f"Scaling Agents Paper {i}",
                  "summary": "We propose a method for training language agents. It outperforms baselines by a wide margin. More details follow.", "upvotes": i * 7}} for i in range(5)]
         (out / (name(url) + ".json")).write_text(json.dumps(rows))
+    elif src.get("type") == "europepmc":
+        rows = {"resultList": {"result": [{"pmid": f"4000{i}", "title": f"Deep learning for clinical triage {i}",
+                "abstractText": "We evaluate a machine learning model on hospital data. It improves triage accuracy.",
+                "firstPublicationDate": now.date().isoformat()} for i in range(4)]}}
+        (out / (name(url) + ".json")).write_text(json.dumps(rows))
     elif "youtube.com" in url:
         (out / (name(url) + ".xml")).write_text(atom(src))
     elif "msit" in url:

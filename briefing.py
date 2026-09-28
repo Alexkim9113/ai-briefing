@@ -17,6 +17,8 @@ import html
 import json
 import re
 import sys
+import threading
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -146,6 +148,20 @@ def parse_hf_papers(raw):
     return items
 
 
+def parse_europepmc(raw):
+    items = []
+    for r in json.loads(raw).get("resultList", {}).get("result", []):
+        if r.get("pmid"):
+            link = f"https://europepmc.org/article/MED/{r['pmid']}"
+        elif r.get("doi"):
+            link = f"https://doi.org/{r['doi']}"
+        else:
+            continue
+        items.append({"title": r.get("title", ""), "link": link, "desc": r.get("abstractText", ""),
+                      "date": r.get("firstPublicationDate", ""), "thumb": ""})
+    return items
+
+
 # ---------------------------------------------------------------- 요약
 
 _COMMENT = re.compile(r"<!--.*?(-->|$)", re.S)
@@ -223,9 +239,26 @@ def recent_ids(today, days=DEDUPE_DAYS):
     return seen
 
 
+_ARXIV_API_LOCK = threading.Lock()
+
+
+def label(src):
+    return f'{src["name"]} · {src["field"]}' if src.get("field") else src["name"]
+
+
 def collect_source(src, fixtures):
-    raw = fetch(src["url"], fixtures)
-    return parse_hf_papers(raw) if src.get("type") == "hf_papers" else parse_feed(raw)
+    if "export.arxiv.org/api" in src["url"] and not fixtures:
+        with _ARXIV_API_LOCK:  # arXiv API 이용 규칙: 요청 간 3초 간격
+            raw = fetch(src["url"], fixtures)
+            time.sleep(3)
+    else:
+        raw = fetch(src["url"], fixtures)
+    kind = src.get("type")
+    if kind == "hf_papers":
+        return parse_hf_papers(raw)
+    if kind == "europepmc":
+        return parse_europepmc(raw)
+    return parse_feed(raw)
 
 
 def collect(fixtures=None, now=None):
@@ -244,7 +277,7 @@ def collect(fixtures=None, now=None):
             try:
                 raw_items = fut.result()
             except Exception as e:  # 한 소스가 실패해도 나머지는 계속
-                status.append({"name": src["name"], "ok": False, "count": 0, "error": f"{type(e).__name__}: {e}"[:200]})
+                status.append({"name": label(src), "ok": False, "count": 0, "error": f"{type(e).__name__}: {e}"[:200]})
                 continue
             kept = []
             for it in raw_items:
@@ -262,14 +295,15 @@ def collect(fixtures=None, now=None):
                 if iid in seen:
                     continue
                 kept.append({
-                    "id": iid, "title": title, "link": it["link"], "source": src["name"],
+                    "id": iid, "title": title, "link": it["link"],
+                    "source": label(src), "field": src.get("field", ""),
                     "category": src["category"], "published": d.isoformat() if d else None,
                     "summary": summarize(it["desc"], title),
                     "thumb": "",  # 저작권 보호: 원본의 썸네일·사진은 수집하지 않는다(표지는 자체 제작 디자인)
                 })
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
                     break
-            status.append({"name": src["name"], "ok": True, "count": len(kept), "fetched": len(raw_items)})
+            status.append({"name": label(src), "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
 
     # 소스 간 중복 제거(같은 링크 또는 같은 제목)
@@ -468,7 +502,7 @@ def thumb_html(it, cats):
     img = (f'<img src="{esc(it["thumb"])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
            if it.get("thumb") else "")
     return (f'<a class="thumb" href="{esc(it["link"])}" target="_blank" rel="noopener" style="--g1:{g1};--g2:{g2}" tabindex="-1" aria-hidden="true">'
-            f'<div class="ph"><i>{esc(cats.get(it["category"], ""))}</i><b>{esc(re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
+            f'<div class="ph"><i>{esc(cats.get(it["category"], ""))}</i><b>{esc(it.get("field") or re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
             f'<span>{fmt_time(it.get("published"))}</span></div>{img}</a>')
 
 

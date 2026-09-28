@@ -22,6 +22,7 @@
 ```
 
 - `category`: `news_ko`, `news_global`, `papers`, `policy`, `youtube` 중 하나
+- `field`: 논문·연구 분야 표시(예: 의료, 법·윤리·정책, 에너지·환경, 문화·예술)
 - `limit`: 하루 최대 항목 수(기본 8)
 - `filter`: `true` 이면 AI 관련 단어(`ai_keywords`)가 들어간 글만 남깁니다
 - 유튜브 채널 추가: `https://www.youtube.com/feeds/videos.xml?channel_id=채널ID`
