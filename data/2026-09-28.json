@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:47+09:00",
+ "generated_at": "2026-09-28T09:50+09:00",
  "items": [
   {
    "id": "1d2fb5cd0f0af97c",
@@ -1044,15 +1044,15 @@
   },
   {
    "name": "Google DeepMind",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "ParseError: not well-formed (invalid token): line 1, column 0"
+   "fetched": 100
   },
   {
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 81
+   "fetched": 80
   },
   {
    "name": "Hugging Face Blog",
@@ -1142,7 +1142,7 @@
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 81
+   "fetched": 80
   },
   {
    "name": "구글뉴스: 인공지능",
