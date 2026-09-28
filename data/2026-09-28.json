@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:30+09:00",
+ "generated_at": "2026-09-28T20:33+09:00",
  "items": [
   {
    "id": "72b702204c5f16e0",
@@ -706,6 +706,20 @@
    }
   },
   {
+   "id": "be50ada9222b3181",
+   "title": "Hollywood pushing back against idea of artificial intelligence performers",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRUdaUUxnRHYxMjZqdzRxR1V0LTNZdGVucWlrYjFPUWFVM1RkZGxLUzAySlRqTVdUek9RMkZRMTdMTWVsRzJ1bjdhMHcxeDUzeGxodElFMnpkOXZEdWpORkktXzFaeHFCenZMdTQ2a0VyekJJT2FQWWVHV3hfWkZVaVJ2NE1ORWtRN1gxeHJBYlVqdUVyWmt4bGtkSDNMVzFHOFJUbWRPVDFaNzJXa0Nn?oc=5",
+   "source": "CBS News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T11:22:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "할리우드, 인공지능 배우 도입에 반발",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "8014983b39946eda",
    "title": "AI Threatens Democracy, but Not in the Way Experts Think",
    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOc0FFcndrSnRSUVVDV0hfbnNvN2VrU0tsei1DSnJuQUUzQlR4dVBBel9reGdPRVlvMloxVFJMR3hWS3NOckNma3F1RDNUSFFqYWtYUVp3LVhtQUtrWDR2X0tvZkduc2ZsTmsydG1Sa2k1b210dTN4M1FYTlZmWHJXS2tfRHlMSUxpYXZkX0ZZQlFrUGtYNXAya21OenF0bXM?oc=5",
@@ -1205,6 +1219,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "e2f0400b1131ca78",
+   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
+   "source": "디지털투데이",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:41:49+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "04cafbe5eaa3efa4",
@@ -2141,28 +2166,6 @@
      "생성형AI",
      "재난대응",
      "공공역량"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "8b3d2caad2e8114f",
-   "title": "전기안전공사,인공지능 시스템 개발…흩어진 재난정보 '한눈에'",
-   "link": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE5ucGVURDZ3Zjlpcl9BQW1nejRDcmtfcXpPcEQyQ2pvdkM0bFJDR3FMTEhIU3V6b0lmWWoxY0lIV00?oc=5",
-   "source": "전북금강일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:54:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "전기안전공사가 분산된 재난 정보를 한눈에 파악할 수 있는 인공지능 기반 시스템을 자체 개발했다. 데이터 통합을 통해 재난 예방과 대응 능력을 높인다는 목표이다.",
-    "p": "재난 관리 영역에서 파편화된 데이터의 통합이 AI를 통해 실현되고 있다. 공공기관의 자체 기술 개발은 안전 관리의 정확도와 대응 속도를 높이는 핵심 동력이 된다.",
-    "t": [
-     "전기안전공사",
-     "재난정보",
-     "AI시스템",
-     "공공안전"
     ],
     "v": 1
    }
@@ -4412,12 +4415,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 3,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -4430,7 +4433,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 100
+   "fetched": 99
   },
   {
    "name": "Google News: AI 기업",
@@ -4526,7 +4529,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "TED",
@@ -4688,7 +4691,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 84
+   "fetched": 81
   },
   {
    "name": "스테이지5",
