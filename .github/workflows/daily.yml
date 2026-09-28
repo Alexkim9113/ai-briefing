@@ -41,21 +41,6 @@ jobs:
           if [ "$PHOTOS" = "yes" ] || { [ "$(TZ=Asia/Seoul date +%H)" = "04" ] && [ "$(date +%M)" -lt 30 ]; }; then
             sudo apt-get install -y -qq tesseract-ocr >/dev/null; pip install -q pillow && python briefing.py photos || echo "사진 수집 실패(다음 날 다시 시도)"
           fi
-      - name: 운영자 글 열쇠 불러오기
-        uses: actions/cache/restore@v4
-        with:
-          path: .editor
-          key: editor-${{ github.run_id }}
-          restore-keys: editor-
-      - name: 운영자 글 받기(비밀번호 확인 후 게시)
-        run: |
-          pip install -q cryptography && python briefing.py inbox || echo "운영자 글 받기 실패(다음 실행에서 다시 시도)"
-      - name: 운영자 글 열쇠 보관
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: .editor
-          key: editor-${{ github.run_id }}
       - name: 수집 + 사이트 생성
         env:
           SINCE: ${{ inputs.since }}
@@ -65,7 +50,7 @@ jobs:
         run: |
           git config user.name "briefing-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data static/photos posts static/editor-key.json
+          git add data static/photos
           git diff --cached --quiet || git commit -m "브리핑 데이터 $(TZ=Asia/Seoul date +%F)"
           for i in 1 2 3; do
             git push && break
@@ -73,6 +58,8 @@ jobs:
           done
       - name: 사이트 게시(gh-pages 브랜치)
         run: |
+          git pull -q --rebase -X theirs origin main || true   # 그 사이 올라온 에디터 글까지 받아서
+          python briefing.py build                             # 다시 만든다(에디터 글이 사라지지 않게)
           cd site
           git init -q -b gh-pages
           git config user.name "briefing-bot"

@@ -1,0 +1,63 @@
+name: 에디터 글 바로 게시
+
+# 운영자가 글쓰기 화면에서 보낸 글을 기다렸다가 받자마자(보통 1~2분) 사이트에 올린다.
+# 한 번 실행되면 35분 동안 15초마다 확인하고, 30분마다 다음 실행이 이어받는다(뉴스 수집은 daily.yml 이 따로 30분마다).
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editor
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 운영자 글 열쇠 불러오기
+        uses: actions/cache/restore@v4
+        with:
+          path: .editor
+          key: editor-${{ github.run_id }}
+          restore-keys: editor-
+      - name: 에디터 글 기다렸다가 바로 게시
+        run: |
+          pip install -q cryptography
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          end=$((SECONDS + 35 * 60))
+          while [ $SECONDS -lt $end ]; do
+            out=$(python briefing.py inbox 2>&1 || true)
+            echo "$out" | grep -v "새 글 없음" || true
+            if echo "$out" | grep -q "처리 완료"; then
+              git add posts static/editor-key.json
+              git diff --cached --quiet || git commit -q -m "에디터 글 $(TZ=Asia/Seoul date '+%F %H:%M')"
+              for i in 1 2 3 4; do
+                git pull -q --rebase -X theirs origin main && git push -q && break
+                sleep 3
+              done
+              python briefing.py build
+              rm -rf /tmp/pub && cp -r site /tmp/pub && cd /tmp/pub
+              git init -q -b gh-pages && git add -A && git -c user.name=briefing-bot -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -q -m "에디터 글 게시 $(TZ=Asia/Seoul date '+%F %H:%M')"
+              git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages && echo "[watch] 사이트에 올림"
+              cd "$GITHUB_WORKSPACE"
+            fi
+            sleep 15
+          done
+      - name: 운영자 글 열쇠 보관
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .editor
+          key: editor-${{ github.run_id }}

@@ -816,7 +816,8 @@ ul.st{columns:1}footer{margin-top:36px}}
 .credits li{margin-bottom:6px;font-size:14px}
 @media (max-width:960px){.egrid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.rows{grid-template-columns:1fr}
-.egrid{grid-template-columns:1fr;gap:18px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
+.egrid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:0 -16px 26px;padding:0 16px 6px;scrollbar-width:none}.egrid::-webkit-scrollbar{display:none}
+.egrid>*{flex:0 0 78%;scroll-snap-align:start}.egrid>*:only-child{flex-basis:100%}.egrid h3{font-size:17px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
 .elist .thumb .tag{display:none}.ph h1{font-size:23px}.post h1{font-size:25px;margin-top:26px}.post .body{font-size:17px}
 .pager a,.pager button{min-width:40px;height:40px}}
 """
@@ -904,7 +905,7 @@ async function send(op,data){
 async function loadStatus(){try{STATUS=await (await fetch('status.json?'+Date.now())).json();}catch(e){STATUS={};}}
 function showPending(){const done=Object.fromEntries((STATUS.results||[]).map(r=>[r.ref,r]));let pd=pending(),out=[];
  pd=pd.filter(x=>{const r=done[x.ref];if(r){out.push(`<li class="${r.ok?'':'bad'}">${r.ok?'✓':'✕'} ${esc(x.title||x.op)} · ${esc(r.msg)}</li>`);return false;}
-  if(Date.now()-x.at>86400000*2)return false;out.push(`<li>⏳ ${esc(x.title||x.op)} · 사이트에 올리는 중이에요 (최대 30분)</li>`);return true;});
+  if(Date.now()-x.at>86400000*2)return false;out.push(`<li>⏳ ${esc(x.title||x.op)} · 사이트에 올리는 중이에요 (보통 1~2분)</li>`);return true;});
  savePending(pd);$('#pend').innerHTML=out.join('');}
 async function start(){await loadStatus();PIN=null;try{PIN=sessionStorage.getItem('metaxis_pin');}catch(e){}
  if(!KEY){view('#v-lock');msg('#lock-msg','글쓰기 준비 중이에요. 30분 뒤 다시 열어 주세요.',1);return;}
@@ -915,7 +916,15 @@ $('#first-go').onclick=async()=>{const p1=$('#pin1').value,p2=$('#pin2').value;
  catch(e){msg('#first-msg',e.message,1);}};
 $('#pin').oninput=()=>{const p=$('#pin').value;if(!pinOk(p))return;PIN=p;$('#pin').value='';try{sessionStorage.setItem('metaxis_pin',PIN);}catch(e){}openList();};
 $('#logout').onclick=()=>{try{sessionStorage.removeItem('metaxis_pin');}catch(e){}PIN=null;view(STATUS.pin_set?'#v-lock':'#v-first');};
-async function openList(){view('#v-list');msg('#list-msg','');
+const CATN={news_ko:'국내 뉴스',news_global:'해외 뉴스',papers:'논문·연구',policy:'정책·규제',talks:'영상·강연'};
+async function loadStats(){const z=n=>String(n).padStart(2,'0'),k=new Date(Date.now()+9*3600e3),day=`${k.getUTCFullYear()}-${z(k.getUTCMonth()+1)}-${z(k.getUTCDate())}`;
+ let d=null;try{d=await (await fetch('../data/'+day+'.json?'+Date.now())).json();}catch(e){}
+ if(!d||!d.items){$('#stats').innerHTML='<p class="meta">오늘 수집 기록을 아직 못 불러왔어요.</p>';return;}
+ const c={};d.items.forEach(i=>c[i.category]=(c[i.category]||0)+1);const st=d.status||[],ok=st.filter(x=>x.ok).length;
+ $('#stats').innerHTML=`<p class="meta">${esc(d.date)} · 마지막 수집 ${esc((d.generated_at||'').slice(11,16))} · 오늘 총 <b>${d.items.length}</b>건 · 소스 ${ok}/${st.length}개 정상</p>
+ <table class="stab">${Object.entries(CATN).map(([k,n])=>`<tr><td>${n}</td><td>${c[k]||0}건</td></tr>`).join('')}</table>
+ <details><summary class="meta">소스별 보기</summary><ul class="slist">${st.map(x=>`<li class="${x.ok?'':'bad'}">${esc(x.name)} · ${x.ok?x.count+'건':'실패'}</li>`).join('')}</ul></details>`;}
+async function openList(){view('#v-list');msg('#list-msg','');loadStats();
  try{POSTS=await (await fetch('posts.json?'+Date.now())).json();}catch(e){POSTS=[];}
  showPending();renderList();
  const bad=(STATUS.results||[]).slice(-1)[0];if(bad&&!bad.ok&&/비밀번호/.test(bad.msg))msg('#list-msg','최근 요청이 비밀번호가 달라서 처리되지 않았어요. 다시 로그인해 주세요.',1);}
@@ -1019,12 +1028,12 @@ $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBod
  if(cur.cover&&!keep.includes(cur.cover.slice(4)))cur.cover=keep.length?'img/'+keep[0]:'';
  const post={id:cur.id,title,body,format:'html',cover:cur.cover,noCover:!cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
  $('#publish').disabled=true;msg('#edit-msg','보내는 중…');
- try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 30분 안에 사이트에 올라가요.');
+ try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 보통 1~2분 안에 사이트에 올라가요.');
   const i=POSTS.findIndex(p=>p.id===post.id);if(i<0)POSTS.unshift(post);cur=post;imgs={};
   setTimeout(()=>{openList();},1400);}
  catch(e){msg('#edit-msg',e.message,1);}finally{$('#publish').disabled=false;}};
 async function del(p){if(!confirm(`'${p.title}' 글을 삭제할까요?`))return;msg('#list-msg','보내는 중…');
- try{await send('delete',{id:p.id,title:p.title});msg('#list-msg','삭제 요청을 보냈어요. 30분 안에 사이트에서 사라져요.');showPending();}
+ try{await send('delete',{id:p.id,title:p.title});msg('#list-msg','삭제 요청을 보냈어요. 보통 1~2분 안에 사이트에서 사라져요.');showPending();}
  catch(e){msg('#list-msg',e.message,1);}}
 start();
 """
@@ -1079,11 +1088,11 @@ def connect_links(sc, base):
              ("Policy", f"{base}policy.html", False)]
     out = []
     for n, u, ext in links:
-        inner = f'{SOCIAL_ICONS[n]}<span>{n}</span>'
+        inner = SOCIAL_ICONS[n] if n == "X" else f'{SOCIAL_ICONS[n]}<span>{n}</span>'  # X는 로고만(글자 X와 겹쳐 두 번 보이지 않게)
         if u:
-            out.append(f'<a href="{esc(u)}"{" target=_blank rel=noopener" if ext else ""}>{inner}</a>')
+            out.append(f'<a href="{esc(u)}" aria-label="{n}"{" target=_blank rel=noopener" if ext else ""}>{inner}</a>')
         else:
-            out.append(f'<a aria-disabled="true" title="준비 중">{inner}</a>')
+            out.append(f'<a aria-disabled="true" aria-label="{n}" title="준비 중">{inner}</a>')
     return "".join(out)
 
 
@@ -1717,7 +1726,8 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <p><input id="pin" class="inp pin" inputmode="numeric" maxlength="4" type="password" autocomplete="off" placeholder="••••"></p>
 <p id="lock-msg" class="meta"></p></section>
 <section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
-<ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul></section>
+<ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul>
+<details class="stats"><summary>수집 현황 <span class="meta">관리자에게만 보여요</span></summary><div id="stats"></div></details></section>
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
 <div class="tools" id="tools"><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="undo" title="되돌리기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></button><button type="button" class="tb ic" data-c="redo" title="다시 하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg></button><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
 <div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
@@ -1759,7 +1769,10 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .pal{position:fixed;top:auto;left:16px;right:16px;bottom:90px;justify-content:center}.rich{min-height:45vh;font-size:17px;padding:14px}
 .thumbs img{width:calc((100vw - 90px)/3);height:auto;aspect-ratio:3/2}
 #v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
-#v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
+#v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.stats{margin:26px 0 0;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.stats summary{cursor:pointer;font-weight:700}
+.stab{border-collapse:collapse;margin:8px 0;font-size:15px}.stab td{padding:5px 18px 5px 0;border-bottom:1px solid var(--line)}.slist{columns:2;font-size:13px;color:var(--muted);padding-left:1.1em}.slist .bad{color:#e5484d}
+@media (max-width:600px){.slist{columns:1}}
+.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
 .plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
@@ -1786,12 +1799,12 @@ def render_home(data, cats, posts):
     if posts:
         parts.append('<div class="editor-h"><h2 class="serif">에디터 글</h2><a href="editor/">전체 보기 →</a></div>'
                      f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:3])}</div>')
-    info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · 총 {len(items)}건 · {esc(data["generated_at"][11:16])} 업데이트'
+    info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · {esc(data["generated_at"][11:16])} 업데이트'
     parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
                  + "".join(f'<button type="button" class="kwb" data-t="{esc("|".join(kw_terms(k)))}">#{esc(k)}</button>' for k in top_keywords(items))
                  + f'<span class="info">{info}</span></div>')
     tabs = ['<button class="on" data-cat="all" id="all">전체</button>']
-    tabs += [f'<button data-cat="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i class="cd"></i>{esc(n)} {len(by_cat.get(c, []))}</button>' for c, n in cats.items()]
+    tabs += [f'<button data-cat="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i class="cd"></i>{esc(n)}</button>' for c, n in cats.items()]
     parts.append('<div class="tabs">' + "".join(tabs) + "</div>")
     for c, name in cats.items():  # 나머지는 그림 없이 최신순 8개씩, 페이지를 넘겨 본다
         rows = sorted(by_cat.get(c, []), key=lambda x: x.get("published") or "", reverse=True)
@@ -1818,7 +1831,7 @@ def render_category(c, name, items, cats, sc):
     for pg in range(n):
         chunk = items[pg * PER_PAGE:(pg + 1) * PER_PAGE]
         rows = "".join(row_html(it, cats) for it in chunk) or '<p class="empty">아직 모인 글이 없어요.</p>'
-        body = (f'<div class="ph" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h1 class="serif">{esc(name)}</h1><span>지금까지 {len(items)}건 · {pg + 1}/{n}쪽</span></div>'
+        body = (f'<div class="ph" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h1 class="serif">{esc(name)}</h1><span>{pg + 1}/{n}쪽</span></div>'
                 f'<div class="rows">{rows}</div>{pager_html(pg, n, href)}')
         path = f"{c}/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"AI {name}{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
@@ -1826,7 +1839,7 @@ def render_category(c, name, items, cats, sc):
                "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": sc["name"], "url": sc["url"] + "/"},
                "mainEntity": {"@type": "ItemList", "itemListElement": [
                    {"@type": "ListItem", "position": k + 1, "url": it["link"], "name": it["title"]} for k, it in enumerate(chunk)]}}]
-        desc = f"{sc['name']}가 모은 AI {name} {len(items)}건을 최신순으로 봅니다." + (f" 최신: {chunk[0]['title']}" if chunk else "")
+        desc = f"{sc['name']}가 모은 AI {name} 소식을 최신순으로 봅니다." + (f" 최신: {chunk[0]['title']}" if chunk else "")
         (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, desc=desc[:155], jsonld=ld,
                                          active=c), encoding="utf-8")
         paths.append(path)
@@ -1840,7 +1853,7 @@ def day_title(date):
 
 def day_desc(data, cats):
     cnt = Counter(i["category"] for i in data["items"])
-    parts = ", ".join(f"{n} {cnt[c]}건" for c, n in cats.items() if cnt.get(c))
+    parts = ", ".join(n for c, n in cats.items() if cnt.get(c))
     hero, _ = pick_featured(data["items"])
     s = f'{day_title(data["date"])} AI 브리핑: {parts}.' + (f' 헤드라인: {hero["title"]}' if hero else "")
     return s[:155]
@@ -1948,8 +1961,6 @@ def build(keep_days=None):
         '<div class="post"><h1 class="serif">사진 출처</h1><p>기사 표지에 쓰는 사진은 모두 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. '
         '기사 원본의 사진은 사용하지 않습니다.</p><ul class="credits">' + credits + "</ul></div>",
         "", cats, search=False, path="credits.html"), encoding="utf-8")
-    st = latest.get("status", [])
-    lis = "".join(f'<li class="{"" if x["ok"] else "bad"}">{esc(x["name"])}: {str(x["count"]) + "건" if x["ok"] else "실패"}</li>' for x in st)
     contact = (f'<a class="more" href="mailto:{esc(sc["email"])}">{esc(sc["email"])}</a>' if sc.get("email")
                else "문의 창구는 곧 열립니다.")
     policy = f"""<div class="post"><h1 class="serif">정책</h1>
@@ -1961,9 +1972,9 @@ def build(keep_days=None):
 <h2 class="serif" style="font-size:21px;margin-top:30px">개인정보</h2>
 <p>이 사이트는 회원가입·댓글이 없고 방문자의 개인정보를 수집하지 않습니다.</p>
 <h2 class="serif" style="font-size:21px;margin-top:30px" id="contact">문의</h2><p>{contact}</p>
-<h2 class="serif" style="font-size:21px;margin-top:30px">수집 현황</h2>
-<p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))} · 소스 {sum(x["ok"] for x in st)}/{len(st)}개 정상 ·
-<a href="{sc["url"]}/feed.xml">RSS 구독</a></p><ul class="st meta" style="display:block">{lis}</ul></div>"""
+<h2 class="serif" style="font-size:21px;margin-top:30px">업데이트</h2>
+<p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))} ·
+<a href="{sc["url"]}/feed.xml">RSS 구독</a></p></div>"""
     (SITE_DIR / "policy.html").write_text(page(f"정책 | {sc['name']}", policy, "", cats, search=False, path="policy.html"), encoding="utf-8")
     paths.append("policy.html")
     (SITE_DIR / "404.html").write_text(page(
