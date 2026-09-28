@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:13+09:00",
+ "generated_at": "2026-09-28T14:14+09:00",
  "items": [
   {
    "id": "5a871f1b164a4c7d",
@@ -289,6 +289,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "AI 데이터센터 붐으로 인한 에너지 문제"
+  },
+  {
+   "id": "e694295856484860",
+   "title": "개인정보위, 인공지능 혁신을 이끌 글로벌 프라이버시 가드레일 설계",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBRT2FYNFN2SEVoSTZnbldzcFgtQm9BbjFRQktiUGxxWHhzdVViZ1I3QlVhOHpRSWdVQU9kak1CUXp3OFM5SXZzNEpYdTN5U0hIS1hBM0JocGFOOU9qbUN2a2ZCcmJ0Sl9INkZ3cw?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T03:39:43+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "45366ac4a4bbd075",
@@ -1123,17 +1134,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T00:30:02+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "c6377bc85331804d",
-   "title": "양산인공지능고, 첨단기술 대회 2관왕 쾌거",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1KLVZkMzJFMTMyRks4QWd4STRaazFNQ1dZenY4WUJ3Y3FyWjNpR3RWT19CMHM2ZXhPTW04S1Q0UnlMLTNya2k5ZkhPSHFGckZfd0xEb3ZjYUV4UmhoTzI3WUFZeUJvdUI3MjRHMzk5TQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:30:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2663,8 +2663,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2694,13 +2694,13 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "TED",
-   "ok": true,
-   "count": 1,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TED-Ed",
@@ -2800,9 +2800,9 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2826,7 +2826,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
