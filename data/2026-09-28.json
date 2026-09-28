@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T21:22+09:00",
+ "generated_at": "2026-09-28T21:30+09:00",
  "items": [
   {
    "id": "2dbe11e93125dc9b",
@@ -1266,6 +1266,20 @@
    }
   },
   {
+   "id": "983a4b9ea49e5fab",
+   "title": "How this company uses AI to recover millions in hidden music royalties",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbUdQTzQ2VjZVUTZOUzJrYjV0UHpvdWY1UlFuZVd6RU5jblEteVlTR1ZlZmYzQXgwdmlfdFB5N01CNEZiMTBwSEIxd1ZiNFROcEt4OUExRklkdmtid01JY3g2aGRSdXRpY0dKNEdaTS1VN3F5RkdBMTFJN0Q3VTFKWEVDYks0NEdReGdGQ2pCVE5Wd2Q0ZEF0MmNhVzZjUQ?oc=5",
+   "source": "WBTV",
+   "field": "철학·윤리·예술",
+   "category": "news_global",
+   "published": "2026-09-28T12:21:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "이 회사가 AI를 활용해 수백만 달러에 달하는 숨겨진 음악 로열티를 회수하는 방법",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "e68f0666edbc5c4d",
    "title": "Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going",
    "link": "https://the-decoder.com/every-ai-lab-thinks-its-the-responsible-one-and-safety-researcher-ryan-greenblatt-says-thats-what-keeps-the-arms-race-going/",
@@ -2507,6 +2521,30 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "8f3b1bb7b888b1cf",
+   "title": "영남이공대, 쿠팡과 손잡고 AI물류자동화과 신설",
+   "link": "https://www.fnnews.com/news/202609280934223588",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:53:29+09:00",
+   "summary": "【파이낸셜뉴스 대구=김장욱 기자】 영남이공대가 쿠팡풀필먼트서비스와 손잡고 미래 물류산업을 이끌 현장형 전문기술인재 양성에 나선다. 영남이공대가 인공지능(AI) 기반 물류산업과 물류센터 자동화 시장의 성장에 대응하기 위해 AI물류자동화과를 신설한다.",
+   "detail": "【파이낸셜뉴스 대구=김장욱 기자】 영남이공대가 쿠팡풀필먼트서비스와 손잡고 미래 물류산업을 이끌 현장형 전문기술인재 양성에 나선다.\n영남이공대가 인공지능(AI) 기반 물류산업과 물류센터 자동화 시장의 성장에 대응하기 위해 AI물류자동화과를 신설한다.\n자동화 물류 현장에서 요구하는 설비 운영, 점검, 유지보수, 예방보전, 고장진단 역량을 갖춘 AI 기반 설비운영·보전 전문인재 양성을 목표로 한다.",
+   "thumb": ""
+  },
+  {
+   "id": "d8a27dc34e885880",
+   "title": "\"자동결제 잡아낸다\"…'구독 경제' 위협하는 AI 뮤즈",
+   "link": "https://www.fnnews.com/news/202609280943023880",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:50:34+09:00",
+   "summary": "[파이낸셜뉴스]개인 비서 역할을 하는 인공지능(AI) 에이전트가 확산되면서 구독 경제 시장을 위협하고 있다. 개인용 AI 에이전트를 표방하며 이달 초 출시된 메타 뮤즈 이용자들 사이에서 잊고 있던 유료 구독 서비스를 찾아 해지하는 기능이 인기를 끌고 있다고 미 경제방송 CNBC가 27일(현지시간) 보도했다.",
+   "detail": "[파이낸셜뉴스]개인 비서 역할을 하는 인공지능(AI) 에이전트가 확산되면서 구독 경제 시장을 위협하고 있다.\n개인용 AI 에이전트를 표방하며 이달 초 출시된 메타 뮤즈 이용자들 사이에서 잊고 있던 유료 구독 서비스를 찾아 해지하는 기능이 인기를 끌고 있다고 미 경제방송 CNBC가 27일(현지시간) 보도했다.\n이와 같은 구독 관리 기능은 이전에도 있었지만, AI 에이전트는 이를 개인 비서 서비스에 접목해 보다 쉽게 불필요한 지출을 찾을 수 있게 해준다.",
+   "thumb": ""
   },
   {
    "id": "3156573dc3f4bd91",
@@ -4898,27 +4936,6 @@
    }
   },
   {
-   "id": "84e271ef862fb68c",
-   "title": "인텔리빅스, 제9보병사단과 AI 국방기술 실증 협력",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8tNEdRbUpTaHJJWDdZT1pFN3c1UmdfVG1adWVmck16czBIbGFzLXVtcl9LSmc2WTBpallEek16OEM4ZnhZVXI4MnpMTlJndw?oc=5",
-   "source": "전자신문",
-   "field": "국방·전쟁",
-   "category": "news_ko",
-   "published": "2026-09-28T07:09:56+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "인텔리빅스가 제9보병사단과 손잡고 AI 기반 국방 기술 실증을 위한 협력을 추진한다.",
-    "p": "보안·영상분석 AI 기술이 군사 작전 및 경계 시스템에 직접 적용되면서 국방 부문의 지능화 전환이 속도를 내고 있다.",
-    "t": [
-     "인텔리빅스",
-     "국방AI",
-     "스마트부대"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "4f8f3180c1f9d9fc",
    "title": "Nvidia’s 2026 Dividend Hike Puts Dividend Growth Stocks in the Spotlight",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPemtvQ1lGSGt3RmtjanlJeWVtTFU3ZWF1dV9kczZxc2tBS2dJSW40TFJPdUNXYXdHdEdJQXBFUVhKRExKVE52S3NvTl9VcGkteHlwRENoeGhZZTh0aXVYOGEzdU5SeEFndTc4dlRzYmpPc3NLbHRkRFlEazNUek85RTN2ODNlVV9NVUNqODZQaHVyWWdoRTFUMGVGQ2JoMnFESEEwLXVrWkVPZmxf?oc=5",
@@ -4959,48 +4976,6 @@
      "SESAI",
      "배터리",
      "규제완화"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "ee8462bcfff9bdc4",
-   "title": "의정부시 “AI를 활용해 환경·사회 문제 이렇게 해결해요”",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5PUTFjUmxxd3cwNXlRbURIanh3ZDhXZnl0VlF0UVNWOGdiU05VZ3NmZFdrMm9Sa0hKQmRwSFc3eUN1b2F0ZEQ5MHlnb0tsRmd1aElKNE9OQ0ZlT2kxZXlaeGZTV01QUk1HTUN0YVZB?oc=5",
-   "source": "아시아투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:00:10+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "의정부시가 인공지능을 활용해 지역 내 다양한 환경 및 사회 문제를 해결하는 방안을 제시했다.",
-    "p": "지자체 차원에서 행정 현안 해결을 위해 AI 기술을 실무에 적극 도입하려는 구체적 행보를 보여준다.",
-    "t": [
-     "의정부시",
-     "지자체",
-     "AI행정"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "c31a63032ab2f16d",
-   "title": "신성이엔지, ‘데이터센터 월드 아시아’ 참가…AI 데이터센터 냉각 플랫폼 선봬",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9XNWZBMEhTOXF6ZVZ2RjV3MjZYOXJ4VFJtelVGS2IycEJrUmtHMVV6MzAzUC0xYlNHNU9qR2twVnpQNkJNRm9JaXJfMWFkdFl2?oc=5",
-   "source": "문화일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:55:02+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "신성이엔지가 '데이터센터 월드 아시아'에 참가해 AI 데이터센터를 위한 특화 냉각 플랫폼을 공개했다.",
-    "p": "고성능 AI 연산으로 급증하는 데이터센터의 발열 문제를 해결하기 위한 고효율 냉각 기술 경쟁이 본격화되고 있다.",
-    "t": [
-     "신성이엔지",
-     "데이터센터",
-     "액냉"
     ],
     "v": 1
    }
@@ -7864,6 +7839,20 @@
    }
   },
   {
+   "id": "6daaf5280d745f3b",
+   "title": "Will artificial intelligence really kill us all?",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYnNRUHNqeU5NNTVIVVhEd3F1QnY1d3JlYVZaUUJPejViZ0ZuU2c5dkNFS0F2M2x0Y1dDYUFaU3hXV2NkMk5scksteWRROHNMQjV5UEU4cnQzSU5BWW5uNHIzX1Q4TmhjWFRBVFNlYlUzLUhRVmt3RjdNT3psaUREdzRUNA?oc=5",
+   "source": "CBS News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T13:48:22+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "인공지능이 정말 우리 모두를 죽일까요?",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "c0191b48b3163970",
    "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
    "link": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
@@ -9470,12 +9459,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 3,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -9535,8 +9524,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -9547,8 +9536,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -9572,25 +9561,25 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 57
+   "fetched": 56
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 57
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 60
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
@@ -9620,7 +9609,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "TED",
@@ -9668,31 +9657,31 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 78
+   "fetched": 74
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 70
+   "fetched": 72
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 75
   },
   {
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 60
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 37
+   "fetched": 35
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -9704,13 +9693,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 61
+   "fetched": 59
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 54
   },
   {
    "name": "VentureBeat AI",
@@ -9860,7 +9849,7 @@
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 30
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
@@ -9872,25 +9861,25 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 49
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 34
+   "fetched": 36
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 50
+   "fetched": 51
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 36
   },
   {
    "name": "국민일보",
@@ -10004,7 +9993,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "아주경제",
@@ -10088,13 +10077,13 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 66
+   "fetched": 67
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -10112,13 +10101,13 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 26
+   "fetched": 27
   },
   {
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "주제: 정치 · 정치",
@@ -10136,7 +10125,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 49
   },
   {
    "name": "중앙일보",
@@ -10148,7 +10137,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 504
+   "fetched": 490
   },
   {
    "name": "프레시안",
