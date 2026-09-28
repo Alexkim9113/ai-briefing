@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:26+09:00",
+ "generated_at": "2026-09-28T09:47+09:00",
  "items": [
   {
    "id": "1d2fb5cd0f0af97c",
@@ -10,7 +10,7 @@
    "category": "news_ko",
    "published": "2026-09-28T09:23:03+00:00",
    "summary": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈…",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42080_63278_2023_v150.jpg"
   },
   {
    "id": "b52edd2929027dc9",
@@ -20,7 +20,7 @@
    "category": "news_ko",
    "published": "2026-09-28T08:58:15+00:00",
    "summary": "생성형 인공지능(AI) 스타트업 스캐터랩(대표 김종윤, 박세웅)이 인공지능(AI) 인터랙티브 엔터테인먼트 플랫폼 ‘제타(zeta)’에 새로운 플레이 모드인 ‘비주얼 노벨 모드’를 28일 공식 출시했다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42078_63276_5535_v150.jpg"
   },
   {
    "id": "151a78eca528c211",
@@ -30,7 +30,7 @@
    "category": "news_ko",
    "published": "2026-09-28T08:34:35+00:00",
    "summary": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서…",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42077_63275_3354_v150.jpg"
   },
   {
    "id": "d9a22b8bd7238a45",
@@ -40,7 +40,7 @@
    "category": "news_ko",
    "published": "2026-09-28T07:22:59+00:00",
    "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42075_63274_5547_v150.jpg"
   },
   {
    "id": "2da95cc9c3be10c1",
@@ -50,6 +50,86 @@
    "category": "news_ko",
    "published": "2026-09-28T06:15:40+00:00",
    "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215694_219639_1358.png"
+  },
+  {
+   "id": "415817c3f2e5b53d",
+   "title": "Anthropic CEO Dario Amodei to Meet With Trump After Calling for AI Regulations",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdy1nSHRubUxqSW5jVFMyUDhGUXhtdVQtWlJ6LUpWdmVmdlI5Y2t1d0lwZDI3cV9vcEFDT2IxUHR3VXp5T2J4a0JSN2ZRWVBhRG8zUG5DeHh2VFpOVEtxUzRlbk44cFdTdldmYjFqS2pwRFhTNS1vbHFjbmtzUU5iT21DY0ZXWXBWbDl5Nmc3Um0tbzFTREQ4?oc=5",
+   "source": "Google News: AI regulation",
+   "category": "policy",
+   "published": "2026-09-28T00:41:39+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "bc7e9eb08236e472",
+   "title": "한국 생성형 AI 사용 비중 40.6%",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81WTJsS2IwSE1mUjdMTFZLcml3ejBFSzJRUGFvUUN1c05BWkMweWZwb281Vlo4ZzcxTEJtV2N0dnFQQV9DdUpLZXA3SzJPZGlYd3dSQndIU09QTEpUQjByYVNTaGYtdDhBbVE?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:40:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "24a85a9aefb62d4c",
+   "title": "아이스크림미디어, IPTP 지역회의서 AI 교육협력 방향 제시",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnbk8xV3RnQzB6V0RuZGRRMm1pQ19fRzV2bUhqZUNHenhqcFk4UnVKVlVqVkJSeUx0ZW1vZlp0Yy1fWUV1aWVYenYycU0yUm8?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-28T00:38:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "f2fad751cf58bb4d",
+   "title": "메가존클라우드, Portal26과 생성형 AI 거버넌스·보안 맞손",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBuZ0tDdU1iSkd1dWdfMDVDRmxFNzktX0hheWdmOG5iNnZIc1V0S0w0cFVVeEpJU1ZydU5YM1NHZktQNGQxSGVqd1FLaHR6UXQ3cURIaEl2Y2VfZFBIUVdKUFIzeUQ?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:32:21+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2c52aa05458628b0",
+   "title": "초지능보다 먼저 온 보안 사고…인간은 AI를 감독할 수 있나 [AI노스트라다무스⑪]",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBvWEFPM2lJTnI3WWdhR3BETjFjdWVVbE52TTRhQk9TckM0ZnJ4ZkNKNHp5bGNKd0NkU3FOSXIycXlRMlBGSFd4OVJhMEM4ekJzcU80SE1hWG02QQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-28T00:30:02+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "c6377bc85331804d",
+   "title": "양산인공지능고, 첨단기술 대회 2관왕 쾌거",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1KLVZkMzJFMTMyRks4QWd4STRaazFNQ1dZenY4WUJ3Y3FyWjNpR3RWT19CMHM2ZXhPTW04S1Q0UnlMLTNya2k5ZkhPSHFGckZfd0xEb3ZjYUV4UmhoTzI3WUFZeUJvdUI3MjRHMzk5TQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-28T00:30:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "53a8b4e2f617b91e",
+   "title": "충남도, 생성형 AI로 농업 업무지원 시스템 자체 개발",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jWDRwQUd3TG5DRFp1TjZITkJyQ2JrSDFPbVczX3V2UnNqY0txdmtMNFBmYlhLeGY4X2FmV2NROFB2cmszeHk1SnlUSG1jNTg?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:25:05+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4304e0d801103e76",
+   "title": "메가존클라우드, 생성형 AI 보안·비용 통합관리 사업 강화",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94amJfRDBBVE9lQnM4cXJXMEx4QzlWVGFyYU5HRHpJZTdCVVpnT0hOOFIzUkZCenRKSEctNnV6XzNQaWtoODBJMGZJTktLaE9RTDZ5NmcyT3Zuek11UWJv?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:24:41+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -83,20 +163,10 @@
    "thumb": ""
   },
   {
-   "id": "6bf519d1e9c79a0c",
-   "title": "한국 생성형 AI 사용률 40.6%…세계 12위로 네 계단 상승",
-   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPNWRJQldQNTVaYTBLSldqcG8wWmVveTdubHZmMmRiZUs2TUg3VmZxZ0x1VGFiVGRYaFZTUGJndnpLandnMDB1U0l4Y0hqeFlwbFAtYnlNZkRfMF94QjJ0V2dZSW1rZ0dtN3FmQUh4ZUdBcmhqVUJQcXZOaVV4YWp4VkQ4NnNnczctaXNjYXd5NkJ1OHZkcmRVMTZWYmVtdnZsWDBYbDQ5N216ODE0VWxhY0E2ZkRYRXEzeFFkOGNkYklvb0RldUhWRTZoYmJ1THg0ZUhnMGROTUpVbVYzTXI1Vk44eUI2N05OY0RlSFBrcENQcHdNbmdsSEI3TXJJVkh2WFF3YmRFTVl0aXRhcEpRNE1jTkRhb21DUmp5OEZ3MnM?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-28T00:12:38+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "0602177b9228005a",
    "title": "울산소방본부 “인공지능(AI)으로 혁신하고, 데이터로 대응한다”",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5POENmZGdmNXMyMEotTGMwOThERm9pLTk2d0M5YWNEVVpvNTNRcWxrOThIbDUtYVFhYlRybGZGVndjTzZxdTNJOEd6TnBNSmxPMV9zczgzcndOYnFxeTJqNFFTV1RHQkpmOWc?oc=5",
-   "source": "구글뉴스: 생성형 AI",
+   "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-28T00:10:18+00:00",
    "summary": "",
@@ -144,7 +214,7 @@
   },
   {
    "id": "c1e3c7d0c9c4c9d9",
-   "title": "More AI regulation ordered by Oregon governor - The Spokesman-Review",
+   "title": "More AI regulation ordered by Oregon governor",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNEZ3UEdJYUpyd2RyWkxDczBsekdnWHpNX2JwY1cwOWpzek1zdVJzX0sxVDhROXhqQU9ETXVCMzVCNEp3c2V5Q2FmT0Fub1NKV0E2QXpWTjE0UlI5ZFl5ZXVKM0w3YWxYUTZhTF9iNkV6YkMydzFTNkU3d1JtcFVESktaM19Ocno0b054QUw4RGFPd3JfNnc4?oc=5",
    "source": "Google News: AI regulation",
    "category": "policy",
@@ -176,7 +246,7 @@
    "id": "788549971de6d7be",
    "title": "충남도, 생성형 인공지능으로 농업 분야 업무 지원 시스템 개발·활용",
    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1SMTNidWRVSmhzQkNQRThZY1FXTlNjTkstbXc3VzJ3S3BKSlFZMk42MXFqUHVsNjRwQ1B5STdfZVlCVlNDaFdGSThLWjVWQy1kbjh2NWNmSXU0ODVqTlhjcE5nd09WQmdZTnVF?oc=5",
-   "source": "구글뉴스: 생성형 AI",
+   "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-27T23:36:44+00:00",
    "summary": "",
@@ -243,12 +313,12 @@
    "thumb": ""
   },
   {
-   "id": "417a7f0969dd191f",
+   "id": "b6c53925c5aa08b7",
    "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JVG9ZMWFEOVhaakd5QUZOY2JnYlpPZXczQXlta2Zwd29yUTlfdDJ1TU02OHdDOVdoejVFOWt6d0x6UGI1ZW50Q2RjdjlnSUE?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CSk9ZdGRuMHRYMHBJRV9Jank2ZEN3ZklaenZSM2t6VUtSalRtZkN3dE52RkI2NXNxZHM3UnJKdk9ZSEx0eUJobWdQek5nRkczZkp5Y1NQU2ZTbndkWGZuVmE3UkUyVU41OWZWV0J2NA?oc=5",
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
-   "published": "2026-09-27T23:06:51+00:00",
+   "published": "2026-09-27T23:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -273,26 +343,6 @@
    "thumb": ""
   },
   {
-   "id": "1e0055b0593bf80a",
-   "title": "AG hopefuls Savit, Lloyd spar over Line 5, AI regulation in first debate",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUHppRGtoVEFVSXFUNWwwLWpkQXZueGN6cnZuZDJySXhuVHNvaXBaWVBaLTVCT3d4N3ROS0V1OXQ4WHNJTTFFREJRRXZkMFpCcjEzUGFabklQSkI5QUxhQ05zZzU4VW5VQTZqV1JHTGQ1MnFiZXlqWUg3ZzZ0WWVDcFRBZ3FfSnB4dzhSOXNaVXRodw?oc=5",
-   "source": "Google News: AI regulation",
-   "category": "policy",
-   "published": "2026-09-27T22:38:52+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "239cce964dd9c83f",
-   "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T22:05:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "b91ae65d6d7d8b9d",
    "title": "\"트럼프, 앤트로픽 CEO와 단독 만찬\"...AI 규제갈등 해빙 신호? - 머니투데이",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fOU9xWlMwUlZjYWFubk5oU01nd05ESkNCNnkyT2VBTnktdFhHay1qMlI5b0syMEdnY2EtN2NEU2R0V2txa2h6Z0FCSHpFSUFDQUxPdVZkVktjNldyT19UU3kzS2ZuS2tWT25yUDlR0gFuQVVfeXFMTl85T3FaUzBSVmNhYW5uTmhTTWd3TkRKQ0I2eTJPZUFOeS10WEdrLWoyUjlvSzIwR2djYS03Y0RTZHRXa3FraHpnQUJIekVJQUNBTE91VmRWS2M2V3JPX1RTeTNLZm5La1ZPbnJQOVE?oc=5",
@@ -313,32 +363,12 @@
    "thumb": ""
   },
   {
-   "id": "e2f0400b1131ca78",
-   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T21:41:43+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "cd18f316871d4581",
    "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
    "source": "구글뉴스: 생성형 AI",
    "category": "news_ko",
    "published": "2026-09-27T21:36:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "0736d9eb6b9a4bcc",
-   "title": "경기도, ‘대한민국 AI 콘텐츠 어워즈’ 공모에 1,528편 접수. 20편 본선 진출",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1RjRqdFZXNzNqMFh1anlkTHdTT0lfTG1sTGRxVGk0ekJ1cno5UzUxQ1p0bUc3OHRfNl9QcmRfeEUxY2NkbWhBNHR1OVJ6Y3R5TnVmd1JuSWRQcGM2UFk0Z19IYzM?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T21:30:35+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -400,7 +430,7 @@
    "category": "news_global",
    "published": "2026-09-27T20:34:28+00:00",
    "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261854833.jpg?resize=1200,800"
   },
   {
    "id": "80032e73c06a7a2a",
@@ -410,7 +440,7 @@
    "category": "news_global",
    "published": "2026-09-27T19:57:30+00:00",
    "summary": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799"
   },
   {
    "id": "79b976d981ecb781",
@@ -458,7 +488,7 @@
    "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGt4ODEybmI5TUhiT2tIcF9PVmowT2Y4eElRU3gyaHZpaEN3am13dzJSUko3dy1KSlM4Y0pfRzliZHJBWEctY1g3bDNpU05rSEhjU3dHX05NY3h6T0dYVDRHQm03RHNFWXQ0MVdScGIwdENSNWI3VVRYU0o5WUswdllXTzdEeXU1eG9kWXozd3JHZGl4NTZzckZKdVpOcmQ3R2JNN0ljZFBiMG44c3pMRmYtZk9oUnlmSE5uVFZFbzJOTFd0WENWYnUzN0hXRDYzaU1v?oc=5",
    "source": "Google News: AI regulation",
    "category": "policy",
-   "published": "2026-09-27T17:55:06+00:00",
+   "published": "2026-09-27T17:41:11+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -470,7 +500,7 @@
    "category": "news_ko",
    "published": "2026-09-27T17:39:33+00:00",
    "summary": "오픈AI의 'GPT-6 아스트라'가 물리적·로보틱스 시뮬레이션 환경에서 치명적인 유해 명령을 거부하지 않고 수행한 연구 결과들이 잇달아 공개됐다. 오픈AI는 아스트라를 '가장 지능적이고 안전하게 정렬된 모델'로 소개했으나, 텍스트 통제와 실제 물리적 행위 사이의 격차가 드러난 것이다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215692_219633_3218.jpg"
   },
   {
    "id": "1cc465b637f708ac",
@@ -480,7 +510,7 @@
    "category": "news_ko",
    "published": "2026-09-27T17:03:18+00:00",
    "summary": "미국과 중국이 인공지능(AI)을 둘러싼 경쟁이 심화되는 가운데 고도화된 인공지능, 이른바 ‘슈퍼 인텔리전스(Super Intelligence, 초지능)’의 위험과 편익을 논의하기 위한 공식 대화 채널을 신설했다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42074_63273_247_v150.jpg"
   },
   {
    "id": "9c14e3f084274fca",
@@ -490,7 +520,7 @@
    "category": "news_global",
    "published": "2026-09-27T16:46:36-04:00",
    "summary": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.",
-   "thumb": ""
+   "thumb": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/Screenshot-2026-09-27-at-4.42.53-PM.png?quality=90&strip=all&crop=3.0945578231293%2C0%2C93.810884353741%2C100&w=1200"
   },
   {
    "id": "d79b1aaf39ee63ce",
@@ -510,7 +540,7 @@
    "category": "news_global",
    "published": "2026-09-27T16:30:00+00:00",
    "summary": "\"AI is the devil and I its maker.\"",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2026/09/saturday-night-live.jpg?resize=1200,603"
   },
   {
    "id": "7db1209d9ea695e2",
@@ -520,7 +550,7 @@
    "category": "news_ko",
    "published": "2026-09-27T16:23:59+00:00",
    "summary": "오픈AI가 월 500달러(약 68만원)에 달하는 최상위 요금제 ‘챗GPT 프로 맥스(ChatGPT Pro Max)’를 준비하고 있다는 정황이 포착됐다. AIPRM의 리드 엔지니어 티보르 블라호는 24일(현지시간) 챗GPT의 비공개 프런트엔드 설정에서 프로 맥스의 흔적을 발견했다고 밝혔다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215681_219619_1327.jpg"
   },
   {
    "id": "b40d4d54e69a890e",
@@ -530,7 +560,7 @@
    "category": "news_ko",
    "published": "2026-09-27T15:59:27+00:00",
    "summary": "앤트로픽이 AI 모델의 성능 개선을 넘어 실제 서비스 속도를 높이기 위해 자사 AI 모델 '클로드'를 대규모 최적화 작업에 직접 투입했다. 엔지니어가 일일이 코드를 분석하던 기존 방식에서 벗어나, AI가 스스로 병목 지점을 찾고 수정 코드 배포까지 주도한 것이 핵심이다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215678_219617_4345.jpg"
   },
   {
    "id": "d2dfe78040aac3aa",
@@ -540,7 +570,7 @@
    "category": "news_ko",
    "published": "2026-09-27T15:34:42+00:00",
    "summary": "AI 에이전트 전문 라이너(대표 김진우)가 기존 MCP 생태계의 복잡한 진입 장벽을 해결하기 위해 ‘라이너 액션 MCP’를 선보인다. 서치·리서치 에이전트로서의 핵심 역량을 고도화하는 동시에, 사용자 환경에 최적화된 ‘통합 워크플로우 에이전트 환경’을 갖추겠다는 전략이다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215655_219577_547.jpg"
   },
   {
    "id": "8e3d64c67e3a5823",
@@ -550,7 +580,7 @@
    "category": "news_ko",
    "published": "2026-09-27T15:14:31+00:00",
    "summary": "'클로드'가 외부 앱과 업무 도구, 데이터에 연결되는 사례가 늘면서 서드파티 확장 기능을 개발하려는 수요도 커지고 있다. 앤트로픽은 개발자들이 이런 확장 기능을 간편하게 만들고 실제 사용자에게 배포할 수 있도록 플러그인 개발과 관리 환경을 강화했다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215685_219624_026.jpg"
   },
   {
    "id": "7a3fa09a3de1fbdd",
@@ -560,7 +590,7 @@
    "category": "news_ko",
    "published": "2026-09-27T15:01:58+00:00",
    "summary": "스모어톡이 숏폼 생성 AI 기술을 신한은행에 공급한다. 생성 AI 서비스가 금융권의 엄격한 검토 기준을 통과해 정식 계약으로 이어졌다는 점에서 주목된다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215687_219628_4417.png"
   },
   {
    "id": "af50665bd0cbad4a",
@@ -570,7 +600,7 @@
    "category": "news_ko",
    "published": "2026-09-27T14:59:09+00:00",
    "summary": "KT가 AI 모델 라우팅 기술로 글로벌 평가에서 2위를 차지했다. 해당 기술은 '토큰 팩토리' 등 에이전틱 AI 서비스에 탑재돼 기업들의 AX와 운영 비용 최적화를 지원하는 데 활용될 예정이다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.com/news/photo/202609/215686_219626_3556.jpg"
   },
   {
    "id": "ed2cbcca51ab9ede",
@@ -580,7 +610,7 @@
    "category": "news_global",
    "published": "2026-09-27T13:21:07-04:00",
    "summary": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and…",
-   "thumb": ""
+   "thumb": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/gettyimages-2236154957.jpg?quality=90&strip=all&crop=0%2C10.736911387474%2C100%2C78.526177225052&w=1200"
   },
   {
    "id": "e913aec713591e01",
@@ -590,7 +620,7 @@
    "category": "news_ko",
    "published": "2026-09-27T11:48:36+00:00",
    "summary": "서울시는 오는 11월 18일, SETEC에서 개최될 '2026 서울 외국인 취업채용박람회' 참여할 글로벌 인재 채용 기업을 모집한다고 27일 밝혔다. 참여를 희망하는 기업은 28일부터 10월 16일까지 신청할 수 있다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42073_63272_4821_v150.jpg"
   },
   {
    "id": "7a874efed17475fb",
@@ -600,7 +630,7 @@
    "category": "news_ko",
    "published": "2026-09-27T11:29:15+00:00",
    "summary": "삼성전자가 멕시코에서 열린 K-컬처 행사에 참가해 갤럭시 AI와 비전 AI 컴패니언, 스마트싱스를 중심으로 모바일과 TV, 가전 등을 연결한 인공지능(AI) 기반 경험을 선보였다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42072_63270_2617_v150.jpg"
   },
   {
    "id": "6de0efa96e17d673",
@@ -630,7 +660,7 @@
    "category": "news_ko",
    "published": "2026-09-27T11:15:10+00:00",
    "summary": "LG전자(대표이사 류재철)가 27일, 엔비디아의 공식 파트너 프로그램인 ‘엔비디아 파트너 네트워크(NVIDIA Partner Network, 이하 NPN)’에 선정되며, 글로벌 인공지능 데이터센터(AIDC) 냉각 솔루션 시장 공략에 속도를 낸다.",
-   "thumb": ""
+   "thumb": "https://cdn.aitimes.kr/news/thumbnail/202609/42071_63269_151_v150.jpg"
   },
   {
    "id": "998f6b2f76aa75e0",
@@ -650,7 +680,7 @@
    "category": "news_global",
    "published": "2026-09-27T01:30:00+00:00",
    "summary": "The limited test covers select products and users, with a broader rollout planned for later in October.",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2023/01/GettyImages-1235830811-1.jpg?resize=1200,800"
   },
   {
    "id": "71b88d6b7195bace",
@@ -660,7 +690,7 @@
    "category": "news_global",
    "published": "2026-09-26T21:02:06+00:00",
    "summary": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2021/11/GettyImages-1214954967.jpg?resize=1200,612"
   },
   {
    "id": "dc5183e86bb57478",
@@ -670,7 +700,7 @@
    "category": "news_global",
    "published": "2026-09-26T14:00:00+00:00",
    "summary": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
-   "thumb": ""
+   "thumb": "https://techcrunch.com/wp-content/uploads/2026/09/Digital-dom.png?resize=1200,667"
   },
   {
    "id": "819e92326da0d8d2",
@@ -680,7 +710,7 @@
    "category": "news_global",
    "published": "2026-09-26T12:34:59-04:00",
    "summary": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most…",
-   "thumb": ""
+   "thumb": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK155_OPEN_AI_2025_CVirgiia_A.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
   },
   {
    "id": "c39d3732b86df64a",
@@ -690,7 +720,7 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.29845.png"
   },
   {
    "id": "48ed5d53175a2a3a",
@@ -700,7 +730,7 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.30221.png"
   },
   {
    "id": "92e245d70511c8ea",
@@ -710,7 +740,7 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.29421.png"
   },
   {
    "id": "d862aca1901364c6",
@@ -720,7 +750,7 @@
    "category": "papers",
    "published": "2026-09-22T20:00:00+00:00",
    "summary": "Object permanence and solidity are hallmarks of human cognitive priors.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.28654.png"
   },
   {
    "id": "56b35df7aa8226f1",
@@ -730,7 +760,7 @@
    "category": "papers",
    "published": "2026-09-22T20:00:00+00:00",
    "summary": "Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.28466.png"
   },
   {
    "id": "8f308b0e1d8ffeb1",
@@ -740,7 +770,7 @@
    "category": "papers",
    "published": "2026-09-22T20:00:00+00:00",
    "summary": "Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.27334.png"
   },
   {
    "id": "07b58d37b3acc6ca",
@@ -750,7 +780,7 @@
    "category": "papers",
    "published": "2026-09-22T20:00:00+00:00",
    "summary": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.28416.png"
   },
   {
    "id": "1d00d76af2ce26d4",
@@ -760,7 +790,7 @@
    "category": "papers",
    "published": "2026-09-21T20:00:00+00:00",
    "summary": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.26780.png"
   },
   {
    "id": "11e69b866c879181",
@@ -770,7 +800,7 @@
    "category": "papers",
    "published": "2026-09-21T20:00:00+00:00",
    "summary": "Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.26355.png"
   },
   {
    "id": "2352af9e9764aed7",
@@ -780,7 +810,7 @@
    "category": "papers",
    "published": "2026-09-21T20:00:00+00:00",
    "summary": "The rapid capability gains of frontier language models are widely attributed to improved reasoning abilities, yet this cannot be verified as raw CoT traces in closed-source…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.26637.png"
   },
   {
    "id": "f2fc2dab3ae3ca26",
@@ -790,7 +820,7 @@
    "category": "papers",
    "published": "2026-09-21T20:00:00+00:00",
    "summary": "Transformer architectures exhibit cross-layer redundancies, yet post-training compression pipelines typically optimize layers in isolation or rely on heuristic grouping strategies…",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.25963.png"
   },
   {
    "id": "fa4018eec153851b",
@@ -800,7 +830,7 @@
    "category": "papers",
    "published": "2026-09-20T20:00:00+00:00",
    "summary": "Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.24308.png"
   },
   {
    "id": "409ed6e622c5fe69",
@@ -810,7 +840,7 @@
    "category": "papers",
    "published": "2026-09-19T20:00:00+00:00",
    "summary": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.23407.png"
   },
   {
    "id": "6fb67b6b8e291bb5",
@@ -820,7 +850,7 @@
    "category": "papers",
    "published": "2026-09-18T20:00:00+00:00",
    "summary": "Spatial reasoning is essential for vision-language models (VLMs) to understand and act in the physical world.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.23038.png"
   },
   {
    "id": "860d76a3788f02fe",
@@ -830,7 +860,7 @@
    "category": "papers",
    "published": "2026-09-18T20:00:00+00:00",
    "summary": "Reinforcement learning (RL) is vital for optimizing video generation models, with a robust reward model (RM) serving as the cornerstone.",
-   "thumb": ""
+   "thumb": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.22947.png"
   },
   {
    "id": "ae17b9f530f32830",
@@ -839,7 +869,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "네이버클라우드 컨소시엄의 사이버보안 특화 모델 개발 계획 발표",
+   "summary": "네이버클라우드 컨소시엄의 사이버보안 특화 모델 개발 계획 발표 보안 특화모델의 경쟁력 확보전략 및 활용‧확산을 위한 협력 방안 논의",
    "thumb": ""
   },
   {
@@ -849,7 +879,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "-「피지컬 AI 지역거점 발전 포럼」참석하고 피지컬 AI 기술 시연 참관",
+   "summary": "-「피지컬 AI 지역거점 발전 포럼」참석하고 피지컬 AI 기술 시연 참관 기술개발에서 현장실증·사업화·투자로 이어지는 피지컬 AI 생태계 조성 강조",
    "thumb": ""
   },
   {
@@ -869,7 +899,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속",
+   "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속 - 사실관계 검증, 투명성 확보, 결과 신뢰성 관리 등 7대 권고사항 제시",
    "thumb": ""
   },
   {
@@ -879,7 +909,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환",
+   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환 - 우수 과학기술 인재의 성장과 창의·도전적 연구환경 조성 방향 논의",
    "thumb": ""
   },
   {
@@ -889,7 +919,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상",
+   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상 - 상위 8개사에게 상금 8천만원에 더해 투자유치 기회·입주공간 등 지원",
    "thumb": ""
   },
   {
@@ -899,7 +929,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 고위급 정책협의회(6.10) 시 합의된 AI·OTT 분야 협력방안 추진현황 점검",
+   "summary": "- 고위급 정책협의회(6.10) 시 합의된 AI·OTT 분야 협력방안 추진현황 점검 - 한국방송통신미디어진흥원 설립 대비, 침해사고 이용자 보호 등 주요 현안 논의",
    "thumb": ""
   },
   {
@@ -909,7 +939,67 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 과기정통부, ｢전국민AI 역량 강화 정책 브랜드 공모전｣ 9.17.~9.30.",
+   "summary": "- 과기정통부, ｢전국민AI 역량 강화 정책 브랜드 공모전｣ 9.17.~9.30. 개최- 전문가 심사로 5개 후보 압축 후, 최종 당선작은 대국민 투표로 결정 - 선정 브랜드는 범부처 AI 역량 강화 정책의 통합 브랜드로 활용",
+   "thumb": ""
+  },
+  {
+   "id": "6bf519d1e9c79a0c",
+   "title": "한국 생성형 AI 사용률 40.6%…세계 12위로 네 계단 상승",
+   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPNWRJQldQNTVaYTBLSldqcG8wWmVveTdubHZmMmRiZUs2TUg3VmZxZ0x1VGFiVGRYaFZTUGJndnpLandnMDB1U0l4Y0hqeFlwbFAtYnlNZkRfMF94QjJ0V2dZSW1rZ0dtN3FmQUh4ZUdBcmhqVUJQcXZOaVV4YWp4VkQ4NnNnczctaXNjYXd5NkJ1OHZkcmRVMTZWYmVtdnZsWDBYbDQ5N216ODE0VWxhY0E2ZkRYRXEzeFFkOGNkYklvb0RldUhWRTZoYmJ1THg0ZUhnMGROTUpVbVYzTXI1Vk44eUI2N05OY0RlSFBrcENQcHdNbmdsSEI3TXJJVkh2WFF3YmRFTVl0aXRhcEpRNE1jTkRhb21DUmp5OEZ3MnM?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:12:38+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "417a7f0969dd191f",
+   "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JVG9ZMWFEOVhaakd5QUZOY2JnYlpPZXczQXlta2Zwd29yUTlfdDJ1TU02OHdDOVdoejVFOWt6d0x6UGI1ZW50Q2RjdjlnSUE?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T23:06:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "1e0055b0593bf80a",
+   "title": "AG hopefuls Savit, Lloyd spar over Line 5, AI regulation in first debate",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUHppRGtoVEFVSXFUNWwwLWpkQXZueGN6cnZuZDJySXhuVHNvaXBaWVBaLTVCT3d4N3ROS0V1OXQ4WHNJTTFFREJRRXZkMFpCcjEzUGFabklQSkI5QUxhQ05zZzU4VW5VQTZqV1JHTGQ1MnFiZXlqWUg3ZzZ0WWVDcFRBZ3FfSnB4dzhSOXNaVXRodw?oc=5",
+   "source": "Google News: AI regulation",
+   "category": "policy",
+   "published": "2026-09-27T22:38:52+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "239cce964dd9c83f",
+   "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T22:05:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e2f0400b1131ca78",
+   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T21:41:43+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "0736d9eb6b9a4bcc",
+   "title": "경기도, ‘대한민국 AI 콘텐츠 어워즈’ 공모에 1,528편 접수. 20편 본선 진출",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1RjRqdFZXNzNqMFh1anlkTHdTT0lfTG1sTGRxVGk0ekJ1cno5UzUxQ1p0bUc3OHRfNl9QcmRfeEUxY2NkbWhBNHR1OVJ6Y3R5TnVmd1JuSWRQcGM2UFk0Z19IYzM?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T21:30:35+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -954,9 +1044,9 @@
   },
   {
    "name": "Google DeepMind",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 100
+   "error": "ParseError: not well-formed (invalid token): line 1, column 0"
   },
   {
    "name": "Google News: AI regulation",
@@ -1046,13 +1136,13 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 87
+   "fetched": 84
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 65
+   "fetched": 81
   },
   {
    "name": "구글뉴스: 인공지능",
