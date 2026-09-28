@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
   push:
     branches: [main]
-    paths: ["briefing.py", "sources.json", "static/**", ".github/workflows/daily.yml"]
+    paths: ["briefing.py", "sources.json", "static/**", "posts/**", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
       - name: 수집 + 사이트 생성
         run: python briefing.py
-      - name: 수집 데이터 저장(지난 브리핑 보관용)
+      - name: 수집 데이터 저장(카테고리 아카이브 보관용)
         run: |
           git config user.name "briefing-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -56,3 +56,10 @@ python tests/make_fixtures.py && python briefing.py --fixtures tests/fixtures
 - 모든 페이지에 제목·설명·대표 주소(canonical)·공유 이미지(og.png)·구조화 데이터(JSON-LD)가 들어갑니다.
 - `sitemap.xml`, `robots.txt`, RSS(`feed.xml`)를 자동으로 만듭니다.
 - 구글 서치 콘솔과 네이버 서치어드바이저에 사이트를 등록한 뒤, 받은 인증 코드를 `sources.json` 의 `google_verification`, `naver_verification` 에 넣으면 됩니다.
+
+## 카테고리 아카이브 · 에디터 글
+
+- 메뉴의 카테고리를 누르면 지금까지 모은 그 카테고리 글을 최신순 8개씩 페이지로 넘겨 볼 수 있어요. 데이터(`data/*.json`)가 쌓이는 만큼 계속 늘어나요.
+- 표지 사진은 헤드라인·주요 소식에만 붙어요. 저작권 없는 퍼블릭 도메인(CC0) 사진을 `static/photos/`에 모아 두고 기사 주제에 맞춰 자동으로 골라요. 출처는 `static/photos/credits.json`과 사이트의 '사진 출처' 페이지에 있어요.
+- 에디터 글은 사이트의 `editor/write.html`에서 써요. 처음 한 번 GitHub 토큰(ai-briefing 저장소의 Contents 읽기·쓰기 권한)을 넣고 비밀번호 4자리를 정하면, 다음부터는 비밀번호만 넣고 글·사진을 올릴 수 있어요. 토큰은 그 기기 브라우저 안에만 암호화되어 저장되고, 비밀번호를 5번 틀리면 지워져요.
+- 글은 `posts/*.json`, 사진은 `posts/img/`에 저장되고 올리는 즉시 사이트가 다시 만들어져요(1~2분).
