@@ -697,6 +697,10 @@ KW_GROUPS = [
     ["중국", "China", "Chinese", "DeepSeek", "딥시크", "알리바바", "Alibaba"],
     ["저작권", "copyright", "lawsuit", "소송"],
     ["일자리", "jobs", "고용", "layoffs", "해고", "노동"],
+    ["금융", "finance", "fintech", "은행", "bank", "banking", "핀테크", "증권"],
+    ["국방", "defense", "military", "군사", "국군", "국방부", "Pentagon", "펜타곤"],
+    ["자율주행", "self-driving", "autonomous", "robotaxi", "로보택시", "Waymo", "웨이모"],
+    ["클라우드", "cloud", "Azure", "애저"],
 ]
 _KW_CANON = {w.lower(): g[0] for g in KW_GROUPS for w in g}
 
@@ -705,6 +709,37 @@ def kw_terms(k):
     """키워드 하나로 찾을 말들(연관어 묶음이 있으면 묶음 전체)."""
     g = next((g for g in KW_GROUPS if g[0] == _KW_CANON.get(k.lower())), None)
     return g or [k]
+
+
+TAG_SKIP = {"인공지능", "CEO"}  # 거의 모든 글에 들어가 묶는 의미가 없는 말
+_TAG_RX = []
+for _i, _g in enumerate(KW_GROUPS):
+    if _g[0] in TAG_SKIP:
+        continue
+    _terms = [w for w in _g if w not in ("라마", "시리")]  # '드라마', '시리즈' 같은 말과 헷갈리는 짧은 말은 뺀다
+    _alt = "|".join((r"(?<![a-z0-9])" + re.escape(w.lower()) + r"(?![a-z0-9])") if w.isascii()
+                    else re.escape(w.lower()) + ("(?!버스)" if w == "메타" else "") for w in _terms)
+    _TAG_RX.append((_i, _g[0], re.compile(_alt)))
+
+
+def item_tags(it, n=3):
+    """글마다 붙는 #키워드(연관어 묶음의 대표 이름). 제목에 나온 말을 먼저, 최대 3개."""
+    title = (it["title"] + " " + it.get("title_ko", "")).lower()
+    body = (it.get("summary") or "").lower()
+    found = []
+    for i, name, rx in _TAG_RX:
+        m = rx.search(title)
+        pos = (0, m.start()) if m else None
+        if not m:
+            m = rx.search(body)
+            pos = (1, m.start()) if m else None
+        if pos:
+            found.append((pos, i, name))
+    return [(i, name) for _, i, name in sorted(found)[:n]]
+
+
+def tag_href(i, base=""):
+    return f"{base}tag/k{i}.html"
 
 
 def top_keywords(items, n=12):
@@ -793,6 +828,7 @@ article:has(a[data-d]),.trend:has(a[data-d]){cursor:pointer}
 @keyframes bup{from{transform:translateY(40px);opacity:.3}}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
 .kw strong{font-size:14px;margin-right:4px}.kw span,.kwb{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.tg{font-size:12.5px;color:var(--accent);background:var(--soft);border-radius:99px;padding:2px 10px}.tg:hover{text-decoration:underline}
 .kwb{font:inherit;font-size:13px;border:2px solid transparent;cursor:pointer;padding:2px 11px}.kwb:hover{border-color:var(--line)}
 .kwb.on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;color:var(--heading);font-weight:700}
 .kwres{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 0;padding:12px 16px;border-radius:14px;background:var(--soft);font-size:14px}
@@ -1516,11 +1552,17 @@ def thumb_html(it, base="", used=None, href=None, blank=True):
     return f'<a class="thumb" href="{esc(href or it["link"])}"{tgt} tabindex="-1" aria-hidden="true">{art}{tag}</a>'
 
 
-def row_html(it, cats, with_cat=False):
+def tags_html(it, base):
+    tags = item_tags(it)
+    return ('<div class="tags">' + "".join(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' for i, name in tags)
+            + "</div>") if tags else ""
+
+
+def row_html(it, cats, with_cat=False, base=""):
     summ = f"<p>{esc(it['summary'])}</p>" if it.get("summary") else ""
     k = (it["title"] + " " + it.get("title_ko", "") + " " + (it.get("summary") or "")).lower()
     q = esc(k + " " + it["source"].lower())
-    return f'<article data-q="{q}" data-k="{esc(k)}"><h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats, with_cat)}</article>'
+    return f'<article data-q="{q}" data-k="{esc(k)}"><h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats, with_cat)}{tags_html(it, base)}</article>'
 
 
 def pager_html(p, n, href):
@@ -1920,7 +1962,7 @@ def render_category(c, name, items, cats, sc):
     paths = []
     for pg in range(n):
         chunk = items[pg * PER_PAGE:(pg + 1) * PER_PAGE]
-        rows = "".join(row_html(it, cats) for it in chunk) or '<p class="empty">아직 모인 글이 없어요.</p>'
+        rows = "".join(row_html(it, cats, base="../") for it in chunk) or '<p class="empty">아직 모인 글이 없어요.</p>'
         body = (f'<div class="ph" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h1 class="serif">{esc(name)}</h1><span>{pg + 1}/{n}쪽</span></div>'
                 f'<div class="rows">{rows}</div>{pager_html(pg, n, href)}')
         path = f"{c}/" + ("" if pg == 0 else f"{pg + 1}.html")
@@ -1933,6 +1975,33 @@ def render_category(c, name, items, cats, sc):
         (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, desc=desc[:155], jsonld=ld,
                                          active=c), encoding="utf-8")
         paths.append(path)
+    return paths
+
+
+def render_tags(items, cats, sc):
+    """#키워드 페이지: 분야와 날짜에 상관없이 같은 키워드가 붙은 글을 모두 모아 최신순으로 보여 준다."""
+    out = SITE_DIR / "tag"
+    out.mkdir(parents=True, exist_ok=True)
+    groups = {}
+    for it in items:
+        for i, name in item_tags(it):
+            groups.setdefault((i, name), []).append(it)
+    paths = []
+    for (i, name), its in groups.items():
+        its.sort(key=lambda x: x.get("published") or "", reverse=True)
+        n = max(1, -(-len(its) // PER_PAGE))
+        href = lambda pg, i=i: f"k{i}.html" if pg == 0 else f"k{i}-{pg + 1}.html"
+        terms = [w for w in KW_GROUPS[i] if w != name][:6]
+        for pg in range(n):
+            chunk = its[pg * PER_PAGE:(pg + 1) * PER_PAGE]
+            body = (f'<div class="ph"><h1 class="serif">#{esc(name)}</h1><span>관련 글 {len(its)}건 · {pg + 1}/{n}쪽</span></div>'
+                    + (f'<p class="meta" style="margin:-6px 0 14px">함께 찾은 말: {esc(", ".join(terms))}</p>' if terms else "")
+                    + f'<div class="rows">{"".join(row_html(it, cats, True, "../") for it in chunk)}</div>{pager_html(pg, n, href)}')
+            path = f"tag/{href(pg)}"
+            (out / href(pg)).write_text(page(f"#{name} 관련 AI 소식{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}", body, "../", cats,
+                                             search=False, path=path, desc=f"{sc['name']}가 모은 '{name}' 관련 AI 뉴스·논문·정책·영상을 한곳에서 봅니다."),
+                                        encoding="utf-8")
+            paths.append(path)
     return paths
 
 
@@ -2043,6 +2112,7 @@ def build(keep_days=None):
         items = sorted(every[c], key=lambda x: x.get("published") or "", reverse=True)
         paths += render_category(c, name, items, cats, sc)
     paths += render_editor_pages(posts, cats, sc)
+    paths += render_tags([it for c in cats for it in every[c]], cats, sc)
     credits = "".join(
         f'<li><a href="{esc(c["landing"])}" target="_blank" rel="noopener">{esc(c["title"] or c["file"])}</a> '
         f'<span class="meta" style="display:inline">· {esc(c["creator"] or "작자 미상")} · {esc(c["source"])} · {esc(c["license"].upper())}</span></li>'
