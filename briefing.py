@@ -17,8 +17,6 @@ import html
 import json
 import re
 import sys
-import threading
-import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -41,7 +39,7 @@ USER_AGENT = "Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)
 
 # ---------------------------------------------------------------- 수집
 
-def fetch(url, fixtures=None):
+def fetch(url, fixtures=None, ua=None):
     if fixtures:
         name = hashlib.sha1(url.encode()).hexdigest()[:12]
         for ext in (".xml", ".json"):
@@ -49,7 +47,7 @@ def fetch(url, fixtures=None):
             if p.exists():
                 return p.read_bytes()
         raise FileNotFoundError(f"fixture {name} 없음")
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+    req = urllib.request.Request(url, headers={"User-Agent": ua or USER_AGENT, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=25) as r:
         return r.read()
 
@@ -239,20 +237,12 @@ def recent_ids(today, days=DEDUPE_DAYS):
     return seen
 
 
-_ARXIV_API_LOCK = threading.Lock()
-
-
 def label(src):
     return f'{src["name"]} · {src["field"]}' if src.get("field") else src["name"]
 
 
 def collect_source(src, fixtures):
-    if "export.arxiv.org/api" in src["url"] and not fixtures:
-        with _ARXIV_API_LOCK:  # arXiv API 이용 규칙: 요청 간 3초 간격
-            raw = fetch(src["url"], fixtures)
-            time.sleep(3)
-    else:
-        raw = fetch(src["url"], fixtures)
+    raw = fetch(src["url"], fixtures, src.get("ua"))
     kind = src.get("type")
     if kind == "hf_papers":
         return parse_hf_papers(raw)
@@ -289,7 +279,9 @@ def collect(fixtures=None, now=None):
                 d = parse_date(it["date"])
                 if d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
                     continue
-                if src.get("filter") and not is_ai_related(it, keywords):
+                if src.get("keywords") and not is_ai_related(it, src["keywords"]):
+                    continue  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
+                if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
                     continue
                 iid = item_id(it["link"], title)
                 if iid in seen:
