@@ -1948,7 +1948,7 @@ def _mx_stage(t):
 
 _HAN = re.compile(r"[가-힣]")
 _JOSA = re.compile(r"(으로부터|에서부터|이라고|라고|에서|에게|까지|부터|으로|하며|하고|했다|한다|하는|된다|되는|이다|에도|에는|과의|와의|이란|란|은|는|이|가|을|를|의|에|도|로|와|과|만|께)$")
-_KSTOP = set("관련 위해 대한 대해 통해 이번 지난 올해 오늘 이날 최근 현재 기자 뉴스 인공지능 기술 기업 업계 가운데 경우 따르면 밝혔다 있다 없다 했다 한다 것으로 것이 이후 이상 이하 가능 사용 활용 제공 진행 예정 대표 사업 분야 시장 정도 부분 전망 계획 발표 공개 출시 이유 방법 결과 모두 모든 더욱 가장 새로운 새 또 등 및 수 것 중 년 월 일 억 만 AI 에이아이 영상 일부 다음 대형 전원 공동 여러 각종 주요 전체 향후 본격 직접 하나 처음 위한 통한 이후 다른 자신 우리 이제 지금 사람 사람들 내용 사실 문제 상황 가능성 필요 방안 과정 수준 확대 강화 추진 개최 참석".split())
+_KSTOP = set("관련 위해 대한 대해 통해 이번 지난 올해 오늘 이날 최근 현재 기자 뉴스 인공지능 기술 기업 업계 가운데 경우 따르면 밝혔다 있다 없다 했다 한다 것으로 것이 이후 이상 이하 가능 사용 활용 제공 진행 예정 대표 사업 분야 시장 정도 부분 전망 계획 발표 공개 출시 이유 방법 결과 모두 모든 더욱 가장 새로운 새 또 등 및 수 것 중 년 월 일 억 만 AI 에이아이 영상 일부 다음 대형 전원 공동 여러 각종 주요 전체 향후 본격 직접 하나 처음 위한 통한 이후 다른 자신 우리 이제 지금 사람 사람들 내용 사실 문제 상황 가능성 필요 방안 과정 수준 확대 강화 추진 개최 참석 나올 나온 나와 나오는 될까 할까 하는 되는 이야기 강연 대담 인터뷰 에피소드".split())
 _ESTOP = set("the a an and or for with how why what who when new is are was were be been its it in on of to from by at as this that these those will can could would should may might has have had not no but about after over more most into than their them they our your you we i he she his her report says said via just amid inc co ltd vs ai using use based towards toward large model models learning data approach method study analysis system systems framework".split())
 _ACTORS = {"미국": "미국", "us": "미국", "u.s.": "미국", "美": "미국", "중국": "중국", "china": "중국", "中": "중국", "한국": "한국", "韓": "한국", "korea": "한국",
            "일본": "일본", "japan": "일본", "유럽": "유럽", "eu": "EU", "러시아": "러시아", "russia": "러시아", "유엔": "유엔", "un": "유엔", "영국": "영국", "uk": "영국",
@@ -2070,6 +2070,15 @@ def _sentences(s):
     return [x for x in re.split(r"(?<=[.요다])\s+", s) if x]
 
 
+def _talk_speaker(it):
+    """영상 제목에서 연사 이름만 뽑는다: 'Title | Name | TED', 'Replit CEO Amjad Masad on ...'."""
+    parts = [x.strip() for x in it["title"].split("|")]
+    if len(parts) >= 2 and 2 <= len(parts[1]) <= 40 and not re.search(r"TED|Talks|Podcast", parts[1]):
+        return parts[1]
+    m = re.match(r"^((?:[A-Z][\w.&'-]*\s){0,3}(?:CEO|CTO|Founder|Co-founder|President|Professor)?\s?[A-Z][a-z]+(?:\s[A-Z][a-z]+){1,2}) on [A-Z]", it["title"])
+    return m.group(1).strip() if m else ""
+
+
 def mx_note(it):
     """(요약, METAXIS VIEW, 태그). 원문 문장은 쓰지 않고, 핵심 낱말·주체·사건 유형을 조합해 새로 쓴다.
     기업 주장은 발표 기준으로, 논문은 검증 전으로, 정책은 제안/확정/시행 단계를 나눠 쓴다."""
@@ -2079,7 +2088,7 @@ def mx_note(it):
     head_t = it["title"] + " " + it.get("title_ko", "")
     kws = mx_keywords(it, 4)
     actors = mx_actors(it)
-    ev = [e for e in _EVENTS if e[1].search(head_t)] or [e for e in _EVENTS if e[1].search(t)]
+    ev = [e for e in _EVENTS if e[1].search(head_t)] or ([] if cat == "talks" else [e for e in _EVENTS if e[1].search(t)])
     ev = ev[:1]
     subj = "·".join(actors[:2]) or (kws[0] if kws else "관련 업계")
     tg = next((_disp(n) for n, i in tags if i is not None), None) or (kws[0] if kws else "AI")
@@ -2091,6 +2100,21 @@ def mx_note(it):
     k_show = [k for k in kws if k not in actors][:3]
     if k_show:
         summ += f' 핵심 키워드는 {"·".join(k_show)} 등이에요.'
+    if cat == "talks":  # 영상·강연: 누가(제목·채널 정보) 어떤 주제를 다뤘는지만 새로 쓴다(자막·발언 내용은 쓰지 않음)
+        who = _talk_speaker(it)
+        tk = (it.get("title_ko") or "").split("|")
+        names = set(re.findall(r"[가-힣]+", tk[1])) if len(tk) >= 2 else set()  # 연사 이름(번역)은 주제·태그에서 뺀다
+        k_show = [k for k in k_show if k not in names]
+        tags = [(n, i) for n, i in tags if n not in names]
+        canon = [_disp(n) for n, i in tags if i is not None][:3]
+        topic = "·".join(canon or k_show[:2]) or tg
+        last = topic[-1]
+        obj = topic + ("을" if "가" <= last <= "힣" and (ord(last) - 0xAC00) % 28 else "를")
+        summ = (f"연사 {who}의 영상으로, {obj} 주제로 다뤄요." if who else f"{obj} 주제로 다룬 영상이에요.") + \
+               f' {it.get("source", "")} 채널에 올라왔어요.'
+        tags = [(n, i) for n, i in tags if i is not None] or tags[:3]
+        if not who or names:  # 태그는 2개 이상(연사 이름을 가려낼 수 있을 때만 채운다)
+            tags += [(k, None) for k in k_show if not any(k in n for n, _ in tags)][:max(0, 2 - len(tags))]
     if cat == "policy":
         st = _mx_stage(head_t)
         summ = f"{lead}{what}에 관한 정책·규제 소식이에요. " + (
