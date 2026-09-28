@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:11+09:00",
+ "generated_at": "2026-09-28T20:12+09:00",
  "items": [
   {
    "id": "199616a539405542",
@@ -873,6 +873,20 @@
    }
   },
   {
+   "id": "1c867f4502962656",
+   "title": "'It's Not A Hoax At All,' Bill Gates On AI Concerns",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMWk3SWttWGRyRzkwMmxzVUR0VWNjdnNBdS03bjF2ZWx6TXFlZXBkZWoya1VHQU1GNnNtWkVMNnhVQnk3OXVJU3lhbVdscXFkY3JidEdvVFlOdGVvcmNVYlQwdndrMldHRFY1M0F6d1RkV21mWVFlaUVzb2VOcjkzWEJKbDFJWnhDRk1zU0dxNE1XZkE?oc=5",
+   "source": "RTTNews",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T10:28:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "\"전혀 허구가 아니다\", 빌 게이츠의 AI 우려에 대한 입장",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "670d4825dcceec17",
    "title": "세관 업무에 인공지능(AI) 적용을 촉진합니다.",
    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11QzlLcDZQMTRkTUx5SDBrS29EMU5qamVoX0JzRk4xal9aS0FiUXh6SVEtTDRONllQVWZaQWE4SW1PckhoM3FPRDNLZjUtNzZmYU9BV1A3aXA5R2xSVE1hMG9DU3dpZGFoa2t5NGNoVDVmaG9wc05VZ3Ixaw?oc=5",
@@ -1289,6 +1303,20 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "5d7602215f6c3bd2",
+   "title": "When AI meets U-space – the regulatory collision Europe has not yet resolved",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSzBWOTEtQlpkOFYtUVlsdnJURE1PYmVwRjg1N0w4OHc0Rk5DTFNEeFFabThtbk8wZmRmOGRhWXk1aWVhaTJSNVI1MWZHUTRpTXVtcjhjVFo4dVZISWZYMkpiX0kwd3VzTk5QZ01acWtVeVJ4d2dEWEk0dEpJQTg1LVY1RExCVXVtRGx2VDR3WU9QcklsNVRGSGNtRFBmZGJnTW9WVTVONHQzSzVuYTRnelY0NlMwQk1sOHJpYmZMQTY?oc=5",
+   "source": "Unmanned airspace",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T09:10:54+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI와 U-space의 만남 – 유럽이 아직 해결하지 못한 규제 상의 충돌",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "1bdc1f260b416720",
@@ -4443,28 +4471,6 @@
    "published": null,
    "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속 - 사실관계 검증, 투명성 확보, 결과 신뢰성 관리 등 7대 권고사항 제시",
    "thumb": ""
-  },
-  {
-   "id": "ccb35b4497ec3666",
-   "title": "구혁채 과기정통부 제1차관, 「Nobel Prize Dialogue Seoul 2026」 참석",
-   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187793",
-   "source": "과학기술정보통신부 보도자료",
-   "field": "",
-   "category": "policy",
-   "published": null,
-   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환 - 우수 과학기술 인재의 성장과 창의·도전적 연구환경 조성 방향 논의",
-   "thumb": ""
-  },
-  {
-   "id": "690ce799e6b7052b",
-   "title": "과기정통부, 모험·도전적 경진대회를 통한 스타트업 초기 투자 지원!",
-   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187795",
-   "source": "과학기술정보통신부 보도자료",
-   "field": "",
-   "category": "policy",
-   "published": null,
-   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상 - 상위 8개사에게 상금 8천만원에 더해 투자유치 기회·입주공간 등 지원",
-   "thumb": ""
   }
  ],
  "status": [
@@ -4544,7 +4550,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 99
+   "fetched": 100
   },
   {
    "name": "Google News: AI 기업",
@@ -4585,8 +4591,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -4759,8 +4765,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -4796,7 +4802,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 49
+   "fetched": 47
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
