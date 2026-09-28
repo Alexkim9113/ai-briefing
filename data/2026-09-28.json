@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T11:09+09:00",
+ "generated_at": "2026-09-28T11:10+09:00",
  "items": [
   {
    "id": "242d4b61b738a0a5",
@@ -2435,8 +2435,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2447,8 +2447,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2478,7 +2478,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 44
+   "fetched": 45
   },
   {
    "name": "TED",
@@ -2592,7 +2592,7 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 87
+   "fetched": 88
   },
   {
    "name": "구글뉴스: 생성형 AI",
@@ -2610,7 +2610,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 40
+   "fetched": 41
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
@@ -2622,7 +2622,7 @@
    "name": "스테이지5",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "error": "HTTPError: HTTP Error 500: Internal Server Error"
   },
   {
    "name": "인공지능신문",
