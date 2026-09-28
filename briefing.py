@@ -778,7 +778,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .post .body img{display:block;max-width:100%;height:auto;border-radius:12px;margin:22px auto}
 .post .body blockquote{margin:20px 0;padding:4px 18px;border-left:3px solid var(--accent);color:var(--muted)}
 .post .body a{color:var(--accent);text-decoration:underline}
-.post .body figure{margin:22px 0}.post .body figure img{margin:0 auto}.post .body hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.post .body figure{margin:22px auto;max-width:100%}.post .body figure img{margin:0 auto;width:100%}.post .body hr{border:0;border-top:1px solid var(--line);margin:32px 0}
 .post .body mark{background:#fff27a;color:#111;padding:0 2px;border-radius:2px}.post .body ul,.post .body ol{padding-left:1.4em}
 .post .body [style*="background-color"]{color:#111;border-radius:2px;padding:0 1px}
 .credits li{margin-bottom:6px;font-size:14px}
@@ -884,9 +884,13 @@ function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.g
 $('#new').onclick=()=>edit(null);
 function edit(p){cur=p?{...p}:{id:newId(),title:'',body:'',cover:'',images:[],date:''};imgs={};seq=(cur.images||[]).length;
  $('#title').value=cur.title;setBody(cur.body||'',cur.format);msg('#edit-msg','');drawThumbs();view('#v-edit');}
-function drawThumbs(){const all=[...(cur.images||[]).map(n=>({n,src:'img/'+n})),...Object.entries(imgs).map(([n,src])=>({n,src}))];
- $('#thumbs').innerHTML=all.map(x=>`<figure><img src="${x.src}" alt=""><label><input type="radio" name="cover" value="${x.n}" ${cur.cover==='img/'+x.n?'checked':''}> 대표 사진</label></figure>`).join('');
- $('#thumbs').querySelectorAll('input').forEach(r=>r.onchange=()=>cur.cover='img/'+r.value);}
+const srcOf=n=>imgs[n]||('img/'+n);
+function drawThumbs(){ // 대표 썸네일: 따로 올리거나, 본문 사진 중에서 고르거나, 뺄 수 있다
+ const inBody=[...ED.querySelectorAll('figure')].map(f=>f.dataset.n).filter(n=>!/^https:/.test(n)),cv=cur.cover?cur.cover.replace(/^img\//,''):'';
+ $('#cover-box').innerHTML=cv?`<img src="${esc(srcOf(cv))}" alt="대표 썸네일">`:'<span class="meta">대표 썸네일이 없어요. 목록과 공유 미리보기에 쓰일 사진을 골라 주세요.</span>';
+ $('#cover-del').hidden=!cv;
+ $('#thumbs').innerHTML=inBody.length?'<span class="meta">본문 사진에서 고르기</span>'+inBody.map(n=>`<button type="button" class="${n===cv?'on':''}" data-n="${esc(n)}"><img src="${esc(srcOf(n))}" alt=""></button>`).join(''):'';
+ $('#thumbs').querySelectorAll('button').forEach(b=>b.onclick=()=>{cur.cover='img/'+b.dataset.n;drawThumbs();});}
 async function shrink(file){const bmp=await createImageBitmap(file),s=Math.min(1,1600/bmp.width),c=document.createElement('canvas');
  c.width=Math.round(bmp.width*s);c.height=Math.round(bmp.height*s);c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.82);}
 // 본문 편집기: 사진이 실제 모습으로 보이고, 게시할 때 간단한 글 형식(마크다운)으로 바꿔 보낸다
@@ -895,17 +899,19 @@ document.execCommand('defaultParagraphSeparator',false,'p');
 const saveSel=()=>{const s=getSelection();if(s.rangeCount&&ED.contains(s.anchorNode))RANGE=s.getRangeAt(0).cloneRange();};
 document.addEventListener('selectionchange',saveSel);['mouseup','keyup','touchend'].forEach(ev=>ED.addEventListener(ev,saveSel));
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
-function fig(name,src){return `<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt=""><button type="button" aria-label="사진 빼기">✕</button></figure>`;}
+const FCTRL=`<button type="button" class="fx" aria-label="사진 빼기">✕</button><span class="fsz"><button type="button" data-w="33">작게</button><button type="button" data-w="50">중간</button><button type="button" data-w="75">크게</button><button type="button" data-w="100">꽉 차게</button></span><span class="fh" title="끌어서 크기 조절"></span>`;
+function fig(name,src){return `<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt="">${FCTRL}</figure>`;}
 function decorate(){ED.querySelectorAll('figure').forEach(f=>{const im=f.querySelector('img');if(!im)return f.remove();
  const src=im.getAttribute('src')||'';f.contentEditable='false';f.dataset.n=f.dataset.n||src.replace(/^img\//,'');
- if(!f.querySelector('button'))f.insertAdjacentHTML('beforeend','<button type="button" aria-label="사진 빼기">✕</button>');});}
+ f.querySelectorAll('button,span').forEach(x=>x.remove());f.insertAdjacentHTML('beforeend',FCTRL);});}
 function setBody(md,fmt){if(fmt==='html'){ED.innerHTML=md;decorate();return;}ED.innerHTML=md.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
   const m=b.match(/^!\[[^\]]*\]\((img\/[\w.-]+|https:\/\/[^)\s]+)\)$/);if(m)return fig(m[1].replace(/^img\//,''),m[1]);
   if(/^#{1,3} /.test(b))return `<h2>${inl(b.replace(/^#{1,3} /,''))}</h2>`;return `<p>${b.split('\n').map(inl).join('<br>')}</p>`;}).join('')||'';}
 function txt(el){let o='';el.childNodes.forEach(n=>{if(n.nodeType===3)o+=n.textContent;else if(n.nodeName==='BR')o+='\n';
   else if(/^(B|STRONG)$/.test(n.nodeName)){const t=txt(n).trim();o+=t?`**${t}**`:'';}else o+=txt(n);});return o;}
 function getBody(){const c=ED.cloneNode(true); // 편집용 표시(✕ 버튼, 미리보기 사진)를 걷어내고 게시용 HTML로
- c.querySelectorAll('figure').forEach(f=>{const n=f.dataset.n;f.replaceWith(Object.assign(document.createElement('figure'),{innerHTML:`<img src="${/^https:/.test(n)?n:'img/'+n}" alt="">`}));});
+ c.querySelectorAll('figure').forEach(f=>{const n=f.dataset.n,w=parseInt(f.style.width)||100,g=document.createElement('figure');
+  g.innerHTML=`<img src="${/^https:/.test(n)?n:'img/'+n}" alt="">`;if(w<100)g.style.width=w+'%';f.replaceWith(g);});
  c.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));
  const base=getComputedStyle(ED).color; // 편집기가 저절로 붙인 기본 글자색·inherit 값은 지워서 밝은/어두운 화면 모두에서 읽히게
  c.querySelectorAll('[style]').forEach(e=>{const st=e.style;for(const k of [...st])if(st.getPropertyValue(k)==='inherit')st.removeProperty(k);
@@ -913,8 +919,17 @@ function getBody(){const c=ED.cloneNode(true); // 편집용 표시(✕ 버튼, �
   if(e.nodeName==='SPAN'&&!e.attributes.length)e.replaceWith(...e.childNodes);});
  [...c.childNodes].forEach(n=>{if(n.nodeType===3&&n.textContent.trim()){const p=document.createElement('p');n.replaceWith(p);p.append(n);}});
  return c.innerHTML.replace(/<p><br><\/p>/g,'').trim();}
-ED.addEventListener('click',e=>{if(e.target.matches('figure button')){const f=e.target.closest('figure');const n=f.dataset.n;f.remove();
-  if(cur.cover==='img/'+n&&!ED.querySelector('figure'))cur.cover='';drawThumbs();}});
+// 본문 사진: 눌러서 고른 뒤 ✕ 로 빼기, 작게·중간·크게·꽉 차게, 또는 오른쪽 아래 동그라미를 끌어 비율 그대로 크기 조절
+ED.addEventListener('click',e=>{const f=e.target.closest('figure');ED.querySelectorAll('figure.sel').forEach(x=>{if(x!==f)x.classList.remove('sel');});
+ if(!f)return;f.classList.add('sel');
+ if(e.target.matches('.fx')){f.remove();drawThumbs();return;}
+ if(e.target.dataset.w){f.style.width=e.target.dataset.w+'%';}});
+document.addEventListener('click',e=>{if(!e.target.closest('#body figure'))ED.querySelectorAll('figure.sel').forEach(x=>x.classList.remove('sel'));});
+ED.addEventListener('pointerdown',e=>{if(!e.target.matches('.fh'))return;e.preventDefault();const f=e.target.closest('figure'),box=ED.getBoundingClientRect(),
+ left=f.getBoundingClientRect().left,full=box.width-parseFloat(getComputedStyle(ED).paddingLeft)*2;e.target.setPointerCapture(e.pointerId);
+ const mv=ev=>{const w=Math.max(15,Math.min(100,Math.round((ev.clientX-left)/full*100)));f.style.width=w+'%';};
+ const up=()=>{e.target.removeEventListener('pointermove',mv);e.target.removeEventListener('pointerup',up);};
+ e.target.addEventListener('pointermove',mv);e.target.addEventListener('pointerup',up);});
 ED.addEventListener('paste',e=>{e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'));});
 function placeAt(){ED.focus();const s=getSelection();s.removeAllRanges();
  if(RANGE&&ED.contains(RANGE.startContainer))s.addRange(RANGE);else{const r=document.createRange();r.selectNodeContents(ED);r.collapse(false);s.addRange(r);}}
@@ -929,8 +944,11 @@ function insertFigure(name,src){placeAt();const s=getSelection(),r=s.getRangeAt(
  else{ED.append(f,after);}
  placeCaret(after,true);}
 function placeCaret(el,start){const r=document.createRange();r.selectNodeContents(el);r.collapse(start);const s=getSelection();s.removeAllRanges();s.addRange(r);RANGE=r.cloneRange();}
+$('#cover-file').onchange=async e=>{const f=e.target.files[0];if(!f||!f.type.startsWith('image/'))return;
+ const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);cur.cover='img/'+name;e.target.value='';drawThumbs();};
+$('#cover-del').onclick=()=>{cur.cover='';cur.noCover=true;drawThumbs();};
 $('#file').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;
- const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover)cur.cover='img/'+name;insertFigure(name,imgs[name]);}
+ const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover&&!cur.noCover)cur.cover='img/'+name;insertFigure(name,imgs[name]);}
  e.target.value='';drawThumbs();};
 // 서식 도구: 버튼을 눌러도 글자 선택이 풀리지 않게 한다
 const T=$('#tools');['pointerdown','mousedown','touchstart'].forEach(ev=>T.addEventListener(ev,saveSel,true));T.addEventListener('mousedown',e=>{if(e.target.closest('button'))e.preventDefault();});
@@ -956,7 +974,7 @@ $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBod
  const keep=(cur.images||[]).filter(used);
  for(const [n,d] of Object.entries(imgs))if(used(n)){up[n]=d.split(',')[1];keep.push(n);}
  if(cur.cover&&!keep.includes(cur.cover.slice(4)))cur.cover=keep.length?'img/'+keep[0]:'';
- const post={id:cur.id,title,body,format:'html',cover:cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
+ const post={id:cur.id,title,body,format:'html',cover:cur.cover,noCover:!cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
  $('#publish').disabled=true;msg('#edit-msg','보내는 중…');
  try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 30분 안에 사이트에 올라가요.');
   const i=POSTS.findIndex(p=>p.id===post.id);if(i<0)POSTS.unshift(post);cur=post;imgs={};
@@ -1051,10 +1069,10 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <meta name="robots" content="{"index,follow,max-image-preview:large" if index else "noindex"}">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{esc(sc["name"])}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{esc(image or sc["url"] + "/og.png")}">
+<meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{esc(image or sc["url"] + "/og-main.png")}">
 {"" if image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
-<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/og.png")}">
+<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/og-main.png")}">
 <meta name="theme-color" content="#06050d" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><script>try{{var m=localStorage.getItem("metaxis_theme");if(m)document.documentElement.dataset.theme=m}}catch(e){{}}</script>{verify}
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
@@ -1443,6 +1461,8 @@ def _safe_style(style):
             out.append(f"text-align:{v}")
         elif k in ("text-decoration", "text-decoration-line") and re.fullmatch(r"(underline|line-through|none)( (underline|line-through))?", v):
             out.append(f"text-decoration:{v}")
+        elif k == "width" and re.fullmatch(r"(1[5-9]|[2-9]\d|100)%", v):
+            out.append(f"width:{v}")
         elif k == "font-weight" and v in ("bold", "700", "normal", "400"):
             out.append(f"font-weight:{v}")
         elif k == "font-style" and v in ("italic", "normal"):
@@ -1610,7 +1630,7 @@ def render_editor_pages(posts, cats, sc):
         pages.append(path)
     for p in posts:
         path = f"editor/{p['id']}.html"
-        cover = f'{sc["url"]}/editor/{p["cover"]}' if p.get("cover") else f'{sc["url"]}/og.png'
+        cover = f'{sc["url"]}/editor/{p["cover"]}' if p.get("cover") else f'{sc["url"]}/og-main.png'
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": p["title"][:110], "image": cover,
                "datePublished": p.get("date"), "dateModified": p.get("updated", p.get("date")),
                "author": {"@type": "Organization", "name": sc["name"]}, "publisher": {"@type": "Organization", "name": sc["name"]},
@@ -1654,8 +1674,10 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
 <div class="tools" id="tools"><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="undo" title="되돌리기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></button><button type="button" class="tb ic" data-c="redo" title="다시 하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg></button><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
 <div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
-<p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 사진 오른쪽 위 ✕ 로 뺄 수 있어요.</p>
-<div id="thumbs" class="thumbs"></div>
+<p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 본문 사진을 누르면 크기 버튼과 ✕(빼기)가 나오고, 오른쪽 아래 동그라미를 끌면 비율 그대로 크기가 바뀌어요.</p>
+<div class="cover"><h3>대표 썸네일</h3><div id="cover-box" class="cover-box"></div>
+<p><label class="tb">사진 올리기<input id="cover-file" type="file" accept="image/*" hidden></label> <button type="button" class="tb" id="cover-del">빼기</button></p>
+<div id="thumbs" class="thumbs"></div></div>
 <p><button id="publish" class="btn">게시하기</button> <button id="cancel" class="btn ghost">목록으로</button> <span id="edit-msg" class="meta"></span></p></section>
 </div>
 <style>.inp{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
@@ -1670,18 +1692,25 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .tb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:14px;font-weight:600;padding:9px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}.tb svg{width:18px;height:18px}
 .rich{min-height:320px;line-height:1.8;font-size:17px;outline:none}.rich:empty::before{content:attr(data-ph);color:var(--muted)}
 .rich p,.rich div{margin:0 0 12px}.rich h2{font-size:21px;margin:18px 0 8px;color:var(--heading)}
-.rich figure{margin:14px 0;position:relative;user-select:none}.rich figure img{display:block;max-width:100%;border-radius:10px}
-.rich figure button{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:16px;cursor:pointer}
+.rich figure{margin:14px auto;position:relative;user-select:none;max-width:100%}.rich figure img{display:block;width:100%;border-radius:10px}
+.rich figure.sel{outline:2px solid var(--accent);outline-offset:3px;border-radius:10px}
+.rich figure .fx{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:16px;cursor:pointer}
+.rich figure .fsz{display:none;gap:4px;justify-content:center;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);white-space:nowrap}.rich figure.sel{margin-bottom:56px}.rich figure.sel .fsz{display:flex}
+.rich figure .fsz button{font:inherit;font-size:12.5px;padding:6px 10px;border-radius:99px;border:1px solid var(--line);background:var(--soft);color:var(--text);cursor:pointer}
+.rich figure .fh{position:absolute;right:-9px;bottom:-9px;width:24px;height:24px;border-radius:50%;background:var(--accent);border:3px solid var(--card);cursor:nwse-resize;display:none;touch-action:none}.rich figure.sel .fh{display:block}
+.cover{margin:18px 0;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.cover h3{margin:0 0 10px;font-size:16px}
+.cover-box img{display:block;width:100%;max-width:360px;aspect-ratio:16/9;object-fit:cover;border-radius:10px}.cover p{margin:10px 0 0;display:flex;gap:8px}
 .btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--grad);color:#fff;cursor:pointer;display:inline-block}
 .btn.ghost{background:var(--soft);color:var(--accent)}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
-.thumbs{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}.thumbs figure{margin:0;width:140px}.thumbs img{width:140px;height:90px;object-fit:cover;border-radius:8px}
-.thumbs label{font-size:12.5px;color:var(--muted)}
+.thumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 0}.thumbs .meta{flex:1 0 100%}
+.thumbs button{padding:0;border:2px solid transparent;border-radius:10px;background:none;cursor:pointer}.thumbs button.on{border-color:var(--accent)}
+.thumbs img{display:block;width:96px;height:64px;object-fit:cover;border-radius:8px}
 @media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
 #setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
 .plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.pend li{font-size:14px;color:var(--muted)}.pend li.bad{color:#e5484d}.plist button{margin:0;padding:8px 14px}
 .tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;top:0;margin:0 -16px 8px;padding:8px 16px}.tools::-webkit-scrollbar{display:none}.tools>*{flex:none}
 .pal{position:fixed;top:auto;left:16px;right:16px;bottom:90px;justify-content:center}.rich{min-height:45vh;font-size:17px;padding:14px}
-.thumbs figure,.thumbs img{width:calc((100vw - 56px)/3)}.thumbs img{height:auto;aspect-ratio:3/2}
+.thumbs img{width:calc((100vw - 90px)/3);height:auto;aspect-ratio:3/2}
 #v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
 #v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
 .plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
@@ -2033,7 +2062,8 @@ def editor_inbox():
                     if b[:3] == b"\xff\xd8\xff" and len(b) < 8_000_000:  # JPEG 만
                         (POSTS_DIR / "img" / n).write_bytes(b)
             imgs = [n for n in imgs if (POSTS_DIR / "img" / n).exists()]
-            cover = post.get("cover") if str(post.get("cover", "")).removeprefix("img/") in imgs else (f"img/{imgs[0]}" if imgs else "")
+            want = str(post.get("cover") or "")
+            cover = want if want.removeprefix("img/") in imgs else ("" if post.get("noCover") else (f"img/{imgs[0]}" if imgs else ""))
             fmt = "html" if post.get("format") == "html" else "md"
             body = str(post.get("body", ""))[:300000]
             clean = {"id": pid, "title": str(post["title"])[:200], "format": fmt,
