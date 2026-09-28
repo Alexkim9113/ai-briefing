@@ -228,8 +228,8 @@ def summarize(desc, title):
     return out
 
 
-def is_ai_related(item, keywords):
-    blob = (item["title"] + " " + clean_text(item["desc"])[:400]).lower()
+def is_ai_related(item, keywords, title_only=False):
+    blob = (item["title"] if title_only else item["title"] + " " + clean_text(item["desc"])[:400]).lower()
     for k in keywords:
         k = k.lower()
         if k.isascii() and len(k) <= 3:
@@ -391,7 +391,7 @@ def collect(fixtures=None, now=None):
                         continue
                 elif d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
                     continue
-                if src.get("keywords") and not is_ai_related(it, src["keywords"]):
+                if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
                     continue  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
                 if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
                     continue
