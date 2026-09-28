@@ -1,0 +1,16 @@
+name: AI 모델 확인(임시)
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+        run: |
+          curl -sS -m 60 "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" -H "x-goog-api-key: $GEMINI_KEY" | python3 -c "
+          import json,sys;d=json.load(sys.stdin)
+          if 'error' in d: print(d['error']); sys.exit()
+          for m in d.get('models',[]):
+              if 'generateContent' in m.get('supportedGenerationMethods',[]): print(m['name'])"
