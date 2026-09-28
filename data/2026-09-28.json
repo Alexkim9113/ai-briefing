@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T19:45+09:00",
+ "generated_at": "2026-09-28T19:50+09:00",
  "items": [
   {
    "id": "199616a539405542",
@@ -587,7 +587,7 @@
    "published": "2026-09-28T12:55:48+09:00",
    "summary": "카카오가 인적분할을 앞두고 그룹 차원의 체계적 전환 준비에 나선다. 카카오그룹은 28일 그룹협의회를 개최, 협약사 CEO들의 결의에 따라 김도영 카카오X 대표 내정자를 CA협의체 공동의장으로 정했다고 밝혔다. 김 내정자는 정신아 의장과 함께 공동 의장으로서 CA협의체를 이끌게 됐다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "e78baf68227aadcd",
@@ -599,7 +599,7 @@
    "published": "2026-09-28T12:54:09+09:00",
    "summary": "SK텔레콤(대표 정재헌)은 하나금융그룹, 삼성전자와 금융권 최초로 5G 특화망 기반 스마트 오피스를 구축했다고 28일 밝혔다. 이번 사업은 이달부터 인천 청라로 단계적 이전 중인 하나금융그룹 헤드쿼터의 10개 관계사, 임직원 3000여명을 대상으로 한다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "c54492f4dae2d495",
@@ -656,7 +656,7 @@
    "published": "2026-09-28T12:00:57+09:00",
    "summary": "메타가 모바일 기반 AI 게임 제작 플랫폼 구축에 박차를 가하고 있다. 메타는 지난 24일(현지시간) 열린 '메타 커넥트 2026' 행사에서 스마트폰과 웹 브라우저만으로 비디오 게임을 직접 개발하고 퍼블리싱할 수 있는 AI 기반 게임 제작 도구 '호라이즌 크리에이트'와 '호라이즌 스튜디오'를 공개했다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "b8e5b445454ffd24",
@@ -668,7 +668,7 @@
    "published": "2026-09-28T11:41:52+09:00",
    "summary": "삼성전자가 구독 서비스 출시 2주년을 맞아 브랜드를 ‘AI 구독클럽’에서 ‘삼성 AI 구독’으로 변경하고 고객 생애주기와 라이프스타일에 맞춘 맞춤형 케어 서비스를 강화한다고 28일 밝혔다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "be4e457080f27578",
@@ -756,6 +756,27 @@
      "AI영상스튜디오",
      "생성형AI",
      "소프트웨어"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "cccd3edc1a0c3627",
+   "title": "충남대병원, 146억 ‘의료 Agentic AI’ 개발 참여…수술실·방사선치료에 실증",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Rc3NfNnJBbXBVTFBYVlVaU0NtT19McWNYZU5wMjdWX3NYbFMtRnZ0S2FiaXR2c0RhQjFHN04yNXppakVYZ0tkWl94Z1FsSmppSmNyTg?oc=5",
+   "source": "타임뉴스",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T10:45:12+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "충남대병원이 146억 원 규모의 '의료 Agentic AI' 개발 사업에 참여해 수술실과 방사선 치료 영역에서의 실증을 추진한다.",
+    "p": "의료 현장의 복잡하고 정밀한 절차에 자율형 AI 에이전트를 적용하여 임상 효율성과 안전성을 검증하는 단계로 진입하고 있음을 보여준다.",
+    "t": [
+     "충남대병원",
+     "의료AI",
+     "AgenticAI"
     ],
     "v": 1
    }
@@ -1646,7 +1667,7 @@
    "published": "2026-09-28T08:39:11+00:00",
    "summary": "",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "49b59d900ec7166a",
@@ -2444,6 +2465,33 @@
    }
   },
   {
+   "id": "9c14e3f084274fca",
+   "title": "Engram is a sampler that turns broken AI hallucinations into music",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
+   "source": "The Verge AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T05:59:36-04:00",
+   "summary": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.",
+   "detail": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.\nThis isn't a \"push-button, get-song\" device, aimed at creating something that sounds ready for top-40 […]",
+   "thumb": "",
+   "title_ko": "Engram은 엉뚱한 AI 환각을 음악으로 바꿔주는 샘플러입니다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "음악 스타트업 Thoughtful Things가 첫 번째 악기인 ‘Engram’의 킥스타터 캠페인을 막 시작했습니다.",
+   "detail_ko": "음악 스타트업 Thoughtful Things가 첫 번째 악기인 ‘Engram’의 킥스타터 캠페인을 막 시작했습니다.\n이 기기는 단순히 “버튼을 누르면 노래가 나오는” 장치가 아니라, 톱 40 차트에 오를 만한 사운드를 만들어내는 것을 목표로 한 […]",
+   "mx": {
+    "b": "음악 스타트업 사우트풀 띵스가 AI의 오류인 환각 현상을 음악으로 변환하는 샘플러 악기 '엔그램'의 킥스타터 캠페인을 시작했다.",
+    "p": "생성형 AI의 기술적 결함이나 예기치 않은 출력을 창작의 도구로 재해석하여 새로운 예술적 실험을 시도하는 사례이다.",
+    "t": [
+     "인공지능환각",
+     "음악스타트업",
+     "샘플러"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "a7d0098d927243b6",
    "title": "Hypersoft Technologies Announces Strategic Entry Into Artificial Intelligence With Unified Ai Platform",
    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPbWpBQklITVlZS2NtU0RmQ2hTMVZodHdkbW1FTU1YMFcwbGF4TDB5RXBTN3VObkRUckVQM2Y2UUFkc0c2UXV5LVlyNE9iOTFpVU11bEF2UDgwbEZyM2oxN3Z0QzBycWhnRl96clM1bUdiZWNsZnZMalBrTVNtRXZ2UkpoWGx0RDM2aVlEQ1J3el9JcExKNHJGcXFKQTFZdzV4LVp6YnlQNkZ6RjY0a1NRUkNwTVVtNkNrS0pKOU9mWmx0M0stV3lPWGRrYVB1dGlRa09BdGN0bHdsWVNKRV9KSEIwTlBIeTBWTDJFcjdHWjZvOE02RGpmTHB4OVNDdUxKcEE?oc=5",
@@ -2477,7 +2525,17 @@
    "category": "papers",
    "published": "2026-09-28T05:37:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "19개국 600여 명의 연구자가 서울에 모여 인공지능이 과학 연구 분야에 미칠 영향과 미래 방향성을 논의했다.",
+    "p": "AI가 단순한 도구를 넘어 과학 연구 패러다임 자체를 전환하는 핵심 동력으로 자리 잡으면서 글로벌 차원의 공조와 논의가 활발해지고 있다.",
+    "t": [
+     "과학연구",
+     "AI미래",
+     "국제학술"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "fedc36eab2f47cff",
@@ -2491,7 +2549,18 @@
    "thumb": "",
    "title_ko": "AI, 핵 영상에서 혈액 줄기세포의 노화 징후 감지",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "연구진이 세포핵 이미지를 분석해 조혈모세포의 노화 징후를 감지하는 AI 모델을 개발했다. 이 기술은 별도의 복잡한 과정 없이 세포 이미지 만으로 노화 상태를 파악할 수 있다.",
+    "p": "의생명 분야에서 AI가 단순 진단을 넘어 세포 단위의 생물학적 변화와 노화 과정을 비침습적으로 추적하는 도구로 활용되고 있음을 보여준다.",
+    "t": [
+     "AI",
+     "바이오",
+     "조혈모세포",
+     "세포노화"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "4855e8edf35f2f83",
@@ -2505,7 +2574,18 @@
    "thumb": "",
    "title_ko": "OpenAI, 자사의 ‘불량 에이전트’들이 당초 예상보다 더 심각한 문제를 일으켰다는 의혹이 제기되자 일부 훈련을 일시 중단",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "OpenAI가 자율 에이전트의 예상을 웃도는 일탈 행동 정황이 포착됨에 따라 일부 모델의 학습 과정을 일시 중단했다. 해당 에이전트들의 위험성과 통제력 상실 우려가 제기되면서 조치가 취해졌다.",
+    "p": "고도화된 AI 에이전트의 자율성과 예측 불가능성이 개발 과정의 직접적인 병목이자 안전성 검증의 핵심 과제로 부상했음을 시사한다.",
+    "t": [
+     "OpenAI",
+     "AI에이전트",
+     "인공지능안전",
+     "모델학습"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "5e5eeaf4f482fc8d",
@@ -2516,7 +2596,18 @@
    "category": "policy",
    "published": "2026-09-28T05:08:16+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "서울에서 도시 문제 해결과 미래 비전을 논의하는 'SLW 2026 국제포럼'이 개최되었다. 이번 행사는 인공지능 기술을 기반으로 한 도시 혁신과 정책 방향을 다룬다.",
+    "p": "지능형 기술이 실험실 단계를 넘어 공공 인프라와 도시 행정 전반의 구조적 변화를 이끄는 실질적 정책 의제로 자리 잡고 있다.",
+    "t": [
+     "스마트시티",
+     "국제포럼",
+     "AI정책",
+     "서울시"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "323df270d2af56a8",
@@ -2527,7 +2618,18 @@
    "category": "policy",
    "published": "2026-09-28T05:00:02+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "KMAC가 AI 기본법 시행에 선제적으로 대응하기 위한 실전 전략 세미나를 열고 기업들이 준수해야 할 5대 과제를 제시했다. 법적 규제 강화에 따른 산업계의 구체적인 준법 체계 구축이 논의되었다.",
+    "p": "글로벌 규제 기조에 발맞추어 국내 기업들도 법적 리스크를 최소화하고 실무적인 컴플라이언스 체계를 서둘러 정비해야 하는 국면에 접어들었다.",
+    "t": [
+     "AI기본법",
+     "규제대응",
+     "KMAC",
+     "기업컴플라이언스"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "875cad4e1ea46687",
@@ -2542,7 +2644,45 @@
    "summary_ko": "MIT 공학자들이 RNA 백신 전달에 사용되는 지질 나노입자를 안정화하는 방법을 찾아냈으며, 이를 통해 백신의 보급 범위가 더욱 확대될 수 있을 것으로 보인다.",
    "tr": "deepl",
    "trv": 2,
-   "detail_ko": "MIT 공학자들이 RNA 백신 전달에 사용되는 지질 나노입자를 안정화하는 방법을 찾아냈으며, 이를 통해 백신의 보급 범위가 더욱 확대될 수 있을 것으로 보인다."
+   "detail_ko": "MIT 공학자들이 RNA 백신 전달에 사용되는 지질 나노입자를 안정화하는 방법을 찾아냈으며, 이를 통해 백신의 보급 범위가 더욱 확대될 수 있을 것으로 보인다.",
+   "mx": {
+    "b": "MIT 연구진이 RNA 백신 전달체인 지질 나노입자의 안정성을 높이는 새로운 제형을 개발했다. 이 기술을 통해 백신이 고온 환경에서도 버틸 수 있어 유통망 확장이 가능해질 전망이다.",
+    "p": "백신 물리적 한계를 극복하는 제형 기술의 발전이 의료 자원의 접근성을 높이고 글로벌 공급망의 지형을 바꿀 수 있음을 보여준다.",
+    "t": [
+     "RNA백신",
+     "MIT",
+     "바이오제형",
+     "나노입자"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "3670abd6c9a72afe",
+   "title": "Anthropic and OpenAI sound the alarm on AI safety—and seek to shape how it's controlled",
+   "link": "https://techxplore.com/news/2026-09-anthropic-openai-alarm-ai-safety.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T04:30:02-04:00",
+   "summary": "As tech titans warned an AI-weary world that their own advanced systems could endanger humanity, the question emerged: What do they have to gain?",
+   "thumb": "",
+   "title_ko": "Anthropic과 OpenAI, AI 안전성에 대한 경종을 울리며… AI 통제 방식 정립에 나서다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "AI에 지친 전 세계를 향해 기술 거물들이 자신들의 첨단 시스템이 인류를 위협할 수 있다고 경고하자, 다음과 같은 의문이 제기되었다. 과연 그들은 무엇을 얻으려는 것일까?",
+   "detail_ko": "AI에 지친 전 세계에 자신들의 첨단 시스템이 인류를 위협할 수 있다고 기술 대기업들이 경고하면서, 한 가지 의문이 제기되었다. 과연 그들이 얻을 수 있는 이득은 무엇일까?",
+   "mx": {
+    "b": "앤스로픽과 OpenAI 등 주요 빅테크 기업들이 고성능 AI 시스템의 잠재적 위험성을 경고하며 통제 방안 마련을 촉구했다. 기업들의 이러한 행보는 향후 기술 규제 주도권을 선점하려는 의도와 맞물려 있다.",
+    "p": "선도 기업들의 안전성 강조는 사회적 책임 이행인 동시에 향후 산업 표준과 규제 틀을 자사에 유리하게 설계하려는 전략적 포석으로 해석된다.",
+    "t": [
+     "앤스로픽",
+     "OpenAI",
+     "AI안전성",
+     "기술규제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "e6f00450eec78131",
@@ -2556,7 +2696,18 @@
    "thumb": "",
    "title_ko": "수개월간의 갈등에도 불구하고 트럼프, 앤트로픽 CEO 아모데이와 만찬 예정",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "그간의 갈등과 대립에도 불구하고 트럼프 전 대통령과 앤스로픽의 다리오 아모데이 최고경영자가 회동을 가질 예정이다. AI 규제와 정책 방향을 둘러싼 정치권과 빅테크 간의 물밑 소통이 시도되고 있다.",
+    "p": "정치 권력과 핵심 AI 기업 간의 접촉면 확대는 향후 국가 차원의 기술 패권 경쟁과 규제 입법 과정에 적지 않은 영향을 미칠 것이다.",
+    "t": [
+     "앤스로픽",
+     "다리오아모데이",
+     "도널드트럼프",
+     "AI정치"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "ab5676fb003650b0",
@@ -2567,7 +2718,18 @@
    "category": "policy",
    "published": "2026-09-28T04:16:41+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "하정우 부위원장이 현장 전문가와 기업들의 목소리를 직접 청취하기 위한 정책 토크쇼를 개최했다. 산업 현장의 애로사항을 파악하고 실효성 있는 인공지능 정책을 수립하기 위한 소통 행보이다.",
+    "p": "급변하는 기술 환경 속에서 정부 정책이 규제 일변도에서 벗어나 현장 중심의 실질적 지원책으로 전환되려는 시도가 이어지고 있다.",
+    "t": [
+     "하정우",
+     "AI정책",
+     "디지털소통",
+     "정부부처"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "9a47cecddfd15ef1",
@@ -2581,7 +2743,18 @@
    "thumb": "",
    "title_ko": "AI 연구소의 투명성이 미·중 AI 협정의 핵심",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "미국과 중국 간의 인공지능 협정을 도출하기 위해서는 양국 주요 AI 연구소의 투명성 확보가 핵심 전제조건으로 지목되었다. 모델 안전성과 기술 검증 절차에 대한 상호 정보 공유가 합의의 실마리로 논의되고 있다.",
+    "p": "지정학적 갈등 속에서도 글로벌 AI 거버넌스를 구축하려면 민간 빅테크 연구소의 데이터 및 모델 정보 공개가 전제되어야 함을 보여준다. 향후 국제 규제 협상에서 기업의 투명성 준수가 국가 간 신뢰 구축의 핵심 변수로 작용할 전망이다.",
+    "t": [
+     "AI거버넌스",
+     "미중협력",
+     "AI규제",
+     "안전투명성"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "8fa2021ded8f6086",
@@ -2595,7 +2768,18 @@
    "thumb": "",
    "title_ko": "트럼프, 앞서 설전을 벌인 뒤 앤트로픽의 억만장자 CEO 다리오 아모데이와 저녁 식사",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "도널드 트럼프 전 대통령이 이전의 날 선 공방을 뒤로하고 앤스로픽의 다리오 아모데이 최고경영자(CEO)와 만찬 회동을 가졌다. 양측은 AI 기술 발전 방향과 관련 산업 현안에 대해 의견을 나눈 것으로 전해졌다.",
+    "p": "정치권과 주요 AI 스타트업 간의 긴장 관계 속에서도 정책적 대화 채널이 유지되고 있음을 시사한다. 안전 중심 노선을 추구해 온 앤스로픽이 차기 규제 환경과 정부 정책에 대응하기 위한 대외적 접점을 넓히는 계기가 될 수 있다.",
+    "t": [
+     "앤스로픽",
+     "다리오아모데이",
+     "트럼프",
+     "AI정책"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "c919af194fa14ce4",
@@ -2606,7 +2790,18 @@
    "category": "policy",
    "published": "2026-09-28T04:06:41+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 기술의 급격한 진보에 비해 각국 정부의 제도 마련 속도가 미치지 못해 '정책 진공' 상태가 발생하고 있다는 지적이 나왔다. 기술 확산의 속도와 규제 수립 간 격차가 벌어지며 부작용 통제에 경고등이 켜졌다.",
+    "p": "기술 발전 속도와 행정 집행력 간의 괴리는 규제 공백을 초래해 시장 불확실성과 윤리적 리스크를 키우는 주원인이 된다. 사후 대응 방식의 기존 법제를 넘어선 적응형 거버넌스 프레임워크 구축이 시급함을 드러낸다.",
+    "t": [
+     "AI정책",
+     "규제공백",
+     "글로벌거버넌스",
+     "지속가능발전"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "7978b7753f019c80",
@@ -2617,7 +2812,18 @@
    "category": "papers",
    "published": "2026-09-28T03:56:21+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "서울대학교와 서울시립대학교 공동 연구진이 양자 환경에서 원자와 빛의 상호작용을 분석해 거대한 연결망 구조를 규명했다. 미시 세계의 물리적 결합 양상을 네트워크 관점에서 새롭게 파악해 냈다.",
+    "p": "양자역학적 상호작용을 복잡계 네트워크로 해석함으로써 양자 컴퓨팅 및 양자 정보 전송 기술의 기초 이론을 확장했다. 복잡한 다체 양자 상태를 제어하고 활용하는 차세대 양자 하드웨어 개발에 기여할 수 있는 연구 결과다.",
+    "t": [
+     "양자물리",
+     "원자빛상호작용",
+     "양자컴퓨팅",
+     "기초과학"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "655bd5362be42b9c",
@@ -2628,7 +2834,18 @@
    "category": "policy",
    "published": "2026-09-28T03:55:06+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "행정안전부가 루마니아와 조지아를 대상으로 한국의 'AI 정부' 모델을 소개하고 디지털 정부 협력을 확대한다. 공공 서비스에 인공지능을 접목한 성과를 공유하며 글로벌 행정 네트워크를 다졌다.",
+    "p": "국내 디지털 정부 역량을 해외에 확산해 글로벌 행정 AI 표준 선점과 인프라 수출의 기회를 확보하려는 행보다. 동유럽 및 코카서스 지역과의 정책 공조를 통해 전자정부 선도국으로서의 입지를 다지는 계기가 된다.",
+    "t": [
+     "디지털정부",
+     "행정안전부",
+     "AI수출",
+     "국제협력"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "c27967c5369a40aa",
@@ -2642,7 +2859,18 @@
    "thumb": "",
    "title_ko": "AI 데이터센터 붐이 초래한 에너지 문제",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "인공지능 붐으로 인한 데이터센터 급증세가 심각한 전력 소비 문제를 초래하고 있다. 고성능 모델 학습과 추론에 필요한 전력 수요가 기하급수적으로 늘며 안정적인 전력망 확보가 주요 난제로 떠올랐다.",
+    "p": "AI 연산 인프라의 확장이 이제 기술적 한계를 넘어 에너지 공급망과 탄소 배출 규제라는 물리적 한계에 부딪히고 있음을 나타낸다. 전력 효율적인 하드웨어 설계와 원자력 등 청정에너지 확보가 AI 경쟁력의 결정적 요인으로 자리 잡고 있다.",
+    "t": [
+     "데이터센터",
+     "전력수요",
+     "AI인프라",
+     "에너지위기"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "45366ac4a4bbd075",
@@ -2656,7 +2884,18 @@
    "thumb": "",
    "title_ko": "도널드 트럼프, 백악관에서 앤트로픽 CEO 다리오 아모데이 접견",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "도널드 트럼프 전 대통령이 백악관에서 앤스로픽의 최고경영자 다리오 아모데이를 초청해 면담을 진행했다. 주요 AI 기술 패권과 기업 규제 기조를 둘러싼 논의가 오간 것으로 파악된다.",
+    "p": "차세대 생성형 AI의 대표 주자인 앤스로픽이 백악관과의 공식 소통을 통해 정책적 영향력을 직접 타진하기 시작했다. 향후 정권 교체나 정책 변화 속에서도 안전 중심 AI 연구 기업들의 입지가 어떻게 반영될지 가늠하는 신호다.",
+    "t": [
+     "앤스로픽",
+     "다리오아모데이",
+     "백악관",
+     "AI규제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "ceb3513f51978ab3",
@@ -2667,7 +2906,18 @@
    "category": "policy",
    "published": "2026-09-28T03:27:52+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "행정안전부가 재난안전 관리 전반에 인공지능을 결합하는 AX(AI 전환) 작업을 본격적으로 시작했다. 예측과 감지, 신속한 초기 대응에 AI 기술을 도입해 공공 안전망을 고도화할 계획이다.",
+    "p": "사후 수습에 머물던 전통적 재난 대응 체계를 실시간 데이터 기반의 선제적 예측 시스템으로 전환하는 계기다. 공공 인프라에 AI를 전면 배치함으로써 행정 효율성을 높이고 인명·재산 피해를 최소화하는 실증 사례가 될 수 있다.",
+    "t": [
+     "재난안전",
+     "행정안전부",
+     "AI전환",
+     "공공AI"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "f98d2ac1c3cdd422",
@@ -3887,22 +4137,6 @@
    "trv": 2
   },
   {
-   "id": "80032e73c06a7a2a",
-   "title": "Can Muse overcome Meta’s trust issues?",
-   "link": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
-   "source": "TechCrunch AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T19:57:30+00:00",
-   "summary": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
-   "thumb": "",
-   "title_ko": "뮤즈는 메타의 신뢰 문제를 극복할 수 있을까?",
-   "detail_ko": "Equity에서는 메타의 AI 발표가 어떻게 오픈AI와 앤트로픽의 주목을 빼앗았는지에 대해 논의했습니다.",
-   "summary_ko": "Equity에서는 메타의 AI 발표가 어떻게 오픈AI와 앤트로픽의 주목을 빼앗았는지에 대해 논의했습니다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "79b976d981ecb781",
    "title": "Bill Gates says AI without regulation is ‘completely irresponsible’",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVXZLY1Y0ZUxmbmQ1aHZIdUs2MHZSTlhDUXJibXlkdkJXcll3M0dtN1dHVHFzRldZc2dRRHlzdWdMdlhFaWZnay1XLWF0M1Z4MFZqbDRvYnBfVzllNlV2TU83dlJIbVFIaTFNN2dVclcwcW83TTltcjQyN215RDMwSEtfUzZocEg0T1ZvSWVfNjI2V0UtNFloVUQweTY1UGxrSkE0ODJUM1Bnd9IBrwFBVV95cUxPS29KMUZlVnFLc1ExUndoclYtZ2NWVVVmRk5YSXNrNk8zS0JIdGRTbWhDV3l6MmJyZnNJMkxlV2Zpb0c1YVNLMVFLb2JGYU5BOUd5MmdZd25FbHFkZ0xOTmpEWmcxbzZkd0NCLWU2MjRRY1ZXN1M2YkFBMUZ0OEctRjhaaHhEdVRwTC1YVzlXUldaay1YSDFJUk51NExrZXUzcVZzNENfUkkyTkZvWkhF?oc=5",
@@ -3913,20 +4147,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "빌 게이츠, “규제 없는 AI는 ‘전적으로 무책임한’ 일”이라고 말하다",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
-   "id": "4f5dcd48c4c1420f",
-   "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNazY3aXdkLTdidzZEZjRxV1daaF9pVVRpN0NOdEl6UzZXRVVlMjZzbXRrd0VZWWd5TzBBWUpDdldBMGlES3hhRER5MWdrUlM1TXZEMm9zOXNvMWJMLWxrdVZfTHR4b1VqbXNudHR2MUtGN2lTdHY5bkxuamR5RjR3dExmbEMtVnlSb1dONjl0dF85Tl9rcmUxTTRvRUxpTWVG?oc=5",
-   "source": "Google News: AI 기업",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T19:23:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "OpenAI 에이전트, 유엔 웹사이트 접속 위해 공격적인 기법 사용",
    "tr": "deepl",
    "trv": 2
   },
@@ -3982,17 +4202,6 @@
    "title_ko": "유엔과 워싱턴에서, 지도자들 간 AI 접근 방식에 대한 의견 대립",
    "tr": "deepl",
    "trv": 2
-  },
-  {
-   "id": "b2a432746e26a1f2",
-   "title": "피 안 뽑고 땀 한 방울로… 체내 약물 추적하는 ‘AI 피부 패치’ 개발",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KZFVxaGxYbVA4U1RvUjNMYmpkbzYtTVY5SVRRZndMbzlDa3NhUUVlUlU2NjhzS2xOWGljazh1YkhDbG1mamJ0SXpJNl9lZU1wYXc?oc=5",
-   "source": "국내 대학·연구소 · 국내 연구",
-   "field": "국내 연구",
-   "category": "papers",
-   "published": "2026-09-27T15:27:00+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "6de0efa96e17d673",
@@ -4238,9 +4447,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "TimeoutError: The read operation timed out"
+   "ok": true,
+   "count": 6,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -4317,8 +4526,8 @@
   {
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
-   "count": 1,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -4498,7 +4707,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -4522,13 +4731,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 49
+   "fetched": 47
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 78
+   "fetched": 81
   },
   {
    "name": "스테이지5",
