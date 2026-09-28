@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T21:51+09:00",
+ "generated_at": "2026-09-28T21:53+09:00",
  "items": [
   {
    "id": "f90a24c132fea45e",
@@ -2175,6 +2175,20 @@
    "published": "2026-09-28T11:03:47+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "9caae00cb5b5a09c",
+   "title": "AI agents promise to do everything for you. There may be a big wrinkle in that plan",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBJeG9LaUIzTUU4MnRiMGNlSTFfSDZKQ25iU3FEWWVVUE02TDlZSjdOU1FqczhnRlVQUy1xS3d1RUU2MGJ5WkxHcXc4R2ZieFl0Tlc1NVZ0S2FRNnhTZ0xhYy1BdVZacmktRmVVTG1EMA?oc=5",
+   "source": "CNN",
+   "field": "에이전트",
+   "category": "news_global",
+   "published": "2026-09-28T11:00:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 에이전트는 여러분을 위해 모든 것을 해줄 것이라고 약속합니다. 하지만 그 계획에는 큰 걸림돌이 있을 수 있습니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "ca6d89c27fc0a2e0",
@@ -4845,6 +4859,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "222c66d36dddb166",
+   "title": "일본 중고책 50t이 왜 미국으로?…헌책방 큰손 된 AI",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tVmRQU3NfMW9oTFg3ME8xZEFoc25oSE9GNldlcGUtLWhoY3hXdVBIMjRJOUt4dVoxd2tFSVd6NDNHbzNLME0zWmFzdzVHcXJSalNWcU1R?oc=5",
+   "source": "중앙일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:42:13+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "295c8e6fc3bcd548",
@@ -8831,32 +8856,6 @@
    }
   },
   {
-   "id": "d8e2ea86004e3e18",
-   "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
-   "link": "https://www.zdnet.com/innovation/microsoft-new-copilot-unified-ai-app/",
-   "source": "ZDNET AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-25T12:00:14+00:00",
-   "summary": "Microsoft says Copilot has gotten ‘actually really good.’ The new app has AI agents and can write code. So how much is all this going to cost?",
-   "thumb": "",
-   "title_ko": "마이크로소프트의 새로운 ‘코파일럿’ 앱, 모든 기능을 한곳에 모았지만 가격은 ‘변화 중’",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "마이크로소프트는 코파일럿이 ‘정말 꽤 괜찮아졌다’고 밝혔습니다. 이 새로운 앱에는 AI 에이전트가 탑재되어 있으며 코드를 작성할 수도 있습니다. 그렇다면 이 모든 기능의 비용은 얼마나 될까요?",
-   "detail_ko": "마이크로소프트는 코파일럿이 ‘정말 훌륭해졌다’고 밝혔습니다. 이 새로운 앱에는 AI 에이전트가 탑재되어 있으며 코드를 작성할 수 있습니다.\n그렇다면 이 모든 데 드는 비용은 얼마나 될까요?",
-   "mx": {
-    "b": "마이크로소프트가 에이전트 기능과 코드 작성 능력을 통합한 새로운 코파일럿 앱을 공개했으나 가격 정책은 유동적인 상태다.",
-    "p": "다양한 AI 에이전트 기능을 단일 플랫폼으로 통합하는 생태계 경쟁이 격화되는 동시에 수익화 모델 구축을 고민하는 단면을 보여준다.",
-    "t": [
-     "마이크로소프트",
-     "코파일럿",
-     "AI에이전트"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "e58cbdc1b9c75977",
    "title": "Anthropic’s AI biolab finds ‘CRISPR-like’ DNA in viruses. What’s next?",
    "link": "https://www.nature.com/articles/d41586-026-03039-6",
@@ -9268,13 +9267,20 @@
    "title": "청년변호사단체 새변, 미래헌법포럼 숙의토론 ‘참정권과 미래헌법’",
    "link": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988",
    "source": "로리더",
-   "field": "",
+   "field": "법률",
    "category": "news_ko",
    "published": "2026-09-21T09:54:31+09:00",
    "summary": "[로리더] ‘새로운 미래를 위한 청년변호사 모임(새변)’이 17일 이화여자대학교 앞 스투디아B에서 미래헌법포럼 숙의토론 ‘참정권과 미래 헌법’을 개최했다. 이번 토론은 지난 6월 3일 선거관리 실패 이후 제기된 참정권 문제를 구체적으로 논의하기 위해 마련됐다.",
    "detail": "[로리더] ‘새로운 미래를 위한 청년변호사 모임(새변)’이 17일 이화여자대학교 앞 스투디아B에서 미래헌법포럼 숙의토론 ‘참정권과 미래 헌법’을 개최했다.\n이번 토론은 지난 6월 3일 선거관리 실패 이후 제기된 참정권 문제를 구체적으로 논의하기 위해 마련됐다.\n제1회 미래헌법포럼에서 다룬 여섯 개 분야 중 참정권 분야의 후속 논의다.\n김용태 국민의힘 국회의원과 한국청년입법정책학회, 신촌 연합 토론 동아리 아우름(서강대ㆍ연세대ㆍ이화여대)이 공동주최했다.",
    "thumb": "",
-   "pin": true
+   "pin": true,
+   "note": "토론에 AI 플랫폼을 활용해 참정권과 미래 헌법을 논의했다",
+   "tags_fixed": [
+    "헌법",
+    "변호사",
+    "AI",
+    "참정권"
+   ]
   },
   {
    "id": "409ed6e622c5fe69",
@@ -9591,7 +9597,7 @@
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -9674,14 +9680,14 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "fetched": 10
   },
   {
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 42
+   "fetched": 40
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -9693,7 +9699,7 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 76
+   "fetched": 74
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
@@ -9705,7 +9711,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 76
+   "fetched": 77
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -9717,7 +9723,7 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
@@ -9741,13 +9747,13 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 53
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 56
   },
   {
    "name": "VentureBeat AI",
@@ -9933,7 +9939,7 @@
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 49
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
@@ -10053,7 +10059,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "아주경제",
@@ -10107,7 +10113,7 @@
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 19
+   "fetched": 20
   },
   {
    "name": "주제: 경제 · 경제",
@@ -10125,7 +10131,7 @@
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "주제: 로봇 · 로봇",
@@ -10149,13 +10155,13 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -10173,7 +10179,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 53
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -10191,13 +10197,13 @@
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 39
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -10221,7 +10227,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 470
+   "fetched": 469
   },
   {
    "name": "프레시안",
