@@ -457,6 +457,8 @@ def make_item(src, it, keywords, now):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
     if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only")):
         return None
+    if src.get("url", "").startswith("https://news.google.com"):
+        it = {**it, "desc": ""}  # 구글 뉴스 소개글은 여러 언론사 제목을 이어 붙인 것이라 요약으로 쓰지 않는다
     summary = summarize(it["desc"], title)
     detail = detail_lines(it["desc"], title, summary)
     return {
@@ -548,6 +550,11 @@ def collect(fixtures=None, now=None):
     # 오늘 이미 올린 글을 먼저 두고, 새 글은 그것들·서로와 겹치지 않을 때만 더한다
     old = json.loads(path.read_text(encoding="utf-8"))["items"] if path.exists() else []
     old = [i for i in old if not ("youtube.com" in i["link"] and is_youtube_short(i["link"], fixtures))]
+    for i in old:  # 예전에 구글 뉴스 소개글로 만든 요약은 지운다(여러 언론사 제목을 이어 붙인 것이라)
+        if "news.google.com" in i["link"] and i.get("summary"):
+            i["summary"] = ""
+            for k in ("detail", "summary_ko", "detail_ko"):
+                i.pop(k, None)
     new = sorted(results, key=lambda x: x["published"] or "", reverse=True)
     today_seen, uniq = Deduper(), []
     for it in old + new:
@@ -1952,8 +1959,7 @@ def render_home(data, cats, posts):
         parts.append(
             f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
             f'{thumb_html(hero, "", used)}{meta_html(hero, cats, True)}{summ}'
-            f'<div class="actions"><button type="button" class="read" data-brief>요약 보기 →</button>'
-            f'<button class="circle share" data-url="{esc(hero["link"])}" data-title="{esc(hero["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div></div>'
+            f'</div>'
             f'<aside><div class="side-h"><h2>주요 소식</h2><a href="#all" data-tab="all">전체 보기</a></div>{side}</aside></div>')
     if posts:
         parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터</h2><a href="editor/">전체 보기 →</a></div>'
@@ -2080,7 +2086,7 @@ def ticker_items(items, n=14):
     top = [x for x in [hero, *trend] if x]
     ids = {x["id"] for x in top}
     rest = sorted((x for x in items if x["id"] not in ids), key=lambda x: x.get("published") or "", reverse=True)
-    return [{"t": x.get("title_ko") or x["title"], "u": x["link"], "c": INTRO_COLORS.get(x["category"], DEFAULT_TINT)}
+    return [{"t": x["title"], "u": x["link"], "c": INTRO_COLORS.get(x["category"], DEFAULT_TINT)}
             for x in (top + rest)[:n]]
 
 
