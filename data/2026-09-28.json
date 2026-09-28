@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:41+09:00",
+ "generated_at": "2026-09-28T12:44+09:00",
  "items": [
   {
    "id": "c54492f4dae2d495",
@@ -87,6 +87,17 @@
    "field": "",
    "category": "news_global",
    "published": "2026-09-28T03:29:55+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6f8075c506f73a26",
+   "title": "서울대병원, 비후성 심근증 좌심방 4단계 병기 개발…심방세동 위험 예측",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqWm94YXdKYklULTlJSXkwWkZQd0Ftc2RTMEtSLVhqMy0tTXFpLXN0bzZEbm5RSmtnMEZIbkdaYkl0UUh4N2RUdlFicnhyQ0hoY2RrRU02MVZ0TmJWY1RMd2VFWU1JT1pU?oc=5",
+   "source": "국내 대학·연구소 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T03:06:55+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -764,6 +775,17 @@
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-28T00:38:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "f561c97939ba300f",
+   "title": "Healthcare executives are still investing in tech as AI’s bill comes due, survey finds",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTFI5OVZQSU9PRzlKMzRRc3hJOTJqUVdKdGdLMXM2bXBmZnIyY0dmdjRBdkEwVnNOOHZrRFVqRlJFdW1sSGxJdFRvWFVIR1JGaEU5aHNKT19qRC1kdXJub2VwN0tSUFhjaHRZSUZfZTFndVBVOW5ZNDlUdjBVYzV6dDRVMnQzZ2NpN01YUVFXMnpaS3hrTTA5TEgtdnpKS2dhUnIwMC1VRWg1R3M5Wmp0OE5qNngwTHpkWFk1WDhNRHczWGphRG45TW1mSWk?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T00:37:48+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2087,18 +2109,6 @@
    "title_ko": "더 많은 AI 데이터 센터가 답이 아닌 이유 | 디미트리오스 니콜로풀로스 | TEDxMidAtlantic"
   },
   {
-   "id": "628bf226559af6e2",
-   "title": "Appeals Court Lets the Pentagon Designate Anthropic a Supply-Chain Risk",
-   "link": "https://www.wired.com/story/appeals-court-lets-the-pentagon-designate-anthropic-a-supply-chain-risk/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-25T16:58:20+00:00",
-   "summary": "The AI lab had argued multiple violations of its rights, but a divided panel of judges sided with the Trump administration.",
-   "thumb": "",
-   "title_ko": "항소 법원, 국방부가 인류를 공급망 위험으로 지정하도록 허용"
-  },
-  {
    "id": "e3aa7d4c7b1120c7",
    "title": "MIT students gain a humanist lens on technical innovation in Tulsa, Oklahoma",
    "link": "https://news.mit.edu/2026/mit-students-gain-humanist-lens-technical-innovation-tulsa-oklahoma-0925",
@@ -2393,17 +2403,6 @@
    "thumb": ""
   },
   {
-   "id": "860d76a3788f02fe",
-   "title": "RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling",
-   "link": "https://huggingface.co/papers/2609.22947",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-18T20:00:00+00:00",
-   "summary": "Reinforcement learning (RL) is vital for optimizing video generation models, with a robust reward model (RM) serving as the cornerstone.",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -2603,13 +2602,13 @@
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 30
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2740,8 +2739,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2771,7 +2770,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 42
+   "fetched": 43
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
