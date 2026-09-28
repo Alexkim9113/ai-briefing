@@ -116,15 +116,11 @@ def parse_feed(raw):
                     link = l.get("href", "")
                     break
             desc = text_of(e, "summary") or text_of(e, "content")
-            thumb = ""
             group = child(e, "group")  # YouTube media:group
             if group is not None:
                 desc = desc or text_of(group, "description")
-                t = child(group, "thumbnail")
-                if t is not None:
-                    thumb = t.get("url", "")
             items.append({"title": text_of(e, "title"), "link": link, "desc": desc,
-                          "date": text_of(e, "published", "updated"), "thumb": thumb})
+                          "date": text_of(e, "published", "updated"), "thumb": ""})
     else:  # RSS 2.0 / RDF
         nodes = root.iter()
         for e in nodes:
@@ -268,8 +264,7 @@ def collect(fixtures=None, now=None):
                     "id": iid, "title": title, "link": it["link"], "source": src["name"],
                     "category": src["category"], "published": d.isoformat() if d else None,
                     "summary": summarize(it["desc"], title),
-                    # 저작권 보호: 기사·논문 사진은 쓰지 않고, 공유용으로 제공되는 유튜브 공식 썸네일만 사용
-                    "thumb": it.get("thumb", "") if src["category"] == "youtube" else "",
+                    "thumb": "",  # 저작권 보호: 원본의 썸네일·사진은 수집하지 않는다(표지는 자체 제작 디자인)
                 })
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
                     break
@@ -446,7 +441,7 @@ def page(title, body, base="", cats=None, search=True):
 <style>{CSS}</style></head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>AI 브리핑</span></a><nav>{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 기사 사진은 사용하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
+<footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
 <script>{JS}</script></body></html>"""
 
 
