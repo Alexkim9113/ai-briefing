@@ -25,6 +25,7 @@ a{color:inherit;text-decoration:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#eef2ff;color:#06050d;padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;white-space:nowrap}
 @media (max-width:640px){.date{font-size:11.5px}.tr{gap:10px}.share{width:34px;height:34px}}
 .mid{text-align:center}
+@media (max-width:640px){.mid h1{position:fixed;left:50%;top:var(--gy,50%);transform:translate(-50%,-50%);white-space:nowrap;margin:0!important;z-index:1}}
 .mid h1{display:inline-block;margin:0 0 38px;font-family:Unbounded,"Pretendard Variable",sans-serif;font-size:clamp(38px,8.4vw,112px);font-weight:700;letter-spacing:.04em;line-height:1.05;padding-left:.04em;
  background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(59,123,255,.35))}
 .mid p{text-shadow:0 1px 12px #12040a,0 0 4px #12040a;margin:18px 0 34px;font-size:clamp(14px,1.6vw,17px);opacity:.78}
@@ -47,7 +48,7 @@ a{color:inherit;text-decoration:none}
 @keyframes pl{50%{opacity:.25}}
 .fade{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .7s ease}
 body.go .fade{opacity:1}body.go .ui{opacity:0;transition:opacity .4s}
-@media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 18px;position:relative}.mid h1{margin:0;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;filter:drop-shadow(0 0 18px rgba(4,3,14,.95)) drop-shadow(0 0 6px rgba(4,3,14,.9))}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:640px){.ui{padding-left:18px;padding-right:18px}.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 18px;position:relative}.mid h1{margin:0;filter:drop-shadow(0 0 18px rgba(4,3,14,.95)) drop-shadow(0 0 6px rgba(4,3,14,.9))}.mid br{display:none}.cats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
  .cats a{min-width:0;padding:10px}.cats a:last-child:nth-child(odd){grid-column:1/-1}.mid p{margin:14px 0 26px}.hint{display:none}.cats{display:none}.mid{padding-bottom:6px}}
 @media (prefers-color-scheme:dark){.fade{background:#101018}}
 </style></head><body>
@@ -75,7 +76,7 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
  const R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
- const S=new T.Scene(),C=new T.PerspectiveCamera(50,1,.1,100);C.position.z=7.2;
+ const H1=document.querySelector('.mid h1'),_v=new T.Vector3();const S=new T.Scene(),C=new T.PerspectiveCamera(50,1,.1,100);C.position.z=7.2;
  const G=new T.Group();S.add(G);
  const mob=innerWidth<640,RAD=2.2,add=T.AdditiveBlending;
  const dot=(()=>{const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);
@@ -144,7 +145,7 @@ try{
   for(let i=0;i<FN;i++){const d=fd[i];const sg=Math.sign(d.pos);d.pos-=sg*d.v*(fly?3:1);if(Math.abs(d.pos)<RAD*.2||Math.sign(d.pos)!==sg)reset(d);
    if(d.ax){fp[i*3]=d.pos;fp[i*3+1]=d.o;}else{fp[i*3]=d.o;fp[i*3+1]=d.pos;}fp[i*3+2]=d.z;}
   fgeo.attributes.position.needsUpdate=true;
-  zoom+=(tz-zoom)*.05;C.position.z=zoom;C.position.x+=(tx*.6-C.position.x)*.05;C.position.y+=(-ty*.4-C.position.y)*.05;C.lookAt(0,0,0);
+  zoom+=(tz-zoom)*.05;C.position.z=zoom;C.position.x+=(tx*.6-C.position.x)*.05;C.position.y+=(-ty*.4-C.position.y)*.05;C.lookAt(0,0,0);if(H1){_v.set(0,G.position.y,0).project(C);H1.style.setProperty('--gy',((1-_v.y)/2*innerHeight).toFixed(1)+'px');}
   R.render(S,C);requestAnimationFrame(loop);})();
 }catch(e){cv.remove();}
 </script></body></html>
