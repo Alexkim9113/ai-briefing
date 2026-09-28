@@ -37,7 +37,7 @@ DETAIL_CHARS = 300         # '주요 내용' 창: 언론사가 피드로 공개�
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
-CAT_CAP = {"talks": 3}    # 영상·강연은 하루 최신 3개만
+CAT_CAP = {"talks": 5}    # 영상·강연은 하루 최신 5개만(AI 명사 인터뷰·강연)
 DEDUPE_DAYS = 7            # 최근 N일 브리핑에 이미 나온 글은 제외
 DUP_SIMILARITY = 0.4       # 같은 카테고리에서 제목 글자쌍이 이만큼 겹치면 같은 글로 본다
 DUP_SIMILARITY_KO = 0.33   # 한글 제목은 언론사마다 표현이 더 달라 기준을 조금 낮춘다
@@ -439,10 +439,27 @@ def add_translations(items, fixtures=None, max_n=200):
                 it["detail_ko"] = "\n".join(x.strip() for x in ko.split("\n") if x.strip())
 
 
+# 자동 차단: 스팸·도박·성인·사기성 글, 파일 내려받기 링크, 안전하지 않은 주소
+BLOCK_WORDS = re.compile(
+    r"카지노|바카라|토토|슬롯머신|먹튀|홀덤|성인용|19금|야동|대출\s*상담|리딩방|코인\s*무료|급전|불법\s*촬영|"
+    r"\bcasino\b|\bbetting\b|\bporn|\bxxx\b|\bescort|onlyfans|free\s+(?:crypto|bitcoin|robux|v-?bucks)|giveaway|"
+    r"crack(?:ed)?\s+(?:apk|download)|keygen|warez|\bnsfw\b", re.I)
+BLOCK_LINK = re.compile(r"\.(?:exe|apk|msi|scr|bat|zip|rar|dmg)(?:$|[?#])|bit\.ly/|tinyurl\.com/|t\.me/", re.I)
+
+
+def is_blocked(title, link, desc=""):
+    """이상한 글·위험한 링크면 True. 보안 기사(해킹 사건 보도 등)는 막지 않고, 스팸·악성 링크만 막는다."""
+    if not re.match(r"https?://[^\s/]+\.[^\s/]+", link or ""):
+        return True  # javascript:, data: 같은 주소는 절대 싣지 않는다
+    return bool(BLOCK_LINK.search(link) or BLOCK_WORDS.search(title) or BLOCK_WORDS.search((desc or "")[:400]))
+
+
 def make_item(src, it, keywords, now):
     """피드 항목 하나를 브리핑 항목으로. 조건에 안 맞으면 None."""
     title = clean_text(it["title"])
     if not title or not it["link"]:
+        return None
+    if is_blocked(title, it["link"].strip(), clean_text(it.get("desc", ""))):
         return None
     outlet = ""
     if src.get("url", "").startswith("https://news.google.com"):
@@ -566,6 +583,8 @@ def collect(fixtures=None, now=None):
     mark_hot(uniq, hot_marks)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
+    per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
+    uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
@@ -782,7 +801,7 @@ CSS = """
 --dot:rgba(255,255,255,.045);--glow:#1a1340;--field:rgba(255,255,255,.07);--field-line:rgba(255,255,255,.14);color-scheme:dark}
 :root[data-theme=light]{--bar:rgba(255,255,255,.86);--bar-text:#15172b;--bg:#f6f7fb;--card:#fff;--text:#33374d;--heading:#111325;--muted:#646b84;--line:#e3e6f0;
 --accent:#3552c9;--soft:#eef1fb;--shadow:0 6px 18px rgba(20,24,60,.08);--dot:rgba(20,24,60,.055);--glow:#e4e8ff;--field:#f1f3f9;--field-line:#e0e4ef;color-scheme:light}
-@media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bar:rgba(255,255,255,.86);--bar-text:#15172b;--bg:#f6f7fb;--card:#fff;--text:#33374d;--heading:#111325;--muted:#646b84;--line:#e3e6f0;
+/* 기본은 다크(첫 화면과 이어지는 브랜드 색). 라이트는 머리말의 해·달 버튼으로 고른다 */
 --accent:#3552c9;--soft:#eef1fb;--shadow:0 6px 18px rgba(20,24,60,.08);--dot:rgba(20,24,60,.055);--glow:#e4e8ff;--field:#f1f3f9;--field-line:#e0e4ef;color-scheme:light}}
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
@@ -801,7 +820,7 @@ a{color:inherit;text-decoration:none}
 .search input::placeholder{color:var(--muted)}
 .theme{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--field-line);background:var(--field);color:var(--bar-text);display:grid;place-items:center;cursor:pointer}
 .theme svg{width:18px;height:18px}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--heading);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;box-shadow:var(--shadow);white-space:nowrap}.theme .moon{display:none}:root[data-theme=light] .theme .sun{display:none}:root[data-theme=light] .theme .moon{display:block}
-@media (prefers-color-scheme:light){:root:not([data-theme=dark]) .theme .sun{display:none}:root:not([data-theme=dark]) .theme .moon{display:block}}
+
 .eyebrow{font-size:14px;font-weight:600;color:var(--muted);margin:26px 0 0;letter-spacing:.01em}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
 .hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--heading);margin:0 0 18px}
@@ -957,7 +976,7 @@ function toast(t){const d=document.createElement('div');d.className='toast';d.te
 document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
  try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 관련 정보를 한눈에 볼 수 있는 곳',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
 document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
- dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
+ dark=r.dataset.theme?r.dataset.theme==='dark':true,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
 try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit,.op-only').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
@@ -1258,7 +1277,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 {"" if image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/" + og_main())}">
-<meta name="theme-color" content="#06050d" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><script>try{{var m=localStorage.getItem("metaxis_theme");if(m)document.documentElement.dataset.theme=m}}catch(e){{}}</script>{verify}
+<meta name="theme-color" content="#06050d"><script>try{{var m=localStorage.getItem("metaxis_theme");if(m)document.documentElement.dataset.theme=m}}catch(e){{}}</script>{verify}
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
