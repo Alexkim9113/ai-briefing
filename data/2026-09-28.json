@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:03+09:00",
+ "generated_at": "2026-09-28T16:10+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -370,6 +370,29 @@
    "hot": 3
   },
   {
+   "id": "4f8f3180c1f9d9fc",
+   "title": "Nvidia’s 2026 Dividend Hike Puts Dividend Growth Stocks in the Spotlight",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPemtvQ1lGSGt3RmtjanlJeWVtTFU3ZWF1dV9kczZxc2tBS2dJSW40TFJPdUNXYXdHdEdJQXBFUVhKRExKVE52S3NvTl9VcGkteHlwRENoeGhZZTh0aXVYOGEzdU5SeEFndTc4dlRzYmpPc3NLbHRkRFlEazNUek85RTN2ODNlVV9NVUNqODZQaHVyWWdoRTFUMGVGQ2JoMnFESEEwLXVrWkVPZmxf?oc=5",
+   "source": "Morningstar",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T07:05:15+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Nvidia의 2026년 배당금 인상으로 배당 성장주가 주목을 받음"
+  },
+  {
+   "id": "c381b2d93ddf8ae5",
+   "title": "가상공간 넘어 생성현실로…피지컬 AI·로봇 미래 본다",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOY21FLWxVaEFGaW1zbnJ5d2lJNVdHdEVPenA2MHpBT1RrUVVuTUpkYkluSnJnb1dpcXBiQTRfWDFNOGtjTFFubnJ5bXFoTlZKTXpsdjJB?oc=5",
+   "source": "지디넷코리아",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:57:27+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "1a38916787915e23",
    "title": "배차 넘어 주문도 인공지능…배달업계 AI 활용 드라이브",
    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80RXdJUmRMZjJEN2Nxclkwc1VZbHNRSWVlb3BUeGJpaFBkcFVVYWpoUmRseXJNOFpqcG1iX0JETklJZ1ZIMVE2LVgxQ1hmbFIzWHJvejVJVThoRGtselE?oc=5",
@@ -502,6 +525,30 @@
    "summary": "",
    "thumb": "",
    "title_ko": "교수들은 교실에서 인공지능을 활용하는 방법에 대해 다양했습니다."
+  },
+  {
+   "id": "4b9b78c3be82a692",
+   "title": "Elon Musk Agrees 'for Now' That Grok Models Trail Anthropic, OpenAI - SpaceX (NASDAQ:SPCX)",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYTBHYlF0bjJwc3N4S2NZYjUwWWpKTVI4VWF6VnREd0NmZFZURTV6UVdjVW5GcmZKNE1WcTNKWHhJcG5qRC1IUV9WYXExWXJlS1duUTBUb25JcjVzeGVUMjB5eTBxUDlPWE1XT0JLZHVhcTZsZk1sVGJ1MFZVd01mbW5wSGJPdVVvdkhTWTZFYU1CR25tWjkyTlk1UUprcVFZZlZqWWlYb296cjVi?oc=5",
+   "source": "benzinga.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T06:03:08+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Elon Musk는 Grok이 Anthropic, OpenAI - SpaceX(NASDAQ:SPCX)를 따라가는 '현재'에 동의합니다."
+  },
+  {
+   "id": "6436349e73d9f292",
+   "title": "As AI risks grow, China mulls how to make open-weight models less dangerous",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSFBzWm5FSDNCVHJ1NFNVeFRoODJRWU16X3pFenVzdzdYdGsxVGwwTzU0SXJRdXRNYkJCNU9KV09kbVlfOGZkbUZZSndQSDdldWgtMWprZFhPQUxta2diY0pVajJqeTlQRVBMNVFRTTRSSUczSmdwbkRyMGEzOWlsSUJ1TW93aWhWbl9yZldMQWpSemMwU0JKeUQ0bEE0OUI3eG43UVlwd3VKQ2Q3OElMZU80NkZSc3A2emczZDZHQTZ1UdIBwgFBVV95cUxPSFBzWm5FSDNCVHJ1NFNVeFRoODJRWU16X3pFenVzdzdYdGsxVGwwTzU0SXJRdXRNYkJCNU9KV09kbVlfOGZkbUZZSndQSDdldWgtMWprZFhPQUxta2diY0pVajJqeTlQRVBMNVFRTTRSSUczSmdwbkRyMGEzOWlsSUJ1TW93aWhWbl9yZldMQWpSemMwU0JKeUQ0bEE0OUI3eG43UVlwd3VKQ2Q3OElMZU80NkZSc3A2emczZDZHQTZ1UQ?oc=5",
+   "source": "South China Morning Post",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T06:00:05+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 위험이 증가함에 따라 중국은 개방형 모델을 덜 위험하게 만드는 방법을 고민합니다."
   },
   {
    "id": "797fc0455b6790dd",
@@ -814,17 +861,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "AI 연구소의 투명성은 미-중 AI 협정의 핵심입니다"
-  },
-  {
-   "id": "0c39c4abbbf57fc7",
-   "title": "북구, 생성형 AI로 행정업무 효율 높인다",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE51VGh4SEpHMXRIOS1CWWZCTGpQUFNOaU1SUy1CYW0xVjQwRVFMS284c2IxZ1ZlVWNuNTV5UkREWkNNbko1LTZhUXZ5N1ZieEVNYW1hVWFxQTZYRy1lMDdhMVJqcW9TU21ZbkJz?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T04:13:05+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "8fa2021ded8f6086",
@@ -2444,20 +2480,6 @@
    "summary_ko": "Ruby on Rails 제작자는 Ruby 대신 손으로 쓴 코드 Business Insider Rust에 '연필을 내려' 선언했습니다. Rails 창립자 Hansson의 새 프로젝트 heise.de DHH는 AI 에이전트를 인정합니다…"
   },
   {
-   "id": "2f157e895362cc32",
-   "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
-   "link": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T09:23:36+00:00",
-   "summary": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked websites, used stolen login credentials, or tried to evade…",
-   "thumb": "",
-   "title_ko": "수만 개의 보안 조사 결과 OpenAI의 Hugging Face 사건은 시작에 불과했음이 밝혀졌습니다.",
-   "detail_ko": "OpenAI와 Anthropic은 AI 에이전트가 독립적으로 웹사이트를 해킹하거나, 훔친 로그인 자격 증명을 사용하거나, 회피를 시도한 수만 건의 사건을 조사하고 있습니다.",
-   "summary_ko": "OpenAI와 Anthropic은 AI 에이전트가 독립적으로 웹사이트를 해킹하거나, 훔친 로그인 자격 증명을 사용하거나, 회피를 시도한 수만 건의 사건을 조사하고 있습니다."
-  },
-  {
    "id": "998f6b2f76aa75e0",
    "title": "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX3U0dW9FbGNsVVd0bGt4MlRzRTBZMkE2NWZOYUZlUkxOd3puUEwxdkR1YXNIaHdFNUtaYzJ3cGlOTHM2ckdBbHhLZmYtbUlnalJ2QmZYVS00RFROaksyY01xUnRCSXFzcEppNElYd1NOV21KNWJXVEVPVHBVZUppSEZPRVQzVmhtdlA4ZWp4emlaQmwxblpxVjRVWGM0dw?oc=5",
@@ -2479,36 +2501,6 @@
    "published": "2026-09-27T08:50:00+00:00",
    "summary": "",
    "thumb": ""
-  },
-  {
-   "id": "dadd08c22e15c322",
-   "title": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
-   "link": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T08:17:47+00:00",
-   "summary": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's…",
-   "thumb": "",
-   "title_ko": "Goldman Sachs는 Big Tech가 2027년까지 AI 인프라에 1조 2천억 달러를 지출할 것으로 예상하며 이는 월스트리트 추정을 왜소하게 만듭니다.",
-   "detail_ko": "Goldman Sachs는 Amazon, Alphabet, Microsoft, Oracle 및 Meta가 2027년에 AI 인프라에 올해보다 50% 이상 많은 1조 2천억 달러를 투자할 것으로 예상합니다.",
-   "summary_ko": "Goldman Sachs는 Amazon, Alphabet, Microsoft, Oracle 및 Meta가 2027년에 AI 인프라에 올해보다 50% 이상 많은 1조 2천억 달러를 투자할 것으로 예상합니다."
-  },
-  {
-   "id": "f6d4781907cfeb74",
-   "title": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQcGdtRFRzdnpTc0FNTk1DM0pQNVlGRG1TenZCTjFpTzdhMGVtck1HWS1UY3pncmhnMVpzZjBYNkR1YzF4dlhBenlMbVh1bk1aMDZXcXJrRVBFX1FlMWVwSF9FWnB1XzBFX3p3RXZDbmNiSGo2X0ItT1VzMTVqenRjaEExdWdtYnpMTmUzWTRhSHk3elpZSncyYU5MNzdPZlNPWEE?oc=5",
-   "source": "VideoCardz.com",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T07:58:52+00:00",
-   "summary": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp…",
-   "detail": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp Modders supercharge DLSS 5 on AMD GPUs with faster performance and one-click installation TweakTown Radeon RX 9070 XT gave…",
-   "thumb": "",
-   "hot": 0,
-   "title_ko": "Modder를 사용하면 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치할 수 있습니다.",
-   "detail_ko": "Modder는 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치하도록 만듭니다. VideoCardz.com Modder는 하루 만에 AMD Radeon의 DLSS 5에서 74% 더 많은 성능을 발휘합니다. TechPowerUp Modders는 더 빠른 성능과 원클릭 설치로 AMD GPU에서 DLSS 5를 과급합니다. TweakTown Radeon RX 9070 XT는…",
-   "summary_ko": "Modder를 사용하면 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치할 수 있습니다. VideoCardz.com Modder는 하루 만에 AMD Radeon의 DLSS 5에서 74% 더 많은 성능을 발휘합니다. TechPowerUp..."
   },
   {
    "id": "6d456376b81d809a",
@@ -2806,7 +2798,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2937,7 +2929,7 @@
   {
    "name": "The Decoder",
    "ok": true,
-   "count": 8,
+   "count": 7,
    "fetched": 10
   },
   {
@@ -3046,7 +3038,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 64
+   "fetched": 62
   },
   {
    "name": "스테이지5",
