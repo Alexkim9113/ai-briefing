@@ -17,6 +17,8 @@ import html
 import json
 import re
 import sys
+import threading
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -241,8 +243,17 @@ def label(src):
     return f'{src["name"]} · {src["field"]}' if src.get("field") else src["name"]
 
 
+_SLOW_HOST_LOCK = threading.Lock()
+
+
 def collect_source(src, fixtures):
-    raw = fetch(src["url"], fixtures, src.get("ua"))
+    host = urllib.parse.urlsplit(src["url"]).netloc
+    if "nature.com" in host and not fixtures:
+        with _SLOW_HOST_LOCK:  # 같은 사이트에 동시에 여러 번 요청하면 차단되므로 순서대로 천천히
+            raw = fetch(src["url"], fixtures, src.get("ua"))
+            time.sleep(2)
+    else:
+        raw = fetch(src["url"], fixtures, src.get("ua"))
     kind = src.get("type")
     if kind == "hf_papers":
         return parse_hf_papers(raw)
