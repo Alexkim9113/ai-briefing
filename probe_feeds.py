@@ -27,6 +27,16 @@ C = {
     "불교신문": ["https://www.ibulgyo.com/rss/allArticle.xml", "https://news.google.com/rss/search?q=AI+site:ibulgyo.com&hl=ko&gl=KR&ceid=KR:ko"],
     "연합뉴스": ["https://www.yna.co.kr/rss/news.xml", "https://www.yna.co.kr/rss/industry.xml"],
     "뉴시스": ["https://newsis.com/RSS/sokbo.xml", "https://newsis.com/RSS/it.xml"],
+    "더팩트": ['https://news.tf.co.kr/rss/all.xml', 'https://rss.tf.co.kr/rss/news.xml', 'https://news.google.com/rss/search?q=AI+site:tf.co.kr+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "아시아투데이": ['https://www.asiatoday.co.kr/rss/all.xml', 'https://www.asiatoday.co.kr/rss/rss.php', 'https://news.google.com/rss/search?q=AI+site:asiatoday.co.kr+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "로리더": ['https://www.lawleader.co.kr/rss/allArticle.xml', 'https://news.google.com/rss/search?q=AI+site:lawleader.co.kr+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "법률저널": ['https://www.lec.co.kr/rss/allArticle.xml', 'https://news.google.com/rss/search?q=AI+site:lec.co.kr+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "뉴스핌": ['https://www.newspim.com/rss/newspim_rss.xml', 'https://news.google.com/rss/search?q=AI+site:newspim.com+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "IT비즈뉴스": ['https://www.itbiznews.com/rss/allArticle.xml', 'https://news.google.com/rss/search?q=AI+site:itbiznews.com+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "헤럴드경제": ['https://biz.heraldcorp.com/rss/google/it', 'https://news.google.com/rss/search?q=AI+site:heraldcorp.com+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "파이낸셜뉴스": ['https://www.fnnews.com/rss/r20/fn_realnews_all.xml', 'https://www.fnnews.com/rss/r20/fn_realnews_it.xml', 'https://news.google.com/rss/search?q=AI+site:fnnews.com+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "국제뉴스": ['https://www.gukjenews.com/rss/allArticle.xml', 'https://news.google.com/rss/search?q=AI+site:gukjenews.com+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
+    "데일리안": ['https://www.dailian.co.kr/rss/all.xml', 'https://news.google.com/rss/search?q=AI+site:dailian.co.kr+when:2d&hl=ko&gl=KR&ceid=KR:ko'],
 }
 AI = re.compile(r"AI|인공지능|에이아이|GPT|LLM|생성형|챗봇|딥러닝|머신러닝|오픈AI|엔비디아|앤트로픽|제미나이|클로드", re.I)
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
