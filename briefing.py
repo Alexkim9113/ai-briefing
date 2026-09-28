@@ -939,9 +939,9 @@ a{color:inherit;text-decoration:none}
 .bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}.logo span{font-family:Unbounded,"Pretendard Variable",sans-serif;font-weight:700;letter-spacing:.08em;font-size:19px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo svg{flex:none}
-.bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
-.bar nav a{opacity:.72;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap}
-.bar nav a:hover,.bar nav a.on{opacity:1;border-image:var(--grad) 1}
+.bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:15px;font-weight:600;overflow-x:auto;scrollbar-width:none}
+.bar nav a{color:var(--text);opacity:.88;padding:4px 0;border-bottom:3px solid transparent;white-space:nowrap}
+.bar nav a:hover,.bar nav a.on{opacity:1;color:var(--heading);border-image:var(--grad) 1}.bar nav a.on{font-weight:800}
 .search{display:flex;align-items:center;gap:8px;background:var(--field);border:1px solid var(--field-line);border-radius:99px;padding:7px 14px;width:230px}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:var(--muted)}
