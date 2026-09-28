@@ -1025,7 +1025,10 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 .kw span,.kwb{font-size:14px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
-.ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0}
+.ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0;font-family:"Pretendard Variable",Pretendard,sans-serif}
+/* 기사 제목만 신문 제목 느낌의 명조(노토 세리프), 본문·번역은 프리텐다드 */
+h3.serif,.hero h2.serif,.brief h3{font-family:"Noto Serif KR","Pretendard Variable",Pretendard,serif;letter-spacing:-.015em}h3.serif{font-weight:600}.hero h2.serif,.brief h3{font-weight:700}
+.hero h2 .ko{font-size:.6em;line-height:1.5;margin-top:8px}
 .bar nav a[data-go]{display:inline}
 .rows{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .rows article{padding:14px 0 12px;border-bottom:1px solid var(--line)}
@@ -1069,15 +1072,17 @@ ul.st{columns:1}footer{margin-top:36px}}
 JS = """
 // 기사 제목을 누르면 '주요 내용'(언론사가 공개한 소개글 발췌, 최대 5줄)과 원문으로 가는 버튼을 먼저 보여 준다
 function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- const lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
+ const V=!!a.dataset.v,lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
- <h4>주요 내용 요약</h4>${lines.length?`<ul>${lines.map((l,i)=>`<li>${e(l)}${pair?`<span class="brief-tr">${e(kos[i])}</span>`:''}</li>`).join('')}</ul>${kos.length&&!pair?`<div class="brief-trb"><b>자동 번역</b>${kos.map(k=>`<p>${e(k)}</p>`).join('')}</div>`:''}${kos.length?'<p class="brief-trn">번역은 구글 번역으로 자동 생성돼 어색할 수 있어요.</p>':''}`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
+ <h4>${V?'영상 소개':'주요 내용 요약'}</h4>${lines.length?`<ul>${lines.map((l,i)=>`<li>${e(l)}${pair?`<span class="brief-tr">${e(kos[i])}</span>`:''}</li>`).join('')}</ul>${kos.length&&!pair?`<div class="brief-trb"><b>자동 번역</b>${kos.map(k=>`<p>${e(k)}</p>`).join('')}</div>`:''}${kos.length?'<p class="brief-trn">번역은 자동 번역이라 어색할 수 있어요.</p>':''}`:(V?'<p class="brief-none">영상 설명이 따로 없어요. 영상에서 확인해 주세요.</p>':'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>')}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
- <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">더 읽어보기 →</a><p class="brief-note">요약은 언론사가 공개한 소개글에서 핵심 문장을 자동으로 골라 보여 준 것이에요. 전체 기사와 저작권은 출처에 있어요.</p></div>`;
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'소개는 채널이 공개한 영상 설명에서 가져왔어요. 영상과 저작권은 출처에 있어요.':'요약은 언론사가 공개한 소개글에서 핵심 문장을 자동으로 골라 보여 준 것이에요. 전체 기사와 저작권은 출처에 있어요.'}</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
+(()=>{const m=location.hash.match(/^#a=([\w-]+)/);if(!m)return;history.replaceState(null,'',location.pathname+location.search);  // 첫 화면 흐르는 기사에서 왔을 때 그 기사 요약 창 열기
+ addEventListener('load',()=>{const a=document.querySelector('a[data-id="'+m[1]+'"]');if(!a)return;const box=a.closest('article,.trend,.hero');box&&box.scrollIntoView({block:'center'});a.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));});})();
 document.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;let a=ev.target.closest('a[data-d]');
  if(!a){const card=ev.target.closest('article,.trend,.hero>div:first-child');if(!card||(ev.target.closest('a,button')&&!ev.target.closest('[data-brief]')))return;a=card.querySelector('a[data-d]');if(!a)return;}
  ev.preventDefault();openBrief(a);});
@@ -1390,7 +1395,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 {head}<style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/?v={og_ver()}" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
@@ -1484,8 +1489,10 @@ def title_link(it):
     info = " · ".join(x for x in (it.get("source", ""), fmt_time(it.get("published"))) if x)
     extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
              + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")
-             + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") else "")) if not it.get("editor") else ""
-    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{extra}>{esc(it["title"])}</a>{ko}'
+             + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") else "")
+             + (' data-v="1"' if it.get("category") == "talks" else "")) if not it.get("editor") else ""
+    aid = f' data-id="{esc(it["id"])}"' if it.get("id") and not it.get("editor") else ""
+    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{aid}{extra}>{esc(it["title"])}</a>{ko}'
 
 
 def pick_featured(items):
@@ -2214,12 +2221,13 @@ def ticker_items(items, n=14):
     top = [x for x in [hero, *trend] if x]
     ids = {x["id"] for x in top}
     rest = sorted((x for x in items if x["id"] not in ids), key=lambda x: x.get("published") or "", reverse=True)
-    return [{"t": x["title"], "u": x["link"], "c": INTRO_COLORS.get(x["category"], DEFAULT_TINT)}
+    # 누르면 원문 대신 METAXIS 홈에서 그 기사의 '주요 내용' 창이 열린다(home.html#a=기사ID)
+    return [{"t": x["title"], "u": f'home.html#a={x["id"]}', "c": INTRO_COLORS.get(x["category"], DEFAULT_TINT)}
             for x in (top + rest)[:n]]
 
 
 def tick_html(tk):
-    return "".join(f'<a href="{esc(x["u"])}" target="_blank" rel="noopener" style="--c:{x["c"]}">{esc(x["t"])}</a>' for x in tk)
+    return "".join(f'<a href="{esc(x["u"])}" style="--c:{x["c"]}">{esc(x["t"])}</a>' for x in tk)
 
 
 def render_intro(latest, cats, sc, enter="home.html", preview=False):
@@ -2265,10 +2273,13 @@ def build(keep_days=None):
                 every[it["category"]].append(it)
     posts = load_posts()
     # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
-    (SITE_DIR / "index.html").write_text(render_intro(latest, cats, sc), encoding="utf-8")
     (SITE_DIR / "version.json").write_text(json.dumps({"v": BUILD_VER}), encoding="utf-8")
-    (SITE_DIR / "ticker.json").write_text(json.dumps(ticker_items(latest["items"]), ensure_ascii=False), encoding="utf-8")
-    (SITE_DIR / "home.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
+    home_html = render_home(latest, cats, posts)
+    (SITE_DIR / "home.html").write_text(home_html, encoding="utf-8")
+    on_home = set(re.findall(r'data-id="([\w-]+)"', home_html))  # 흐르는 줄은 홈에서 요약 창을 열 수 있는 기사만
+    tick_src = {**latest, "items": [x for x in latest["items"] if x["id"] in on_home]}
+    (SITE_DIR / "index.html").write_text(render_intro(tick_src, cats, sc), encoding="utf-8")
+    (SITE_DIR / "ticker.json").write_text(json.dumps(ticker_items(tick_src["items"]), ensure_ascii=False), encoding="utf-8")
     (SITE_DIR / "intro.html").unlink(missing_ok=True)
     paths = []
     for c, name in cats.items():
