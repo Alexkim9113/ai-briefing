@@ -875,7 +875,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈">{LOGO}<span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><a class="flogo" href="{base}index.html">{LOGO}<span>{esc(sc["name"])}</span></a>
-<p>국내외 AI 뉴스·논문·정책·영상 강연을 30분마다 모아 전합니다.</p><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 모든 기사의 저작권은 원작자에게 있습니다.</p></div>
+<p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
 <script>{JS}{script}</script></body></html>"""
 
