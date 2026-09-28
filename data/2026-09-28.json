@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:13+09:00",
+ "generated_at": "2026-09-28T16:15+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -2776,9 +2776,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+   "ok": true,
+   "count": 6,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -2808,7 +2808,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 84
+   "fetched": 83
   },
   {
    "name": "Google News: AI 기업",
