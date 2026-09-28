@@ -1240,6 +1240,10 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 .pager .nums{display:flex;gap:6px;border:0;padding:0;min-width:0;height:auto;background:none;cursor:default}.pager .off,.pager button:disabled{opacity:.3;cursor:default}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
+/* 에디터 글 보호: 방문자는 글 복사·끌기·오른쪽 클릭·인쇄가 안 되고, 화면 캡처 도구가 뜨면 글이 흐려진다(운영자 기기는 제외) */
+html:not(.op) .protect{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}html:not(.op) .protect img{-webkit-user-drag:none;pointer-events:none}
+html:not(.op).cap .protect{filter:blur(18px);transition:filter .05s}
+@media print{html:not(.op) .protect{display:none!important}html:not(.op) main::after{content:"에디터 글은 인쇄할 수 없어요.";display:block;padding:40px 0;text-align:center}}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
 .op-edit{font-size:13px;font-weight:600;color:#ff4fd8;border:1px solid currentColor;border-radius:99px;padding:2px 10px;margin-left:8px}.op-edit[hidden],.op-only[hidden]{display:none}
 .ph h1{font-size:28px;font-weight:700;margin:0;color:var(--heading)}.ph span{color:var(--muted);font-size:14px}
@@ -1304,7 +1308,16 @@ document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopIm
 document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
  dark=r.dataset.theme?r.dataset.theme==='dark':true,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
-try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit,.op-only').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
+try{if(localStorage.getItem('metaxis_op')){document.documentElement.classList.add('op');document.querySelectorAll('.op-edit,.op-only').forEach(a=>a.hidden=false);}}catch(e){} // 운영자로 로그인한 기기에만 '수정'·'에디터 글쓰기' 표시
+(()=>{if(document.documentElement.classList.contains('op')||!document.querySelector('.protect'))return;  // 에디터 글 복사·캡처 막기(방문자)
+ const R=document.documentElement,inP=t=>t&&t.closest&&t.closest('.protect');
+ ['copy','cut','contextmenu','selectstart','dragstart'].forEach(ev=>document.addEventListener(ev,e=>{if(inP(e.target)||ev==='copy'||ev==='cut')e.preventDefault();},true));
+ const cap=()=>{R.classList.add('cap');try{navigator.clipboard&&navigator.clipboard.writeText('');}catch(e){}setTimeout(()=>{if(document.hasFocus())R.classList.remove('cap');},1500);};
+ document.addEventListener('keydown',e=>{const k=(e.key||'').toLowerCase();
+  if(k==='printscreen'||((e.ctrlKey||e.metaKey)&&['c','x','s','p','a','u'].includes(k))||(e.metaKey&&e.shiftKey&&['3','4','5','s'].includes(k))){e.preventDefault();cap();}},true);
+ document.addEventListener('keyup',e=>{if((e.key||'').toLowerCase()==='printscreen')cap();},true);
+ addEventListener('blur',()=>R.classList.add('cap'));addEventListener('focus',()=>R.classList.remove('cap'));
+ document.addEventListener('visibilitychange',()=>R.classList.toggle('cap',document.hidden));})();
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
 function pageLinks(p,n){const b0=Math.floor(p/10)*10,b1=Math.min(n,b0+10);let nums='';  // 쪽 번호는 10개씩 한 번에(1~10, 11~20 …)
  for(let i=b0;i<b1;i++)nums+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;
@@ -1564,6 +1577,13 @@ def fmt_time(iso):
     return d.strftime("%m.%d %H:%M")
 
 
+AI_BOTS = ["GPTBot", "ChatGPT-User", "OAI-SearchBot", "ClaudeBot", "Claude-Web", "Claude-User", "Claude-SearchBot", "anthropic-ai",
+           "Google-Extended", "GoogleOther", "Applebot-Extended", "CCBot", "PerplexityBot", "Perplexity-User", "Bytespider",
+           "meta-externalagent", "meta-externalfetcher", "FacebookBot", "Amazonbot", "cohere-ai", "cohere-training-data-crawler",
+           "Diffbot", "Omgilibot", "omgili", "ImagesiftBot", "Timpibot", "YouBot", "AI2Bot", "Ai2Bot-Dolma",
+           "img2dataset", "DeepSeekBot", "MistralAI-User", "Kangaroo Bot", "Scrapy", "VelenPublicWebCrawler", "Webzio-Extended"]
+
+
 def site_cfg():
     s = load_config().get("site", {})
     url = (f'https://{s["domain"]}' if s.get("domain") else s.get("url", "")).rstrip("/")
@@ -1630,7 +1650,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{esc(canonical)}">
-<meta name="robots" content="{"index,follow,max-image-preview:large" if index else "noindex"}">
+<meta name="robots" content="{"index,follow,max-image-preview:large,noai,noimageai" if index else "noindex,noai,noimageai"}"><meta name="tdm-reservation" content="1">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{esc(sc["name"])}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{esc(image or sc["url"] + "/" + og_main())}">
@@ -2480,10 +2500,10 @@ def render_editor_pages(posts, cats, sc):
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
             f'<div class="meta"><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span>'
             f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a></div></div></article>' for p in chunk)
-        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 위의 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
+        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요.</p>'
         body = (f'<div class="ph" style="--c:{EDITOR_COLOR}"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
-                f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
-                f'<div class="elist">{rows}</div>{pager_html(pg, n, href)}')
+                f'<a class="btn-w op-only" href="write.html" hidden>✎ 에디터 글쓰기</a></span></div>'
+                f'<div class="elist protect">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"에디터{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
         (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, active="editor",
@@ -2500,7 +2520,7 @@ def render_editor_pages(posts, cats, sc):
         if p.get("cover") and "<img" not in body_html:  # 본문에 사진이 없으면 대표 이미지를 글 맨 위에 보여 준다
             body_html = f'<figure class="lead"><img src="{esc(p["cover"])}" alt="{esc(p["title"])}"></figure>' + body_html
         fams = [f for f in POST_FONTS if f in body_html]
-        body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
+        body = (f'<article class="post protect"><h1 class="serif">{esc(p["title"])}</h1>'
                 f'<div class="meta"><span>에디터</span><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span>'
                 f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
@@ -2618,7 +2638,7 @@ def render_home(data, cats, posts):
         parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터</h2><span class="eh-r">'
                      '<button type="button" class="enav" data-d="-1" aria-label="이전 글">‹</button><button type="button" class="enav" data-d="1" aria-label="다음 글">›</button>'
                      '<a href="editor/">전체 보기 →</a></span></div>'
-                     f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:12])}</div>')
+                     f'<div class="egrid protect">{"".join(post_card(p, "") for p in posts[:12])}</div>')
     info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · {esc(data["generated_at"][11:16])} 업데이트'
     parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
                  + "".join(f'<button type="button" class="kwb" data-t="{esc("|".join(kw_terms(k)))}">#{esc(k)}</button>' for k in top_keywords(items))
@@ -2766,7 +2786,7 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
         verify += f'<meta name="naver-site-verification" content="{esc(sc["naver"])}">'
     page_ = (ROOT / "intro.html").read_text(encoding="utf-8")
     for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{OG}": og_main(), "{OGV}": og_ver(), "{VERIFY}": verify,
-                 "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else "", "{FAVICON}": FAVICON,
+                 "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else '<meta name="robots" content="index,follow,noai,noimageai"><meta name="tdm-reservation" content="1">', "{FAVICON}": FAVICON,
                  "{DATE}": f"{d.month}월 {d.day}일", "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
         page_ = page_.replace(k, v)
     return page_.replace('href="home.html"', f'href="{enter}"')
@@ -2847,7 +2867,12 @@ def build(keep_days=None):
     urls += [(f"{sc['url']}/{p}", now, "hourly" if p.endswith("/") else "daily", "0.7" if p.endswith("/") else "0.5") for p in paths]
     sm = "".join(f"<url><loc>{esc(u)}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>" for u, m, c, p in urls)
     (SITE_DIR / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>', encoding="utf-8")
-    (SITE_DIR / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /editor/write.html\n\nSitemap: {sc['url']}/sitemap.xml\n", encoding="utf-8")
+    # AI 학습용 수집기는 막고(저작권 보호), 구글·네이버 같은 검색 수집기는 그대로 허용해 검색 노출은 유지한다
+    ai_bots = "\n".join(f"User-agent: {b}" for b in AI_BOTS)
+    (SITE_DIR / "robots.txt").write_text(f"{ai_bots}\nDisallow: /\n\nUser-agent: *\nAllow: /\nDisallow: /editor/write.html\n\nSitemap: {sc['url']}/sitemap.xml\n", encoding="utf-8")
+    (SITE_DIR / ".well-known").mkdir(exist_ok=True)  # 유럽 TDM 규약: 텍스트·데이터 마이닝(AI 학습) 권리 유보 표시
+    (SITE_DIR / ".well-known" / "tdmrep.json").write_text(json.dumps([{"location": "/*", "tdm-reservation": 1}]), encoding="utf-8")
+    (SITE_DIR / "ai.txt").write_text("# " + sc["name"] + ": AI 학습·데이터 수집 금지 / No AI training or data mining.\nUser-Agent: *\nDisallow: /\n", encoding="utf-8")
     write_feed(latest["items"], sc)
     for f in (ROOT / "static").rglob("*"):  # 공유 이미지·아이콘·표지 사진
         if f.is_file():
