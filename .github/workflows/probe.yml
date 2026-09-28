@@ -1,0 +1,14 @@
+name: 채널 주소 확인
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for id in UCSHZKyawb77ixDdsGog4iWA UCXl4i9dYBrFOabk0xGmbkRA UCcefcZRL2oaA_uBNeo5UOWg UCw-kH-Od73XDAt7qtH9uBYA UCGwuxdEeCf0TIA2RbPOj-8g UCvQECJukTDE2i6aCoMnS-Vg UCWrF0oN6unbXrWsTN7RctTw UC9cn0TuPq4dnbTY-CBsm8XA UCQ2DWm5Md16Dc3xRwwhVE7Q UCsfM1bwyQp8Sa_qp8x7vfwA UCbmNph6atAoGfqLoCL_duAg UCP7jMXSY2xbc3KCAE0MHQ-A UCLXo7UDZvByw2ixzpQCufnA; do
+            x=$(curl -s -m 20 "https://www.youtube.com/feeds/videos.xml?channel_id=$id")
+            t=$(echo "$x" | grep -o '<title>[^<]*' | head -1 | cut -c8-); n=$(echo "$x" | grep -c '<entry>')
+            last=$(echo "$x" | grep -o '<published>[^<]*' | sed -n 2p | cut -c12-21)
+            echo "$id | $t | entries=$n | latest=$last"
+            echo "$x" | grep -o '<title>[^<]*' | sed -n '2,6p' | cut -c8-90 | sed 's/^/    /'
+          done
