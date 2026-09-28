@@ -1,18 +1,19 @@
-import briefing as b, json
-from datetime import datetime, timezone, timedelta
-now=datetime.now(timezone.utc)
-U={
-"gn_ai":"https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:1d&hl=en-US&gl=US&ceid=US:en",
-"gn_co":"https://news.google.com/rss/search?q=(OpenAI+OR+Anthropic+OR+Nvidia+OR+Gemini+OR+%22Meta+AI%22)+when:1d&hl=en-US&gl=US&ceid=US:en",
-"ars":"https://arstechnica.com/ai/feed/","wired":"https://www.wired.com/feed/tag/ai/latest/rss","decoder":"https://the-decoder.com/feed/",
-"ainews":"https://www.artificialintelligence-news.com/feed/","mtp":"https://www.marktechpost.com/feed/",
-"zdnet":"https://www.zdnet.com/topic/artificial-intelligence/rss.xml","guardian":"https://www.theguardian.com/technology/artificialintelligence/rss",
-"engadget":"https://www.engadget.com/rss.xml","vb":"https://venturebeat.com/category/ai/feed/","openai":"https://openai.com/news/rss.xml",
-"deepmind":"https://deepmind.google/blog/rss.xml","hf":"https://huggingface.co/blog/feed.xml","googleai":"https://blog.google/technology/ai/rss/","mittr":"https://www.technologyreview.com/topic/artificial-intelligence/feed",
-"siliconangle":"https://siliconangle.com/category/ai/feed/","techxplore":"https://techxplore.com/rss-feed/machine-learning-ai-news/"}
-for k,u in U.items():
+import json, urllib.request, urllib.parse, os, shutil, time
+UA={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
+Q={"car":"self driving car","drone":"drone flying","hand":"handshake business","stage":"conference presentation","gov":"capitol building","doctor":"doctor hospital","call":"call center headset","bank":"bank money","factory":"factory manufacturing","farm":"farm field tractor","sat":"satellite space","coins":"coins money","news":"newspaper","camera":"film camera","mic":"microphone podcast","meet":"office meeting","brain":"brain","chess":"chess","soldier":"military soldier","ev":"electric car charging","power":"power lines electricity","wind":"wind turbine","pills":"pills medicine","xray":"x-ray","phoneapp":"mobile app","seoul":"seoul city","ship":"cargo ship port","plane":"airplane","shop":"shopping retail","music":"music studio","write":"writing notebook","kids":"children learning","code":"programming code screen","vr":"virtual reality headset"}
+shutil.rmtree("cand", ignore_errors=True); os.makedirs("cand"); meta={}
+for k,q in Q.items():
     try:
-        its=b.parse_feed(b.fetch(u)); ds=[b.parse_date(i["date"]) for i in its]
-        fresh=sum(1 for d in ds if d and d>now-timedelta(hours=36)); newest=max([d for d in ds if d],default=None)
-        print(k,len(its),"fresh36h",fresh,"newest",newest)
-    except Exception as e: print(k,"ERR",e)
+        u="https://api.openverse.org/v1/images/?page_size=20&license=cc0,pdm&aspect_ratio=wide&size=large&source=stocksnap,rawpixel&q="+urllib.parse.quote(q)
+        d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30))
+    except Exception as e:
+        print(k,e); continue
+    n=0
+    for r in d["results"]:
+        try: open(f"cand/{k}_{n}.jpg","wb").write(urllib.request.urlopen(urllib.request.Request(r["thumbnail"],headers=UA),timeout=30).read())
+        except Exception: continue
+        meta[f"{k}_{n}"]={x:r.get(x) for x in ("id","url","foreign_landing_url","license","creator","source","title")}
+        n+=1
+        if n>=6: break
+    time.sleep(1)
+json.dump(meta,open("cand/meta.json","w"),indent=1)
