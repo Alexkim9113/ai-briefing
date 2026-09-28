@@ -1,0 +1,40 @@
+{
+  "categories": {
+    "news_ko": "국내 뉴스",
+    "news_global": "해외 뉴스",
+    "papers": "논문",
+    "policy": "정책·규제",
+    "youtube": "유튜브"
+  },
+  "sources": [
+    {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml"},
+    {"name": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/allArticle.xml"},
+    {"name": "구글뉴스: 인공지능", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 15},
+    {"name": "구글뉴스: 생성형 AI", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%83%9D%EC%84%B1%ED%98%95+AI+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 10},
+
+    {"name": "TechCrunch AI", "category": "news_global", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
+    {"name": "The Verge AI", "category": "news_global", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
+    {"name": "MIT Technology Review", "category": "news_global", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed"},
+    {"name": "VentureBeat AI", "category": "news_global", "url": "https://venturebeat.com/category/ai/feed/"},
+    {"name": "OpenAI", "category": "news_global", "url": "https://openai.com/news/rss.xml"},
+    {"name": "Google AI Blog", "category": "news_global", "url": "https://blog.google/technology/ai/rss/"},
+    {"name": "Google DeepMind", "category": "news_global", "url": "https://deepmind.google/blog/rss.xml"},
+    {"name": "Hugging Face Blog", "category": "news_global", "url": "https://huggingface.co/blog/feed.xml"},
+
+    {"name": "Hugging Face 오늘의 논문", "category": "papers", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 15},
+    {"name": "arXiv cs.AI", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 10},
+    {"name": "arXiv cs.CL", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.CL", "limit": 8},
+    {"name": "arXiv cs.LG", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.LG", "limit": 8},
+
+    {"name": "구글뉴스: AI 정책", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(%EC%A0%95%EC%B1%85+OR+%EA%B7%9C%EC%A0%9C+OR+%EA%B8%B0%EB%B3%B8%EB%B2%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 12},
+    {"name": "Google News: AI regulation", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
+    {"name": "과학기술정보통신부 보도자료", "category": "policy", "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94", "filter": true},
+
+    {"name": "Two Minute Papers", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"},
+    {"name": "Yannic Kilcher", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew"},
+    {"name": "AI Explained", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw"},
+    {"name": "Andrej Karpathy", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PsmIPBUVA"},
+    {"name": "조코딩", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQNE2JmbasNYbjGAcuBiRRg", "filter": true}
+  ],
+  "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "반도체", "데이터센터", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘", "모델", "model"]
+}
