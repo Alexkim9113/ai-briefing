@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:59+09:00",
+ "generated_at": "2026-09-28T10:15+09:00",
  "items": [
+  {
+   "id": "294ca0bb52496e50",
+   "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42081",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:08:14+00:00",
+   "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
+   "thumb": ""
+  },
   {
    "id": "1d2fb5cd0f0af97c",
    "title": "마이크로소프트 '글로벌 AI 확산 보고서', 한국 AI 사용률 40.6%…세계 12위",
@@ -58,6 +69,83 @@
    "thumb": ""
   },
   {
+   "id": "198aed83a4923f3a",
+   "title": "마키나락스, 군 전장망에 생성형 AI 적용…UFS서 운용 검증",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44QWpRUnA1cFEwdlk2S1d5YXc0ODRxMTBGNGRwbVZoTHBrM0xDbXduQ2VCUGxNVE1OYm9nZl9pMnFEZjJLYlBhWDl6SG52VXNLbk1OWmVn?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:12:22+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4b4af294d31cb75f",
+   "title": "AI 연구인력 소속 비중 중국이 미국 앞서…KAIST 기관 순위 3위",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KN1NJWEczQk95bUJNQTZlZnVxWU02UnRTaW9OTmNNTDY1d2RUMVRMSEkzbVloYlR2UFUyMUhIeHh6QmtHZk1XTWdwLThIcXJ2N3lfVlBtS043bHo5YkhTS0t5NmlGNXlwY2E1X1dnY2FlQQ?oc=5",
+   "source": "국내 대학·연구소 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T01:08:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2a6254d6fcf9787f",
+   "title": "[청년공감]“진짜인 줄 알았다”…SNS 뒤덮은 AI 생성물, 혼란·피로감 확산",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QUHhZeXdLeTlFUmVwR0VVZVRoNHdLcGVVUUZQM25KY3ZyRjdWRC1SMmZtTFJEdDhnckNYM0VUTmxoQXQtVWQyRXc3QmlDUU1Nazc3enN1ejUzQ2M?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:04:54+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "13df42deac0732a7",
+   "title": "인공지능 앞선 의대생, 강의실 밖에서 기술 배운 속사정",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVDJrQlV1QVdZT1dlMzlCWTFpaGdrX0Z3WWdFdHd0OGxMbk9za2ZWemhGMHJpMDZGRWY2czhJQ1A2YVROLUhWbjBSWTJPYlZvc0V0SVFKUjZZbGFnVU94bU9ZMHFQd3dBdHRjeDVHY3I0TTBVdnR4aXdLLVRTUjUxbzZic3Q4bWpQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:04:06+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "7e51a00bcf1fbd9e",
+   "title": "전남광주통합특별시 북구, 인공지능(AI) 활용 행정 효율 높인다",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvNDZaenZrN25ncTJGZGdUcmc1TVdmSmU5MFpVZGRpWkE3ZEx1YkV1cmpIbXZsZlAwZGJId0lFSUdoU3BCMlY3blkyeVVrZklaSXI4T1dpZ0JLUDhZMGlhU3V0eFJhT2V2Smc?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:00:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e3670fdb1168e9de",
+   "title": "“AI 기반 과학기술 연구 미래 논의”, 서울서 국제학술 대회 개최",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yYXM0Zkw0aHFQck1DR0loWkp6U3FUUUxkM3B4YTNBTzhYY0xxallPX3lPaHo4RHVIRFRaUlJKNGZzTVpwSFV3Tnd3dXZIUQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "ddb937dfdada96a5",
+   "title": "마키나락스, 軍 지휘통제체계에 생성형 AI 적용… 한·미 연합연습서 실증",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9mc3pwRUNjS18zV1hxUlBHdV9jSVlIVkFZQTF1TnRnQzlubjRvT3lOVW5PUkZUX0ZGNkpXWUhDeEl3YVQtMU56Zkt5WXlGUmdQdmZGNHVTOURBRHRHeUt2VlNVM3pScDVGdE9ybXlaVktDZHEw?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:59:56+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "e1b66b391d8fd729",
    "title": "전남광주시 북구, 생성형 AI·당직 콜봇 행정업무에 도입 - 보도자료 | 기사",
    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15VXRhTmxydzFpR3AwTUhUSFV5NzJIS0tqRDNlTDRhNzBmMWplV21NZnd3aVBHZ3JpWDI2cDI3amtHSjFfaW92ZTVjRk1xSGlPeXBVYjZ2eDJaY0NZaVJr?oc=5",
@@ -65,6 +153,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T00:56:16+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "d30ebc02879d11bb",
+   "title": "[동정]세계적 의료영상 AI 학회 경진대회 1위",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yVUw3Sm1uaHZFT0xlcmdCbWxwWkVIbl9zMEpGTVEzNFJjRzg1T29oczIzWmdyV2puenVaSDlrU3Jib1NIeFdBY3BjYlV4b24wYzRmQ0p6UldzMW1yaHU0b2VYdFFPQm1JTHc?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T00:55:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -124,6 +223,28 @@
    "thumb": ""
   },
   {
+   "id": "96dd319f26a3e42f",
+   "title": "\"주 전체로\"…루닛, 스웨덴 스톡홀름주 'AI 도입'",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ocEJieEdkWXM1OXRxNldieVJYdURQTVRuUUM4dTJKRnlQWVVyNE1FOXZrLUVibVpPdU1ral82bzZIOFJEV0ZpSlRndFI3eDVEbnI1Skp5VVR5elRscVh5NdIBeEFVX3lxTE9DNTI0UW5BeFhmNWR5UVROUDMtR3ZtLXlzeWpvb3NIQkl1NjM4M0U0TW9YVU1tR2pwdDNrMjYwNkJ4WFBLS3Zla0JsbUpDVG9oemlUR1UxT0FBNEtQdFRZTXhBc3owR3VBM0tNb2ttYWhNVWo2YUVJVg?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T00:41:27+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "b79c061e73a18cd4",
+   "title": "[AI픽] 한국 생성형 AI 사용 비중 40.6%…세계 12위로 4계단 상승",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE94NTV5MWJfalR1MnBFSXBCc1h2Nk90SXVaSDAyU0RjSFJzQV9Cb2FpSzBRSk9zaXVkTmFJaWpoYmRyUVY3Y3d5TWtsakRQNlE?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:40:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "bc7e9eb08236e472",
    "title": "한국 생성형 AI 사용 비중 40.6%",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81WTJsS2IwSE1mUjdMTFZLcml3ejBFSzJRUGFvUUN1c05BWkMweWZwb281Vlo4ZzcxTEJtV2N0dnFQQV9DdUpLZXA3SzJPZGlYd3dSQndIU09QTEpUQjByYVNTaGYtdDhBbVE?oc=5",
@@ -141,6 +262,17 @@
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-28T00:38:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "ba35de9dcfd1f152",
+   "title": "AI가 만든 연구결과, 책임은 연구자에게…국가 R&D 윤리 가이드 확정",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wWk1HLUVSUVhpb1NCM3lmZTJmNl9reUY5UUoxQXA4R25QeEZFb3E1T0x6alF1bXJCWmM5OWo2ZG56LS1kelRHSkRrWTFCdHhCVmJYMEhqZzFaOEZKSFQya1BFMHc5d20weWR3?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T00:34:30+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -206,6 +338,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T00:21:50+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "b6c53925c5aa08b7",
+   "title": "오픈AI·앤트로픽, 보안 사고 수만 건 조사…‘통제 능력’ 의문",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CSk9ZdGRuMHRYMHBJRV9Jank2ZEN3ZklaenZSM2t6VUtSalRtZkN3dE52RkI2NXNxZHM3UnJKdk9ZSEx0eUJobWdQek5nRkczZkp5Y1NQU2ZTbndkWGZuVmE3UkUyVU41OWZWV0J2NA?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:21:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -286,6 +429,17 @@
    "thumb": ""
   },
   {
+   "id": "38225faadb413104",
+   "title": "“임상과 기초연구 잇는다”… 단국대병원, 대만 명문 병원과 학술교류",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iM1liMVZTdHRpV25Rd2ZhS19HWjBYZ2w5bnJ4dmEyRnFGU1dkM2xrNmItNjIybTBlbnR5YlJRUGxvZUtGaE5KLUlMMkJMNGY2MjdwLVM3YTRGWnBkcmtqLVREdDhzWlRIei1hbjR3?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-27T23:56:03+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "a681b1f3f24363d6",
    "title": "빌 게이츠까지 쏜 AI 경고장… “자율 규제 끝났다” 통제론 급물살",
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAzc296bnJqRWxxbndmVVA3a1JYd3Roa0J6QUwxNGVxVG9FcWpGQ1dQQ3lvTGJQM3FPUlJydk9xR0l2YkExaVJsX051UWctdHdQRWdtMGRPeXljZ3VsSDUzYlM3eG1UQQ?oc=5",
@@ -307,6 +461,17 @@
    "thumb": ""
   },
   {
+   "id": "55ee36553167664e",
+   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1CbW5QZEo1a3J1SkJPOFBUVkFsRWhjaV9tVEw3elJhdnRsanVOUTdWS1B5dDgxWE5ZQlVobmxsU01kRUVuNWtKY1BScDhVVTYwVmFZNQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T23:42:01+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "a56355b4370c5ad4",
    "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oNDF1d2NXd3lSNFdSbnNpTGR4WHhqMC02WjNBUHJDNGkwRFBzbl8zdXFlRFRKekxRU2EyZXBiMjJaTDNuZ0hmdVlSMnlUcGM?oc=5",
@@ -317,18 +482,19 @@
    "thumb": ""
   },
   {
-   "id": "55ee36553167664e",
-   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1CbW5QZEo1a3J1SkJPOFBUVkFsRWhjaV9tVEw3elJhdnRsanVOUTdWS1B5dDgxWE5ZQlVobmxsU01kRUVuNWtKY1BScDhVVTYwVmFZNQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T23:42:01+00:00",
+   "id": "bc71dd530b5e27d7",
+   "title": "경과원, 연구기관·대학 몰린 광교테크노밸리 입주기회 확대",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zc0NCZUZmMUR6b0ZtblQwaGZtSlFLVE4tbjdvM0g1Z1hTQ3JYWnkwRDB3WHpFUlI5d0o5Y2gwWGNDV3otXzBXSzlPS29hWXNsQjVTSE5qWlpfaVdPWnhiS3Zwa3Fad25OaVhvZdIBbEFVX3lxTE4zc0NCZUZmMUR6b0ZtblQwaGZtSlFLVE4tbjdvM0g1Z1hTQ3JYWnkwRDB3WHpFUlI5d0o5Y2gwWGNDV3otXzBXSzlPS29hWXNsQjVTSE5qWlpfaVdPWnhiS3Zwa3Fad25OaVhvZQ?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-27T23:39:40+00:00",
    "summary": "",
    "thumb": ""
   },
   {
    "id": "c1e3c7d0c9c4c9d9",
-   "title": "More AI regulation ordered by Oregon governor",
+   "title": "More AI regulation ordered by Oregon governor - The Spokesman-Review",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNEZ3UEdJYUpyd2RyWkxDczBsekdnWHpNX2JwY1cwOWpzek1zdVJzX0sxVDhROXhqQU9ETXVCMzVCNEp3c2V5Q2FmT0Fub1NKV0E2QXpWTjE0UlI5ZFl5ZXVKM0w3YWxYUTZhTF9iNkV6YkMydzFTNkU3d1JtcFVESktaM19Ocno0b054QUw4RGFPd3JfNnc4?oc=5",
    "source": "Google News: AI regulation",
    "field": "",
@@ -425,7 +591,7 @@
   },
   {
    "id": "e09f773c670497f3",
-   "title": "빌 게이츠, 트럼프에 AI 규제 면담 요청…“AI 위험 우려 사기극 아냐” - g-enews.com",
+   "title": "빌 게이츠, 트럼프에 AI 규제 면담 요청…“AI 위험 우려 사기극 아냐”",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnl2MDdhdXhRX3l0c2NHTklpLWl4bkl4ZllwS1NUeGg4dXRVcXV6aW5kLUJ4bVpDeWRybndNYlc0YlVrRVl4ejZXUWlxVVplS3RUM3pqU244dWlBVTFna045SjZoakJuc0JiNDc3aER5LVMxaFJjS3NjbDN3czE5VTNxS3FJTmJM?oc=5",
    "source": "구글뉴스: AI 정책",
    "field": "",
@@ -463,17 +629,6 @@
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-27T23:06:51+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "b6c53925c5aa08b7",
-   "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CSk9ZdGRuMHRYMHBJRV9Jank2ZEN3ZklaenZSM2t6VUtSalRtZkN3dE52RkI2NXNxZHM3UnJKdk9ZSEx0eUJobWdQek5nRkczZkp5Y1NQU2ZTbndkWGZuVmE3UkUyVU41OWZWV0J2NA?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T23:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -565,7 +720,7 @@
    "id": "cd18f316871d4581",
    "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
-   "source": "구글뉴스: 생성형 AI",
+   "source": "구글뉴스: 인공지능",
    "field": "",
    "category": "news_ko",
    "published": "2026-09-27T21:36:00+00:00",
@@ -623,6 +778,17 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-27T21:02:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "77479231d0385c99",
+   "title": "프로메디우스, 흉부 X-ray로 골다공증 잡는다…의료AI 사업화 확대[문대현의 메디뷰]",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5EaUdrM2N0QmVDZExpYmhFOGxTMzh3c2ZvZjlZQVp4OWs2ajhYckdwWFgxeUVyR2Jma2V1ck5xNXVhbHBjbWFqa3BnOTk1ak1QaHl1Zk53eXJiTVHSAVtBVV95cUxORGlHazNjdEJlQ2RMaWJoRThsUzM4d3Nmb2Y5WUFaeDlrNmo4WHJHcFhYMXlFckdiZmtldXJOcTV1YWxwY21hamtwZzk5NWpNUGh5dWZOd3lyYk1R?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-27T21:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1054,6 +1220,28 @@
    "thumb": ""
   },
   {
+   "id": "f35ec71916650795",
+   "title": "Physics informed machine learning predicts binding free energy changes in protein-RNA complexes upon mutations",
+   "link": "https://www.nature.com/articles/s42003-026-10948-9",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "ff36489aaa9ce775",
+   "title": "SpaCEy links spatial tissue patterns to clinical outcomes using explainable graph neural networks",
+   "link": "https://www.nature.com/articles/s41467-026-77924-z",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "15961c1cb7687cbc",
    "title": "The Tests That Grade AI May Be Getting It Wrong",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjNrSHhuTVVvUkpOc1AyQ2M2c3ZCV1ZQTWV2UF90c2psUFJVTGtsdkFBZmZ4UHlZUkpiRm5iaTM0NGxfSldadXJtcTQ3V050cVdTODA1X1BLS3VoNUZTWVFBeWNyV1cyUUR0ZWRacGc3R1QtRUtaY1FqQmZVTkNfbU5CRQ?oc=5",
@@ -1087,6 +1275,28 @@
    "thumb": ""
   },
   {
+   "id": "e58cbdc1b9c75977",
+   "title": "Anthropic’s AI biolab finds ‘CRISPR-like’ DNA in viruses. What’s next?",
+   "link": "https://www.nature.com/articles/d41586-026-03039-6",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-25T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6c420acafc929d3b",
+   "title": "A structure-informed deep learning framework for modeling TCR-peptide-HLA interactions",
+   "link": "https://www.nature.com/articles/s41467-026-78063-1",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-25T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "2d3921d846c73739",
    "title": "Estimating suicide risk from text",
    "link": "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
@@ -1106,6 +1316,17 @@
    "category": "papers",
    "published": "2026-09-24T00:00:00-04:00",
    "summary": "In their new book, “How AI Sees the City,” the leaders of MIT’s Senseable City Lab examine the technology’s implications for researching urban life.",
+   "thumb": ""
+  },
+  {
+   "id": "c96ccba9c8a0c63c",
+   "title": "UpTCR: a unified progressive knowledge transfer foundation model for robust T-cell receptor-antigen binding recognition",
+   "link": "https://www.nature.com/articles/s41467-026-78075-x",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-24T00:00:00+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -1357,6 +1578,17 @@
    "thumb": ""
   },
   {
+   "id": "652024649d8dd002",
+   "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "- 19개국 600여 명이 참여하는 세계 최대 규모의 AI for Science 국제 학술대회 - 220여 편 논문 발표, 국내외 연사 80여 명 초청 강연 - 자율형 연구 에이전트와 15개 과학 분야에서 AI를 접목하는 최신 연구 발표",
+   "thumb": ""
+  },
+  {
    "id": "ae17b9f530f32830",
    "title": "「사이버보안 특화 AI 모델 개발」 프로젝트 착수 간담회 개최",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187805",
@@ -1507,7 +1739,31 @@
    "fetched": 10
   },
   {
+   "name": "Nature Machine Intelligence · AI 일반",
+   "ok": false,
+   "count": 0,
+   "error": "ParseError: not well-formed (invalid token): line 14, column 4"
+  },
+  {
+   "name": "Nature 기후변화 · 에너지·환경",
+   "ok": false,
+   "count": 0,
+   "error": "ParseError: not well-formed (invalid token): line 14, column 4"
+  },
+  {
    "name": "Nature 머신러닝 · AI 일반",
+   "ok": true,
+   "count": 5,
+   "fetched": 30
+  },
+  {
+   "name": "Nature 법 · 법·윤리·정책",
+   "ok": false,
+   "count": 0,
+   "error": "ParseError: not well-formed (invalid token): line 14, column 4"
+  },
+  {
+   "name": "Nature 에너지 · 에너지·환경",
    "ok": false,
    "count": 0,
    "error": "ParseError: not well-formed (invalid token): line 14, column 4"
@@ -1522,7 +1778,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "TechCrunch AI",
@@ -1567,34 +1823,34 @@
    "fetched": 0
   },
   {
-   "name": "arXiv · 교육",
-   "ok": false,
+   "name": "arXiv cs.CY · 교육",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 406: Not Acceptable"
+   "fetched": 0
   },
   {
-   "name": "arXiv · 문화·예술",
-   "ok": false,
+   "name": "arXiv cs.CY · 법·윤리·정책",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 406: Not Acceptable"
+   "fetched": 0
   },
   {
-   "name": "arXiv · 법·윤리·정책",
-   "ok": false,
+   "name": "arXiv eess.SY · 에너지·환경",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 406: Not Acceptable"
+   "fetched": 0
   },
   {
-   "name": "arXiv · 에너지·환경",
-   "ok": false,
+   "name": "arXiv 음악·미디어·HCI · 문화·예술",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 406: Not Acceptable"
+   "fetched": 0
   },
   {
-   "name": "arXiv · 의료",
+   "name": "npj Digital Medicine · 의료",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 406: Not Acceptable"
+   "error": "ParseError: not well-formed (invalid token): line 14, column 4"
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -1612,7 +1868,7 @@
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 83
+   "fetched": 87
   },
   {
    "name": "구글뉴스: 인공지능",
@@ -1623,8 +1879,14 @@
   {
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
-   "count": 8,
-   "fetched": 39
+   "count": 6,
+   "fetched": 40
+  },
+  {
+   "name": "국내 분야별 연구 · 국내 연구",
+   "ok": true,
+   "count": 6,
+   "fetched": 52
   },
   {
    "name": "인공지능신문",
