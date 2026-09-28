@@ -1070,12 +1070,16 @@ def collect_photos():
             continue
         q = urllib.parse.quote(PHOTO_QUERIES[g])
         url = (f"https://api.openverse.org/v1/images/?q={q}&license=cc0,pdm&source=stocksnap,wordpress"
-               f"&category=photograph&aspect_ratio=wide&mature=false&page_size=40&page={day % 3 + 1}")
+               f"&aspect_ratio=wide&size=large&page_size=20")  # 로그인 없이 쓰면 한 번에 20장까지
         try:
             res = json.loads(fetch(url)).get("results", [])
         except Exception as e:
             print("사진 검색 실패", g, e)
+            if "429" in str(e):  # 너무 자주 물어봤다는 뜻이라 오늘은 멈춘다
+                break
             continue
+        finally:
+            time.sleep(4)
         for r in res:
             w, h = r.get("width") or 0, r.get("height") or 0
             if (r.get("license") not in ("cc0", "pdm") or r.get("source") not in ("stocksnap", "wordpress")
