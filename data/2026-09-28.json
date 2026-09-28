@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T10:20+09:00",
+ "generated_at": "2026-09-28T10:23+09:00",
  "items": [
   {
    "id": "4c30431d125b111f",
@@ -87,6 +87,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T01:19:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6fbd566377730f2e",
+   "title": "피 대신 땀으로 약물 추적…고려대 ‘AI 피부 패치’, 신호 100만 배 키웠다",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1EUVNVRVNRYXFjUDE5Slp1UkZVWDdMd1RsOThmN2dhSkNQTXhqOGl1ZEFuTjNxU2R5SVJzMHEyMWZTelAyd21WbDFIcnltdTEzZGhnZDZuWTNyZEV2NzlnS3JfT0tfeEh5clVz?oc=5",
+   "source": "국내 대학·연구소 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T01:17:37+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1688,17 +1699,6 @@
    "thumb": ""
   },
   {
-   "id": "83c0d9c952f9f30c",
-   "title": "Open-Source Artificial Intelligence in Small-Bowel Capsule Endoscopy-Visual Assistance is Promising, But Not Yet a Standard of Care.",
-   "link": "https://europepmc.org/article/MED/42311608",
-   "source": "Europe PMC · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-06-15T00:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -1801,9 +1801,9 @@
  "status": [
   {
    "name": "AI Explained",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "AI타임스",
@@ -1827,13 +1827,13 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 78
+   "fetched": 77
   },
   {
    "name": "Hugging Face Blog",
@@ -1862,8 +1862,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -1887,7 +1887,7 @@
    "name": "Nature 에너지 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 30
   },
   {
    "name": "OpenAI",
@@ -1899,7 +1899,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "TechCrunch AI",
@@ -1910,7 +1910,7 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "fetched": 10
   },
   {
@@ -1927,9 +1927,9 @@
   },
   {
    "name": "Yannic Kilcher",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 500: Internal Server Error"
   },
   {
    "name": "arXiv cs.AI · AI 일반",
@@ -1970,8 +1970,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -1989,7 +1989,7 @@
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 90
+   "fetched": 88
   },
   {
    "name": "구글뉴스: 인공지능",
@@ -2001,13 +2001,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 41
+   "fetched": 40
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "인공지능신문",
@@ -2017,9 +2017,9 @@
   },
   {
    "name": "조코딩",
-   "ok": true,
-   "count": 1,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 500: Internal Server Error"
   }
  ]
 }
