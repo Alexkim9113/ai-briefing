@@ -39,7 +39,7 @@ jobs:
           PHOTOS: ${{ inputs.photos }}
         run: |
           if [ "$PHOTOS" = "yes" ] || { [ "$(TZ=Asia/Seoul date +%H)" = "04" ] && [ "$(date +%M)" -lt 30 ]; }; then
-            pip install -q pillow && python briefing.py photos || echo "사진 수집 실패(다음 날 다시 시도)"
+            sudo apt-get install -y -qq tesseract-ocr >/dev/null; pip install -q pillow && python briefing.py photos || echo "사진 수집 실패(다음 날 다시 시도)"
           fi
       - name: 수집 + 사이트 생성
         env:

@@ -67,7 +67,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/circuit-chip-JVXOVVIZYP",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "chip-1.jpg",
@@ -77,7 +78,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/circuit-chip-1KREEXFTZT",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "chip-2.jpg",
@@ -97,7 +99,8 @@
   "license": "cc0",
   "source": "rawpixel",
   "landing": "https://www.rawpixel.com/image/5958408/free-public-domain-cc0-photo",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "chip-4.jpg",
@@ -256,7 +259,8 @@
    "solar",
    "rooftop",
    "주택"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "invest-0.jpg",
@@ -311,7 +315,8 @@
    "stock",
    "market",
    "거래"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "invest-3.jpg",
@@ -328,7 +333,8 @@
    "stock",
    "trading",
    "투자"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "invest-4.jpg",
@@ -429,7 +435,8 @@
    "laptop",
    "생산성",
    "productivity"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "llm-1.jpg",
@@ -455,7 +462,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/code-coding-FSPLFPQBCZ",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "llm-3.jpg",
@@ -465,7 +473,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/macbook-computer-6UHHE19YG7",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "llm-4.jpg",
@@ -475,7 +484,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/coding-business-DZ1EFM9PIK",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "llm-5.jpg",
@@ -485,7 +495,8 @@
   "license": "cc0",
   "source": "stocksnap",
   "landing": "https://stocksnap.io/photo/coding-programming-PBTF1NEBCG",
-  "tags": []
+  "tags": [],
+  "text": true
  },
  {
   "file": "medical-0.jpg",
@@ -644,7 +655,8 @@
    "security",
    "계정",
    "비밀번호"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "security-2.jpg",
@@ -680,7 +692,8 @@
    "hacker",
    "랜섬웨어",
    "ransomware"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "video-0.jpg",
@@ -946,7 +959,8 @@
    "과제",
    "homework",
    "학습"
-  ]
+  ],
+  "text": true
  },
  {
   "file": "research-0.jpg",
@@ -1317,7 +1331,8 @@
   "creator": "Lorenzo Cafaro",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/code-coding-TIV258VG3N"
+  "landing": "https://stocksnap.io/photo/code-coding-TIV258VG3N",
+  "text": true
  },
  {
   "file": "code-1.jpg",
@@ -1346,7 +1361,8 @@
   "creator": "One Idea LLC",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/programming-code-1STVFMTBJY"
+  "landing": "https://stocksnap.io/photo/programming-code-1STVFMTBJY",
+  "text": true
  },
  {
   "file": "code-2.jpg",
@@ -1374,7 +1390,8 @@
   "creator": null,
   "license": "cc0",
   "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/5906903/photo-image-background-public-domain-technology"
+  "landing": "https://www.rawpixel.com/image/5906903/photo-image-background-public-domain-technology",
+  "text": true
  },
  {
   "file": "money-0.jpg",
@@ -1438,7 +1455,8 @@
   "creator": null,
   "license": "cc0",
   "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/6034997/photo-image-background-public-domain-golden"
+  "landing": "https://www.rawpixel.com/image/6034997/photo-image-background-public-domain-golden",
+  "text": true
  },
  {
   "file": "money-2.jpg",
@@ -1738,7 +1756,8 @@
   "creator": null,
   "license": "cc0",
   "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/6079991/charging-stations"
+  "landing": "https://www.rawpixel.com/image/6079991/charging-stations",
+  "text": true
  },
  {
   "file": "farm-0.jpg",
@@ -1965,38 +1984,6 @@
   "landing": "https://stocksnap.io/photo/work-business-WQ2JMRIIQB"
  },
  {
-  "file": "deal-2.jpg",
-  "topic": "",
-  "tags": [
-   "협약",
-   "협력",
-   "제휴",
-   "mou",
-   "파트너십",
-   "업무협약",
-   "계약",
-   "인수",
-   "합병",
-   "동맹",
-   "partnership",
-   "deal",
-   "agreement",
-   "acquire",
-   "acquisition",
-   "merger",
-   "체결",
-   "손잡",
-   "손잡고",
-   "맞손",
-   "협업"
-  ],
-  "title": "Business handshake png clipart illustration",
-  "creator": null,
-  "license": "cc0",
-  "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/9004454/png-hand-person"
- },
- {
   "file": "kids-0.jpg",
   "topic": "",
   "tags": [
@@ -2016,7 +2003,8 @@
   "creator": "Olu Eletu",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/alphabeth-abc-Q5FJUK9OFH"
+  "landing": "https://stocksnap.io/photo/alphabeth-abc-Q5FJUK9OFH",
+  "text": true
  },
  {
   "file": "kids-1.jpg",
@@ -2347,7 +2335,8 @@
   "creator": "Wilfred Iven",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/news-newspaper-OJXHDWMWV9"
+  "landing": "https://stocksnap.io/photo/news-newspaper-OJXHDWMWV9",
+  "text": true
  },
  {
   "file": "media-1.jpg",
@@ -2372,7 +2361,8 @@
   "creator": "Patryk Dziejma",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/newspaper-magazine-FT18I6U09O"
+  "landing": "https://stocksnap.io/photo/newspaper-magazine-FT18I6U09O",
+  "text": true
  },
  {
   "file": "media-2.jpg",
@@ -2397,7 +2387,8 @@
   "creator": "Matt Popovich",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/newspapers-news-PCHSIJ30CX"
+  "landing": "https://stocksnap.io/photo/newspapers-news-PCHSIJ30CX",
+  "text": true
  },
  {
   "file": "pills-0.jpg",
@@ -2954,7 +2945,8 @@
   "creator": null,
   "license": "cc0",
   "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/8732306/photo-image-public-domain-water"
+  "landing": "https://www.rawpixel.com/image/8732306/photo-image-public-domain-water",
+  "text": true
  },
  {
   "file": "ship-2.jpg",
@@ -3037,7 +3029,8 @@
   "creator": "Mike Petrucci",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/shop-store-I93PW8NE0F"
+  "landing": "https://stocksnap.io/photo/shop-store-I93PW8NE0F",
+  "text": true
  },
  {
   "file": "shop-2.jpg",
@@ -3065,7 +3058,8 @@
   "creator": "Clark Street Mercantile",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/clothes-jackets-72V88M4FAC"
+  "landing": "https://stocksnap.io/photo/clothes-jackets-72V88M4FAC",
+  "text": true
  },
  {
   "file": "shop-3.jpg",
@@ -3242,7 +3236,8 @@
   "creator": "Matt Moloney",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/office-graph-ASWIQAQBJZ"
+  "landing": "https://stocksnap.io/photo/office-graph-ASWIQAQBJZ",
+  "text": true
  },
  {
   "file": "vr-0.jpg",
@@ -3361,29 +3356,6 @@
   "landing": "https://www.rawpixel.com/image/3282289/free-photo-image-wind-blue-sky-cc0"
  },
  {
-  "file": "wind-4.jpg",
-  "topic": "",
-  "tags": [
-   "풍력",
-   "재생에너지",
-   "친환경",
-   "탄소중립",
-   "기후",
-   "신재생",
-   "wind",
-   "renewable",
-   "clean",
-   "energy",
-   "climate",
-   "esg"
-  ],
-  "title": "Hywind floating offshore wind turbine",
-  "creator": "U.S. Department of Energy",
-  "license": "cc0",
-  "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/3322332/free-photo-image-wind-turbine-sea-renewable"
- },
- {
   "file": "wind-5.jpg",
   "topic": "",
   "tags": [
@@ -3485,7 +3457,8 @@
   "creator": null,
   "license": "cc0",
   "source": "rawpixel",
-  "landing": "https://www.rawpixel.com/image/3284166/free-photo-image-fountain-pen-writer-writing"
+  "landing": "https://www.rawpixel.com/image/3284166/free-photo-image-fountain-pen-writer-writing",
+  "text": true
  },
  {
   "file": "xray-0.jpg",
@@ -3599,7 +3572,8 @@
   "creator": "Words as Pictures",
   "license": "cc0",
   "source": "stocksnap",
-  "landing": "https://stocksnap.io/photo/home-education-BG5ITY3BNT"
+  "landing": "https://stocksnap.io/photo/home-education-BG5ITY3BNT",
+  "text": true
  },
  {
   "file": "military-2.jpg",

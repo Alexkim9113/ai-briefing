@@ -1002,6 +1002,9 @@ TOPIC_SLUG = {"AI": "ai", "반도체": "chip", "에너지·환경": "energy", "�
 PER_PAGE = 8  # 목록 한 페이지에 보여줄 글 수
 
 
+PHOTO_TEXT = set()  # 사진 안에 영어 글자가 보이는 사진(한국어 기사에는 쓰지 않는다)
+
+
 def load_photos():
     p = ROOT / "static" / "photos" / "credits.json"
     if not p.exists():
@@ -1012,6 +1015,7 @@ def load_photos():
         if c.get("topic"):
             by.setdefault(TOPIC_SLUG.get(c["topic"], "ai"), []).append(c["file"])
     tagged = [(c["file"], [t.lower() for t in c.get("tags", [])]) for c in credits if c.get("tags")]
+    PHOTO_TEXT.update(c["file"] for c in credits if c.get("text"))
     for c in credits:  # 파일 이름 앞부분(chip-3.jpg → chip)으로도 묶는다
         by.setdefault("#" + c["file"].rsplit("-", 1)[0], []).append(c["file"])
     return credits, by, tagged
@@ -1042,6 +1046,26 @@ def _hit(tag, text):
     if tag.isascii() and len(tag) <= 3:
         return re.search(r"(?<![a-z0-9])" + re.escape(tag) + r"(?![a-z0-9])", text) is not None
     return tag in text
+
+
+def has_text(path):
+    """사진 속에 영어 단어가 읽히는지 글자 인식(tesseract)으로 확인. 도구가 없으면 확인하지 않는다."""
+    import csv
+    import io
+    import subprocess
+    try:
+        out = subprocess.run(["tesseract", str(path), "stdout", "--psm", "11", "tsv"],
+                             capture_output=True, text=True, timeout=60).stdout
+    except (OSError, subprocess.SubprocessError):
+        return False
+    for r in csv.DictReader(io.StringIO(out), delimiter="\t", quoting=csv.QUOTE_NONE):
+        try:
+            conf = float(r.get("conf") or -1)
+        except ValueError:
+            conf = -1
+        if conf >= 70 and re.fullmatch(r"[A-Za-z]{3,}", (r.get("text") or "").strip()):
+            return True
+    return False
 
 
 def collect_photos():
@@ -1103,6 +1127,8 @@ def collect_photos():
             c = {"file": name, "topic": base.get("topic", ""), "tags": base.get("tags", []),
                  "title": (r.get("title") or "")[:120], "creator": r.get("creator") or "", "license": r["license"],
                  "source": r["source"], "landing": r["foreign_landing_url"]}
+            if has_text(folder / name):  # 글자가 보이면 표시만 해 두고 해외 기사에만 쓴다
+                c["text"] = True
             credits.append(c)
             groups.setdefault(g, []).append(c)
             seen.add(c["landing"])
@@ -1120,7 +1146,11 @@ def photo_for(it, used=None):
     title = (it["title"] + " " + it.get("title_ko", "")).lower()
     summ = (it.get("summary") or "")[:200].lower()
     best, files = 0, []
+    ko = re.search("[가-힣]", it["title"]) is not None
+    ok = lambda f: not (ko and f in PHOTO_TEXT)
     for f, tags in PHOTO_TAGS:
+        if not ok(f):
+            continue
         score = sum(3 if _hit(t, title) else 1 if _hit(t, summ) else 0 for t in tags)
         if score > best:
             best, files = score, [f]
@@ -1131,7 +1161,7 @@ def photo_for(it, used=None):
         files = PHOTOS.get(TOPIC_SLUG.get(topic, "")) or []
         if not files:  # 뚜렷한 주제가 없으면 카테고리에 어울리는 사진
             files = [f for g in CAT_PHOTOS.get(it.get("category"), ["ai"]) for f in PHOTOS.get("#" + g, [])]
-        files = files or PHOTOS.get("ai") or []
+        files = [f for f in (files or PHOTOS.get("ai") or []) if ok(f)] or [f for f in PHOTOS.get("ai", []) if ok(f)]
     if not files:
         return None
     start = int((it.get("id") or "0")[:8] or "0", 16) % len(files)
