@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T13:58+09:00",
+ "generated_at": "2026-09-28T14:01+09:00",
  "items": [
   {
    "id": "5a871f1b164a4c7d",
@@ -198,7 +198,8 @@
    "category": "news_global",
    "published": "2026-09-28T04:10:15+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "트럼프는 이전 Barbs 이후 Anthropic의 억만 장자 CEO Dario Amodei와 저녁 식사를했습니다."
   },
   {
    "id": "f388d2dfd421a7c2",
@@ -242,7 +243,8 @@
    "category": "news_global",
    "published": "2026-09-28T03:41:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI 데이터센터 붐으로 인한 에너지 문제"
   },
   {
    "id": "45366ac4a4bbd075",
@@ -253,7 +255,8 @@
    "category": "news_global",
    "published": "2026-09-28T03:29:55+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "도널드 트럼프는 백악관에서 Anthropic CEO Dario Amodei를 초대합니다."
   },
   {
    "id": "ceb3513f51978ab3",
@@ -275,7 +278,8 @@
    "category": "policy",
    "published": "2026-09-28T03:16:19+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "트럼프의 AI 제국, 감시받는 연회장, 그리고 9살 아이의 118,000달러 실수"
   },
   {
    "id": "6f8075c506f73a26",
@@ -297,7 +301,8 @@
    "category": "news_global",
    "published": "2026-09-28T03:04:15+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "현대 치과의 인공 지능: 치과 전문 분야 및 미래 과제 전반에 걸친 응용"
   },
   {
    "id": "81ff42a4b64bbf2e",
@@ -497,7 +502,8 @@
    "category": "news_global",
    "published": "2026-09-28T02:10:13+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "새로운 UConn 보고서, 인공 지능 응용을 통해 경제 침체를 역전시키기 위한 코네티컷의 로드맵 개요"
   },
   {
    "id": "bdaf5a0779594d60",
@@ -1029,7 +1035,8 @@
    "category": "news_global",
    "published": "2026-09-28T00:37:48+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "설문 조사에 따르면 의료계 경영진은 AI 청구서가 다가옴에도 불구하고 여전히 기술에 투자하고 있습니다."
   },
   {
    "id": "ba35de9dcfd1f152",
@@ -1784,7 +1791,8 @@
    "category": "news_global",
    "published": "2026-09-27T19:00:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "중국은 엔비디아의 AI 시장을 재개할 수도 있다. NVDA 주식은 월요일에 어떻게 반응할까요?"
   },
   {
    "id": "2809059b0209e060",
@@ -1925,7 +1933,8 @@
    "category": "news_global",
    "published": "2026-09-27T15:24:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "중국은 ByteDance, Alibaba의 새로운 Nvidia 칩 구매를 허용하는 데 무게를 두고 있다고 The Information이 보도했습니다."
   },
   {
    "id": "26b4356d7150af44",
@@ -2595,7 +2604,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 80
+   "fetched": 79
   },
   {
    "name": "Google News: AI 기업",
@@ -2630,8 +2639,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2779,9 +2788,9 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
