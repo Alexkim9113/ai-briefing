@@ -111,7 +111,9 @@
    "published": "2026-09-24T14:54:08+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "특종: 트럼프 동맹은 AI \"두머리즘\"의 얼굴로서 Anthropic CEO에 새로운 전선을 열었습니다."
+   "title_ko": "속보: 트럼프 측근들, AI ‘비관론’의 상징으로 지목된 앤트로픽 CEO를 겨냥해 새로운 공세를 펼치다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "08c12528ce92bf3d",
@@ -134,7 +136,9 @@
    "published": "2026-09-24T14:08:57+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "LFM2.5-VL-DSpark로 비전 언어 모델 가속화"
+   "title_ko": "LFM2.5-VL-DSpark를 활용한 비전-언어 모델 가속화",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "11b1f486e03baede",
@@ -146,7 +150,11 @@
    "published": "2026-09-24T14:03:38+00:00",
    "summary": "Meta says the keychain-sized Muse Charm will ship in December.",
    "thumb": "",
-   "title_ko": "Meta는 AI 비서를 키체인에 장착합니다."
+   "title_ko": "메타, AI 비서를 열쇠고리에 탑재",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "메타는 열쇠고리 크기의 ‘뮤즈 참(Muse Charm)’이 12월에 출시될 것이라고 밝혔다.",
+   "detail_ko": "메타는 열쇠고리 크기의 '뮤즈 참(Muse Charm)'이 12월에 출시될 것이라고 밝혔다."
   },
   {
    "id": "877277eb6418c21a",
@@ -169,7 +177,11 @@
    "published": "2026-09-24T13:42:11+00:00",
    "summary": "Some owners, including me, have reported sudden shutdowns while adjusting Apple Watch settings.",
    "thumb": "",
-   "title_ko": "Apple Watch 12 또는 Ultra 4가 무작위로 다시 시작됩니까? 수정 사항은 다음과 같습니다."
+   "title_ko": "Apple Watch 12 또는 Ultra 4가 무작위로 재시작되나요? 해결 방법은 다음과 같습니다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "저를 포함한 일부 사용자들은 애플 워치 설정을 조정하던 중 기기가 갑자기 꺼지는 현상을 보고했습니다.",
+   "detail_ko": "저를 포함한 일부 사용자들은 Apple Watch 설정을 조정하던 중 기기가 갑자기 꺼지는 현상을 보고했습니다."
   },
   {
    "id": "2013d7aa02509429",
@@ -181,7 +193,23 @@
    "published": "2026-09-24T13:10:30+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "혼돈을 억제하세요: GeForce NOW에서 'Control Resonant' 출시"
+   "title_ko": "혼돈을 통제하라: ‘CONTROL Resonant’가 GeForce NOW에서 출시",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "d58556e6935e2361",
+   "title": "Teachers' Venture Growth invests in Harvey, the leading AI legal platform",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNckJ0N3AxUTRiWjlmUlEtY0RUazAwUExjdkpiSEJhb2xoUzBxd2tOWFB5anJLdVdDZENLUzJBcWlHOEpXblZHQ0lzZk16bUZxSnlsVHdNdnVvNmdyREpHVWctR0w4dS0wUjRXUlF6X2I3MGg5M29USkJfUk52V3hmRUJ6RXpxTExKVENydkdLZHV3VmRBUlpYdjAzS0g5TW5vdEEtVU42ekpQRmJJYlFRY0hoRjIwcy1lSUhZ?oc=5",
+   "source": "Ontario Teachers' Pension Plan",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-24T13:05:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Teachers' Venture Growth, 선도적인 AI 법률 플랫폼 ‘Harvey’에 투자",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "08f0b822650c8785",
@@ -193,7 +221,11 @@
    "published": "2026-09-24T13:00:35+00:00",
    "summary": "Enterprise artificial intelligence platform company Dataiku Inc.",
    "thumb": "",
-   "title_ko": "Dataiku는 크로스 플랫폼 에이전트 관리를 선보이고 Cobuild 에이전트를 확장합니다."
+   "title_ko": "Dataiku, 크로스 플랫폼 에이전트 관리 기능 첫 선보여… Cobuild 빌딩 에이전트 확장",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "기업용 인공지능 플랫폼 기업인 Dataiku Inc.",
+   "detail_ko": "기업용 인공지능 플랫폼 기업인 Dataiku Inc."
   },
   {
    "id": "2181f5f56ad229ab",
@@ -205,7 +237,23 @@
    "published": "2026-09-24T12:50:21+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "대법원의 개방형 AI 규제 건틀릿"
+   "title_ko": "대법원의 ‘무차별적’ AI 규제 난관",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "a4b19a7f690e190c",
+   "title": "AI tools can help Americans meet their civil legal needs",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVmUzTzRfTEM1ckNNZ2w4dGpEeXF3VC1EU0pISE1IX1hTTms2akV5UnpoZ3pFWWs4dnRhUW1zU2pGSjE2TjNvY2RGeEZaLWwyRGlsbFlCOTVMWjdtUEZwS1p6UnZfRlpEYnBXVnBwQ2U1U2NVN2lobk1TM05LZ1hkaWVGUzN6cjRWVVoyQVVsZTZ1YzByYVE?oc=5",
+   "source": "The Conversation",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-24T12:47:45+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 도구는 미국인들이 민사 법률 문제를 해결하는 데 도움을 줄 수 있다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "31f10046aafc502d",
@@ -217,7 +265,9 @@
    "published": "2026-09-24T12:26:29+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "Adobe, Gemini에 등장하여 Claude에서 수행할 수 있는 작업 확장"
+   "title_ko": "Adobe가 Gemini에 합류하며 Claude에서 할 수 있는 기능을 확장합니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "afe785696777ba6e",
@@ -229,7 +279,9 @@
    "published": "2026-09-24T11:50:07+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "23개 주, 의회에 AI 규제, 국가 안보 및 인프라에 대한 위험 경고 촉구"
+   "title_ko": "23개 주, 의회에 AI 규제 촉구…국가 안보 및 인프라에 대한 위험 경고 - ABC 뉴스",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "37ad7746159e070a",
@@ -263,7 +315,9 @@
    "published": "2026-09-24T10:47:00+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "UNU와 볼로냐 대학교, AI 교육, 연구 및 정책 발전을 위해 파트너십 체결"
+   "title_ko": "UNU와 볼로냐 대학교, AI 교육·연구·정책 발전을 위해 협력",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "f0cec527ca775808",
@@ -275,7 +329,11 @@
    "published": "2026-09-24T10:46:56+00:00",
    "summary": "The country’s prime minister expressed disappointment at being informed of the hack only via email. Now Australia is investigating whether OpenAI broke the law.",
    "thumb": "",
-   "title_ko": "OpenAI 에이전트가 호주의 의료 서비스를 해킹했습니다. 그들의 정부는 몇 달 후에 알게 되었습니다"
+   "title_ko": "오픈AI 에이전트가 호주의 보건 서비스를 해킹했다. 호주 정부는 몇 달 뒤에야 이를 파악했다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "호주 총리는 해킹 사실을 이메일로만 통보받은 데 대해 실망감을 표명했다. 현재 호주는 OpenAI가 법을 위반했는지 여부를 조사하고 있다.",
+   "detail_ko": "해당국의 총리는 해킹 사실을 이메일로만 통보받은 데 대해 실망감을 표명했다.\n현재 호주는 OpenAI가 법을 위반했는지 조사하고 있습니다."
   },
   {
    "id": "0f98a8afd5886c75",
@@ -287,7 +345,11 @@
    "published": "2026-09-24T10:20:06-04:00",
    "summary": "Artificial intelligence models can give users the wrong answer and do so with great confidence.",
    "thumb": "",
-   "title_ko": "의심스러운 답변에 위험 신호를 표시함으로써 AI를 더욱 신뢰할 수 있게 만듭니다."
+   "title_ko": "AI가 의심스러운 답변에 대해 스스로 경고 신호를 보내도록 하여 신뢰도를 높이기",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "인공지능 모델은 사용자에게 잘못된 답을 제공할 수 있으며, 그럴 때 매우 확신에 찬 태도를 보입니다.",
+   "detail_ko": "인공지능 모델은 사용자에게 잘못된 답을 제시할 수 있으며, 그럴 때 매우 확신에 찬 태도를 보입니다."
   },
   {
    "id": "92ab52df8d54ff4b",
@@ -332,7 +394,9 @@
    "published": "2026-09-24T09:00:00+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "AI 규제가 캠페인 문제로 중심을 잡다"
+   "title_ko": "AI 규제가 선거 쟁점으로 부상",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "11e4ffcba106989c",
@@ -355,7 +419,11 @@
    "published": "2026-09-24T08:00:06-04:00",
    "summary": "Autonomous vehicles and robots need to understand not only what is around them, but how objects and people are moving.",
    "thumb": "",
-   "title_ko": "교통 상황에서 움직임을 읽을 수 있도록 레이더 교육"
+   "title_ko": "레이더가 교통 상황 속 움직임을 인식하도록 훈련시키기",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "자율주행차와 로봇은 주변 환경을 파악할 뿐만 아니라, 사물과 사람이 어떻게 움직이는지까지 이해해야 한다.",
+   "detail_ko": "자율주행차와 로봇은 주변 환경에 대한 정보뿐만 아니라 사물과 사람이 어떻게 움직이는지까지 파악해야 합니다."
   },
   {
    "id": "55a566d8c8c5e9b4",
@@ -365,6 +433,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-24T07:28:41+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "54bb16bfc1a1d9eb",
+   "title": "베트남의 AI 솔루션이 등장하여 국가 AI 주권 구축에 기여하고 있습니다.",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQS3FGWEJxMjJMWnRZZGtfTkJva1hQSWdnNzBuU1o1U1kzR3lNdXRGSVVlYXVVYnhXSnptaGhKREZncWZRUDJ0NFpxejFZQ0pROTFfZlF5ZEdfc2VhdDJ4SFdVX1dCSEJOZllUNTRhMHhadDNhOF8xNV9TMlpIR25VbkRJcFdhZ2dJengtc1EzQXcyMXhmd0RxQndyOA?oc=5",
+   "source": "Vietnam.vn",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-24T07:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -389,6 +468,20 @@
    "published": "2026-09-24T06:46:40+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "95be32940a2d90c5",
+   "title": "The Human Clipboard: Closing the Operational Gap in Legal AI",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQelhROWxaWHVlS2FKNEg1WGpBeHIxVjFwSmNTbXk5TzlQcDdfa1l5R0pMd0FsM3ZEZUpWS3RpRzlkOGdDazB5UWlwOHk5T0g2NXZQOF96ZmhiNWdSaDV4UDlqRkNSeE9iU1poTW1DSU5hYlBmWnV1bjFISDBvYWQxVkk1SVY5SFRMdUN3UnFVeTV1azloX2NqWFdmMW1uTkQ0UmN2cnFMdw?oc=5",
+   "source": "artificiallawyer.com",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-24T06:40:56+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "'휴먼 클립보드': 법률 AI 분야의 운영 격차 해소",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "71d94cb90e75ea61",
@@ -422,7 +515,11 @@
    "published": "2026-09-24T05:40:02-04:00",
    "summary": "Leaders of major AI firms told the U.N.",
    "thumb": "",
-   "title_ko": "UN에서 기술 책임자들은 AI 개발에 주의를 촉구했습니다."
+   "title_ko": "유엔에서 기술계 수장들, AI 개발에 신중을 촉구",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "주요 AI 기업 대표들이 유엔에 다음과 같이 밝혔다.",
+   "detail_ko": "주요 AI 기업 대표들은 유엔에 다음과 같이 밝혔다."
   },
   {
    "id": "ecb9f2f006931b12",
@@ -445,7 +542,20 @@
    "published": "2026-09-24T05:14:11+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "OpenAI의 호주 보건부 웹 사이트 침해로 비난이 촉발됨"
+   "title_ko": "OpenAI의 호주 보건부 웹사이트 침해 사건으로 비판 받아",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "b335c4e7f332285f",
+   "title": "[조타수] 미국 소비자에 95달러씩 보상 나선 애플…시리 AI 출시 지연이 이유",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE45d1ZEaXBib1BCelJ2dVFscWxxRF93UGhjYml2aUxBZkJTVmpBelFxaEJWcU1qczMzWEVYOHNkd0xYTWFfUm1TMmxVV1dNbGhOWjh3WEFyWU9zS3JQTEZPSThScThxX3VFS3c?oc=5",
+   "source": "콕스뉴스",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-24T04:54:33+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "5c2531a4da54c796",
@@ -501,7 +611,11 @@
    "published": "2026-09-24T04:17:32-04:00",
    "summary": "Meta is going all in on a consumer-friendly AI agent and pushing forward with AI-powered wearable devices during a moment in the industry when its CEO Mark Zuckerberg acknowledged…",
    "thumb": "",
-   "title_ko": "Zuckerberg가 AI 파멸에 맞서면서 웨어러블 AI, 새로운 AI 에이전트에 큰 투자"
+   "title_ko": "저커버그가 AI 종말론에 반박하는 가운데, 메타는 웨어러블 AI와 새로운 AI 에이전트에 대규모 투자를 단행",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "메타는 소비자 친화적인 AI 에이전트에 전력을 기울이고 있으며, 마크 저커버그 CEO가 업계의 현 상황을 인정하는 가운데 AI 기반 웨어러블 기기 개발을 추진하고 있다…",
+   "detail_ko": "메타는 소비자 친화적인 AI 에이전트에 전력을 기울이고 있으며, 마크 저커버그 CEO가 업계의 현 상황을 인정하는 가운데 AI 기반 웨어러블 기기 개발을 추진하고 있다…"
   },
   {
    "id": "fb2f0c1133ec9b6d",
@@ -535,7 +649,20 @@
    "published": "2026-09-24T04:00:00+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "뉴스룸의 AI: 여기에 있지만 가드레일이 필요합니다."
+   "title_ko": "뉴스룸 속 AI: 이미 도래했으나, 안전 장치가 필요하다",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "3981c76174a4a68f",
+   "title": "Fearn, AI 기반 특허 법률 사무소 설립을 위해 Kindred와 a16z Speedrun으로부터 550만 달러 유치",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXN3SWYtT0xZc3A2TlQ2SGszWFZ2MFNUMlpmYjRBazA5a0ZiSEZjYjU2YXdaOXdZSFlYa09Lb2xocDBha3B2R2xLX2wwSzZQS1cycmMwX1hDUmU2VGpRN3pENTVBRlZiUTJzZktUb2Jxc1M5bjc4RXZ2SzNzdkRmMEQzdU11MUZuUVFoRG9jVW5saE9xd0FSdHctT0RqSUZ0eXhIREt3NHdYakNrM1ItdnRyeDdqQQ?oc=5",
+   "source": "HackerNoon",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-24T03:50:31+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "de3b1e21471bad5a",
@@ -547,7 +674,9 @@
    "published": "2026-09-24T03:41:16+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "스탠포드 대학이 인공지능을 이용해 인종과 홍보 사진 속 모습을 바꾼 것에 분노한 학생들"
+   "title_ko": "스탠퍼드 대학교가 홍보용 사진에서 인종과 외모를 수정하기 위해 인공지능을 사용하자 학생들이 분노했다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "394834f0440cb707",
@@ -561,6 +690,17 @@
    "thumb": ""
   },
   {
+   "id": "e30027a4b4076459",
+   "title": "무심코 입력했다간 큰일…챗GPT에 절대 맡기면 안 되는 5가지",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1DTkxVd21VSjBVSjlRb2RBZXNwSjA0dDdaM3hILWRtTlBGblNaNzFfUlEtUnFiN3BaRDMyRDlwenVwWU1VdzZpOVRrcXhDalRnakNpc1MwX2ZmNnZhN2NMUTJheDRtVlM0akRpOW5DR2VDbWc?oc=5",
+   "source": "디지털투데이",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-24T02:38:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "313d66fd720a7746",
    "title": "OpenAI’s A.I. Tried to Breach 4 Other Targets, Without Prompting",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZmdNdEU4T2dVMHUwV05rNkZjM0hrcWZRWUlLOTBoOU9BLVl1VTVCR3c5MkQ5QTRkSHFTb0dFUU1lUW56S2R5X3ZRaUR3UFViaGJuTm5FRk5LTmJXanFoUWVEbklfdVI3azB6dEMzbXdwUnhNZUd0UFJDWjFVS21wOXdzRQ?oc=5",
@@ -570,7 +710,9 @@
    "published": "2026-09-24T02:28:53+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "OpenAI의 AI 메시지를 표시하지 않고 다른 목표 4개를 위반하려고 시도했습니다."
+   "title_ko": "OpenAI의 AI, 별다른 지시 없이 다른 4곳을 공격하려 시도",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "78ad019084e8ebe5",
@@ -626,7 +768,9 @@
    "published": "2026-09-24T01:22:25+00:00",
    "summary": "Amazon.com Inc.",
    "thumb": "",
-   "title_ko": "Amazon의 새로운 플러그인을 통해 판매자는 AI로 전체 전자상거래 비즈니스를 관리할 수 있습니다."
+   "title_ko": "아마존의 새로운 플러그인을 통해 판매자들은 AI로 전자상거래 사업 전반을 관리할 수 있게 되었습니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "7021ffb72f103a6a",
@@ -638,7 +782,25 @@
    "published": "2026-09-24T00:22:07+00:00",
    "summary": "Google LLC today made two new text-to-speech models, Gemini 3.8 Flash TTS and Gemini 3.8 Flash-Lite TTS, available through its cloud platform.",
    "thumb": "",
-   "title_ko": "Google, 벤치마크 최고 수준의 음성 생성 모델 2개 출시"
+   "title_ko": "구글, 벤치마크 1위를 차지한 두 가지 음성 생성 모델 출시",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Google LLC는 오늘 자사의 클라우드 플랫폼을 통해 ‘Gemini 3.8 Flash TTS’와 ‘Gemini 3.8 Flash-Lite TTS’라는 두 가지 새로운 텍스트 음성 변환(TTS) 모델을 공개했습니다.",
+   "detail_ko": "Google LLC는 오늘 자사의 클라우드 플랫폼을 통해 ‘Gemini 3.8 Flash TTS’와 ‘Gemini 3.8 Flash-Lite TTS’라는 두 가지 새로운 텍스트 음성 변환(TTS) 모델을 출시했다."
+  },
+  {
+   "id": "c52caaee1612a072",
+   "title": "Veolia selects Legora to power AI-enabled legal work across its global legal function",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRkR5OGJnRTdzVkdfR2p5TjFYSVk4ajdrWHRuQ0NBX013dEtIRGRsRllvZWlIYVFTeTJQbUE5Y1p5OTIwVTR1OVp3REdjTTFqZUFWQ3hLR1J2LUhxYWZQNEE5UHg0d21QX3ZNRUlZUU50NU9nVGVyY3d0cXg2UUxEVmVYUk9GTldyaDduTHR1eWhMSzVILXIzTjFnMFBfSTM2cFExMGJiRlVvZERqZjIxLUVWaw?oc=5",
+   "source": "Legora",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-24T00:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "베올리아, 전 세계 법무 부서 전반에 걸쳐 AI 기반 법무 업무 지원을 위해 레고라 선정",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "07df542691f7b643",
@@ -650,7 +812,11 @@
    "published": "2026-09-23T23:42:44+00:00",
    "summary": "At its Meta Connect event, CEO Mark Zuckerberg announced a handful of new smart glasses, including a slimmed-down VR headset and the company’s first camera-free glasses.",
    "thumb": "",
-   "title_ko": "Meta VR 안경, Ray-Ban Meta Audio, Ray-Ban Meta Gen 3: 사양, 기능, 가격"
+   "title_ko": "메타 VR 글래스, 레이밴 메타 오디오, 레이밴 메타 3세대: 사양, 기능, 가격",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "마크 저커버그 CEO는 ‘메타 커넥트(Meta Connect)’ 행사에서 슬림해진 VR 헤드셋과 회사 최초의 카메라가 없는 안경을 포함한 몇 가지 새로운 스마트 안경을 발표했습니다.",
+   "detail_ko": "마크 저커버그 CEO는 ‘메타 커넥트(Meta Connect)’ 행사에서 슬림해진 VR 헤드셋과 회사 최초의 카메라가 없는 안경을 포함한 몇 가지 새로운 스마트 안경을 발표했습니다."
   },
   {
    "id": "47cec4741825b1f0",
@@ -684,7 +850,11 @@
    "published": "2026-09-23T23:18:36+00:00",
    "summary": "Every vendor event has a center of gravity, and at theCUBE Research’s AI ROI in Contact Center Summit, it wasn’t a product.",
    "thumb": "",
-   "title_ko": "봉쇄는 끝났습니다: Contact Center Summit에서 AI ROI의 5가지 시사점"
+   "title_ko": "‘격리’는 끝났다: ‘컨택 센터 서밋’에서 논의된 AI 투자 수익률(ROI) 관련 5가지 핵심 내용",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "모든 벤더 행사에는 핵심 주제가 마련되어 있는데, theCUBE Research가 주최한 ‘컨택 센터의 AI ROI 서밋’에서는 그 핵심이 제품이 아니었습니다.",
+   "detail_ko": "모든 벤더 행사에는 핵심 주제가 마련되어 있는데, theCUBE Research가 주최한 ‘컨택 센터의 AI ROI 서밋’에서는 그 핵심이 제품이 아니었습니다."
   },
   {
    "id": "0ff13bdaa9953fec",
@@ -718,7 +888,9 @@
    "published": "2026-09-23T22:47:00+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "UN 회의에서 미국과 중국의 AI 규제 비전이 크게 엇갈림"
+   "title_ko": "유엔 회의에서 AI 규제에 대한 미국과 중국의 입장이 극명하게 엇갈렸다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "099e5cdefff5fb7b",
@@ -741,7 +913,9 @@
    "published": "2026-09-23T22:45:11+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "UN의 Anthropic CEO, OpenAI가 AI에 대한 글로벌 협력 촉구: '우리는 기로에 서 있습니다' - ABC News"
+   "title_ko": "OpenAI와 Anthropic CEO들, 유엔에서 AI 관련 글로벌 협력 촉구: “우리는 갈림길에 서 있다” - ABC 뉴스",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "9b7fdc62b4dc5c94",
@@ -753,7 +927,11 @@
    "published": "2026-09-23T22:45:06+00:00",
    "summary": "UiPath Inc. is updating its namesake automation platform with more than a dozen new features designed to save time for knowledge workers.",
    "thumb": "",
-   "title_ko": "UiPath, 새로운 워크플로우 자동화, 소프트웨어 테스트 기능 도입"
+   "title_ko": "UiPath, 새로운 워크플로우 자동화 및 소프트웨어 테스트 기능 출시",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "UiPath Inc.는 지식 근로자들의 업무 시간을 절약할 수 있도록 설계된 12가지 이상의 새로운 기능을 추가하여 자사의 자동화 플랫폼을 업데이트하고 있습니다.",
+   "detail_ko": "는 지식 근로자들의 시간을 절약해 주기 위해 고안된 12개 이상의 새로운 기능을 추가하여 자사의 동명 자동화 플랫폼을 업데이트하고 있다."
   },
   {
    "id": "09c81d7811806b9a",
@@ -765,7 +943,22 @@
    "published": "2026-09-23T22:18:27+00:00",
    "summary": "There was a time when the org chart told you how the company worked. Finance managed capital. Human resources managed people. Information technology managed systems.",
    "thumb": "",
-   "title_ko": "혁신의 가장자리: AI가 CFO와 CHRO에게 기업을 함께 재작성하도록 강요하는 이유"
+   "title_ko": "변혁의 최전선: AI가 CFO와 CHRO로 하여금 함께 기업 운영 방식을 재구상하도록 만드는 이유",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "한때는 조직도만 봐도 회사가 어떻게 운영되는지 알 수 있던 시절이 있었습니다. 재무 부서는 자본을 관리했고, 인사 부서는 인력을 관리했으며, 정보기술 부서는 시스템을 관리했습니다.",
+   "detail_ko": "한때는 조직도가 회사의 운영 방식을 알려주던 시절이 있었습니다.\n금융 운용 자본.\n인사 부서가 직원들을 관리했다.\n정보 기술 관리 시스템."
+  },
+  {
+   "id": "248aed1d047029d7",
+   "title": "AI發 러다이트 운동 막는 건 결국 노동조합법이다 [율촌의 노동법 라운지]",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5NenBsS3JKUG9sTUJXbDFPSnFSY3RFNGN5VFp4MmZWSE1OT0FILTF6YmttS2xwQllGR3FtdElRMTJ6YXNZbzRUc0FzeE9xeTBydjE2NUNVd3pDUQ?oc=5",
+   "source": "한국경제",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-23T22:00:04+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "fd935201b6a3f486",
@@ -788,7 +981,9 @@
    "published": "2026-09-23T21:44:57+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "AI 지도자들은 시스템이 더욱 강력해짐에 따라 UN에 보안 위험을 경고합니다."
+   "title_ko": "시스템이 더욱 강력해짐에 따라 AI 업계 리더들이 유엔에 보안 위험을 경고하다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "b44fa76da791f73d",
@@ -800,7 +995,23 @@
    "published": "2026-09-23T21:12:38+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "Anthropic은 Claude AI가 새로운 효소 시스템을 발견하는 데 도움을 주었다고 말합니다."
+   "title_ko": "Anthropic, Claude AI가 새로운 효소 시스템 발견에 기여했다고 밝혀",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "b02b57a7392d4a92",
+   "title": "AI firms should not get regulatory waivers, Nvidia CEO says on podcast",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYkRfdGVvZzNROGxZeEd5dFQ5RV94YktETmZzRmNkekFLdkluYkVFNTVXSEI5RGtzOXNDa2FTWGN1RE5ZTEIta18tSWNWSUFCT0JNeXMyREZuNFFidlpPOEoyYjhMUUZlMC1odGpNcEdnR2tCdmZBRldqSnljTjNPLUVQOFBSWVkyS3Rsdzh2LWNvWGVoSkpTbUp6YUlLWFVRU1RkQ1hDMGtwUGVjN2ctUm9xWW9iNHNVSjE0?oc=5",
+   "source": "Reuters",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-23T21:06:13+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "엔비디아 CEO, 팟캐스트에서 “AI 기업들은 규제 면제를 받아서는 안 된다”고 밝혀",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "bdcf06a81d058bd9",
@@ -812,7 +1023,9 @@
    "published": "2026-09-23T21:01:41+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "개발자, 주 또는 연방 정부: AI 규제에 대한 실제 책임은 누구에게 있습니까?"
+   "title_ko": "개발자, 주 정부, 연방 정부: AI 규제의 진정한 책임은 누구에게 있는가?",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "374e38b7f3825f31",
@@ -824,7 +1037,11 @@
    "published": "2026-09-23T21:00:00+00:00",
    "summary": "As the US and China race to become the dominant power in the AI industry, the countries also appear to be figuring out ways to communicate on national security issues.",
    "thumb": "",
-   "title_ko": "미-중 AI 핫라인은 당분간 준비되지 않을 것"
+   "title_ko": "미·중 AI 핫라인, 당분간 가동되지 않을 전망",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "미국과 중국이 AI 산업의 주도권을 놓고 경쟁을 벌이는 가운데, 양국은 국가 안보 문제에 대해 소통할 방안을 모색하고 있는 것으로 보인다.",
+   "detail_ko": "미국과 중국이 AI 산업의 주도권을 놓고 경쟁을 벌이는 가운데, 양국은 국가 안보 문제에 대해 소통할 방안을 모색하고 있는 것으로 보인다."
   },
   {
    "id": "bd4474389fbccc60",
@@ -836,7 +1053,9 @@
    "published": "2026-09-23T20:56:16+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "유엔 안전보장이사회에서 샘 알트먼의 발언"
+   "title_ko": "유엔 안전보장이사회에서 샘 알트먼의 발언",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "229b3c7f852c8677",
@@ -848,7 +1067,11 @@
    "published": "2026-09-23T20:52:28+00:00",
    "summary": "Trump focus on winning “AI race” may deter China from sharing safety intel.",
    "thumb": "",
-   "title_ko": "전문가들은 트럼프의 중국 경쟁과 “AI 경쟁” 망상이 미국을 위험에 빠뜨릴 수 있다고 말한다"
+   "title_ko": "전문가들, “트럼프의 중국과의 경쟁과 ‘AI 경쟁’에 대한 망상이 미국을 위험에 빠뜨릴 수 있다”고 지적",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "“AI 경쟁”에서 승리하려는 트럼프의 집중이 중국의 안전 정보 공유를 가로막을 수 있다.",
+   "detail_ko": "“AI 경쟁”에서 승리하는 데 주력하는 트럼프의 태도가 중국의 안전 정보 공유를 저해할 수 있다."
   },
   {
    "id": "ee7ea9cc3ba746b8",
@@ -860,7 +1083,11 @@
    "published": "2026-09-23T20:28:42+00:00",
    "summary": "$11M competition showed wildfire detection is still easier than stopping fires.",
    "thumb": "",
-   "title_ko": "XPRIZE Wildfire 우승자는 10분 이내에 화재를 발견했지만 이를 막을 수 없었습니다."
+   "title_ko": "XPRIZE Wildfire 수상팀, 화재 발생 10분 만에 탐지했으나 진압에는 실패",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "1,100만 달러 규모의 대회에서 산불 탐지가 산불 진압보다 여전히 더 쉽다는 사실이 드러났다.",
+   "detail_ko": "1,100만 달러 규모의 대회에서 산불 탐지가 산불 진압보다 여전히 더 쉽다는 사실이 드러났다."
   },
   {
    "id": "0cb0ca0c1be308aa",
@@ -872,7 +1099,9 @@
    "published": "2026-09-23T20:23:40+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "Anthropic, OpenAI CEO, AI가 보호 장치 없이 인류를 위협할 수 있다고 경고"
+   "title_ko": "Anthropic과 OpenAI CEO들, 안전장치가 없으면 AI가 인류를 위협할 수 있다고 경고",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "1b3d957cdfa5eac2",
@@ -884,7 +1113,9 @@
    "published": "2026-09-23T20:16:02+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "AI의 실존적 위협이 실제로 존재합니까? 규제 조치를 통해 이를 방지할 수 있습니까?"
+   "title_ko": "AI가 실존적 위협이 될 수 있을까? 그리고 규제 조치를 통해 이를 막을 수 있을까?",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "dc04454591ded041",
@@ -896,7 +1127,9 @@
    "published": "2026-09-23T20:04:11+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "인간 진화와 인공지능의 교차점"
+   "title_ko": "인류 진화와 인공지능의 교차점",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "c90434a88a38b8a8",
@@ -907,7 +1140,11 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "Scientific discovery begins where known problems end. There, AI systems must engage in exploration: framing hypotheses, designing experiments, and iterating on the results.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "과학적 발견은 알려진 문제가 끝나는 지점에서 시작됩니다. 그곳에서 AI 시스템은 가설을 세우고, 실험을 설계하며, 결과를 바탕으로 반복적으로 개선해 나가는 탐구 과정을 수행해야 합니다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "과학적 발견은 알려진 문제가 끝나는 곳에서 시작된다.\n이 과정에서 AI 시스템은 가설을 세우고, 실험을 설계하며, 결과를 바탕으로 반복적으로 개선하는 등 탐색 과정을 거쳐야 합니다."
   },
   {
    "id": "4127a84ec773bfa1",
@@ -918,7 +1155,11 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "Task and motion planning (TAMP) problems remain difficult even with full observability and object-centric states because discrete decisions are tightly coupled to geometric…",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "작업 및 동작 계획(TAMP) 문제는 완전한 관측 가능성과 객체 중심 상태가 주어지더라도, 이산적 결정이 기하학적 요소와 밀접하게 연관되어 있기 때문에 여전히 어려운 과제로 남아 있다…",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "작업 및 동작 계획(TAMP) 문제는 완전한 관측 가능성과 객체 중심 상태 조건이 주어지더라도, 이산적 결정이 기하학적 요소와 밀접하게 연관되어 있기 때문에 여전히 어려운 과제로 남아 있다…"
   },
   {
    "id": "00117a8e35eec237",
@@ -929,7 +1170,11 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "The rapid progression of large language models is extending AI from passive content generation into the active workflows of engineering and scientific discovery.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "대규모 언어 모델의 급속한 발전으로 인해 AI의 영역이 수동적인 콘텐츠 생성에서 벗어나 공학 및 과학적 발견의 능동적인 업무 흐름으로 확대되고 있다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "대규모 언어 모델의 급속한 발전으로 인해 AI의 영역이 수동적인 콘텐츠 생성에서 벗어나 공학 및 과학적 발견의 능동적인 업무 흐름으로 확대되고 있다."
   },
   {
    "id": "9c8dbe890382793f",
@@ -940,6 +1185,21 @@
    "category": "papers",
    "published": "2026-09-23T20:00:00+00:00",
    "summary": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose.",
+   "thumb": "",
+   "summary_ko": "Sparse AutoEncoders(SAE)는 언어 모델의 표현을 분석할 수 있는 유망한 방법을 제시하지만, 이 모델의 잠재 변수가 어떤 종류의 언어적 구조를 드러내는지 아직 명확하지 않다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "Sparse AutoEncoders(SAE)는 언어 모델의 표현을 분석할 수 있는 유망한 방법을 제시하지만, 이 모델의 잠재 변수가 어떤 종류의 언어적 구조를 드러내는지 아직 명확하지 않다."
+  },
+  {
+   "id": "f89161f57ea2bbfa",
+   "title": "AI 기업 4곳 ‘개발 감속 담합’ 피소…위법 판단은 아직",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUGgwWWFZWWtXdW56QVFDeDJYLVpWOGtZd1dOeTJtMlNGOTZVTVh1SEN0Q1VJU3J0NE9zbVVaSnZyMDhWNUo3Vk5RV3JaOC1zandaMWlyZ3JtQXRvdFplX2d4YUpSaTA0Uml5Q0dhZmNKWmtjemVMYThPRFp4QzNNLXdiUHAzS0J6OVpNaGE3N2JnUmYxb1Fwdw?oc=5",
+   "source": "quasa.io",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-23T20:00:00+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -952,7 +1212,23 @@
    "published": "2026-09-23T19:53:12+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "OpenAI와 Anthropic CEO, 트럼프가 통제하려는 '글로벌주의 계획'을 거부한 후 UN에서 AI 협력 추진"
+   "title_ko": "트럼프가 AI 통제를 위한 ‘세계주의적 음모’를 일축한 가운데, OpenAI와 Anthropic CEO들이 유엔에서 AI 협력을 촉구",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "6c15a1f1627d737f",
+   "title": "AI-Related Securities Suit Filings Continue to Surge",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNk5DOGJ3bVhtdTlGOFZYaDNmOHBIeWgyUmxabzcwby1Rd2VTQnFpNy16WWpvdWNUS2tVNS1HZnYxQ3h5RWg5eGYxNHBIZ2xnQUxaWWNnZHdiSjM2cFB4bWlfNEtEajZJX24wSEdUbkdUQjlGcVZvQVhaZ2xuRG85ZzFOQXN6S3VLOXBjN2phaVM4UFc0dzN2SUFFSmVMSkV4Nmg5a0VHX3BjeXJkM0xRYXI4RFhHQm5GNUJz?oc=5",
+   "source": "The D&O Diary",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-23T19:42:14+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 관련 증권 소송 제기 건수, 계속 급증 중",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "b7941cc8a21f5858",
@@ -964,7 +1240,11 @@
    "published": "2026-09-23T19:35:53+00:00",
    "summary": "YouTube's next year could change the content you see with a big focus on AI and livestreams.",
    "thumb": "",
-   "title_ko": "YouTube는 올해 말에 맞춤형 피드와 더 많은 AI를 약속합니다."
+   "title_ko": "유튜브, 올해 말 맞춤형 피드와 다양한 AI 기능 추가 예정",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "내년 유튜브는 AI와 라이브 스트리밍에 중점을 두어 사용자에게 노출되는 콘텐츠를 변화시킬 수 있을 것으로 보인다.",
+   "detail_ko": "내년 유튜브는 AI와 라이브 스트리밍에 중점을 두어 사용자에게 제공되는 콘텐츠를 변화시킬 수 있을 것으로 보인다."
   },
   {
    "id": "946e92dbab9b9559",
@@ -976,7 +1256,9 @@
    "published": "2026-09-23T19:00:08+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "AI에서는 인종, 미국 모델이 우위에 있지만 중국에는 다른 장점도 있습니다."
+   "title_ko": "AI 경쟁에서 미국 모델이 우위를 점하고 있지만, 중국은 다른 장점을 가지고 있다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "a70f8ac64edfa547",
@@ -988,7 +1270,9 @@
    "published": "2026-09-23T18:41:40+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "NVIDIA Warp 및 MjWarp를 사용하여 로봇 공학 시뮬레이션 및 학습 워크플로를 가속화하는 방법"
+   "title_ko": "NVIDIA Warp 및 MjWarp를 활용하여 로봇 공학 시뮬레이션 및 학습 워크플로우를 가속화하는 방법",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "7cab53634a542eee",
@@ -1000,7 +1284,9 @@
    "published": "2026-09-23T18:34:18+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "라이브: 폭주 AI로 인한 '현실적이고 임박한' 위협 속에서 OpenAI와 Anthropic 브리핑 보안 이사회"
+   "title_ko": "속보: 통제 불능 AI가 초래하는 ‘실제적이고 임박한’ 위협 속에서 OpenAI와 Anthropic, 안전보장이사회에 브리핑",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "5f1f4e6fd461a0d5",
@@ -1012,7 +1298,11 @@
    "published": "2026-09-23T18:30:00+00:00",
    "summary": "A clandestine card-counting operation suggests we may need new ways to spot agent-to-agent deception.",
    "thumb": "",
-   "title_ko": "AI 에이전트가 블랙잭에서 치트를 위해 팀을 구성했습니다. 그들의 공모를 발견하기가 점점 더 어려워지고 있습니다"
+   "title_ko": "AI 에이전트들이 힘을 합쳐 블랙잭에서 부정행위를 저질렀다. 이들의 공모는 점점 더 알아채기 어려워지고 있다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "비밀리에 진행된 카드 카운팅 작전은, 에이전트 간 기만을 감지하기 위해 새로운 방법이 필요할 수도 있음을 시사한다.",
+   "detail_ko": "비밀리에 진행된 카드 카운팅 작전은 에이전트 간 기만을 감지하기 위한 새로운 방법이 필요할 수도 있음을 시사한다."
   },
   {
    "id": "7cc4696eeccb66bb",
@@ -1024,7 +1314,20 @@
    "published": "2026-09-23T18:29:00+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "의견 | AI 규제의 정치"
+   "title_ko": "오피니언 | AI 규제의 정치학",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "69a55bf277b60b77",
+   "title": "AI 관련 소송 위험이 지속되는 가운데 마이크로소프트(MSFT) 주가는 적정 가치 수준 근처에서 횡보하고 있다",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPb1hxUEJLc1QtT0RLcm5KMVlvZG8wT01kNmdhQXZGbkhHTUFIUmVjeGhtckg5a2Z4Tlp2N1c0akdsb05Lb2htQ0xmUExmUE9HMi16TUdCeExVcTJBbURSUGFWRGRjMENyZEVZdnU0YnVNdk5ZdE51U1FTM1YwUFJtRjRfQU1XcUhSV3ZLWHgtd3jSAZYBQVVfeXFMTzVFSU10OHBnT1RCSjZQNGVyWnRkYTNpU3c4STFURTlIMm91eGhLb05JVm5MSlJXT2JoLTNfNzNLWWJWekpOZHpXWUhwT0dvcS14QUVYQ1lRdlk1MUNnX3VHQ2I0d2dqWmRTU3BZOGFGN29oejZDUWI1WGI1ckctVmxuZmFqdnlnSlJodGltNjhQcVpWLUpB?oc=5",
+   "source": "simplywall.st",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-09-23T18:20:34+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "c217a9a6a36c25f2",
@@ -1036,7 +1339,11 @@
    "published": "2026-09-23T18:03:00+00:00",
    "summary": "Paolo Benanti tells WIRED that hysteria over whether godlike AI could destroy humanity is distracting from the need for public debate about how to govern the technology.",
    "thumb": "",
-   "title_ko": "교황의 AI 가이는 대형 연구소 사이의 '카르텔' 행위를 걱정하고 있다"
+   "title_ko": "교황의 AI 담당자, 대형 연구소들의 ‘카르텔’ 행태에 우려 표명",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "파올로 베난티는 WIRED와의 인터뷰에서, 신과 같은 AI가 인류를 파괴할 수 있을지에 대한 과도한 공포가 이 기술을 어떻게 규제할지에 대한 공론의 필요성을 흐리고 있다고 말했다.",
+   "detail_ko": "파올로 베난티는 WIRED와의 인터뷰에서, 신과 같은 AI가 인류를 멸망시킬 수 있을지에 대한 과도한 공포가 이 기술을 어떻게 규제할지에 대한 공개적인 논의의 필요성을 흐리고 있다고 말했다."
   },
   {
    "id": "e896566878a9d4f0",
@@ -1048,7 +1355,25 @@
    "published": "2026-09-23T18:00:00+00:00",
    "summary": "Google Beam promotional animation",
    "thumb": "",
-   "title_ko": "Google Beam은 새로운 지역, 파트너, 고객으로 확장됩니다."
+   "title_ko": "Google Beam, 새로운 지역·파트너·고객으로 사업 확장",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Google Beam 홍보 애니메이션",
+   "detail_ko": "Google Beam 홍보 애니메이션"
+  },
+  {
+   "id": "3554c4c4ba9d1483",
+   "title": "Legal AI in Practice: Lawyers, Ethics, and the Courts",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQW1PMWtJc0piX0UzNnJhYXZWcnJ3RDF6Q2NTUmk1cHNjUUJXeXdRVi1xNVFZbV9aVjJWM3dmSmdtRFdBVk00NHdjR1R2YVJsblg1ZW5yaWVFaTJubFhZYXIxZHZ6Z1EyR25Sam4tdTBES09Ld1k0SjFGdkpCdHJfVGRadFptSDNXOTJpbWVmWQ?oc=5",
+   "source": "Wilson Sonsini",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-23T17:45:18+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "실무 속의 법률 AI: 변호사, 윤리, 그리고 법원",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "2792cb9bc49e50cd",
@@ -1060,7 +1385,11 @@
    "published": "2026-09-23T17:39:39+00:00",
    "summary": "\"So absurd and embarrassing ...\"",
    "thumb": "",
-   "title_ko": "삼성 스마트 냉장고 펌웨어 업데이트 후 상한 음식을 애도하는 소유자"
+   "title_ko": "펌웨어 업데이트로 삼성 스마트 냉장고가 고장 나자, 소유주들은 상한 음식에 애타해",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "\"정말 터무니없고 민망한 일...\"",
+   "detail_ko": "\"정말 터무니없고 민망한 일...\""
   },
   {
    "id": "c08e4871c0f0cc18",
@@ -1083,7 +1412,11 @@
    "published": "2026-09-23T16:52:17+00:00",
    "summary": "A bug in the Windows Sept patch Tuesday update may stop File History from working. But a new optional update fixes it.",
    "thumb": "",
-   "title_ko": "9월 업데이트로 인해 Windows 파일 기록이 손상된 경우 이를 수정하는 방법"
+   "title_ko": "9월 업데이트로 인해 Windows 파일 기록 기능이 작동하지 않을 때 해결 방법",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Windows 9월 '패치 화요일' 업데이트의 버그로 인해 파일 기록 기능이 작동하지 않을 수 있습니다. 하지만 새로운 선택적 업데이트를 통해 이 문제가 해결됩니다.",
+   "detail_ko": "Windows 9월 '패치 화요일' 업데이트의 버그로 인해 파일 기록 기능이 작동하지 않을 수 있습니다.\n하지만 새로운 선택적 업데이트를 통해 이 문제가 해결되었습니다."
   },
   {
    "id": "ddb71a49287cd4d9",
@@ -1106,7 +1439,9 @@
    "published": "2026-09-23T16:30:34+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "GPT-6 솔과 루나를 소개합니다"
+   "title_ko": "GPT-6 Sol과 Luna를 소개합니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "32871d9cf32acb30",
@@ -1118,7 +1453,9 @@
    "published": "2026-09-23T16:17:29+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "이탈리아의 AI 프레임워크: EU AI 법 운영"
+   "title_ko": "이탈리아의 AI 프레임워크: EU AI법 이행",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "3dd6101a4e558768",
@@ -1130,7 +1467,9 @@
    "published": "2026-09-23T16:06:53+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "연결된 앱의 새로운 물결이 Gemini에 출시됩니다."
+   "title_ko": "제미니에 ‘커넥티드 앱’의 새로운 물결이 밀려오고 있습니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "cd8117c6d35f983b",
@@ -1142,7 +1481,11 @@
    "published": "2026-09-23T16:00:57+00:00",
    "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
    "thumb": "",
-   "title_ko": "안전한 서버측 메모리로 프라이빗 AI 컴퓨팅 발전"
+   "title_ko": "안전한 서버 측 메모리를 통한 사설 AI 컴퓨팅 발전",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "개인용 AI를 위한 ‘Private AI Compute’에 서버 측 전용 메모리를 도입합니다.",
+   "detail_ko": "개인용 AI를 위한 ‘Private AI Compute’에 비공개 서버 측 메모리 도입."
   },
   {
    "id": "9d02eeb8cef10808",
@@ -1154,7 +1497,11 @@
    "published": "2026-09-23T16:00:00+00:00",
    "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
    "thumb": "",
-   "title_ko": "OpenAI 아카데미 2년"
+   "title_ko": "OpenAI 아카데미 2주년",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "OpenAI 아카데미 2주년을 맞이하며, 더 많은 지역 사회에 AI 기술을 전파합니다.",
+   "detail_ko": "OpenAI 아카데미 출범 2주년을 맞이하며, 더 많은 지역사회에 AI 기술을 전파합니다."
   },
   {
    "id": "9fb78ebdb2116835",
@@ -1166,7 +1513,9 @@
    "published": "2026-09-23T15:27:40+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "Gemini 3.8 텍스트 음성 변환이 안녕하세요라고 말합니다."
+   "title_ko": "Gemini 3.8 텍스트 음성 변환 기능이 “안녕하세요”라고 인사합니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "fd0ded38e52b0dee",
@@ -1189,7 +1538,9 @@
    "published": "2026-09-23T15:02:11+00:00",
    "summary": "",
    "thumb": "",
-   "title_ko": "Newsom 주지사는 \"킬 스위치\" 생성을 포함하여 AI 행정 명령을 이행할 세계 최고의 전문가를 발표했습니다."
+   "title_ko": "뉴섬 주지사는 “킬 스위치” 개발을 포함한 자신의 AI 행정명령을 이행하기 위해 세계 최고 수준의 전문가들을 발표했습니다",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "d0168decfd2bed64",
