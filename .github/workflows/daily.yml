@@ -44,6 +44,9 @@ jobs:
       - name: 수집 + 사이트 생성
         env:
           SINCE: ${{ inputs.since }}
+          DEEPL_KEY: ${{ secrets.DEEPL_KEY }}
+          MS_TRANSLATOR_KEY: ${{ secrets.MS_TRANSLATOR_KEY }}
+          MS_TRANSLATOR_REGION: ${{ secrets.MS_TRANSLATOR_REGION }}
         run: |
           if [ -n "$SINCE" ]; then python briefing.py backfill --since "$SINCE"; else python briefing.py; fi
       - name: 수집 데이터 저장(카테고리 아카이브 보관용)

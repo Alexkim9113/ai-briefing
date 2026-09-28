@@ -16,10 +16,12 @@ import hashlib
 import html
 import json
 import math
+import os
 import re
 import sys
 import threading
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -405,7 +407,7 @@ def collect_source(src, fixtures):
 
 
 def translate_ko(text):
-    """무료 구글 번역(키 없음)으로 제목을 한국어로. 실패하면 빈 문자열."""
+    """무료 구글 번역(키 없음)으로 한국어로. 실패하면 빈 문자열(마지막 대안)."""
     u = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ko&dt=t&q=" + urllib.parse.quote(text)
     try:
         j = json.loads(fetch(u))
@@ -414,29 +416,114 @@ def translate_ko(text):
         return ""
 
 
+# 번역기 순서: DeepL 무료(월 50만 자) → 마이크로소프트 무료(월 200만 자) → 구글(키 없음).
+# 키는 깃허브 저장소 비밀값(DEEPL_KEY, MS_TRANSLATOR_KEY, MS_TRANSLATOR_REGION)에만 둔다. 한도가 차면 다음 번역기로 넘어간다.
+TR_RANK = {"deepl": 3, "ms": 2, "g": 1}
+_TR_OFF = set()
+
+
+class _Exhausted(Exception):
+    pass
+
+
+def _post(url, data, headers):
+    req = urllib.request.Request(url, data=data, headers={"User-Agent": USER_AGENT, **headers}, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=40) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403, 429, 456):  # 키 오류·한도 초과: 이번 실행에서는 이 번역기를 끈다
+            raise _Exhausted(f"{e.code}")
+        raise
+
+
+def _deepl(texts):
+    key = os.environ.get("DEEPL_KEY", "").strip()
+    host = "api-free.deepl.com" if key.endswith(":fx") else "api.deepl.com"
+    out = []
+    for i in range(0, len(texts), 40):
+        body = urllib.parse.urlencode([("target_lang", "KO"), *[("text", t) for t in texts[i:i + 40]]]).encode()
+        j = _post(f"https://{host}/v2/translate", body, {"Authorization": f"DeepL-Auth-Key {key}",
+                                                         "Content-Type": "application/x-www-form-urlencoded"})
+        out += [x.get("text", "") for x in j.get("translations", [])]
+    return out
+
+
+def _ms(texts):
+    key, region = os.environ.get("MS_TRANSLATOR_KEY", "").strip(), os.environ.get("MS_TRANSLATOR_REGION", "").strip()
+    out = []
+    for i in range(0, len(texts), 40):
+        body = json.dumps([{"Text": t} for t in texts[i:i + 40]]).encode()
+        j = _post("https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=ko", body,
+                  {"Ocp-Apim-Subscription-Key": key, "Content-Type": "application/json",
+                   **({"Ocp-Apim-Subscription-Region": region} if region else {})})
+        out += [(x.get("translations") or [{}])[0].get("text", "") for x in j]
+    return out
+
+
+def best_translator():
+    for name, env in (("deepl", "DEEPL_KEY"), ("ms", "MS_TRANSLATOR_KEY")):
+        if os.environ.get(env) and name not in _TR_OFF:
+            return name
+    return "g"
+
+
+def translate_many(texts):
+    """여러 문장을 한 번에 번역. 결과 목록과 쓴 번역기 이름을 돌려준다."""
+    if not texts:
+        return [], "g"
+    for name, fn in (("deepl", _deepl), ("ms", _ms)):
+        if best_translator() != name:
+            continue
+        try:
+            res = fn(texts)
+            if len(res) == len(texts):
+                return [r.strip() for r in res], name
+        except _Exhausted as e:
+            print(f"[번역] {name} 한도·키 문제({e}) → 다음 번역기로")
+        except Exception as e:
+            print(f"[번역] {name} 실패: {e}")
+        _TR_OFF.add(name)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        return list(pool.map(translate_ko, texts)), "g"
+
+
 def brief_text(it):
     """'주요 내용 요약' 창에 보여 줄 줄들(요약 문장이 따로 없으면 짧은 요약을 문장으로 나눈다)."""
     return it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
 
 
 def add_translations(items, fixtures=None, max_n=200):
-    """해외 글(한글이 없는 제목)에 번역 제목(title_ko)을 붙인다. 논문 제목은 원문 그대로 둔다."""
-    todo = [i for i in items if i["category"] != "papers" and not i.get("title_ko") and not _HANGUL.search(i["title"])][:max_n]
-    # 해외 글의 '주요 내용 요약'도 한 줄씩 번역해 둔다(원문 요약 아래에 보여 준다)
-    dtodo = [i for i in items if brief_text(i) and not i.get("detail_ko") and not _HANGUL.search(brief_text(i))][:max_n]
-    stodo = [i for i in items if i.get("summary") and not i.get("summary_ko") and not _HANGUL.search(i["summary"])][:max_n]
-    if fixtures or not (todo or dtodo or stodo):
+    """해외 글(한글이 없는 제목·요약)에 번역을 붙인다. 논문 제목은 원문 그대로 둔다.
+    더 좋은 번역기를 쓸 수 있게 되면 예전(구글) 번역도 다시 번역한다."""
+    if fixtures:
         return
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        for it, ko in zip(todo, pool.map(translate_ko, [i["title"] for i in todo])):
-            if ko and ko != it["title"] and _HANGUL.search(ko):
-                it["title_ko"] = ko
-        for it, ko in zip(stodo, pool.map(translate_ko, [i["summary"] for i in stodo])):
-            if ko and _HANGUL.search(ko):
-                it["summary_ko"] = ko.strip()
-        for it, ko in zip(dtodo, pool.map(translate_ko, [brief_text(i) for i in dtodo])):
-            if ko and _HANGUL.search(ko):
-                it["detail_ko"] = "\n".join(x.strip() for x in ko.split("\n") if x.strip())
+    best = TR_RANK[best_translator()]
+    foreign = lambda t: t and not _HANGUL.search(t)
+    need = lambda i, k: not i.get(k) or TR_RANK.get(i.get("tr", "g"), 1) < best
+    todo = [i for i in items if (foreign(i["title"]) and i["category"] != "papers" and need(i, "title_ko"))
+            or (foreign(i.get("summary")) and need(i, "summary_ko"))
+            or (foreign(brief_text(i)) and need(i, "detail_ko"))][:max_n]
+    if not todo:
+        return
+    jobs = []  # (항목, 칸, 줄 번호) — 요약 문장은 줄마다 따로 번역해 원문과 줄이 맞게
+    for it in todo:
+        if foreign(it["title"]) and it["category"] != "papers":
+            jobs.append((it, "title_ko", 0, it["title"]))
+        if foreign(it.get("summary")):
+            jobs.append((it, "summary_ko", 0, it["summary"]))
+        if foreign(brief_text(it)):
+            for n, line in enumerate(brief_text(it).split("\n")):
+                jobs.append((it, "detail_ko", n, line))
+    res, used = translate_many([j[3] for j in jobs])
+    got = {}
+    for (it, k, n, src), ko in zip(jobs, res):
+        if ko and _HANGUL.search(ko) and ko != src:
+            got.setdefault((id(it), k), (it, {}))[1][n] = ko
+    for (_, k), (it, parts) in got.items():
+        it[k] = "\n".join(parts[n] for n in sorted(parts)) if k == "detail_ko" else parts[0]
+        it["tr"] = used
+    print(f"[번역] {len(todo)}건, {len(jobs)}문장 → {used}")
 
 
 # 자동 차단: 스팸·도박·성인·사기성 글, 파일 내려받기 링크, 안전하지 않은 주소
