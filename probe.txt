@@ -1,0 +1,37 @@
+UA=Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)
+406
+
+UA=Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)
+406
+
+UA=METAXIS-briefing/1.0 (https://github.com/Alexkim9113/ai-briefing)
+406
+
+UA=METAXIS-briefing/1.0 (https://github.com/Alexkim9113/ai-briefing)
+406
+
+UA=curl/8
+406
+
+UA=curl/8
+406
+
+NATURE
+200 application/rss+xml; charset=utf-8
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Machine learning : nature.com subject feeds</title>
+        <link>https://www.nature.com/subjects/machine-learning</link>
+        <description>Latest news and research from Nature.com on the topic of Machine learning</description>
+        <ttl>60</ttl>
+        <pubDate>Mon, 28 Sep 2026 00:41:19 +0000</pubDate>
+        <lastBuildDate>Mon, 28 Sep 2026 00:41:19 +0000</lastBuildDate>
+        
+            <item>
+                <title>Physics informed machine learning predicts binding free energy changes in protein-RNA complexes
+200 application/rss+xml; charset=utf-8
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns="http://purl.org/rss/1.0/" xmlns:admin="http://webns.net/mvcb/">
+    <channel rdf:about="http://feeds.nature.com/natmachintell/rss/current">
+        <title>Na
