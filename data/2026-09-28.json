@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:57+09:00",
+ "generated_at": "2026-09-28T20:58+09:00",
  "items": [
   {
    "id": "8345a2704767261f",
@@ -2961,6 +2961,17 @@
    "thumb": ""
   },
   {
+   "id": "6157b03fcb4ba8c2",
+   "title": "인공지능(AI) 대전환·자율주행·문화관광 등 초광역 상생협력 전남광주특별시-울산광역시, ‘대체불가 대한민국’ 선도한다",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZOHl4NHE4aEpKZ09FY1Y4RUVISkhjV2RNZ0lhVm5DbElOQUNmMzFsVm10OVY5VThxZ3AwR0todWtmVjFxOHkwMjVJaGFkQk8wQkFzUXByM1QtaUx6LTJId3AwQUFab1lDZlZZVEJKeTM5a2s?oc=5",
+   "source": "한국언론연합",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-09-28T07:24:23+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "d9a22b8bd7238a45",
    "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
@@ -5047,7 +5058,7 @@
    "published": "2026-09-27T17:26:00+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 1,
+   "hot": 0,
    "title_ko": "11월부터 Gems 대신 스킬을 도입하는 Gemini 앱",
    "tr": "deepl",
    "trv": 2
@@ -5471,6 +5482,38 @@
    "thumb": ""
   },
   {
+   "id": "5eebb2f3e34f2b6e",
+   "title": "Quantifying the plausibility gap in generative AI for surgical video generation with expert assessment",
+   "link": "https://www.nature.com/articles/s41746-026-03276-z",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03276-z Quantifying the plausibility gap in generative AI for surgical video generation with…",
+   "detail": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03276-z Quantifying the plausibility gap in generative AI for surgical video generation with expert assessment",
+   "thumb": "",
+   "summary_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 26일; doi:10.1038/s41746-026-03276-z …를 활용한 수술 영상 생성을 위한 생성형 AI의 타당성 격차 정량화",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 26일; doi:10.1038/s41746-026-03276-z 전문가 평가를 통한 수술 영상 생성을 위한 생성형 AI의 타당성 격차 정량화"
+  },
+  {
+   "id": "39f2e2c4d7fac698",
+   "title": "Development and validation of a parsimonious AI-based mortality risk score for heart failure",
+   "link": "https://www.nature.com/articles/s41746-026-03258-1",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-26T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03258-1 Development and validation of a parsimonious AI-based mortality risk score for heart…",
+   "detail": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03258-1 Development and validation of a parsimonious AI-based mortality risk score for heart failure",
+   "thumb": "",
+   "summary_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 26일; doi:10.1038/s41746-026-03258-1 심장 질환을 위한 간결한 AI 기반 사망 위험 점수의 개발 및 검증…",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 26일; doi:10.1038/s41746-026-03258-1 심부전 환자를 위한 간결한 AI 기반 사망 위험 점수의 개발 및 검증"
+  },
+  {
    "id": "26c3af8439861c7f",
    "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
    "link": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
@@ -5710,6 +5753,21 @@
    "published": "2026-09-25T00:00:00+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "f152ff388e7cf4bd",
+   "title": "Large language models as judges for clinical generative AI evaluation",
+   "link": "https://www.nature.com/articles/s41746-026-03248-3",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-09-25T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 25 September 2026; doi:10.1038/s41746-026-03248-3 Large language models as judges for clinical generative AI evaluation",
+   "thumb": "",
+   "summary_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 25일; doi:10.1038/s41746-026-03248-3 임상 생성형 AI 평가를 위한 판정자로서의 대규모 언어 모델",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 25일; doi:10.1038/s41746-026-03248-3 임상 생성형 AI 평가를 위한 심사관으로서의 대규모 언어 모델"
   },
   {
    "id": "a4971181b4c46342",
@@ -6149,9 +6207,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 502: Bad Gateway"
+   "ok": true,
+   "count": 3,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -6168,7 +6226,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 2,
    "fetched": 70
   },
   {
@@ -6240,8 +6298,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -6271,7 +6329,7 @@
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -6354,7 +6412,7 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 2,
+   "count": 3,
    "fetched": 10
   },
   {
@@ -6367,13 +6425,13 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 68
+   "fetched": 71
   },
   {
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 60
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
@@ -6385,7 +6443,7 @@
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 43
+   "fetched": 41
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -6397,7 +6455,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "VentureBeat AI",
@@ -6492,8 +6550,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "경향신문",
@@ -6541,13 +6599,13 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 38
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 29
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
@@ -6565,13 +6623,13 @@
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 36
+   "fetched": 35
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 50
+   "fetched": 52
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
@@ -6635,9 +6693,9 @@
   },
   {
    "name": "동아일보",
-   "ok": true,
-   "count": 4,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "RemoteDisconnected: Remote end closed connection without response"
   },
   {
    "name": "로리더",
@@ -6751,19 +6809,19 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 53
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -6775,7 +6833,7 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 68
+   "fetched": 66
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -6793,19 +6851,19 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 26
+   "fetched": 27
   },
   {
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
@@ -6817,7 +6875,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "중앙일보",
@@ -6829,7 +6887,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 535
+   "fetched": 532
   },
   {
    "name": "프레시안",
