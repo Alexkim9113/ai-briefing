@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T19:58+09:00",
+ "generated_at": "2026-09-28T20:11+09:00",
  "items": [
   {
    "id": "199616a539405542",
@@ -738,6 +738,33 @@
    }
   },
   {
+   "id": "ca6d89c27fc0a2e0",
+   "title": "Microsoft goes quiet after church groups ask for 1% of data center costs",
+   "link": "https://arstechnica.com/tech-policy/2026/09/microsoft-goes-quiet-after-church-groups-ask-for-1-of-data-center-costs/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T11:00:09+00:00",
+   "summary": "“Microsoft claims to want to be a good neighbor, but the jury is still out.\"",
+   "thumb": "",
+   "title_ko": "교회 단체들이 데이터 센터 비용의 1%를 요구하자 마이크로소프트가 침묵을 지키고 있다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "“마이크로소프트는 좋은 이웃이 되고 싶다고 주장하지만, 아직 판단을 유보하고 있다.”",
+   "detail_ko": "“마이크로소프트는 좋은 이웃이 되고 싶다고 주장하지만, 아직은 판단을 유보해야 할 것 같다.”"
+  },
+  {
+   "id": "e6edc3376fdbf64c",
+   "title": "전남광주 북구, 생성형 AI·당직 콜봇으로 스마트 행정 구현",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBZZWd5MWYza0pzQzkxbDF4WUdlT2RsODdLeWVIbUVLVWVpLUhyU0FPZ3p5dGhGRmQ0WWVXMlM0YU0tT0NmTzd3RGtwQXFuTmc?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:57:13+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "784685ea95a776e8",
    "title": "반디캠컴퍼니, AI 영상툴 ‘반디캠 AI 스튜디오’ 출시",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42083",
@@ -808,6 +835,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "69f1bd34e6d7010d",
+   "title": "인공지능은 인간의 \"파트너\"가 될 수 있다.",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE82YkRia21PSXZjVVcwanppeUVYc2d1X3hKbENUekU4d2o3Ny1hc1dJSGtpcXM2MFVHbHpDWWlTOU5QcHUxTldTY2EwSldDUDFwSnVxQno2NURNekM5Nmx0N080OThpLURKUTBEemdlTi1WV0g0UVE?oc=5",
+   "source": "Vietnam.vn",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:30:13+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "1b15c161992551ee",
@@ -1218,6 +1256,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "43a9c024e95cb8af",
+   "title": "이소영 “中企, AI 시대 주체로”…‘규제개혁 장관’ 선언",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kQkRaLUdSWE8zN1E1R0NWSFR3U21OZ2xIQi0tM25FZV9iZko0T0hKeHR5a2dTQXBydV9wMUZTVWFFemJMSzVJQnFfUFd2Tlgta3dHZllUdWZZZlFUNGV0YTlnWWxnSDQzemRkadIBbEFVX3lxTE9kQkRaLUdSWE8zN1E1R0NWSFR3U21OZ2xIQi0tM25FZV9iZko0T0hKeHR5a2dTQXBydV9wMUZTVWFFemJMSzVJQnFfUFd2Tlgta3dHZllUdWZZZlFUNGV0YTlnWWxnSDQzemRkaQ?oc=5",
+   "source": "중소기업투데이",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T09:19:03+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "9be5600d409cd305",
@@ -2046,29 +2095,6 @@
    }
   },
   {
-   "id": "76b2dcaa89cee139",
-   "title": "MS \"한국 생성형 AI 사용자 비중 40.6%\"⋯세계 순위 16위→12위",
-   "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9CVUtGaVpXRUg3OXdUMnFDM2tGSS1PMC1aczF2azB5Z2htNHZCSV9yRVo0OEstYld3aUVaSnVvQ1JFWWgzRFE?oc=5",
-   "source": "아이뉴스24",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:56:18+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 8,
-   "mx": {
-    "b": "마이크로소프트의 조사에 따르면 한국의 생성형 인공지능 사용자 비중이 40.6%를 기록하며 세계 순위가 16위에서 12위로 상승했다. 국내 이용자의 기술 수용도와 활용 빈도가 전반적으로 향상된 것으로 나타났다.",
-    "p": "국내 생성형 AI의 대중적 활용 지표가 개선되며 민간 부문의 기술 친화력이 빠르게 높아지고 있음을 보여준다. 높은 사용자 비중을 실제 산업 생산성 향상과 고부가가치 창출로 연계하는 전략이 중요하다.",
-    "t": [
-     "마이크로소프트",
-     "생성형AI",
-     "사용자비중",
-     "기술수용도"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "a503f173e1a7cd6d",
    "title": "이소영표 중기부, ‘지원 부처’ 넘어선다…AI·규제·자본시장까지 역할 확대",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KLVd0Zk01Y3RNeTFPS2dBV1NPMmRmWGxQZ0s4TjdYVWlvN19tMlBQWTl0djY3SUJNOGpNQ0RGQlo1QkpFdHVBVDJsbmN6NEk?oc=5",
@@ -2086,28 +2112,6 @@
      "규제혁신",
      "자본시장",
      "AI정책"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "e9ae4b80e60c3511",
-   "title": "울산소방본부, 생성형 인공지능(AI) 활용 역량 강화",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1PbkJ5UWdXR3h0TFJzQUNaTHJfZTVuMEt3UXFpcDdUakc0VlNnOEZrSFBnTGhpa0VHT3JTVkI1U0pZNm5TNHZvTHZxckUyLUU?oc=5",
-   "source": "v.daum.net",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:54:50+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "울산소방본부가 생성형 인공지능을 실무에 도입해 현장 대응 역량을 강화하기 위한 교육과 활용을 추진한다. 소방 행정 및 재난 대응 업무에 AI 기술을 접목하여 효율성을 높이려는 목적이다.",
-    "p": "재난 및 안전 관리 영역에서도 생성형 AI를 활용한 업무 지원 체계 도입이 확산되는 추세이다. 현장 중심의 신속한 의사결정과 정보 처리를 돕는 공공 특화 AI 활용 모델의 안착이 중요하다.",
-    "t": [
-     "울산소방본부",
-     "생성형AI",
-     "재난안전",
-     "공공역량"
     ],
     "v": 1
    }
@@ -4209,22 +4213,6 @@
    "trv": 2
   },
   {
-   "id": "63f85032962dd035",
-   "title": "Anthropic’s CEO is about to have dinner with President Trump",
-   "link": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
-   "source": "TechCrunch AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T20:34:28+00:00",
-   "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-   "thumb": "",
-   "title_ko": "Anthropic CEO, 트럼프 대통령과 저녁 식사 예정",
-   "detail_ko": "이번 만남은 다리오 아모데이와 도널드 트럼프 간의 첫 대면 회담이 될 것이다.",
-   "summary_ko": "이번 만남은 다리오 아모데이와 도널드 트럼프 간의 첫 대면 회담이 될 것이다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "79b976d981ecb781",
    "title": "Bill Gates says AI without regulation is ‘completely irresponsible’",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVXZLY1Y0ZUxmbmQ1aHZIdUs2MHZSTlhDUXJibXlkdkJXcll3M0dtN1dHVHFzRldZc2dRRHlzdWdMdlhFaWZnay1XLWF0M1Z4MFZqbDRvYnBfVzllNlV2TU83dlJIbVFIaTFNN2dVclcwcW83TTltcjQyN215RDMwSEtfUzZocEg0T1ZvSWVfNjI2V0UtNFloVUQweTY1UGxrSkE0ODJUM1Bnd9IBrwFBVV95cUxPS29KMUZlVnFLc1ExUndoclYtZ2NWVVVmRk5YSXNrNk8zS0JIdGRTbWhDV3l6MmJyZnNJMkxlV2Zpb0c1YVNLMVFLb2JGYU5BOUd5MmdZd25FbHFkZ0xOTmpEWmcxbzZkd0NCLWU2MjRRY1ZXN1M2YkFBMUZ0OEctRjhaaHhEdVRwTC1YVzlXUldaay1YSDFJUk51NExrZXUzcVZzNENfUkkyTkZvWkhF?oc=5",
@@ -4477,17 +4465,6 @@
    "published": null,
    "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상 - 상위 8개사에게 상금 8천만원에 더해 투자유치 기회·입주공간 등 지원",
    "thumb": ""
-  },
-  {
-   "id": "9aee9340ae89f632",
-   "title": "과기정통부-방미통위 정책협의회 1차 실무협의회 개최",
-   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187787",
-   "source": "과학기술정보통신부 보도자료",
-   "field": "",
-   "category": "policy",
-   "published": null,
-   "summary": "- 고위급 정책협의회(6.10) 시 합의된 AI·OTT 분야 협력방안 추진현황 점검 - 한국방송통신미디어진흥원 설립 대비, 침해사고 이용자 보호 등 주요 현안 논의",
-   "thumb": ""
   }
  ],
  "status": [
@@ -4535,9 +4512,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+   "ok": true,
+   "count": 6,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -4549,12 +4526,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 3,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -4620,8 +4597,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -4795,7 +4772,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -4819,7 +4796,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 47
+   "fetched": 49
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
