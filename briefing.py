@@ -823,12 +823,11 @@ def collect(fixtures=None, now=None):
     per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
     uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
-    left = 8 - (0 if fixtures else ai_briefs(uniq, 8))  # 오늘 글부터 METAXIS 브리핑(AI)
+    if not fixtures:  # METAXIS 브리핑(AI)은 무료 한도 안에서 실시간 페이지(오늘 홈)에 보이는 글만
+        ai_briefs(uniq, 8)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    if not fixtures and left > 0:
-        ai_backlog(path, left)
     ok = sum(s["ok"] for s in status)
     print(f"[collect] {today} 항목 {len(uniq)}개, 소스 {ok}/{len(status)} 성공 → {path.relative_to(ROOT)}")
     return data
