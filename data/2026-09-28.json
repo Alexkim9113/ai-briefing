@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:10+09:00",
+ "generated_at": "2026-09-28T16:12+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -2178,12 +2178,10 @@
    "field": "",
    "category": "news_global",
    "published": "2026-09-27T17:26:00+00:00",
-   "summary": "Gemini app replacing Gems with skills in November 9to5Google Your Gemini Gems are getting a powerful makeover this November Android Police",
+   "summary": "",
    "thumb": "",
    "hot": 0,
-   "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱",
-   "detail_ko": "11월 9to5Google에서 보석을 기술로 대체하는 Gemini 앱 올 11월 Gemini Gems가 강력하게 변신합니다. Android Police",
-   "summary_ko": "11월 9to5Google에서 보석을 기술로 대체하는 Gemini 앱 올 11월 Gemini Gems가 강력하게 변신합니다. Android Police"
+   "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱"
   },
   {
    "id": "9c14e3f084274fca",
@@ -2375,13 +2373,10 @@
    "field": "",
    "category": "news_global",
    "published": "2026-09-27T12:00:00+00:00",
-   "summary": "Googlebooks might be the real deal The Verge Googlebook: The laptop your Android phone has been waiting for blog.google Dell Stock Jumps 3.5% as Gemini Enters the XPS Franchise…",
-   "detail": "Googlebooks might be the real deal The Verge Googlebook: The laptop your Android phone has been waiting for blog.google Dell Stock Jumps 3.5% as Gemini Enters the XPS Franchise Yahoo Finance Pixelated 118: Googlebook begins 9to5Google Googlebook Cheat Sheet: Price, Models, Gemini Features, and…",
+   "summary": "",
    "thumb": "",
    "hot": 6,
-   "title_ko": "Googlebook이 진짜 거래가 될 수 있습니다.",
-   "detail_ko": "Googlebooks는 진짜 거래일 수 있습니다. The Verge Googlebook: Android 휴대폰이 기다려온 노트북 blog.google Dell 주가는 Gemini가 XPS 프랜차이즈에 진입하면서 3.5% 상승 Yahoo Finance Pixelated 118: Googlebook이 9to5를 시작합니다Google Googlebook 치트 시트: 가격, 모델, Gemini 기능 및…",
-   "summary_ko": "Googlebooks가 진짜 거래일 수 있습니다. The Verge Googlebook: Android 휴대폰이 기다려온 노트북 blog.google Gemini가 XPS 프랜차이즈에 진입하면서 Dell 주가가 3.5% 상승…"
+   "title_ko": "Googlebook이 진짜 거래가 될 수 있습니다."
   },
   {
    "id": "7f291a3819d4fef3",
@@ -2471,13 +2466,10 @@
    "field": "",
    "category": "news_global",
    "published": "2026-09-27T10:04:00+00:00",
-   "summary": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code Business Insider Rust instead of Ruby – Rails founder Hansson’s new project heise.de DHH admits AI agents…",
-   "detail": "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code Business Insider Rust instead of Ruby – Rails founder Hansson’s new project heise.de DHH admits AI agents struggled on Basecamp even as they built all of Omarchy Startup Fortune Rails Founder David Heinemeier Hansson: Handwriting…",
+   "summary": "",
    "thumb": "",
    "hot": 7,
-   "title_ko": "Ruby on Rails 제작자, 손으로 쓴 코드에 '연필을 내려놓다' 선언",
-   "detail_ko": "Ruby on Rails 제작자는 Ruby 대신 손으로 쓴 코드 Business Insider Rust에 '연필을 내려' 선언 – Rails 창립자 Hansson의 새 프로젝트 heise.de DHH는 AI 에이전트가 Omarchy 스타트업 Fortune Rails 창립자 David Heinemeier Hansson을 모두 구축하는 동안에도 Basecamp에서 어려움을 겪었음을 인정합니다.",
-   "summary_ko": "Ruby on Rails 제작자는 Ruby 대신 손으로 쓴 코드 Business Insider Rust에 '연필을 내려' 선언했습니다. Rails 창립자 Hansson의 새 프로젝트 heise.de DHH는 AI 에이전트를 인정합니다…"
+   "title_ko": "Ruby on Rails 제작자, 손으로 쓴 코드에 '연필을 내려놓다' 선언"
   },
   {
    "id": "998f6b2f76aa75e0",
@@ -2784,9 +2776,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": true,
-   "count": 6,
-   "fetched": 10
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
   },
   {
    "name": "Google AI Blog",
@@ -2816,7 +2808,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 83
   },
   {
    "name": "Google News: AI 기업",
@@ -2851,8 +2843,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2863,8 +2855,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2995,8 +2987,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3038,7 +3030,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 62
+   "fetched": 61
   },
   {
    "name": "스테이지5",
