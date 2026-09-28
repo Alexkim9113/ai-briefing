@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:45+09:00",
+ "generated_at": "2026-09-28T20:46+09:00",
  "items": [
   {
    "id": "0817d5a83710e8fa",
@@ -4072,7 +4072,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "fetched": 70
   },
   {
@@ -4144,8 +4144,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -4325,7 +4325,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -4469,7 +4469,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "아주경제",
