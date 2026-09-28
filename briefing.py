@@ -417,12 +417,17 @@ def translate_ko(text):
 def add_translations(items, fixtures=None, max_n=200):
     """해외 글(한글이 없는 제목)에 번역 제목(title_ko)을 붙인다. 논문 제목은 원문 그대로 둔다."""
     todo = [i for i in items if i["category"] != "papers" and not i.get("title_ko") and not _HANGUL.search(i["title"])][:max_n]
-    if fixtures or not todo:
+    # 해외 글의 '주요 내용 요약'도 한 줄씩 번역해 둔다(원문 요약 아래에 보여 준다)
+    dtodo = [i for i in items if i.get("detail") and not i.get("detail_ko") and not _HANGUL.search(i["detail"])][:max_n]
+    if fixtures or not (todo or dtodo):
         return
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for it, ko in zip(todo, pool.map(translate_ko, [i["title"] for i in todo])):
             if ko and ko != it["title"] and _HANGUL.search(ko):
                 it["title_ko"] = ko
+        for it, ko in zip(dtodo, pool.map(translate_ko, [i["detail"] for i in dtodo])):
+            if ko and _HANGUL.search(ko):
+                it["detail_ko"] = "\n".join(x.strip() for x in ko.split("\n") if x.strip())
 
 
 def make_item(src, it, keywords, now):
@@ -777,7 +782,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief-bg{position:fixed;inset:0;z-index:50;background:rgba(3,3,12,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;animation:bfade .18s ease}
 .brief{position:relative;width:min(560px,100%);max-height:86vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:18px;padding:26px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .brief-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--soft);color:var(--text);font-size:15px;cursor:pointer}
-.brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}
+.brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}.brief-tr{display:block;margin-top:4px;color:var(--muted);font-size:14.5px}.brief-trb{margin:10px 0;padding:10px 14px;border-left:3px solid var(--c);background:var(--soft);border-radius:8px;font-size:14.5px;color:var(--muted)}.brief-trb b{display:block;font-size:12.5px;margin-bottom:4px}.brief-trb p{margin:4px 0}.brief-trn{margin:4px 0 0;font-size:12px;color:var(--muted)}
 .brief h4{margin:18px 0 8px;font-size:14px;color:var(--heading)}.brief h4::before{content:"";display:inline-block;width:4px;height:.9em;border-radius:2px;background:var(--c);margin-right:8px;vertical-align:-.1em}
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
 .brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
@@ -851,7 +856,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
-.op-edit{font-size:13px;font-weight:600;color:#ff4fd8;border:1px solid currentColor;border-radius:99px;padding:2px 10px;margin-left:8px}.op-edit[hidden]{display:none}
+.op-edit{font-size:13px;font-weight:600;color:#ff4fd8;border:1px solid currentColor;border-radius:99px;padding:2px 10px;margin-left:8px}.op-edit[hidden],.op-only[hidden]{display:none}
 .ph h1{font-size:28px;font-weight:700;margin:0;color:var(--heading)}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
 .editor-h h2{font-size:22px;margin:0;color:var(--heading);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
@@ -883,10 +888,10 @@ ul.st{columns:1}footer{margin-top:36px}}
 JS = """
 // 기사 제목을 누르면 '주요 내용'(언론사가 공개한 소개글 발췌, 최대 5줄)과 원문으로 가는 버튼을 먼저 보여 준다
 function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- const lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5);const bg=document.createElement('div');bg.className='brief-bg';
+ const lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
- <h4>주요 내용 요약</h4>${lines.length?`<ul>${lines.map(l=>`<li>${e(l)}</li>`).join('')}</ul>`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
+ <h4>주요 내용 요약</h4>${lines.length?`<ul>${lines.map((l,i)=>`<li>${e(l)}${pair?`<span class="brief-tr">${e(kos[i])}</span>`:''}</li>`).join('')}</ul>${kos.length&&!pair?`<div class="brief-trb"><b>자동 번역</b>${kos.map(k=>`<p>${e(k)}</p>`).join('')}</div>`:''}${kos.length?'<p class="brief-trn">번역은 구글 번역으로 자동 생성돼 어색할 수 있어요.</p>':''}`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
  <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">더 읽어보기 →</a><p class="brief-note">요약은 언론사가 공개한 소개글에서 핵심 문장을 자동으로 골라 보여 준 것이에요. 전체 기사와 저작권은 출처에 있어요.</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
@@ -901,7 +906,7 @@ document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopIm
 document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
  dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
-try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
+try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit,.op-only').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
 function pageLinks(p,n){const s=new Set([0,n-1,p-1,p,p+1]);let h=p>0?`<button data-p="${p-1}" aria-label="이전">‹</button>`:'',last=-1;
  for(let i=0;i<n;i++){if(!s.has(i))continue;if(i-last>1)h+='<span>…</span>';h+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;last=i;}
@@ -1286,7 +1291,8 @@ def title_link(it):
     d = it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
     info = " · ".join(x for x in (it.get("source", ""), fmt_time(it.get("published"))) if x)
     extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
-             + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")) if not it.get("editor") else ""
+             + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")
+             + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") and it.get("detail") else "")) if not it.get("editor") else ""
     return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{extra}>{esc(it["title"])}</a>{ko}'
 
 
@@ -1730,7 +1736,7 @@ def og_main():
 def post_item(p):
     """에디터 글을 표지·목록에서 기사처럼 다루기 위한 형태."""
     return {"id": hashlib.sha1(p["id"].encode()).hexdigest(), "title": p["title"], "link": f'editor/{p["id"]}.html',
-            "source": "METAXIS 에디터", "category": "editor", "published": p.get("updated") or p.get("date"),
+            "source": "에디터", "category": "editor", "published": p.get("updated") or p.get("date"),
             "summary": p["summary"], "cover": p.get("cover", ""), "editor": True}
 
 
@@ -1738,7 +1744,7 @@ def post_card(p, base):
     it = post_item(p)
     href = base + it["link"]
     return (f'<article>{thumb_html(it, base, href=href, blank=False)}<h3 class="serif"><a href="{href}">{esc(p["title"])}</a></h3>'
-            f'<p>{esc(p["summary"])}</p><div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span></div></article>')
+            f'<p>{esc(p["summary"])}</p><div class="meta"><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span></div></article>')
 
 
 def render_editor_pages(posts, cats, sc):
@@ -1754,7 +1760,7 @@ def render_editor_pages(posts, cats, sc):
         rows = "".join(
             f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
-            f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
+            f'<div class="meta"><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span>'
             f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a></div></div></article>' for p in chunk)
         rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 위의 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
         body = (f'<div class="ph" style="--c:{EDITOR_COLOR}"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
@@ -1777,7 +1783,7 @@ def render_editor_pages(posts, cats, sc):
             body_html = f'<figure class="lead"><img src="{esc(p["cover"])}" alt="{esc(p["title"])}"></figure>' + body_html
         fams = [f for f in POST_FONTS if f in body_html]
         body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
-                f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
+                f'<div class="meta"><span>에디터</span><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span>'
                 f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
                 f'<div class="body">{body_html}</div>'
