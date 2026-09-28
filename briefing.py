@@ -579,6 +579,53 @@ ai 및 등 위한 대한 통해 있는 있다 한다 한 수 것 더 위해 에�
 towards toward into about over our your their can not no we you us more model models""".split())
 
 
+# 연관어 묶음: #키워드를 누르거나 검색하면 같은 묶음의 말이 들어간 글까지 함께 찾는다(첫 말이 대표 이름)
+KW_GROUPS = [
+    ["인공지능", "artificial intelligence", "에이아이"],
+    ["OpenAI", "오픈AI", "오픈에이아이", "ChatGPT", "챗GPT", "GPT", "Sam Altman", "올트먼", "알트만"],
+    ["Anthropic", "앤트로픽", "Claude", "클로드"],
+    ["Google", "구글", "Gemini", "제미나이", "DeepMind", "딥마인드", "Alphabet"],
+    ["Nvidia", "엔비디아", "젠슨 황", "Jensen Huang"],
+    ["Microsoft", "마이크로소프트", "MS", "Copilot", "코파일럿"],
+    ["Meta", "메타", "Llama", "라마", "저커버그", "Zuckerberg"],
+    ["Apple", "애플", "Siri", "시리"],
+    ["Amazon", "아마존", "AWS"],
+    ["xAI", "Grok", "그록", "머스크", "Musk", "Tesla", "테슬라"],
+    ["삼성", "삼성전자", "Samsung"],
+    ["SK", "SK하이닉스", "하이닉스", "SKT", "SK텔레콤", "Hynix"],
+    ["네이버", "Naver", "하이퍼클로바"],
+    ["카카오", "Kakao"],
+    ["LG", "엘지", "엑사원", "EXAONE"],
+    ["Trump", "트럼프", "White House", "백악관"],
+    ["규제", "regulation", "regulate", "법안", "기본법", "AI Act", "입법"],
+    ["정책", "policy", "정부", "government", "과기정통부", "과학기술정보통신부"],
+    ["반도체", "chip", "chips", "semiconductor", "HBM", "GPU", "칩"],
+    ["로봇", "robot", "robots", "robotics", "휴머노이드", "humanoid", "로보틱스"],
+    ["에이전트", "agent", "agents", "agentic", "에이전틱"],
+    ["생성형", "generative", "GenAI", "생성AI"],
+    ["LLM", "언어모델", "language model", "파운데이션", "foundation model"],
+    ["데이터센터", "data center", "data centers", "datacenter", "데이터 센터"],
+    ["보안", "security", "cyber", "cybersecurity", "사이버", "해킹", "hack"],
+    ["교육", "education", "학생", "students", "school", "학교", "대학"],
+    ["의료", "health", "healthcare", "medical", "병원", "헬스케어", "신약"],
+    ["투자", "investment", "funding", "raises", "투자유치", "valuation", "IPO", "상장"],
+    ["스타트업", "startup", "startups", "창업"],
+    ["CEO", "대표", "최고경영자"],
+    ["KAIST", "카이스트"],
+    ["서울대", "서울대학교", "SNU"],
+    ["중국", "China", "Chinese", "DeepSeek", "딥시크", "알리바바", "Alibaba"],
+    ["저작권", "copyright", "lawsuit", "소송"],
+    ["일자리", "jobs", "고용", "layoffs", "해고", "노동"],
+]
+_KW_CANON = {w.lower(): g[0] for g in KW_GROUPS for w in g}
+
+
+def kw_terms(k):
+    """키워드 하나로 찾을 말들(연관어 묶음이 있으면 묶음 전체)."""
+    g = next((g for g in KW_GROUPS if g[0] == _KW_CANON.get(k.lower())), None)
+    return g or [k]
+
+
 def top_keywords(items, n=12):
     c = Counter()
     for it in items:
@@ -587,7 +634,7 @@ def top_keywords(items, n=12):
             wl = w.lower().strip(".-")
             if wl in STOP or len(wl) < 2:
                 continue
-            c[w if not w.isascii() or w.isupper() or w[0].isupper() else wl] += 1
+            c[_KW_CANON.get(wl) or (w if not w.isascii() or w.isupper() or w[0].isupper() else wl)] += 1
     return [w for w, k in c.most_common(n) if k >= 2]
 
 
@@ -651,7 +698,12 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
-.kw strong{font-size:14px;margin-right:4px}.kw span{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
+.kw strong{font-size:14px;margin-right:4px}.kw span,.kwb{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
+.kwb{font:inherit;font-size:13px;border:2px solid transparent;cursor:pointer;padding:2px 11px}.kwb:hover{border-color:var(--line)}
+.kwb.on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;color:var(--heading);font-weight:700}
+.kwres{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 0;padding:12px 16px;border-radius:14px;background:var(--soft);font-size:14px}
+.kwres b{color:var(--heading)}.kwres em{font-style:normal;color:var(--muted);display:block;font-size:12.5px;margin-top:2px}
+.kwres button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:6px 12px;cursor:pointer;white-space:nowrap}
 .kw .info{background:none;color:var(--muted);margin-left:auto;padding:0}
 .tabs{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
@@ -695,7 +747,7 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 .row{padding:14px 0}.meta{font-size:13px}
 .trend:last-child{border-bottom:0;margin-bottom:0}.card h3,.rows h3,.trend h3{font-size:17px;line-height:1.5;letter-spacing:-.01em}
 .card p,.rows p{font-size:15px;line-height:1.6}.rows article{padding:16px 0 14px}.hero p.sum{font-size:16.5px;line-height:1.75}
-.kw span{font-size:14px}
+.kw span,.kwb{font-size:14px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
 .ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0}
@@ -752,11 +804,27 @@ boxes.forEach(box=>{const items=[...box.children],pager=box.nextElementSibling,n
 function show(c){tabs.forEach(x=>x.classList.toggle('on',x.dataset.cat===c));secs.forEach(s=>s.hidden=c!=='all'&&s.dataset.cat!==c);}
 tabs.forEach(b=>b.onclick=()=>show(b.dataset.cat));
 document.querySelectorAll('a[data-tab]').forEach(a=>a.onclick=e=>{e.preventDefault();show(a.dataset.tab);document.querySelector('.tabs').scrollIntoView({behavior:'smooth'});});
-const q=document.querySelector('.search input');
-if(q)q.oninput=()=>{const v=q.value.trim().toLowerCase();
- if(!v){boxes.forEach(b=>b._go(0));secs.forEach(s=>s.hidden=false);show('all');return;}
- show('all');boxes.forEach(b=>{[...b.children].forEach(a=>a.hidden=!a.dataset.q.includes(v));b.nextElementSibling.hidden=true;});
- secs.forEach(s=>s.hidden=!s.querySelector('article:not([hidden])'));};
+const q=document.querySelector('.search input'),KWD=document.querySelector('.kw');
+const KG=KWD&&KWD.dataset.kg?JSON.parse(KWD.dataset.kg):[];
+function has(t,w){w=w.toLowerCase();if(!/^[ -~]+$/.test(w))return t.includes(w);let i=t.indexOf(w);
+ while(i>=0){const a=t[i-1]||' ',b=t[i+w.length]||' ';if(!/[a-z0-9]/.test(a)&&!/[a-z0-9]/.test(b))return true;i=t.indexOf(w,i+1);}return false;}
+function related(v){const l=v.toLowerCase();const g=KG.find(g=>g.some(w=>w.toLowerCase()===l));return g||null;}
+function clearKw(){KWD&&KWD.querySelectorAll('.kwb').forEach(b=>b.classList.remove('on'));const r=document.querySelector('.kwres');if(r)r.remove();}
+function filter(terms,label,plain){ // terms: 찾을 말들, 하나라도 들어간 글만 보인다
+ if(!terms){boxes.forEach(b=>b._go(0));secs.forEach(s=>s.hidden=false);show('all');return 0;}
+ let n=0;show('all');
+ boxes.forEach(b=>{[...b.children].forEach(a=>{const t=plain?a.dataset.q:(a.dataset.k||a.dataset.q);a.hidden=!(plain?t.includes(plain):terms.some(w=>has(t,w)));if(!a.hidden)n++;});b.nextElementSibling.hidden=true;});
+ secs.forEach(s=>s.hidden=!s.querySelector('article:not([hidden])'));return n;}
+function kwBanner(label,terms,n){let r=document.querySelector('.kwres');if(!r){r=document.createElement('div');r.className='kwres';document.querySelector('.tabs').before(r);}
+ const rel=terms.filter(t=>t.toLowerCase()!==label.toLowerCase()).slice(0,6);
+ r.innerHTML=`<div><b>#${label.replace(/</g,'&lt;')}</b> 관련 글 ${n}건${rel.length?`<em>함께 찾은 말: ${rel.join(', ').replace(/</g,'&lt;')}</em>`:''}</div><button type="button">전체 보기</button>`;
+ r.querySelector('button').onclick=()=>{clearKw();if(q)q.value='';filter(null);};}
+if(KWD)KWD.querySelectorAll('.kwb').forEach(b=>b.onclick=()=>{
+ if(b.classList.contains('on')){clearKw();filter(null);return;}
+ clearKw();b.classList.add('on');if(q)q.value='';const terms=b.dataset.t.split('|'),label=b.textContent.slice(1);
+ const n=filter(terms,label);kwBanner(label,terms,n);document.querySelector('.kwres').scrollIntoView({behavior:'smooth',block:'start'});});
+if(q)q.oninput=()=>{clearKw();const v=q.value.trim();if(!v){filter(null);return;}
+ const g=related(v);if(g){const n=filter(g,v);kwBanner(v,g,n);}else filter([v],v,v.toLowerCase());};
 document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dataset.url;
  try{if(navigator.share)await navigator.share({url:u,title:b.dataset.title});else{await navigator.clipboard.writeText(u);b.title='링크 복사됨';}}catch(e){}});
 """
@@ -1278,8 +1346,9 @@ def thumb_html(it, base="", used=None, href=None, blank=True):
 
 def row_html(it, cats, with_cat=False):
     summ = f"<p>{esc(it['summary'])}</p>" if it.get("summary") else ""
-    q = esc((it["title"] + " " + it.get("title_ko", "") + " " + it["source"] + " " + (it.get("summary") or "")).lower())
-    return f'<article data-q="{q}"><h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats, with_cat)}</article>'
+    k = (it["title"] + " " + it.get("title_ko", "") + " " + (it.get("summary") or "")).lower()
+    q = esc(k + " " + it["source"].lower())
+    return f'<article data-q="{q}" data-k="{esc(k)}"><h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats, with_cat)}</article>'
 
 
 def pager_html(p, n, href):
@@ -1504,8 +1573,8 @@ def render_home(data, cats, posts):
         parts.append('<div class="editor-h"><h2 class="serif">에디터 글</h2><a href="editor/">전체 보기 →</a></div>'
                      f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:3])}</div>')
     info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · 총 {len(items)}건 · {esc(data["generated_at"][11:16])} 업데이트'
-    parts.append('<div class="kw"><strong>오늘의 키워드</strong>'
-                 + "".join(f"<span>#{esc(k)}</span>" for k in top_keywords(items))
+    parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
+                 + "".join(f'<button type="button" class="kwb" data-t="{esc("|".join(kw_terms(k)))}">#{esc(k)}</button>' for k in top_keywords(items))
                  + f'<span class="info">{info}</span></div>')
     tabs = ['<button class="on" data-cat="all" id="all">전체</button>']
     tabs += [f'<button data-cat="{c}">{esc(n)} {len(by_cat.get(c, []))}</button>' for c, n in cats.items()]
