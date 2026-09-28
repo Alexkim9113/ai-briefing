@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:28+09:00",
+ "generated_at": "2026-09-28T16:30+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -506,6 +506,17 @@
    "thumb": ""
   },
   {
+   "id": "cb4a50701fdd51b1",
+   "title": "메가존클라우드, ‘포털26’ 기업용 생성형 AI 통합 관리 플랫폼 국내 공급",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1RZkVsLVFWVkxBdHpDQnc4N2FicXpuamt3alJHV1VRVlFhaWV6a0Rxc093UGFyM0hBcVQ0TE9CNXJVa19mNlZaX29yZFlEZGIyNTVMOFFhbjZwWmd5MHNzdnVicnpBY2ozSjA1YlZKb3B1eGdI0gF0QVVfeXFMTVFmRWwtUVZWTEF0ekNCdzg3YWJxem5qa3dqUkdXVVFWUWFpZXprRHFzT3dQYXIzSEFxVDRMT0I1clVrX2Y2Vlpfb3JkWURkYjI1NUw4UWFuNnBaZ3kwc3N2dWJyekFjajNKMDViVkpvcHV4Z0g?oc=5",
+   "source": "IT조선",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:34:29+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "4085c791cbd3a6c7",
    "title": "[월가 톡톡] 메타 AI 비서에 '내 삶'을 맡겨봤다",
    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5USWRGQ1o5ejhLQ0phVHMxNWFNRDNQOTBWR0JmQzh6VzYzMlR5RGYtaE1aYXNES2NuaEEzY2xyYm1LZjFHX1lUU2ZqbURJMk5XUnRjdmxsTFYtQUZvSUVlRm5FNkRYZ3ZlS2NYellvTEo?oc=5",
@@ -890,17 +901,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T04:51:03+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d61f2707e0b475e5",
-   "title": "인공지능은 인터넷 거대 기업들 간의 힘의 균형을 바꾸고 있다.",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbU5YdjYtdnYyVlVkTDY5a1RfR0pMa3Y1UUxWOHJLZGhuN28xU2tucUs1REJHcm95U0RkN3YwU1JWZ2djQWpwb1VBSXhPRVhfY3RDdWpsMDhKa1FmUEJxMkMwZXVQWmx5d1luNUpVNzk2QmVQanB4em5ZTTkxNGZvS0oycDhjdGVLZU5keQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T04:46:52+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2945,7 +2945,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2963,7 +2963,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 85
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -3016,8 +3016,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -3178,8 +3178,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3191,7 +3191,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 68
+   "fetched": 67
   },
   {
    "name": "구글뉴스: AI 정책",
