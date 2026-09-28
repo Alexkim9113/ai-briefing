@@ -626,10 +626,11 @@ section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--acc
 .empty{color:var(--muted);font-size:14px}
 footer{margin-top:56px;line-height:1.7;padding-top:30px;padding-bottom:44px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 footer.wrap{margin-top:64px}
-.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}.fbrand p{margin:6px 0 0}.fbrand .copy{font-size:12px;opacity:.85}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}.fbrand p{margin:0}.fbrand .copy{font-size:12px;opacity:.85}
 .flogo{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.14em;color:var(--text);font-size:16px}.flogo svg{width:24px;height:24px}.flogo rect{stroke:var(--accent)}.flogo path{fill:var(--accent)}
-.connect{display:flex;flex-direction:column;gap:6px;min-width:140px}.connect h4{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
-.connect a{color:var(--text);font-size:15px}.connect a:hover{color:var(--accent);text-decoration:underline}
+.foot{align-items:center}.connect{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px}.connect h4{margin:0;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--muted);font-family:inherit}
+.connect a{display:inline-flex;align-items:center;gap:9px;color:var(--text);font-size:15px;font-weight:500;letter-spacing:.01em}.connect a svg{width:17px;height:17px;flex:none}
+.connect a[href]:hover{color:var(--accent)}.connect a[aria-disabled]{cursor:default}
 details summary{cursor:pointer}ul.st{columns:3;padding-left:18px}ul.st .bad{color:#c2410c}
 ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;border-bottom:1px solid var(--line)}ul.days a{color:var(--accent)}
 [hidden]{display:none!important}
@@ -637,6 +638,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
 .bar nav{order:2;flex:1 0 100%;justify-content:flex-start;gap:20px;margin:0 -16px;padding:2px 16px}
 .search{order:3;width:100%}.search input{font-size:16px}}
+@media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
 .logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
 .badge{margin:8px 0 0;top:0;display:table}.hero .thumb{aspect-ratio:16/8}.hero p.sum{font-size:16px;line-height:1.7}
@@ -826,15 +828,27 @@ def site_cfg():
             "email": s.get("contact_email", ""), "instagram": s.get("instagram", ""), "x": s.get("x", "")}
 
 
+SOCIAL_ICONS = {
+    "Contact": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+    "Instagram": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+    "X": '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>',
+    "Policy": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>',
+}
+
+
 def connect_links(sc, base):
+    """하단 CONNECT: Contact · Instagram · X · Policy. 주소가 아직 없는 SNS는 아이콘만 보이고 링크는 걸리지 않는다."""
     contact = f'mailto:{sc["email"]}' if sc.get("email") else f"{base}policy.html#contact"
-    links = [("Contact", contact, False)]
-    if sc.get("instagram"):
-        links.append(("Instagram", sc["instagram"], True))
-    if sc.get("x"):
-        links.append(("X", sc["x"], True))
-    links.append(("정책", f"{base}policy.html", False))
-    return "".join(f'<a href="{esc(u)}"{" target=_blank rel=noopener" if ext else ""}>{n}</a>' for n, u, ext in links)
+    links = [("Contact", contact, False), ("Instagram", sc.get("instagram"), True),
+             ("X", sc.get("x"), True), ("Policy", f"{base}policy.html", False)]
+    out = []
+    for n, u, ext in links:
+        inner = f'{SOCIAL_ICONS[n]}<span>{n}</span>'
+        if u:
+            out.append(f'<a href="{esc(u)}"{" target=_blank rel=noopener" if ext else ""}>{inner}</a>')
+        else:
+            out.append(f'<a aria-disabled="true" title="준비 중">{inner}</a>')
+    return "".join(out)
 
 
 def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True,
@@ -874,8 +888,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈">{LOGO}<span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap foot"><div class="fbrand"><a class="flogo" href="{base}index.html">{LOGO}<span>{esc(sc["name"])}</span></a>
-<p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
+<footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
 <script>{JS}{script}</script></body></html>"""
 
