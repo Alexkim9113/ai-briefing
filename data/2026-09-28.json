@@ -1,7 +1,19 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:48+09:00",
+ "generated_at": "2026-09-28T16:50+09:00",
  "items": [
+  {
+   "id": "2a7daa9887105e22",
+   "title": "미국·러시아, 유엔 AI 무기 협약서 '인간 감독' 안전장치 삭제",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215728",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T16:48:20+09:00",
+   "summary": "미국과 러시아가 치명적 자율무기 사용을 규제하기 위한 유엔 협상에서 AI가 지정한 공격 목표를 사람이 사전에 검토해야 한다는 핵심 안전 조항을 삭제한 것으로 전해졌다.",
+   "detail": "미국과 러시아가 치명적 자율무기 사용을 규제하기 위한 유엔 협상에서 AI가 지정한 공격 목표를 사람이 사전에 검토해야 한다는 핵심 안전 조항을 삭제한 것으로 전해졌다.\n워싱턴포스트는 26일(현지시간) 9월 초 스위스 제네바에서 열린 유엔 ‘치명적 자율무기 체계(LAWS)’ 정부 전문가 그룹 협상 마지막 날 미국과 러시아 대표단이 약 15시간 동안 문구를 집중적으로 수정했다고 보도했다.",
+   "thumb": ""
+  },
   {
    "id": "7168433343067ae3",
    "title": "아모데이, SNL 풍자 대상으로 등장...\"AI는 악마, 내가 그 창조자\"",
@@ -357,6 +369,17 @@
    "hot": 7
   },
   {
+   "id": "895418f1fe94a7b6",
+   "title": "제주교육, 한국마이크로소프트와 손잡고 인공지능 미래인재 키운다",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1HWERYQWxVQnNSQ2NiT1NRclRzREEybUFOOVctZVhOa3BXR0djUTJWb1pJeTBnelVWcUZ0eVdXbEhCc2JyOG4zY2tDN2dSbldIQkhXeWM5VGlVZGZWY0ZYeWlHMW5FdGRuazRLVlQzWQ?oc=5",
+   "source": "youngjuilbo.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:45:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "84ae174aae915271",
    "title": "전남광주특별시-울산광역시, 인공지능(AI) 대전환·자율주행·문화관광 등 초광역 상생협력",
    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ab3puWjFoN010ZlVCUnZ2QVFBYkRhaWZXeVRYYkxob0ZkQWJSeHZLd1VnZXg1WGRfcGdZLW95eUNybDFSVFNqdHdoWnhkVW4ya3NWUTFWRy1uRFh4YV8zeUlwa0lDaXRKQm9TZA?oc=5",
@@ -562,6 +585,18 @@
    "published": "2026-09-28T06:37:29+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "d0738e051d906c9d",
+   "title": "SK하이닉스, TSMC 기술 행사서 차세대 AI 메모리 공개",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5HMmRwTEY4c3NfV0xZbWRkZVFkeF9mV1BqNk5RcXN1VmpxejZFSlNiTlhQNzRQa3FwbHdkQ1BHa3VBY3dQRlJ3RjJlcEM5LU8zMWRSTi1haGVkYUxxblRmV3ZLRkJPWjA?oc=5",
+   "source": "연합뉴스TV",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:37:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 7
   },
   {
    "id": "cb4a50701fdd51b1",
@@ -856,39 +891,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T05:28:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6ec7fd30e6d62208",
-   "title": "충남도, AI 대전환 219개 과제 발굴…내년 예산 반영 추진",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8yMUp2UXBKM2lpSXV4bGgyLVRCTjdROHV3dzZGYjVQTHNjRTh6QkREZi1Ubmx5R2NfcExpRUpLLU8ybjVuaU1lQ211SmtQZUlpNXQwRXdzV2lSdldhX3I5MtIBYEFVX3lxTE8yMUp2UXBKM2lpSXV4bGgyLVRCTjdROHV3dzZGYjVQTHNjRTh6QkREZi1Ubmx5R2NfcExpRUpLLU8ybjVuaU1lQ211SmtQZUlpNXQwRXdzV2lSdldhX3I5Mg?oc=5",
-   "source": "연합뉴스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:24:01+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "ce4d0f278f78482a",
-   "title": "대전 옛 대덕경찰서, 방산기업 AI 기술 지원 거점으로 탈바꿈",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9BRmRBZ1hEekFfMDdvZVVwLXp3d0FnX1NuMk1PbDh6bWFyVV9DbWc2SHlBWVRUOVBscjJNXzQtQ3FtRnBjazlzTmJ3VVU0UnM?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:24:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "a74a770ac652fab3",
-   "title": "목원대, 졸업생·지역청년 대상 생성형 AI 실무교육 운영",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBKSlFtV1JnV3BJREZiZmhLYlpqcUFON05YVUxQWnZJc3pLRmJvY1hDX1k4ZjZCZC1SMDliYnFncENzQWg4cVMwbzhDWU5IS3V0SnU0OThVbEV4bHBqemVOdGhTbk1wUQ?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:15:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -3048,7 +3050,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 3,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -3061,7 +3063,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 79
+   "fetched": 85
   },
   {
    "name": "Google News: AI 기업",
@@ -3114,8 +3116,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -3289,7 +3291,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 69
+   "fetched": 68
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -3313,13 +3315,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 48
+   "fetched": 49
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "스테이지5",
