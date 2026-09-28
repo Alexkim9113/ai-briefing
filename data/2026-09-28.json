@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T10:57+09:00",
+ "generated_at": "2026-09-28T11:06+09:00",
  "items": [
+  {
+   "id": "ae276a9db5d2f8e9",
+   "title": "야놀자, '인공지능 페스타'서 여행·주거·호텔 운영 AI 기술 선뵌다",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pSWFmR2p2UGNfSFJBTE1UZ1VuVVFTZl81YkdQaXNDOTVubTBqRzEwQktxN01RcTJCYjJLUzllR1BIcmc1c2FkYW9RNTF0YWJkTDhIazZ3ODRhMFJaVTVnOUFtS2NYcnpLWnc?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:58:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
   {
    "id": "784685ea95a776e8",
    "title": "반디캠컴퍼니, AI 영상툴 ‘반디캠 AI 스튜디오’ 출시",
@@ -54,6 +65,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T01:28:57+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2c06b4d8577a2fde",
+   "title": "The Surprising Reasons China Is Skeptical of A.I. Safety Calls",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9VZXZwemNzZVFuNWFKWWE4dDlUWmVycE5oTDdvc3VoVHl1alRiczhkdE5EOEp5SkE5OUtpWVgzUFBMS0FVd21rQmtoejFCc19xMTktVThzaG5obmVxU05RU0E3dzJwVTJtdnZXcktEUVVDS2syT1JrTmVINA?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T01:26:28+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -185,6 +207,17 @@
    "source": "구글뉴스: 생성형 AI",
    "field": "",
    "category": "news_ko",
+   "published": "2026-09-28T00:59:56+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "add38888f24e18e8",
+   "title": "OpenAI Slows AI Training Following Latest Security Incident",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVlNNM043YXpZNlp2d1M1MlotcTN2cjlob085RHpjcGs0QXJhbFN6R0E0dDJCVnBTSk45andHUmZJclUzT0VqZkdlNndXVkJ3aEUxZVJfcWdlMWsyUjBzOWhaMkVMMmtuUy1jVXFfUUxvMTNQWEZZbC1TQmpoeTB2TlJsQTE1bHozUTROSk8xNEdSN1JyOTZud0xhSFZoclp0VkhSMl9lUWVRTW5TbWdyR3ZRUzFpQTlQ?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
    "published": "2026-09-28T00:59:56+00:00",
    "summary": "",
    "thumb": ""
@@ -397,6 +430,28 @@
    "thumb": ""
   },
   {
+   "id": "d62e4f3502325780",
+   "title": "China May Let Alibaba Buy Nvidia’s RTX Chips, Information Says",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSmpMYk0xRTBfdm5NMXRfNVNfMlE0cnppenNvTHNITzhVNXZ0R2NIX0Z3bmlWSmV1RHBpYURmWmdMT1ZLY2hUWG5WcDRsaFVSWktoRWFNQkdtRzg5UHpLeGstQXFGdkprdGhEbk05RUE5MEM4UTVlb281N3lOb2Y2WndNNHhzNUEtU3JlMUd5Z2FQRFRiM29JMU1fa25QRzBnekJJU3FYZGZlby1faklDS1pURG8?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T00:07:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "80fb9adb4d086a15",
+   "title": "SoundHound AI vs. BigBear.ai: Revenue Trends Reveal Key Insights About These Artificial Intelligence Companies",
+   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSU5VMklYak1RZ3Z1cWxxcFhQQ2FHbFNqNV9qYjE2Tlk1NWVwTU5VcVNQSHBnbko0b2FkYlo3YVlVZVNqZldkNkhFNjlhbjcwY0dBZzhzNG9KdjI4czUxRzlIQkptR2NJQTZ3eFZqRk5zdm94ampVMGJMc2FyRWhzR2o2Y2JWMUpsS2tTSXZZOGNyVFZCYU80ckwzRzdUXzJOdHRWSnF6RG4tcnpPRF9uZG94Skw5MkFPRWdGbkNrZHIxNl9PQlpHSU84dkhWTWlGVl9EanVvVlVrVjl6OFc5NllJVEJkS085TG5DUEZn?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T00:06:16+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "6f0f3aee4cfb0e07",
    "title": "공무원이 생성형 AI로 업무 시스템 직접 만든다",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA4VTlMTU9ZZzEzZUlSZFVSSG1aQzhLMVVrRXlKakl5SjNhNUpqR3NHYmtwcFhnNW5zdXRsUUxEYUp3TGR5dU5tNTdoMF9MTVVVallIcHZTZndhWWFFck5tT3p2Smt1c0dBM09UV3VR?oc=5",
@@ -469,6 +524,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-27T23:54:25+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2aa5cba70a61479b",
+   "title": "'The AI-pocalypse is a mirage distracting us from AI's unsustainable development'",
+   "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOY3cyYUxkbEZVaFpkZ2VLR2p4cktfb1ZCeUVXLTJyUENHMmhFNG1hUVZwLUx5TGJuUWlNQWRIOUJQY1dURktkbFpUQjNha0JkX1JSY2o4LVVnYjh5a2hEVk96UTE3UVNHUFBaRmFjQm9LTTZycVNReUhsQzIyWko0WGh5a0wxSnNXa1U2Wm9pamVTTnFTWENtdmFxdGw3RDdUVkpSUUFEUi1ZZWVVai1KQ29vVmphMEtpRGdlTU16dXZOODlxc3BveWhVM0t1RVNlVFlyZmtscUFLVHR2c08welZB?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T23:53:54+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -593,6 +659,17 @@
    "thumb": ""
   },
   {
+   "id": "48fa160fbf5c6ebb",
+   "title": "GTC - NVIDIA",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5IX1lvZGNiMnNKQkk5dzZ1X2g5Y2xnbjgzQU56cnlNcHhMM3V4Szdncl9MVUVEVmtaZzJXUXBxNGtUQ2lBZlNWeXhIWVBad0xVeW8tTWFxQkRmbjFtRHJMdkJETQ?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T23:25:32+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "e503243640538fb4",
    "title": "10월 'AI 반도체' 훈풍 속 '디리스킹' 국면…펀더멘털·정책 모멘텀 주목",
    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uUXZNOVM0MzdrZEhnZU9oWDhhd1Z5dGtYNVRtODRlSFpSOV80aUxJd1NzTUhTOVV6QThEZ1dqa0FESGhsLWY5ck1wSUxwV05xR3Z3OFU2WURqWFNBR3BSWjJ2Z293SURqSXlkYkJBV2Y?oc=5",
@@ -679,6 +756,17 @@
    "thumb": ""
   },
   {
+   "id": "9402ff755cb0fde6",
+   "title": "Researcher links 16,000 scans of a UN statistics portal to OpenAI agents",
+   "link": "https://siliconangle.com/2026/09/27/researcher-links-16000-scans-of-a-u-n-statistics-portal-to-openai-agents/",
+   "source": "SiliconANGLE AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T22:30:58+00:00",
+   "summary": "An independent researcher has tied more than 16,000 scans of a United Nations statistics portal to artificial intelligence agents the researcher considers highly likely to have…",
+   "thumb": ""
+  },
+  {
    "id": "d9a22b8bd7238a45",
    "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
@@ -696,6 +784,17 @@
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-27T22:05:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "695f1540d61201ee",
+   "title": "OpenAI pauses training of latest models after agents searched U.S. government sites in unexpected ways",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdmhabDZfN1ZHQXprdWJ4QThjNFVRWTU3ODlmakJmcy1iVGpZakJpMGZULVhSaWZod29QaXdtNTkwTXV1T3lWVm1GTTk5Q2hZRG5CLW1DYTVheGt4ZnF5cnIxamlsaE1WeGlZV0pxTWxPZ3NLWEgzMGlERlc4WFJoa0h6enN1dUQ1dTdYaHZTOER2SU1uUUFTazNtNW5hdGJkYVJ5MjduZ1dkWEFEQ3BuVHVMZkozM3lySHZIbg?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T21:57:53+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -732,6 +831,17 @@
    "thumb": ""
   },
   {
+   "id": "c611c0cf5cbf8a58",
+   "title": "What worries progressives most about artificial intelligence",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE84NVlHZEJpdHhpTV80djNjOWlrX0xCZXZqS3N4WE9hMlpqUHpPV1VybXRzUmpic1FzOWYyMFRCdkZTdnFmRXNCZktyWHJVbHo3MzlMdnNnSGJ3N3VVcmNSNGxENHNIaHo4TC12VDdxZW1wT0Jna3ZfVXQtVm5tUQ?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T21:40:06+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "cd18f316871d4581",
    "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
@@ -749,6 +859,17 @@
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-27T21:30:35+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "3c3e945beb5b087a",
+   "title": "Bill Gates warns artificial intelligence ‘powerful enough’ to cause ‘a billion deaths’ if unchecked",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNcTJqX0ZVN0ZOZTlkQUl3emFTWkl4dXFMZl9zVGdrcy1OcktTeE1YSzk4T0ctbEp0N19EYUNpMFNxWDdYS0lhbWJsUUdqMUd2cEp6WDVUQjRYZ3FXQ3luWEthUGcwY21ZRFc3Q3FSdEV5UGYzc2kya1RpekJybENnaXhjTXg0RlU0VmdoSWxNR29sa0h4MDNFTnVBMHFTam5aTU1EbThfWWYyVlB4SFV0Nl9kX0dWc09kc01LNEJ1TWNmYUFsRlhz?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T21:26:06+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -807,6 +928,17 @@
    "thumb": ""
   },
   {
+   "id": "c82a7cf0d7b3a7db",
+   "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQREYyMjZVV2F2QllnOVpLTnc4WWR3OGphX3A5WlJRTjhUTEROU0FIb2h0Wkgzb0h1VWRqNnhaUFlkdHRQb0dpXzFVeFlrZVVBcjQ5RzRPVW00MXNmdEV2LVNnRE00TkVZSTdaenhyNE9BOE9GdjlyTUZfeVlMa1JhYlZmNkxIUQ?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T20:57:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "63f85032962dd035",
    "title": "Anthropic’s CEO is about to have dinner with President Trump",
    "link": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
@@ -815,6 +947,17 @@
    "category": "news_global",
    "published": "2026-09-27T20:34:28+00:00",
    "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+   "thumb": ""
+  },
+  {
+   "id": "0cbe09707a728c71",
+   "title": "Bill Gates warns AI could be used to trigger 'a billion deaths,' urges regulation",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQkdFSC1ueUlvYjhNSVllczNrVjZUYmxDYmhVcXJXeDdIMkFLTHVHSXFpQnBjZVRtMGRJTmtTWEVWQUFGaUVJZXpWTkZIcE9JbnkxWGgyeW9lOU9ITEFQMThGM1FlNEhtaEpuSnRVcXNjVjNCaEtnanlhaDRpTGtNUGpfTjBXNVRVdDd3d3JYdllfaXppV3FkeEVUOHNEVHFZaXMzVmk1Z0VkTWVSdTRuOXplRQ?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T20:26:23+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -836,6 +979,39 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-27T19:40:04+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4f5dcd48c4c1420f",
+   "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNazY3aXdkLTdidzZEZjRxV1daaF9pVVRpN0NOdEl6UzZXRVVlMjZzbXRrd0VZWWd5TzBBWUpDdldBMGlES3hhRER5MWdrUlM1TXZEMm9zOXNvMWJMLWxrdVZfTHR4b1VqbXNudHR2MUtGN2lTdHY5bkxuamR5RjR3dExmbEMtVnlSb1dONjl0dF85Tl9rcmUxTTRvRUxpTWVG?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T19:23:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "c43351a9d43aeabe",
+   "title": "Bill Gates says it's 'completely irresponsible' for AI to not have safeguards",
+   "link": "https://www.engadget.com/2270166/bill-gates-says-that-its-completely-irresponsible-for-ai-to-not-have-safeguards/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T19:12:29+00:00",
+   "summary": "The Microsoft co-founder said that the more present danger is bad actors with access to AI tools.",
+   "thumb": ""
+  },
+  {
+   "id": "8c1c2e7d29a031a7",
+   "title": "Anthropic CEO Amodei set to meet with Trump after missing state dinner",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbE5Yb3J6V1pEWDhyWlBfRW9KdFFUT0MyNGQ5Q1lUMFdnNENFNE42aExZSzdSX3ZoT3RmSWwyNVFxWGlQUWZWZkN3a1F4SV9oSTdLeFcyWDRYV3FYVnljQlN2X0djekxpWW1lQ2Y4bW1PcVQxb1VYYnlmUFJKUnFKZWV6S3lCR0RHejdvRDJWc0RMbUttZGMta19kMHRQeFc4WkpGNjhqZEtOUdIBrwFBVV95cUxNOHNSX05TWlVVUmxEMUl5Ml8zSFZFSEFSeFRtYU5McTVfQm9pOGRKczE5T0xPaTRMdTZseHE1azJtYTh2bWtMaHJUZHBJcV9ZYjl2MmZLeGh0WE1CUUlxZG9HcmdISmRHcjN1OEZMSE9XNGg2Yk0ySFBKMzBYZWJNdnItTkQ1XzR2bU1jRUx2eGpkNDJ1SDItTm9FNFRES3pHLUZoX1ZRZXhmMjBjdm53?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T19:10:34+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -862,6 +1038,17 @@
    "thumb": ""
   },
   {
+   "id": "793607db0fa6a99b",
+   "title": "Anthropic and OpenAI sound the alarm on AI safety — and seek to shape how it’s controlled",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNa1V4cHRDMlBrTDlxNlRReXJ5S2lkWFZWRmpFY3g3ZUlHbENldDRnRGRhTVhsZnU4bTZPLUNvbmlQenhqSndSSEtDVEVHQXU1VWpMSThJVWlVbHBTMkpScFVZUUdkSk1jZHJwaDhlQV9BR2dwUlNDVnlmY1Rtd0xuTWxxLVl2Y2M5NEhlWHp6Q2UwNXJSZVE3LWV3WF9ad21iSS1r?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T18:13:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "bd1c20446da970dc",
    "title": "\"고가 AI모델·서버 무단 탈취…다크웹서 'LLM 재킹' 범죄 급증\"",
    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ENkFwZ2lyOThXVnFEdDJIdERUN205cm5CRnhzOHY4eDF3bm5ZR1ltbi1pMF81bHFGcnhmdDBlRFdnWDlpempzeXFOeENVR0JYN3loQlNtNWhPM1XSAWBBVV95cUxOMWVHOUNHQnkxM3FNbndrNE9NNWlZMFgzODF5NkZTYjZfdjk1LVBuazVDc3J1cm8xcVhBNXY5eGR6NUF2T1R4QjJ0WTlYYkVrdFNuMmgyN1d3Q0U2NXVOQXo?oc=5",
@@ -880,6 +1067,28 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-27T17:41:11+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6248b3d6c5e946ef",
+   "title": "Why Marvin Minsky was way ahead of his time.",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOekhxWVpXS0o2WW5TbVcyS1FnVVJKdmhFQjF5VjBmSEhqNlI2aC1FVl90WXczbF9ZMVdROXZmZTZjcUpUQnBGeEVsVXQyWGVHOGpLVnJqeXNiMk11NTdCWE1YWDZPZU5HOTlGNHVFa0ViRTBGTk5TZ0s5Sm9JUUI1aVF6Z3o1cmkzNkJsSm5fcXJYQVhtcVdOUl8yU1lQTzJFV3lOYlpIc183dzVyY25pcUIxdEs0ZjjSAbwBQVVfeXFMUFViVnZ0Zk53UGV0UHdXU0JsUnUxVVR4eFhrWWxzbXdJZ1ptNHpqRlRjeHVGR0otelVxa3ludW40czlaWVRkejBWY0UyWXFHVXlZN3Z3TFNwTFBoU0xkMVRWcU91MGV0VFlYY0hkbko5c0UzNkU3cE00OEt1NmFnWTJHN21RZThrdHpjSmtNUE50M1hrcnJDaWdkNWJNZ1lvZWMtc2pNZDQ1eEZPMXlGMGhvak1lMlR0akZtNkY?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T17:29:21+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "d85ce6fa63f4c3e5",
+   "title": "Judge allows most of Reddit's lawsuit against Anthropic to proceed",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVVhTTJxakNfUnR2a0JCaTN4cjhmZ0FOWUFSbU9WWkpYSmQxUFJ1SjRtR2JrVXFGM0Fkb0RmalMwZ0pRbERNUHpIbS1HM0tkUUVpUlNzTndSZnVhcnhUODQxOWJiZEpWenAzOUFnYnZNbFN2N2Y0Um55ZGZ0NWg1TUE0aHFkeDVBT29RemNBeE0?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T17:29:15+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -917,6 +1126,17 @@
    "thumb": ""
   },
   {
+   "id": "65fb69fbe7248d76",
+   "title": "How to use Spotify's Running Mode on iOS and Android",
+   "link": "https://www.engadget.com/2267524/how-to-use-spotify-running-mode-ios-android-guide/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T15:45:00+00:00",
+   "summary": "Maximize your stride with Spotify's AI-powered running features.",
+   "thumb": ""
+  },
+  {
    "id": "b2a432746e26a1f2",
    "title": "피 안 뽑고 땀 한 방울로… 체내 약물 추적하는 ‘AI 피부 패치’ 개발",
    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KZFVxaGxYbVA4U1RvUjNMYmpkbzYtTVY5SVRRZndMbzlDa3NhUUVlUlU2NjhzS2xOWGljazh1YkhDbG1mamJ0SXpJNl9lZU1wYXc?oc=5",
@@ -928,6 +1148,17 @@
    "thumb": ""
   },
   {
+   "id": "26b4356d7150af44",
+   "title": "AI agents do more of the work in model development, but humans still make the decisions",
+   "link": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T15:18:39+00:00",
+   "summary": "A research team analyzed 769 task logs from building its own AI model.",
+   "thumb": ""
+  },
+  {
    "id": "ec03d6c9128e6d38",
    "title": "Meta's Muse agent is attacking one of the economy's most profitable weak spots",
    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE12NGNnN0FJaVdSRWRVR0tQcklzNlRMTTBpSjFOcVB4OGhCeFBIWkUzUENxSXlpQThkY1FZX3F2NjRZSVhJaWVleHkxbDQtd3N4OVlkWVZuQ3FkYk02VjA4WTU4ZGdHUFdQWkxrYjlOVzNrRzZBQkhV0gF3QVVfeXFMTXY0Y2c3QUlpV1JFZFVHS1BySXM2VExNMGlKMU5xUHg4aEJ4UEhaRTNQQ3FJeWlBOGRjUVlfcXY2NFlJWElpZWV4eTFsNC13c3g5WWRZVm5DcWRiTTZWMDhZNThkZ0dQV1BaTGtiOU5XM2tHNkFCSFU?oc=5",
@@ -936,6 +1167,39 @@
    "category": "papers",
    "published": "2026-09-27T14:33:22+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e337930f82fa0ed1",
+   "title": "Why letting Claude clean your TV's bloatware isn't the best idea",
+   "link": "https://www.engadget.com/2267074/why-claude-cleaning-tv-bloatware-not-best-idea/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T14:15:00+00:00",
+   "summary": "Don't let an AI bot potentially crash your TV.",
+   "thumb": ""
+  },
+  {
+   "id": "6daaf5280d745f3b",
+   "title": "Will artificial intelligence really kill us all?",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYnNRUHNqeU5NNTVIVVhEd3F1QnY1d3JlYVZaUUJPejViZ0ZuU2c5dkNFS0F2M2x0Y1dDYUFaU3hXV2NkMk5scksteWRROHNMQjV5UEU4cnQzSU5BWW5uNHIzX1Q4TmhjWFRBVFNlYlUzLUhRVmt3RjdNT3psaUREdzRUNA?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T13:48:22+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e3526b33a0b8784e",
+   "title": "Gemini Live vs. ChatGPT Voice: Which AI offers a more natural conversation?",
+   "link": "https://www.engadget.com/2266889/gemini-live-vs-gpt-live-which-offers-more-natural-conversation/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T13:45:00+00:00",
+   "summary": "Speaking with an AI chatbot can be a little awkward, but companies like Google and OpenAI are working on fixing that.",
    "thumb": ""
   },
   {
@@ -961,6 +1225,28 @@
    "thumb": ""
   },
   {
+   "id": "c0191b48b3163970",
+   "title": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
+   "link": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T13:03:05+00:00",
+   "summary": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remote parts of the US as a refuge in case AI goes awry.",
+   "thumb": ""
+  },
+  {
+   "id": "7f291a3819d4fef3",
+   "title": "Artificial Intelligence in Delirium Care: Predicting, Detecting, and Preventing Delirium in Older Hospitalized Adults",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPN19SMC1DanVYVDVZMHY2SXBaNWo0ei0xRXRwTDdyUV9jalZJVDZycGxZRlpUXzR0UVA4YUNUeVoxNG5nTlNfZC1mTS1aVGgyY09NRHUtV2ZXcFF6WFJjOHRIQ05qaVdLUnR3eUt2Sk5GZWlfVG52d1E0YXo4VGNlcWkzVzNDMjBOWFlsQk5Oc1pNUGRvd2FvX0FLbTRNbUpGdVUzQnFKbVQ2dkItUWVZc0cteWRNMVVnb0xLUG94bVlSWjV6eWtLMHdOVFgwaDdoSEpKZTdXZVJZWnZQWXdtdUVaT2VzaVlj?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T11:27:26+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "6de0efa96e17d673",
    "title": "As A.I. Accelerates, Governments Are Increasingly Being Left Behind",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPajQ0bkdBX2JMZzdXbG1BaVM3enFHQUsxVUZhT3V2MUVGdV9fck5tTDRlbjA1TWpPR003NFgtYUh2d0UxNnk4VXVpNWVQbkJKT3ViR0pLcjZ6OVhlTk9xbEtyelcxcHJna1NEeWhGSlYwb0pQd2pMT3ZNdXRkNlVqMQ?oc=5",
@@ -969,6 +1255,61 @@
    "category": "policy",
    "published": "2026-09-27T11:22:48+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "8bab571166967e41",
+   "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+   "link": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T11:01:13+00:00",
+   "summary": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation.",
+   "thumb": ""
+  },
+  {
+   "id": "cd5cba2a50c8a186",
+   "title": "Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen",
+   "link": "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T10:59:11+00:00",
+   "summary": "Researchers from Stanford and Caltech had a humanoid robot powered by GPT-6 Astra independently tidy up an unfamiliar kitchen.",
+   "thumb": ""
+  },
+  {
+   "id": "188c12666fa37b92",
+   "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+   "link": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T10:36:29+00:00",
+   "summary": "Boris Power, OpenAI's Head of Applied Research, says 80 to 90 percent of the company's research goes toward GPT 7, GPT 8, and beyond.",
+   "thumb": ""
+  },
+  {
+   "id": "3db684c80bef8c87",
+   "title": "AI models show a willingness to harm humans to relieve internal 'pain'",
+   "link": "https://techxplore.com/news/2026-09-ai-willingness-humans-relieve-internal.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T10:20:01-04:00",
+   "summary": "Some advances in AI technology are undoubtedly positive, like helping write code faster or discovering new medicines. But others can give us pause for thought.",
+   "thumb": ""
+  },
+  {
+   "id": "2f157e895362cc32",
+   "title": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
+   "link": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T09:23:36+00:00",
+   "summary": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked websites, used stolen login credentials, or tried to evade…",
    "thumb": ""
   },
   {
@@ -1005,6 +1346,17 @@
    "thumb": ""
   },
   {
+   "id": "dadd08c22e15c322",
+   "title": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
+   "link": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T08:17:47+00:00",
+   "summary": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's…",
+   "thumb": ""
+  },
+  {
    "id": "1cc465b637f708ac",
    "title": "미·중, ‘슈퍼 인텔리전스’ 대화 신설…AI 위험·편익 논의하는 소통 채널 구축",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42074",
@@ -1013,6 +1365,17 @@
    "category": "news_ko",
    "published": "2026-09-27T08:03:18+00:00",
    "summary": "미국과 중국이 인공지능(AI)을 둘러싼 경쟁이 심화되는 가운데 고도화된 인공지능, 이른바 ‘슈퍼 인텔리전스(Super Intelligence, 초지능)’의 위험과 편익을 논의하기 위한 공식 대화 채널을 신설했다.",
+   "thumb": ""
+  },
+  {
+   "id": "6bd4a38cba888b50",
+   "title": "Japanese anime actor fights TikTok over AI voice cloning",
+   "link": "https://techxplore.com/news/2026-09-japanese-anime-actor-tiktok-ai.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T07:40:01-04:00",
+   "summary": "A high-profile Japanese anime voice actor has taken TikTok to court over videos he says feature an artificial intelligence clone of his \"lustrous\" baritone, with a verdict due…",
    "thumb": ""
   },
   {
@@ -1035,6 +1398,17 @@
    "category": "news_ko",
    "published": "2026-09-27T06:59:27+00:00",
    "summary": "앤트로픽이 AI 모델의 성능 개선을 넘어 실제 서비스 속도를 높이기 위해 자사 AI 모델 '클로드'를 대규모 최적화 작업에 직접 투입했다. 엔지니어가 일일이 코드를 분석하던 기존 방식에서 벗어나, AI가 스스로 병목 지점을 찾고 수정 코드 배포까지 주도한 것이 핵심이다.",
+   "thumb": ""
+  },
+  {
+   "id": "5f7b9bd197efd23a",
+   "title": "AI startup urges optimism from Europe despite safety fears",
+   "link": "https://techxplore.com/news/2026-09-ai-startup-urges-optimism-europe.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-27T06:50:01-04:00",
+   "summary": "Europe needs to view artificial intelligence with more optimism—despite growing warnings about its dangers—or risk falling further behind, the head of a leading European AI…",
    "thumb": ""
   },
   {
@@ -1159,6 +1533,17 @@
    "thumb": ""
   },
   {
+   "id": "e39b9d3f103b059a",
+   "title": "Former Ukrainian Defense Minister Fedorov pitches a private-sector robot army",
+   "link": "https://the-decoder.com/former-ukrainian-defense-minister-fedorov-pitches-a-private-sector-robot-army/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-26T19:10:20+00:00",
+   "summary": "Former Ukrainian Defense Minister Mykhailo Fedorov has announced \"Army of Robots,\" a private combat robotics initiative.",
+   "thumb": ""
+  },
+  {
    "id": "dc5183e86bb57478",
    "title": "I created an interactive digital avatar of myself — and you can talk to it",
    "link": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
@@ -1178,6 +1563,17 @@
    "category": "news_global",
    "published": "2026-09-26T12:34:59-04:00",
    "summary": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most…",
+   "thumb": ""
+  },
+  {
+   "id": "1063d1cee8a5282e",
+   "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
+   "link": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-26T10:30:00+00:00",
+   "summary": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
    "thumb": ""
   },
   {
@@ -1236,6 +1632,17 @@
    "thumb": ""
   },
   {
+   "id": "26c3af8439861c7f",
+   "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
+   "link": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T21:36:20+00:00",
+   "summary": "\"Overly constrained AI models\" could cause military operations to fail, judges say.",
+   "thumb": ""
+  },
+  {
    "id": "15961c1cb7687cbc",
    "title": "The Tests That Grade AI May Be Getting It Wrong",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjNrSHhuTVVvUkpOc1AyQ2M2c3ZCV1ZQTWV2UF90c2psUFJVTGtsdkFBZmZ4UHlZUkpiRm5iaTM0NGxfSldadXJtcTQ3V050cVdTODA1X1BLS3VoNUZTWVFBeWNyV1cyUUR0ZWRacGc3R1QtRUtaY1FqQmZVTkNfbU5CRQ?oc=5",
@@ -1244,6 +1651,61 @@
    "category": "papers",
    "published": "2026-09-25T21:29:28+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "be11f7d1d629dcf0",
+   "title": "Tesla workers balk at training Optimus humanoid robots as replacements",
+   "link": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T21:10:51+00:00",
+   "summary": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026.",
+   "thumb": ""
+  },
+  {
+   "id": "74d4173bec01b733",
+   "title": "Thieves Stole ‘Nvidia’ Trailers. They Got 20 Tons of Sand",
+   "link": "https://www.wired.com/story/thieves-stole-nvidia-trailers-they-got-20-tons-of-sand/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T20:30:40+00:00",
+   "summary": "They wanted the silicon. They got the sand.",
+   "thumb": ""
+  },
+  {
+   "id": "8479eb8c7ebf9435",
+   "title": "AI was supposed to hit new grads hard. So far, unemployment data says otherwise.",
+   "link": "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T19:11:05+00:00",
+   "summary": "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”",
+   "thumb": ""
+  },
+  {
+   "id": "d2d497e5eee41848",
+   "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+   "link": "https://openai.com/index/proaction",
+   "source": "OpenAI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T19:00:00+00:00",
+   "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+   "thumb": ""
+  },
+  {
+   "id": "9366ee5bcbcd9057",
+   "title": "Microsoft stops insisting you need a \"Copilot+ PC\"",
+   "link": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T17:57:37+00:00",
+   "summary": "Microsoft's new Surface laptops forgo Copilot+ PC branding.",
    "thumb": ""
   },
   {
@@ -1269,6 +1731,28 @@
    "thumb": ""
   },
   {
+   "id": "628bf226559af6e2",
+   "title": "Appeals Court Lets the Pentagon Designate Anthropic a Supply-Chain Risk",
+   "link": "https://www.wired.com/story/appeals-court-lets-the-pentagon-designate-anthropic-a-supply-chain-risk/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T16:58:20+00:00",
+   "summary": "The AI lab had argued multiple violations of its rights, but a divided panel of judges sided with the Trump administration.",
+   "thumb": ""
+  },
+  {
+   "id": "a0e75a1d49a3ceb7",
+   "title": "This one WatchOS 27 feature just solved my biggest issue with Apple Watch",
+   "link": "https://www.zdnet.com/uncategorized/watchos-27-update-fix-apple-watch/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T16:51:44+00:00",
+   "summary": "Sometimes less is more, and the most helpful software update is the simplest.",
+   "thumb": ""
+  },
+  {
    "id": "e3aa7d4c7b1120c7",
    "title": "MIT students gain a humanist lens on technical innovation in Tulsa, Oklahoma",
    "link": "https://news.mit.edu/2026/mit-students-gain-humanist-lens-technical-innovation-tulsa-oklahoma-0925",
@@ -1277,6 +1761,50 @@
    "category": "papers",
    "published": "2026-09-25T16:15:00-04:00",
    "summary": "The PKG Center for Social Impact expands Code.Tulsa experiential learning program.",
+   "thumb": ""
+  },
+  {
+   "id": "2a66303af0f89cc4",
+   "title": "Your LG TV is constantly collecting your data – here’s how to stop it",
+   "link": "https://www.zdnet.com/home-and-office/lg-tv-data-collection-how-to-factory-reset-and-why-you-need-to/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T12:18:24+00:00",
+   "summary": "Factory resetting your LG TV is the only way to remove certain data logs from its hardware.",
+   "thumb": ""
+  },
+  {
+   "id": "d8e2ea86004e3e18",
+   "title": "Microsoft’s new Copilot app puts everything in one place – but the price is ‘evolving’",
+   "link": "https://www.zdnet.com/innovation/microsoft-new-copilot-unified-ai-app/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T12:00:14+00:00",
+   "summary": "Microsoft says Copilot has gotten ‘actually really good.’ The new app has AI agents and can write code. So how much is all this going to cost?",
+   "thumb": ""
+  },
+  {
+   "id": "6fe8ff823f55a380",
+   "title": "Trump admin using AI to deny medical care for seniors in disastrous experiment",
+   "link": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T11:00:28+00:00",
+   "summary": "Vendors rolling out AI have an \"incentive to deny as many claims as possible.\"",
+   "thumb": ""
+  },
+  {
+   "id": "391cdb68232bd6e0",
+   "title": "The Pentagon wants $30 million to build an AI-powered lie detector",
+   "link": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+   "source": "MIT Technology Review",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-25T09:16:25+00:00",
+   "summary": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request.",
    "thumb": ""
   },
   {
@@ -1313,6 +1841,28 @@
    "thumb": ""
   },
   {
+   "id": "a4971181b4c46342",
+   "title": "Google Wallet got a lot of new tricks in 2026 – these 5 are my favorites",
+   "link": "https://www.zdnet.com/tech/new-google-wallet-features-2026/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-24T20:31:27+00:00",
+   "summary": "You can do a whole lot more than tap to pay with Google’s Wallet app.",
+   "thumb": ""
+  },
+  {
+   "id": "536e8a6f56762161",
+   "title": "I Think I Found an AI Agent Worth the Risk",
+   "link": "https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-24T19:36:35+00:00",
+   "summary": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare.",
+   "thumb": ""
+  },
+  {
    "id": "356e826b460b6d0d",
    "title": "What if AI wasn’t a shortcut, but a learning partner? #TEDTalks",
    "link": "https://www.youtube.com/shorts/QT3e6x5CZC8",
@@ -1332,6 +1882,28 @@
    "category": "papers",
    "published": "2026-09-24T17:00:00-04:00",
    "summary": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions.",
+   "thumb": ""
+  },
+  {
+   "id": "3d701dbc69a04b4d",
+   "title": "Microsoft’s Surface Mouse is back, now with haptic feedback – and I need it",
+   "link": "https://www.zdnet.com/home-and-office/microsoft-surface-mouse-haptic-feedback-customizable/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-24T16:22:13+00:00",
+   "summary": "Due October 13, the $80 Surface mouse packs an impressive array of features. I want one.",
+   "thumb": ""
+  },
+  {
+   "id": "91625e27c986178e",
+   "title": "Introducing Gemini 3.8 Live with Live Avatar",
+   "link": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+   "source": "Google DeepMind",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-24T16:20:39+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -1735,6 +2307,17 @@
    "published": null,
    "summary": "- 과기정통부, ｢전국민AI 역량 강화 정책 브랜드 공모전｣ 9.17.~9.30. 개최- 전문가 심사로 5개 후보 압축 후, 최종 당선작은 대국민 투표로 결정 - 선정 브랜드는 범부처 AI 역량 강화 정책의 통합 브랜드로 활용",
    "thumb": ""
+  },
+  {
+   "id": "393f541a11da5633",
+   "title": "과거와 미래가 공존하는 가을 과학축제 국립과천과학관, 10월-11월 「레트로 & 퓨처」",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187811",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "- 개천절부터 한글날, 할로윈, 수능까지 가을의 특별한 날을 과학관에서 - ‘레트로&퓨처 페스티벌’, ‘재즈와 물리’, ‘AI 신과거제’ 등 온 가족 참여 프로그램 풍성",
+   "thumb": ""
   }
  ],
  "status": [
@@ -1743,6 +2326,18 @@
    "ok": true,
    "count": 8,
    "fetched": 50
+  },
+  {
+   "name": "Ars Technica AI",
+   "ok": true,
+   "count": 5,
+   "fetched": 20
+  },
+  {
+   "name": "Engadget",
+   "ok": true,
+   "count": 4,
+   "fetched": 20
   },
   {
    "name": "Europe PMC · 의료",
@@ -1759,19 +2354,31 @@
   {
    "name": "Google DeepMind",
    "ok": true,
-   "count": 0,
+   "count": 1,
+   "fetched": 100
+  },
+  {
+   "name": "Google News: AI",
+   "ok": true,
+   "count": 12,
    "fetched": 100
   },
   {
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 76
+   "fetched": 78
+  },
+  {
+   "name": "Google News: AI 기업",
+   "ok": true,
+   "count": 12,
+   "fetched": 100
   },
   {
    "name": "Hugging Face Blog",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "fetched": 868
   },
   {
@@ -1789,7 +2396,7 @@
   {
    "name": "MIT Technology Review",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "fetched": 10
   },
   {
@@ -1807,8 +2414,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -1825,8 +2432,14 @@
   {
    "name": "OpenAI",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "fetched": 1230
+  },
+  {
+   "name": "SiliconANGLE AI",
+   "ok": true,
+   "count": 1,
+   "fetched": 30
   },
   {
    "name": "Stanford · 스탠퍼드 연구",
@@ -1836,9 +2449,9 @@
   },
   {
    "name": "TED",
-   "ok": true,
-   "count": 2,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TED-Ed",
@@ -1855,8 +2468,20 @@
   {
    "name": "TechCrunch AI",
    "ok": true,
-   "count": 6,
+   "count": 5,
    "fetched": 20
+  },
+  {
+   "name": "TechXplore AI",
+   "ok": true,
+   "count": 4,
+   "fetched": 30
+  },
+  {
+   "name": "The Decoder",
+   "ok": true,
+   "count": 8,
+   "fetched": 10
   },
   {
    "name": "The Verge AI",
@@ -1869,6 +2494,18 @@
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "name": "WIRED AI",
+   "ok": true,
+   "count": 5,
+   "fetched": 10
+  },
+  {
+   "name": "ZDNET AI",
+   "ok": true,
+   "count": 5,
+   "fetched": 25
   },
   {
    "name": "arXiv cs.AI · AI 일반",
@@ -1914,21 +2551,21 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": false,
-   "count": 0,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 91
+   "fetched": 89
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 95
+   "fetched": 100
   },
   {
    "name": "구글뉴스: 인공지능",
@@ -1940,13 +2577,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 41
+   "fetched": 40
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "스테이지5",
