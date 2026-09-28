@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:25+09:00",
+ "generated_at": "2026-09-28T16:26+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -390,6 +390,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T07:15:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "ce7048e40e26a1a3",
+   "title": "화순전남대병원, 대형 국책 R&D 사업 잇따라 참여",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE82dm9NS1I2ZmIzSTd4X2ZBc2xhMGRLVDk4RmlPNVhUSFZUR3BpMm0tSnZxTl9IWVJzRkhsVHZFbzVETEE1?oc=5",
+   "source": "후생신보",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T07:15:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2626,17 +2637,6 @@
    "summary_ko": "npj Digital Medicine, 온라인 출판: 2026년 9월 26일; doi:10.1038/s41746-026-03258-1 심장에 대한 간소한 AI 기반 사망 위험 점수 개발 및 검증…"
   },
   {
-   "id": "15961c1cb7687cbc",
-   "title": "The Tests That Grade AI May Be Getting It Wrong",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjNrSHhuTVVvUkpOc1AyQ2M2c3ZCV1ZQTWV2UF90c2psUFJVTGtsdkFBZmZ4UHlZUkpiRm5iaTM0NGxfSldadXJtcTQ3V050cVdTODA1X1BLS3VoNUZTWVFBeWNyV1cyUUR0ZWRacGc3R1QtRUtaY1FqQmZVTkNfbU5CRQ?oc=5",
-   "source": "Stanford · 스탠퍼드 연구",
-   "field": "스탠퍼드 연구",
-   "category": "papers",
-   "published": "2026-09-25T21:29:28+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "fef9bbebe93354cc",
    "title": "Why more AI data centers aren’t the answer | Dimitrios Nikolopoulos | TEDxMidAtlantic",
    "link": "https://www.youtube.com/watch?v=yvpq0c3ZJu0",
@@ -2849,7 +2849,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -3125,7 +3125,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 66
+   "fetched": 65
   },
   {
    "name": "스테이지5",
