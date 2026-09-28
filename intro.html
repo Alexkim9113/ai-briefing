@@ -103,34 +103,6 @@ try{
  const flow=new T.Points(fgeo,pmat(.05,0xa98bff,.8));S.add(flow);
  const DN=400,dp=new Float32Array(DN*3);for(let i=0;i<DN*3;i++)dp[i]=(Math.random()-.5)*24;
  const dg=new T.BufferGeometry();dg.setAttribute('position',new T.BufferAttribute(dp,3));const dust=new T.Points(dg,pmat(.03,0xffffff,.45));S.add(dust);
- // 지구본 위를 걷는 사람(빛으로 된 형체). 지구본이 돌면 그 위를 계속 걸어간다
- const P=new T.Group(),W=new T.Group();S.add(P);P.add(W);
- const LAT=.9,LON=-.36,nrm=new T.Vector3(Math.cos(LAT)*Math.sin(LON),Math.sin(LAT),Math.cos(LAT)*Math.cos(LON));W.position.copy(nrm).multiplyScalar(RAD*1.005);
-
- W.scale.setScalar(1.45);
- const HS=2+2+1+2+2+12,wp=new Float32Array(HS*6),wgeo=new T.BufferGeometry();wgeo.setAttribute('position',new T.BufferAttribute(wp,3));
- const wline=new T.LineSegments(wgeo,new T.LineBasicMaterial({color:0x9ff6ff,transparent:true,opacity:.95,blending:add,depthWrite:false}));W.add(wline);
- const JN=9*9,jp=new Float32Array(JN*3),jgeo=new T.BufferGeometry();jgeo.setAttribute('position',new T.BufferAttribute(jp,3));
- const wglow=new T.Points(jgeo,pmat(.075,0x7ff3ff,.85));W.add(wglow);
- const headM=new T.Mesh(new T.SphereGeometry(.042,16,12),new T.MeshBasicMaterial({color:0xbff8ff,transparent:true,opacity:.9,blending:add,depthWrite:false}));W.add(headM);
- const halo=new T.Mesh(new T.RingGeometry(.05,.075,40),new T.MeshBasicMaterial({color:0x12e3ff,transparent:true,opacity:.5,blending:add,depthWrite:false,side:T.DoubleSide}));
- halo.rotation.x=-Math.PI/2;W.add(halo);
- let phase=0;const v2=(x,y)=>[x,y];
- function walker(dt,speed){phase+=dt*(2.2+Math.min(6,Math.abs(speed)*900));const dir=speed<0?-1:1;
-  const pts=[],put=(a,b)=>pts.push(a,b);
-  const leg=o=>{const th=.5*Math.sin(phase+o),bend=.85*Math.max(0,Math.sin(phase+o+1.6));
-   const k=v2(Math.sin(th)*.14,-Math.cos(th)*.14),sa=th-bend,f=v2(k[0]+Math.sin(sa)*.14,k[1]-Math.cos(sa)*.14);return [k,f];};
-  const [kL,fL]=leg(0),[kR,fR]=leg(Math.PI);
-  const bob=.012*Math.cos(phase*2),hy=-Math.min(fL[1],fR[1])+bob,H=v2(0,hy);
-  const off=p=>v2(p[0],p[1]+hy),N=v2(.02,hy+.2),Sh=v2(N[0]-.005,N[1]-.02);
-  const arm=o=>{const a=-.45*Math.sin(phase+o),e=v2(Sh[0]+Math.sin(a)*.12,Sh[1]-Math.cos(a)*.12),b=a+.45;return [e,v2(e[0]+Math.sin(b)*.11,e[1]-Math.cos(b)*.11)];};
-  const [eL,hL]=arm(0),[eR,hR]=arm(Math.PI);
-  put(H,off(kL));put(off(kL),off(fL));put(H,off(kR));put(off(kR),off(fR));put(H,N);put(Sh,eL);put(eL,hL);put(Sh,eR);put(eR,hR);
-  const hc=v2(N[0]+.015,N[1]+.065);for(let i=0;i<12;i++){const a1=i/12*6.283,a2=(i+1)/12*6.283;put(v2(hc[0]+Math.cos(a1)*.048,hc[1]+Math.sin(a1)*.048),v2(hc[0]+Math.cos(a2)*.048,hc[1]+Math.sin(a2)*.048));}
-  for(let i=0;i<pts.length;i++){wp[i*3]=pts[i][0]*dir*-1;wp[i*3+1]=pts[i][1];wp[i*3+2]=0;}
-  for(let i=0;i<JN;i++){const sgi=i%9,t=((i/9)|0)/8,a=pts[sgi*2],b=pts[sgi*2+1];jp[i*3]=(a[0]+(b[0]-a[0])*t)*dir*-1;jp[i*3+1]=a[1]+(b[1]-a[1])*t;jp[i*3+2]=0;}
-  wgeo.attributes.position.needsUpdate=true;jgeo.attributes.position.needsUpdate=true;
-  headM.position.set(hc[0]*dir*-1,hc[1],0);halo.scale.setScalar(1+.15*Math.sin(phase*2));}
  // 카테고리마다 다른 관점(각도)에서 세계를 본다
  const VIEWS=[[.35,0],[.1,1.2],[-.5,2.4],[.9,3.3],[-.2,4.5],[.5,5.5]];
  let tx=0,ty=0,rx=.35,ry=0,vy=reduce?0:.0012,drag=null,zoom=7.2,tz=7.2,fly=false,hold=false;const tc=new T.Color(0xffffff),cc=new T.Color(0xffffff);
@@ -151,7 +123,6 @@ try{
   if(!drag&&!hold){ry+=vy;vy+=((reduce?0:.0012)-vy)*.02;}
   G.rotation.y+=(ry+tx*.4-G.rotation.y)*.05;G.rotation.x+=(rx*.6+ty*.3-G.rotation.x)*.05;
   rings.forEach(r=>{r.rotation.z+=r.userData.s;});
-  P.rotation.x=G.rotation.x;P.scale.copy(G.scale);walker(reduce?0:dt,G.rotation.y-(P.userData.py??G.rotation.y));P.userData.py=G.rotation.y;
   W.lookAt;dust.rotation.y=t*.008;
   cc.lerp(tc,.06);lm.color.copy(cc);pm.color.set(0xbfe9ff).multiply(cc);pulse.material.color.set(0x7ff3ff).lerp(cc,cc.equals(white)?0:.5);flow.material.color.set(0xa98bff).multiply(cc);
   const ap=.22+Math.sin(t*1.4)*.1;vAxis.material.opacity=ap;hAxis.material.opacity=ap;

@@ -563,11 +563,19 @@ def top_keywords(items, n=12):
 
 # ---------------------------------------------------------------- 사이트 생성
 
+ICON_THEME = ('<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/>'
+              '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+              '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>')
 CSS = """
-:root{--bar:rgba(6,5,13,.86);--bar-text:#eef2ff;--bg:#07061a;--card:#0f0d26;--text:#eef2ff;--muted:#9aa3c7;--line:#1f1c40;
---accent:#6fb0ff;--soft:#16143a;--shadow:0 8px 24px rgba(0,0,0,.45);--grad:linear-gradient(90deg,#12e3ff,#3b7bff 55%,#8b2cff);color-scheme:dark}
+:root{--bar:rgba(6,5,13,.86);--bar-text:#eceef6;--bg:#07061a;--card:#0f0d26;--text:#d9dcea;--heading:#f3f4fa;--muted:#9097b3;--line:#1f1c40;
+--accent:#9ab8ff;--soft:#16143a;--shadow:0 8px 24px rgba(0,0,0,.45);--grad:linear-gradient(90deg,#12e3ff,#3b7bff 55%,#8b2cff);
+--dot:rgba(255,255,255,.045);--glow:#1a1340;--field:rgba(255,255,255,.07);--field-line:rgba(255,255,255,.14);color-scheme:dark}
+:root[data-theme=light]{--bar:rgba(255,255,255,.86);--bar-text:#15172b;--bg:#f6f7fb;--card:#fff;--text:#33374d;--heading:#111325;--muted:#646b84;--line:#e3e6f0;
+--accent:#3552c9;--soft:#eef1fb;--shadow:0 6px 18px rgba(20,24,60,.08);--dot:rgba(20,24,60,.055);--glow:#e4e8ff;--field:#f1f3f9;--field-line:#e0e4ef;color-scheme:light}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bar:rgba(255,255,255,.86);--bar-text:#15172b;--bg:#f6f7fb;--card:#fff;--text:#33374d;--heading:#111325;--muted:#646b84;--line:#e3e6f0;
+--accent:#3552c9;--soft:#eef1fb;--shadow:0 6px 18px rgba(20,24,60,.08);--dot:rgba(20,24,60,.055);--glow:#e4e8ff;--field:#f1f3f9;--field-line:#e0e4ef;color-scheme:light}}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle,rgba(255,255,255,.045) 1px,transparent 1.4px) 0 0/28px 28px fixed,radial-gradient(ellipse at 50% -10%,#1a1340 0%,#07061a 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle,var(--dot) 1px,transparent 1.4px) 0 0/28px 28px fixed,radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 .serif{font-family:"Pretendard Variable",Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -578,14 +586,17 @@ a{color:inherit;text-decoration:none}
 .bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
 .bar nav a{opacity:.72;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap}
 .bar nav a:hover,.bar nav a.on{opacity:1;border-image:var(--grad) 1}
-.search{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:7px 14px;width:230px}
+.search{display:flex;align-items:center;gap:8px;background:var(--field);border:1px solid var(--field-line);border-radius:99px;padding:7px 14px;width:230px}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
-.search input::placeholder{color:rgba(238,242,255,.5)}
+.search input::placeholder{color:var(--muted)}
+.theme{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--field-line);background:var(--field);color:var(--bar-text);display:grid;place-items:center;cursor:pointer}
+.theme svg{width:18px;height:18px}.theme .moon{display:none}:root[data-theme=light] .theme .sun{display:none}:root[data-theme=light] .theme .moon{display:block}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]) .theme .sun{display:none}:root:not([data-theme=dark]) .theme .moon{display:block}}
 .eyebrow{font-size:14px;font-weight:600;color:var(--muted);margin:26px 0 0;letter-spacing:.01em}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
-.hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
+.hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--heading);margin:0 0 18px}
 .badge{display:inline-block;vertical-align:middle;background:var(--grad);color:#fff;font:600 12px/1 "Pretendard Variable",Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
-.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:#0f0d26}
+.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:var(--card)}
 .thumb .art{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s}
 .thumb:hover .art{transform:scale(1.04)}
 .thumb .ico{display:none}
@@ -606,7 +617,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .side-h h2{font-size:16px;margin:0;font-weight:600}.side-h a{font-size:13px;color:var(--muted)}
 .trend{display:grid;grid-template-columns:150px 1fr;gap:16px;margin-bottom:16px}
 .trend .thumb{border-radius:12px}.trend .thumb .tag{display:none}
-.trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--accent);margin:0 0 4px}
+.trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
 .kw strong{font-size:14px;margin-right:4px}.kw span{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
@@ -614,7 +625,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .tabs{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
 .tabs button.on{background:var(--grad);border-color:transparent;color:#fff}
-section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--heading)}section.cat>h2::before,.ph h1::before,.editor-h h2::before{content:"";display:inline-block;width:5px;height:.85em;border-radius:3px;background:var(--grad);margin-right:10px;vertical-align:-.06em}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .card h3{font-size:17px;line-height:1.5;font-weight:600;margin:14px 0 6px}
 .card h3 a:hover,.trend h3 a:hover,.hero h2 a:hover{text-decoration:underline}
@@ -635,7 +646,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 @media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
 .bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:wrap;overflow:visible;gap:4px 18px;margin:0;padding:2px 0}
-.search{order:3;width:100%}.search input{font-size:16px}}
+.search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.bar .wrap{position:relative}.bar{position:relative}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
 .logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
@@ -665,15 +676,15 @@ ul.st{columns:1}footer{margin-top:36px}}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
-.ph h1{font-size:28px;font-weight:700;margin:0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.ph span{color:var(--muted);font-size:14px}
+.ph h1{font-size:28px;font-weight:700;margin:0;color:var(--heading)}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
-.editor-h h2{font-size:22px;margin:0;color:var(--accent);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
+.editor-h h2{font-size:22px;margin:0;color:var(--heading);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
 .egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:26px}
 .egrid h3{font-size:17px;line-height:1.5;margin:12px 0 4px;font-weight:600}.egrid p{margin:0 0 6px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .elist article{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
 .elist .thumb{border-radius:12px;box-shadow:none}.elist h3{font-size:19px;margin:0 0 6px;line-height:1.45}.elist p{margin:0 0 8px;color:var(--muted);font-size:14.5px}
 .post{max-width:760px;margin:0 auto;padding-bottom:10px}
-.post h1{font-size:34px;line-height:1.35;letter-spacing:-.02em;color:var(--accent);margin:40px 0 10px}
+.post h1{font-size:34px;line-height:1.35;letter-spacing:-.02em;color:var(--heading);margin:40px 0 10px}
 .post .meta{margin-bottom:26px}
 .post .body{font-size:17.5px;line-height:1.85}
 .post .body h2{font-size:24px;margin:36px 0 10px}.post .body h3{font-size:20px;margin:28px 0 8px}
@@ -689,6 +700,9 @@ ul.st{columns:1}footer{margin-top:36px}}
 """
 
 JS = """
+document.querySelectorAll('.theme').forEach(b=>b.onclick=()=>{const r=document.documentElement,
+ dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
+ r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
 function pageLinks(p,n){const s=new Set([0,n-1,p-1,p,p+1]);let h=p>0?`<button data-p="${p-1}" aria-label="이전">‹</button>`:'',last=-1;
  for(let i=0;i<n;i++){if(!s.has(i))continue;if(i-last>1)h+='<span>…</span>';h+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;last=i;}
@@ -839,7 +853,7 @@ def connect_links(sc, base):
     """하단 CONNECT: Contact · Instagram · X · Policy. 주소가 아직 없는 SNS는 아이콘만 보이고 링크는 걸리지 않는다."""
     contact = f'mailto:{sc["email"]}' if sc.get("email") else f"{base}policy.html#contact"
     links = [("Contact", contact, False), ("Instagram", sc.get("instagram"), True),
-             ("X", sc.get("x"), True), ("Policy", f"{base}policy.html", False)]
+             ("Policy", f"{base}policy.html", False)]
     out = []
     for n, u, ext in links:
         inner = f'{SOCIAL_ICONS[n]}<span>{n}</span>'
@@ -879,14 +893,14 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 {"" if image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/og.png")}">
-<meta name="theme-color" content="#06050d">{verify}
+<meta name="theme-color" content="#06050d" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><script>try{{var m=localStorage.getItem("metaxis_theme");if(m)document.documentElement.dataset.theme=m}}catch(e){{}}</script>{verify}
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>{ld}</head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
