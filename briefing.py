@@ -411,6 +411,7 @@ a{color:inherit;text-decoration:none}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.22),transparent 45%),
 repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
+.thumb .ico{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:34%;height:auto;max-height:62%;color:rgba(255,255,255,.88)}
 .thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;color:#fff}
 .thumb .ph i{position:absolute;top:14px;left:16px;font-style:normal;font-size:11.5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:99px}
 .thumb .ph b{font-weight:700;font-size:22px;line-height:1.3}.thumb .ph span{font-size:12px;opacity:.7}
@@ -425,7 +426,7 @@ repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14p
 .side-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
 .side-h h2{font-size:16px;margin:0;font-weight:600}.side-h a{font-size:13px;color:var(--muted)}
 .trend{display:grid;grid-template-columns:150px 1fr;gap:16px;margin-bottom:16px}
-.trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13.5px}.trend .thumb .ph{padding:8px 10px}.trend .thumb .ph i,.trend .thumb .ph span{display:none}
+.trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13.5px}.trend .thumb .ph{padding:8px 10px}.trend .thumb .ph i,.trend .thumb .ph span,.trend .thumb .ph b{display:none}.trend .thumb .ico{right:50%;transform:translate(50%,-50%);width:38%}
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--accent);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
@@ -461,7 +462,7 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 .grid,.list{grid-template-columns:1fr;gap:0}
 .card:not(.row){display:grid;grid-template-columns:96px 1fr;column-gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .card:not(.row) .thumb{grid-row:1/span 3;aspect-ratio:1;border-radius:12px;box-shadow:none}
-.card .thumb .ph{padding:8px 10px}.card .thumb .ph i,.card .thumb .ph span{display:none}.card .thumb .ph b{font-size:11.5px}
+.card .thumb .ph{padding:8px 10px}.card .thumb .ph{display:none}.card .thumb .ico{right:50%;transform:translate(50%,-50%);width:46%}
 .card h3{font-size:16px;line-height:1.5;margin:0 0 4px}.card p{font-size:14px;-webkit-line-clamp:2;margin-bottom:6px}
 .row{padding:14px 0}.meta{font-size:12.5px}
 ul.st{columns:1}footer{margin-top:36px}}
@@ -527,13 +528,55 @@ def page(title, body, base="", cats=None, search=True):
 <footer class="wrap">30분마다 자동으로 새 소식을 모읍니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
 <script>{JS}</script></body></html>"""
 
+# 표지 아이콘: 기사 제목·요약의 단어로 주제를 골라 직접 그린 아이콘을 넣는다(외부 이미지 없음)
+TOPICS = [
+    ("의료", ["의료", "병원", "환자", "진단", "헬스", "신약", "바이오", "clinical", "medical", "health", "patient", "drug", "surgical", "hospital", "disease", "protein", "cancer"],
+     '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>'),
+    ("법·정책", ["법", "규제", "정책", "정부", "국회", "소송", "저작권", "기본법", "law", "legal", "regulation", "policy", "court", "lawsuit", "copyright", "government", "ai act"],
+     '<path d="M12 3v18M5 21h14M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/>'),
+    ("반도체", ["반도체", "칩", "gpu", "엔비디아", "nvidia", "hbm", "tsmc", "삼성전자", "sk하이닉스", "chip", "semiconductor", "datacenter", "데이터센터"],
+     '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><rect x="10" y="10" width="4" height="4"/>'),
+    ("로봇", ["로봇", "휴머노이드", "피지컬", "자율주행", "드론", "robot", "humanoid", "autonomous", "drone", "embodied"],
+     '<rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6M2 13h3M19 13h3"/><circle cx="12" cy="3" r="1"/>'),
+    ("에너지·환경", ["에너지", "전력", "환경", "기후", "탄소", "배터리", "energy", "climate", "carbon", "grid", "battery", "solar", "environment"],
+     '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'),
+    ("문화·예술", ["예술", "음악", "영화", "콘텐츠", "창작", "게임", "웹툰", "music", "art", "film", "creative", "game", "culture", "museum"],
+     '<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-1.5-1.5-1.8-1.5-3s1-2 2.5-2H18a3 3 0 0 0 3-3c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/>'),
+    ("교육", ["교육", "학생", "학교", "대학", "교사", "education", "student", "school", "teacher", "university"],
+     '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>'),
+    ("보안", ["보안", "해킹", "사이버", "개인정보", "security", "cyber", "privacy", "attack", "hack"],
+     '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
+    ("투자·기업", ["투자", "매출", "주가", "상장", "인수", "펀딩", "시장", "스타트업", "funding", "investment", "startup", "revenue", "stock", "ipo", "valuation", "acquire"],
+     '<path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/>'),
+    ("언어모델", ["llm", "gpt", "챗gpt", "chatgpt", "claude", "gemini", "언어모델", "챗봇", "language model", "chatbot", "agent", "에이전트"],
+     '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
+]
+TOPICS.append(("신제품·서비스", ["출시", "공개", "플랫폼", "서비스", "선보", "launch", "release", "unveil", "app", "feature"],
+               '<path d="M14 4c3-1 5-1 6 0 1 1 1 3 0 6l-7 7-6-6z"/><path d="M7 11l-3 1-1 3 4-1M13 17l-1 3-3 1 1-4"/><circle cx="15.5" cy="8.5" r="1.5"/>'))
+TOPIC_DEFAULT = {"papers": ("연구", '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>'),
+                 "youtube": ("영상", '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>'),
+                 "policy": ("법·정책", TOPICS[1][2])}
+TOPIC_SPARK = '<path d="M12 3c1 5 3 7 8 8-5 1-7 3-8 8-1-5-3-7-8-8 5-1 7-3 8-8z"/>'
+
+
+def topic_of(it):
+    text = (it["title"] + " " + (it.get("summary") or "")[:120]).lower()
+    best, score = None, 0
+    for name, words, icon in TOPICS:
+        n = sum(1 for w in words if (re.search(r"(?<![a-z])" + re.escape(w) + r"(?![a-z])", text) if w.isascii() else w in text))
+        if n > score:
+            best, score = (name, icon), n
+    return best or TOPIC_DEFAULT.get(it["category"], ("AI", TOPIC_SPARK))
+
 
 def thumb_html(it, cats):
     g1, g2 = COVER_COLORS[int(it["id"][:6], 16) % len(COVER_COLORS)] if it.get("id") else CAT_COLORS["news_ko"]
+    topic, icon = topic_of(it)
     img = (f'<img src="{esc(it["thumb"])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
            if it.get("thumb") else "")
     return (f'<a class="thumb" href="{esc(it["link"])}" target="_blank" rel="noopener" style="--g1:{g1};--g2:{g2}" tabindex="-1" aria-hidden="true">'
-            f'<div class="ph"><i>{esc(cats.get(it["category"], ""))}</i><b>{esc(it.get("field") or re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
+            f'<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">{icon}</svg>'
+            f'<div class="ph"><i>{esc(topic)}</i><b>{esc(it.get("field") or re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
             f'<span>{fmt_time(it.get("published"))}</span></div>{img}</a>')
 
 
