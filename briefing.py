@@ -566,6 +566,116 @@ def _translate_items(todo, foreign, google_only):
     print(f"[번역] {'1주 지난 글 ' if google_only else ''}{len(todo)}건, {len(jobs)}문장 → {used}")
 
 
+# ── METAXIS 브리핑(AI) ─────────────────────────────────────────────────────────
+# 무료 AI(Google Gemini 무료 한도, 저장소 비밀값 GEMINI_KEY)로 쓴다. GitHub Models는 2026-09-28 시험에서
+# 응답 없이 "OK"만 돌려줘 쓸 수 없었다. AI에는 제목과 언론사·채널이 공개한 소개글만 보낸다(본문 수집 없음).
+# 한도를 넘으면 다음 실행에서 이어서 쓰고, 그 전까지는 규칙 방식 창을 보여 준다.
+MX_MODEL = os.environ.get("MX_MODEL", "gemini-2.5-flash")
+MX_VER = 1
+MX_CATS = {"news_ko", "news_global", "papers", "policy", "talks"}
+MX_PROMPT = """너는 METAXIS의 AI 브리핑 에디터다.
+입력된 뉴스·정책·규제·논문·연구·기업발표·제품·오픈소스·영상·인터뷰 등의 핵심 정보를 사용자가 10초 안에 파악하도록 작성한다.
+QUICK_BRIEF: 무슨 일이 있었는지, 누가 무엇을 했는지, 핵심 결과·변화·기능이 무엇인지 2~3문장으로 압축한다. 중요한 수치·대상·단계가 있으면 포함한다.
+METAXIS_POINT: 내용을 반복하지 말고 AI 기술·연구·산업·정책·규제·문화·사회·인간 측면에서 가장 중요한 의미나 변화의 방향을 2~3문장으로 분석한다. 명확한 시사점이 없으면 과장하지 않는다.
+규칙:
+- "~에 관한 소식", "핵심 키워드는", "귀추가 주목된다" 같은 빈 문장 금지.
+- 원문 문장·독특한 표현·문장구조를 복사하지 않는다.
+- 해외 문장을 그대로 번역하지 않는다.
+- 사실을 추출한 뒤 새로운 문장으로 압축한다.
+- 원문 전체를 대체할 정도로 상세하게 쓰지 않는다.
+- 없는 사실·수치·METAXIS 통계를 만들지 않는다. 입력에 없는 내용은 쓰지 않는다.
+- 주장·의견과 확인된 사실을 구분한다.
+- 정책은 제안/확정/시행을 구분한다.
+- 논문은 연구 결과를 확정적 사실처럼 표현하지 않는다.
+- 기업의 성능 주장은 검증된 사실처럼 단정하지 않는다.
+- 전문적이고 자연스러운 한국어(존댓말 없는 기사체, '~했다/~이다')를 사용한다.
+- TAGS는 3~5개, '#' 없이 짧은 명사로 쓴다(회사·기술·분야 이름 등).
+입력은 JSON 배열이다. 각 항목마다 아래 JSON 배열 형식으로만 출력하고, 그 외의 글은 쓰지 않는다.
+[{"id": "...", "brief": "QUICK_BRIEF", "point": "METAXIS_POINT", "tags": ["...", "..."]}]"""
+MX_BAN = re.compile(r"관한 소식|핵심 키워드는|귀추가 주목|주목된다")
+_MX_OFF = []  # 이번 실행에서 한도에 걸리면 멈춘다
+
+
+def _mx_copied(text, src, n=16):
+    """원문 소개글과 공백 뺀 16글자 이상이 그대로 겹치면 복사로 본다."""
+    t, s = re.sub(r"\s+", "", text or ""), re.sub(r"\s+", "", src or "")
+    return bool(s) and any(t[i:i + n] in s for i in range(0, max(0, len(t) - n + 1)))
+
+
+def _mx_call(batch):
+    key = os.environ.get("GEMINI_KEY", "").strip()
+    inp = [{"id": it["id"], "분야": it["category"], "출처": it.get("source", ""), "날짜": (it.get("published") or "")[:10],
+            "제목": it["title"], "소개글": (it.get("detail") or it.get("summary") or "")[:700]} for it in batch]
+    body = json.dumps({"system_instruction": {"parts": [{"text": MX_PROMPT}]},
+                       "contents": [{"role": "user", "parts": [{"text": json.dumps(inp, ensure_ascii=False)}]}],
+                       "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}}).encode()
+    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MX_MODEL}:generateContent", body,
+                                 {"x-goog-api-key": key, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        txt = "".join(p.get("text", "") for p in json.load(r)["candidates"][0]["content"]["parts"])
+    txt = re.sub(r"^```(?:json)?\s*|\s*```$", "", txt.strip())
+    return json.loads(txt)
+
+
+def _mx_ok(it, r):
+    b, p = (r.get("brief") or "").strip(), (r.get("point") or "").strip()
+    tags = [re.sub(r"^#", "", str(t)).strip() for t in (r.get("tags") or []) if str(t).strip()]
+    src = " ".join([it["title"], it.get("summary") or "", it.get("detail") or ""])
+    if not b or not p or len(b) > 400 or len(p) > 400 or MX_BAN.search(b + p) or _mx_copied(b + p, src):
+        return None
+    tags = list(dict.fromkeys(t for t in tags if len(t) <= 20))[:5]
+    if len(tags) < 3:
+        tags += [n for n, _ in mx_tags(it) if n not in tags][:3 - len(tags)]
+    return {"b": b, "p": p, "t": tags, "v": MX_VER}
+
+
+def ai_briefs(items, max_req=6, batch_size=8):
+    """최근 1주 글 중 METAXIS 브리핑이 없는 글을 최신순으로 작성. 쓴 요청 수를 돌려준다."""
+    if not os.environ.get("GEMINI_KEY", "").strip() or _MX_OFF:
+        return 0
+    todo = [i for i in items if i.get("category") in MX_CATS and not i.get("editor")
+            and (i.get("mx") or {}).get("v", 0) < MX_VER and _is_fresh(i) and i.get("mx_try", 0) < 3]
+    todo.sort(key=lambda x: x.get("published") or "", reverse=True)
+    used = done = 0
+    for k in range(0, len(todo), batch_size):
+        if used >= max_req:
+            break
+        batch = todo[k:k + batch_size]
+        used += 1
+        try:
+            res = {str(r.get("id")): r for r in _mx_call(batch) if isinstance(r, dict)}
+        except urllib.error.HTTPError as e:
+            print(f"[브리핑] AI 한도·오류(HTTP {e.code}) → 다음 실행에서 이어서")
+            _MX_OFF.append(e.code)
+            break
+        except Exception as e:
+            print(f"[브리핑] AI 응답 처리 실패: {e}")
+            continue
+        for it in batch:
+            ok = _mx_ok(it, res.get(it["id"], {}))
+            if ok:
+                it["mx"], done = ok, done + 1
+                it.pop("mx_try", None)
+            else:
+                it["mx_try"] = it.get("mx_try", 0) + 1  # 규칙에 안 맞으면 3번까지 다시 쓴다
+        time.sleep(4)  # 무료 한도의 분당 요청 수를 넘지 않게
+    if used:
+        print(f"[브리핑] METAXIS 브리핑 {done}건 작성 (요청 {used}회, {MX_MODEL})")
+    return used
+
+
+def ai_backlog(today_path, max_req=6):
+    """오늘 것 다음으로 지난 6일 글도 남은 한도 안에서 채운다."""
+    for f in sorted(DATA_DIR.glob("*.json"), reverse=True)[:7]:
+        if f == today_path or max_req <= 0 or _MX_OFF:
+            continue
+        data = json.loads(f.read_text(encoding="utf-8"))
+        n = ai_briefs(data["items"], max_req)
+        if n:
+            f.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+            max_req -= n
+
+
 # 자동 차단: 스팸·도박·성인·사기성 글, 파일 내려받기 링크, 안전하지 않은 주소
 BLOCK_WORDS = re.compile(
     r"카지노|바카라|토토|슬롯머신|먹튀|홀덤|성인용|19금|야동|대출\s*상담|리딩방|코인\s*무료|급전|불법\s*촬영|"
@@ -713,9 +823,12 @@ def collect(fixtures=None, now=None):
     per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
     uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
+    left = 8 - (0 if fixtures else ai_briefs(uniq, 8))  # 오늘 글부터 METAXIS 브리핑(AI)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    if not fixtures and left > 0:
+        ai_backlog(path, left)
     ok = sum(s["ok"] for s in status)
     print(f"[collect] {today} 항목 {len(uniq)}개, 소스 {ok}/{len(status)} 성공 → {path.relative_to(ROOT)}")
     return data
@@ -1096,7 +1209,7 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
-  return `<h4>요약</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS VIEW · 시사점</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
+  const AI=!!a.dataset.ai;return `<h4>${AI?'QUICK BRIEF':'요약'}</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>${AI?'METAXIS POINT':'METAXIS VIEW · 시사점'}</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
  <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
@@ -1504,10 +1617,22 @@ def meta_html(it, cats, with_cat=False):
     return '<div class="meta">' + "".join(parts) + "</div>"
 
 
+_KW_INDEX = {g[0]: i for i, g in enumerate(KW_GROUPS)}
+
+
 def _mx_attrs(it):
-    summ, view, tags = mx_note(it)
-    mt = json.dumps([[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in tags], ensure_ascii=False)
-    return f' data-ms="{esc(summ)}" data-mv="{esc(view)}" data-mt="{esc(mt)}"'
+    """기사 창: METAXIS 브리핑(AI)이 있으면 QUICK BRIEF·METAXIS POINT·태그, 아직 없으면 규칙 방식 요약·VIEW·태그."""
+    mx = it.get("mx") or {}
+    if not mx:
+        summ, view, tags = mx_note(it)
+        mt = json.dumps([[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in tags], ensure_ascii=False)
+        return f' data-ms="{esc(summ)}" data-mv="{esc(view)}" data-mt="{esc(mt)}"'
+    tags = []
+    for t in mx.get("t", []):
+        c = _KW_CANON.get(t.lower())
+        tags.append([t, f"/tag/k{_KW_INDEX[c]}.html" if c and c not in TAG_SKIP else ""])
+    return (f' data-ai="1" data-ms="{esc(mx.get("b", ""))}" data-mv="{esc(mx.get("p", ""))}"'
+            f' data-mt="{esc(json.dumps(tags, ensure_ascii=False))}"')
 
 
 def title_link(it):
