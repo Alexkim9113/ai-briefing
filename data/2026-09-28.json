@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:56+09:00",
+ "generated_at": "2026-09-28T15:01+09:00",
  "items": [
   {
    "id": "fa0df8171fef17b5",
@@ -196,6 +196,19 @@
    "hot": 8
   },
   {
+   "id": "294ca0bb52496e50",
+   "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42081",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:08:14+09:00",
+   "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
+   "detail": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.\n이 포털은 AI 에이전트가 클라우드를 넘어 스마트폰과 엣지 디바이스, 로봇 등 물리적 환경으로 확산되면서 모델과 런타임, 하드웨어를 함께 고려해야 하는 AI 애플리케이션 개발의 복잡성을 낮추기 위한 플랫폼이다.",
+   "thumb": "",
+   "hot": 6
+  },
+  {
    "id": "1d2fb5cd0f0af97c",
    "title": "마이크로소프트 '글로벌 AI 확산 보고서', 한국 AI 사용률 40.6%…세계 12위",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42080",
@@ -266,6 +279,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T05:47:32+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "9823338aa836540b",
+   "title": "삼성SDS, 공무원용 AI 플랫폼 고도화 사업에 응찰",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB4a055TU5OTWRaSzZIbXFtaks0blRjLXpQcXpzd0NTRGRTcWtpQUd1Z0hYMGlaSG5MYmZFWGd5aXpWVXNWU3NKMnlveG5qeWs?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:43:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -379,6 +403,18 @@
    "published": "2026-09-28T04:46:52+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "e6f00450eec78131",
+   "title": "Trump to dine with Anthropic chief Amodei despite months of conflict",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPV3plcFNyTXNheWswblpLblZUQmJBaGNxMllDeGpYOW1mVlcwU1RkX3NVRnBZNF9IcUEtUnpOcHhrX2ZlSDFvRk1WVmo2ZzZnV1BoUGRNZXlEb2NUNGc1TU5VaWhXYVRSM0NXeXRYTm03bWpxVnlkUG9XSzZyOEZMdUNCd3hIcF9MY1RGMTdKTk52X3YxVG9mMWU2V2dhY0NPb3NxSER0RVhqN2hVc0VHWUxieGI3UmQwNVhYOHdiQ0hKR0pW?oc=5",
+   "source": "Euronews.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T04:27:48+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "트럼프, 몇 달 간의 갈등에도 불구하고 인류학 수장 아모데이와 식사할 것"
   },
   {
    "id": "ab5676fb003650b0",
@@ -559,7 +595,7 @@
    "published": "2026-09-28T03:19:00+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 6
+   "hot": 3
   },
   {
    "id": "f98d2ac1c3cdd422",
@@ -1085,28 +1121,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T01:15:07+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "198aed83a4923f3a",
-   "title": "마키나락스, 군 전장망에 생성형 AI 적용…UFS서 운용 검증",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44QWpRUnA1cFEwdlk2S1d5YXc0ODRxMTBGNGRwbVZoTHBrM0xDbXduQ2VCUGxNVE1OYm9nZl9pMnFEZjJLYlBhWDl6SG52VXNLbk1OWmVn?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:12:22+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "5fc6d16ddb3049fb",
-   "title": "연상호 '실낙원' 프리퀄 단편 29일 공개…생성형 AI로 제작",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1EZ0U5RDA4a2s5N3hLY29kS0p1bnNzb05tTTZOUHNkS0JwcEVBS05RNTRaQ0NUMi1XZXNZUE52WXN3Y002cHk3UWlyNERkR2pjVEFBRks3cFhFSVl2QVNrc9IBYEFVX3lxTE1EZ0U5RDA4a2s5N3hLY29kS0p1bnNzb05tTTZOUHNkS0JwcEVBS05RNTRaQ0NUMi1XZXNZUE52WXN3Y002cHk3UWlyNERkR2pjVEFBRks3cFhFSVl2QVNrcw?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:10:28+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1936,7 +1950,7 @@
    "published": "2026-09-27T18:30:00+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 5,
+   "hot": 2,
    "title_ko": "\"AI Slop에 의존하면 이런 일이 발생합니다\" - 팬들은 Vibe-Coded Knuckles의 Chaotix Recomp에 깊은 인상을 받지 못했습니다."
   },
   {
@@ -2008,7 +2022,7 @@
    "published": "2026-09-27T17:26:00+00:00",
    "summary": "Gemini app replacing Gems with skills in November 9to5Google Your Gemini Gems are getting a powerful makeover this November Android Police",
    "thumb": "",
-   "hot": 3,
+   "hot": 0,
    "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱"
   },
   {
@@ -2116,7 +2130,7 @@
    "summary": "Don't let an AI bot potentially crash your TV.",
    "thumb": "",
    "title_ko": "Claude에게 TV의 블로트웨어를 청소하도록 하는 것이 최선의 아이디어가 아닌 이유",
-   "hot": 8
+   "hot": 3
   },
   {
    "id": "6daaf5280d745f3b",
@@ -2335,7 +2349,7 @@
    "summary": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp…",
    "detail": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp Modders supercharge DLSS 5 on AMD GPUs with faster performance and one-click installation TweakTown Radeon RX 9070 XT gave…",
    "thumb": "",
-   "hot": 4,
+   "hot": 1,
    "title_ko": "Modder를 사용하면 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치할 수 있습니다."
   },
   {
@@ -2384,18 +2398,6 @@
    "summary": "",
    "thumb": "",
    "hot": 0
-  },
-  {
-   "id": "7777e45713742871",
-   "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
-   "link": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
-   "source": "TechCrunch AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T01:30:00+00:00",
-   "summary": "The limited test covers select products and users, with a broader rollout planned for later in October.",
-   "thumb": "",
-   "title_ko": "Google은 인도에서 Gemini 및 AI 모드를 통해 Walmart 소유 Flipkart에서 구매를 테스트합니다."
   },
   {
    "id": "d3c1d1e9cc33fee7",
@@ -2689,7 +2691,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 9,
+   "count": 4,
    "fetched": 70
   },
   {
@@ -2702,7 +2704,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2749,8 +2751,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2780,7 +2782,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "TED",
@@ -2881,8 +2883,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2894,7 +2896,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 66
+   "fetched": 67
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2918,13 +2920,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 45
+   "fetched": 47
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 57
+   "fetched": 59
   },
   {
    "name": "스테이지5",
