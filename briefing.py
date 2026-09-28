@@ -573,7 +573,7 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .bar{background:var(--bar);color:var(--bar-text);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}.logo span{font-family:Unbounded,"Pretendard Variable",sans-serif;font-weight:700;letter-spacing:.08em;font-size:19px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo svg{flex:none}
 .bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
 .bar nav a{opacity:.72;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap}
@@ -883,6 +883,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>

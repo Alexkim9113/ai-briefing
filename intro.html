@@ -8,6 +8,7 @@
 <meta property="og:url" content="{URL}/"><meta property="og:image" content="{URL}/og.png"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#06050d">{VERIFY}{ROBOTS}
 <link rel="icon" href="{FAVICON}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:#06050d;color:#eef2ff;overflow:hidden}
@@ -18,10 +19,10 @@ a{color:inherit;text-decoration:none}
 .ui{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:calc(28px + env(safe-area-inset-top)) 40px calc(30px + env(safe-area-inset-bottom));pointer-events:none}
 .ui a,.ui button{pointer-events:auto}
 .top{display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:800;letter-spacing:.32em;font-size:15px}
+.brand{font-family:Unbounded,"Pretendard Variable",sans-serif;font-weight:700;letter-spacing:.22em;font-size:14px}
 .date{font-size:13px;opacity:.6;letter-spacing:.04em}
 .mid{text-align:center}
-.mid h1{display:inline-block;margin:0 0 38px;font-size:clamp(46px,9vw,120px);font-weight:800;letter-spacing:.14em;line-height:1;padding-left:.14em;
+.mid h1{display:inline-block;margin:0 0 38px;font-family:Unbounded,"Pretendard Variable",sans-serif;font-size:clamp(38px,8.4vw,112px);font-weight:700;letter-spacing:.04em;line-height:1.05;padding-left:.04em;
  background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(59,123,255,.35))}
 .mid p{text-shadow:0 1px 12px #12040a,0 0 4px #12040a;margin:18px 0 34px;font-size:clamp(14px,1.6vw,17px);opacity:.78}
 .enter{display:inline-flex;align-items:center;gap:12px;font:inherit;font-weight:700;font-size:16px;letter-spacing:.3em;padding:16px 30px 16px 38px;
@@ -104,7 +105,7 @@ try{
  const dg=new T.BufferGeometry();dg.setAttribute('position',new T.BufferAttribute(dp,3));const dust=new T.Points(dg,pmat(.03,0xffffff,.45));S.add(dust);
  // 지구본 위를 걷는 사람(빛으로 된 형체). 지구본이 돌면 그 위를 계속 걸어간다
  const P=new T.Group(),W=new T.Group();S.add(P);P.add(W);
- const LAT=1.08,LON=-.34,nrm=new T.Vector3(Math.cos(LAT)*Math.sin(LON),Math.sin(LAT),Math.cos(LAT)*Math.cos(LON));W.position.copy(nrm).multiplyScalar(RAD*1.005);
+ const LAT=.9,LON=-.36,nrm=new T.Vector3(Math.cos(LAT)*Math.sin(LON),Math.sin(LAT),Math.cos(LAT)*Math.cos(LON));W.position.copy(nrm).multiplyScalar(RAD*1.005);
 
  W.scale.setScalar(1.45);
  const HS=2+2+1+2+2+12,wp=new Float32Array(HS*6),wgeo=new T.BufferGeometry();wgeo.setAttribute('position',new T.BufferAttribute(wp,3));
