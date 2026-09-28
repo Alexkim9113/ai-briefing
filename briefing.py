@@ -1094,9 +1094,9 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
-  return `<h4>요약</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS VIEW</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
+  return `<h4>요약</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS VIEW · 시사점</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
- <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'} METAXIS 요약·VIEW는 출처·날짜·키워드와 METAXIS에 모인 글 통계로 자동 작성돼요.</p></div>`;
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
@@ -1765,17 +1765,6 @@ def mx_prepare(days):
                 _MX["tags"].setdefault(i, []).append((d, it["category"]))
 
 
-def mx_tags(it):
-    """태그 2~5개: 제목·소개글에 나온 키워드를 먼저, 모자라면 분야 태그로 채운다."""
-    tags = [(name, i) for i, name in item_tags(it, 5)]
-    for extra in [_CAT_TAG.get(it.get("category")), (it.get("field") or "").replace(" ", ""), "AI"]:
-        if len(tags) >= 2:
-            break
-        if extra and all(extra.lower() != n.lower() for n, _ in tags):
-            tags.append((extra, None))
-    return tags[:5]
-
-
 def _mx_date(it):
     try:
         d = datetime.fromisoformat(it.get("published") or "").astimezone(KST)
@@ -1788,70 +1777,187 @@ def _mx_stage(t):
     return next((name for name, rx in _STAGE if rx.search(t)), "")
 
 
-def mx_note(it):
-    """(요약, METAXIS VIEW, 태그) — 모두 사실·통계에서 나온 문장만."""
-    cat, src, when = it.get("category"), it.get("source", ""), _mx_date(it)
-    tags = mx_tags(it)
-    kw = [n for n, i in tags if i is not None]
+_HAN = re.compile(r"[가-힣]")
+_JOSA = re.compile(r"(으로부터|에서부터|이라고|라고|에서|에게|까지|부터|으로|하며|하고|했다|한다|하는|된다|되는|이다|에도|에는|과의|와의|이란|란|은|는|이|가|을|를|의|에|도|로|와|과|만|께)$")
+_KSTOP = set("관련 위해 대한 대해 통해 이번 지난 올해 오늘 이날 최근 현재 기자 뉴스 인공지능 기술 기업 업계 가운데 경우 따르면 밝혔다 있다 없다 했다 한다 것으로 것이 이후 이상 이하 가능 사용 활용 제공 진행 예정 대표 사업 분야 시장 정도 부분 전망 계획 발표 공개 출시 이유 방법 결과 모두 모든 더욱 가장 새로운 새 또 등 및 수 것 중 년 월 일 억 만 AI 에이아이 영상 일부 다음 대형 전원 공동 여러 각종 주요 전체 향후 본격 직접 하나 처음 위한 통한 이후 다른 자신 우리 이제 지금 사람 사람들 내용 사실 문제 상황 가능성 필요 방안 과정 수준 확대 강화 추진 개최 참석".split())
+_ESTOP = set("the a an and or for with how why what who when new is are was were be been its it in on of to from by at as this that these those will can could would should may might has have had not no but about after over more most into than their them they our your you we i he she his her report says said via just amid inc co ltd vs ai using use based towards toward large model models learning data approach method study analysis system systems framework".split())
+_ACTORS = {"미국": "미국", "us": "미국", "u.s.": "미국", "美": "미국", "중국": "중국", "china": "중국", "中": "중국", "한국": "한국", "韓": "한국", "korea": "한국",
+           "일본": "일본", "japan": "일본", "유럽": "유럽", "eu": "EU", "러시아": "러시아", "russia": "러시아", "유엔": "유엔", "un": "유엔", "영국": "영국", "uk": "영국",
+           "인도": "인도", "india": "인도", "정부": "정부", "국회": "국회"}
+_EVENTS = [
+    ("완화", r"완화|삭제|철회|폐지|축소|빠져|제외|rollback|repeal|loosen|scrap|remov|weaken|strip", "규제·안전장치 완화",
+     "{s} 쪽에서 기존 규제나 안전장치가 느슨해지는 흐름이라, 국제 규범과 기업 자율 규제를 둘러싼 논쟁이 다시 커질 수 있어요."),
+    ("소송", r"소송|고소|제소|판결|재판|lawsuit|sues?\b|court|ruling|judge|settle", "법적 분쟁",
+     "결론에 따라 AI 학습 데이터와 책임 범위에 대한 업계 기준이 달라질 수 있어 판결 방향을 지켜볼 만해요."),
+    ("규제", r"규제|금지|제재|처벌|의무화|법안|기본법|입법|ban|restrict|crack ?down|fine[sd]?\b|sanction|regulat|bill\b|law\b", "규제·법제화",
+     "규제가 구체화되면 {s} 관련 기업의 준수 비용과 사업 방식에 영향이 갈 수 있어, 적용 범위와 시점이 핵심이에요."),
+    ("투자", r"투자|유치|펀딩|인수|합병|기업가치|상장|valuation|raises?\b|raising|funding|acqui|merger|ipo\b|invest", "투자·인수 등 자금 흐름",
+     "{t} 분야로 큰 자금이 계속 모이고 있다는 신호로, 기업 가치 평가가 과열인지와 경쟁 구도 변화를 함께 볼 필요가 있어요."),
+    ("실적", r"실적|매출|영업이익|배당|주가|주식|earnings|revenue|dividend|stocks?\b|shares?\b|profit", "실적·주가 등 시장 반응",
+     "AI 수요가 실제 매출과 주주 환원으로 이어지는지 보여 주는 지표로, 기대가 앞서 있는지도 함께 봐야 해요."),
+    ("보안", r"해킹|유출|취약|공격|악용|breach|leak|hack|vulnerab|attack|exploit|scam|fraud", "보안 위협",
+     "AI 활용이 늘수록 새로운 공격 경로도 늘어나, 기업과 이용자 모두 대응 체계를 점검할 필요가 있어요."),
+    ("인사", r"선임|내정|임명|취임|사임|퇴임|의장|사령탑|appoint|named\b|steps? down|resign|new ceo", "리더십·인사 변화",
+     "리더십 변화는 {s}의 AI 전략 방향과 우선순위가 어떻게 바뀔지 가늠할 수 있는 신호예요."),
+    ("협력", r"협력|제휴|협약|업무협약|mou|파트너|partner|deal\b|agreement|collaborat|team(?:s|ed)? up", "협력·제휴",
+     "협력이 실제 서비스나 공동 사업으로 이어지는지에 따라 관련 생태계의 판도가 달라질 수 있어요."),
+    ("출시", r"출시|공개|선보|론칭|업데이트|도입|대체|탑재|launch|unveil|announc|release|rolls? out|introduc|debut|replac|adds?\b", "새 제품·기능 공개",
+     "{s}의 이번 행보가 실제 사용자 경험과 경쟁사 대응으로 이어지는지가 관전 포인트예요."),
+    ("인프라", r"데이터센터|반도체|칩|gpu|hbm|전력|에너지|data ?cent|chip|semiconductor|power\b|energy|compute", "AI 인프라(칩·데이터센터·전력)",
+     "AI 경쟁이 모델을 넘어 칩·전력·데이터센터 확보 경쟁으로 번지고 있다는 흐름과 맞닿아 있어요."),
+    ("일자리", r"채용|해고|일자리|고용|인재|노동|hire|hiring|layoff|jobs?\b|talent|workers?\b|workforce", "일자리·인재 변화",
+     "AI가 일자리 구조를 바꾸는 속도와 방향을 보여 주는 사례로, 직무 전환·재교육 논의와 연결해 볼 만해요."),
+    ("위험", r"위험|우려|경고|안전|윤리|풍자|비판|risk|danger|warn|safety|threat|doom|fear|concern|ethic", "AI 위험·안전 논쟁",
+     "AI 안전과 신뢰를 둘러싼 논의가 기술을 넘어 사회·정치 이슈로 넓어지고 있다는 점을 보여 줘요."),
+    ("연구", r"연구|개발|실증|논문|study|research|paper|finds?\b|trial|experiment|benchmark", "연구·개발 성과",
+     "현장 적용까지는 추가 검증이 필요하지만, {t} 분야에서 AI 활용 범위가 넓어지고 있다는 흐름을 보여 줘요."),
+    ("교육", r"교육|학생|학교|대학|역량|education|student|school|universit|teach|learn", "교육·역량 강화",
+     "AI 역량이 기본 소양으로 자리 잡는 흐름으로, 교육 격차를 줄이는 방안이 함께 논의될 필요가 있어요."),
+]
+_EVENTS = [(k, re.compile(rx, re.I), p, v) for k, rx, p, v in _EVENTS]
+
+
+def _ko_title(it):
+    t = it.get("title_ko") or it["title"]
+    return t if _HAN.search(t) else ""
+
+
+def mx_keywords(it, n=4):
+    """제목(가중치 3)과 소개글(1)에서 자주·중요하게 나온 말을 뽑는다(원문 문장은 쓰지 않고 낱말만)."""
+    score, order = Counter(), {}
+    kt = _ko_title(it)
+    texts = [(kt, 3), (it.get("summary_ko") or (it.get("summary") if _HAN.search(it.get("summary") or "") else ""), 1),
+             (it.get("detail_ko") or "", 1)]
+    if not kt:  # 번역이 없는 해외 글은 영어 낱말로
+        texts = [(it["title"], 3), (it.get("summary") or "", 1)]
+    for m in re.finditer(r"[‘'\"“]([^’'\"”]{2,14})[’'\"”]", texts[0][0]):  # 제목 속 따옴표 말은 핵심어
+        w = m.group(1).strip()
+        if len(w.split()) <= 3:
+            score[w] += 6
+            order.setdefault(w, len(order))
+    for text, wgt in texts:
+        for tok in re.findall(r"[가-힣A-Za-z][가-힣A-Za-z0-9.+\-]*", text or ""):
+            w = tok.strip(".-")
+            if _HAN.search(w):
+                if (len(w) >= 3 and re.search(r"(한|된|적인|하는|하게|했던|없는|있는|스러운)$", w)) or re.search(r"(다|못한|않은|없이|치)$", w):
+                    continue  # 꾸미는 말·서술어는 빼고 명사만
+                w = _JOSA.sub("", w)
+                if len(w) < 2 or w in _KSTOP:
+                    continue
+            else:
+                if w.lower() in _ESTOP or len(w) < 3 and not w.isupper():
+                    continue
+                if not (w.isupper() or re.search(r"[a-z][A-Z]|\d", w)):  # 평범한 영어 낱말은 소개글에도 나와야 핵심어로
+                    w = w.lower()
+            score[w] += wgt
+            order.setdefault(w, len(order))
+    act = {a for a in _ACTORS} | {x.lower() for x in _KW_CANON}
+    words = [w for w, sc in sorted(score.items(), key=lambda x: (-x[1], order[x[0]]))
+             if w.lower() not in act and not (w.islower() and w.isascii() and sc < 4)]
+    out = []
+    for w in words:
+        if not any(w in o or o in w for o in out):
+            out.append(w)
+        if len(out) >= n:
+            break
+    return out
+
+
+def _disp(canon):
+    g = next((g for g in KW_GROUPS if g[0] == canon), [canon])
+    return next((x for x in g if _HAN.search(x)), canon)
+
+
+def mx_actors(it):
+    """글의 주체(나라·기관·기업)."""
     t = it["title"] + " " + it.get("title_ko", "")
-    about = f'{"·".join("#" + k for k in kw[:3])} 관련 ' if kw else ""
-    src = "Google 뉴스" if src.startswith("Google News") else src
-    head = " ".join(x for x in (when, src) if x)
-    via = "로 발표된" if "보도자료" in src else " 보도로,"
-    if cat == "papers":
-        fd = it.get("field") or ""
-        kind = f"{fd} 소식" if fd.endswith("연구") else (f"{fd} 분야 연구 소식" if fd else "연구 소식")
-        summ = f"{head}에 소개된 {about}{kind}이에요."
-        if "arxiv" in (it.get("link") or ""):
-            summ += " 동료 검토 전 사전 공개본일 수 있어요."
-    elif cat == "policy":
-        st = _mx_stage(t)
-        summ = f"{head}{via} {about}정책·규제 소식이에요. " + (
-            f"제목 기준으로는 {st} 단계로 보여요." if st else "제안·확정·시행 중 어느 단계인지는 원문 확인이 필요해요.")
-    elif cat == "talks":
-        summ = f"{head} 채널에 올라온 {about}영상·강연이에요."
-    else:
-        summ = f'{head}{via} {about}{"국내" if cat == "news_ko" else "해외"} 소식이에요.'
+    out = []
+    for tok in re.findall(r"[가-힣A-Za-z.美中韓]+", t):
+        a = _ACTORS.get(tok.lower()) or _ACTORS.get(_JOSA.sub("", tok))
+        if a and a not in out:
+            out.append(a)
+    for i, name in item_tags(it, 5):
+        if name in {g[0] for g in KW_GROUPS[1:16]} or name in ("xAI", "삼성", "SK", "네이버", "카카오", "LG", "KAIST", "서울대"):
+            d = _disp(name)
+            if d not in out:
+                out.append(d)
+    return out[:3]
+
+
+def mx_tags(it):
+    """태그 2~5개: 연관어 묶음 키워드를 먼저, 모자라면 제목·소개글 핵심어, 그다음 분야 태그로 채운다."""
+    tags = [(name, i) for i, name in item_tags(it, 5)]
+    for extra in [*[w.replace(" ", "") for w in mx_keywords(it, 3)], _CAT_TAG.get(it.get("category")), "AI"]:
+        if len(tags) >= 3 and extra == _CAT_TAG.get(it.get("category")):
+            break
+        if len(tags) >= 5:
+            break
+        if extra and len(extra) <= 12 and all(extra.lower() != n.lower() for n, _ in tags):
+            tags.append((extra, None))
+    return tags[:5]
+
+
+def _sentences(s):
+    return [x for x in re.split(r"(?<=[.요다])\s+", s) if x]
+
+
+def mx_note(it):
+    """(요약, METAXIS VIEW, 태그). 원문 문장은 쓰지 않고, 핵심 낱말·주체·사건 유형을 조합해 새로 쓴다.
+    기업 주장은 발표 기준으로, 논문은 검증 전으로, 정책은 제안/확정/시행 단계를 나눠 쓴다."""
+    cat = it.get("category")
+    tags = mx_tags(it)
+    t = " ".join([it["title"], it.get("title_ko", ""), it.get("summary") or "", it.get("summary_ko") or ""])
+    head_t = it["title"] + " " + it.get("title_ko", "")
+    kws = mx_keywords(it, 4)
+    actors = mx_actors(it)
+    ev = [e for e in _EVENTS if e[1].search(head_t)] or [e for e in _EVENTS if e[1].search(t)]
+    ev = ev[:1]
+    subj = "·".join(actors[:2]) or (kws[0] if kws else "관련 업계")
+    tg = next((_disp(n) for n, i in tags if i is not None), None) or (kws[0] if kws else "AI")
+    # 요약
+    what = " 및 ".join(e[2] for e in ev) or "AI 관련 동향"
+    kind = {"papers": "연구 소식", "policy": "정책·규제 소식", "talks": "영상·강연"}.get(cat, "소식")
+    lead = f'{"·".join(actors)} ' if actors else ""
+    summ = f"{lead}{what}에 관한 {kind}이에요."
+    k_show = [k for k in kws if k not in actors][:3]
+    if k_show:
+        summ += f' 핵심 키워드는 {"·".join(k_show)} 등이에요.'
+    if cat == "policy":
+        st = _mx_stage(head_t)
+        summ = f"{lead}{what}에 관한 정책·규제 소식이에요. " + (
+            f"제목 기준으로는 {st} 단계로 보여요." if st else f'핵심 키워드는 {"·".join(k_show) or tg} 등이에요.')
+    # 시사점
     view = []
-    if kw:
-        k, i = kw[0], tags[0][1]
-        rec = _MX["tags"].get(i, [])
-        days = _MX["days"]
-        if days:
-            last = datetime.fromisoformat(days[-1]).date()
-            span = (last - datetime.fromisoformat(days[0]).date()).days + 1
-            recent = [(d, c) for d, c in rec if (last - datetime.fromisoformat(d).date()).days < 7]
-            prev = [(d, c) for d, c in rec if 7 <= (last - datetime.fromisoformat(d).date()).days < 14]
-            n7, n14 = len(recent), len(prev)
-            if span >= 14 and n14 and n7 >= 3 and n7 >= n14 * 1.5:
-                view.append(f"최근 7일 METAXIS에 #{k} 관련 글이 {n7}건 모여(그 전 7일 {n14}건) 관심이 커지는 흐름이에요.")
-            elif span >= 14 and n14 >= 3 and n7 <= n14 * 0.6:
-                view.append(f"최근 7일 #{k} 관련 글은 {n7}건으로, 그 전 7일({n14}건)보다 줄었어요.")
-            elif n7 >= 3:
-                view.append(f"최근 7일 METAXIS에 #{k} 관련 글이 {n7}건 모여, 여러 곳에서 이어서 다뤄지는 주제예요.")
-            elif n7 <= 1:
-                view.append(f"최근 7일 METAXIS에 모인 글 중 #{k}를 다룬 글은 이 글이 처음이에요.")
-            others = []
-            for _, c in recent:
-                name = _MX["cats"].get(c)
-                if c != cat and name and name not in others:
-                    others.append(name)
-            if others:
-                view.append(f'같은 #{k} 주제가 이번 주 {"·".join(others[:3])}에서도 다뤄졌어요.')
-    if cat == "papers":
-        view.append("연구 결과는 후속 검증 전일 수 있어 확정된 사실로 보기는 어려워요.")
-    elif cat == "policy":
-        st = _mx_stage(t)
-        view.append({"제안": "아직 제안·검토 단계로 보여 내용이 바뀔 수 있어요.",
-                     "확정": "확정된 내용이라도 실제 시행 시점과 세부 기준은 따로 확인이 필요해요.",
-                     "시행": "시행 단계로 보여 적용 대상과 시점을 확인할 필요가 있어요."}.get(st, "정책의 진행 단계와 적용 범위는 원문과 공식 발표로 확인하는 게 좋아요."))
-    elif cat == "talks":
-        view.append("발언은 연사 개인의 관점이라 사실관계는 따로 확인이 필요할 수 있어요.")
-    elif _CLAIM.search(t):
-        view.append("기업이나 기관이 밝힌 내용은 발표 기준이며, 독립적으로 검증된 결과는 아니에요.")
-    if not view:
-        view.append("아직 METAXIS에 모인 다른 글과 겹치는 키워드가 없는 소식이에요. 이후 흐름은 관련 보도를 함께 보면서 판단하는 게 좋아요.")
-    return summ, " ".join(view[:3]), tags
+    if ev:
+        view.append(ev[0][3].format(s=subj, t=tg))
+    else:
+        view.append(f"{tg} 흐름 속에서 나온 소식으로, 후속 보도와 함께 보면 방향을 가늠하기 좋아요.")
+    i0 = next((i for _, i in tags if i is not None), None)
+    days = _MX["days"]
+    if i0 is not None and days:
+        last = datetime.fromisoformat(days[-1]).date()
+        rec = [(d, c) for d, c in _MX["tags"].get(i0, []) if (last - datetime.fromisoformat(d).date()).days < 7]
+        others = []
+        for _, c in rec:
+            nm = _MX["cats"].get(c)
+            if c != cat and nm and nm not in others:
+                others.append(nm)
+        if len(rec) >= 5:
+            view.append(f'최근 7일 METAXIS에 #{tg} 관련 글이 {len(rec)}건 모였고' + (f' {"·".join(others[:2])}에서도 다뤄져, 한 분야를 넘는 이슈예요.' if others else ", 관심이 이어지는 주제예요."))
+    caution = {"papers": "다만 연구 결과는 후속 검증 전일 수 있어 확정된 사실로 보기는 어려워요.",
+               "talks": "발언은 연사 개인의 관점이라 사실관계는 따로 확인이 필요할 수 있어요."}.get(cat)
+    if cat == "policy":
+        caution = {"제안": "아직 제안·검토 단계로 보여 최종 내용은 바뀔 수 있어요.",
+                   "확정": "확정된 내용이라도 시행 시점과 세부 기준은 따로 확인이 필요해요.",
+                   "시행": "시행 단계로 보여 적용 대상과 시점을 확인할 필요가 있어요."}.get(_mx_stage(head_t), "진행 단계(제안·확정·시행)는 공식 발표로 확인하는 게 좋아요.")
+    elif not caution and ev and ev[0][0] in ("출시", "투자", "실적", "협력") and _CLAIM.search(head_t):
+        caution = "성능이나 효과는 아직 발표 기준이며, 독립적으로 검증된 결과는 아니에요."
+    if caution:
+        view = view[:2] + [caution]
+    out = []
+    for v in view:
+        out += _sentences(v)
+    return summ, " ".join(out[:3]), tags
 
 
 def row_html(it, cats, with_cat=False, base=""):
