@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:40+09:00",
+ "generated_at": "2026-09-28T15:41+09:00",
  "items": [
   {
    "id": "4ac4ee106644c7ee",
@@ -173,6 +173,18 @@
    "category": "news_ko",
    "published": "2026-09-28T12:23:31+09:00",
    "summary": "앞으로 국민신문고에 한 문장만 입력하면 인공지능(AI)이 처리기관을 찾아 민원 신청서를 작성해 주는 등 민원 신청부터 답변까지 전 과정에서 AI의 도움을 받을 수 있게 될 전망이다.",
+   "thumb": ""
+  },
+  {
+   "id": "242f4fd76398bc77",
+   "title": "국토부 '인공지능·스마트 도시', 석·박사 인재 키울 대학 4곳 공모",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42086",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:07:22+09:00",
+   "summary": "국토교통부(장관 홍지선)는 인공지능(AI)과 스마트도시 기술을 융합해 미래도시 경쟁력을 높이고, 도시산업의 혁신을 이끌 핵심인재를 양성하기 위해 29일부터 전국 4년제 대학을 대상으로 'AI·스마트도시 혁신인재육성 사업(’26~’28)' 공모를 실시한다.",
+   "detail": "국토교통부(장관 홍지선)는 인공지능(AI)과 스마트도시 기술을 융합해 미래도시 경쟁력을 높이고, 도시산업의 혁신을 이끌 핵심인재를 양성하기 위해 29일부터 전국 4년제 대학을 대상으로 'AI·스마트도시 혁신인재육성 사업(’26~’28)' 공모를 실시한다.\n국토부는 ’09년부터 3단계에 걸친 혁신인재육성사업을 통해 스마트도시 특성화 교육을 운영하여 ’25년까지 10,091명의 전문인력 배출, 825건의 논문 게재, 3,195건의 학술발표 등을 통해 스마트도시 추진 기반을 구축해 왔다.",
    "thumb": ""
   },
   {
@@ -497,6 +509,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T05:37:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6ec7fd30e6d62208",
+   "title": "충남도, AI 대전환 219개 과제 발굴…내년 예산 반영 추진",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8yMUp2UXBKM2lpSXV4bGgyLVRCTjdROHV3dzZGYjVQTHNjRTh6QkREZi1Ubmx5R2NfcExpRUpLLU8ybjVuaU1lQ211SmtQZUlpNXQwRXdzV2lSdldhX3I5MtIBYEFVX3lxTE8yMUp2UXBKM2lpSXV4bGgyLVRCTjdROHV3dzZGYjVQTHNjRTh6QkREZi1Ubmx5R2NfcExpRUpLLU8ybjVuaU1lQ211SmtQZUlpNXQwRXdzV2lSdldhX3I5Mg?oc=5",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:24:01+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -928,17 +951,6 @@
    "thumb": ""
   },
   {
-   "id": "99c5fbdd877b69ea",
-   "title": "대전시-육군, 방산 인공지능 전환 협력체계 구축",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0tQzhNZ2loV21ERzlfcDZvWkluREpLNFZCaUt3eVd0Z1VOUjlCNElyQXhVUldLSEI1cTdhZ3JEdkNlMGxwTks3MDc4OUxHZjhRdW1vRXY2cTN2eHhxTFpSUXpyTDNrUC03eVE?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:39:54+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "f1e09f10ef95a3a5",
    "title": "'AI 정책 이견' 트럼프와 아모데이 단독 면담",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfbXBLOUJsU3dDTnVudGYtenU4TTdiZFhyODlEYjQtZTc4UGVEVlJBRnR0bm9JOHlEUk5oOVp6bmI3YXNFMWRERFozNkJuajRoWE50NFpwWFRwaGNKb3J5Sg?oc=5",
@@ -971,18 +983,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "트럼프는 AI 논쟁이 커지는 가운데 Anthropic CEO와 식사하겠다고 말했다"
-  },
-  {
-   "id": "ac6abccfd87838e5",
-   "title": "경남 식품공장서 로봇에 압착…40대 작업자 숨져",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBjcFVhNFp2NEIzTWFVSEM3aWxIcWQyVjZpZjhLamVjX3o3WTdVQmVvMk5LbjRMSHdrNS1rWWE2dHdNUXlSS0J0bFBiWDY2ZVV4b3JRQW5aVUxhRnp4MXF1RWdfZDZ1QmtSRzFHYTlLZXVpc1dSYmfSAWZBVV95cUxPTi02Wk12X043dHVZTmNOcGVGRWZreVVrTy1vQ0ZibU9JdXBLWmYtSTBTWGlFV1ZUcFJ1YVptQXNnWlp3Rlg4NzVxVmN5b2Fua1N0ZkVSUUZJM040TUNVMTZhVjJXWVE?oc=5",
-   "source": "동아일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:24:59+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 7
   },
   {
    "id": "3a3635b0a8367055",
@@ -2760,7 +2760,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
@@ -2778,7 +2778,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 81
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2813,8 +2813,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2825,8 +2825,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2957,8 +2957,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2970,7 +2970,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 66
+   "fetched": 65
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2994,13 +2994,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 64
+   "fetched": 65
   },
   {
    "name": "스테이지5",
