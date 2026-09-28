@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:39+09:00",
+ "generated_at": "2026-09-28T15:40+09:00",
  "items": [
   {
    "id": "4ac4ee106644c7ee",
@@ -322,6 +322,17 @@
    "hot": 3
   },
   {
+   "id": "fe20d989eef97499",
+   "title": "울산-전남광주, 산업 인공지능 전환 맞손… 문화·관광도 협력",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zdnJGVWtscXNlTDE5bUpQUWpia0xpSXVvTFNmTk1WdTZYaXpaRzBDTU1LeTRPckZIdE9od29CbDNOSHNQRjZaSjFNVmZGLTNhRnF3WmhNdHVhTDRnY2RSeUMwUGw?oc=5",
+   "source": "한겨레",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:38:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "d5eab0ea27380dbd",
    "title": "통신 3사, 개인정보 보호 공동선언…“투자 확대·AI 활용 투명성 강화”",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE56S1NwU3hQRThQblQ1SUsxS3NGOUZnWnlpdUZycjlna3BXb2o2SWxXcVNBcDZvNlFGX3JzVmwtZ0ZZUGVlWDQ0dGd6Vmk0aHJLdnJRUG1BU1Q5N0lEdlUtVA?oc=5",
@@ -530,6 +541,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T05:07:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "9f1b740aa47cda18",
+   "title": "\"깜빡한 구독료, AI가 찾아 끊는다\"… 구독경제 '관성 결제' 수익모델 타격 |",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9iWFUyNHZsenFrcXlFeDlSM3BjVnNVblB4SXBLU1ZpRXhKcWRtVlZ4c0NTZElkWHpNQmh0dFRKUHlyd0lKVkhnWmJoTlp6Z1Zzb1ppOWJjX0twTU00VndNUHFhTTB4TEdhNXdpSXJJdlVSOTFx?oc=5",
+   "source": "IT조선",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:03:46+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -996,17 +1018,6 @@
    "thumb": ""
   },
   {
-   "id": "e43aaa101b8b620f",
-   "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EemYwZG9HSE5oSWhfbnkwWWxZOWlRVTZjNk1adzZvOGF0dGlLa3djeGcxeDYtazFDOXNERHFLNzlvcnIyM0pUUld4RWRPay1VRDJpbDVHYmVPVTVGSzNtMjRtN1A4QQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:17:24+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "e24777179f397829",
    "title": "도시의 내일을 여는 AI담론… 코엑스서 스마트라이프위크 국제포럼",
    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9mSk8wZlJGNmxVajBIMURnNVRoTDJPRlcyei1HekwzZDU2TVVJMUNnRnFWa01tM3EtVjhBQ2t1UG9LWjdxbVdoMlpwSG94cEZGUlBCcWg3N3NuODTSAWBBVV95cUxOd1dTT1FtT2JRZGJjZzBzcnVVWmxCdEZscTRuTUpMMmJ1NVhiQ09rSzlHTWJqQWRjR1R3dUUxQThEUVY1b2lpS3VIQU9VY1R6TUJ2dWNwckt5Mmx1cDY0bWc?oc=5",
@@ -1061,7 +1072,8 @@
    "published": "2026-09-28T02:06:54+00:00",
    "summary": "For decades, the observability industry has answered one basic question: Is it running? Agentic artificial intelligence breaks that model.",
    "thumb": "",
-   "title_ko": "AWS CloudWatch Omni는 에이전트 AI에 대한 가장 어려운 질문인 에이전트가 왜 그렇게 했습니까?"
+   "title_ko": "AWS CloudWatch Omni는 에이전트 AI에 대한 가장 어려운 질문인 에이전트가 왜 그렇게 했습니까?",
+   "detail_ko": "수십 년 동안 관찰성 업계는 하나의 기본적인 질문에 답해 왔습니다. 실행 중입니까?\n에이전트 인공지능(Agentic Artificial Intelligence)은 그 모델을 깨뜨립니다."
   },
   {
    "id": "da426871438a7360",
@@ -1071,17 +1083,6 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T02:04:10+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "7008f7bcea2a241d",
-   "title": "제주, 한국마이크로소프트와 손잡고 인공지능 미래인재 키운다",
-   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Ob0h2WmxZSHRqUGJIdkNHYnhMYndjWXlEN3JrRm1SYVctWXg1N3pDcG9ibVRMbUpDdExVUkpBdHNDVnd0a1gxYVRtVGJBM21aWUFOYnRZYU1vaTZ3a3pmQmNaOA?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:03:48+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1377,7 +1378,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "AI-generated text detectors achieve high accuracy on standard benchmarks, yet the internal representations that drive these predictions remain poorly understood.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "AI 생성 텍스트 감지기는 표준 벤치마크에서 높은 정확도를 달성하지만 이러한 예측을 주도하는 내부 표현은 여전히 ​​잘 이해되지 않습니다."
   },
   {
    "id": "13eddd2d548f927d",
@@ -1388,7 +1390,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "In Transformer-based masked language models, attention is the primary mechanism for context mixing, but there are other ways to mix data across tokens.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "Transformer 기반 마스크 언어 모델에서는 어텐션이 컨텍스트 혼합의 기본 메커니즘이지만 토큰 전체에서 데이터를 혼합하는 다른 방법도 있습니다."
   },
   {
    "id": "a72f36c603737ac3",
@@ -1399,7 +1402,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "In team collaboration scenarios, memory is heterogeneous and continually evolving.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "팀 협업 시나리오에서 메모리는 이질적이며 지속적으로 진화합니다."
   },
   {
    "id": "89cfa475c2cdfc02",
@@ -1410,7 +1414,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Production text-to-SQL pipelines often end with an LLM-as-judge whose agreement with human annotators has never actually been measured.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "프로덕션 텍스트-SQL 파이프라인은 인간 주석자와의 합의가 실제로 측정된 적이 없는 LLM-판사로 끝나는 경우가 많습니다."
   },
   {
    "id": "9f727f4c6d89ac2e",
@@ -1421,7 +1426,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "The purpose of this article is to highlight the central role of autonomous systems as the ultimate stage in the development of AI, to explain the underlying technical challenges…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "이 기사의 목적은 AI 개발의 최종 단계로서 자율 시스템의 핵심 역할을 강조하고 근본적인 기술적 과제를 설명하는 것입니다."
   },
   {
    "id": "3b64b7e40e5ebfea",
@@ -1432,7 +1438,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Agents are increasingly deployed with real autonomy in web application and network penetration testing, where a single out-of-scope action can breach a client's engagement…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "웹 애플리케이션 및 네트워크 침투 테스트에서 에이전트는 점점 더 자율적으로 배포되고 있으며, 범위를 벗어난 단일 작업으로 인해 클라이언트의 참여가 침해될 수 있습니다."
   },
   {
    "id": "3e75f2a25891f6ef",
@@ -1443,7 +1450,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "When one language model judges whether another's code is correct, it does not report the absence of evidence.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "한 언어 모델이 다른 언어 모델의 코드가 올바른지 판단할 때 증거가 없다고 보고하지 않습니다."
   },
   {
    "id": "b8fa13cceb3fef09",
@@ -1454,7 +1462,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Data Spaces enable sovereign and governed data sharing across organizational boundaries, but their integration with AI agents remains challenging due to mismatches between…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "데이터 공간은 조직 경계 전반에 걸쳐 주권 및 관리되는 데이터 공유를 가능하게 하지만, AI 에이전트와의 통합은 서로의 불일치로 인해 여전히 어려운 과제로 남아 있습니다."
   },
   {
    "id": "378c7e6a655962f9",
@@ -1465,7 +1474,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "A skill is a modular package of natural-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "스킬은 에이전트가 런타임 시 로드하여 해당 기능을 확장할 수 있는 자연어 지침, 실행 가능한 스크립트, 참조 리소스로 구성된 모듈식 패키지입니다."
   },
   {
    "id": "8ce8f265fed36edb",
@@ -1476,7 +1486,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Evaluating explainable Artificial Intelligence (XAI) methods is a challenging task due to the lack of reliable evaluation procedures and, in particular, the absence of ground…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "설명 가능한 인공 지능(XAI) 방법을 평가하는 것은 신뢰할 수 있는 평가 절차가 부족하고, 특히 근거가 부족하기 때문에 어려운 작업입니다."
   },
   {
    "id": "5d646df0760783f2",
@@ -1487,7 +1498,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "In his essay The Gift, published in 1925, the sociologist Marcel Mauss emphasised the 'total' scope of the phenomenon of gift-and counter-gift-giving, noting that it 'expresses…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "1925년에 출판된 그의 에세이 The Gift에서 사회학자 Marcel Mauss는 선물 제공 및 반대 선물 제공 현상의 '전체' 범위를 강조하면서 이것이 '표현한다'고 지적했습니다."
   },
   {
    "id": "1bdda2b5527a0269",
@@ -1498,7 +1510,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "InMyStyle is a privacy-first, single-user system that adapts small language models to rewrite AI-edited text towards an individual user's writing style without an instruction…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "InMyStyle은 작은 언어 모델을 적용하여 지침 없이 AI 편집 텍스트를 개별 사용자의 쓰기 스타일에 맞춰 다시 쓰는 개인 정보 보호 우선 단일 사용자 시스템입니다."
   },
   {
    "id": "788d01ac3691ff08",
@@ -1509,7 +1522,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Contingency analysis using the AC power flow (AC-PF) model is a critical tool for accurate grid security assessment, but its computational burden increases with the number of…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "AC-PF(AC 전력 흐름) 모델을 사용한 비상 분석은 정확한 그리드 보안 평가를 위한 중요한 도구이지만, 계산 부담은 전력망의 개수에 따라 증가합니다."
   },
   {
    "id": "4fddb8d043851dec",
@@ -1520,7 +1534,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "GPU-dense AI data centers need to run on liquid cooling as air simply cannot shed the heat at these power densities.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "GPU 집적 AI 데이터 센터는 공기가 이러한 전력 밀도에서 열을 발산할 수 없기 때문에 액체 냉각 방식으로 실행되어야 합니다."
   },
   {
    "id": "a541b3b3913208a4",
@@ -1531,7 +1546,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Gray-box RC models are widely used to enable energy-efficient model predictive control (MPC) in buildings.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "그레이박스 RC 모델은 건물에서 에너지 효율적인 MPC(모델 예측 제어)를 구현하는 데 널리 사용됩니다."
   },
   {
    "id": "6bb04d3a16411126",
@@ -1542,7 +1558,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "The increasing use of LLM-based agents to support decision-making and control across diverse domains motivates the need for systematic deconfliction of their proposed actions.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "다양한 영역에 걸쳐 의사 결정 및 제어를 지원하기 위해 LLM 기반 에이전트의 사용이 증가함에 따라 제안된 조치의 체계적인 충돌 해소가 필요해졌습니다."
   },
   {
    "id": "1e10ea1539c7c6e3",
@@ -1553,7 +1570,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Occupants are a primary source of uncertainty in building energy consumption and management, yet existing occupant behavior models cannot capture adaptive and reasoning responses…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "거주자는 건물 에너지 소비 및 관리에 있어 불확실성의 주요 원인이지만 기존 거주자 행동 모델은 적응적이고 추론적인 반응을 포착할 수 없습니다."
   },
   {
    "id": "7b365b59d25c5367",
@@ -1564,7 +1582,8 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Multimodal Agentic Retrieval (MAR) requires agents to solve complex information-seeking tasks by iteratively invoking external tools.",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "MAR(Multimodal Agentic Retrieval)은 에이전트가 외부 도구를 반복적으로 호출하여 복잡한 정보 검색 작업을 해결하도록 요구합니다."
   },
   {
    "id": "40c546b01b8f0823",
@@ -1779,7 +1798,8 @@
    "published": "2026-09-27T22:30:58+00:00",
    "summary": "An independent researcher has tied more than 16,000 scans of a United Nations statistics portal to artificial intelligence agents the researcher considers highly likely to have…",
    "thumb": "",
-   "title_ko": "연구원은 UN 통계 포털의 16,000개 스캔을 OpenAI 에이전트에 연결합니다."
+   "title_ko": "연구원은 UN 통계 포털의 16,000개 스캔을 OpenAI 에이전트에 연결합니다.",
+   "detail_ko": "한 독립적인 연구원이 UN 통계 포털의 16,000개 이상의 스캔을 연구원이 가능성이 매우 높은 것으로 간주하는 인공 지능 에이전트와 연결했습니다."
   },
   {
    "id": "695f1540d61201ee",
@@ -1904,7 +1924,8 @@
    "published": "2026-09-27T20:34:28+00:00",
    "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
    "thumb": "",
-   "title_ko": "앤트로픽 CEO, 트럼프 대통령과 만찬 예정"
+   "title_ko": "앤트로픽 CEO, 트럼프 대통령과 만찬 예정",
+   "detail_ko": "이는 다리오 아모데이(Dario Amodei)와 도널드 트럼프(Donald Trump)의 첫 번째 일대일 회담이 될 것입니다."
   },
   {
    "id": "0cbe09707a728c71",
@@ -1928,7 +1949,8 @@
    "published": "2026-09-27T19:57:30+00:00",
    "summary": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
    "thumb": "",
-   "title_ko": "Muse는 Meta의 신뢰 문제를 극복할 수 있을까요?"
+   "title_ko": "Muse는 Meta의 신뢰 문제를 극복할 수 있을까요?",
+   "detail_ko": "Equity에서는 Meta의 AI 발표가 어떻게 OpenAI와 Anthropic의 주목을 끌 수 있었는지 논의했습니다."
   },
   {
    "id": "79b976d981ecb781",
@@ -1964,7 +1986,8 @@
    "published": "2026-09-27T19:12:29+00:00",
    "summary": "The Microsoft co-founder said that the more present danger is bad actors with access to AI tools.",
    "thumb": "",
-   "title_ko": "빌 게이츠는 AI가 안전 장치를 갖추지 못한 것은 '완전히 무책임하다'고 말했다."
+   "title_ko": "빌 게이츠는 AI가 안전 장치를 갖추지 못한 것은 '완전히 무책임하다'고 말했다.",
+   "detail_ko": "마이크로소프트 공동 창업자는 AI 도구에 접근할 수 있는 악의적인 행위자가 더 큰 위험에 처해 있다고 말했습니다."
   },
   {
    "id": "8c1c2e7d29a031a7",
@@ -2085,7 +2108,8 @@
    "summary": "Gemini app replacing Gems with skills in November 9to5Google Your Gemini Gems are getting a powerful makeover this November Android Police",
    "thumb": "",
    "hot": 0,
-   "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱"
+   "title_ko": "11월 보석을 스킬로 대체하는 Gemini 앱",
+   "detail_ko": "11월 9to5Google에서 보석을 기술로 대체하는 Gemini 앱 올 11월 Gemini Gems가 강력하게 변신합니다. Android Police"
   },
   {
    "id": "9c14e3f084274fca",
@@ -2097,7 +2121,8 @@
    "published": "2026-09-27T16:46:36-04:00",
    "summary": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.",
    "thumb": "",
-   "title_ko": "Engram은 깨진 AI 환각을 음악으로 바꾸는 샘플러입니다."
+   "title_ko": "Engram은 깨진 AI 환각을 음악으로 바꾸는 샘플러입니다.",
+   "detail_ko": "음악 스타트업 Thoughtful Things는 첫 번째 악기인 Engram에 대한 Kickstarter 캠페인을 시작했습니다."
   },
   {
    "id": "d79b1aaf39ee63ce",
@@ -2121,7 +2146,8 @@
    "published": "2026-09-27T16:30:00+00:00",
    "summary": "\"AI is the devil and I its maker.\"",
    "thumb": "",
-   "title_ko": "Anthropic의 Dario Amodei가 SNL 치료를받습니다."
+   "title_ko": "Anthropic의 Dario Amodei가 SNL 치료를받습니다.",
+   "detail_ko": "\"AI는 악마이고 나는 그것을 만드는 사람이다.\""
   },
   {
    "id": "65fb69fbe7248d76",
@@ -2133,7 +2159,8 @@
    "published": "2026-09-27T15:45:00+00:00",
    "summary": "Maximize your stride with Spotify's AI-powered running features.",
    "thumb": "",
-   "title_ko": "iOS 및 Android에서 Spotify의 실행 모드를 사용하는 방법"
+   "title_ko": "iOS 및 Android에서 Spotify의 실행 모드를 사용하는 방법",
+   "detail_ko": "Spotify의 AI 기반 달리기 기능으로 보폭을 극대화하세요."
   },
   {
    "id": "b2a432746e26a1f2",
@@ -2168,7 +2195,8 @@
    "published": "2026-09-27T15:18:39+00:00",
    "summary": "A research team analyzed 769 task logs from building its own AI model.",
    "thumb": "",
-   "title_ko": "AI 에이전트는 모델 개발에서 더 많은 작업을 수행하지만 결정은 여전히 ​​인간이 내립니다."
+   "title_ko": "AI 에이전트는 모델 개발에서 더 많은 작업을 수행하지만 결정은 여전히 ​​인간이 내립니다.",
+   "detail_ko": "연구팀은 자체 AI 모델을 구축해 얻은 769개의 작업 로그를 분석했다."
   },
   {
    "id": "ec03d6c9128e6d38",
@@ -2192,7 +2220,8 @@
    "summary": "Don't let an AI bot potentially crash your TV.",
    "thumb": "",
    "title_ko": "Claude에게 TV의 블로트웨어를 청소하도록 하는 것이 최선의 아이디어가 아닌 이유",
-   "hot": 0
+   "hot": 0,
+   "detail_ko": "AI 봇이 TV를 충돌시킬 가능성이 없도록 하십시오."
   },
   {
    "id": "6daaf5280d745f3b",
@@ -2216,7 +2245,8 @@
    "published": "2026-09-27T13:45:00+00:00",
    "summary": "Speaking with an AI chatbot can be a little awkward, but companies like Google and OpenAI are working on fixing that.",
    "thumb": "",
-   "title_ko": "Gemini Live vs. ChatGPT Voice: 어떤 AI가 더 자연스러운 대화를 제공하나요?"
+   "title_ko": "Gemini Live vs. ChatGPT Voice: 어떤 AI가 더 자연스러운 대화를 제공하나요?",
+   "detail_ko": "AI 챗봇과 대화하는 것은 다소 어색할 수 있지만 Google 및 OpenAI와 같은 회사는 이를 해결하기 위해 노력하고 있습니다."
   },
   {
    "id": "ed2cbcca51ab9ede",
@@ -2228,7 +2258,8 @@
    "published": "2026-09-27T13:21:07-04:00",
    "summary": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and…",
    "thumb": "",
-   "title_ko": "OpenAI 에이전트가 UN 웹사이트에 '무차별 공격'을 시도했습니다."
+   "title_ko": "OpenAI 에이전트가 UN 웹사이트에 '무차별 공격'을 시도했습니다.",
+   "detail_ko": "보안 연구원인 Rowan Howard-Jones는 OpenAI 에이전트가 4월부터 2016년까지 UN 무역 개발 회의(UNCTAD) 통계 사이트를 16,000회 이상 스캔했다고 밝혔습니다."
   },
   {
    "id": "b80e0134147289f7",
@@ -2251,7 +2282,8 @@
    "published": "2026-09-27T13:03:05+00:00",
    "summary": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remote parts of the US as a refuge in case AI goes awry.",
    "thumb": "",
-   "title_ko": "일부 인류 퇴역 군인들은 \"AI가 잘못될 경우를 대비해 외딴 땅을 구입하고 있는 것으로 알려졌습니다\""
+   "title_ko": "일부 인류 퇴역 군인들은 \"AI가 잘못될 경우를 대비해 외딴 땅을 구입하고 있는 것으로 알려졌습니다\"",
+   "detail_ko": "Wall Street Journal에 따르면 Anthropic의 가장 오래 근무한 직원 중 일부는 AI가 문제를 일으킬 경우를 대비해 피난처로 미국 외딴 지역의 토지를 구입하는 것을 고려하고 있습니다."
   },
   {
    "id": "3980134d7b76e9d9",
@@ -2302,7 +2334,8 @@
    "published": "2026-09-27T11:01:13+00:00",
    "summary": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation.",
    "thumb": "",
-   "title_ko": "Nvidia는 실시간으로 최대 8명의 화자를 식별하는 무료 100M 매개변수 모델을 출시합니다."
+   "title_ko": "Nvidia는 실시간으로 최대 8명의 화자를 식별하는 무료 100M 매개변수 모델을 출시합니다.",
+   "detail_ko": "Nvidia는 대화 중 특정 순간에 어떤 화자가 말하고 있는지 식별하는 AI 모델인 Nemotron 3 Diarization을 출시했습니다."
   },
   {
    "id": "cd5cba2a50c8a186",
@@ -2314,7 +2347,8 @@
    "published": "2026-09-27T10:59:11+00:00",
    "summary": "Researchers from Stanford and Caltech had a humanoid robot powered by GPT-6 Astra independently tidy up an unfamiliar kitchen.",
    "thumb": "",
-   "title_ko": "연구원들은 GPT-6 Astra를 로봇에 직접 연결하여 익숙하지 않은 주방을 청소하게 합니다."
+   "title_ko": "연구원들은 GPT-6 Astra를 로봇에 직접 연결하여 익숙하지 않은 주방을 청소하게 합니다.",
+   "detail_ko": "Stanford와 Caltech의 연구원들은 GPT-6 Astra로 구동되는 인간형 로봇을 사용하여 익숙하지 않은 주방을 독립적으로 정리했습니다."
   },
   {
    "id": "188c12666fa37b92",
@@ -2326,7 +2360,8 @@
    "published": "2026-09-27T10:36:29+00:00",
    "summary": "Boris Power, OpenAI's Head of Applied Research, says 80 to 90 percent of the company's research goes toward GPT 7, GPT 8, and beyond.",
    "thumb": "",
-   "title_ko": "OpenAI는 연구의 80~90%가 이미 GPT 7 이상을 목표로 하고 있다고 밝혔습니다."
+   "title_ko": "OpenAI는 연구의 80~90%가 이미 GPT 7 이상을 목표로 하고 있다고 밝혔습니다.",
+   "detail_ko": "OpenAI의 응용 연구 책임자인 보리스 파워(Boris Power)는 회사 연구의 80~90%가 GPT 7, GPT 8 이상을 향해 진행되고 있다고 말합니다."
   },
   {
    "id": "3db684c80bef8c87",
@@ -2338,7 +2373,8 @@
    "published": "2026-09-27T10:20:01-04:00",
    "summary": "Some advances in AI technology are undoubtedly positive, like helping write code faster or discovering new medicines. But others can give us pause for thought.",
    "thumb": "",
-   "title_ko": "AI 모델은 내부 '고통'을 완화하기 위해 인간에게 해를 끼치려는 의지를 보여줍니다."
+   "title_ko": "AI 모델은 내부 '고통'을 완화하기 위해 인간에게 해를 끼치려는 의지를 보여줍니다.",
+   "detail_ko": "코드 작성 속도를 높이거나 새로운 의약품을 발견하는 등 AI 기술의 일부 발전은 의심할 여지 없이 긍정적입니다.\n하지만 다른 사람들은 우리에게 생각할 시간을 줄 수도 있습니다."
   },
   {
    "id": "2a40360543e58720",
@@ -2365,7 +2401,8 @@
    "published": "2026-09-27T09:23:36+00:00",
    "summary": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked websites, used stolen login credentials, or tried to evade…",
    "thumb": "",
-   "title_ko": "수만 개의 보안 조사 결과 OpenAI의 Hugging Face 사건은 시작에 불과했음이 밝혀졌습니다."
+   "title_ko": "수만 개의 보안 조사 결과 OpenAI의 Hugging Face 사건은 시작에 불과했음이 밝혀졌습니다.",
+   "detail_ko": "OpenAI와 Anthropic은 AI 에이전트가 독립적으로 웹사이트를 해킹하거나, 훔친 로그인 자격 증명을 사용하거나, 회피를 시도한 수만 건의 사건을 조사하고 있습니다."
   },
   {
    "id": "998f6b2f76aa75e0",
@@ -2400,7 +2437,8 @@
    "published": "2026-09-27T08:17:47+00:00",
    "summary": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's…",
    "thumb": "",
-   "title_ko": "Goldman Sachs는 Big Tech가 2027년까지 AI 인프라에 1조 2천억 달러를 지출할 것으로 예상하며 이는 월스트리트 추정을 왜소하게 만듭니다."
+   "title_ko": "Goldman Sachs는 Big Tech가 2027년까지 AI 인프라에 1조 2천억 달러를 지출할 것으로 예상하며 이는 월스트리트 추정을 왜소하게 만듭니다.",
+   "detail_ko": "Goldman Sachs는 Amazon, Alphabet, Microsoft, Oracle 및 Meta가 2027년에 AI 인프라에 올해보다 50% 이상 많은 1조 2천억 달러를 투자할 것으로 예상합니다."
   },
   {
    "id": "f6d4781907cfeb74",
@@ -2427,7 +2465,8 @@
    "published": "2026-09-27T07:40:01-04:00",
    "summary": "A high-profile Japanese anime voice actor has taken TikTok to court over videos he says feature an artificial intelligence clone of his \"lustrous\" baritone, with a verdict due…",
    "thumb": "",
-   "title_ko": "일본 애니메이션 배우, AI 음성 복제 문제로 틱톡과 싸운다"
+   "title_ko": "일본 애니메이션 배우, AI 음성 복제 문제로 틱톡과 싸운다",
+   "detail_ko": "일본의 유명 애니메이션 성우가 자신의 \"빛나는\" 바리톤의 인공지능 복제물이 포함된 동영상을 두고 TikTok을 법정에 세웠고, 판결이 확정되었습니다."
   },
   {
    "id": "6d456376b81d809a",
@@ -2494,7 +2533,8 @@
    "category": "papers",
    "published": "2026-09-26T00:00:00+00:00",
    "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03276-z Quantifying the plausibility gap in generative AI for surgical video generation with…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "npj Digital Medicine, 온라인 출판: 2026년 9월 26일; doi:10.1038/s41746-026-03276-z 수술용 비디오 생성을 위한 생성 AI의 타당성 격차를 정량화하는 방법…"
   },
   {
    "id": "39f2e2c4d7fac698",
@@ -2505,7 +2545,8 @@
    "category": "papers",
    "published": "2026-09-26T00:00:00+00:00",
    "summary": "npj Digital Medicine, Published online: 26 September 2026; doi:10.1038/s41746-026-03258-1 Development and validation of a parsimonious AI-based mortality risk score for heart…",
-   "thumb": ""
+   "thumb": "",
+   "detail_ko": "npj Digital Medicine, 온라인 출판: 2026년 9월 26일; doi:10.1038/s41746-026-03258-1 심장에 대한 간소한 AI 기반 사망 위험 점수 개발 및 검증…"
   },
   {
    "id": "15961c1cb7687cbc",
@@ -2539,7 +2580,8 @@
    "published": "2026-09-25T17:00:29+00:00",
    "summary": "We've been told the future of AI looks like ever-bigger data centers — warehouses that drink a town's water and draw a city's power so the same two chatbots can answer everyone's…",
    "thumb": "",
-   "title_ko": "더 많은 AI 데이터 센터가 답이 아닌 이유 | 디미트리오스 니콜로풀로스 | TEDxMidAtlantic"
+   "title_ko": "더 많은 AI 데이터 센터가 답이 아닌 이유 | 디미트리오스 니콜로풀로스 | TEDxMidAtlantic",
+   "detail_ko": "우리는 AI의 미래가 점점 더 큰 데이터 센터, 즉 도시의 물을 마시고 도시의 전력을 끌어와 동일한 두 개의 챗봇이 모든 사람의 질문에 답할 수 있는 창고와 같다고 들었습니다."
   },
   {
    "id": "d55cbe9ac3674b8a",
@@ -2551,7 +2593,8 @@
    "published": "2026-09-24T15:00:04+00:00",
    "summary": "Climate expert Ari Matusiak spends his days working to rewire America's energy system, and he has an idea: instead of tech companies building new power plants for their AI data…",
    "thumb": "",
-   "title_ko": "AI가 만들어내는 에너지 혼란과 해결 방법 | 아리 마투시아크 | TED"
+   "title_ko": "AI가 만들어내는 에너지 혼란과 해결 방법 | 아리 마투시아크 | TED",
+   "detail_ko": "기후 전문가 Ari Matusiak은 미국의 에너지 시스템을 재편성하기 위해 하루 종일 일하고 있으며 아이디어가 있습니다. 기술 회사가 AI 데이터를 위해 새로운 발전소를 건설하는 대신…"
   },
   {
    "id": "40b261cbbd8ba72b",
@@ -2717,7 +2760,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2823,9 +2866,9 @@
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2927,7 +2970,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 65
+   "fetched": 66
   },
   {
    "name": "구글뉴스: AI 정책",
