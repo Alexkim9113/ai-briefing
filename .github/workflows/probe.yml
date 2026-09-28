@@ -1,0 +1,23 @@
+name: probe
+on:
+  push:
+    branches: [probe]
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          U='https://export.arxiv.org/api/query?search_query=cat:cs.CY+AND+abs:law&sortBy=submittedDate&sortOrder=descending&max_results=3'
+          Q='https://export.arxiv.org/api/query?search_query=%28abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22%29+AND+abs%3Aclimate&sortBy=submittedDate&sortOrder=descending&max_results=3'
+          {
+          for ua in "Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)" "METAXIS-briefing/1.0 (https://github.com/Alexkim9113/ai-briefing)" "curl/8"; do
+            for u in "$U" "$Q"; do echo "UA=$ua"; curl -s -o /tmp/o -w '%{http_code}\n' -A "$ua" -H 'Accept: */*' "$u"; head -c 300 /tmp/o; echo; done
+          done
+          echo NATURE; curl -sL -o /tmp/n -w '%{http_code} %{content_type}\n' -A "METAXIS-briefing/1.0" https://www.nature.com/subjects/machine-learning.rss; head -c 600 /tmp/n; echo
+          curl -sL -o /tmp/n2 -w '%{http_code} %{content_type}\n' -A "METAXIS-briefing/1.0" https://www.nature.com/natmachintell.rss; head -c 400 /tmp/n2
+          } > probe.txt 2>&1
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git add probe.txt && git commit -m probe && git push
