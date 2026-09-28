@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T13:41+09:00",
+ "generated_at": "2026-09-28T13:42+09:00",
  "items": [
   {
    "id": "b163ed3fcb727529",
@@ -2608,7 +2608,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 77
+   "fetched": 79
   },
   {
    "name": "Google News: AI 기업",
@@ -2655,8 +2655,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2696,9 +2696,9 @@
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2824,7 +2824,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "스테이지5",
