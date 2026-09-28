@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:46+09:00",
+ "generated_at": "2026-09-28T16:48+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -453,6 +453,17 @@
    "trv": 2
   },
   {
+   "id": "9a327d085664af76",
+   "title": "‘방산 인공지능 전환’ 대전시·육군 협력 시동",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5OMElaQ09ZeEc4RHdqbjlyLTFuaGV4SlZjUTV2My16YVc5NXBtOGJfU29LdElWZEYwWncxUFdFUU1KWlRPZFF6NTlMV2hqSjRna3FYd2pCalJPQzVpR3N0anI1UGlQdXc3RkFF?oc=5",
+   "source": "디트NEWS24",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:02:23+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "3a99aad9e7a79fcd",
    "title": "[영상] 충주 공장 둔 美 SES AI …韓, 배터리 수출 규제 완화에 미소",
    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1GNkNRNnIyRGptdmZmVDMwbnhkbFVUeUg3T1FvYUo5Vzc4SUhJcDg4RkVLc2JyWW0zX0JFUndFTVlySnk4QzNiQTN1emNvUXdlS2hNZVQxb3JZOENHVk02SWlrbw?oc=5",
@@ -516,6 +527,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T06:40:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "f0fd1559d04523e7",
+   "title": "MS “韓 생성형 AI 사용률 40% 첫 돌파…세계 12위로 상승”",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5pZVFKV2k1UnVBdzRWanFkR1Q4RXU3MmhXMm9Lem9mVDdLOFczX1FxQlF4b1JjWklMV0pETmhCdFBPUWdFeVBfTHhpQ0F5Zw?oc=5",
+   "source": "전자신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:38:20+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -878,28 +900,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T05:08:16+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "0ae864b7c9544b48",
-   "title": "“AX로 한국 AI 수도 조기 완성’…충남도, AI 과제 발굴 보고회",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aRDFta1RvMjdnTGluckNiT2VMdExrQllGa2NaaDV4U21tT1NOQ3dHc2p5Yk9jeWd1aWRoUloxMlZoTmZSLXBQdXVnZm5SYVl3Y0xzUXktNHAyVUtJTVVHTUxnNDgxQWc?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:07:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "9f1b740aa47cda18",
-   "title": "\"깜빡한 구독료, AI가 찾아 끊는다\"… 구독경제 '관성 결제' 수익모델 타격 |",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9iWFUyNHZsenFrcXlFeDlSM3BjVnNVblB4SXBLU1ZpRXhKcWRtVlZ4c0NTZElkWHpNQmh0dFRKUHlyd0lKVkhnWmJoTlp6Z1Zzb1ppOWJjX0twTU00VndNUHFhTTB4TEdhNXdpSXJJdlVSOTFx?oc=5",
-   "source": "IT조선",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T05:03:46+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -3043,7 +3043,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -3061,7 +3061,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 83
+   "fetched": 79
   },
   {
    "name": "Google News: AI 기업",
@@ -3114,8 +3114,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -3276,8 +3276,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3319,7 +3319,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 66
+   "fetched": 68
   },
   {
    "name": "스테이지5",
