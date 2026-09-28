@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T18:11+09:00",
+ "generated_at": "2026-09-28T18:13+09:00",
  "items": [
   {
    "id": "67dd4805323458d6",
@@ -647,6 +647,17 @@
    "thumb": ""
   },
   {
+   "id": "49b59d900ec7166a",
+   "title": "대장균 설계가 효모에서도 통할까…KAIST, ‘공용 유전자 스위치’ 개발",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1US1dGdHplSEpFLUhySTAzZk9xRmI0RFdidHBFYzZsOWpRQmJCUGxBUGxDSGJzSlp5VkhFLTNJOUltb2wzYmJoS1FLS1JGU2VPUEpyYXlUbUxtWXBjeHpua1RzTFJQOENUVTUtRw?oc=5",
+   "source": "바이오타임즈",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T08:38:20+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "61e6572ebf2efdb4",
    "title": "Market Chatter: Nvidia's New AI Chips Could Enter Chinese Market",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZDhKOEFyUDhaSG9VLXYtNktSNEhWSnBPaVlnZkdiNTBwNmN6SmV0ZzYtS3ZpTGNVYl94eEVNY1FlcWozZDNyVV9uSjREWVk1ZXZUbmljbzBpTmNmcXoxRFY2ZFVidVdmbnRDZHJBOW94dHpZNlZYT05hb0Z1UkwwQnl2dmY?oc=5",
@@ -1235,6 +1246,17 @@
    "title_ko": "수개월간의 갈등에도 불구하고 트럼프, 앤트로픽 CEO 아모데이와 만찬 예정",
    "tr": "deepl",
    "trv": 2
+  },
+  {
+   "id": "ab5676fb003650b0",
+   "title": "하정우 부위원장, AI 현장 소리 직접 듣는다…정책 토크쇼 개최",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zV19mVGhpWWxVTWw4Z01yaDZZaVJqZ21iM2ptTWRyaW5jREhFSDdielBQSDJBSklQaFg2OGs4aWR4TUo0UFNrVkE3RUQ3NW5fN3lxSUdn?oc=5",
+   "source": "지디넷코리아",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T04:16:41+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "9a47cecddfd15ef1",
@@ -2914,17 +2936,6 @@
    "trv": 2
   },
   {
-   "id": "d3c1d1e9cc33fee7",
-   "title": "Stanford dean says AI labs are competing with universities for faculty: 'I won't lie, I worry about this'",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPclg5VEJieDdFSklOWnVCWjZWa25kWmNTVDZPdUlEdVBYVjlDWU9YOWF3ZW00M05CZWVyTTBUYTdOMGRGektYV2pIOF9Rb1N5TDZnOWszUjlHQVgtRXV1Umh4bVJ0NzgzVGFpbWRtZENCNFFHSktGemhMSmcycmo5dk9iNEI3Y0pfTkhB?oc=5",
-   "source": "Stanford · 스탠퍼드 연구",
-   "field": "스탠퍼드 연구",
-   "category": "papers",
-   "published": "2026-09-26T09:15:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "fef9bbebe93354cc",
    "title": "Why more AI data centers aren’t the answer | Dimitrios Nikolopoulos | TEDxMidAtlantic",
    "link": "https://www.youtube.com/watch?v=yvpq0c3ZJu0",
@@ -3143,12 +3154,12 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 2,
    "fetched": 70
   },
   {
@@ -3202,8 +3213,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -3376,20 +3387,20 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": false,
-   "count": 0,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -3419,7 +3430,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 69
+   "fetched": 68
   },
   {
    "name": "스테이지5",
