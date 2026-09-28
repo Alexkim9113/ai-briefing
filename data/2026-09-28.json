@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:48+09:00",
+ "generated_at": "2026-09-28T15:50+09:00",
  "items": [
   {
    "id": "d729869c6d2683f2",
@@ -2791,9 +2791,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+   "ok": true,
+   "count": 6,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -2823,7 +2823,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 85
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2858,14 +2858,14 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -3002,8 +3002,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
