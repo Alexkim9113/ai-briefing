@@ -1160,6 +1160,9 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .trend .thumb{border-radius:12px}.trend .thumb .tag{display:none}
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ib-h{display:block!important;margin:0 0 4px!important;font-size:11px!important;font-weight:800;letter-spacing:.14em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.ib-p{margin:4px 0 12px;padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,rgba(18,227,255,.08),rgba(139,44,255,.10));border:1px solid var(--line)}.ib-p p{margin:0}
+.hero .ib-p p:not(.ib-h){font-size:15px;line-height:1.7;color:var(--text,inherit)}.trend .ib-p{padding:8px 10px;margin:2px 0 6px}
 .cd{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);margin-right:7px;vertical-align:.12em}
 .brief-bg{position:fixed;inset:0;z-index:50;background:rgba(3,3,12,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center;padding:20px;animation:bfade .18s ease}
 .brief{position:relative;box-sizing:border-box;width:min(560px,100%);min-width:0;overflow-x:hidden;overflow-wrap:anywhere;word-break:keep-all;max-height:86vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:18px;padding:26px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
@@ -1292,7 +1295,7 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
-  const AI=!!a.dataset.ai;return `<h4>${AI?'QUICK BRIEF':'요약'}</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>${AI?'METAXIS POINT':'METAXIS VIEW · 시사점'}</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
+  return `<h4>QUICK BRIEF</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS POINT</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
  <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p>${isOp()&&a.dataset.id?`<a class="brief-del" href="/editor/write.html#hide=${e(a.dataset.id)}&t=${encodeURIComponent(a.textContent.trim().slice(0,120))}">이 기사 삭제</a>`:''}</div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
@@ -2621,6 +2624,24 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .plist .pt{cursor:pointer}.plist .pt:hover{color:var(--accent,#3b7bff);text-decoration:underline}.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
+def mx_brief(it):
+    """(QUICK BRIEF, METAXIS POINT): METAXIS 브리핑(AI)이 있으면 그것, 없으면 규칙 방식."""
+    mx = it.get("mx") or {}
+    if mx:
+        return mx.get("b", ""), mx.get("p", "")
+    summ, view, _ = mx_note(it)
+    return summ, view
+
+
+def inline_brief(it):
+    """헤드라인·주요 소식 본문: 기사 창과 같은 QUICK BRIEF·METAXIS POINT."""
+    b, p = mx_brief(it)
+    out = f'<p class="ib-h">QUICK BRIEF</p><p class="sum">{esc(b)}</p>' if b else ""
+    if p:
+        out += f'<div class="ib-p"><p class="ib-h">METAXIS POINT</p><p>{esc(p)}</p></div>'
+    return out
+
+
 def sum_ko(it):
     """해외 글: 요약 바로 아래에 자동 번역을 붙인다."""
     return f'<p class="sum-ko">{esc(it["summary_ko"])}</p>' if it.get("summary_ko") else ""
@@ -2635,10 +2656,10 @@ def render_home(data, cats, posts):
     parts, used = [], set()
     hero, trend = pick_featured(items)
     if hero:  # 사진은 헤드라인과 주요 소식에만
-        summ = (f'<p class="sum">{esc(hero["summary"])}</p>' if hero.get("summary") else "") + sum_ko(hero)
+        summ = inline_brief(hero)
         side = "".join(
             f'<div class="trend">{thumb_html(i, "", used)}<div><h3 class="serif">{title_link(i)}</h3>'
-            + (f"<p>{esc(i['summary'])}</p>" if i.get("summary") else "") + sum_ko(i)
+            + inline_brief(i)
             + f"{meta_html(i, cats, True)}</div></div>" for i in trend)
         parts.append(
             f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
