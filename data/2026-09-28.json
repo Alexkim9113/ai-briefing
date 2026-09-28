@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:40+09:00",
+ "generated_at": "2026-09-28T12:41+09:00",
  "items": [
   {
    "id": "c54492f4dae2d495",
@@ -120,6 +120,17 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T02:53:40+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "87992ab1b0fb7ea7",
+   "title": "中 1∼8월 공업이익 15.7% 증가…AI 붐 속 내수 부진 지속",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hdVJraFlfeGpqZmxxZnZ5Z2lWMUFwa3JOdURtQXpOeVM4ZURnbzB1RVZjWHl0MGw5b0EwTzVHNTVYbzFXWGtBdUtYQjVITXZWOG52aG0zQmpPbGQ2Y1NRWtIBYEFVX3lxTE9hdVJraFlfeGpqZmxxZnZ5Z2lWMUFwa3JOdURtQXpOeVM4ZURnbzB1RVZjWHl0MGw5b0EwTzVHNTVYbzFXWGtBdUtYQjVITXZWOG52aG0zQmpPbGQ2Y1NRWg?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T02:48:14+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1287,16 +1298,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-27T21:48:03+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e2f0400b1131ca78",
-   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T21:41:43+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2560,7 +2561,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 81
+   "fetched": 79
   },
   {
    "name": "Google News: AI 기업",
@@ -2607,8 +2608,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2739,8 +2740,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2770,13 +2771,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 41
+   "fetched": 42
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 48
+   "fetched": 51
   },
   {
    "name": "스테이지5",
