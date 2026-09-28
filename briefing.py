@@ -1196,7 +1196,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 {head}<style>{CSS}</style>{ld}</head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/?v={og_ver()}" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
@@ -1716,10 +1716,15 @@ def render_md(body):
     return "\n".join(out)
 
 
-def og_main():
-    """공유 미리보기 사진 주소. 사진이 바뀌면 주소 끝(?v=)도 바뀌어 카카오톡 등이 옛 사진을 다시 쓰지 않는다."""
+def og_ver():
     f = ROOT / "static" / "og-main.png"
-    return "og-main.png" + (f"?v={hashlib.sha1(f.read_bytes()).hexdigest()[:8]}" if f.exists() else "")
+    return hashlib.sha1(f.read_bytes()).hexdigest()[:8] if f.exists() else "1"
+
+
+def og_main():
+    """공유 미리보기 사진 주소. 사진이 바뀌면 주소 끝(?v=)도 바뀌어 카카오톡 등이 옛 사진을 다시 쓰지 않는다.
+    카카오톡은 '페이지 주소'별로도 미리보기를 기억하므로, 공유 버튼이 건네는 주소에도 같은 ?v= 를 붙인다."""
+    return f"og-main.png?v={og_ver()}"
 
 
 def post_item(p):
@@ -1993,7 +1998,7 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     if sc["naver"]:
         verify += f'<meta name="naver-site-verification" content="{esc(sc["naver"])}">'
     page_ = (ROOT / "intro.html").read_text(encoding="utf-8")
-    for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{OG}": og_main(), "{VERIFY}": verify,
+    for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{OG}": og_main(), "{OGV}": og_ver(), "{VERIFY}": verify,
                  "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else "", "{FAVICON}": FAVICON,
                  "{DATE}": f"{d.month}월 {d.day}일", "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
         page_ = page_.replace(k, v)
