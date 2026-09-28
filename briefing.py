@@ -570,7 +570,7 @@ def _translate_items(todo, foreign, google_only):
 # 무료 AI(Google Gemini 무료 한도, 저장소 비밀값 GEMINI_KEY)로 쓴다. GitHub Models는 2026-09-28 시험에서
 # 응답 없이 "OK"만 돌려줘 쓸 수 없었다. AI에는 제목과 언론사·채널이 공개한 소개글만 보낸다(본문 수집 없음).
 # 한도를 넘으면 다음 실행에서 이어서 쓰고, 그 전까지는 규칙 방식 창을 보여 준다.
-MX_MODEL = os.environ.get("MX_MODEL", "gemini-2.5-flash")
+MX_MODEL = os.environ.get("MX_MODEL", "gemini-flash-latest")
 MX_VER = 1
 MX_CATS = {"news_ko", "news_global", "papers", "policy", "talks"}
 MX_PROMPT = """너는 METAXIS의 AI 브리핑 에디터다.
