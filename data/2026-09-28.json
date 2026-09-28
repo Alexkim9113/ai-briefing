@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T22:01+09:00",
+ "generated_at": "2026-09-28T22:04+09:00",
  "items": [
   {
    "id": "3b69094bd9c06432",
@@ -1281,6 +1281,17 @@
    "detail_ko": "인공지능 에이전트 스타트업 닌자테크 AI(주).\n오늘, 이 스타트업은 대기업들이 연간 고정 요금을 지불하고 자사 클라우드 환경 내에서 이 스타트업이 ‘AI 직원’이라고 부르는 시스템을 운영할 수 있도록 ‘Ninja Enterprise’를 출시했다."
   },
   {
+   "id": "0edd38e94700ee6d",
+   "title": "인형 두고 \"빵 아니면 찔러라\"…AI 로봇팔 선택 '충격'",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yOWFVbEZtOG0zbFFSMmt3MHRad0ExemJpa3ByZDJlczJMMHhsN185RHFwcndRMEg4ZFpwbE41NVdMd290VUNSM0w0dmxLa3M?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:57:05+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "81c288a26e2284f2",
    "title": "단편 영화와 AI의 독성 열풍 (1부): 시청자를 마지막 한 푼까지 착취하는 행태",
    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWGJ1Uy1NWUdTZjBMR2c5V1Yxd0NwbzdFRVhIdlhyQ3AydkVfZmZXbEdaWHZVZ3JwalZPckxFV3JBNE93bi1MX05scUF6RE5lRmJ0cW54Q3JzRFl0LVlNSEpoWnpCVEtBbXpzbnRBOFJoYTJ2S1JfZjFlcW1rQURHVFFTNWU0VlFtai1FQXRQcWhXZ2hEZzRvVThFQjY?oc=5",
@@ -1288,6 +1299,28 @@
    "field": "문화·예술",
    "category": "news_ko",
    "published": "2026-09-28T12:56:20+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "a6af335df8a36bcc",
+   "title": "인공지능(AI) 대전환·자율주행·문화관광 등 초광역 상생협력 전남광주특별시-울산광역시, ‘대체불가 대한민국’ 선도",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZSldzZXB4ZTA4S2RwU2k3eXk2QW9ZQngwTDI4cnJIUDdLTEpPaTRING5BM1RJV2loRXFfb3g2S3VjSmxpZERveHJwZkZLam1xeEVydTdEVXBKSVZicE9SazBUVEhXLUZCZDNSb25IQzNzQmc?oc=5",
+   "source": "한국언론연합",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:54:17+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "ea6c7cf5c99aaf5d",
+   "title": "MS·메타, 한국서 AI와 프라이버시 논의",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1xX0R3eG03SExfbDZyS1c1U2lXSHQ2ZFhsZjlWZGtSZ3BHdG9vdGwwTWlOcnc1RGJnNW5VSmpTUnM0eTl0N2lqZHF2dVhCTnM?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:49:59+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1323,6 +1356,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "77b258d1ae5ef8f9",
+   "title": "Beyond the Single AI Path: You Can Have It All",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81SU5ZQ2FiS3FMM09mc2xwUU5LNVhlc1lxaU1mZll3bGtSakZLMU5KS05JUGwxUkVFX0N3b1ZheFNGUUEtdl95T21VdHRGWGVqNUdPLTlXam5KOG1kd1dYMWRaZGt2Yl9xYmNIMzNXVk1QZzB4WEx6OWRn?oc=5",
+   "source": "Hunt Scanlon Media",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-09-28T12:43:49+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "b2c6d42306837439",
@@ -4715,27 +4759,6 @@
    }
   },
   {
-   "id": "eb4c656911c5a2e8",
-   "title": "[중국 특징주] 'AI부터 제어까지 국산 기술로'…동토과기, 체화지능 로봇 공개",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1sY0NBNk1DMDFnTGo0N3ZvQnlXR05odDdUYUxmM2REay1ESmtlNWdPWE43MUYtbWQza2Z1VklHQkFOTThLa2tHVmFBcEY3czRFa0NpWXVlYUpGZXVB?oc=5",
-   "source": "뉴스핌",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T08:05:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "중국 동토과기가 인공지능부터 제어 시스템까지 자체 국산 기술로 개발한 체화지능 로봇을 공개했다. 하드웨어와 소프트웨어의 국산화를 결합해 로봇 제어 성능을 끌어올렸다.",
-    "p": "글로벌 공급망 분절 속에서 중국 기업들이 핵심 제어 기술과 AI를 결합한 독자적인 물리적 인공지능 생태계 구축에 속도를 내고 있다.",
-    "t": [
-     "동토과기",
-     "체화지능",
-     "로봇"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "82283b8c6a2bdc8a",
    "title": "AI기본법 곳곳 '해석 공백'…워터마크·고영향AI 혼선 여전",
    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE12VkV6SXZMZVhVaG1JREJLREpPeHBVN1VGVmRNd3EyRG1ZYnlhUWNLcW9Kby1RMl9vZ1lwVmJ4YjEtSUlxSW5KVWtfVFVDdw?oc=5",
@@ -4778,48 +4801,6 @@
      "미국주정부",
      "AI안전",
      "입법정책"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "e2b2bfc1b70f2cb4",
-   "title": "너무 비싼 오픈AI·앤트로픽…\"미국 기업들 개방형 모델 사용 급증\"",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5xdThkaU9WeVNiRGw0UmdHbS13Y3BJdVVVRDhEUFdkckpMaEdrUDJDV0JvMDRINVJtaUgxSnd2R2lyc2dURmhBRjRZNDR2cjJ0U2RaZEVZSTl4S3kzMmx5S2tUcy01RVNhWjB0b0ln0gFzQVVfeXFMTThOeFdmdzJqX2VJWHh5RS1LNjlFNFYxam5fMmR5THlrQ2RfQ05TdTRCZHhNWENXTzk4N3RCeC1WZE1CeUZPUmMzeWF6YXFPbk9zQUJlSW9YcUlSTUsyRWsyODM0Y2xlclo5LWhUTExaaUVBUQ?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T08:00:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "오픈AI와 앤트로픽의 서비스 이용 비용 부담이 커지면서 미국 기업들 사이에서 개방형 모델 사용이 급증하고 있다. 비용 효율성을 확보하기 위한 대안으로 오픈소스 기반 모델이 주목받는 추세이다.",
-    "p": "고비용의 독점적 상용 AI 모델에 대한 의존도를 낮추고 인프라 비용을 절감하려는 기업들이 오픈소스 생태계로 이동하는 구조적 변화가 나타나고 있다.",
-    "t": [
-     "오픈AI",
-     "앤트로픽",
-     "오픈소스"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "9e2709441c7d8f35",
-   "title": "[정보통신 미래모임] “행정 전면 AI로 재설계”…'AI 민주정부' 속도",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1HRHBFY0xTSkhLa2Nua2xXT2xuUkdRZ1h6THZMMV9Wb0F6MU5aRWYxSGZoeWFDdk9QSm5JVDMxOWFmTGZtTnZvM1NFUU9fUQ?oc=5",
-   "source": "전자신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T08:00:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "행정 시스템을 인공지능 기반으로 전면 재설계하는 'AI 민주정부' 구현 작업이 추진되고 있다. 공공부문의 업무 방식을 AI 중심으로 전환하여 행정 효율성을 극대화하려는 시도이다.",
-    "p": "행정 전반에 인공지능을 내재화하는 과정은 단순한 업무 자동화를 넘어 공공 서비스와 의사결정 구조 자체를 재편하는 패러다임 전환을 의미한다.",
-    "t": [
-     "공공AI",
-     "행정혁신",
-     "디지털정부"
     ],
     "v": 1
    }
@@ -6025,29 +6006,6 @@
      "에이전틱AI",
      "옵저버빌리티",
      "디버깅"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "da426871438a7360",
-   "title": "생성형 AI 썼다면 모델·버전 공개해야… 국가R&D 책임은 연구자",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fWDFHNE9ycXVYZkxlalg0ckNMN2RSbURubFVGUmJ3UkpNV3BJS2piVF80NWx6VW90LUFiWFhuLURQNzN3LXJRWmhNNnNRdU0?oc=5",
-   "source": "v.daum.net",
-   "field": "문화·미디어",
-   "category": "papers",
-   "published": "2026-09-28T02:04:10+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "국가 연구개발(R&D) 과정에서 생성형 AI를 활용할 경우 사용한 모델과 버전을 투명하게 공개해야 하며, 이에 대한 책임은 연구자에게 부여된다.",
-    "p": "학술 및 기술 연구의 신뢰성과 투명성을 확보하기 위해 생성형 AI 활용에 대한 명확한 연구 윤리 기준이 제도화되고 있다.",
-    "t": [
-     "국가R&D",
-     "생성형AI",
-     "연구윤리",
-     "모델공개",
-     "정책"
     ],
     "v": 1
    }
@@ -8399,33 +8357,6 @@
    "trv": 2
   },
   {
-   "id": "1063d1cee8a5282e",
-   "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
-   "link": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-26T10:30:00+00:00",
-   "summary": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
-   "thumb": "",
-   "title_ko": "메타의 ‘뮤즈’는 성인 전용이다. 그런데 왜 어린이 장난감처럼 보이는 걸까?",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "메타는 '뮤즈(Muse)'가 성인 전용이라고 밝혔지만, 라부부(Labubu)를 닮은 귀여운 마스코트와 곧 출시될 다마고치 스타일의 AI 기기는 모든 연령대의 사용자에게 호감을 줄 수 있을 것으로 보인다.",
-   "detail_ko": "메타는 '뮤즈(Muse)'가 성인 전용이라고 밝혔지만, 라부부(Labubu)를 닮은 귀여운 마스코트와 곧 출시될 타마고치 스타일의 AI 기기는 모든 연령대의 사용자를 사로잡을 수도 있다.",
-   "mx": {
-    "b": "메타는 성인용 제품이라고 밝힌 AI 기기 '뮤즈'가 아동용 장난감 같은 친근한 마스코트와 디자인을 채택해 대상 연령 설정에 혼선을 준다는 지적이 나왔다.",
-    "p": "성인용 하드웨어 기기에 친숙하고 귀여운 캐릭터 디자인을 적용함으로써 사용자 연령 경계를 모호하게 만드는 마케팅 전략을 취하고 있다.",
-    "t": [
-     "메타",
-     "뮤즈",
-     "하드웨어",
-     "디자인"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "d3c1d1e9cc33fee7",
    "title": "Stanford dean says AI labs are competing with universities for faculty: 'I won't lie, I worry about this'",
    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPclg5VEJieDdFSklOWnVCWjZWa25kWmNTVDZPdUlEdVBYVjlDWU9YOWF3ZW00M05CZWVyTTBUYTdOMGRGektYV2pIOF9Rb1N5TDZnOWszUjlHQVgtRXV1Umh4bVJ0NzgzVGFpbWRtZENCNFFHSktGemhMSmcycmo5dk9iNEI3Y0pfTkhB?oc=5",
@@ -9145,21 +9076,6 @@
    "detail_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 18일; doi:10.1038/s42256-026-01312-x 살아있는 유기체는 복잡한 환경과 상호 작용하면서 내부 생리적 상태를 지속적으로 모니터링하고 이러한 내부 신호의 변화에 ​​반응하여 행동을 조정합니다."
   },
   {
-   "id": "58601c7ca2624210",
-   "title": "RayOrch: Programming and Executing Lineage-Controlled Multi-Grain Dataflows for Foundation-Model Data Preparation",
-   "link": "https://huggingface.co/papers/2609.18703",
-   "source": "Hugging Face 오늘의 논문 · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-15T20:00:00+00:00",
-   "summary": "Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records.",
-   "detail": "Preparing high quality training data for foundation models requires scalable pipelines that transform heterogeneous documents and videos into structured records.\nThe compiler validates each pair, while the runtime records child membership, immediate parents, immutable ordinals, and terminal states.",
-   "thumb": "",
-   "summary_ko": "기초 모델을 위한 고품질 훈련 데이터를 준비하려면 이기종 문서와 비디오를 구조화된 기록으로 변환하는 확장 가능한 파이프라인이 필요합니다.",
-   "tr": "g",
-   "detail_ko": "기초 모델을 위한 고품질 훈련 데이터를 준비하려면 이기종 문서와 비디오를 구조화된 기록으로 변환하는 확장 가능한 파이프라인이 필요합니다.\n컴파일러는 각 쌍의 유효성을 검사하는 반면 런타임은 하위 구성원, 직계 상위, 불변 서수 및 터미널 상태를 기록합니다."
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -9312,7 +9228,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "fetched": 70
   },
   {
@@ -9505,7 +9421,7 @@
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 42
+   "fetched": 41
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -9517,19 +9433,19 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 78
+   "fetched": 76
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 73
+   "fetched": 75
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 77
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -9541,19 +9457,19 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 36
+   "fetched": 37
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -9565,13 +9481,13 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 54
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "VentureBeat AI",
@@ -9697,7 +9613,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -9721,7 +9637,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
@@ -9757,13 +9673,13 @@
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 50
+   "fetched": 52
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 34
+   "fetched": 35
   },
   {
    "name": "국민일보",
@@ -9811,7 +9727,7 @@
    "name": "더팩트",
    "ok": true,
    "count": 5,
-   "fetched": 99
+   "fetched": 100
   },
   {
    "name": "데일리안",
@@ -9888,7 +9804,7 @@
   {
    "name": "연합뉴스",
    "ok": true,
-   "count": 5,
+   "count": 4,
    "fetched": 120
   },
   {
@@ -9943,7 +9859,7 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "주제: 동물 · 동물",
@@ -9961,7 +9877,7 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 50
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -9973,7 +9889,7 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 42
+   "fetched": 43
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
@@ -10009,7 +9925,7 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "주제: 정치 · 정치",
@@ -10021,13 +9937,13 @@
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 39
   },
   {
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "주제: 피지컬 AI · 피지컬 AI",
