@@ -441,13 +441,13 @@ def make_item(src, it, keywords, now):
         d = now
     if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
-    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
+    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only")):
         return None
     summary = summarize(it["desc"], title)
     detail = detail_lines(it["desc"], title, summary)
     return {
         "id": item_id(it["link"], title), "title": title, "link": it["link"],
-        "source": outlet or label(src), "field": src.get("field", ""),
+        "source": outlet or src.get("outlet") or label(src), "field": src.get("field", ""),
         "category": src["category"], "published": d.isoformat() if d else None,
         "summary": summary,
         **({"detail": detail} if detail else {}),
@@ -1294,8 +1294,9 @@ def pick_featured(items):
     """헤드라인 1개 + 주요 소식 4개. 언론사가 '많이 본 기사'·'주요 뉴스'로 올린 글(hot)만 쓰고,
     그런 글이 모자랄 때만 요약이 있는 최신 뉴스로 채운다. 분야가 겹치지 않게 고른다."""
     pri = {"news_ko": 0, "news_global": 1, "policy": 2, "talks": 3, "papers": 4}
-    hot = sorted((i for i in items if "hot" in i), key=lambda i: (not i.get("summary"), i["hot"], pri.get(i["category"], 9)))
-    rest = sorted((i for i in items if "hot" not in i and i["category"] in ("news_ko", "news_global", "policy")),
+    news = ("news_ko", "news_global", "policy")
+    hot = sorted((i for i in items if "hot" in i and i["category"] in news), key=lambda i: (not i.get("summary"), i["hot"], pri.get(i["category"], 9)))
+    rest = sorted((i for i in items if "hot" not in i and i["category"] in news),
                   key=lambda i: (not i.get("summary"), pri.get(i["category"], 9)))
     ranked = hot + (rest if len(hot) < 5 else [])
     if not ranked:
