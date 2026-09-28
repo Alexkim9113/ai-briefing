@@ -1,7 +1,42 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T21:36+09:00",
+ "generated_at": "2026-09-28T21:48+09:00",
  "items": [
+  {
+   "id": "f90a24c132fea45e",
+   "title": "[사이월드]미·중 냉전 녹인 ‘판다 외교’…‘전략적 평화’ 상징으로 귀환",
+   "link": "https://www.khan.co.kr/article/202609282142005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T21:42:00+09:00",
+   "summary": "‘빅딜’ 대신 대여한 판다 한 쌍수컷 ‘핑핑’ 이름엔 “평화” 뜻AI 등 갈등 개선 효과는 의문미·중 정상회담 직후 중국이 미국에 판다 한 쌍을 보내면서 ‘판다 외교’가 다시 주목받고 있다. 냉전기 미·중관계 개선을 상징했던 판다가 이번에는 전략 경쟁 속 ‘휴전’을 보여주는 우정의 사절로 등장했다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "3b69094bd9c06432",
+   "title": "[개장전특징주]엔비디아, 마이크론, 테슬라",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=04988886645584712",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T21:39:38+09:00",
+   "summary": "28일(현지시간) 개장 전 특징주엔비디아가 기존 자사주 매입 계획에 더해 1500억달러 규모의 자사주를 추가로 매입하기로 했다. 이는 기업 역사상 자사주 매입 승인 규모로는 역대 최대 수준이다.",
+   "detail": "28일(현지시간) 개장 전 특징주엔비디아가 기존 자사주 매입 계획에 더해 1500억달러 규모의 자사주를 추가로 매입하기로 했다.\n이는 기업 역사상 자사주 매입 승인 규모로는 역대 최대 수준이다.\n이번 추가 승인으로 남은 총 승인 금액은 2350억달러로 늘어났으며, 엔비디아는 이를 2028 회계연도까지 집행할 것으로 예상하고 있다.",
+   "thumb": "",
+   "mx": {
+    "b": "엔비디아가 1500억 달러 규모의 자사주 추가 매입을 승인하며 역대 최대 수준의 주주 환원 계획을 발표했다. 이에 따라 집행 가능한 총 승인 잔액은 2350억 달러로 확대되었으며, 집행 기한은 2028 회계연도까지다.",
+    "p": "AI 반도체 수요 폭증을 통해 축적한 대규모 현금 창출력을 바탕으로 초대형 주주 환원을 단행해 장기적인 사업 안정성과 재무적 자신감을 시장에 입증했다.",
+    "t": [
+     "엔비디아",
+     "자사주매입",
+     "반도체",
+     "주주환원"
+    ],
+    "v": 1
+   }
+  },
   {
    "id": "3e6bd96621ba3bd8",
    "title": "오스코텍 최대주주 김성연, 2대주주와 손잡고 이사회 재편 시동",
@@ -11,7 +46,18 @@
    "category": "news_ko",
    "published": "2026-09-28T21:32:02+09:00",
    "summary": "김정근 전 오스코텍(039200) 창업주의 외아들이자 최대주주인 김성연 제노스코 이사가 오스코텍 경영권 참여를 위해 이사회 재편에 나선다. 김 이사는 임시주주총회를 통해 자신을 포함한 신규 이사 3명을 선임하고, 그동안 지배구조 문제로 지적돼 온 초다수결의제 폐지도 추진한다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "오스코텍의 최대주주인 김성연 제노스코 이사가 2대 주주와 연합해 신규 이사 선임과 초다수결의제 폐지를 골자로 하는 이사회 재편을 추진한다. 임시주주총회를 통해 본격적인 경영권 참여에 나설 계획이다.",
+    "p": "신약 개발 기업의 경영권 분쟁과 지배구조 개선 요구는 바이오 벤처가 상용화 및 성숙기에 접어들며 발생하는 전형적인 지배구조 재편 흐름을 나타낸다.",
+    "t": [
+     "오스코텍",
+     "제노스코",
+     "경영권분쟁",
+     "지배구조"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "a6a095b728b64bb5",
@@ -23,7 +69,18 @@
    "published": "2026-09-28T21:31:00+09:00",
    "summary": "이상행동 불거진 ‘AI 에이전트’오픈AI, 예상밖 행동 ‘훈련 중단’ 글로벌 은행 등 결제업계는 우려 “잘못 구입·너무 많은 돈 쓸 수도” 미·유럽은 개발사에 책임 무게생성형 인공지능(AI)이 질문에 답하는 챗봇을 넘어 스스로 결제하고 e메일을 보내는 ‘AI 에이전트’로 진화하면서 사고 책임을 둘러싼 논란도 커지고…",
    "detail": "이상행동 불거진 ‘AI 에이전트’오픈AI, 예상밖 행동 ‘훈련 중단’ 글로벌 은행 등 결제업계는 우려 “잘못 구입·너무 많은 돈 쓸 수도” 미·유럽은 개발사에 책임 무게생성형 인공지능(AI)이 질문에 답하는 챗봇을 넘어 스스로 결제하고 e메일을 보내는 ‘AI 에이전트’로 진화하면서 사고 책임을 둘러싼 논란도 커지고 있다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "스스로 구매와 결제를 수행하는 AI 에이전트의 오작동 및 이상행동 문제가 불거지면서 금융·결제 업계의 우려가 커지고 있다. 미국과 유럽 규제 당국은 사고 발생 시 개발사에 책임을 부과하는 방향으로 법적 기준을 검토 중이다.",
+    "p": "단순 정보 생성을 넘어 직접 금융 거래를 집행하는 자율 에이전트 환경에서는 시스템 오류와 오남용 책임 소재를 개발사에 지우는 법적 책임 프레임워크 구축이 필수 불가결한 과제로 부상했다.",
+    "t": [
+     "AI에이전트",
+     "AI결제",
+     "책임소재",
+     "AI규제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "2dbe11e93125dc9b",
@@ -58,7 +115,7 @@
    "published": "2026-09-28T21:10:37+09:00",
    "summary": "아부다비에서 21일(현지시간) 기자들이 UAE에 본사를 둔 우주 기술 기업 Space42의 시설을 둘러봤다. 이번 미디어 투어는 위성 통신, 지리 공간 분석, 인공지능(AI) 기능을 결합한 Space42의 기술력을 현장에서 직접 확인하는 자리였다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "f20ce88feaf3ea06",
@@ -1267,6 +1324,50 @@
    }
   },
   {
+   "id": "65f7de4429ec9af2",
+   "title": "정부, 재난안전 분야 AI 전환 본격화… 2030년까지 9400억원 투입 - FPN-소방방재신문",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1xWDZTVlp1YmVNM2xya3ExaHUtdWFLOUFBOG0wdWtma0hVTE9VSGEwX1UxTW9SSnItNFY2a0FHMnpkWERU?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:45:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "정부가 재난안전 관리 체계의 인공지능 전환을 목표로 2030년까지 총 9400억 원의 재정을 투입한다.",
+    "p": "기후변화와 복합 재난에 대응하기 위해 공공 안전 인프라 전반을 실시간 AI 예측 및 데이터 기반 대응 체계로 전면 전환하려는 대규모 국가 재정 투자다.",
+    "t": [
+     "재난안전",
+     "공공AI",
+     "인공지능전환",
+     "정부정책"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "d087e0ae22225f1a",
+   "title": "서울에 모이는 세계 도시 리더들…AI 시대 도시정책 해법 찾는다",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9GN0ZudTlDZ3ZDQzJPR3NYMVdMODNNWTZsdVFPcmVCRnlDaGFQT0dUU1JTeFFaQ2ZKSTRHamd4M2ZtbnRpOHhNZ3UwbGxldndFZGRjUQ?oc=5",
+   "source": "더글로벌기빙뉴스",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T12:34:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "전 세계 주요 도시 행정 책임자들이 서울에 모여 AI 기술 확산에 따른 도시 정책과 공공 거버넌스 해법을 논의한다.",
+    "p": "인공지능 도입에 따른 교통, 주거, 복지 등 도시 행정의 효율화와 함께 디지털 격차, 데이터 프라이버시 등 도시 차원의 거버넌스 기준 정립이 국제적 화두가 되고 있다.",
+    "t": [
+     "스마트시티",
+     "도시정책",
+     "AI거버넌스",
+     "서울시"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "c54492f4dae2d495",
    "title": "“민원 신청은 쉽게, 답변은 신속하게”...국민권익위, '국민신문고' 인공지능 통해 혁신 이룬다",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42087",
@@ -1300,7 +1401,18 @@
    "thumb": "",
    "title_ko": "이 회사가 AI를 활용해 수백만 달러에 달하는 숨겨진 음악 로열티를 회수하는 방법",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "한 기술 기업이 AI 알고리즘을 활용해 스트리밍과 방송 등에서 누락되거나 숨겨진 수백만 달러 규모의 음악 저작권료를 추적·회수하는 솔루션을 선보였다.",
+    "p": "방대한 디지털 음원 유통 채널에서 저작권 정산의 불투명성을 AI 추적 시스템으로 해결함으로써 지식재산권(IP) 수익화와 데이터 정산 효율성을 크게 개선하고 있다.",
+    "t": [
+     "음악저작권",
+     "로열티회수",
+     "음원데이터",
+     "AI추적"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "e68f0666edbc5c4d",
@@ -1507,7 +1619,18 @@
    "thumb": "",
    "title_ko": "엔비디아, AI 에이전트의 제어 불능 상태를 방지할 수 있다고 주장하는 소프트웨어 출시",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "엔비디아가 자율 작동하는 AI 에이전트의 예기치 않은 이상행동과 통제 이탈을 방지하기 위한 안전 소프트웨어를 출시했다.",
+    "p": "자율형 AI 에이전트의 상용화가 본격화됨에 따라 하드웨어 가속을 넘어 모델의 가드레일 제어 및 안전성 검증 소프트웨어 생태계를 선점하려는 전략적 행보다.",
+    "t": [
+     "엔비디아",
+     "AI에이전트",
+     "AI가드레일",
+     "AI안전"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "40d7ecedf5e75bb1",
@@ -1521,7 +1644,18 @@
    "thumb": "",
    "title_ko": "유안 블레어(Euan Blair) 소속 교사들, 업무 평가에 AI가 도입된 후 ‘극심한 스트레스’ 호소",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "영국 기업 멀티버스(Multiverse)에서 교육 인력의 업무 평가에 인공지능 시스템을 도입한 이후 교사들이 극심한 스트레스를 호소하고 있다는 현장 반응이 전해졌다.",
+    "p": "교육 및 정서적 상호작용이 핵심인 직무에서 정량적 AI 평가 툴의 무리한 도입이 노동 환경 악화와 현장 반발을 초래하는 대표적인 직장 내 AI 감시·평가 부작용 사례다.",
+    "t": [
+     "AI근무평가",
+     "노동환경",
+     "알고리즘관리",
+     "에듀테크"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "c6f0290502f08b10",
@@ -1991,6 +2125,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "f34867d45d13f30a",
+   "title": "[AI 로또 ④ ] 두 개 맞히면 예측 성공일까···AI에게 ‘우연’을 다시 물었다",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42V21XeEprdTNHNFhZSjU2Q00ySEhtWG1ZSFJUQ1U4MUViMmEybTdQNlNGM1BMSUxsLXlYRFNFMkdMRWJjU2VTR1JQODZDbUdxTEl6Umo2ZFROYjM4ZjBSSWRqXzEtV2cwR3dGM0RPODdyTjA?oc=5",
+   "source": "여성경제신문",
+   "field": "여성",
+   "category": "news_ko",
+   "published": "2026-09-28T11:03:47+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "ca6d89c27fc0a2e0",
@@ -2534,6 +2679,18 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "c2f2935a6d1e06eb",
+   "title": "AI 데이터센터·원전이 새 성장동력 부각..건설株 강세[종목NOW]",
+   "link": "https://www.fnnews.com/news/202609280952120089",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:02:26+09:00",
+   "summary": "[파이낸셜뉴스] 주택 경기와 부동산 시장에 갇혀 있던 건설주의 투자 논리가 인공지능(AI) 데이터센터와 원전 등 대형 인프라 사업으로 옮겨가고 있다. 28일 오전 9시52분 현재 유가증권시장 건설업종지수는 전 거래일 대비 7.62포인트(4.64%) 오른 171.99를 기록하고 있다.",
+   "detail": "[파이낸셜뉴스] 주택 경기와 부동산 시장에 갇혀 있던 건설주의 투자 논리가 인공지능(AI) 데이터센터와 원전 등 대형 인프라 사업으로 옮겨가고 있다.\n장 초반 3%대였던 상승폭이 4%대로 확대되면서 건설주 전반에 매수세가 강해지는 모습이다.\nAI 확산에 따른 전력 수요 증가가 데이터센터 건설과 발전 인프라 투자 확대로 이어질 것이란 기대가 커지면서 건설업종이 이날 국내 증시에서 가장 가파른 상승세를 나타내고 있다.\nGS건설은 36000원으로 4.05% 상승했고 현대건설은 124800원으로 3.06% 올랐다.",
+   "thumb": ""
   },
   {
    "id": "9909e8012fd470c1",
@@ -3359,6 +3516,20 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "eb3629594d179922",
+   "title": "Parents confront a new fear: Could AI end humanity before their kids grow up?",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3eW1SM3ZtWDlXSmc3S19qTTVHeE5tS1JZVmZ5TGE2dGtxUUx0bUNlaE8xY1lUSGw1d25uRmZrNHRwdnRXRE5fMTVrSWF6SHZueFFxUU9RYmtRZ2N0cFVYR2dya0pRVzYxTmJ5T0NQVjN6dFB3aUVJc056NXZIQQ?oc=5",
+   "source": "CNN",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:00:29+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "부모들이 새로운 두려움에 직면했다: 아이들이 다 자라기도 전에 AI가 인류를 멸망시킬 수 있을까?",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "c046a3ae71a54d9f",
@@ -4690,27 +4861,6 @@
    }
   },
   {
-   "id": "879a1bbb5c5b8d8e",
-   "title": "컴투스플랫폼 '하이브 액실' 30일 출시…오픈AI 코덱스 연동",
-   "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPREVlZlBZNV9IS2VNSkRjWVMzemlLcU1ZZTd0ME1NU3VuNTR5ZGNqRTZFZGJSNHRuelV1VTZSWGhlUGtla0IyLWc3dnlfYXRNc1dtM2k2R3gzcXFXY0huVzI5cmFzT2hoN0pwNEp6WEl2QnZIVFp0UHBpbDBjNXQxbzc4YkZIZS03TGNyMkJLNnd6eXNGNzJ6QWVlclhvcEpwYVdVb1V0Y18zZXA3dkNHQkZoRV9pLW5KMUtZVTZwQm90c1ljeHh4SnkwakFWZDUtM1N3d0tzM0RwVXZJalE0NXJJbDlHVGhhT09WMGZtdVBvQ09odTJrbDFwMjBhRDZaeVBQZzhZTnlabENaVHc?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:29:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "컴투스플랫폼이 '하이브 액실'을 30일에 출시하며 오픈AI 코덱스를 연동한다고 밝혔다. 개발 편의성을 높이기 위해 AI 코딩 보조 기능을 플랫폼에 통합했다.",
-    "p": "게임 및 소프트웨어 개발 플랫폼에 생성형 AI 코딩 도구가 기본 탑재되면서 개발 생산성을 높이는 생태계 통합이 가속화되고 있다.",
-    "t": [
-     "컴투스플랫폼",
-     "오픈AI",
-     "코덱스"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "295c8e6fc3bcd548",
    "title": "Canada Debates AI’s Place In Animation At OIAF’s The Animation Conference",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX19teDVsQXVPcUE2RDJMY0Q4MnAzejMzeVMxS0J1SVE5c1NqUEVFMEtHSnRvRWh3dS1STDAyR3hIZmhyR09CMTJwbU41VGN4YmxFN0dzWnVBRjB4U0xvZDJCNWl6aUt5NjZmQUcydzMwZXFDUGV5VklzWWJmNDZaQklBY3lrc2lVY0tFOW5mNzB3UDc1Rmlqdi1BeFZSN0czdHpITmdwT1NyQlBDMGJSbnZ3WEIxdGpt?oc=5",
@@ -4735,27 +4885,6 @@
    }
   },
   {
-   "id": "94009201bac07140",
-   "title": "'車도시' 전남광주·울산시, AI·자율주행으로 '미래 동맹'…AI 공장혁신·재생에너지 등 협력",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1SNV9kUWpGQUsxbWhMQWpnZU4zczNsQmRSMG9QWHJ2NnNBUUFDeE1BZE1jbzZtZUVaNWF1QW5vVWlKT0JkbXh2bjhVQVZMdTJsSmQtd2d1VHpyOFgyeWZIT2pHdTZQdkwydWFR?oc=5",
-   "source": "프레시안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:25:02+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "자동차 도시인 전남광주와 울산이 AI와 자율주행을 매개로 한 미래 동맹을 결성하고 공장 혁신과 재생에너지 협력에 나선다. 전통 제조업 기반의 산업 도시에 AI 기술을 이식하는 전략이다.",
-    "p": "기존 주력 제조업 거점 도시들이 자율주행과 AI 기반 공장 혁신을 통해 탈탄소화와 디지털 전환을 동시에 달성하려는 산업적 연대를 구축하고 있다.",
-    "t": [
-     "자율주행",
-     "AI공장",
-     "산업동맹"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "6157b03fcb4ba8c2",
    "title": "인공지능(AI) 대전환·자율주행·문화관광 등 초광역 상생협력 전남광주특별시-울산광역시, ‘대체불가 대한민국’ 선도한다",
    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZOHl4NHE4aEpKZ09FY1Y4RUVISkhjV2RNZ0lhVm5DbElOQUNmMzFsVm10OVY5VThxZ3AwR0todWtmVjFxOHkwMjVJaGFkQk8wQkFzUXByM1QtaUx6LTJId3AwQUFab1lDZlZZVEJKeTM5a2s?oc=5",
@@ -4772,30 +4901,6 @@
      "인공지능대전환",
      "상생협력",
      "미래산업"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "d9a22b8bd7238a45",
-   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:22:59+09:00",
-   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
-   "detail": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.\n세계경제포럼은 지난 24일(현지시간) 미국 뉴욕에서 열린 ‘지속가능개발 영향 회의 2026(Sustainable Development Impact Meetings 2026, SDIM26)’ 결과를 발표했다.",
-   "thumb": "",
-   "hot": 4,
-   "mx": {
-    "b": "세계경제포럼(WEF)이 지속가능개발 영향 회의에서 컴퓨트, 에너지, 인프라, 인재 투자를 확대하고 신뢰 격차를 해소해야 한다고 강조했다.",
-    "p": "프런티어 AI 확산에 따른 전력 및 인프라 한계를 극복하기 위해 글로벌 차원의 거버넌스 재편이 요구되고 있다.",
-    "t": [
-     "WEF",
-     "지속가능성",
-     "인프라",
-     "AI거버넌스"
     ],
     "v": 1
    }
@@ -4841,27 +4946,6 @@
      "클라우데라",
      "소버린AI",
      "클라우드"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "97eef8bc6f7e51bb",
-   "title": "[취재후일담] 속도조절론 마주한 ‘AI 강국’ 도전…‘승자의 여유’ 멀리해야",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90el91VDZpM2NBUmdOT0F6Q2J2WlZNSFZsMDhudm5qLWNST0lTeHpRbGlnS1JPTFlRZWs5ZTZUT1pzdFhpM2dOT0FXTlFrcE1GS1BZOWVqRU5CcDN4TXJsNF8wcS1EdXV2V3JiWXFB?oc=5",
-   "source": "아시아투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:18:34+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "AI 강국 도전을 추진하는 과정에서 속도 조절론이 대두되며 자만심을 경계해야 한다는 지적이 제기됐다. 기술 확보와 함께 부작용에 대한 신중한 접근이 요구되는 시점이다.",
-    "p": "외형적 성장에만 치중하기보다 기술 도입의 실효성과 사회적 부작용을 점검하는 성찰적 접근이 한국 AI 정책의 지속 가능성을 좌우할 것이다.",
-    "t": [
-     "AI강국",
-     "속도조절론",
-     "정책방향"
     ],
     "v": 1
    }
@@ -9474,8 +9558,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -9499,7 +9583,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -9517,13 +9601,13 @@
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 52
   },
   {
    "name": "Sequoia Capital",
@@ -9595,25 +9679,25 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 75
+   "fetched": 78
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 73
+   "fetched": 75
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 73
   },
   {
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 57
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
@@ -9625,7 +9709,7 @@
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 44
+   "fetched": 45
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -9637,7 +9721,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 53
   },
   {
    "name": "VentureBeat AI",
@@ -9732,13 +9816,13 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "경향신문",
    "ok": true,
-   "count": 4,
+   "count": 5,
    "fetched": 50
   },
   {
@@ -9751,7 +9835,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -9781,13 +9865,13 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 39
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 30
+   "fetched": 31
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
@@ -9799,25 +9883,25 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 34
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 49
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 36
   },
   {
    "name": "국민일보",
@@ -9865,7 +9949,7 @@
    "name": "더팩트",
    "ok": true,
    "count": 5,
-   "fetched": 100
+   "fetched": 99
   },
   {
    "name": "데일리안",
@@ -9931,7 +10015,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "아주경제",
@@ -9997,13 +10081,13 @@
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 45
   },
   {
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 50
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -10021,7 +10105,7 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 68
+   "fetched": 71
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -10033,7 +10117,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -10045,13 +10129,13 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 44
+   "fetched": 43
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
@@ -10063,7 +10147,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 45
   },
   {
    "name": "중앙일보",
@@ -10075,7 +10159,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 488
+   "fetched": 473
   },
   {
    "name": "프레시안",
