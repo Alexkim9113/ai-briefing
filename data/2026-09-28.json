@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:41+09:00",
+ "generated_at": "2026-09-28T15:46+09:00",
  "items": [
   {
    "id": "4ac4ee106644c7ee",
@@ -334,6 +334,17 @@
    "hot": 3
   },
   {
+   "id": "1a38916787915e23",
+   "title": "배차 넘어 주문도 인공지능…배달업계 AI 활용 드라이브",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80RXdJUmRMZjJEN2Nxclkwc1VZbHNRSWVlb3BUeGJpaFBkcFVVYWpoUmRseXJNOFpqcG1iX0JETklJZ1ZIMVE2LVgxQ1hmbFIzWHJvejVJVThoRGtselE?oc=5",
+   "source": "아시아타임즈",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:42:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "fe20d989eef97499",
    "title": "울산-전남광주, 산업 인공지능 전환 맞손… 문화·관광도 협력",
    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zdnJGVWtscXNlTDE5bUpQUWpia0xpSXVvTFNmTk1WdTZYaXpaRzBDTU1LeTRPckZIdE9od29CbDNOSHNQRjZaSjFNVmZGLTNhRnF3WmhNdHVhTDRnY2RSeUMwUGw?oc=5",
@@ -341,6 +352,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T06:38:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4085c791cbd3a6c7",
+   "title": "[월가 톡톡] 메타 AI 비서에 '내 삶'을 맡겨봤다",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5USWRGQ1o5ejhLQ0phVHMxNWFNRDNQOTBWR0JmQzh6VzYzMlR5RGYtaE1aYXNES2NuaEEzY2xyYm1LZjFHX1lUU2ZqbURJMk5XUnRjdmxsTFYtQUZvSUVlRm5FNkRYZ3ZlS2NYellvTEo?oc=5",
+   "source": "news.einfomax.co.kr",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:33:13+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -509,6 +531,29 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T05:37:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "fedc36eab2f47cff",
+   "title": "AI detects signs of aging in blood stem cells from nuclear images",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4yYUVyRnk5cVZETHBYZmdjTG43b3N1NVhERnc2UFZYaER5UjhGQTlDWmdqckt6REhGN3pBVnVZWEVOcndxSm9jOTNXWUhDU3JvTndUd2JjakcyWVJ6?oc=5",
+   "source": "eurekalert.org",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T05:35:35+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI는 핵 이미지에서 혈액줄기세포의 노화 징후를 감지합니다."
+  },
+  {
+   "id": "bf416ff60ec6aa7c",
+   "title": "기업 내 생성형 AI 사용과 비밀정보 보호",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUdIBckFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUQ?oc=5",
+   "source": "법률신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:28:44+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -895,17 +940,6 @@
    "thumb": ""
   },
   {
-   "id": "3546a910b47b54d7",
-   "title": "한국 생성형 AI 사용 비중 40% 돌파…세계 12위",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tYkNjcTRvOUFnZXhiRXJhVWU3VU1yYjBCMlRuejItNG0tSGI1azgyZXQtcGtTYUt4ZXgyajNJX05LZEQ5M0staWg5TElYcmpvS1JMQUR1bVZfTXM?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:59:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "edd509b516aeb4bf",
    "title": "충남 AI 정책 ‘219개’ 쏟아냈다…내년 예산부터 생활현장 적용",
    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBsZVRwa1UzbW1vNnM0d3Vob3Azb1lCTXVkRERuMG9UWjl6Um03RTgtTzNkWVBTVWVFUFBiemVVSi1veTZXUmpnTGotcmMxRmhldnJYY3Q1U0FvdmwySFlNUERYVGJoWklN?oc=5",
@@ -913,17 +947,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T02:53:40+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "87992ab1b0fb7ea7",
-   "title": "中 1∼8월 공업이익 15.7% 증가…AI 붐 속 내수 부진 지속",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hdVJraFlfeGpqZmxxZnZ5Z2lWMUFwa3JOdURtQXpOeVM4ZURnbzB1RVZjWHl0MGw5b0EwTzVHNTVYbzFXWGtBdUtYQjVITXZWOG52aG0zQmpPbGQ2Y1NRWtIBYEFVX3lxTE9hdVJraFlfeGpqZmxxZnZ5Z2lWMUFwa3JOdURtQXpOeVM4ZURnbzB1RVZjWHl0MGw5b0EwTzVHNTVYbzFXWGtBdUtYQjVITXZWOG52aG0zQmpPbGQ2Y1NRWg?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:48:14+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -938,17 +961,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "기계가 모든 것을 할 수 있게 되면 인간에게 남는 것은 무엇인가?"
-  },
-  {
-   "id": "4924f0ef6e82fa3b",
-   "title": "[인터뷰] \"노인 치매, 인공지능으로 예방\" 박아영 온다모임 대표",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBjV2FvOFFzNnlNbVNZMjlxQ2NtbVg2VmdHOHlWWUZmeXBlT01BbFRGc1lwQlNMRVFoRjRHSE9yLWVjUmlrQXRuQUdJaWZmWWFFbUQtZVc0YmZlTUtuVXp2Sg?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:43:15+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "f1e09f10ef95a3a5",
@@ -2451,22 +2463,9 @@
    "summary": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp…",
    "detail": "Modders make DLSS 5 Neural Rendering on AMD faster and easier to install VideoCardz.com Modder Squeezes 74% More Performance Out of DLSS 5 on AMD Radeon in One Day TechPowerUp Modders supercharge DLSS 5 on AMD GPUs with faster performance and one-click installation TweakTown Radeon RX 9070 XT gave…",
    "thumb": "",
-   "hot": 1,
+   "hot": 0,
    "title_ko": "Modder를 사용하면 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치할 수 있습니다.",
    "detail_ko": "Modder는 AMD에서 DLSS 5 신경망 렌더링을 더 빠르고 쉽게 설치하도록 만듭니다. VideoCardz.com Modder는 하루 만에 AMD Radeon의 DLSS 5에서 74% 더 많은 성능을 발휘합니다. TechPowerUp Modders는 더 빠른 성능과 원클릭 설치로 AMD GPU에서 DLSS 5를 과급합니다. TweakTown Radeon RX 9070 XT는…"
-  },
-  {
-   "id": "6bd4a38cba888b50",
-   "title": "Japanese anime actor fights TikTok over AI voice cloning",
-   "link": "https://techxplore.com/news/2026-09-japanese-anime-actor-tiktok-ai.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T07:40:01-04:00",
-   "summary": "A high-profile Japanese anime voice actor has taken TikTok to court over videos he says feature an artificial intelligence clone of his \"lustrous\" baritone, with a verdict due…",
-   "thumb": "",
-   "title_ko": "일본 애니메이션 배우, AI 음성 복제 문제로 틱톡과 싸운다",
-   "detail_ko": "일본의 유명 애니메이션 성우가 자신의 \"빛나는\" 바리톤의 인공지능 복제물이 포함된 동영상을 두고 TikTok을 법정에 세웠고, 판결이 확정되었습니다."
   },
   {
    "id": "6d456376b81d809a",
@@ -2746,9 +2745,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": true,
-   "count": 6,
-   "fetched": 10
+   "ok": false,
+   "count": 0,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "name": "Google AI Blog",
@@ -2813,8 +2812,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2825,8 +2824,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2970,7 +2969,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 65
+   "fetched": 67
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2994,13 +2993,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 65
+   "fetched": 63
   },
   {
    "name": "스테이지5",
