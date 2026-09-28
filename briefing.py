@@ -748,7 +748,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈">{LOGO}<span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap"><p>30분마다 자동으로 새 소식을 모읍니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. 전문은 각 원문 링크에서 확인하세요.</p>
+<footer class="wrap"><p><strong>저작권 안내</strong> · 이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝히며, 요약은 원문 앞부분을 짧게 발췌한 것입니다. 전문은 반드시 원문 링크에서 확인해 주세요. 원문의 사진·썸네일은 가져오지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. 저작권 관련 문의나 삭제 요청이 있으면 바로 반영하겠습니다.</p>
 <p><a href="{base}editor/">에디터</a> · <a href="{base}credits.html">사진 출처</a> · <a href="{sc["url"]}/feed.xml">RSS 구독</a></p></footer>
 <script>{JS}{script}</script></body></html>"""
 
