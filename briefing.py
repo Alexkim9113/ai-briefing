@@ -985,7 +985,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
 .brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
 article:has(a[data-d]),.trend:has(a[data-d]){cursor:pointer}
-.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}
+.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}.mx-s{margin:0 0 4px;line-height:1.7}.mx-v{margin:16px 0 4px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(18,227,255,.10),rgba(139,44,255,.12));border:1px solid var(--line)}.mx-v b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-v p{margin:0;line-height:1.7}.mx-t{margin:14px 0 4px}.mx-t span.tg{cursor:default}
 @keyframes bfade{from{opacity:0}}
 @media (max-width:600px){.brief-bg{align-items:end;justify-items:stretch;padding:0}.brief{width:100%;max-height:88vh;border-radius:20px 20px 0 0;padding:24px 18px calc(18px + env(safe-area-inset-bottom));animation:bup .22s ease}.brief h3{font-size:19px}}
 @keyframes bup{from{transform:translateY(40px);opacity:.3}}
@@ -1021,7 +1021,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 [hidden]{display:none!important}
 @media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
-.bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:wrap;overflow:visible;gap:4px 18px;margin:0;padding:2px 0}
+.bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:18px;margin:0;padding:2px 24px 4px 0;mask-image:linear-gradient(90deg,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}.bar nav::-webkit-scrollbar{display:none}.bar nav a{flex:0 0 auto}
 .search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.site-share{right:62px}.bar .wrap{position:relative}.bar{position:relative}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65;background:radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg)}.wrap{padding:0 16px}
@@ -1093,9 +1093,10 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  const V=!!a.dataset.v,lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
- <h4>${V?'영상 소개':'주요 내용 요약'}</h4>${lines.length?`<ul>${lines.map((l,i)=>`<li>${e(l)}${pair?`<span class="brief-tr">${e(kos[i])}</span>`:''}</li>`).join('')}</ul>${kos.length&&!pair?`<div class="brief-trb"><b>자동 번역</b>${kos.map(k=>`<p>${e(k)}</p>`).join('')}</div>`:''}${kos.length?'<p class="brief-trn">번역은 자동 번역이라 어색할 수 있어요.</p>':''}`:(V?'<p class="brief-none">영상 설명이 따로 없어요. 영상에서 확인해 주세요.</p>':'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>')}
+ ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
+  return `<h4>요약</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS VIEW</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
- <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'소개는 채널이 공개한 영상 설명에서 가져왔어요. 영상과 저작권은 출처에 있어요.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p></div>`;
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'} METAXIS 요약·VIEW는 출처·날짜·키워드와 METAXIS에 모인 글 통계로 자동 작성돼요.</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
@@ -1501,6 +1502,12 @@ def meta_html(it, cats, with_cat=False):
     return '<div class="meta">' + "".join(parts) + "</div>"
 
 
+def _mx_attrs(it):
+    summ, view, tags = mx_note(it)
+    mt = json.dumps([[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in tags], ensure_ascii=False)
+    return f' data-ms="{esc(summ)}" data-mv="{esc(view)}" data-mt="{esc(mt)}"'
+
+
 def title_link(it):
     ko = f'<span class="ko">{esc(it["title_ko"])}</span>' if it.get("title_ko") else ""  # 해외 글: 원문 제목 아래 자동 번역 제목
     d = brief_text(it)
@@ -1508,7 +1515,7 @@ def title_link(it):
     extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
              + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")
              + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") else "")
-             + (' data-v="1"' if it.get("category") == "talks" else "")) if not it.get("editor") else ""
+             + (' data-v="1"' if it.get("category") == "talks" else "") + _mx_attrs(it)) if not it.get("editor") else ""
     aid = f' data-id="{esc(it["id"])}"' if it.get("id") and not it.get("editor") else ""
     return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{aid}{extra}>{esc(it["title"])}</a>{ko}'
 
@@ -1737,6 +1744,114 @@ def tags_html(it, base):
     tags = item_tags(it)
     return ('<div class="tags">' + "".join(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' for i, name in tags)
             + "</div>") if tags else ""
+
+
+# ── METAXIS 창: 원문을 요약·번역·재작성하지 않고, 확인 가능한 사실(출처·날짜·분야·키워드·METAXIS에 모인 글 통계)로만
+#    짧은 요약·METAXIS VIEW·태그를 만든다. 없는 내용은 만들지 않고, 기업 주장·논문 결과·정책 단계는 단정하지 않는다.
+_MX = {"tags": {}, "days": [], "cats": {}}
+_CAT_TAG = {"news_ko": "국내뉴스", "news_global": "해외뉴스", "papers": "논문", "policy": "정책규제", "talks": "영상강연"}
+_CLAIM = re.compile(r"발표|출시|공개|선보|주장|밝혀|밝혔|내놓|launch|unveil|announce|introduc|release|claims?\b|says?\b", re.I)
+_STAGE = [("시행", re.compile(r"시행|발효|적용 시작|takes? effect|in effect|enforce", re.I)),
+          ("확정", re.compile(r"통과|의결|확정|공포|서명|승인|adopt|pass(?:ed|es)\b|sign(?:ed|s)\b|approv|enact", re.I)),
+          ("제안", re.compile(r"발의|추진|검토|제안|초안|입법예고|의견수렴|계획|proposal|propos|draft|consult|plan(?:s|ned)?\b|consider", re.I))]
+
+
+def mx_prepare(days):
+    """days = [(날짜, 그날 글 목록)] — 키워드별로 어느 날 어느 분야에 몇 건 모였는지 센다."""
+    _MX["tags"], _MX["days"] = {}, sorted(d for d, _ in days)
+    for d, items in days:
+        for it in items:
+            for i, _ in item_tags(it, 5):
+                _MX["tags"].setdefault(i, []).append((d, it["category"]))
+
+
+def mx_tags(it):
+    """태그 2~5개: 제목·소개글에 나온 키워드를 먼저, 모자라면 분야 태그로 채운다."""
+    tags = [(name, i) for i, name in item_tags(it, 5)]
+    for extra in [_CAT_TAG.get(it.get("category")), (it.get("field") or "").replace(" ", ""), "AI"]:
+        if len(tags) >= 2:
+            break
+        if extra and all(extra.lower() != n.lower() for n, _ in tags):
+            tags.append((extra, None))
+    return tags[:5]
+
+
+def _mx_date(it):
+    try:
+        d = datetime.fromisoformat(it.get("published") or "").astimezone(KST)
+        return f"{d.month}월 {d.day}일"
+    except ValueError:
+        return ""
+
+
+def _mx_stage(t):
+    return next((name for name, rx in _STAGE if rx.search(t)), "")
+
+
+def mx_note(it):
+    """(요약, METAXIS VIEW, 태그) — 모두 사실·통계에서 나온 문장만."""
+    cat, src, when = it.get("category"), it.get("source", ""), _mx_date(it)
+    tags = mx_tags(it)
+    kw = [n for n, i in tags if i is not None]
+    t = it["title"] + " " + it.get("title_ko", "")
+    about = f'{"·".join("#" + k for k in kw[:3])} 관련 ' if kw else ""
+    src = "Google 뉴스" if src.startswith("Google News") else src
+    head = " ".join(x for x in (when, src) if x)
+    via = "로 발표된" if "보도자료" in src else " 보도로,"
+    if cat == "papers":
+        fd = it.get("field") or ""
+        kind = f"{fd} 소식" if fd.endswith("연구") else (f"{fd} 분야 연구 소식" if fd else "연구 소식")
+        summ = f"{head}에 소개된 {about}{kind}이에요."
+        if "arxiv" in (it.get("link") or ""):
+            summ += " 동료 검토 전 사전 공개본일 수 있어요."
+    elif cat == "policy":
+        st = _mx_stage(t)
+        summ = f"{head}{via} {about}정책·규제 소식이에요. " + (
+            f"제목 기준으로는 {st} 단계로 보여요." if st else "제안·확정·시행 중 어느 단계인지는 원문 확인이 필요해요.")
+    elif cat == "talks":
+        summ = f"{head} 채널에 올라온 {about}영상·강연이에요."
+    else:
+        summ = f'{head}{via} {about}{"국내" if cat == "news_ko" else "해외"} 소식이에요.'
+    view = []
+    if kw:
+        k, i = kw[0], tags[0][1]
+        rec = _MX["tags"].get(i, [])
+        days = _MX["days"]
+        if days:
+            last = datetime.fromisoformat(days[-1]).date()
+            span = (last - datetime.fromisoformat(days[0]).date()).days + 1
+            recent = [(d, c) for d, c in rec if (last - datetime.fromisoformat(d).date()).days < 7]
+            prev = [(d, c) for d, c in rec if 7 <= (last - datetime.fromisoformat(d).date()).days < 14]
+            n7, n14 = len(recent), len(prev)
+            if span >= 14 and n14 and n7 >= 3 and n7 >= n14 * 1.5:
+                view.append(f"최근 7일 METAXIS에 #{k} 관련 글이 {n7}건 모여(그 전 7일 {n14}건) 관심이 커지는 흐름이에요.")
+            elif span >= 14 and n14 >= 3 and n7 <= n14 * 0.6:
+                view.append(f"최근 7일 #{k} 관련 글은 {n7}건으로, 그 전 7일({n14}건)보다 줄었어요.")
+            elif n7 >= 3:
+                view.append(f"최근 7일 METAXIS에 #{k} 관련 글이 {n7}건 모여, 여러 곳에서 이어서 다뤄지는 주제예요.")
+            elif n7 <= 1:
+                view.append(f"최근 7일 METAXIS에 모인 글 중 #{k}를 다룬 글은 이 글이 처음이에요.")
+            others = []
+            for _, c in recent:
+                name = _MX["cats"].get(c)
+                if c != cat and name and name not in others:
+                    others.append(name)
+            if others:
+                view.append(f'같은 #{k} 주제가 이번 주 {"·".join(others[:3])}에서도 다뤄졌어요.')
+    if cat == "papers":
+        view.append("연구 결과는 후속 검증 전일 수 있어 확정된 사실로 보기는 어려워요.")
+    elif cat == "policy":
+        st = _mx_stage(t)
+        view.append({"제안": "아직 제안·검토 단계로 보여 내용이 바뀔 수 있어요.",
+                     "확정": "확정된 내용이라도 실제 시행 시점과 세부 기준은 따로 확인이 필요해요.",
+                     "시행": "시행 단계로 보여 적용 대상과 시점을 확인할 필요가 있어요."}.get(st, "정책의 진행 단계와 적용 범위는 원문과 공식 발표로 확인하는 게 좋아요."))
+    elif cat == "talks":
+        view.append("발언은 연사 개인의 관점이라 사실관계는 따로 확인이 필요할 수 있어요.")
+    elif _CLAIM.search(t):
+        view.append("기업이나 기관이 밝힌 내용은 발표 기준이며, 독립적으로 검증된 결과는 아니에요.")
+    if not view:
+        view.append("아직 METAXIS에 모인 다른 글과 겹치는 키워드가 없는 소식이에요. 이후 흐름은 관련 보도를 함께 보면서 판단하는 게 좋아요.")
+    return summ, " ".join(view[:3]), tags
 
 
 def row_html(it, cats, with_cat=False, base=""):
@@ -2289,6 +2404,8 @@ def build(keep_days=None):
             if it["id"] not in seen and it["category"] in every:
                 seen.add(it["id"])
                 every[it["category"]].append(it)
+    _MX["cats"] = dict(cats)
+    mx_prepare([(json.loads(f.read_text(encoding="utf-8"))["date"], json.loads(f.read_text(encoding="utf-8"))["items"]) for f in files])
     posts = load_posts()
     # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
     (SITE_DIR / "version.json").write_text(json.dumps({"v": BUILD_VER}), encoding="utf-8")
