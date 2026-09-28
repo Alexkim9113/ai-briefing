@@ -778,6 +778,9 @@ ul.st{columns:1}footer{margin-top:36px}}
 .post .body img{display:block;max-width:100%;height:auto;border-radius:12px;margin:22px auto}
 .post .body blockquote{margin:20px 0;padding:4px 18px;border-left:3px solid var(--accent);color:var(--muted)}
 .post .body a{color:var(--accent);text-decoration:underline}
+.post .body figure{margin:22px 0}.post .body figure img{margin:0 auto}.post .body hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.post .body mark{background:#fff27a;color:#111;padding:0 2px;border-radius:2px}.post .body ul,.post .body ol{padding-left:1.4em}
+.post .body [style*="background-color"]{color:#111;border-radius:2px;padding:0 1px}
 .credits li{margin-bottom:6px;font-size:14px}
 @media (max-width:960px){.egrid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.rows{grid-template-columns:1fr}
@@ -880,7 +883,7 @@ function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.tit
 function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}${z(d.getMonth()+1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;}
 $('#new').onclick=()=>edit(null);
 function edit(p){cur=p?{...p}:{id:newId(),title:'',body:'',cover:'',images:[],date:''};imgs={};seq=(cur.images||[]).length;
- $('#title').value=cur.title;setBody(cur.body||'');msg('#edit-msg','');drawThumbs();view('#v-edit');}
+ $('#title').value=cur.title;setBody(cur.body||'',cur.format);msg('#edit-msg','');drawThumbs();view('#v-edit');}
 function drawThumbs(){const all=[...(cur.images||[]).map(n=>({n,src:'img/'+n})),...Object.entries(imgs).map(([n,src])=>({n,src}))];
  $('#thumbs').innerHTML=all.map(x=>`<figure><img src="${x.src}" alt=""><label><input type="radio" name="cover" value="${x.n}" ${cur.cover==='img/'+x.n?'checked':''}> 대표 사진</label></figure>`).join('');
  $('#thumbs').querySelectorAll('input').forEach(r=>r.onchange=()=>cur.cover='img/'+r.value);}
@@ -889,22 +892,27 @@ async function shrink(file){const bmp=await createImageBitmap(file),s=Math.min(1
 // 본문 편집기: 사진이 실제 모습으로 보이고, 게시할 때 간단한 글 형식(마크다운)으로 바꿔 보낸다
 const ED=$('#body');let RANGE=null;
 document.execCommand('defaultParagraphSeparator',false,'p');
-document.addEventListener('selectionchange',()=>{const s=getSelection();if(s.rangeCount&&ED.contains(s.anchorNode))RANGE=s.getRangeAt(0).cloneRange();});
+const saveSel=()=>{const s=getSelection();if(s.rangeCount&&ED.contains(s.anchorNode))RANGE=s.getRangeAt(0).cloneRange();};
+document.addEventListener('selectionchange',saveSel);['mouseup','keyup','touchend'].forEach(ev=>ED.addEventListener(ev,saveSel));
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 function fig(name,src){return `<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt=""><button type="button" aria-label="사진 빼기">✕</button></figure>`;}
-function setBody(md){ED.innerHTML=md.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
+function decorate(){ED.querySelectorAll('figure').forEach(f=>{const im=f.querySelector('img');if(!im)return f.remove();
+ const src=im.getAttribute('src')||'';f.contentEditable='false';f.dataset.n=f.dataset.n||src.replace(/^img\//,'');
+ if(!f.querySelector('button'))f.insertAdjacentHTML('beforeend','<button type="button" aria-label="사진 빼기">✕</button>');});}
+function setBody(md,fmt){if(fmt==='html'){ED.innerHTML=md;decorate();return;}ED.innerHTML=md.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
   const m=b.match(/^!\[[^\]]*\]\((img\/[\w.-]+|https:\/\/[^)\s]+)\)$/);if(m)return fig(m[1].replace(/^img\//,''),m[1]);
   if(/^#{1,3} /.test(b))return `<h2>${inl(b.replace(/^#{1,3} /,''))}</h2>`;return `<p>${b.split('\n').map(inl).join('<br>')}</p>`;}).join('')||'';}
 function txt(el){let o='';el.childNodes.forEach(n=>{if(n.nodeType===3)o+=n.textContent;else if(n.nodeName==='BR')o+='\n';
   else if(/^(B|STRONG)$/.test(n.nodeName)){const t=txt(n).trim();o+=t?`**${t}**`:'';}else o+=txt(n);});return o;}
-function getBody(){const out=[];let loose='';const flush=()=>{if(loose.trim())out.push(loose.trim());loose='';};
- ED.childNodes.forEach(n=>{if(n.nodeType===3){loose+=n.textContent;return;}
-  if(n.nodeName==='BR'){loose+='\n';return;}flush();
-  if(n.nodeName==='FIGURE'){const nm=n.dataset.n;out.push(`![사진](${/^https:/.test(nm)?nm:'img/'+nm})`);return;}
-  const img=n.querySelector&&n.querySelector('figure');if(img){n.querySelectorAll('figure').forEach(f=>out.push(`![사진](img/${f.dataset.n})`));}
-  const t=txt(n).replace(/ /g,' ').trim();if(!t)return;
-  out.push(/^H[1-6]$/.test(n.nodeName)?'## '+t.replace(/\n/g,' '):t);});
- flush();return out.join('\n\n');}
+function getBody(){const c=ED.cloneNode(true); // 편집용 표시(✕ 버튼, 미리보기 사진)를 걷어내고 게시용 HTML로
+ c.querySelectorAll('figure').forEach(f=>{const n=f.dataset.n;f.replaceWith(Object.assign(document.createElement('figure'),{innerHTML:`<img src="${/^https:/.test(n)?n:'img/'+n}" alt="">`}));});
+ c.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));
+ const base=getComputedStyle(ED).color; // 편집기가 저절로 붙인 기본 글자색·inherit 값은 지워서 밝은/어두운 화면 모두에서 읽히게
+ c.querySelectorAll('[style]').forEach(e=>{const st=e.style;for(const k of [...st])if(st.getPropertyValue(k)==='inherit')st.removeProperty(k);
+  if(st.color===base)st.removeProperty('color');if(!e.getAttribute('style').trim())e.removeAttribute('style');
+  if(e.nodeName==='SPAN'&&!e.attributes.length)e.replaceWith(...e.childNodes);});
+ [...c.childNodes].forEach(n=>{if(n.nodeType===3&&n.textContent.trim()){const p=document.createElement('p');n.replaceWith(p);p.append(n);}});
+ return c.innerHTML.replace(/<p><br><\/p>/g,'').trim();}
 ED.addEventListener('click',e=>{if(e.target.matches('figure button')){const f=e.target.closest('figure');const n=f.dataset.n;f.remove();
   if(cur.cover==='img/'+n&&!ED.querySelector('figure'))cur.cover='';drawThumbs();}});
 ED.addEventListener('paste',e=>{e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'));});
@@ -924,9 +932,23 @@ function placeCaret(el,start){const r=document.createRange();r.selectNodeContent
 $('#file').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;
  const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover)cur.cover='img/'+name;insertFigure(name,imgs[name]);}
  e.target.value='';drawThumbs();};
-$('#t-h').onmousedown=$('#t-b').onmousedown=e=>e.preventDefault();
-$('#t-h').onclick=()=>{placeAt();const cur2=document.queryCommandValue('formatBlock').toLowerCase();document.execCommand('formatBlock',false,cur2==='h2'?'p':'h2');};
-$('#t-b').onclick=()=>{placeAt();document.execCommand('bold');};
+// 서식 도구: 버튼을 눌러도 글자 선택이 풀리지 않게 한다
+const T=$('#tools');['pointerdown','mousedown','touchstart'].forEach(ev=>T.addEventListener(ev,saveSel,true));T.addEventListener('mousedown',e=>{if(e.target.closest('button'))e.preventDefault();});
+T.addEventListener('pointerdown',e=>{if(e.target.closest('button')&&e.pointerType!=='mouse')e.preventDefault();});
+const exec=(c,v)=>{placeAt();document.execCommand('styleWithCSS',false,true);document.execCommand(c,false,v);ED.focus();syncTools();};
+T.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>exec(b.dataset.c));
+T.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{placeAt();const t=b.dataset.b,now=(document.queryCommandValue('formatBlock')||'').toLowerCase();
+ document.execCommand('formatBlock',false,now===t?'p':t);syncTools();});
+const pop=id=>{['#p-hl','#p-fc'].forEach(p=>{if(p!==id)$(p).hidden=true;});$(id).hidden=!$(id).hidden;};
+$('#t-hl').onclick=()=>pop('#p-hl');$('#t-fc').onclick=()=>pop('#p-fc');
+T.querySelectorAll('[data-hl]').forEach(b=>b.onclick=()=>{exec('hiliteColor',b.dataset.hl);$('#p-hl').hidden=true;});
+T.querySelectorAll('[data-fc]').forEach(b=>b.onclick=()=>{exec('foreColor',b.dataset.fc||getComputedStyle(ED).color);$('#p-fc').hidden=true;});
+$('#t-font').onchange=e=>{exec('fontName',e.target.value||'Pretendard Variable');};
+$('#t-size').onchange=e=>{if(e.target.value)exec('fontSize',e.target.value);e.target.value='';};
+$('#t-link').onclick=()=>{const u=prompt('연결할 주소(https://…)를 넣어 주세요');if(u&&/^https?:\/\//i.test(u.trim()))exec('createLink',u.trim());};
+function syncTools(){['bold','italic','underline','strikeThrough','justifyLeft','justifyCenter','justifyRight','justifyFull','insertUnorderedList','insertOrderedList'].forEach(c=>{
+  const b=T.querySelector(`[data-c="${c}"]`);if(b){let on=false;try{on=document.queryCommandState(c);}catch(e){}b.classList.toggle('on',on);}});}
+document.addEventListener('selectionchange',()=>{if(ED.contains(getSelection().anchorNode))syncTools();});
 $('#cancel').onclick=()=>{view('#v-list');renderList();};
 $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBody();
  if(!title||!body)return msg('#edit-msg','제목과 내용을 모두 써 주세요.',1);
@@ -934,7 +956,7 @@ $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBod
  const keep=(cur.images||[]).filter(used);
  for(const [n,d] of Object.entries(imgs))if(used(n)){up[n]=d.split(',')[1];keep.push(n);}
  if(cur.cover&&!keep.includes(cur.cover.slice(4)))cur.cover=keep.length?'img/'+keep[0]:'';
- const post={id:cur.id,title,body,cover:cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
+ const post={id:cur.id,title,body,format:'html',cover:cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
  $('#publish').disabled=true;msg('#edit-msg','보내는 중…');
  try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 30분 안에 사이트에 올라가요.');
   const i=POSTS.findIndex(p=>p.id===post.id);if(i<0)POSTS.unshift(post);cur=post;imgs={};
@@ -1005,7 +1027,7 @@ def connect_links(sc, base):
 
 
 def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True,
-         active="", script="", image=None):
+         active="", script="", image=None, head=""):
     sc = site_cfg()
     canonical = f'{sc["url"]}/{path}'
     desc = desc or sc["description"]
@@ -1039,7 +1061,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;text=METAXIS&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<style>{CSS}</style>{ld}</head><body>
+{head}<style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
@@ -1381,6 +1403,112 @@ _MD_BOLD = re.compile(r"\*\*(.+?)\*\*")
 _BARE_URL = re.compile(r"(?<![\"=>])(https?://[^\s<]+)")
 
 
+# 에디터에서 고를 수 있는 무료 글꼴(모두 Google Fonts, SIL 오픈 폰트 라이선스): 이름 → 불러올 주소 조각
+POST_FONTS = {"Nanum Myeongjo": "Nanum+Myeongjo:wght@400;700", "Noto Serif KR": "Noto+Serif+KR:wght@400;700",
+              "Gowun Batang": "Gowun+Batang:wght@400;700", "Nanum Gothic": "Nanum+Gothic:wght@400;700",
+              "Gowun Dodum": "Gowun+Dodum", "IBM Plex Sans KR": "IBM+Plex+Sans+KR:wght@400;700",
+              "Do Hyeon": "Do+Hyeon", "Black Han Sans": "Black+Han+Sans", "Nanum Pen Script": "Nanum+Pen+Script",
+              "Gaegu": "Gaegu:wght@400;700"}
+
+
+def font_links(fams):
+    return "".join(f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={POST_FONTS[f]}&amp;display=swap">'
+                   for f in fams if f in POST_FONTS)
+
+
+_SAFE_TAGS = {"p", "div", "br", "h2", "h3", "b", "strong", "i", "em", "u", "s", "strike", "span", "mark", "a", "ul", "ol",
+              "li", "blockquote", "hr", "figure", "img", "figcaption", "sub", "sup"}
+_VOID = {"br", "hr", "img"}
+_COLOR = re.compile(r"#[0-9a-f]{3,8}|rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*[\d.]+\s*)?\)|transparent", re.I)
+_SIZES = {"small", "medium", "large", "x-large", "xx-large", "xxx-large"}
+
+
+def _safe_style(style):
+    out = []
+    for decl in style.split(";"):
+        if ":" not in decl:
+            continue
+        k, v = (x.strip().lower() for x in decl.split(":", 1))
+        v = v.replace("!important", "").strip()
+        if k == "font-family":
+            fam = v.split(",")[0].strip().strip("'\"")
+            match = next((f for f in POST_FONTS if f.lower() == fam), None)
+            if match:
+                out.append(f"font-family:'{match}'")
+        elif k == "font-size" and (v in _SIZES or re.fullmatch(r"(1[2-9]|[2-4]\d)px", v)):
+            out.append(f"font-size:{v}")
+        elif k in ("color", "background-color") and _COLOR.fullmatch(v):
+            out.append(f"{k}:{v}")
+        elif k == "text-align" and v in ("left", "center", "right", "justify", "start", "end"):
+            out.append(f"text-align:{v}")
+        elif k in ("text-decoration", "text-decoration-line") and re.fullmatch(r"(underline|line-through|none)( (underline|line-through))?", v):
+            out.append(f"text-decoration:{v}")
+        elif k == "font-weight" and v in ("bold", "700", "normal", "400"):
+            out.append(f"font-weight:{v}")
+        elif k == "font-style" and v in ("italic", "normal"):
+            out.append(f"font-style:{v}")
+    return ";".join(out)
+
+
+def sanitize_html(src):
+    """에디터 글(HTML)에서 허용한 태그·서식만 남긴다(스크립트·외부 요소 차단)."""
+    from html.parser import HTMLParser
+    out, stack, skip = [], [], [0]
+
+    class P(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            if tag in ("script", "style", "iframe", "object", "embed", "template", "svg", "math", "noscript", "textarea", "select"):
+                skip[0] += 1
+                return
+            if tag == "font" or skip[0]:
+                return
+            if tag not in _SAFE_TAGS:
+                return
+            a = dict(attrs)
+            keep = ""
+            st = _safe_style(a.get("style") or "")
+            if st:
+                keep += f' style="{esc(st)}"'
+            if tag == "a":
+                href = (a.get("href") or "").strip()
+                if not re.match(r"https?://", href, re.I):
+                    return
+                keep += f' href="{esc(href)}" target="_blank" rel="noopener"'
+            if tag == "img":
+                srcv = (a.get("src") or "").strip()
+                if not (re.fullmatch(r"img/[\w.-]+", srcv) or srcv.startswith("https://")):
+                    return
+                keep += f' src="{esc(srcv)}" alt="{esc(a.get("alt") or "")}" loading="lazy"'
+            out.append(f"<{tag}{keep}>")
+            if tag not in _VOID:
+                stack.append(tag)
+
+        def handle_endtag(self, tag):
+            if tag in ("script", "style", "iframe", "object", "embed", "template", "svg", "math", "noscript", "textarea", "select"):
+                skip[0] = max(0, skip[0] - 1)
+                return
+            if tag in stack:
+                while stack:
+                    t = stack.pop()
+                    out.append(f"</{t}>")
+                    if t == tag:
+                        break
+
+        def handle_data(self, data):
+            if not skip[0]:
+                out.append(esc(data))
+
+    parser = P(convert_charrefs=True)
+    parser.feed(src)
+    parser.close()
+    out.extend(f"</{t}>" for t in reversed(stack))
+    return "".join(out)
+
+
+def post_html(p):
+    return sanitize_html(p.get("body", "")) if p.get("format") == "html" else render_md(p.get("body", ""))
+
+
 def load_posts():
     posts = []
     for f in sorted(POSTS_DIR.glob("*.json")):
@@ -1390,7 +1518,8 @@ def load_posts():
             continue
         if not re.fullmatch(r"[\w-]{1,40}", p.get("id", "")) or not p.get("title"):
             continue
-        p["summary"] = post_summary(p.get("body", ""))
+        p["summary"] = post_summary(html.unescape(re.sub(r"<[^>]+>", " ", p.get("body", ""))) if p.get("format") == "html"
+                                    else p.get("body", ""))
         posts.append(p)
     posts.sort(key=lambda p: p.get("date", ""), reverse=True)
     return posts
@@ -1486,17 +1615,19 @@ def render_editor_pages(posts, cats, sc):
                "datePublished": p.get("date"), "dateModified": p.get("updated", p.get("date")),
                "author": {"@type": "Organization", "name": sc["name"]}, "publisher": {"@type": "Organization", "name": sc["name"]},
                "mainEntityOfPage": f'{sc["url"]}/{path}'}]
+        body_html = post_html(p)
+        fams = [f for f in POST_FONTS if f in body_html]
         body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
                 f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
-                f'<div class="body">{render_md(p.get("body", ""))}</div>'
+                f'<div class="body">{body_html}</div>'
                 f'<p style="margin-top:40px"><a class="more" href="index.html">← 에디터 글 목록</a></p></article>')
         (out / f"{p['id']}.html").write_text(page(f"{p['title']} | {sc['name']}", body, "../", cats, search=False,
                                                   path=path, desc=p["summary"], jsonld=ld, og_type="article",
-                                                  active="editor", image=cover), encoding="utf-8")
+                                                  active="editor", image=cover, head=font_links(fams)), encoding="utf-8")
         pages.append(path)
     (out / "posts.json").write_text(json.dumps(
-        [{k: p.get(k) for k in ("id", "title", "body", "cover", "images", "date", "updated")} for p in posts],
+        [{k: p.get(k) for k in ("id", "title", "body", "format", "cover", "images", "date", "updated")} for p in posts],
         ensure_ascii=False), encoding="utf-8")
     key = ROOT / "static" / "editor-key.json"
     write = (WRITE_HTML.replace("{TOPIC}", esc(sc.get("editor_topic", "")))
@@ -1505,7 +1636,7 @@ def render_editor_pages(posts, cats, sc):
     (out / "status.json").write_text(st.read_text(encoding="utf-8") if st.exists() else '{"pin_set": false, "results": []}',
                                      encoding="utf-8")
     (out / "write.html").write_text(page(f"글쓰기 | {sc['name']}", write, "../", cats, search=False, path="editor/write.html",
-                                         index=False, active="editor", script=WRITE_JS), encoding="utf-8")
+                                         index=False, active="editor", script=WRITE_JS, head=font_links(POST_FONTS)), encoding="utf-8")
     return pages
 
 
@@ -1521,8 +1652,7 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
 <ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul></section>
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
-<div class="tools"><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진 넣기<input id="file" type="file" accept="image/*" multiple hidden></label>
-<button type="button" class="tb" id="t-h">소제목</button><button type="button" class="tb" id="t-b"><b>굵게</b></button></div>
+<div class="tools" id="tools"><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="undo" title="되돌리기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></button><button type="button" class="tb ic" data-c="redo" title="다시 하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg></button><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
 <div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
 <p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 사진 오른쪽 위 ✕ 로 뺄 수 있어요.</p>
 <div id="thumbs" class="thumbs"></div>
@@ -1530,7 +1660,13 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 </div>
 <style>.inp{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
 .pin{width:160px;letter-spacing:.4em;text-align:center}.pin::placeholder{letter-spacing:normal}textarea.inp{line-height:1.7;resize:vertical}
-.tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;position:sticky;top:0;z-index:4;background:var(--bg);padding:6px 0}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 8px;position:sticky;top:64px;z-index:6;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line)}
+.tb.ic{width:38px;height:38px;padding:0;justify-content:center;font-size:16px}.tb.on{border-color:var(--accent);color:var(--accent)}.tsep{width:1px;height:24px;background:var(--line);margin:0 2px}
+.tsel{font:inherit;font-size:14px;height:38px;padding:0 10px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);max-width:150px}
+.tpop{position:relative;display:inline-flex}.pal{position:absolute;top:44px;left:0;display:flex;gap:6px;padding:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);z-index:8}
+.pal button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);cursor:pointer}.pal .none{background:var(--card);color:var(--muted);font-size:12px}
+.rich blockquote{margin:12px 0;padding:4px 16px;border-left:3px solid var(--accent);color:var(--muted)}.rich hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+.rich ul,.rich ol{padding-left:1.4em}.rich a{color:var(--accent);text-decoration:underline}.rich [style*="background-color"]{color:#111}
 .tb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:14px;font-weight:600;padding:9px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}.tb svg{width:18px;height:18px}
 .rich{min-height:320px;line-height:1.8;font-size:17px;outline:none}.rich:empty::before{content:attr(data-ph);color:var(--muted)}
 .rich p,.rich div{margin:0 0 12px}.rich h2{font-size:21px;margin:18px 0 8px;color:var(--heading)}
@@ -1543,7 +1679,8 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 @media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
 #setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
 .plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.pend li{font-size:14px;color:var(--muted)}.pend li.bad{color:#e5484d}.plist button{margin:0;padding:8px 14px}
-.tb{flex:1;justify-content:center;padding:11px 10px}.rich{min-height:45vh;font-size:17px;padding:14px}
+.tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;top:0;margin:0 -16px 8px;padding:8px 16px}.tools::-webkit-scrollbar{display:none}.tools>*{flex:none}
+.pal{position:fixed;top:auto;left:16px;right:16px;bottom:90px;justify-content:center}.rich{min-height:45vh;font-size:17px;padding:14px}
 .thumbs figure,.thumbs img{width:calc((100vw - 56px)/3)}.thumbs img{height:auto;aspect-ratio:3/2}
 #v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
 #v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
@@ -1883,7 +2020,10 @@ def editor_inbox():
                         (POSTS_DIR / "img" / n).write_bytes(b)
             imgs = [n for n in imgs if (POSTS_DIR / "img" / n).exists()]
             cover = post.get("cover") if str(post.get("cover", "")).removeprefix("img/") in imgs else (f"img/{imgs[0]}" if imgs else "")
-            clean = {"id": pid, "title": str(post["title"])[:200], "body": str(post.get("body", ""))[:60000], "cover": cover,
+            fmt = "html" if post.get("format") == "html" else "md"
+            body = str(post.get("body", ""))[:300000]
+            clean = {"id": pid, "title": str(post["title"])[:200], "format": fmt,
+                     "body": sanitize_html(body) if fmt == "html" else body[:60000], "cover": cover,
                      "images": imgs, "date": old.get("date") or str(post.get("date", ""))[:40] or datetime.now(KST).isoformat(),
                      "updated": datetime.now(KST).isoformat(timespec="seconds")}
             old_f.write_text(json.dumps(clean, ensure_ascii=False, indent=1), encoding="utf-8")
