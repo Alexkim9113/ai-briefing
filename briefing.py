@@ -1211,6 +1211,17 @@ def connect_links(sc, base):
     return "".join(out)
 
 
+BUILD_VER = str(int(time.time()))
+# 웹·모바일 어디서 열어 두어도 사이트가 새로 반영되면 자동으로 새 내용을 보여 준다(글쓰기 화면은 제외)
+LIVE_JS = """
+(()=>{const v='VER';let busy=false;const chk=async()=>{if(document.hidden||document.querySelector('.brief-bg')||busy)return;busy=true;
+ try{const r=await fetch('BASEversion.json?'+Date.now(),{cache:'no-store'});const j=await r.json();
+ if(j.v&&j.v!==v){sessionStorage.setItem('mx_y',scrollY);location.reload();}}catch(e){}busy=false;};
+ try{const y=sessionStorage.getItem('mx_y');if(y){sessionStorage.removeItem('mx_y');addEventListener('load',()=>scrollTo(0,+y));}}catch(e){}
+ setInterval(chk,60000);document.addEventListener('visibilitychange',chk);})();
+"""
+
+
 def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True,
          active="", script="", image=None, head=""):
     sc = site_cfg()
@@ -1251,7 +1262,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
-<script>{JS}{script}</script></body></html>"""
+<script>{JS}{script}{"" if "write" in path else LIVE_JS.replace("BASE", base).replace("VER", BUILD_VER)}</script></body></html>"""
 
 
 # 표지 아이콘: 기사 제목·요약의 단어로 주제를 골라 직접 그린 아이콘을 넣는다(외부 이미지 없음)
@@ -2120,6 +2131,7 @@ def build(keep_days=None):
     posts = load_posts()
     # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
     (SITE_DIR / "index.html").write_text(render_intro(latest, cats, sc), encoding="utf-8")
+    (SITE_DIR / "version.json").write_text(json.dumps({"v": BUILD_VER}), encoding="utf-8")
     (SITE_DIR / "ticker.json").write_text(json.dumps(ticker_items(latest["items"]), ensure_ascii=False), encoding="utf-8")
     (SITE_DIR / "home.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
     (SITE_DIR / "intro.html").unlink(missing_ok=True)
