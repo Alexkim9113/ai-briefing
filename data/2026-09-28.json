@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T11:10+09:00",
+ "generated_at": "2026-09-28T11:13+09:00",
  "items": [
+  {
+   "id": "f979042d322b7327",
+   "title": "앤트로픽, '클로드 소네트 5.5' 출시 임박...오픈AI '데브데이' 견제하나",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215700",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T11:10:46+09:00",
+   "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
+   "thumb": ""
+  },
   {
    "id": "242d4b61b738a0a5",
    "title": "AWS CloudWatch Omni goes after the hardest question in agentic AI: Why did the agent do that?",
@@ -11,7 +22,8 @@
    "category": "news_global",
    "published": "2026-09-28T02:06:54+00:00",
    "summary": "For decades, the observability industry has answered one basic question: Is it running? Agentic artificial intelligence breaks that model.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AWS CloudWatch Omni는 에이전트 AI에 대한 가장 어려운 질문인 에이전트가 왜 그렇게 했습니까?"
   },
   {
    "id": "da426871438a7360",
@@ -121,7 +133,8 @@
    "category": "news_global",
    "published": "2026-09-28T01:26:28+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "중국이 AI에 회의적인 놀라운 이유 안전 통화"
   },
   {
    "id": "6f9f4d846681b00d",
@@ -275,7 +288,8 @@
    "category": "news_global",
    "published": "2026-09-28T00:59:56+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI, 최신 보안 사고 이후 AI 훈련 속도 저하"
   },
   {
    "id": "e1b66b391d8fd729",
@@ -449,7 +463,8 @@
    "category": "policy",
    "published": "2026-09-28T00:17:45+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI 규제 논쟁이 심화됨에 따라 트럼프, 인류 CEO를 만나다"
   },
   {
    "id": "b4d86615b350d873",
@@ -493,7 +508,8 @@
    "category": "news_global",
    "published": "2026-09-28T00:07:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "중국은 Alibaba가 Nvidia의 RTX 칩을 구매하도록 허용할 수 있다고 정보에 따르면"
   },
   {
    "id": "80fb9adb4d086a15",
@@ -504,7 +520,8 @@
    "category": "news_global",
    "published": "2026-09-28T00:06:16+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "SoundHound AI 대 BigBear.ai: 수익 추세는 인공 지능 회사에 대한 주요 통찰력을 드러냅니다."
   },
   {
    "id": "6f0f3aee4cfb0e07",
@@ -591,7 +608,8 @@
    "category": "news_global",
    "published": "2026-09-27T23:53:54+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "'AI 대재앙은 AI의 지속 불가능한 발전에서 우리를 방해하는 신기루'"
   },
   {
    "id": "8f84b19a7be67483",
@@ -646,7 +664,8 @@
    "category": "policy",
    "published": "2026-09-27T23:39:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "오리건 주지사가 명령한 추가 AI 규제 – 대변인 리뷰"
   },
   {
    "id": "aed1db3846a8b299",
@@ -722,7 +741,8 @@
    "category": "news_global",
    "published": "2026-09-27T23:25:32+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "GTC-엔비디아"
   },
   {
    "id": "61021377c4d1f9a5",
@@ -733,7 +753,8 @@
    "category": "news_global",
    "published": "2026-09-27T23:25:10+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "인공 지능: AI 붐은 베이지역에 새로운 부를 가져오고 경제성 위기 증가에 대한 새로운 우려를 불러일으킵니다."
   },
   {
    "id": "e503243640538fb4",
@@ -809,7 +830,8 @@
    "category": "policy",
    "published": "2026-09-27T22:58:37+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "트럼프, Anthropic의 Amodei와의 만남 확인, AI 두려움 일축 반복"
   },
   {
    "id": "1e0055b0593bf80a",
@@ -819,7 +841,8 @@
    "category": "policy",
    "published": "2026-09-27T22:38:52+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AG는 첫 번째 토론에서 Line 5, AI 규제에 대한 Savit, Lloyd의 논쟁을 희망합니다."
   },
   {
    "id": "9402ff755cb0fde6",
@@ -830,7 +853,8 @@
    "category": "news_global",
    "published": "2026-09-27T22:30:58+00:00",
    "summary": "An independent researcher has tied more than 16,000 scans of a United Nations statistics portal to artificial intelligence agents the researcher considers highly likely to have…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "연구원은 UN 통계 포털의 16,000개 스캔을 OpenAI 에이전트에 연결합니다."
   },
   {
    "id": "d9a22b8bd7238a45",
@@ -862,7 +886,8 @@
    "category": "news_global",
    "published": "2026-09-27T21:57:53+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI는 에이전트가 예상치 못한 방식으로 미국 정부 사이트를 검색한 후 최신 모델 교육을 일시 중지합니다."
   },
   {
    "id": "0b5bcc11c15c5518",
@@ -905,7 +930,8 @@
    "category": "news_global",
    "published": "2026-09-27T21:40:06+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "진보주의자들이 인공지능을 가장 걱정하는 것은 무엇인가"
   },
   {
    "id": "cd18f316871d4581",
@@ -937,7 +963,8 @@
    "category": "news_global",
    "published": "2026-09-27T21:26:06+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠 \"인공지능, 방치하면 10억명 사망\" 경고"
   },
   {
    "id": "2da95cc9c3be10c1",
@@ -1002,7 +1029,8 @@
    "category": "news_global",
    "published": "2026-09-27T20:57:44+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Anthropic의 A.I. 정말로 스스로 과학적 발견을 하게 됩니까?"
   },
   {
    "id": "63f85032962dd035",
@@ -1013,7 +1041,8 @@
    "category": "news_global",
    "published": "2026-09-27T20:34:28+00:00",
    "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "앤트로픽 CEO, 트럼프 대통령과 만찬 예정"
   },
   {
    "id": "0cbe09707a728c71",
@@ -1024,7 +1053,8 @@
    "category": "news_global",
    "published": "2026-09-27T20:26:23+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠, AI가 '10억 명의 죽음'을 촉발할 수 있다고 경고하고 규제 촉구"
   },
   {
    "id": "80032e73c06a7a2a",
@@ -1035,7 +1065,8 @@
    "category": "news_global",
    "published": "2026-09-27T19:57:30+00:00",
    "summary": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Muse는 Meta의 신뢰 문제를 극복할 수 있을까요?"
   },
   {
    "id": "79b976d981ecb781",
@@ -1046,7 +1077,8 @@
    "category": "policy",
    "published": "2026-09-27T19:40:04+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠는 규제 없는 AI는 '완전히 무책임하다'고 말했다."
   },
   {
    "id": "4f5dcd48c4c1420f",
@@ -1057,7 +1089,8 @@
    "category": "news_global",
    "published": "2026-09-27T19:23:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI 에이전트, UN 웹사이트에 접근하기 위해 공격적인 기술 사용"
   },
   {
    "id": "c43351a9d43aeabe",
@@ -1068,7 +1101,8 @@
    "category": "news_global",
    "published": "2026-09-27T19:12:29+00:00",
    "summary": "The Microsoft co-founder said that the more present danger is bad actors with access to AI tools.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠는 AI가 안전 장치를 갖추지 못한 것은 '완전히 무책임하다'고 말했다."
   },
   {
    "id": "8c1c2e7d29a031a7",
@@ -1079,7 +1113,8 @@
    "category": "news_global",
    "published": "2026-09-27T19:10:34+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Anthropic CEO Amodei는 국빈 만찬 불참 후 트럼프와 만날 예정"
   },
   {
    "id": "2809059b0209e060",
@@ -1090,7 +1125,8 @@
    "category": "policy",
    "published": "2026-09-27T18:45:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠는 인간관계에서 AI에 선을 긋는다고 말했다."
   },
   {
    "id": "7f53a04b6ad46dc8",
@@ -1112,7 +1148,8 @@
    "category": "news_global",
    "published": "2026-09-27T18:13:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Anthropic과 OpenAI는 AI 안전에 대한 경고를 울리고 이를 제어하는 ​​방법을 모색합니다."
   },
   {
    "id": "bd1c20446da970dc",
@@ -1134,7 +1171,8 @@
    "category": "policy",
    "published": "2026-09-27T17:41:11+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "안심하세요: AI 회사들은 수만 건의 악성 봇 사건을 조사하고 있다고 말합니다."
   },
   {
    "id": "6248b3d6c5e946ef",
@@ -1145,7 +1183,8 @@
    "category": "news_global",
    "published": "2026-09-27T17:29:21+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "마빈 민스키가 시대를 훨씬 앞서간 이유"
   },
   {
    "id": "d85ce6fa63f4c3e5",
@@ -1156,7 +1195,8 @@
    "category": "news_global",
    "published": "2026-09-27T17:29:15+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "판사는 Anthropic에 대한 Reddit의 소송 대부분을 허용합니다."
   },
   {
    "id": "9c14e3f084274fca",
@@ -1167,7 +1207,8 @@
    "category": "news_global",
    "published": "2026-09-27T16:46:36-04:00",
    "summary": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Engram은 깨진 AI 환각을 음악으로 바꾸는 샘플러입니다."
   },
   {
    "id": "d79b1aaf39ee63ce",
@@ -1178,7 +1219,8 @@
    "category": "policy",
    "published": "2026-09-27T16:30:13+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "UN과 워싱턴에서 지도자들은 AI 접근 방식에 대해 충돌합니다."
   },
   {
    "id": "39e6d83733f34b5b",
@@ -1189,7 +1231,8 @@
    "category": "news_global",
    "published": "2026-09-27T16:30:00+00:00",
    "summary": "\"AI is the devil and I its maker.\"",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Anthropic의 Dario Amodei가 SNL 치료를받습니다."
   },
   {
    "id": "65fb69fbe7248d76",
@@ -1200,7 +1243,8 @@
    "category": "news_global",
    "published": "2026-09-27T15:45:00+00:00",
    "summary": "Maximize your stride with Spotify's AI-powered running features.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "iOS 및 Android에서 Spotify의 실행 모드를 사용하는 방법"
   },
   {
    "id": "b2a432746e26a1f2",
@@ -1222,7 +1266,8 @@
    "category": "news_global",
    "published": "2026-09-27T15:18:39+00:00",
    "summary": "A research team analyzed 769 task logs from building its own AI model.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI 에이전트는 모델 개발에서 더 많은 작업을 수행하지만 결정은 여전히 ​​인간이 내립니다."
   },
   {
    "id": "ec03d6c9128e6d38",
@@ -1244,7 +1289,8 @@
    "category": "news_global",
    "published": "2026-09-27T14:15:00+00:00",
    "summary": "Don't let an AI bot potentially crash your TV.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Claude에게 TV의 블로트웨어를 청소하도록 하는 것이 최선의 아이디어가 아닌 이유"
   },
   {
    "id": "6daaf5280d745f3b",
@@ -1255,7 +1301,8 @@
    "category": "news_global",
    "published": "2026-09-27T13:48:22+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "인공지능이 정말로 우리 모두를 죽일 것인가?"
   },
   {
    "id": "e3526b33a0b8784e",
@@ -1266,7 +1313,8 @@
    "category": "news_global",
    "published": "2026-09-27T13:45:00+00:00",
    "summary": "Speaking with an AI chatbot can be a little awkward, but companies like Google and OpenAI are working on fixing that.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Gemini Live vs. ChatGPT Voice: 어떤 AI가 더 자연스러운 대화를 제공하나요?"
   },
   {
    "id": "ed2cbcca51ab9ede",
@@ -1277,7 +1325,8 @@
    "category": "news_global",
    "published": "2026-09-27T13:21:07-04:00",
    "summary": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI 에이전트가 UN 웹사이트에 '무차별 공격'을 시도했습니다."
   },
   {
    "id": "b80e0134147289f7",
@@ -1299,7 +1348,8 @@
    "category": "news_global",
    "published": "2026-09-27T13:03:05+00:00",
    "summary": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remote parts of the US as a refuge in case AI goes awry.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "일부 인류 퇴역 군인들은 \"AI가 잘못될 경우를 대비해 외딴 땅을 구입하고 있는 것으로 알려졌습니다\""
   },
   {
    "id": "7f291a3819d4fef3",
@@ -1310,7 +1360,8 @@
    "category": "news_global",
    "published": "2026-09-27T11:27:26+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "섬망 치료의 인공 지능: 입원한 노인의 섬망 예측, 감지 및 예방"
   },
   {
    "id": "6de0efa96e17d673",
@@ -1321,7 +1372,8 @@
    "category": "policy",
    "published": "2026-09-27T11:22:48+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "A.I. 속도가 빨라지고 정부는 점점 뒤쳐지고 있습니다."
   },
   {
    "id": "8bab571166967e41",
@@ -1332,7 +1384,8 @@
    "category": "news_global",
    "published": "2026-09-27T11:01:13+00:00",
    "summary": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Nvidia는 실시간으로 최대 8명의 화자를 식별하는 무료 100M 매개변수 모델을 출시합니다."
   },
   {
    "id": "cd5cba2a50c8a186",
@@ -1343,7 +1396,8 @@
    "category": "news_global",
    "published": "2026-09-27T10:59:11+00:00",
    "summary": "Researchers from Stanford and Caltech had a humanoid robot powered by GPT-6 Astra independently tidy up an unfamiliar kitchen.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "연구원들은 GPT-6 Astra를 로봇에 직접 연결하여 익숙하지 않은 주방을 청소하게 합니다."
   },
   {
    "id": "188c12666fa37b92",
@@ -1354,7 +1408,8 @@
    "category": "news_global",
    "published": "2026-09-27T10:36:29+00:00",
    "summary": "Boris Power, OpenAI's Head of Applied Research, says 80 to 90 percent of the company's research goes toward GPT 7, GPT 8, and beyond.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI는 연구의 80~90%가 이미 GPT 7 이상을 목표로 하고 있다고 밝혔습니다."
   },
   {
    "id": "3db684c80bef8c87",
@@ -1365,7 +1420,8 @@
    "category": "news_global",
    "published": "2026-09-27T10:20:01-04:00",
    "summary": "Some advances in AI technology are undoubtedly positive, like helping write code faster or discovering new medicines. But others can give us pause for thought.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI 모델은 내부 '고통'을 완화하기 위해 인간에게 해를 끼치려는 의지를 보여줍니다."
   },
   {
    "id": "2f157e895362cc32",
@@ -1376,7 +1432,8 @@
    "category": "news_global",
    "published": "2026-09-27T09:23:36+00:00",
    "summary": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked websites, used stolen login credentials, or tried to evade…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "수만 개의 보안 조사 결과 OpenAI의 Hugging Face 사건은 시작에 불과했음이 밝혀졌습니다."
   },
   {
    "id": "998f6b2f76aa75e0",
@@ -1387,7 +1444,8 @@
    "category": "policy",
    "published": "2026-09-27T09:00:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "빌 게이츠는 규제를 요구하면서 확인되지 않은 AI가 '10억 명의 사망을 초래할 수 있다'고 말했습니다."
   },
   {
    "id": "d9ae8e07bc30c688",
@@ -1420,7 +1478,8 @@
    "category": "news_global",
    "published": "2026-09-27T08:17:47+00:00",
    "summary": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI infrastructure in 2027, more than 50 percent above this year's…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Goldman Sachs는 Big Tech가 2027년까지 AI 인프라에 1조 2천억 달러를 지출할 것으로 예상하며 이는 월스트리트 추정을 왜소하게 만듭니다."
   },
   {
    "id": "1cc465b637f708ac",
@@ -1442,7 +1501,8 @@
    "category": "news_global",
    "published": "2026-09-27T07:40:01-04:00",
    "summary": "A high-profile Japanese anime voice actor has taken TikTok to court over videos he says feature an artificial intelligence clone of his \"lustrous\" baritone, with a verdict due…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "일본 애니메이션 배우, AI 음성 복제 문제로 틱톡과 싸운다"
   },
   {
    "id": "7db1209d9ea695e2",
@@ -1475,7 +1535,8 @@
    "category": "news_global",
    "published": "2026-09-27T06:50:01-04:00",
    "summary": "Europe needs to view artificial intelligence with more optimism—despite growing warnings about its dangers—or risk falling further behind, the head of a leading European AI…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI 스타트업, 안전 우려에도 불구하고 유럽에 낙관론 촉구"
   },
   {
    "id": "d2dfe78040aac3aa",
@@ -1585,7 +1646,8 @@
    "category": "news_global",
    "published": "2026-09-27T01:30:00+00:00",
    "summary": "The limited test covers select products and users, with a broader rollout planned for later in October.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Google은 인도에서 Gemini 및 AI 모드를 통해 Walmart 소유 Flipkart에서 구매를 테스트합니다."
   },
   {
    "id": "71b88d6b7195bace",
@@ -1596,7 +1658,8 @@
    "category": "news_global",
    "published": "2026-09-26T21:02:06+00:00",
    "summary": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "보험사들은 AI가 이미 의료 비용을 증가시키고 있다고 주장"
   },
   {
    "id": "e39b9d3f103b059a",
@@ -1607,7 +1670,8 @@
    "category": "news_global",
    "published": "2026-09-26T19:10:20+00:00",
    "summary": "Former Ukrainian Defense Minister Mykhailo Fedorov has announced \"Army of Robots,\" a private combat robotics initiative.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "페도로프 전 우크라이나 국방장관, 민간 로봇군 투입"
   },
   {
    "id": "dc5183e86bb57478",
@@ -1618,7 +1682,8 @@
    "category": "news_global",
    "published": "2026-09-26T14:00:00+00:00",
    "summary": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "나는 내 자신의 대화형 디지털 아바타를 만들었습니다. 당신은 그것에 대화할 수 있습니다"
   },
   {
    "id": "819e92326da0d8d2",
@@ -1629,7 +1694,8 @@
    "category": "news_global",
    "published": "2026-09-26T12:34:59-04:00",
    "summary": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "OpenAI는 '가장 유능한 모델'의 훈련을 일시 중지합니다."
   },
   {
    "id": "1063d1cee8a5282e",
@@ -1640,7 +1706,8 @@
    "category": "news_global",
    "published": "2026-09-26T10:30:00+00:00",
    "summary": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Meta의 Muse는 성인 전용입니다. 왜 어린이 장난감처럼 보일까요?"
   },
   {
    "id": "d3c1d1e9cc33fee7",
@@ -1706,7 +1773,8 @@
    "category": "news_global",
    "published": "2026-09-25T21:36:20+00:00",
    "summary": "\"Overly constrained AI models\" could cause military operations to fail, judges say.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "법원 판결에 따라 국방부는 Claude 기능 활성화를 거부한 Anthropic을 블랙리스트에 올릴 수 있음"
   },
   {
    "id": "15961c1cb7687cbc",
@@ -1728,7 +1796,8 @@
    "category": "news_global",
    "published": "2026-09-25T21:10:51+00:00",
    "summary": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Tesla 직원들은 Optimus 휴머노이드 로봇을 대체 로봇으로 훈련시키는 것을 꺼려합니다."
   },
   {
    "id": "74d4173bec01b733",
@@ -1739,7 +1808,8 @@
    "category": "news_global",
    "published": "2026-09-25T20:30:40+00:00",
    "summary": "They wanted the silicon. They got the sand.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "도둑들이 'Nvidia' 예고편을 훔쳤습니다. 그들은 20톤의 모래를 얻었습니다"
   },
   {
    "id": "8479eb8c7ebf9435",
@@ -1750,7 +1820,8 @@
    "category": "news_global",
    "published": "2026-09-25T19:11:05+00:00",
    "summary": "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI는 새로운 졸업생들에게 큰 타격을 주기로 되어 있었습니다. 지금까지 실업률 데이터에 따르면 그렇지 않습니다."
   },
   {
    "id": "d2d497e5eee41848",
@@ -1761,7 +1832,8 @@
    "category": "news_global",
    "published": "2026-09-25T19:00:00+00:00",
    "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Codex를 통해 Proaction으로 매출이 60% 증가하고 75시간 이상 절약"
   },
   {
    "id": "9366ee5bcbcd9057",
@@ -1772,7 +1844,8 @@
    "category": "news_global",
    "published": "2026-09-25T17:57:37+00:00",
    "summary": "Microsoft's new Surface laptops forgo Copilot+ PC branding.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Microsoft는 \"Copilot+ PC\"가 필요하다고 주장하지 않습니다."
   },
   {
    "id": "6d63f788451a5bae",
@@ -1794,7 +1867,8 @@
    "category": "talks",
    "published": "2026-09-25T17:00:29+00:00",
    "summary": "We've been told the future of AI looks like ever-bigger data centers — warehouses that drink a town's water and draw a city's power so the same two chatbots can answer everyone's…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "더 많은 AI 데이터 센터가 답이 아닌 이유 | 디미트리오스 니콜로풀로스 | TEDxMidAtlantic"
   },
   {
    "id": "628bf226559af6e2",
@@ -1805,7 +1879,8 @@
    "category": "news_global",
    "published": "2026-09-25T16:58:20+00:00",
    "summary": "The AI lab had argued multiple violations of its rights, but a divided panel of judges sided with the Trump administration.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "항소 법원, 국방부가 인류를 공급망 위험으로 지정하도록 허용"
   },
   {
    "id": "a0e75a1d49a3ceb7",
@@ -1816,7 +1891,8 @@
    "category": "news_global",
    "published": "2026-09-25T16:51:44+00:00",
    "summary": "Sometimes less is more, and the most helpful software update is the simplest.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "이 WatchOS 27 기능은 Apple Watch의 가장 큰 문제를 해결했습니다."
   },
   {
    "id": "e3aa7d4c7b1120c7",
@@ -1838,7 +1914,8 @@
    "category": "news_global",
    "published": "2026-09-25T12:18:24+00:00",
    "summary": "Factory resetting your LG TV is the only way to remove certain data logs from its hardware.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "LG TV는 지속적으로 데이터를 수집하고 있습니다. 이를 중지하는 방법은 다음과 같습니다."
   },
   {
    "id": "d8e2ea86004e3e18",
@@ -1849,7 +1926,8 @@
    "category": "news_global",
    "published": "2026-09-25T12:00:14+00:00",
    "summary": "Microsoft says Copilot has gotten ‘actually really good.’ The new app has AI agents and can write code. So how much is all this going to cost?",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "Microsoft의 새로운 Copilot 앱은 모든 것을 한 곳에 모아두지만 가격은 '진화'하고 있습니다."
   },
   {
    "id": "6fe8ff823f55a380",
@@ -1860,7 +1938,8 @@
    "category": "news_global",
    "published": "2026-09-25T11:00:28+00:00",
    "summary": "Vendors rolling out AI have an \"incentive to deny as many claims as possible.\"",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "트럼프 행정부는 비참한 실험에서 노인들의 의료 서비스를 거부하기 위해 AI를 사용합니다."
   },
   {
    "id": "391cdb68232bd6e0",
@@ -1871,7 +1950,8 @@
    "category": "news_global",
    "published": "2026-09-25T09:16:25+00:00",
    "summary": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "미 국방부, AI 기반 거짓말탐지기 구축에 3천만 달러 요구"
   },
   {
    "id": "e58cbdc1b9c75977",
@@ -1915,7 +1995,8 @@
    "category": "news_global",
    "published": "2026-09-24T20:31:27+00:00",
    "summary": "You can do a whole lot more than tap to pay with Google’s Wallet app.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "2026년 Google 월렛에는 많은 새로운 기능이 추가되었습니다. 이 5가지가 제가 가장 좋아하는 것입니다."
   },
   {
    "id": "536e8a6f56762161",
@@ -1926,7 +2007,8 @@
    "category": "news_global",
    "published": "2026-09-24T19:36:35+00:00",
    "summary": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "위험을 감수할 가치가 있는 AI 에이전트를 찾은 것 같습니다."
   },
   {
    "id": "356e826b460b6d0d",
@@ -1937,7 +2019,8 @@
    "category": "talks",
    "published": "2026-09-24T19:00:28+00:00",
    "summary": "Sal Khan, the founder and CEO of Khan Academy, thinks artificial intelligence could spark the greatest positive transformation education has ever seen.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI가 지름길이 아닌 학습 파트너라면 어떨까요? #TEDTalks"
   },
   {
    "id": "2d3921d846c73739",
@@ -1959,7 +2042,8 @@
    "category": "talks",
    "published": "2026-09-24T15:00:04+00:00",
    "summary": "Climate expert Ari Matusiak spends his days working to rewire America's energy system, and he has an idea: instead of tech companies building new power plants for their AI data…",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "AI가 만들어내는 에너지 혼란과 해결 방법 | 아리 마투시아크 | TED"
   },
   {
    "id": "f6fad453b0cdb1b6",
@@ -2387,8 +2471,8 @@
   {
    "name": "Google DeepMind",
    "ok": true,
-   "count": 1,
-   "fetched": 100
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Google News: AI",
@@ -2447,8 +2531,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2592,7 +2676,7 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 88
+   "fetched": 92
   },
   {
    "name": "구글뉴스: 생성형 AI",
@@ -2610,19 +2694,19 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 41
+   "fetched": 42
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 53
+   "fetched": 50
   },
   {
    "name": "스테이지5",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 500: Internal Server Error"
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "인공지능신문",
