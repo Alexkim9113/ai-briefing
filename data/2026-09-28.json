@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:15+09:00",
+ "generated_at": "2026-09-28T16:17+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -2808,7 +2808,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 83
+   "fetched": 87
   },
   {
    "name": "Google News: AI 기업",
@@ -2843,8 +2843,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2987,8 +2987,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3030,7 +3030,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 61
+   "fetched": 60
   },
   {
    "name": "스테이지5",
