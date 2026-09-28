@@ -1,0 +1,10 @@
+name: 주소 연결 확인
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for n in metaxis.kr www.metaxis.kr; do echo "== $n"; dig +short $n A; dig +short $n CNAME; dig +short @8.8.8.8 $n A; done
+          echo "== NS"; dig +short metaxis.kr NS
+          curl -sI -m 15 http://metaxis.kr | head -5 || true
