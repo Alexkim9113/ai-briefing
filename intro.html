@@ -70,7 +70,7 @@ links.forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shift
   box.innerHTML=a.map(x=>`<a href="${e(x.u)}" target="_blank" rel="noopener" style="--c:${/^#[0-9a-f]{6}$/i.test(x.c)?x.c:'#12e3ff'}">${e(x.t)}</a>`).join('');}catch(err){}}
  upd();setInterval(upd,180000);})();
 document.querySelector('.share').onclick=async()=>{const u='{URL}/?v={OGV}',t='{NAME}';
- try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);const d=document.createElement('div');d.className='toast';d.textContent='사이트 링크를 복사했어요';document.body.append(d);setTimeout(()=>d.remove(),2200);}}catch(e){}};
+ try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 관련 정보를 한눈에 볼 수 있는 곳',url:u});}else{await navigator.clipboard.writeText(u);const d=document.createElement('div');d.className='toast';d.textContent='사이트 링크를 복사했어요';document.body.append(d);setTimeout(()=>d.remove(),2200);}}catch(e){}};
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');

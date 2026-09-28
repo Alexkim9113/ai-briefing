@@ -938,7 +938,7 @@ document.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||e
  ev.preventDefault();openBrief(a);});
 function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),2200);}
 document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
- try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
+ try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 관련 정보를 한눈에 볼 수 있는 곳',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
 document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{const r=document.documentElement,
  dark=r.dataset.theme?r.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches,n=dark?'light':'dark';
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
@@ -1766,7 +1766,8 @@ def render_md(body):
 
 def og_ver():
     f = ROOT / "static" / "og-main.png"
-    return hashlib.sha1(f.read_bytes()).hexdigest()[:8] if f.exists() else "1"
+    # 사진이나 소개글이 바뀌면 값이 바뀌어, 카카오톡이 미리보기를 새로 읽는다
+    return hashlib.sha1((f.read_bytes() if f.exists() else b"") + site_cfg()["description"].encode()).hexdigest()[:8]
 
 
 def og_main():
