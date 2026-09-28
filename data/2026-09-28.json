@@ -1,7 +1,30 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T21:17+09:00",
+ "generated_at": "2026-09-28T21:22+09:00",
  "items": [
+  {
+   "id": "2dbe11e93125dc9b",
+   "title": "[유튜브 속 경향]한국 로봇 산업의 ‘해자’ 제조업 역량",
+   "link": "https://www.khan.co.kr/article/202609282116005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T21:16:00+09:00",
+   "summary": "윤지원의 머니터링유튜브 속 경향: 경향신문 유튜브 채널인 와 에서 다룬 영상 가운데 신문 독자들과 공유하고 싶은 콘텐츠를 선정해 4주에 한 번씩 전해드리는 코너입니다. 전 세계 휴머노이드 로봇 산업의 주도권 경쟁이 격화하고 있습니다. 한국이 독보적인 제조업 생태계를 바탕으로 미국과 전략적으로 협력해 글로벌 로봇···",
+   "detail": "윤지원의 머니터링유튜브 속 경향: 경향신문 유튜브 채널인 와 에서 다룬 영상 가운데 신문 독자들과 공유하고 싶은 콘텐츠를 선정해 4주에 한 번씩 전해드리는 코너입니다.\n전 세계 휴머노이드 로봇 산업의 주도권 경쟁이 격화하고 있습니다.",
+   "thumb": "",
+   "mx": {
+    "b": "경향신문 유튜브 채널이 글로벌 휴머노이드 로봇 경쟁 속에서 한국 로봇 산업이 지닌 제조업 역량의 경쟁력을 조명했다.",
+    "p": "소프트웨어 중심의 글로벌 휴머노이드 경쟁에서 한국의 탄탄한 하드웨어 제조업 기반이 차별화된 산업적 해자로 작용하고 있음을 보여준다.",
+    "t": [
+     "로봇",
+     "제조업",
+     "휴머노이드",
+     "유튜브"
+    ],
+    "v": 1
+   }
+  },
   {
    "id": "b64bec5c1ad5b1a3",
    "title": "Space42, 위성 통신·AI·지리 분석 통합 기술 전격 공개 – 기자단 UAE 현장 방문",
@@ -12,7 +35,7 @@
    "published": "2026-09-28T21:10:37+09:00",
    "summary": "아부다비에서 21일(현지시간) 기자들이 UAE에 본사를 둔 우주 기술 기업 Space42의 시설을 둘러봤다. 이번 미디어 투어는 위성 통신, 지리 공간 분석, 인공지능(AI) 기능을 결합한 Space42의 기술력을 현장에서 직접 확인하는 자리였다.",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "f20ce88feaf3ea06",
@@ -239,7 +262,7 @@
    "published": "2026-09-28T19:53:49+09:00",
    "summary": "베어드는 28일(현지 시간) 인공지능(AI) 수요 확대와 D램 공급 부족 전망을 반영해 마이크론 테크놀로지(MU)의 목표주가를 기존 1280달러에서 1520달러까지 상향했다. 다만, 투자의견은 ‘시장수익률 하회(Underperform)’를 유지했다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "990c36ee547573c0",
@@ -320,7 +343,7 @@
    "summary": "(서울=국제뉴스) 박종진 기자 = 서민금융진흥원(원장 김은경)은 국민이 직접 참여해 서민금융 지원방안을 제안할 수 있는 '2026년 대국민 혁신 아이디어 공모전'을 개최한다고 28일 밝혔다.",
    "detail": "(서울=국제뉴스) 박종진 기자 = 서민금융진흥원(원장 김은경)은 국민이 직접 참여해 서민금융 지원방안을 제안할 수 있는 '2026년 대국민 혁신 아이디어 공모전'을 개최한다고 28일 밝혔다.\n이번 공모전은 청년이 체감할 수 있는 정책, 공공부문 인공지능 대전환, 국민 주도 참여·소통 거버넌스 등 세 가지 주제를 중심으로 아이디어를 모집한다.\n응모를 원하는 국민은 서민금융진흥원 홈페이지 내 '소통참여' → '제안합니다' → '대국민 공모전' 게시판에서 신청양식을 내려받아 작성한 뒤, 담당자 이메일로 10월 12일까지 제출하면 된다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "a0539919ab79f283",
@@ -332,7 +355,7 @@
    "published": "2026-09-28T19:43:07+09:00",
    "summary": "송경희 개인정보보호위원장이 통신 3사 최고경영자(CEO)와의 첫 회동을 계기로 “산업계와의 소통을 강화하겠다”며 업권별 후속 협의 가능성을 열었다. 개인정보 보호 책임을 강화한 법 개정과 인공지능(AI) 기술 확산에 맞춰 현장 의견을 제도에 반영하겠다는 취지다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "f564d8ee5af429c1",
@@ -440,7 +463,7 @@
    "summary": "[대구=뉴시스]정재익 기자 = 대구가톨릭대학교의료원은 의과대학 의학통계학교실 신임희 교수가 대통령 직속 국가생명윤리심의위원회 'AI·보건의료데이터 활용 특별전문위원회' 전문위원으로 위촉됐다고 28일 밝혔다. 임기는 지난 7일부터 3년간이다.",
    "detail": "[대구=뉴시스]정재익 기자 = 대구가톨릭대학교의료원은 의과대학 의학통계학교실 신임희 교수가 대통령 직속 국가생명윤리심의위원회 'AI·보건의료데이터 활용 특별전문위원회' 전문위원으로 위촉됐다고 28일 밝혔다.\n특별전문위원회는 인공지능(AI)과 보건의료데이터를 안전하고 효율적으로 활용하기 위한 정책·제도적 기반을 마련하는 기구다.\n신 교수는 임기 동안 보건의료데이터 관리체계 확립과 정보주체 권리 보호, 관련 연구 활성화를 위한 정책·규정 및 제도 개선 방안 등을 논의한다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "3304f73b05358747",
@@ -475,7 +498,7 @@
    "summary": "(서울=연합뉴스) 권하영 기자 = 정부가 추진 중인 독자 인공지능(AI) 파운데이션 모델 개발 사업(독파모)의 향후 진행 방향이 달라질 수 있다. ..",
    "detail": "(서울=연합뉴스) 권하영 기자 = 정부가 추진 중인 독자 인공지능(AI) 파운데이션 모델 개발 사업(독파모)의 향후 진행 방향이 달라질 수 있다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "203520b135ced8ba",
@@ -708,7 +731,7 @@
    "published": "2026-09-28T17:47:50+09:00",
    "summary": "(서울=연합뉴스) 강태우 기자 = 삼성전기[009150]가 인공지능(AI) 서버용 고부가 반도체 패키지기판 생산 능력 확대를 위해 국내외 생산 ...",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "6910e1dd660af76d",
@@ -790,7 +813,7 @@
    "summary": "인공지능(AI) 딥테크 기업 비드래프트(대표 김민식)가 개발한 추론 모델 ‘Darwin-180B-RSI’가 글로벌 AI 플랫폼 허깅페이스(Hugging Face)의 5개 공인 벤치마크 리더보드에서 모두 정상에 올랐다.",
    "detail": "인공지능(AI) 딥테크 기업 비드래프트(대표 김민식)가 개발한 추론 모델 ‘Darwin-180B-RSI’가 글로벌 AI 플랫폼 허깅페이스(Hugging Face)의 5개 공인 벤치마크 리더보드에서 모두 정상에 올랐다.\n이번 평가 결과는 기업이 임의로 제시한 지표가 아닌 허깅페이스의 공식 심사를 거친 주요 부문에서 이뤄졌다는 점에서 의미를 갖는다.\n40여 개 글로벌 모델이 경쟁한 해당 부문에서 종전 최고 기록은 각각 97.1%, 92.7% 수준이었으나, 허깅페이스 공식 수학 리더보드에서 만점이 나온 것은 이번이 처음이다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "b1778dbb687e5ad0",
@@ -2486,6 +2509,19 @@
    }
   },
   {
+   "id": "3156573dc3f4bd91",
+   "title": "아시안게임 휩쓴 남자 펜싱…AI 전력분석이 '뒷배'였다",
+   "link": "https://www.fnnews.com/news/202609280912140360",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:44:42+09:00",
+   "summary": "[파이낸셜뉴스] 한국 펜싱 대표팀이 2026 아이치·나고야 아시안게임에서 남녀 사브르·에페·플뢰레 전 종목에서 메달을 획득한 가운데, 인공지능(AI)의 전력분석과 효과적 전략 제시 등 AI가 메달 획득의 든든한 뒷배 역할을 한 것으로 나타났다.",
+   "detail": "28일 파이낸셜뉴스 취재를 종합하면 대한펜싱협회 회장사인 SK텔레콤은 이번 대회를 앞두고 자체 개발한 AI 전력분석 시스템을 처음 도입하는 등 펜싱 대표팀을 지원했다.\n경기 영상 분석하는 AI, 대표팀 훈련에 첫 도입 이번 대회 준비에는 SK텔레콤이 자체 개발한 펜싱 AI 전력분석 시스템 'SKT-FAN(Fencing AI Nexus)'이 처음 도입됐다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
    "id": "9552195c964ddb7b",
    "title": "Holo4: powering generalist computer-use agents",
    "link": "https://huggingface.co/blog/Hcompany/holo4",
@@ -2528,6 +2564,29 @@
      "AI인프라",
      "금융위기",
      "대출"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "1ad981c7c9574435",
+   "title": "대웅제약, AI로 의약품 제형 설계하는 플랫폼 개발 나선다",
+   "link": "https://www.fnnews.com/news/202609280918372354",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:40:56+09:00",
+   "summary": "[파이낸셜뉴스] 대웅제약이 인공지능(AI)을 활용해 의약품의 방출 특성과 약효를 예측하고 최적의 제형을 설계하는 플랫폼 개발에 나선다. 대웅제약은 산업통상부의 'AI 기반 방출조절·복합제형 통합 최적 설계 플랫폼 개발' 국책과제 주관기관으로 선정됐다고 28일 밝혔다.",
+   "detail": "[파이낸셜뉴스] 대웅제약이 인공지능(AI)을 활용해 의약품의 방출 특성과 약효를 예측하고 최적의 제형을 설계하는 플랫폼 개발에 나선다.\n대웅제약은 산업통상부의 'AI 기반 방출조절·복합제형 통합 최적 설계 플랫폼 개발' 국책과제 주관기관으로 선정됐다고 28일 밝혔다.\n이번 과제는 목표로 하는 약동학(PK) 프로파일을 입력하면 AI가 이에 맞는 의약품 처방과 제형을 설계하도록 하는 것이 핵심이다.\n개발 대상은 약물이 체내에서 방출되는 속도와 양을 조절하는 '방출조절 제형'과 여러 유효성분을 하나의 약에 담는 '복합제형'이다.",
+   "thumb": "",
+   "mx": {
+    "b": "대웅제약이 산업통상자원부 국책과제의 주관기관으로 선정되어 AI를 활용한 방출조절 및 복합제형 의약품 최적 설계 플랫폼 개발에 착수한다.",
+    "p": "제약 바이오 산업에서 인공지능이 약동학 프로파일 예측과 맞춤형 처방 설계까지 영역을 확장하며 R&D 효율성을 높이고 있다.",
+    "t": [
+     "대웅제약",
+     "AI제형설계",
+     "국책과제",
+     "제약바이오"
     ],
     "v": 1
    }
@@ -2843,7 +2902,7 @@
    "summary": "[파이낸셜뉴스] 이재명 대통령이 오는 29일 청와대에서 반도체·피지컬 AI(인공지능)·AI데이터센터 등 3대 메가프로젝트의 추진 상황을 직접 점검한다. 이번에는 산업 인프라 구축을 넘어 주거·교육·문화·의료 등 사람이 실제로 모여 살 수 있는 정주여건 조성 방안을 핵심 의제로 다룬다.",
    "detail": "[파이낸셜뉴스] 이재명 대통령이 오는 29일 청와대에서 반도체·피지컬 AI(인공지능)·AI데이터센터 등 3대 메가프로젝트의 추진 상황을 직접 점검한다.\n청와대 내 메가프로젝트 전담 조직인 국가전략투자보좌관실이 출범한 뒤 공개적으로 열리는 첫 점검회의라는 점에서 사업 추진 체계도 한층 강화될 전망이다.\n28일 청와대에 따르면 이 대통령은 29일 오후 3시 청와대에서 '메가프로젝트 제3차 민관합동 점검회의'를 주재한다.\n이 대통령이 매달 직접 주재하는 세 번째 회의다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "cad23d9e9992f1b4",
@@ -3893,6 +3952,28 @@
    }
   },
   {
+   "id": "9d3ee3c58ee4aade",
+   "title": "‘Academic, not partisan’: Stanford and faculty address partnership with Trump administration on new manufacturing school",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOY0h4RkxSUVNKRklKWXVqVk9VNkRyMF84ajlQclQ3UGRwZTZPWl81U3dlZjNvWDN4MW9tQmc5WlJIWkM4eC1raGZjN3czaTdfYlB6NVZkOG9WUXFwWTUwelJBRFdFcUFudmZZZHQ0bWVrNFhURW05TVRpT3RQRDV6NGVPdm5KZDJtaXk2RGNfYjE5eTFEUVY2OVBVeWpvQ1FYWElkNjR3TnlDZF81SEdNOFpiNnVPTWVqa1hWTWpKc084ak0wMDI4S3AzTXY?oc=5",
+   "source": "The Stanford Daily",
+   "field": "스탠퍼드 연구",
+   "category": "papers",
+   "published": "2026-09-28T08:31:10+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "스탠퍼드대와 교수진이 트럼프 행정부와의 신규 제조업 스쿨 파트너십 추진을 두고 학문적 독립성과 정파성 논란에 대해 입장을 밝혔다.",
+    "p": "대학과 정치권의 기술 협력이 심화되는 과정에서 연구 기관의 학문적 중립성과 공공성 확보가 주요 쟁점으로 부각되고 있다.",
+    "t": [
+     "스탠퍼드대",
+     "제조업스쿨",
+     "산학협력",
+     "학문적독립성"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "8c5ed3affac7adbe",
    "title": "삼성전기, FC-BGA에 역대 최대 4.27조 베팅…AI 서버 수요 정조준",
    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMDg1c2JzdndmbTNHM1BLQXhYaldIRkVjT01ISHpmN3VLYlJiZkdQZjliWkxkNzJEUWhZY2NfWHgwSjBWX2xZQWw2R3otTGU1a1RVS29vdndSeS04aDdXeXZaSGlUWWhLdHBDVEtXbDlhcjRHM3EzYnFpY0dQVXAybGplc1JlNlRBMFRpQkNWT0dVLVZHUEFhdWJONFYxT3EtVE9NY3hzZVNCbTdmbDVzS25wX0Zkem1ORGVqSjJtalFhT3pUOEhsU3BObllpQQ?oc=5",
@@ -4920,27 +5001,6 @@
      "신성이엔지",
      "데이터센터",
      "액냉"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "0e217861a8f4847c",
-   "title": "컴닥터, 20년 노하우에 AI 결합해 IT 유지보수 혁신",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaG1rN3lMcVdBVURwMng5SUc3aFVfZzJHZVl0Q1pCTDFQbXlzbWQ4dUZ3bzNfS0IwRjZQdXdsRWx6RWMxeU5jb1NsNmFSekJ0SGZ1N3RnbXZWTEVzeDhzWEs1VTFmNjhuN1hsQkRoSjkyejFPeU8ySVpPbTRoQzRncjZyU1lWRnl40gFsQVVfeXFMUEl1Mmt4WDJHUUhfZnZVYzZQRlgwMF91TDg3dGpXTWV6UEZKSGxSaTAtNWsxS3VmWWVLWEZYZ2hRX0pnVWVvVlBwZVV5bFpSbnpYQ0dqRm9IcGc0a2g1WnNZemMtelZmdXFpUlE0?oc=5",
-   "source": "국민일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:53:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "컴닥터가 20년간 축적된 IT 유지보수 노하우에 인공지능 기술을 결합해 서비스 혁신을 추진한다.",
-    "p": "전통적인 IT 서비스 업계가 AI 진단 및 자동화를 통해 운영 효율성을 높이는 전환점을 맞이했다.",
-    "t": [
-     "컴닥터",
-     "IT유지보수",
-     "AI혁신"
     ],
     "v": 1
    }
@@ -7420,7 +7480,17 @@
    "published": "2026-09-27T21:02:00+00:00",
    "summary": "",
    "thumb": "",
-   "mx_try": 1
+   "mx": {
+    "b": "미국 트럼프 대통령과 앤스로픽 최고경영자가 비공개 만찬을 가질 예정인 가운데 AI 규제를 둘러싼 갈등 완화 가능성이 제기된다.",
+    "p": "미국 행정부와 주요 AI 프론티어 기업 간의 규제 마찰 속에서 정책적 타협점을 모색하는 해빙 국면이 조성되고 있다.",
+    "t": [
+     "앤스로픽",
+     "트럼프",
+     "AI규제",
+     "빅테크정책"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "1d34110e9e5176a4",
@@ -9059,7 +9129,7 @@
    "tr": "deepl",
    "trv": 2,
    "detail_ko": "Rufus-Air는 GLM-4.5-Air-Base(106B-A12B)를 기반으로 한 개방적이고 재현 가능한 사후 훈련 레시피로, SFT, 추론 강화학습(Reasoning RL), 코딩 강화학습(Coding RL), 지시 이행 강화학습(Instruction-Following RL), 일반 에이전트(General Agent), 코딩 에이전트(Coding Agent), 탐색 에이전트(Search Agent), RLHF 등 8단계의 연속적인 파이프라인으로 구성되어 있습니다.",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "bed102a67180685e",
@@ -9405,7 +9475,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 3,
    "fetched": 70
   },
   {
@@ -9465,14 +9535,14 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
-   "count": 1,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -9502,7 +9572,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 57
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -9526,7 +9596,7 @@
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 53
   },
   {
    "name": "Sequoia Capital",
@@ -9550,7 +9620,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 47
+   "fetched": 45
   },
   {
    "name": "TED",
@@ -9598,19 +9668,19 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 78
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 72
+   "fetched": 74
   },
   {
    "name": "Topic: 여성 · 여성",
@@ -9634,13 +9704,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 62
+   "fetched": 61
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "VentureBeat AI",
@@ -9754,7 +9824,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -9796,13 +9866,13 @@
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 28
+   "fetched": 27
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
@@ -9814,13 +9884,13 @@
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 36
+   "fetched": 35
   },
   {
    "name": "국민일보",
@@ -9934,7 +10004,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "아주경제",
@@ -9994,19 +10064,19 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 71
+   "fetched": 70
   },
   {
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -10018,7 +10088,7 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 44
+   "fetched": 43
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
@@ -10042,31 +10112,31 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 27
+   "fetched": 26
   },
   {
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 43
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 40
   },
   {
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 45
   },
   {
    "name": "중앙일보",
@@ -10078,7 +10148,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 511
+   "fetched": 504
   },
   {
    "name": "프레시안",
