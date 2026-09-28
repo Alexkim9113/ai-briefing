@@ -277,16 +277,26 @@ def detail_lines(desc, title, summary=""):
     return "" if out.replace("\n", " ") == summary else out
 
 
-def is_ai_related(item, keywords, title_only=False):
-    blob = (item["title"] if title_only else item["title"] + " " + clean_text(item["desc"])[:400]).lower()
+def _kw_count(blob, keywords):
+    n = 0
     for k in keywords:
         k = k.lower()
         if k.isascii() and len(k) <= 3:
-            if re.search(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", blob):
-                return True
-        elif k in blob:
-            return True
-    return False
+            n += len(re.findall(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", blob))
+        else:
+            n += blob.count(k)
+    return n
+
+
+def is_ai_related(item, keywords, title_only=False, strict=False):
+    """strict: 일반 언론사 기사는 제목에 AI 말이 있거나, 소개글에 AI 말이 두 번 이상 나와야 AI 기사로 본다
+    (본문 끝에 AI가 한 번 스친 경제·사회 기사가 들어오지 않게)."""
+    title = item["title"].lower()
+    if _kw_count(title, keywords):
+        return True
+    if title_only:
+        return False
+    return _kw_count(clean_text(item["desc"])[:600].lower(), keywords) >= (2 if strict else 1)
 
 
 def norm_link(link):
@@ -840,7 +850,7 @@ def make_item(src, it, keywords, now):
         d = now
     if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
-    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only")):
+    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only"), strict=bool(src.get("require_ai"))):
         return None
     if src.get("url", "").startswith("https://news.google.com"):
         it = {**it, "desc": ""}  # 구글 뉴스 소개글은 여러 언론사 제목을 이어 붙인 것이라 요약으로 쓰지 않는다
@@ -1832,44 +1842,93 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 
 
 # 표지 아이콘: 기사 제목·요약의 단어로 주제를 골라 직접 그린 아이콘을 넣는다(외부 이미지 없음)
-TOPICS = [
-    ("의료", ["의료", "병원", "환자", "진단", "헬스", "신약", "바이오", "clinical", "medical", "health", "patient", "drug", "surgical", "hospital", "disease", "protein", "cancer"],
+TOPICS = [  # (이름, [단어], 아이콘) — 순서는 점수가 같을 때의 우선순위
+    ("의료", ["의료", "병원", "환자", "진단", "헬스케어", "신약", "바이오", "질환", "암 ", "clinical", "medical", "healthcare", "patient", "patients", "drug", "surgical", "hospital", "disease", "protein", "cancer"],
      '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>'),
-    ("법·정책", ["법", "규제", "정책", "정부", "국회", "소송", "저작권", "헌법", "변호사", "법원", "판결", "참정권", "선거", "기본법", "law", "legal", "regulation", "policy", "court", "lawsuit", "copyright", "government", "ai act"],
+    ("법·정책", ["법률", "법안", "법원", "법제", "입법", "기본법", "헌법", "법조", "법무", "법적", "변호사", "로펌", "리걸테크", "판결", "판사", "검찰", "소송", "규제", "정책", "정부", "행정", "부처", "장관", "국회", "참정권", "선거", "저작권", "law", "laws", "legal", "lawyer", "lawyers", "regulation", "regulators", "policy", "court", "judge", "lawsuit", "copyright", "legislation", "election", "ai act", "senate", "congress"],
      '<path d="M12 3v18M5 21h14M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/>'),
-    ("반도체", ["반도체", "칩", "gpu", "엔비디아", "nvidia", "hbm", "tsmc", "삼성전자", "sk하이닉스", "chip", "semiconductor", "datacenter", "데이터센터"],
+    ("반도체", ["반도체", "칩", "gpu", "엔비디아", "nvidia", "hbm", "tsmc", "삼성전자", "하이닉스", "chip", "chips", "semiconductor", "datacenter", "data center", "데이터센터"],
      '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><rect x="10" y="10" width="4" height="4"/>'),
-    ("로봇", ["로봇", "휴머노이드", "피지컬", "자율주행", "드론", "robot", "humanoid", "autonomous", "drone", "embodied"],
+    ("피지컬 AI", ["피지컬 ai", "피지컬ai", "피지컬 인공지능", "체화", "physical ai", "embodied", "world model", "월드 모델", "월드모델", "action model"],
+     '<circle cx="12" cy="5" r="2"/><path d="M12 7v7M8 10l4-2 4 2M9 21l3-7 3 7"/>'),
+    ("로봇", ["로봇", "휴머노이드", "자율주행", "드론", "robot", "robots", "robotics", "humanoid", "autonomous", "self-driving", "drone"],
      '<rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6M2 13h3M19 13h3"/><circle cx="12" cy="3" r="1"/>'),
-    ("에너지·환경", ["에너지", "전력", "환경", "기후", "탄소", "배터리", "energy", "climate", "carbon", "grid", "battery", "solar", "environment"],
+    ("에이전트", ["에이전트", "에이전틱", "agent", "agents", "agentic", "multi-agent", "자동화 비서"],
+     '<circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="12" cy="21" r="1.6"/><path d="M6 7l3.5 3M18 7l-3.5 3M12 15v4.4"/>'),
+    ("철학·윤리", ["철학", "윤리", "인문", "의식", "인간성", "philosophy", "philosopher", "ethics", "ethical", "consciousness", "moral"],
+     '<path d="M12 3a6 6 0 0 0-3 11v3h6v-3a6 6 0 0 0-3-11zM9 20h6M10 17v-3M14 17v-3"/>'),
+    ("정신건강", ["정신건강", "자살", "우울", "마음건강", "상담", "mental health", "suicide", "depression", "therapy", "loneliness"],
+     '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>'),
+    ("청소년·가족", ["청소년", "아동", "어린이", "자녀", "가족", "출산", "저출생", "저출산", "육아", "부모", "teen", "teens", "teenagers", "children", "kids", "family", "parents", "birth", "childcare"],
+     '<circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="8.5" r="2"/><path d="M4 20v-5a4 4 0 0 1 8 0v5M13 20v-4a3.5 3.5 0 0 1 7 0v4"/>'),
+    ("여성", ["여성", "성평등", "젠더", "성차별", "women", "woman", "gender", "female"],
+     '<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>'),
+    ("동물", ["동물", "반려동물", "반려견", "야생", "생태", "축산", "가축", "사료", "양돈", "animal", "animals", "wildlife", "pets", "species"],
+     '<circle cx="6" cy="10" r="1.8"/><circle cx="10" cy="6" r="1.8"/><circle cx="14" cy="6" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M12 11c-3 0-5.5 4-5.5 6.5 0 2 2 2.5 5.5 1.5 3.5 1 5.5.5 5.5-1.5C17.5 15 15 11 12 11z"/>'),
+    ("에너지·환경", ["에너지", "전력", "환경", "기후", "탄소", "배터리", "원전", "energy", "climate", "carbon", "grid", "battery", "solar", "environment", "emissions"],
      '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'),
-    ("문화·예술", ["예술", "음악", "영화", "콘텐츠", "창작", "게임", "웹툰", "music", "art", "film", "creative", "game", "culture", "museum"],
+    ("국방·안보", ["국방", "군사", "군 ", "전쟁", "무기", "안보", "방산", "military", "defense", "defence", "war", "weapon", "weapons", "pentagon", "army"],
+     '<path d="M12 3l2.5 5.5 6 .7-4.5 4 1.3 6-5.3-3-5.3 3 1.3-6-4.5-4 6-.7z"/>'),
+    ("미디어", ["미디어", "언론", "기자", "방송", "딥페이크", "가짜뉴스", "허위정보", "journalism", "journalist", "newsroom", "media", "deepfake", "deepfakes", "misinformation", "disinformation"],
+     '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h6M7 12h10M7 15h8"/>'),
+    ("문화·예술", ["예술", "음악", "영화", "미술", "문학", "창작", "웹툰", "게임", "콘텐츠", "애니메이션", "드라마", "music", "art", "artist", "artists", "film", "creative", "game", "culture", "museum", "novel"],
      '<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-1.5-1.5-1.8-1.5-3s1-2 2.5-2H18a3 3 0 0 0 3-3c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/>'),
-    ("교육", ["교육", "학생", "학교", "대학", "교사", "education", "student", "school", "teacher", "university"],
+    ("교육", ["교육", "학생", "학교", "교사", "수업", "교실", "education", "student", "students", "school", "schools", "teacher", "teachers", "classroom"],
      '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>'),
-    ("보안", ["보안", "해킹", "사이버", "개인정보", "security", "cyber", "privacy", "attack", "hack"],
+    ("사회·노동", ["일자리", "노동", "고용", "해고", "불평등", "사회적", "취업", "jobs", "workers", "labor", "labour", "employment", "layoffs", "inequality", "workforce"],
+     '<circle cx="9" cy="7" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 3.5a3 3 0 0 1 0 7M21 21v-2a6 6 0 0 0-4-5.6"/>'),
+    ("보안", ["보안", "해킹", "사이버", "개인정보", "security", "cyber", "cybersecurity", "privacy", "hack", "hackers", "malware", "킬 스위치", "킬스위치", "safety", "misuse", "rogue", "sandbox"],
      '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
-    ("투자·기업", ["투자", "매출", "주가", "상장", "인수", "펀딩", "시장", "스타트업", "funding", "investment", "startup", "revenue", "stock", "ipo", "valuation", "acquire"],
+    ("경제·기업", ["경제", "금융", "은행", "증시", "물가", "투자", "매출", "주가", "상장", "인수", "펀딩", "스타트업", "실적", "economy", "economic", "finance", "funding", "investment", "investors", "startup", "revenue", "stock", "shares", "ipo", "valuation", "acquire", "acquisition", "earnings", "창업", "종목", "목표가", "株"],
      '<path d="M3 20h18M5 16l4-5 4 3 6-8"/><path d="M15 6h4v4"/>'),
-    ("언어모델", ["llm", "gpt", "챗gpt", "chatgpt", "claude", "gemini", "언어모델", "챗봇", "language model", "chatbot", "agent", "에이전트"],
+    ("언어모델", ["llm", "gpt", "챗gpt", "chatgpt", "claude", "gemini", "제미나이", "언어모델", "언어 모델", "챗봇", "language model", "language models", "chatbot"],
      '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'),
+    ("신제품·서비스", ["출시", "선보", "론칭", "launch", "launches", "unveil", "unveils"],
+     '<path d="M14 4c3-1 5-1 6 0 1 1 1 3 0 6l-7 7-6-6z"/><path d="M7 11l-3 1-1 3 4-1M13 17l-1 3-3 1 1-4"/><circle cx="15.5" cy="8.5" r="1.5"/>'),
 ]
-TOPICS.append(("신제품·서비스", ["출시", "공개", "플랫폼", "서비스", "선보", "launch", "release", "unveil", "app", "feature"],
-               '<path d="M14 4c3-1 5-1 6 0 1 1 1 3 0 6l-7 7-6-6z"/><path d="M7 11l-3 1-1 3 4-1M13 17l-1 3-3 1 1-4"/><circle cx="15.5" cy="8.5" r="1.5"/>'))
+_TOPIC_I = {name: i for i, (name, _, _) in enumerate(TOPICS)}
+# 수집할 때 붙인 분야(주제 검색·논문 분야)를 분류에 먼저 반영한다: 분야 이름 속 단어 → 주제
+_FIELD_TOPIC = [("법", "법·정책"), ("정치", "법·정책"), ("저작권", "법·정책"), ("의료", "의료"), ("정신건강", "정신건강"),
+                ("피지컬", "피지컬 AI"), ("로봇", "로봇"), ("에이전트", "에이전트"), ("철학", "철학·윤리"), ("윤리", "철학·윤리"),
+                ("청소년", "청소년·가족"), ("가족", "청소년·가족"), ("여성", "여성"), ("동물", "동물"), ("에너지", "에너지·환경"),
+                ("환경", "에너지·환경"), ("국방", "국방·안보"), ("미디어", "미디어"), ("예술", "문화·예술"), ("문화", "문화·예술"),
+                ("교육", "교육"), ("노동", "사회·노동"), ("사회", "사회·노동"), ("경제", "경제·기업"), ("LLM", "언어모델")]
 TOPIC_DEFAULT = {"papers": ("연구", '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>'),
                  "talks": ("강연", '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>'),
-                 "policy": ("법·정책", TOPICS[1][2])}
+                 "policy": ("법·정책", TOPICS[_TOPIC_I["법·정책"]][2])}
 TOPIC_SPARK = '<path d="M12 3c1 5 3 7 8 8-5 1-7 3-8 8-1-5-3-7-8-8 5-1 7-3 8-8z"/>'
 
 
+def _topic_hits(words, text):
+    return sum(1 for w in words if (re.search(r"(?<![a-z])" + re.escape(w) + r"(?![a-z])", text) if w.isascii() else w in text))
+
+
 def topic_of(it):
-    text = (it["title"] + " " + (it.get("summary") or "")[:120]).lower()
+    """제목에 나온 말을 가장 무겁게(3점), 요약 앞부분은 1점, 수집 분야·운영자 태그는 2~4점으로 셈해 주제를 고른다."""
+    cached = it.get("_topic")
+    if cached:
+        return cached
+    title = (it["title"] + " " + (it.get("title_ko") or "")).lower()
+    summ = (it.get("summary") or "")[:160].lower()
+    fixed = " ".join(it.get("tags_fixed") or []).lower() + " " + (it.get("note") or "").lower()
+    field = it.get("field") or ""
+    ftop = [t for _, t in sorted((field.find(k), t) for k, t in _FIELD_TOPIC if k in field)]
+    ftop = list(dict.fromkeys(ftop))
+    # 뉴스 검색으로 모은 글은 검색어가 본문 어딘가에만 있을 수 있어, 제목·요약에 그 주제 말이 보일 때만 분야를 더한다
+    loose = "news.google." in (it.get("link") or "") or len(ftop) > 1
     best, score = None, 0
     for name, words, icon in TOPICS:
-        n = sum(1 for w in words if (re.search(r"(?<![a-z])" + re.escape(w) + r"(?![a-z])", text) if w.isascii() else w in text))
+        h = 3 * _topic_hits(words, title) + _topic_hits(words, summ)
+        n = h + 2 * _topic_hits(words, fixed)
+        if name in ftop and (h or not loose):
+            n += 4 if len(ftop) == 1 else 3 - min(ftop.index(name), 1)
         if n > score:
             best, score = (name, icon), n
-    return best or TOPIC_DEFAULT.get(it["category"], ("AI", TOPIC_SPARK))
+    if score < 2:  # 요약에 한 번 스친 말만으로는 정하지 않는다
+        best = None
+    res = best or TOPIC_DEFAULT.get(it["category"], ("AI", TOPIC_SPARK))
+    it["_topic"] = res
+    return res
 
 
 # 표지 그림: 기사마다 다른 추상 그라데이션(자체 생성 SVG)과 주제 아이콘. 외부 이미지는 쓰지 않는다.
@@ -1878,7 +1937,7 @@ ART_PALETTES = {
     "반도체": ("#0d1b2e", ["#3b82f6", "#7dd3fc", "#1e3a8a"]), "로봇": ("#1a1f2b", ["#64748b", "#cbd5e1", "#38bdf8"]),
     "에너지·환경": ("#10261c", ["#34d399", "#bef264", "#0f766e"]), "문화·예술": ("#2a1026", ["#f472b6", "#fbbf24", "#a855f7"]),
     "교육": ("#2a1d0c", ["#f59e0b", "#fde68a", "#b45309"]), "보안": ("#101826", ["#475569", "#94a3b8", "#0ea5e9"]),
-    "투자·기업": ("#0f2419", ["#22c55e", "#86efac", "#15803d"]), "언어모델": ("#0d1030", ["#3b7bff", "#12e3ff", "#8b2cff"]),
+    "경제·기업": ("#0f2419", ["#22c55e", "#86efac", "#15803d"]), "언어모델": ("#0d1030", ["#3b7bff", "#12e3ff", "#8b2cff"]),
     "신제품·서비스": ("#2b1208", ["#fb923c", "#fca5a5", "#c2410c"]), "연구": ("#141a33", ["#6366f1", "#a5b4fc", "#312e81"]),
     "영상": ("#2b0d0d", ["#ef4444", "#fca5a5", "#7f1d1d"]), "AI": ("#0b0a24", ["#8b2cff", "#12e3ff", "#3b7bff"]),
 }
@@ -1916,13 +1975,10 @@ def _mx_attrs(it):
     """기사 창: METAXIS 브리핑(AI)이 있으면 QUICK BRIEF·METAXIS POINT·태그, 아직 없으면 규칙 방식 요약·VIEW·태그."""
     mx = it.get("mx") or {}
     if not mx:
-        summ, view, tags = mx_note(it)
-        mt = json.dumps([[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in tags], ensure_ascii=False)
+        summ, view, _ = mx_note(it)
+        mt = json.dumps([[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in card_tags(it)], ensure_ascii=False)
         return f' data-ms="{esc(summ)}" data-mv="{esc(view)}" data-mt="{esc(mt)}"'
-    tags = []
-    for t in mx.get("t", []):
-        c = _KW_CANON.get(t.lower())
-        tags.append([t, f"/tag/k{_KW_INDEX[c]}.html" if c and c not in TAG_SKIP else ""])
+    tags = [[n, f"/tag/k{i}.html" if i is not None else ""] for n, i in card_tags(it)]
     return (f' data-ai="1" data-ms="{esc(mx.get("b", ""))}" data-mv="{esc(mx.get("p", ""))}"'
             f' data-mt="{esc(json.dumps(tags, ensure_ascii=False))}"')
 
@@ -1977,7 +2033,9 @@ def pick_featured(items):
 
 # 표지 사진: 저작권 없는 퍼블릭 도메인(CC0) 사진을 주제별로 골라 static/photos 에 저장해 두고 자동으로 붙인다.
 # 기사 원본의 사진은 가져오지 않는다. 사진 목록과 출처는 static/photos/credits.json.
-TOPIC_SLUG = {"AI": "ai", "반도체": "chip", "에너지·환경": "energy", "투자·기업": "invest", "신제품·서비스": "launch",
+TOPIC_SLUG = {"AI": "ai", "반도체": "chip", "에너지·환경": "energy", "경제·기업": "invest", "신제품·서비스": "launch",
+              "피지컬 AI": "robot", "에이전트": "llm", "정신건강": "medical", "청소년·가족": "edu", "여성": "ai",
+              "동물": "energy", "국방·안보": "security", "미디어": "art", "사회·노동": "invest", "철학·윤리": "ai",
               "언어모델": "llm", "의료": "medical", "로봇": "robot", "보안": "security", "영상": "video",
               "법·정책": "law", "교육": "edu", "연구": "research", "문화·예술": "art"}
 PER_PAGE = 8  # 목록 한 페이지에 보여줄 글 수
@@ -2172,16 +2230,22 @@ def thumb_html(it, base="", used=None, href=None, blank=True):
     return f'<a class="thumb" href="{esc(href or it["link"])}"{tgt} tabindex="-1" aria-hidden="true">{art}{tag}</a>'
 
 
+def card_tags(it, n=4):
+    """목록과 기사 창에 똑같이 붙는 #태그: 운영자 태그 → METAXIS 브리핑 태그 → 연관어·핵심어·분야 태그 순. 모든 글에 붙는다."""
+    names = it.get("tags_fixed") or (it.get("mx") or {}).get("t") or []
+    out = []
+    for name in names:
+        c = _KW_CANON.get(name.lower())
+        out.append((name, _KW_INDEX.get(c) if c and c not in TAG_SKIP else None))
+    if not out:
+        out = mx_tags(it)
+    return out[:n]
+
+
 def tags_html(it, base):
-    if it.get("tags_fixed"):  # 운영자가 정한 태그: 모아 보기 페이지가 있는 말만 링크
-        out = []
-        for name in it["tags_fixed"][:5]:
-            c = _KW_CANON.get(name.lower())
-            i = _KW_INDEX.get(c) if c and c not in TAG_SKIP else None
-            out.append(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' if i is not None else f'<span class="tg">#{esc(name)}</span>')
-        return '<div class="tags">' + "".join(out) + "</div>"
-    tags = item_tags(it)
-    return ('<div class="tags">' + "".join(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' for i, name in tags)
+    tags = card_tags(it)
+    return ('<div class="tags">' + "".join(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' if i is not None
+                                           else f'<span class="tg">#{esc(name)}</span>' for name, i in tags)
             + "</div>") if tags else ""
 
 
@@ -3045,9 +3109,9 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     """사이트 앞에 두는 3D 입장 페이지(intro.html 템플릿). 오늘 모인 글 수와 제목 몇 개를 띄운다."""
     items = latest["items"]
     count = {c: sum(1 for it in items if it["category"] == c) for c in cats}
-    links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b></a>'
-                    for c, n in cats.items())
-    links += f'<a href="editor/" data-go style="--c:{EDITOR_COLOR}"><i></i><b>에디터</b></a>'
+    links = f'<a href="editor/" data-go style="--c:{EDITOR_COLOR}"><i></i><b>에디터</b></a>'  # 본문(홈) 순서대로 에디터가 맨 앞
+    links += "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b></a>'
+                     for c, n in cats.items())
     tick = tick_html(ticker_items(items))
     d = datetime.fromisoformat(latest["date"])
     verify = ""
