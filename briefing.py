@@ -700,6 +700,7 @@ METAXIS_POINT: 내용을 반복하지 말고 AI 기술·연구·산업·정책·
 - 기업의 성능 주장은 검증된 사실처럼 단정하지 않는다.
 - 전문적이고 자연스러운 한국어(존댓말 없는 기사체, '~했다/~이다')를 사용한다.
 - TAGS는 3~5개, '#' 없이 짧은 명사로 쓴다(회사·기술·분야 이름 등).
+- 항목에 '운영자메모'가 있으면 편집자가 원문을 직접 확인한 사실이므로 반영한다.
 입력은 JSON 배열이다. 각 항목마다 아래 JSON 배열 형식으로만 출력하고, 그 외의 글은 쓰지 않는다.
 [{"id": "...", "brief": "QUICK_BRIEF", "point": "METAXIS_POINT", "tags": ["...", "..."]}]"""
 MX_BAN = re.compile(r"관한 소식|핵심 키워드는|귀추가 주목|주목된다")
@@ -715,7 +716,8 @@ def _mx_copied(text, src, n=16):
 def _mx_call(batch, model=MX_MODEL):
     key = os.environ.get("GEMINI_KEY", "").strip()
     inp = [{"id": it["id"], "분야": it["category"], "출처": it.get("source", ""), "날짜": (it.get("published") or "")[:10],
-            "제목": it["title"], "소개글": (it.get("detail") or it.get("summary") or "")[:700]} for it in batch]
+            "제목": it["title"], "소개글": (it.get("detail") or it.get("summary") or "")[:700],
+            **({"운영자메모": it["note"]} if it.get("note") else {})} for it in batch]
     body = json.dumps({"system_instruction": {"parts": [{"text": MX_PROMPT}]},
                        "contents": [{"role": "user", "parts": [{"text": json.dumps(inp, ensure_ascii=False)}]}],
                        "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}}).encode()
@@ -734,6 +736,8 @@ def _mx_ok(it, r):
     if not b or not p or len(b) > 400 or len(p) > 400 or MX_BAN.search(b + p) or _mx_copied(b + p, src):
         return None
     tags = list(dict.fromkeys(t for t in tags if len(t) <= 20))[:5]
+    if it.get("tags_fixed"):  # 운영자가 정한 태그가 있으면 그것을 쓴다
+        tags = list(it["tags_fixed"])[:5]
     if len(tags) < 3:
         tags += [n for n, _ in mx_tags(it) if n not in tags][:3 - len(tags)]
     return {"b": b, "p": p, "t": tags, "v": MX_VER}
@@ -744,14 +748,14 @@ def ai_briefs(items, max_req=8, batch_size=10):
     if not os.environ.get("GEMINI_KEY", "").strip() or _MX_OFF:
         return 0
     todo = [i for i in items if i.get("category") in MX_CATS and not i.get("editor")
-            and (i.get("mx") or {}).get("v", 0) < MX_VER and _is_fresh(i) and i.get("mx_try", 0) < 3]
+            and (i.get("mx") or {}).get("v", 0) < MX_VER and (_is_fresh(i) or i.get("pin")) and i.get("mx_try", 0) < 3]
     todo.sort(key=lambda x: x.get("published") or "", reverse=True)
     try:
         hero, trend = pick_featured(items)
         first = {i["id"] for i in ([hero] if hero else []) + list(trend)}
     except Exception:
         first = set()
-    todo.sort(key=lambda x: (x["id"] not in first, x.get("hot") is None))  # 오늘의 헤드라인·주요 소식부터
+    todo.sort(key=lambda x: (not x.get("pin"), x["id"] not in first, x.get("hot") is None))  # 오늘의 헤드라인·주요 소식부터
     used = done = 0
     model = MX_MODEL
     for k in range(0, len(todo), batch_size):
@@ -879,6 +883,13 @@ def is_youtube_short(link, fixtures=None):
     return _SHORTS[vid]
 
 
+def _manual_extra(item, m):
+    """운영자가 지정한 기사에 붙인 메모(note: 브리핑 작성 참고)·태그·분야를 항목에 옮긴다."""
+    for k, dst in (("note", "note"), ("tags", "tags_fixed"), ("field", "field")):
+        if m.get(k):
+            item[dst] = m[k]
+
+
 def manual_items(cfg, now, fixtures=None):
     """운영자가 직접 넣으라고 한 기사(sources.json "manual"). 언론사 RSS에서 제목·소개글을 찾고,
     RSS에 없으면 기사 페이지의 공개 메타(og:title·og:description)만 쓴다. AI 키워드·기간 조건은 보지 않는다."""
@@ -910,6 +921,7 @@ def manual_items(cfg, now, fixtures=None):
         print(f"[manual] {url} → {'추가: ' + item['title'][:40] if item else '제목을 찾지 못함'}")
         if item:
             item.pop("_d", None)
+            _manual_extra(item, m)
             item["pin"] = True  # 운영자 지정: 하루 상한·같은 내용 거르기에서 빠지지 않게
             out.append(item)
     return out
@@ -988,6 +1000,13 @@ def collect(fixtures=None, now=None):
         today_seen.add(it)
         uniq.append(it)
     uniq.sort(key=lambda x: x["published"] or "", reverse=True)
+    man = {norm_link(m["url"]): m for m in cfg.get("manual", [])}
+    for it in uniq:  # 운영자가 메모·태그를 나중에 고쳐도 반영되게
+        m = man.get(norm_link(it["link"])) if it.get("pin") else None
+        if m and (it.get("note"), it.get("tags_fixed")) != (m.get("note"), m.get("tags")):
+            _manual_extra(it, m)
+            it.pop("mx", None)
+            it.pop("mx_try", None)
     mark_hot(uniq, hot_marks)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if i.get("pin") or (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
@@ -1816,7 +1835,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 TOPICS = [
     ("의료", ["의료", "병원", "환자", "진단", "헬스", "신약", "바이오", "clinical", "medical", "health", "patient", "drug", "surgical", "hospital", "disease", "protein", "cancer"],
      '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>'),
-    ("법·정책", ["법", "규제", "정책", "정부", "국회", "소송", "저작권", "기본법", "law", "legal", "regulation", "policy", "court", "lawsuit", "copyright", "government", "ai act"],
+    ("법·정책", ["법", "규제", "정책", "정부", "국회", "소송", "저작권", "헌법", "변호사", "법원", "판결", "참정권", "선거", "기본법", "law", "legal", "regulation", "policy", "court", "lawsuit", "copyright", "government", "ai act"],
      '<path d="M12 3v18M5 21h14M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/>'),
     ("반도체", ["반도체", "칩", "gpu", "엔비디아", "nvidia", "hbm", "tsmc", "삼성전자", "sk하이닉스", "chip", "semiconductor", "datacenter", "데이터센터"],
      '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><rect x="10" y="10" width="4" height="4"/>'),
@@ -2154,6 +2173,13 @@ def thumb_html(it, base="", used=None, href=None, blank=True):
 
 
 def tags_html(it, base):
+    if it.get("tags_fixed"):  # 운영자가 정한 태그: 모아 보기 페이지가 있는 말만 링크
+        out = []
+        for name in it["tags_fixed"][:5]:
+            c = _KW_CANON.get(name.lower())
+            i = _KW_INDEX.get(c) if c and c not in TAG_SKIP else None
+            out.append(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' if i is not None else f'<span class="tg">#{esc(name)}</span>')
+        return '<div class="tags">' + "".join(out) + "</div>"
     tags = item_tags(it)
     return ('<div class="tags">' + "".join(f'<a class="tg" href="{tag_href(i, base)}">#{esc(name)}</a>' for i, name in tags)
             + "</div>") if tags else ""
@@ -2224,7 +2250,7 @@ _EVENTS = [
      "AI 안전과 신뢰를 둘러싼 논의가 기술을 넘어 사회·정치 이슈로 넓어지고 있다는 점을 보여 줘요."),
     ("연구", r"연구|개발|실증|논문|study|research|paper|finds?\b|trial|experiment|benchmark", "연구·개발 성과",
      "현장 적용까지는 추가 검증이 필요하지만, {t} 분야에서 AI 활용 범위가 넓어지고 있다는 흐름을 보여 줘요."),
-    ("교육", r"교육|학생|학교|대학|역량|education|student|school|universit|teach|learn", "교육·역량 강화",
+    ("교육", r"교육|학생|학교|역량|education|student|school|teach|learn", "교육·역량 강화",
      "AI 역량이 기본 소양으로 자리 잡는 흐름으로, 교육 격차를 줄이는 방안이 함께 논의될 필요가 있어요."),
 ]
 _EVENTS = [(k, re.compile(rx, re.I), p, v) for k, rx, p, v in _EVENTS]

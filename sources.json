@@ -20,7 +20,7 @@
     "talks": "영상·강연"
   },
   "manual": [
-    {"url": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988", "outlet": "로리더", "category": "news_ko", "feed": "https://www.lawleader.co.kr/rss/allArticle.xml"}
+    {"url": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988", "outlet": "로리더", "category": "news_ko", "feed": "https://www.lawleader.co.kr/rss/allArticle.xml", "field": "법률", "tags": ["헌법", "변호사", "AI", "참정권"], "note": "토론에 AI 플랫폼을 활용해 참정권과 미래 헌법을 논의했다"}
   ],
   "sources": [
     {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml", "tz": 9, "require_ai": true},
