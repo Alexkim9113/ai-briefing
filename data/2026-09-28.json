@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:21+09:00",
+ "generated_at": "2026-09-28T15:28+09:00",
  "items": [
   {
    "id": "4ac4ee106644c7ee",
@@ -229,7 +229,20 @@
    "published": "2026-09-28T11:10:46+09:00",
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
    "thumb": "",
-   "hot": 6
+   "hot": 5
+  },
+  {
+   "id": "4c30431d125b111f",
+   "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42082",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:16:02+09:00",
+   "summary": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.",
+   "detail": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.\n이번 서비스는 고객 문의가 집중되거나 상시 응대 인력을 확보하기 어려운 중소기업의 고객 접점 업무를 지원하기 위해 추진됐다.\n가구 쇼룸의 방문객 안내부터 교육기관의 시험 관련 문의, 식품 기업의 고객 상담, 산업 현장의 기술 지원까지 업종별 업무 특성에 맞춰 AI 아바타를 활용하는 것이 핵심이다.",
+   "thumb": "",
+   "hot": 9
   },
   {
    "id": "294ca0bb52496e50",
@@ -394,6 +407,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T05:43:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "454f040a4a9ed268",
+   "title": "한화자산운용, 생성형 AI로 리서치·영업 업무 고도화",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9oeGRsMW1TelVaLVV0NnV1MFctQUlPaFF5bGQ5aWpZaFlDbzR4V1Bac3BRWU1uVGMxS0RDa1hEai1iTXYtVGJOc2ctMFdBMFVEbW5GamRWSjVjdXR3OW9tbnNxWWs2MmI3QnRF0gFrQVVfeXFMT2h4ZGwxbVN6VVotVXQ2dXUwVy1BSU9oUXlsZDlpalloWUNvNHhXUFpzcFFZTW5UYzFLRENrWERqLWJNdi1UYk5zZy0wV0EwVURtbkZqZFZKNWN1dHc5b21uc3FZazYyYjdCdEU?oc=5",
+   "source": "SR타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:42:24+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1058,28 +1082,6 @@
    "category": "news_ko",
    "published": "2026-09-28T01:58:07+00:00",
    "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "ae276a9db5d2f8e9",
-   "title": "야놀자, '인공지능 페스타'서 여행·주거·호텔 운영 AI 기술 선뵌다",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pSWFmR2p2UGNfSFJBTE1UZ1VuVVFTZl81YkdQaXNDOTVubTBqRzEwQktxN01RcTJCYjJLUzllR1BIcmc1c2FkYW9RNTF0YWJkTDhIazZ3ODRhMFJaVTVnOUFtS2NYcnpLWnc?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:58:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "784685ea95a776e8",
-   "title": "반디캠컴퍼니, AI 영상툴 ‘반디캠 AI 스튜디오’ 출시",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42083",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:56:17+00:00",
-   "summary": "화면 녹화 프로그램 ‘반디캠’ 개발사 반디캠컴퍼니가 인공지능(AI) 영상툴 ‘반디캠 AI 스튜디오’를 국내외 시장에 정식 출시하고 생성형 AI 사업에 진출한다고 28일 밝혔다. 반디캠 AI 스튜디오는 영상 기획부터 생성, 편집까지 하나의 환경에서 처리할 수 있도록 설계한 올인원 AI 영상 제작 플랫폼이다.",
    "thumb": ""
   },
   {
@@ -2716,7 +2718,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 4,
+   "count": 3,
    "fetched": 70
   },
   {
@@ -2729,7 +2731,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2811,15 +2813,15 @@
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 1,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2913,15 +2915,15 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": false,
-   "count": 0,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 66
+   "fetched": 65
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2951,7 +2953,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 62
+   "fetched": 63
   },
   {
    "name": "스테이지5",
