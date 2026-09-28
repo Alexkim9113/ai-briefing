@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:10+09:00",
+ "generated_at": "2026-09-28T14:13+09:00",
  "items": [
   {
    "id": "5a871f1b164a4c7d",
@@ -143,6 +143,28 @@
    "category": "news_ko",
    "published": "2026-09-28T06:15:40+09:00",
    "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
+   "thumb": ""
+  },
+  {
+   "id": "5e5eeaf4f482fc8d",
+   "title": "도시의 내일을 여는 AI 담론, 서울에 모인다… SLW 2026 국제포럼 개최",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9Hc3RxZ3NZZmlOa0FvNDNFcDJwbkdOSXR4WGJ1UjNZdEttS3lMSXlRM2M1NzlPV0VWMk5rSFBQZUpYUnZpbGxuTGltQk1Pel9Lb2cyclJFbVliQ2JxWkE?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T05:08:16+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "0ae864b7c9544b48",
+   "title": "“AX로 한국 AI 수도 조기 완성’…충남도, AI 과제 발굴 보고회",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aRDFta1RvMjdnTGluckNiT2VMdExrQllGa2NaaDV4U21tT1NOQ3dHc2p5Yk9jeWd1aWRoUloxMlZoTmZSLXBQdXVnZm5SYVl3Y0xzUXktNHAyVUtJTVVHTUxnNDgxQWc?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:07:00+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -1112,16 +1134,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T00:30:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "4304e0d801103e76",
-   "title": "메가존클라우드, 생성형 AI 보안·비용 통합관리 사업 강화",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94amJfRDBBVE9lQnM4cXJXMEx4QzlWVGFyYU5HRHpJZTdCVVpnT0hOOFIzUkZCenRKSEctNnV6XzNQaWtoODBJMGZJTktLaE9RTDZ5NmcyT3Zuek11UWJv?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-28T00:24:41+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2604,7 +2616,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 81
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -2639,8 +2651,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2651,8 +2663,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2682,19 +2694,19 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 1,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "fetched": 15
   },
   {
    "name": "TEDx Talks",
