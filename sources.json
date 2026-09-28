@@ -19,6 +19,9 @@
     "policy": "정책·규제",
     "talks": "영상·강연"
   },
+  "manual": [
+    {"url": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988", "outlet": "로리더", "category": "news_ko", "feed": "https://www.lawleader.co.kr/rss/allArticle.xml"}
+  ],
   "sources": [
     {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml", "tz": 9, "require_ai": true},
     {"name": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/allArticle.xml", "tz": 9},
@@ -91,6 +94,7 @@
     {"name": "주제: 국방·전쟁", "field": "국방·전쟁", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B5%AD%EB%B0%A9+OR+%EA%B5%B0%EC%82%AC+OR+%EC%A0%84%EC%9F%81+OR+%EB%AC%B4%EA%B8%B0)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
     {"name": "주제: 가족·출산", "field": "가족·출산", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B0%80%EC%A1%B1+OR+%EC%B6%9C%EC%82%B0+OR+%EC%A0%80%EC%B6%9C%EC%83%9D+OR+%EC%9C%A1%EC%95%84)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
     {"name": "주제: 여성", "field": "여성", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%97%AC%EC%84%B1+OR+%EC%84%B1%ED%8F%89%EB%93%B1+OR+%EC%A0%A0%EB%8D%94)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
+    {"name": "주제: 법률", "field": "법률", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%B2%95%EB%A5%A0+OR+%EB%B3%80%ED%98%B8%EC%82%AC+OR+%EB%B2%95%EC%9B%90+OR+%ED%8C%90%EA%B2%B0+OR+%EC%86%8C%EC%86%A1+OR+%EB%A1%9C%ED%8E%8C+OR+%EB%A6%AC%EA%B1%B8%ED%85%8C%ED%81%AC)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
     {"name": "Google News Top: Technology", "category": "news_global", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en", "require_ai": true, "title_only": true, "hot": true, "max_age_days": 2, "limit": 10},
     {"name": "Topic: 사회·노동", "field": "사회·노동", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(society+OR+jobs+OR+inequality+OR+workers)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
     {"name": "Topic: 저작권·미디어", "field": "저작권·미디어", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(copyright+OR+artists+OR+journalism+OR+deepfake)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
@@ -99,6 +103,7 @@
     {"name": "Topic: 정치·국방", "field": "정치·국방", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(election+OR+military+OR+war+OR+defense)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
     {"name": "Topic: 철학·윤리·예술", "field": "철학·윤리·예술", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(ethics+OR+philosophy+OR+art+OR+music)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
     {"name": "Topic: 여성", "field": "여성", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(women+OR+gender)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
+    {"name": "Topic: 법률", "field": "법률", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(lawsuit+OR+court+OR+lawyers+OR+%22law+firm%22+OR+legal)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
 
     {"name": "Hugging Face 오늘의 논문", "category": "papers", "field": "AI 일반", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 10},
     {"name": "arXiv cs.AI", "category": "papers", "field": "AI 일반", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 6},

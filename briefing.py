@@ -682,7 +682,7 @@ def _translate_items(todo, foreign, google_only):
 MX_MODEL = os.environ.get("MX_MODEL", "gemini-flash-latest")
 MX_BACKUP = "gemini-flash-lite-latest"  # 기본 모델이 붐비면(503) 가벼운 모델로 한 번 더
 MX_VER = 1
-MX_CATS = {"news_ko", "news_global", "papers", "policy", "talks"}
+MX_CATS = {"news_ko", "news_global", "papers", "policy"}  # 영상은 구간 목차(TIMELINE)만 보여 준다
 MX_PROMPT = """너는 METAXIS의 AI 브리핑 에디터다.
 입력된 뉴스·정책·규제·논문·연구·기업발표·제품·오픈소스·영상·인터뷰 등의 핵심 정보를 사용자가 10초 안에 파악하도록 작성한다.
 QUICK_BRIEF: 무슨 일이 있었는지, 누가 무엇을 했는지, 핵심 결과·변화·기능이 무엇인지 1~3문장으로 압축한다. 소개글이 짧으면 1문장이면 충분하다. 중요한 수치·대상·단계가 있으면 포함한다.
@@ -879,6 +879,35 @@ def is_youtube_short(link, fixtures=None):
     return _SHORTS[vid]
 
 
+def manual_items(cfg, now, fixtures=None):
+    """운영자가 직접 넣으라고 한 기사(sources.json "manual"). 언론사 RSS에서 제목·소개글을 찾고,
+    RSS에 없으면 기사 페이지의 공개 메타(og:title·og:description)만 쓴다. AI 키워드·기간 조건은 보지 않는다."""
+    out = []
+    for m in cfg.get("manual", []):
+        url, found = m["url"], None
+        key = norm_link(url)
+        try:
+            if m.get("feed"):
+                for it in parse_feed(fetch(m["feed"], fixtures)):
+                    if norm_link(it["link"].strip()) == key:
+                        found = it
+                        break
+            if not found and not fixtures:
+                raw = fetch(url).decode("utf-8", "replace")
+                meta = lambda p: html.unescape((re.search(rf'<meta[^>]+property=["\']{p}["\'][^>]+content=["\']([^"\']*)', raw) or [None, ""])[1])
+                pub = meta("article:published_time")
+                found = {"title": meta("og:title"), "link": url, "desc": meta("og:description"), "date": pub, "thumb": ""}
+        except Exception as e:
+            print(f"[manual] {url} 실패: {e}", file=sys.stderr)
+            continue
+        src = {"name": m.get("outlet", ""), "outlet": m.get("outlet", ""), "category": m.get("category", "news_ko"), "url": m.get("feed", url), "tz": 9}
+        item = make_item(src, found, [], now) if found and found.get("title") else None
+        if item:
+            item.pop("_d", None)
+            out.append(item)
+    return out
+
+
 def collect(fixtures=None, now=None):
     cfg = load_config()
     now = now or datetime.now(timezone.utc)
@@ -931,6 +960,7 @@ def collect(fixtures=None, now=None):
             status.append({"name": label(src), "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
 
+    results.extend(i for i in manual_items(cfg, now, fixtures) if not history.is_dup(i))
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / f"{today.isoformat()}.json"
     # 오늘 이미 올린 글을 먼저 두고, 새 글은 그것들·서로와 겹치지 않을 때만 더한다
@@ -1359,7 +1389,7 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
-  return `<h4>QUICK BRIEF</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS POINT</b><p>${e(a.dataset.mv)}</p></div>`:''}${(()=>{let ch=[];try{ch=JSON.parse(a.dataset.ch||'[]')}catch(_){}if(!ch.length)return'';const t=n=>{const h=Math.floor(n/3600),m=Math.floor(n%3600/60),x=String(n%60).padStart(2,'0');return h?`${h}:${String(m).padStart(2,'0')}:${x}`:`${m}:${x}`};const u=n=>a.href+(a.href.includes('?')?'&':'?')+'t='+n+'s';return `<div class="mx-c"><b>TIMELINE</b><ol>${ch.map(([n,l,k])=>`<li><a href="${e(u(n))}" target="_blank" rel="noopener">${t(n)}</a><span>${e(k||l)}</span></li>`).join('')}</ol></div>`})()}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
+  if(V)return '';return `<h4>QUICK BRIEF</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS POINT</b><p>${e(a.dataset.mv)}</p></div>`:''}${(()=>{let ch=[];try{ch=JSON.parse(a.dataset.ch||'[]')}catch(_){}if(!ch.length)return'';const t=n=>{const h=Math.floor(n/3600),m=Math.floor(n%3600/60),x=String(n%60).padStart(2,'0');return h?`${h}:${String(m).padStart(2,'0')}:${x}`:`${m}:${x}`};const u=n=>a.href+(a.href.includes('?')?'&':'?')+'t='+n+'s';return `<div class="mx-c"><b>TIMELINE</b><ol>${ch.map(([n,l,k])=>`<li><a href="${e(u(n))}" target="_blank" rel="noopener">${t(n)}</a><span>${e(k||l)}</span></li>`).join('')}</ol></div>`})()}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
  <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p>${isOp()&&a.dataset.id?`<a class="brief-del" href="/editor/write.html#hide=${e(a.dataset.id)}&t=${encodeURIComponent(a.textContent.trim().slice(0,120))}">이 기사 삭제</a>`:''}</div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
@@ -1744,7 +1774,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 {head}<style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/?v={og_ver()}" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{AI_NOTICE}{body}</main>
-<footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다. AI 학습·요약·재가공을 금지합니다.</p></div>
+<footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
 <script>{JS}{script}{"" if "write" in path else LIVE_JS.replace("BASE", base).replace("VER", BUILD_VER)}</script></body></html>"""
 
@@ -2271,6 +2301,9 @@ _TOPIC_VIEWS = [
     (re.compile(r"에너지|전력|원전|탄소|기후|환경|climate|energy|power grid|carbon|emission|environment", re.I),
      "AI 확산이 전력·환경 부담을 키우는 동시에, 기후·에너지 문제를 푸는 도구도 될 수 있다는 양면을 보여 줘요.",
      "에너지·환경 문제에 AI를 활용한 연구로, 에너지 효율과 환경 부담을 함께 따져 볼 근거가 돼요."),
+    (re.compile(r"법률|변호사|법원|판결|소송|로펌|리걸테크|lawsuit|court|lawyer|attorney|legal|law firm", re.I),
+     "AI가 법률 서비스와 재판 현장에 들어오면서 책임 소재와 전문가의 역할을 어떻게 정할지가 쟁점이 되고 있어요.",
+     "AI를 법률 분야에 적용한 연구로, 판단의 정확성과 책임 기준을 따져 볼 근거가 돼요."),
     (re.compile(r"동물|반려|야생|생태|animal|wildlife|species|ecolog", re.I),
      "AI가 동물 보호와 생태 관찰에까지 쓰이며 활용 범위가 사람 밖으로 넓어지고 있어요.",
      "AI로 동물·생태 데이터를 분석한 연구로, 사람이 일일이 관찰하기 어려운 영역을 넓혀 줘요."),
@@ -3018,9 +3051,9 @@ def build(keep_days=None):
                if sc.get("email") else "")
     policy = f"""<div class="post"><h1 class="serif">정책</h1>
 <h2 class="serif" style="font-size:21px;margin-top:30px">저작권 안내</h2>
-<p>이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝히며,
-요약은 원문 앞부분을 짧게 발췌한 것입니다. 전문은 반드시 원문 링크에서 확인해 주세요.</p>
-<p>원문의 사진·썸네일은 가져오지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. <a class="more" href="credits.html">사진 출처 보기 →</a></p>
+<p>이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝힙니다.
+전문은 반드시 원문 링크에서 확인해 주세요.</p>
+<p>원문의 사진·썸네일은 가져오지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다.</p>
 <p>저작권 관련 문의나 삭제 요청이 있으면 바로 반영하겠습니다.</p>
 <h2 class="serif" style="font-size:21px;margin-top:30px">개인정보</h2>
 <p>이 사이트는 회원가입·댓글이 없고 방문자의 개인정보를 수집하지 않습니다.</p>
