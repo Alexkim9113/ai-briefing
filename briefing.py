@@ -1012,16 +1012,103 @@ def load_photos():
         if c.get("topic"):
             by.setdefault(TOPIC_SLUG.get(c["topic"], "ai"), []).append(c["file"])
     tagged = [(c["file"], [t.lower() for t in c.get("tags", [])]) for c in credits if c.get("tags")]
+    for c in credits:  # 파일 이름 앞부분(chip-3.jpg → chip)으로도 묶는다
+        by.setdefault("#" + c["file"].rsplit("-", 1)[0], []).append(c["file"])
     return credits, by, tagged
 
 
 PHOTO_CREDITS, PHOTOS, PHOTO_TAGS = load_photos()
+# 카테고리마다 어울리는 사진 묶음(기사 내용과 맞는 사진이 없을 때 쓴다)
+CAT_PHOTOS = {"papers": ["research", "brain", "code", "xray"], "policy": ["law", "capitol", "meeting"],
+              "talks": ["event", "voice", "meeting"], "news_global": ["ai", "code", "chip"], "news_ko": ["ai", "seoul", "code"]}
+# 자동으로 새 사진을 모을 때 쓰는 영어 검색어(묶음 이름 → 검색어). 태그·주제는 같은 묶음의 기존 사진에서 가져온다.
+PHOTO_QUERIES = {
+    "ai": "abstract technology", "art": "art painting", "brain": "brain neuroscience", "camera": "camera lens",
+    "capitol": "government building", "car": "car road", "chess": "chess", "chip": "circuit board",
+    "code": "programming code screen", "deal": "handshake business", "drone": "drone", "edu": "classroom students",
+    "energy": "solar panels", "event": "conference stage", "farm": "farm field", "hospital": "hospital",
+    "invest": "stock market", "kids": "children learning", "launch": "smartphone", "law": "law justice",
+    "llm": "laptop typing", "media": "newspaper", "medical": "doctor", "meeting": "business meeting",
+    "military": "military", "money": "money", "music": "music studio", "pills": "medicine pills",
+    "plane": "airplane", "power": "power lines", "research": "laboratory science", "robot": "robot",
+    "security": "cyber security lock", "seoul": "seoul city", "ship": "cargo ship", "shop": "shopping store",
+    "space": "space satellite", "video": "video camera film", "voice": "microphone", "vr": "virtual reality headset",
+    "wind": "wind turbine", "write": "writing notebook", "xray": "x-ray"}
+PHOTO_CAP = 15      # 묶음마다 최대 사진 수
+PHOTO_DAILY = 6     # 하루에 새로 모으는 사진 수
 
 
 def _hit(tag, text):
     if tag.isascii() and len(tag) <= 3:
         return re.search(r"(?<![a-z0-9])" + re.escape(tag) + r"(?![a-z0-9])", text) is not None
     return tag in text
+
+
+def collect_photos():
+    """퍼블릭 도메인(CC0) 사진을 Openverse에서 하루 몇 장씩 자동으로 모은다.
+    워터마크가 없는 큐레이션 사이트(StockSnap, WordPress 사진 디렉터리)만 쓰고, 기사 원본 사진은 가져오지 않는다."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print("Pillow가 없어 사진 수집을 건너뜀")
+        return 0
+    import io
+    import zlib
+    folder = ROOT / "static" / "photos"
+    credits = json.loads((folder / "credits.json").read_text(encoding="utf-8"))
+    seen = {c.get("landing") for c in credits}
+    groups = {}
+    for c in credits:
+        groups.setdefault(c["file"].rsplit("-", 1)[0], []).append(c)
+    day = datetime.now(KST).timetuple().tm_yday
+    order = sorted(PHOTO_QUERIES, key=lambda g: (len(groups.get(g, [])), (zlib.crc32(g.encode()) + day) % 97))
+    added = 0
+    for g in order:
+        if added >= PHOTO_DAILY:
+            break
+        if len(groups.get(g, [])) >= PHOTO_CAP:
+            continue
+        q = urllib.parse.quote(PHOTO_QUERIES[g])
+        url = (f"https://api.openverse.org/v1/images/?q={q}&license=cc0,pdm&source=stocksnap,wordpress"
+               f"&category=photograph&aspect_ratio=wide&mature=false&page_size=40&page={day % 3 + 1}")
+        try:
+            res = json.loads(fetch(url)).get("results", [])
+        except Exception as e:
+            print("사진 검색 실패", g, e)
+            continue
+        for r in res:
+            w, h = r.get("width") or 0, r.get("height") or 0
+            if (r.get("license") not in ("cc0", "pdm") or r.get("source") not in ("stocksnap", "wordpress")
+                    or r.get("foreign_landing_url") in seen or w < 1200 or not h or not 1.3 <= w / h <= 2.2):
+                continue
+            try:
+                im = Image.open(io.BytesIO(fetch(r["url"]))).convert("RGB")
+            except Exception as e:
+                print("사진 받기 실패", r.get("url"), e)
+                continue
+            W, H = im.size
+            ch = min(H, W * 9 // 16)
+            cw = ch * 16 // 9
+            im = im.crop(((W - cw) // 2, (H - ch) // 2, (W - cw) // 2 + cw, (H - ch) // 2 + ch)).resize((960, 540), Image.LANCZOS)
+            n = 0
+            while (folder / f"{g}-{n}.jpg").exists():
+                n += 1
+            name = f"{g}-{n}.jpg"
+            im.save(folder / name, "JPEG", quality=82, optimize=True, progressive=True)
+            base = (groups.get(g) or [{}])[0]
+            c = {"file": name, "topic": base.get("topic", ""), "tags": base.get("tags", []),
+                 "title": (r.get("title") or "")[:120], "creator": r.get("creator") or "", "license": r["license"],
+                 "source": r["source"], "landing": r["foreign_landing_url"]}
+            credits.append(c)
+            groups.setdefault(g, []).append(c)
+            seen.add(c["landing"])
+            added += 1
+            print("새 사진", name, c["landing"])
+            break
+    if added:
+        (folder / "credits.json").write_text(json.dumps(credits, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"사진 {added}장 추가 (전체 {len(credits)}장)")
+    return added
 
 
 def photo_for(it, used=None):
@@ -1037,7 +1124,10 @@ def photo_for(it, used=None):
             files.append(f)
     if not files:
         topic, _ = topic_of(it)
-        files = PHOTOS.get(TOPIC_SLUG.get(topic, "ai")) or PHOTOS.get("ai") or []
+        files = PHOTOS.get(TOPIC_SLUG.get(topic, "")) or []
+        if not files:  # 뚜렷한 주제가 없으면 카테고리에 어울리는 사진
+            files = [f for g in CAT_PHOTOS.get(it.get("category"), ["ai"]) for f in PHOTOS.get("#" + g, [])]
+        files = files or PHOTOS.get("ai") or []
     if not files:
         return None
     start = int((it.get("id") or "0")[:8] or "0", 16) % len(files)
@@ -1448,10 +1538,13 @@ def build(keep_days=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill"])
+    ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill", "photos"])
     ap.add_argument("--since", help="backfill 시작 날짜(YYYY-MM-DD)")
     ap.add_argument("--fixtures", help="네트워크 대신 사용할 로컬 피드 폴더(테스트용)")
     a = ap.parse_args()
+    if a.cmd == "photos":
+        collect_photos()
+        return
     if a.cmd == "backfill":
         backfill(datetime.fromisoformat(a.since).date(), a.fixtures)
         build()
