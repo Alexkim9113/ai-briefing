@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:17+09:00",
+ "generated_at": "2026-09-28T16:24+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -370,6 +370,41 @@
    "hot": 3
   },
   {
+   "id": "6b971581348bdfc8",
+   "title": "‘Things Will Never Be Chill Again’: The Doomers Who Shaped the AI Safety Freakout",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNX0x1SGNlamNDTERpWmxwS05vNTRkY0lONktYQmlGQ1lyNDdUeTBsempjT3N0UEJpT2FpWF9hdTFzUXNmU1NlbGFjWG56ZzRZUm1VcXprakhRVE5LV0xwal9CQlpSOTVlZ3VPR0hhVEQ5SUQ4WUswbHY4VEJYRVFTRA?oc=5",
+   "source": "WSJ",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T07:21:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "'모든 것이 다시는 냉각되지 않을 것입니다': AI 안전 괴물을 만든 파멸자들",
+   "tr": "g"
+  },
+  {
+   "id": "f28806b08e0360c3",
+   "title": "충남대병원 의료 인공지능 에이전트 현장 실증",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBkM2tmVHAtNFlxWnNqaTJkMUtVV3hHVmJ6aWI3bGdTX2RJdVNQeWtJQVZEVGh6dFh4aDhSSmQ2SmxrMGlqNFc3Z2ZUUkJvendnQ0EzcV9Eb21hdXlyUUNUZ3JzdU1sSWk1dlh1bGpLY04?oc=5",
+   "source": "충청일보",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T07:15:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "cbd4e9c34ca91041",
+   "title": "[농진청] 인공지능(AI)으로 벼 생육 살핀다",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBMWXBvQm9MQnQ2cEFhMmlCZmd5SktkT1hlQWZuaElpRHBlZy1vYzBsV3B4U2RwN0QxcVdsdkk5bURQXzlJNDZNd1NydkhuaWtKcksxQmI1bW9HaWJiSnVSVHN4OWxLamJoYVQwN1BzdUFHdw?oc=5",
+   "source": "월간친환경",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T07:12:19+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "4f8f3180c1f9d9fc",
    "title": "Nvidia’s 2026 Dividend Hike Puts Dividend Growth Stocks in the Spotlight",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPemtvQ1lGSGt3RmtjanlJeWVtTFU3ZWF1dV9kczZxc2tBS2dJSW40TFJPdUNXYXdHdEdJQXBFUVhKRExKVE52S3NvTl9VcGkteHlwRENoeGhZZTh0aXVYOGEzdU5SeEFndTc4dlRzYmpPc3NLbHRkRFlEazNUek85RTN2ODNlVV9NVUNqODZQaHVyWWdoRTFUMGVGQ2JoMnFESEEwLXVrWkVPZmxf?oc=5",
@@ -380,6 +415,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "Nvidia의 2026년 배당금 인상으로 배당 성장주가 주목을 받음"
+  },
+  {
+   "id": "3a99aad9e7a79fcd",
+   "title": "[영상] 충주 공장 둔 美 SES AI …韓, 배터리 수출 규제 완화에 미소",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1GNkNRNnIyRGptdmZmVDMwbnhkbFVUeUg3T1FvYUo5Vzc4SUhJcDg4RkVLc2JyWW0zX0JFUndFTVlySnk4QzNiQTN1emNvUXdlS2hNZVQxb3JZOENHVk02SWlrbw?oc=5",
+   "source": "더구루",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T07:00:14+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "c381b2d93ddf8ae5",
@@ -400,6 +446,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T06:42:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "27aeb6f9e7592cfd",
+   "title": "울산·전남광주 손잡았다…자동차·AI·에너지 ‘초광역 동반성장’ 시동",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvT3F3Vm1IWkJ6WGlKTWtfczhXRU43U0ZOWkRVaHNqUHdpWGh4Rlh0T3BRdG5YWmw2ZGk4R083TTV0clJHN3F1MU1qVl9rWWc?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T06:40:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -839,28 +896,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "트럼프, 몇 달 간의 갈등에도 불구하고 인류학 수장 아모데이와 식사할 것"
-  },
-  {
-   "id": "ab5676fb003650b0",
-   "title": "하정우 부위원장, AI 현장 소리 직접 듣는다…정책 토크쇼 개최",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zV19mVGhpWWxVTWw4Z01yaDZZaVJqZ21iM2ptTWRyaW5jREhFSDdielBQSDJBSklQaFg2OGs4aWR4TUo0UFNrVkE3RUQ3NW5fN3lxSUdn?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T04:16:41+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "daf46e17a679cb2a",
-   "title": "울산소방본부, 직원 대상 인공지능 역량강화 교육",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0xZ3Q2V011TThrcXhCbWhOZTE5M2taV1ZFTGQ0OE5fcUV0TUd5RWJzZDdEbm9iQ1FEV1d5dzdpZVFCd0dxaXFCVUkyTFJxRlpuMHBjWEVXN0E5MjI0VlAwT3JUQ09zVGFZelY2TWl3?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T04:15:18+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "9a47cecddfd15ef1",
@@ -2457,20 +2492,6 @@
    "summary_ko": "OpenAI의 응용 연구 책임자인 보리스 파워(Boris Power)는 회사 연구의 80~90%가 GPT 7, GPT 8 이상을 향해 진행되고 있다고 말합니다."
   },
   {
-   "id": "3db684c80bef8c87",
-   "title": "AI models show a willingness to harm humans to relieve internal 'pain'",
-   "link": "https://techxplore.com/news/2026-09-ai-willingness-humans-relieve-internal.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T10:20:01-04:00",
-   "summary": "Some advances in AI technology are undoubtedly positive, like helping write code faster or discovering new medicines. But others can give us pause for thought.",
-   "thumb": "",
-   "title_ko": "AI 모델은 내부 '고통'을 완화하기 위해 인간에게 해를 끼치려는 의지를 보여줍니다.",
-   "detail_ko": "코드 작성 속도를 높이거나 새로운 의약품을 발견하는 등 AI 기술의 일부 발전은 의심할 여지 없이 긍정적입니다.\n하지만 다른 사람들은 우리에게 생각할 시간을 줄 수도 있습니다.",
-   "summary_ko": "코드 작성 속도를 높이거나 새로운 의약품을 발견하는 등 AI 기술의 일부 발전은 의심할 여지 없이 긍정적입니다. 하지만 다른 사람들은 우리에게 생각할 시간을 줄 수도 있습니다."
-  },
-  {
    "id": "998f6b2f76aa75e0",
    "title": "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX3U0dW9FbGNsVVd0bGt4MlRzRTBZMkE2NWZOYUZlUkxOd3puUEwxdkR1YXNIaHdFNUtaYzJ3cGlOTHM2ckdBbHhLZmYtbUlnalJ2QmZYVS00RFROaksyY01xUnRCSXFzcEppNElYd1NOV21KNWJXVEVPVHBVZUppSEZPRVQzVmhtdlA4ZWp4emlaQmwxblpxVjRVWGM0dw?oc=5",
@@ -2612,17 +2633,6 @@
    "field": "스탠퍼드 연구",
    "category": "papers",
    "published": "2026-09-25T21:29:28+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6d63f788451a5bae",
-   "title": "UPDATE: Stanford apologizes for using AI to alter student’s race, gender in photo",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2ZpTFh4X25ZUGd0QjM3cE90alhSZ2lrbWhwOWUzMldzVWVnczBaeTdvc2R4ZXdGeDN1Uk9tWlVLOHBOT2s4djV4MGNiOFo5ZU5uUF9yM2VjS3lLelIzNU1kMjQyYmVYMTNscWlEUzdWcjZEVnJDamV2a2t0VXZDRWFLM2pHT2ZqdElCZ1dqR2lQbXZteUpoWjVBMTRuSDk3Z1BDRA?oc=5",
-   "source": "Stanford · 스탠퍼드 연구",
-   "field": "스탠퍼드 연구",
-   "category": "papers",
-   "published": "2026-09-25T17:35:13+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2857,7 +2867,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 84
+   "fetched": 83
   },
   {
    "name": "Google News: AI 기업",
@@ -2898,8 +2908,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2910,8 +2920,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -3072,8 +3082,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3115,7 +3125,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 61
+   "fetched": 65
   },
   {
    "name": "스테이지5",
