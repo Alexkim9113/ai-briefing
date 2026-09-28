@@ -437,12 +437,18 @@ def _post(url, data, headers):
         raise
 
 
-def _deepl(texts):
+# DeepL에 넘기는 설명(요금에 들어가지 않음). 제목은 한국 언론 헤드라인처럼, 본문은 기사체로 자연스럽게.
+TR_CTX = {"title": "AI 기술 뉴스 기사 제목. 한국 언론 헤드라인처럼 간결하게.",
+          "body": "AI 기술 뉴스 기사의 요약 문장. 자연스러운 한국어 기사체로."}
+
+
+def _deepl(texts, ctx=None):
     key = os.environ.get("DEEPL_KEY", "").strip()
     host = "api-free.deepl.com" if key.endswith(":fx") else "api.deepl.com"
     out = []
     for i in range(0, len(texts), 40):
-        body = urllib.parse.urlencode([("target_lang", "KO"), *[("text", t) for t in texts[i:i + 40]]]).encode()
+        extra = [("model_type", "prefer_quality_optimized")] + ([("context", TR_CTX[ctx])] if ctx in TR_CTX else [])
+        body = urllib.parse.urlencode([("target_lang", "KO"), *extra, *[("text", t) for t in texts[i:i + 40]]]).encode()
         j = _post(f"https://{host}/v2/translate", body, {"Authorization": f"DeepL-Auth-Key {key}",
                                                          "Content-Type": "application/x-www-form-urlencoded"})
         out += [x.get("text", "") for x in j.get("translations", [])]
@@ -468,7 +474,7 @@ def best_translator():
     return "g"
 
 
-def translate_many(texts, google_only=False):
+def translate_many(texts, google_only=False, ctx=None):
     """여러 문장을 한 번에 번역. 결과 목록과 쓴 번역기 이름을 돌려준다.
     google_only=True면 무료 한도를 아끼려고 DeepL·MS를 건너뛰고 구글로만 번역한다."""
     if not texts:
@@ -477,7 +483,7 @@ def translate_many(texts, google_only=False):
         if google_only or best_translator() != name:
             continue
         try:
-            res = fn(texts)
+            res = fn(texts, ctx) if name == "deepl" else fn(texts)
             if len(res) == len(texts):
                 return [r.strip() for r in res], name
         except _Exhausted as e:
@@ -516,7 +522,9 @@ def add_translations(items, fixtures=None, max_n=200):
     best = TR_RANK[best_translator()]
     foreign = lambda t: t and not _HANGUL.search(t)
     fresh = {id(i): _is_fresh(i) for i in items}
-    need = lambda i, k: not i.get(k) or (fresh[id(i)] and TR_RANK.get(i.get("tr", "g"), 1) < best)
+    # trv 2 = DeepL 고품질 모델 + 제목/본문 설명(context). 그 전의 DeepL 번역도 최근 글이면 한 번 다시 번역
+    need = lambda i, k: not i.get(k) or (fresh[id(i)] and (TR_RANK.get(i.get("tr", "g"), 1) < best
+                                                           or (best == TR_RANK["deepl"] and i.get("trv", 1) < 2)))
     todo = [i for i in items if (foreign(i["title"]) and i["category"] != "papers" and need(i, "title_ko"))
             or (foreign(i.get("summary")) and need(i, "summary_ko"))
             or (foreign(brief_text(i)) and need(i, "detail_ko"))]
@@ -537,7 +545,15 @@ def _translate_items(todo, foreign, google_only):
         if foreign(brief_text(it)):
             for n, line in enumerate(brief_text(it).split("\n")):
                 jobs.append((it, "detail_ko", n, line))
-    res, used = translate_many([j[3] for j in jobs], google_only)
+    # 제목과 본문 문장을 따로 보내 번역기에 맞는 설명(context)을 붙인다
+    res, used = [None] * len(jobs), "deepl"
+    for kind in ("title", "body"):
+        idx = [n for n, j in enumerate(jobs) if (j[1] == "title_ko") == (kind == "title")]
+        if idx:
+            out, u = translate_many([jobs[n][3] for n in idx], google_only, kind)
+            for n, ko in zip(idx, out):
+                res[n] = (ko or "").rstrip(".") if kind == "title" else ko  # 한국 기사 제목은 마침표를 찍지 않는다
+            used = u if TR_RANK[u] < TR_RANK[used] else used
     got = {}
     for (it, k, n, src), ko in zip(jobs, res):
         if ko and _HANGUL.search(ko) and ko != src:
@@ -545,6 +561,8 @@ def _translate_items(todo, foreign, google_only):
     for (_, k), (it, parts) in got.items():
         it[k] = "\n".join(parts[n] for n in sorted(parts)) if k == "detail_ko" else parts[0]
         it["tr"] = used
+        if used == "deepl":
+            it["trv"] = 2
     print(f"[번역] {'1주 지난 글 ' if google_only else ''}{len(todo)}건, {len(jobs)}문장 → {used}")
 
 
