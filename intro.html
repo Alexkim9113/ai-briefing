@@ -27,13 +27,9 @@ a{color:inherit;text-decoration:none}
 .mid{text-align:center}
 @property --s{syntax:"<length>";inherits:true;initial-value:-2000px}
 .mid h1 .l{position:relative;display:inline-block;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat,linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);background-size:calc(var(--w) * .9) 100%,var(--w) 100%;background-position:calc(var(--s) - var(--x)) 0,calc(-1 * var(--x)) 0;-webkit-background-clip:text;background-clip:text;color:transparent}
-.mid h1.write .l{clip-path:inset(-30% 100% -30% 0);animation:write .2s cubic-bezier(.5,0,.3,1) forwards;animation-delay:var(--d)}
-.mid h1.write .l::after{content:"";position:absolute;top:18%;bottom:18%;width:3px;left:0;border-radius:3px;background:#fff;box-shadow:0 0 10px #fff,0 0 22px #12e3ff,0 0 36px #8b2cff;opacity:0;animation:pen .2s cubic-bezier(.5,0,.3,1) both;animation-delay:var(--d)}
-@keyframes write{0%{clip-path:inset(-30% 100% -30% 0);filter:brightness(2.6) drop-shadow(0 0 12px #12e3ff)}70%{filter:brightness(1.8) drop-shadow(0 0 10px #12e3ff)}100%{clip-path:inset(-30% -10% -30% 0);filter:none}}
-@keyframes pen{0%{left:0;opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
-.mid h1.shine{animation:shine 3.6s ease-in-out infinite}
-@keyframes shine{0%{--s:calc(var(--w) * -1)}45%,100%{--s:calc(var(--w) * 1.1)}}
-@media (prefers-reduced-motion:reduce){.mid h1.write .l,.mid h1.write .l::after,.mid h1.shine{animation:none;clip-path:none}}
+.mid h1.shine{animation:shine 3s ease-in-out .3s infinite}
+@keyframes shine{0%{--s:calc(var(--w) * -1)}55%,100%{--s:calc(var(--w) * 1.1)}}
+@media (prefers-reduced-motion:reduce){.mid h1.shine{animation:none}}
 .mid h1.split{background:none}@media (min-width:641px){.mid h1.split{position:relative}}
 @media (max-width:640px){.mid h1{position:fixed;left:50%;top:var(--gy,50%);transform:translate(-50%,-50%);white-space:nowrap;margin:0!important;z-index:1}}
 .mid h1{display:inline-block;margin:0 0 38px;font-family:Unbounded,"Pretendard Variable",sans-serif;font-size:clamp(38px,8.4vw,112px);font-weight:700;letter-spacing:.04em;line-height:1.05;padding-left:.04em;
@@ -87,8 +83,7 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  h.innerHTML=[...t].map(c=>`<span class="l" aria-hidden="true">${c}</span>`).join('');h.classList.add('split');
  const ls=[...h.querySelectorAll('.l')],fit=()=>{h.style.setProperty('--w',h.offsetWidth+'px');ls.forEach(l=>l.style.setProperty('--x',l.offsetLeft+'px'));};
  fit();addEventListener('resize',fit);document.fonts&&document.fonts.ready.then(fit);
- const step=.14,start=.25;ls.forEach((l,i)=>l.style.setProperty('--d',(start+i*step).toFixed(3)+'s'));
- if(!reduce){h.classList.add('write');setTimeout(()=>{h.classList.remove('write');h.classList.add('shine');},(start+ls.length*step+.25)*1000);}})();
+ if(!reduce)h.classList.add('shine');})();
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
  const R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
