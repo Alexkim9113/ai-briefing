@@ -4,7 +4,7 @@
     "url": "https://alexkim9113.github.io/ai-briefing",
     "domain": "",
     "repo": "Alexkim9113/ai-briefing",
-    "description": "국내외 AI 뉴스·논문·정책·유튜브를 30분마다 자동으로 모아 한눈에 보여주는 AI 브리핑",
+    "description": "국내외 AI 뉴스·논문·정책·영상 강연을 30분마다 자동으로 모아 한눈에 보여주는 AI 브리핑",
     "google_verification": "",
     "naver_verification": ""
   },
@@ -13,22 +13,31 @@
     "news_global": "해외 뉴스",
     "papers": "논문·연구",
     "policy": "정책·규제",
-    "youtube": "유튜브"
+    "talks": "영상·강연"
   },
   "sources": [
-    {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml"},
-    {"name": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/allArticle.xml"},
+    {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml", "tz": 9},
+    {"name": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/allArticle.xml", "tz": 9},
     {"name": "구글뉴스: 인공지능", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 15},
     {"name": "구글뉴스: 생성형 AI", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%83%9D%EC%84%B1%ED%98%95+AI+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 10},
 
     {"name": "TechCrunch AI", "category": "news_global", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
     {"name": "The Verge AI", "category": "news_global", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
-    {"name": "MIT Technology Review", "category": "news_global", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed"},
+    {"name": "MIT Technology Review", "category": "news_global", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "max_age_days": 4},
     {"name": "VentureBeat AI", "category": "news_global", "url": "https://venturebeat.com/category/ai/feed/"},
-    {"name": "OpenAI", "category": "news_global", "url": "https://openai.com/news/rss.xml"},
-    {"name": "Google AI Blog", "category": "news_global", "url": "https://blog.google/technology/ai/rss/"},
-    {"name": "Google DeepMind", "category": "news_global", "url": "https://deepmind.google/blog/rss.xml"},
-    {"name": "Hugging Face Blog", "category": "news_global", "url": "https://huggingface.co/blog/feed.xml"},
+    {"name": "OpenAI", "category": "news_global", "url": "https://openai.com/news/rss.xml", "max_age_days": 4},
+    {"name": "Google AI Blog", "category": "news_global", "url": "https://blog.google/technology/ai/rss/", "max_age_days": 4},
+    {"name": "Google DeepMind", "category": "news_global", "url": "https://deepmind.google/blog/rss.xml", "max_age_days": 4},
+    {"name": "Hugging Face Blog", "category": "news_global", "url": "https://huggingface.co/blog/feed.xml", "max_age_days": 4},
+    {"name": "Google News: AI", "category": "news_global", "url": "https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
+    {"name": "Google News: AI 기업", "category": "news_global", "url": "https://news.google.com/rss/search?q=(OpenAI+OR+Anthropic+OR+Nvidia+OR+Gemini+OR+%22Meta+AI%22+OR+xAI)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
+    {"name": "The Decoder", "category": "news_global", "url": "https://the-decoder.com/feed/"},
+    {"name": "Engadget", "category": "news_global", "url": "https://www.engadget.com/rss.xml", "filter": true, "limit": 5},
+    {"name": "SiliconANGLE AI", "category": "news_global", "url": "https://siliconangle.com/category/ai/feed/", "limit": 6},
+    {"name": "TechXplore AI", "category": "news_global", "url": "https://techxplore.com/rss-feed/machine-learning-ai-news/", "limit": 6},
+    {"name": "Ars Technica AI", "category": "news_global", "url": "https://arstechnica.com/ai/feed/", "max_age_days": 4, "limit": 5},
+    {"name": "WIRED AI", "category": "news_global", "url": "https://www.wired.com/feed/tag/ai/latest/rss", "max_age_days": 4, "limit": 5},
+    {"name": "ZDNET AI", "category": "news_global", "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml", "max_age_days": 4, "limit": 5},
 
     {"name": "Hugging Face 오늘의 논문", "category": "papers", "field": "AI 일반", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 10},
     {"name": "arXiv cs.AI", "category": "papers", "field": "AI 일반", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 6},
@@ -51,12 +60,12 @@
 
     {"name": "구글뉴스: AI 정책", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(%EC%A0%95%EC%B1%85+OR+%EA%B7%9C%EC%A0%9C+OR+%EA%B8%B0%EB%B3%B8%EB%B2%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 12},
     {"name": "Google News: AI regulation", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
-    {"name": "과학기술정보통신부 보도자료", "category": "policy", "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94", "filter": true},
+    {"name": "과학기술정보통신부 보도자료", "category": "policy", "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94", "filter": true, "tz": 9},
 
-    {"name": "TED", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
-    {"name": "TEDx Talks", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
-    {"name": "TED-Ed", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
-    {"name": "스테이지5", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCzA4Y2mkO0sF7TM4WZ38bw", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이아이", "챗GPT", "로봇", "알고리즘", "머신러닝", "딥러닝", "자동화"], "max_age_days": 30, "title_only": true}
+    {"name": "TED", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
+    {"name": "TEDx Talks", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
+    {"name": "TED-Ed", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true},
+    {"name": "스테이지5", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCzA4Y2mkO0sF7TM4WZ38bw", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이아이", "챗GPT", "로봇", "알고리즘", "머신러닝", "딥러닝", "자동화"], "max_age_days": 30, "title_only": true}
   ],
   "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘"]
 }

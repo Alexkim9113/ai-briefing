@@ -1,6 +1,6 @@
 # METAXIS (AI 브리핑)
 
-국내외 AI 뉴스·논문·정책·유튜브를 매일 자동으로 모아 한 페이지로 보여주는 사이트입니다.
+국내외 AI 뉴스·논문·정책·영상 강연를 매일 자동으로 모아 한 페이지로 보여주는 사이트입니다.
 
 - **비용 0원**: GitHub Actions(공개 저장소 무료)로 수집하고 GitHub Pages(무료)로 게시합니다. 유료 API나 서버가 없습니다.
 - **저작권 안전**: 제목, 원문 앞부분에서 자동 발췌한 180자 이내 요약, 원문 링크만 저장합니다. 본문 전체와 원본의 사진·썸네일은 수집하지 않고, 표지는 사이트가 직접 만든 그라데이션 디자인입니다.
@@ -21,7 +21,7 @@
 {"name": "표시 이름", "category": "news_ko", "url": "RSS 주소", "limit": 8, "filter": true}
 ```
 
-- `category`: `news_ko`, `news_global`, `papers`, `policy`, `youtube` 중 하나
+- `category`: `news_ko`, `news_global`, `papers`, `policy`, `talks`(영상·강연) 중 하나
 - `field`: 논문·연구 분야 표시(예: 의료, 법·윤리·정책, 에너지·환경, 문화·예술)
 - `limit`: 하루 최대 항목 수(기본 8)
 - `filter`: `true` 이면 AI 관련 단어(`ai_keywords`)가 들어간 글만 남깁니다

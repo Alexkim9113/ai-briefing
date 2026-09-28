@@ -9,85 +9,8 @@
    "source": "인공지능신문",
    "field": "",
    "category": "news_ko",
-   "published": "2026-09-28T10:56:17+00:00",
+   "published": "2026-09-28T01:56:17+00:00",
    "summary": "화면 녹화 프로그램 ‘반디캠’ 개발사 반디캠컴퍼니가 인공지능(AI) 영상툴 ‘반디캠 AI 스튜디오’를 국내외 시장에 정식 출시하고 생성형 AI 사업에 진출한다고 28일 밝혔다. 반디캠 AI 스튜디오는 영상 기획부터 생성, 편집까지 하나의 환경에서 처리할 수 있도록 설계한 올인원 AI 영상 제작 플랫폼이다.",
-   "thumb": ""
-  },
-  {
-   "id": "4c30431d125b111f",
-   "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42082",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T10:16:02+00:00",
-   "summary": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.",
-   "thumb": ""
-  },
-  {
-   "id": "294ca0bb52496e50",
-   "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42081",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T10:08:14+00:00",
-   "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
-   "thumb": ""
-  },
-  {
-   "id": "372e8bff03862797",
-   "title": "[AI리더의 서가] 한 땀 한 땀 나의 첫 AI 에이전트",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215621",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T09:00:00+00:00",
-   "summary": "한 땀 한 땀 나의 첫 AI 에이전트허정준·송영희 | 책만2026년 9월 29일추천이유이 책은 프레임워크 없이 파이썬으로 AI 에이전트를 처음부터 끝까지 직접 구현하며 에이전트의 본질과 설계 원리를 완전히 이해하도록 합니다.",
-   "thumb": ""
-  },
-  {
-   "id": "b52edd2929027dc9",
-   "title": "스캐터랩, AI 엔터테인먼트 플랫폼 ‘제타’에 ‘비주얼 노벨 모드’ 출시",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42078",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T08:58:15+00:00",
-   "summary": "생성형 인공지능(AI) 스타트업 스캐터랩(대표 김종윤, 박세웅)이 인공지능(AI) 인터랙티브 엔터테인먼트 플랫폼 ‘제타(zeta)’에 새로운 플레이 모드인 ‘비주얼 노벨 모드’를 28일 공식 출시했다.",
-   "thumb": ""
-  },
-  {
-   "id": "151a78eca528c211",
-   "title": "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용...2026 UFS 통해 첫 실증",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42077",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T08:34:35+00:00",
-   "summary": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서…",
-   "thumb": ""
-  },
-  {
-   "id": "d9a22b8bd7238a45",
-   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:22:59+00:00",
-   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
-   "thumb": ""
-  },
-  {
-   "id": "2da95cc9c3be10c1",
-   "title": "트럼프, 아모데이와 백악관 첫 일대일 만찬 개최",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215694",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:15:40+00:00",
-   "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
    "thumb": ""
   },
   {
@@ -157,6 +80,17 @@
    "thumb": ""
   },
   {
+   "id": "4c30431d125b111f",
+   "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42082",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:16:02+00:00",
+   "summary": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.",
+   "thumb": ""
+  },
+  {
    "id": "198aed83a4923f3a",
    "title": "마키나락스, 군 전장망에 생성형 AI 적용…UFS서 운용 검증",
    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44QWpRUnA1cFEwdlk2S1d5YXc0ODRxMTBGNGRwbVZoTHBrM0xDbXduQ2VCUGxNVE1OYm9nZl9pMnFEZjJLYlBhWDl6SG52VXNLbk1OWmVn?oc=5",
@@ -165,6 +99,17 @@
    "category": "news_ko",
    "published": "2026-09-28T01:12:22+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "294ca0bb52496e50",
+   "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42081",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:08:14+00:00",
+   "summary": "Arm이 클라우드부터 엣지, 피지컬 AI에 이르는 Arm 컴퓨팅 플랫폼 전반에서 최적화된 인공지능(AI) 모델과 개발 리소스를 탐색하고 배포할 수 있는 ‘Arm AI 포털(Arm AI Portal)’​을 공개했다.",
    "thumb": ""
   },
   {
@@ -463,6 +408,17 @@
    "thumb": ""
   },
   {
+   "id": "372e8bff03862797",
+   "title": "[AI리더의 서가] 한 땀 한 땀 나의 첫 AI 에이전트",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215621",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:00:00+00:00",
+   "summary": "한 땀 한 땀 나의 첫 AI 에이전트허정준·송영희 | 책만2026년 9월 29일추천이유이 책은 프레임워크 없이 파이썬으로 AI 에이전트를 처음부터 끝까지 직접 구현하며 에이전트의 본질과 설계 원리를 완전히 이해하도록 합니다.",
+   "thumb": ""
+  },
+  {
    "id": "ce06e7f0067b45cf",
    "title": "[조간브리핑] AI 위험 경고하면서 개발은 가속···美·中 '브레이크 없는 경쟁'",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1NTG05Y0NuZ1Z4R2pZTDlsSEM3bG8xRVkwNVRsMUlsQWsyV0JaMVAwX0prWDdpa1ByaHF1aFNTaF95QWNHQUhiOTJYZ2F2OENtRHZKSmlic2JrN0FqM2F6OXdBalhFRDJGaVE?oc=5",
@@ -471,6 +427,17 @@
    "category": "news_ko",
    "published": "2026-09-27T23:59:21+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "b52edd2929027dc9",
+   "title": "스캐터랩, AI 엔터테인먼트 플랫폼 ‘제타’에 ‘비주얼 노벨 모드’ 출시",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42078",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T23:58:15+00:00",
+   "summary": "생성형 인공지능(AI) 스타트업 스캐터랩(대표 김종윤, 박세웅)이 인공지능(AI) 인터랙티브 엔터테인먼트 플랫폼 ‘제타(zeta)’에 새로운 플레이 모드인 ‘비주얼 노벨 모드’를 28일 공식 출시했다.",
    "thumb": ""
   },
   {
@@ -593,6 +560,17 @@
    "thumb": ""
   },
   {
+   "id": "151a78eca528c211",
+   "title": "마키나락스, 군 ‘전장망 최초’ AI 운영환경 적용...2026 UFS 통해 첫 실증",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42077",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T23:34:35+00:00",
+   "summary": "피지컬 AI 기업 마키나락스(대표 윤성호)가 합동참모본부와 함께 자사 인공지능 운영체제(AI OS) ’런웨이(Runway)’를 한국군합동지휘통제체계(Korea Joint Command and Control System, KJCCS)에 적용하고, 2026 을지 자유의 방패(UFS) 연습 기간 실제 군 운용 환경에서…",
+   "thumb": ""
+  },
+  {
    "id": "0a4e99bc8689a5e0",
    "title": "한국해양교통안전공단(KOMSA), 인공지능(AI)이 예측한 ‘72시간 해상 혼잡도’ 데이터 개방",
    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE10cWd1ZVF4UHIxM2F2ZjhXdEctU1JRSlV2NUJqZmxvV0pZMVpsci1oQjVSdktYTnI3bTZ2SEJJSHRkZG9Lb0xGMWstVGJoVTRVMzk0aUZtaklSZVZzYkVIdHg0dmJsWUZmWkpoVGpuVEhPdVU?oc=5",
@@ -701,6 +679,17 @@
    "thumb": ""
   },
   {
+   "id": "d9a22b8bd7238a45",
+   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T22:22:59+00:00",
+   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
+   "thumb": ""
+  },
+  {
    "id": "239cce964dd9c83f",
    "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
@@ -761,6 +750,17 @@
    "category": "news_ko",
    "published": "2026-09-27T21:30:35+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2da95cc9c3be10c1",
+   "title": "트럼프, 아모데이와 백악관 첫 일대일 만찬 개최",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215694",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T21:15:40+00:00",
+   "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
    "thumb": ""
   },
   {
@@ -884,28 +884,6 @@
    "thumb": ""
   },
   {
-   "id": "411f16adae0db76f",
-   "title": "GPT-6 아스트라, 물리적 명령에 잇따라 치명적 행위 실행",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215692",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T17:39:33+00:00",
-   "summary": "오픈AI의 'GPT-6 아스트라'가 물리적·로보틱스 시뮬레이션 환경에서 치명적인 유해 명령을 거부하지 않고 수행한 연구 결과들이 잇달아 공개됐다. 오픈AI는 아스트라를 '가장 지능적이고 안전하게 정렬된 모델'로 소개했으나, 텍스트 통제와 실제 물리적 행위 사이의 격차가 드러난 것이다.",
-   "thumb": ""
-  },
-  {
-   "id": "1cc465b637f708ac",
-   "title": "미·중, ‘슈퍼 인텔리전스’ 대화 신설…AI 위험·편익 논의하는 소통 채널 구축",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42074",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T17:03:18+00:00",
-   "summary": "미국과 중국이 인공지능(AI)을 둘러싼 경쟁이 심화되는 가운데 고도화된 인공지능, 이른바 ‘슈퍼 인텔리전스(Super Intelligence, 초지능)’의 위험과 편익을 논의하기 위한 공식 대화 채널을 신설했다.",
-   "thumb": ""
-  },
-  {
    "id": "9c14e3f084274fca",
    "title": "Engram is a sampler that turns broken AI hallucinations into music",
    "link": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
@@ -939,39 +917,6 @@
    "thumb": ""
   },
   {
-   "id": "7db1209d9ea695e2",
-   "title": "오픈AI, 500달러 ‘프로 맥스’ 요금제 출시하나…‘워크·코덱스’ 고속 처리",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215681",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T16:23:59+00:00",
-   "summary": "오픈AI가 월 500달러(약 68만원)에 달하는 최상위 요금제 ‘챗GPT 프로 맥스(ChatGPT Pro Max)’를 준비하고 있다는 정황이 포착됐다. AIPRM의 리드 엔지니어 티보르 블라호는 24일(현지시간) 챗GPT의 비공개 프런트엔드 설정에서 프로 맥스의 흔적을 발견했다고 밝혔다.",
-   "thumb": ""
-  },
-  {
-   "id": "b40d4d54e69a890e",
-   "title": "앤트로픽, 클로드 최적화를 클로드에 맡겼더니…\"속도 3배 빨라져\"",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215678",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T15:59:27+00:00",
-   "summary": "앤트로픽이 AI 모델의 성능 개선을 넘어 실제 서비스 속도를 높이기 위해 자사 AI 모델 '클로드'를 대규모 최적화 작업에 직접 투입했다. 엔지니어가 일일이 코드를 분석하던 기존 방식에서 벗어나, AI가 스스로 병목 지점을 찾고 수정 코드 배포까지 주도한 것이 핵심이다.",
-   "thumb": ""
-  },
-  {
-   "id": "d2dfe78040aac3aa",
-   "title": "라이너, 에이전트 연결 도구 '라이너 액션 MCP' 출시…국내 도입 임박",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215655",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T15:34:42+00:00",
-   "summary": "AI 에이전트 전문 라이너(대표 김진우)가 기존 MCP 생태계의 복잡한 진입 장벽을 해결하기 위해 ‘라이너 액션 MCP’를 선보인다. 서치·리서치 에이전트로서의 핵심 역량을 고도화하는 동시에, 사용자 환경에 최적화된 ‘통합 워크플로우 에이전트 환경’을 갖추겠다는 전략이다.",
-   "thumb": ""
-  },
-  {
    "id": "b2a432746e26a1f2",
    "title": "피 안 뽑고 땀 한 방울로… 체내 약물 추적하는 ‘AI 피부 패치’ 개발",
    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KZFVxaGxYbVA4U1RvUjNMYmpkbzYtTVY5SVRRZndMbzlDa3NhUUVlUlU2NjhzS2xOWGljazh1YkhDbG1mamJ0SXpJNl9lZU1wYXc?oc=5",
@@ -980,39 +925,6 @@
    "category": "papers",
    "published": "2026-09-27T15:27:00+00:00",
    "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "8e3d64c67e3a5823",
-   "title": "앤트로픽, 클로드 플러그인 개발 포털 공개...제출·검토·분석 통합 지원",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215685",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T15:14:31+00:00",
-   "summary": "'클로드'가 외부 앱과 업무 도구, 데이터에 연결되는 사례가 늘면서 서드파티 확장 기능을 개발하려는 수요도 커지고 있다. 앤트로픽은 개발자들이 이런 확장 기능을 간편하게 만들고 실제 사용자에게 배포할 수 있도록 플러그인 개발과 관리 환경을 강화했다.",
-   "thumb": ""
-  },
-  {
-   "id": "7a3fa09a3de1fbdd",
-   "title": "스모어톡, 신한은행에 숏폼 영상 AI 공급…금융권 유스케이스 첫 확보",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215687",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T15:01:58+00:00",
-   "summary": "스모어톡이 숏폼 생성 AI 기술을 신한은행에 공급한다. 생성 AI 서비스가 금융권의 엄격한 검토 기준을 통과해 정식 계약으로 이어졌다는 점에서 주목된다.",
-   "thumb": ""
-  },
-  {
-   "id": "af50665bd0cbad4a",
-   "title": "KT, AI 모델 라우팅 기술로 글로벌 2위…“기업 AX 지원”",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215686",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T14:59:09+00:00",
-   "summary": "KT가 AI 모델 라우팅 기술로 글로벌 평가에서 2위를 차지했다. 해당 기술은 '토큰 팩토리' 등 에이전틱 AI 서비스에 탑재돼 기업들의 AX와 운영 비용 최적화를 지원하는 데 활용될 예정이다.",
    "thumb": ""
   },
   {
@@ -1049,28 +961,6 @@
    "thumb": ""
   },
   {
-   "id": "e913aec713591e01",
-   "title": "글로벌 인재와 기업을 한 자리에…서울시, 외국인 채용 우수기업 모집",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42073",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T11:48:36+00:00",
-   "summary": "서울시는 오는 11월 18일, SETEC에서 개최될 '2026 서울 외국인 취업채용박람회' 참여할 글로벌 인재 채용 기업을 모집한다고 27일 밝혔다. 참여를 희망하는 기업은 28일부터 10월 16일까지 신청할 수 있다.",
-   "thumb": ""
-  },
-  {
-   "id": "7a874efed17475fb",
-   "title": "삼성전자, 멕시코서 AI·스마트싱스 연결 경험 선보여",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42072",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T11:29:15+00:00",
-   "summary": "삼성전자가 멕시코에서 열린 K-컬처 행사에 참가해 갤럭시 AI와 비전 AI 컴패니언, 스마트싱스를 중심으로 모바일과 TV, 가전 등을 연결한 인공지능(AI) 기반 경험을 선보였다.",
-   "thumb": ""
-  },
-  {
    "id": "6de0efa96e17d673",
    "title": "As A.I. Accelerates, Governments Are Increasingly Being Left Behind",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPajQ0bkdBX2JMZzdXbG1BaVM3enFHQUsxVUZhT3V2MUVGdV9fck5tTDRlbjA1TWpPR003NFgtYUh2d0UxNnk4VXVpNWVQbkJKT3ViR0pLcjZ6OVhlTk9xbEtyelcxcHJna1NEeWhGSlYwb0pQd2pMT3ZNdXRkNlVqMQ?oc=5",
@@ -1079,17 +969,6 @@
    "category": "policy",
    "published": "2026-09-27T11:22:48+00:00",
    "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "4de1baf7834ba16a",
-   "title": "LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42071",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T11:15:10+00:00",
-   "summary": "LG전자(대표이사 류재철)가 27일, 엔비디아의 공식 파트너 프로그램인 ‘엔비디아 파트너 네트워크(NVIDIA Partner Network, 이하 NPN)’에 선정되며, 글로벌 인공지능 데이터센터(AIDC) 냉각 솔루션 시장 공략에 속도를 낸다.",
    "thumb": ""
   },
   {
@@ -1115,6 +994,94 @@
    "thumb": ""
   },
   {
+   "id": "411f16adae0db76f",
+   "title": "GPT-6 아스트라, 물리적 명령에 잇따라 치명적 행위 실행",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215692",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T08:39:33+00:00",
+   "summary": "오픈AI의 'GPT-6 아스트라'가 물리적·로보틱스 시뮬레이션 환경에서 치명적인 유해 명령을 거부하지 않고 수행한 연구 결과들이 잇달아 공개됐다. 오픈AI는 아스트라를 '가장 지능적이고 안전하게 정렬된 모델'로 소개했으나, 텍스트 통제와 실제 물리적 행위 사이의 격차가 드러난 것이다.",
+   "thumb": ""
+  },
+  {
+   "id": "1cc465b637f708ac",
+   "title": "미·중, ‘슈퍼 인텔리전스’ 대화 신설…AI 위험·편익 논의하는 소통 채널 구축",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42074",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T08:03:18+00:00",
+   "summary": "미국과 중국이 인공지능(AI)을 둘러싼 경쟁이 심화되는 가운데 고도화된 인공지능, 이른바 ‘슈퍼 인텔리전스(Super Intelligence, 초지능)’의 위험과 편익을 논의하기 위한 공식 대화 채널을 신설했다.",
+   "thumb": ""
+  },
+  {
+   "id": "7db1209d9ea695e2",
+   "title": "오픈AI, 500달러 ‘프로 맥스’ 요금제 출시하나…‘워크·코덱스’ 고속 처리",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215681",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T07:23:59+00:00",
+   "summary": "오픈AI가 월 500달러(약 68만원)에 달하는 최상위 요금제 ‘챗GPT 프로 맥스(ChatGPT Pro Max)’를 준비하고 있다는 정황이 포착됐다. AIPRM의 리드 엔지니어 티보르 블라호는 24일(현지시간) 챗GPT의 비공개 프런트엔드 설정에서 프로 맥스의 흔적을 발견했다고 밝혔다.",
+   "thumb": ""
+  },
+  {
+   "id": "b40d4d54e69a890e",
+   "title": "앤트로픽, 클로드 최적화를 클로드에 맡겼더니…\"속도 3배 빨라져\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215678",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T06:59:27+00:00",
+   "summary": "앤트로픽이 AI 모델의 성능 개선을 넘어 실제 서비스 속도를 높이기 위해 자사 AI 모델 '클로드'를 대규모 최적화 작업에 직접 투입했다. 엔지니어가 일일이 코드를 분석하던 기존 방식에서 벗어나, AI가 스스로 병목 지점을 찾고 수정 코드 배포까지 주도한 것이 핵심이다.",
+   "thumb": ""
+  },
+  {
+   "id": "d2dfe78040aac3aa",
+   "title": "라이너, 에이전트 연결 도구 '라이너 액션 MCP' 출시…국내 도입 임박",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215655",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T06:34:42+00:00",
+   "summary": "AI 에이전트 전문 라이너(대표 김진우)가 기존 MCP 생태계의 복잡한 진입 장벽을 해결하기 위해 ‘라이너 액션 MCP’를 선보인다. 서치·리서치 에이전트로서의 핵심 역량을 고도화하는 동시에, 사용자 환경에 최적화된 ‘통합 워크플로우 에이전트 환경’을 갖추겠다는 전략이다.",
+   "thumb": ""
+  },
+  {
+   "id": "8e3d64c67e3a5823",
+   "title": "앤트로픽, 클로드 플러그인 개발 포털 공개...제출·검토·분석 통합 지원",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215685",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T06:14:31+00:00",
+   "summary": "'클로드'가 외부 앱과 업무 도구, 데이터에 연결되는 사례가 늘면서 서드파티 확장 기능을 개발하려는 수요도 커지고 있다. 앤트로픽은 개발자들이 이런 확장 기능을 간편하게 만들고 실제 사용자에게 배포할 수 있도록 플러그인 개발과 관리 환경을 강화했다.",
+   "thumb": ""
+  },
+  {
+   "id": "7a3fa09a3de1fbdd",
+   "title": "스모어톡, 신한은행에 숏폼 영상 AI 공급…금융권 유스케이스 첫 확보",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215687",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T06:01:58+00:00",
+   "summary": "스모어톡이 숏폼 생성 AI 기술을 신한은행에 공급한다. 생성 AI 서비스가 금융권의 엄격한 검토 기준을 통과해 정식 계약으로 이어졌다는 점에서 주목된다.",
+   "thumb": ""
+  },
+  {
+   "id": "af50665bd0cbad4a",
+   "title": "KT, AI 모델 라우팅 기술로 글로벌 2위…“기업 AX 지원”",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215686",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T05:59:09+00:00",
+   "summary": "KT가 AI 모델 라우팅 기술로 글로벌 평가에서 2위를 차지했다. 해당 기술은 '토큰 팩토리' 등 에이전틱 AI 서비스에 탑재돼 기업들의 AX와 운영 비용 최적화를 지원하는 데 활용될 예정이다.",
+   "thumb": ""
+  },
+  {
    "id": "6d456376b81d809a",
    "title": "KAIST 연구팀, “반대 의견 환영하는 안정적 소속감이 더 나은 결정 돕는다”",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fY2ZrWGdfSTlCQWY0NUJCZldfRVkzU25NMDZiWktpUmZxT0Q1aXJhejczMUx1OVpSb0VINjVaMjRuazRlZWVoZy1NdVNraDdYZUVLcVJlemZNS1FhbHJJbXdBbjdSY0ZSZC1aaXR3?oc=5",
@@ -1123,6 +1090,39 @@
    "category": "papers",
    "published": "2026-09-27T03:05:00+00:00",
    "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "e913aec713591e01",
+   "title": "글로벌 인재와 기업을 한 자리에…서울시, 외국인 채용 우수기업 모집",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42073",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T02:48:36+00:00",
+   "summary": "서울시는 오는 11월 18일, SETEC에서 개최될 '2026 서울 외국인 취업채용박람회' 참여할 글로벌 인재 채용 기업을 모집한다고 27일 밝혔다. 참여를 희망하는 기업은 28일부터 10월 16일까지 신청할 수 있다.",
+   "thumb": ""
+  },
+  {
+   "id": "7a874efed17475fb",
+   "title": "삼성전자, 멕시코서 AI·스마트싱스 연결 경험 선보여",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42072",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T02:29:15+00:00",
+   "summary": "삼성전자가 멕시코에서 열린 K-컬처 행사에 참가해 갤럭시 AI와 비전 AI 컴패니언, 스마트싱스를 중심으로 모바일과 TV, 가전 등을 연결한 인공지능(AI) 기반 경험을 선보였다.",
+   "thumb": ""
+  },
+  {
+   "id": "4de1baf7834ba16a",
+   "title": "LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42071",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-27T02:15:10+00:00",
+   "summary": "LG전자(대표이사 류재철)가 27일, 엔비디아의 공식 파트너 프로그램인 ‘엔비디아 파트너 네트워크(NVIDIA Partner Network, 이하 NPN)’에 선정되며, 글로벌 인공지능 데이터센터(AIDC) 냉각 솔루션 시장 공략에 속도를 낸다.",
    "thumb": ""
   },
   {
@@ -1263,7 +1263,7 @@
    "link": "https://www.youtube.com/watch?v=yvpq0c3ZJu0",
    "source": "TEDx Talks",
    "field": "",
-   "category": "youtube",
+   "category": "talks",
    "published": "2026-09-25T17:00:29+00:00",
    "summary": "We've been told the future of AI looks like ever-bigger data centers — warehouses that drink a town's water and draw a city's power so the same two chatbots can answer everyone's…",
    "thumb": ""
@@ -1318,7 +1318,7 @@
    "link": "https://www.youtube.com/shorts/QT3e6x5CZC8",
    "source": "TED",
    "field": "",
-   "category": "youtube",
+   "category": "talks",
    "published": "2026-09-24T19:00:28+00:00",
    "summary": "Sal Khan, the founder and CEO of Khan Academy, thinks artificial intelligence could spark the greatest positive transformation education has ever seen.",
    "thumb": ""
@@ -1340,7 +1340,7 @@
    "link": "https://www.youtube.com/watch?v=270q4aF0qU8",
    "source": "TED",
    "field": "",
-   "category": "youtube",
+   "category": "talks",
    "published": "2026-09-24T15:00:04+00:00",
    "summary": "Climate expert Ari Matusiak spends his days working to rewire America's energy system, and he has an idea: instead of tech companies building new power plants for their AI data…",
    "thumb": ""

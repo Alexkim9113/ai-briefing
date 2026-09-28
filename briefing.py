@@ -89,7 +89,8 @@ def parse_xml(raw):
         return ET.fromstring(s)
 
 
-def parse_date(s):
+def parse_date(s, tz_hours=0):
+    """발행 시각. 시간대 표기가 없으면 소스의 기본 시간대(tz_hours, 예: 한국 9)로 본다."""
     if not s:
         return None
     s = s.strip()
@@ -103,7 +104,7 @@ def parse_date(s):
         except ValueError:
             return None
     if d.tzinfo is None:
-        d = d.replace(tzinfo=timezone.utc)
+        d = d.replace(tzinfo=timezone(timedelta(hours=tz_hours)))
     return d
 
 
@@ -385,7 +386,9 @@ def collect(fixtures=None, now=None):
                     continue
                 if src.get("url", "").startswith("https://news.google.com"):
                     title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
-                d = parse_date(it["date"])
+                d = parse_date(it["date"], src.get("tz", 0))
+                if d and d > now + timedelta(minutes=10):  # 발행 시각이 미래로 찍힌 글은 수집 시각으로 맞춘다
+                    d = now
                 if src.get("max_age_days"):  # 새 영상이 드문 채널: 더 긴 기간 허용(최근 7일 브리핑과 중복은 제외)
                     if d and d < now - timedelta(days=src["max_age_days"]):
                         continue
@@ -776,7 +779,7 @@ TOPICS = [
 TOPICS.append(("신제품·서비스", ["출시", "공개", "플랫폼", "서비스", "선보", "launch", "release", "unveil", "app", "feature"],
                '<path d="M14 4c3-1 5-1 6 0 1 1 1 3 0 6l-7 7-6-6z"/><path d="M7 11l-3 1-1 3 4-1M13 17l-1 3-3 1 1-4"/><circle cx="15.5" cy="8.5" r="1.5"/>'))
 TOPIC_DEFAULT = {"papers": ("연구", '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>'),
-                 "youtube": ("영상", '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>'),
+                 "talks": ("강연", '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>'),
                  "policy": ("법·정책", TOPICS[1][2])}
 TOPIC_SPARK = '<path d="M12 3c1 5 3 7 8 8-5 1-7 3-8 8-1-5-3-7-8-8 5-1 7-3 8-8z"/>'
 
@@ -834,7 +837,7 @@ def title_link(it):
 
 def pick_featured(items):
     """헤드라인 1개 + 주요 소식 4개. 요약이 있는 뉴스를 우선하고 분야가 겹치지 않게 고른다."""
-    pri = {"news_ko": 0, "news_global": 1, "policy": 2, "youtube": 3, "papers": 4}
+    pri = {"news_ko": 0, "news_global": 1, "policy": 2, "talks": 3, "papers": 4}
     ranked = sorted(items, key=lambda i: (not i.get("summary"), pri.get(i["category"], 9)))
     if not ranked:
         return None, []
