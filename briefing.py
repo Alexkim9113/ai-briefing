@@ -36,6 +36,8 @@ DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
 DEDUPE_DAYS = 7            # 최근 N일 브리핑에 이미 나온 글은 제외
+DUP_SIMILARITY = 0.4       # 같은 카테고리에서 제목 글자쌍이 이만큼 겹치면 같은 글로 본다
+DUP_SIMILARITY_KO = 0.33   # 한글 제목은 언론사마다 표현이 더 달라 기준을 조금 낮춘다
 USER_AGENT = "Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)"
 
 
@@ -257,14 +259,61 @@ def load_config():
     return json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
 
 
-def recent_ids(today, days=DEDUPE_DAYS):
-    seen = set()
+def recent_items(today, days=DEDUPE_DAYS):
+    """지난 며칠치 항목(중복 판단용)."""
+    out = []
     for i in range(1, days + 1):
         p = DATA_DIR / f"{(today - timedelta(days=i)).isoformat()}.json"
         if p.exists():
-            for it in json.loads(p.read_text(encoding="utf-8"))["items"]:
-                seen.add(it["id"])
-    return seen
+            out += json.loads(p.read_text(encoding="utf-8"))["items"]
+    return out
+
+
+_BRACKET = re.compile(r"^\s*(\[[^\]]{1,12}\]|【[^】]{1,12}】|\([^)]{1,8}\))\s*")
+
+
+def title_key(title):
+    t = html.unescape(title).lower()
+    while _BRACKET.match(t):  # [단독], [영상] 같은 말머리는 비교에서 뺀다
+        t = _BRACKET.sub("", t, count=1)
+    return re.sub(r"\W+", "", t)
+
+
+_HANGUL = re.compile(r"[가-힣]")
+
+
+def grams(key):
+    g = frozenset(key[i:i + 2] for i in range(len(key) - 1)) or frozenset([key])
+    return g, bool(_HANGUL.search(key))
+
+
+def similar(a, b):
+    """제목 글자쌍(2-gram) 겹침 비율. 같은 사건을 언론사마다 조금씩 다르게 쓴 제목을 잡는다."""
+    (ga, ko_a), (gb, ko_b) = a, b
+    if not ga or not gb:
+        return False
+    threshold = DUP_SIMILARITY_KO if ko_a and ko_b else DUP_SIMILARITY
+    return len(ga & gb) / len(ga | gb) >= threshold
+
+
+class Deduper:
+    """같은 링크·같은 제목은 전체에서, 비슷한 제목은 같은 카테고리 안에서 걸러낸다."""
+
+    def __init__(self):
+        self.ids, self.keys, self.by_cat = set(), set(), {}
+
+    def is_dup(self, it):
+        key = title_key(it["title"])
+        if it["id"] in self.ids or key[:60] in self.keys:
+            return True
+        g = grams(key)
+        return any(similar(g, o) for o in self.by_cat.get(it["category"], ()))
+
+    def add(self, it):
+        key = title_key(it["title"])
+        self.ids.add(it["id"])
+        self.keys.add(key[:60])
+        self.by_cat.setdefault(it["category"], []).append(grams(key))
 
 
 def label(src):
@@ -274,12 +323,31 @@ def label(src):
 _SLOW_HOST_LOCK = threading.Lock()
 
 
+def fetch_youtube(url, ua=None):
+    """유튜브 RSS는 채널 주소가 가끔 404를 내므로, 같은 채널의 '업로드 목록' 주소와 재시도로 보완한다."""
+    urls = [url]
+    m = re.search(r"channel_id=UC([\w-]+)", url)
+    if m:
+        urls.append(f"https://www.youtube.com/feeds/videos.xml?playlist_id=UU{m.group(1)}")
+    err = None
+    for attempt in range(3):
+        for u in urls:
+            try:
+                return fetch(u, None, ua)
+            except Exception as e:
+                err = e
+        time.sleep(3 * (attempt + 1))
+    raise err
+
+
 def collect_source(src, fixtures):
     host = urllib.parse.urlsplit(src["url"]).netloc
     if "nature.com" in host and not fixtures:
         with _SLOW_HOST_LOCK:  # 같은 사이트에 동시에 여러 번 요청하면 차단되므로 순서대로 천천히
             raw = fetch(src["url"], fixtures, src.get("ua"))
             time.sleep(2)
+    elif "youtube.com" in host and not fixtures:
+        raw = fetch_youtube(src["url"], src.get("ua"))
     else:
         raw = fetch(src["url"], fixtures, src.get("ua"))
     kind = src.get("type")
@@ -295,7 +363,9 @@ def collect(fixtures=None, now=None):
     now = now or datetime.now(timezone.utc)
     today = now.astimezone(KST).date()
     cutoff = now - timedelta(hours=FRESH_HOURS)
-    seen = recent_ids(today)
+    history = Deduper()  # 최근 7일 동안 이미 올린 글
+    for it in recent_items(today):
+        history.add(it)
     keywords = cfg.get("ai_keywords", [])
 
     results, status = [], []
@@ -326,7 +396,7 @@ def collect(fixtures=None, now=None):
                 if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
                     continue
                 iid = item_id(it["link"], title)
-                if iid in seen:
+                if history.is_dup({"id": iid, "title": title, "category": src["category"]}):
                     continue
                 kept.append({
                     "id": iid, "title": title, "link": it["link"],
@@ -340,22 +410,18 @@ def collect(fixtures=None, now=None):
             status.append({"name": label(src), "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
 
-    # 소스 간 중복 제거(같은 링크 또는 같은 제목)
-    uniq, keys = [], set()
-    for it in sorted(results, key=lambda x: x["published"] or "", reverse=True):
-        tkey = re.sub(r"\W+", "", it["title"].lower())[:60]
-        if it["id"] in keys or tkey in keys:
-            continue
-        keys.update((it["id"], tkey))
-        uniq.append(it)
-
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / f"{today.isoformat()}.json"
-    if path.exists():  # 같은 날 여러 번 실행되면 기존 항목과 합친다
-        old = json.loads(path.read_text(encoding="utf-8"))["items"]
-        ids = {i["id"] for i in uniq}
-        uniq += [i for i in old if i["id"] not in ids]
-        uniq.sort(key=lambda x: x["published"] or "", reverse=True)
+    # 오늘 이미 올린 글을 먼저 두고, 새 글은 그것들·서로와 겹치지 않을 때만 더한다
+    old = json.loads(path.read_text(encoding="utf-8"))["items"] if path.exists() else []
+    new = sorted(results, key=lambda x: x["published"] or "", reverse=True)
+    today_seen, uniq = Deduper(), []
+    for it in old + new:
+        if today_seen.is_dup(it):
+            continue
+        today_seen.add(it)
+        uniq.append(it)
+    uniq.sort(key=lambda x: x["published"] or "", reverse=True)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
     uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
