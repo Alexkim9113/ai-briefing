@@ -811,18 +811,55 @@ function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.tit
 function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}${z(d.getMonth()+1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;}
 $('#new').onclick=()=>edit(null);
 function edit(p){cur=p?{...p}:{id:newId(),title:'',body:'',cover:'',images:[],date:''};imgs={};seq=(cur.images||[]).length;
- $('#title').value=cur.title;$('#body').value=cur.body;msg('#edit-msg','');drawThumbs();view('#v-edit');}
+ $('#title').value=cur.title;setBody(cur.body||'');msg('#edit-msg','');drawThumbs();view('#v-edit');}
 function drawThumbs(){const all=[...(cur.images||[]).map(n=>({n,src:'img/'+n})),...Object.entries(imgs).map(([n,src])=>({n,src}))];
  $('#thumbs').innerHTML=all.map(x=>`<figure><img src="${x.src}" alt=""><label><input type="radio" name="cover" value="${x.n}" ${cur.cover==='img/'+x.n?'checked':''}> 대표 사진</label></figure>`).join('');
  $('#thumbs').querySelectorAll('input').forEach(r=>r.onchange=()=>cur.cover='img/'+r.value);}
 async function shrink(file){const bmp=await createImageBitmap(file),s=Math.min(1,1600/bmp.width),c=document.createElement('canvas');
  c.width=Math.round(bmp.width*s);c.height=Math.round(bmp.height*s);c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.82);}
-$('#file').onchange=async e=>{const ta=$('#body');for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;
- const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover)cur.cover='img/'+name;
- const at=ta.selectionStart||ta.value.length,ins=`\n\n![사진](img/${name})\n\n`;ta.value=ta.value.slice(0,at)+ins+ta.value.slice(at);ta.selectionStart=ta.selectionEnd=at+ins.length;}
+// 본문 편집기: 사진이 실제 모습으로 보이고, 게시할 때 간단한 글 형식(마크다운)으로 바꿔 보낸다
+const ED=$('#body');let RANGE=null;
+document.execCommand('defaultParagraphSeparator',false,'p');
+document.addEventListener('selectionchange',()=>{const s=getSelection();if(s.rangeCount&&ED.contains(s.anchorNode))RANGE=s.getRangeAt(0).cloneRange();});
+const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+function fig(name,src){return `<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt=""><button type="button" aria-label="사진 빼기">✕</button></figure>`;}
+function setBody(md){ED.innerHTML=md.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
+  const m=b.match(/^!\[[^\]]*\]\((img\/[\w.-]+|https:\/\/[^)\s]+)\)$/);if(m)return fig(m[1].replace(/^img\//,''),m[1]);
+  if(/^#{1,3} /.test(b))return `<h2>${inl(b.replace(/^#{1,3} /,''))}</h2>`;return `<p>${b.split('\n').map(inl).join('<br>')}</p>`;}).join('')||'';}
+function txt(el){let o='';el.childNodes.forEach(n=>{if(n.nodeType===3)o+=n.textContent;else if(n.nodeName==='BR')o+='\n';
+  else if(/^(B|STRONG)$/.test(n.nodeName)){const t=txt(n).trim();o+=t?`**${t}**`:'';}else o+=txt(n);});return o;}
+function getBody(){const out=[];let loose='';const flush=()=>{if(loose.trim())out.push(loose.trim());loose='';};
+ ED.childNodes.forEach(n=>{if(n.nodeType===3){loose+=n.textContent;return;}
+  if(n.nodeName==='BR'){loose+='\n';return;}flush();
+  if(n.nodeName==='FIGURE'){const nm=n.dataset.n;out.push(`![사진](${/^https:/.test(nm)?nm:'img/'+nm})`);return;}
+  const img=n.querySelector&&n.querySelector('figure');if(img){n.querySelectorAll('figure').forEach(f=>out.push(`![사진](img/${f.dataset.n})`));}
+  const t=txt(n).replace(/ /g,' ').trim();if(!t)return;
+  out.push(/^H[1-6]$/.test(n.nodeName)?'## '+t.replace(/\n/g,' '):t);});
+ flush();return out.join('\n\n');}
+ED.addEventListener('click',e=>{if(e.target.matches('figure button')){const f=e.target.closest('figure');const n=f.dataset.n;f.remove();
+  if(cur.cover==='img/'+n&&!ED.querySelector('figure'))cur.cover='';drawThumbs();}});
+ED.addEventListener('paste',e=>{e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'));});
+function placeAt(){ED.focus();const s=getSelection();s.removeAllRanges();
+ if(RANGE&&ED.contains(RANGE.startContainer))s.addRange(RANGE);else{const r=document.createRange();r.selectNodeContents(ED);r.collapse(false);s.addRange(r);}}
+function insertFigure(name,src){placeAt();const s=getSelection(),r=s.getRangeAt(0);
+ let blk=r.startContainer;while(blk&&blk.parentNode!==ED)blk=blk.parentNode;
+ const tmp=document.createElement('div');tmp.innerHTML=fig(name,src);const f=tmp.firstChild,after=document.createElement('p');after.innerHTML='<br>';
+ if(blk&&blk!==ED){ // 커서가 문단 가운데면 문단을 둘로 나눠 그 사이에 사진을 넣는다
+  const tail=document.createRange();tail.setStart(r.startContainer,r.startOffset);tail.setEndAfter(blk.lastChild||blk);
+  const rest=tail.extractContents();const restText=rest.textContent.trim();
+  blk.after(f);if(restText){const p=document.createElement('p');p.append(...(rest.firstChild&&rest.firstChild.nodeName===blk.nodeName?rest.firstChild.childNodes:rest.childNodes));f.after(p);RANGE=null;placeCaret(p,true);return;}
+  f.after(after);if(!blk.textContent.trim()&&!blk.querySelector('figure'))blk.remove();}
+ else{ED.append(f,after);}
+ placeCaret(after,true);}
+function placeCaret(el,start){const r=document.createRange();r.selectNodeContents(el);r.collapse(start);const s=getSelection();s.removeAllRanges();s.addRange(r);RANGE=r.cloneRange();}
+$('#file').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;
+ const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover)cur.cover='img/'+name;insertFigure(name,imgs[name]);}
  e.target.value='';drawThumbs();};
+$('#t-h').onmousedown=$('#t-b').onmousedown=e=>e.preventDefault();
+$('#t-h').onclick=()=>{placeAt();const cur2=document.queryCommandValue('formatBlock').toLowerCase();document.execCommand('formatBlock',false,cur2==='h2'?'p':'h2');};
+$('#t-b').onclick=()=>{placeAt();document.execCommand('bold');};
 $('#cancel').onclick=()=>{view('#v-list');renderList();};
-$('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=$('#body').value.trim();
+$('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBody();
  if(!title||!body)return msg('#edit-msg','제목과 내용을 모두 써 주세요.',1);
  const used=n=>body.includes('img/'+n)||cur.cover==='img/'+n,up={};
  const keep=(cur.images||[]).filter(used);
@@ -1414,14 +1451,21 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
 <ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul></section>
 <section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
-<p><textarea id="body" class="inp" rows="16" placeholder="내용을 쓰세요. 빈 줄로 문단을 나눠요. ## 로 시작하면 소제목, **굵게**, [글자](https://주소) 는 링크가 돼요."></textarea></p>
-<p><label class="btn ghost">사진 넣기<input id="file" type="file" accept="image/*" multiple hidden></label>
-<span class="meta">사진은 커서 위치에 들어가요. 직접 찍었거나 사용 권리가 있는 사진만 올려주세요.</span></p>
+<div class="tools"><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진 넣기<input id="file" type="file" accept="image/*" multiple hidden></label>
+<button type="button" class="tb" id="t-h">소제목</button><button type="button" class="tb" id="t-b"><b>굵게</b></button></div>
+<div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
+<p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 사진 오른쪽 위 ✕ 로 뺄 수 있어요.</p>
 <div id="thumbs" class="thumbs"></div>
 <p><button id="publish" class="btn">게시하기</button> <button id="cancel" class="btn ghost">목록으로</button> <span id="edit-msg" class="meta"></span></p></section>
 </div>
 <style>.inp{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
 .pin{width:160px;letter-spacing:.4em;text-align:center}.pin::placeholder{letter-spacing:normal}textarea.inp{line-height:1.7;resize:vertical}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;position:sticky;top:0;z-index:4;background:var(--bg);padding:6px 0}
+.tb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:14px;font-weight:600;padding:9px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}.tb svg{width:18px;height:18px}
+.rich{min-height:320px;line-height:1.8;font-size:17px;outline:none}.rich:empty::before{content:attr(data-ph);color:var(--muted)}
+.rich p,.rich div{margin:0 0 12px}.rich h2{font-size:21px;margin:18px 0 8px;color:var(--heading)}
+.rich figure{margin:14px 0;position:relative;user-select:none}.rich figure img{display:block;max-width:100%;border-radius:10px}
+.rich figure button{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:16px;cursor:pointer}
 .btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--grad);color:#fff;cursor:pointer;display:inline-block}
 .btn.ghost{background:var(--soft);color:var(--accent)}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
 .thumbs{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}.thumbs figure{margin:0;width:140px}.thumbs img{width:140px;height:90px;object-fit:cover;border-radius:8px}
@@ -1429,7 +1473,7 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 @media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
 #setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
 .plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.pend li{font-size:14px;color:var(--muted)}.pend li.bad{color:#e5484d}.plist button{margin:0;padding:8px 14px}
-#v-edit label.btn{display:block;text-align:center;padding:12px;margin-bottom:8px}#body{min-height:40vh}
+.tb{flex:1;justify-content:center;padding:11px 10px}.rich{min-height:45vh;font-size:17px;padding:14px}
 .thumbs figure,.thumbs img{width:calc((100vw - 56px)/3)}.thumbs img{height:auto;aspect-ratio:3/2}
 #v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
 #v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
