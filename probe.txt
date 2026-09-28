@@ -1,30 +1,21 @@
-200 application/rss+xml; charset=utf-8 https://www.nature.com/subjects/climate-change.rss
-30
-200 application/rss+xml; charset=utf-8 https://www.nature.com/subjects/renewable-energy.rss
-30
-200 application/rss+xml; charset=utf-8 https://www.nature.com/subjects/energy.rss
-30
-200 application/rss+xml; charset=utf-8 https://www.nature.com/npjdigitalmed.rss
-9
-200 application/rss+xml; charset=utf-8 https://www.nature.com/natmachintell.rss
-9
-200 application/rss+xml https://rss.arxiv.org/rss/cs.SD+cs.MM+cs.HC
-0
-200 application/rss+xml https://rss.arxiv.org/rss/cs.CY
-0
-200 application/rss+xml https://rss.arxiv.org/rss/eess.SY
-0
-200 application/rss+xml; charset=utf-8 https://www.nature.com/subjects/law.rss
-30
-404 text/html; charset=utf-8 https://www.nature.com/subjects/art.rss
-0
-200 application/rss+xml https://export.arxiv.org/rss/cs.CY
-0
-NATURE-RAW
-        
-            <item>
-                <title>Physics informed machine learning predicts binding free energy changes in protein-RNA complexes upon mutations</title>
-                <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
-                <link>https://www.nature.com/articles/s42003-026-10948-9</link>
-                <description/>
-                <guid>https://www.nature.com/articles/s42003-026-10948-9</guid>
+== TED
+     46 channel/UCAuUUnT6oDeKwE6v1NGQxug
+      9 channel/UCsT0YIqwnpJCM-mx7-gSA4Q
+      2 channel/UCtmY49Zn4l0RMJnTWfV7Wsg
+== TEDx
+     43 channel/UCsT0YIqwnpJCM-mx7-gSA4Q
+      6 channel/UCAuUUnT6oDeKwE6v1NGQxug
+      2 channel/UCu-MoGucP8tKTgiW4eoQ_Zw
+== TEDEd
+     39 channel/UCsooa4yRKGN_zEE8iknghZA
+      4 channel/UC-V6odR7HzLCuqjYeowPjLA
+      2 channel/UCsT0YIqwnpJCM-mx7-gSA4Q
+404 UCAuUUnT6oDeKwE6v1NGQxug
+<title>Error 404 (Not Found)!!1
+200 UCsT0YIqwnpJCM-mx7-gSA4Q
+<title>TEDx Talks
+<title>Our kids are more than their problems—let’s act like it | Kris Anderson Moore | TEDxFoggyBottom
+404 UCsooa4yRKGN_zEE8iknghZA
+<title>Error 404 (Not Found)!!1
+404 UCbfYPyITQ-7l4upoX8nvctg
+<title>Error 404 (Not Found)!!1
