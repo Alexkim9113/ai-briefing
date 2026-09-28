@@ -364,6 +364,62 @@ class Deduper:
         self.by_cat.setdefault(it["category"], []).append(grams(key))
 
 
+# 같은 사건 거르기(토큰·AI 없이): 제목(해외 글은 번역 제목)의 핵심 낱말을 뽑아 회사·기관 이름은 한 이름으로 맞추고,
+# 핵심 낱말이 절반 이상(3개 이상) 겹치면 언론사가 달라도 같은 내용으로 보고 먼저 올라온 글 하나만 남긴다.
+STORY_CATS = {"news_ko", "news_global", "policy"}
+_STORY_STOP = set("규모 달러 기능 밝혀 밝혔 예정 논란 가운데 이유 전망 공개 발표 출시 소식 관련 대한 위한 통한 이번 지난 다시 한번 정말 무엇 어떻게 "
+                  "ai 인공지능 에이아이 모델 안전 우려 위험 규제 논란 경고 거부 논쟁 비판 강조 "
+                  "the a an of to in on for and with is are be as by at from new how why what".split())
+_STORY_ALIAS = {"앤스로픽": "anthropic", "엔스로픽": "anthropic", "행정안전부": "행안부", "과학기술정보통신부": "과기정통부"}
+
+
+def story_sig(it):
+    t = html.unescape(it.get("title_ko") or it["title"])
+    while _BRACKET.match(t):
+        t = _BRACKET.sub("", t, count=1)
+    out = set()
+    for tok in re.findall(r"[가-힣A-Za-z0-9][가-힣A-Za-z0-9.+\-]*", t):
+        w = tok.strip(".-")
+        if _HANGUL.search(w):
+            if len(w) >= 3 and re.search(r"(한|된|적인|하는|하게|했던|없는|있는|할|될|했다|한다|된다|까|요|죠)$", w):
+                continue  # 꾸미는 말·서술어는 빼고 명사만
+            w = _JOSA.sub("", w)
+            if len(w) < 2:
+                continue
+        w = _STORY_ALIAS.get(w, w)
+        w = _KW_CANON.get(w.lower(), w.lower())
+        if w.lower() not in _STORY_STOP and w not in _KSTOP and len(w) >= 2:
+            out.add(w.lower())
+    return out
+
+
+def same_story(a, b):
+    m, both = min(len(a), len(b)), a & b
+    n = len(both)
+    # 회사·인물 이름만 겹치는 건(예: 트럼프·앤트로픽·CEO) 다른 사건일 수 있어, 내용 낱말이 하나 이상 함께 겹쳐야 한다
+    return m >= 4 and n >= 3 and n / m >= 0.5 and any(w not in _STORY_NAMES for w in both)
+
+
+_STORY_NAMES = None  # 아래 KW_GROUPS 가 정해진 뒤 채운다
+
+
+def drop_same_story(items, history):
+    """items(오늘 글) 가운데 최근 7일 글이나 먼저 올라온 오늘 글과 같은 사건인 것을 뺀다."""
+    kept = [story_sig(h) for h in history if h.get("category") in STORY_CATS]
+    drop = set()
+    for it in sorted(items, key=lambda x: x.get("published") or ""):
+        if it.get("category") not in STORY_CATS:
+            continue
+        sg = story_sig(it)
+        if any(same_story(sg, k) for k in kept):
+            drop.add(it["id"])
+            continue
+        kept.append(sg)
+    if drop:
+        print(f"[collect] 같은 내용 기사 {len(drop)}건 거름")
+    return [i for i in items if i["id"] not in drop]
+
+
 def label(src):
     return f'{src["name"]} · {src["field"]}' if src.get("field") else src["name"]
 
@@ -833,6 +889,7 @@ def collect(fixtures=None, now=None):
     add_translations(uniq, fixtures)
     gone = load_removed()
     uniq = [i for i in uniq if i["id"] not in gone]  # 운영자가 삭제한 기사는 다시 모으지 않는다
+    uniq = drop_same_story(uniq, recent_items(today))  # 언론사가 달라도 같은 내용이면 먼저 나온 기사 하나만
     if not fixtures:  # METAXIS 브리핑(AI)은 무료 한도 안에서 실시간 페이지(오늘 홈)에 보이는 글만
         ai_briefs(uniq, 8)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
@@ -987,6 +1044,7 @@ KW_GROUPS = [
     ["클라우드", "cloud", "Azure", "애저"],
 ]
 _KW_CANON = {w.lower(): g[0] for g in KW_GROUPS for w in g}
+_STORY_NAMES = {g[0].lower() for g in KW_GROUPS} | {"ceo", "cto"}
 
 
 def kw_terms(k):
