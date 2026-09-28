@@ -1,4 +1,11 @@
 {
- "results": [],
- "pin_set": false
+ "results": [
+  {
+   "ref": "tu1gvmnimukryfse",
+   "ok": true,
+   "msg": "비밀번호를 정했어요",
+   "at": "2026-09-28T13:58+09:00"
+  }
+ ],
+ "pin_set": true
 }
