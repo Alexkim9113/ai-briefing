@@ -2,8 +2,7 @@ name: 매일 AI 브리핑
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 매일 한국시간 오전 6시 (UTC 21:00)
-    - cron: "0 9 * * *"    # 매일 한국시간 오후 6시에 한 번 더 보충 수집
+    - cron: "7,37 * * * *"   # 30분마다 수집(정각은 GitHub 서버가 붐벼 7분·37분에 실행)
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
   push:
     branches: [main]

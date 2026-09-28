@@ -32,6 +32,7 @@ KST = timezone(timedelta(hours=9))
 SUMMARY_CHARS = 180        # 발췌 요약 최대 길이(저작권상 짧게 유지)
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
+MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
 DEDUPE_DAYS = 7            # 최근 N일 브리핑에 이미 나온 글은 제외
 USER_AGENT = "Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)"
 
@@ -286,6 +287,9 @@ def collect(fixtures=None, now=None):
         old = json.loads(path.read_text(encoding="utf-8"))["items"]
         ids = {i["id"] for i in uniq}
         uniq += [i for i in old if i["id"] not in ids]
+        uniq.sort(key=lambda x: x["published"] or "", reverse=True)
+    per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
+    uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
             "items": uniq, "status": sorted(status, key=lambda s: s["name"])}
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -455,7 +459,7 @@ def page(title, body, base="", cats=None, search=True):
 <style>{CSS}</style></head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>METAXIS</span></a><nav>{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
+<footer class="wrap">30분마다 자동으로 새 소식을 모읍니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
 <script>{JS}</script></body></html>"""
 
 
