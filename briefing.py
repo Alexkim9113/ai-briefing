@@ -571,6 +571,7 @@ def _translate_items(todo, foreign, google_only):
 # 응답 없이 "OK"만 돌려줘 쓸 수 없었다. AI에는 제목과 언론사·채널이 공개한 소개글만 보낸다(본문 수집 없음).
 # 한도를 넘으면 다음 실행에서 이어서 쓰고, 그 전까지는 규칙 방식 창을 보여 준다.
 MX_MODEL = os.environ.get("MX_MODEL", "gemini-flash-latest")
+MX_BACKUP = "gemini-flash-lite-latest"  # 기본 모델이 붐비면(503) 가벼운 모델로 한 번 더
 MX_VER = 1
 MX_CATS = {"news_ko", "news_global", "papers", "policy", "talks"}
 MX_PROMPT = """너는 METAXIS의 AI 브리핑 에디터다.
@@ -602,14 +603,14 @@ def _mx_copied(text, src, n=16):
     return bool(s) and any(t[i:i + n] in s for i in range(0, max(0, len(t) - n + 1)))
 
 
-def _mx_call(batch):
+def _mx_call(batch, model=MX_MODEL):
     key = os.environ.get("GEMINI_KEY", "").strip()
     inp = [{"id": it["id"], "분야": it["category"], "출처": it.get("source", ""), "날짜": (it.get("published") or "")[:10],
             "제목": it["title"], "소개글": (it.get("detail") or it.get("summary") or "")[:700]} for it in batch]
     body = json.dumps({"system_instruction": {"parts": [{"text": MX_PROMPT}]},
                        "contents": [{"role": "user", "parts": [{"text": json.dumps(inp, ensure_ascii=False)}]}],
                        "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}}).encode()
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MX_MODEL}:generateContent", body,
+    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body,
                                  {"x-goog-api-key": key, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
         txt = "".join(p.get("text", "") for p in json.load(r)["candidates"][0]["content"]["parts"])
@@ -643,7 +644,14 @@ def ai_briefs(items, max_req=6, batch_size=8):
         batch = todo[k:k + batch_size]
         used += 1
         try:
-            res = {str(r.get("id")): r for r in _mx_call(batch) if isinstance(r, dict)}
+            try:
+                out = _mx_call(batch)
+            except urllib.error.HTTPError as e:
+                if e.code not in (500, 503):
+                    raise
+                time.sleep(4)
+                out = _mx_call(batch, MX_BACKUP)
+            res = {str(r.get("id")): r for r in out if isinstance(r, dict)}
         except urllib.error.HTTPError as e:
             print(f"[브리핑] AI 한도·오류(HTTP {e.code}) → 다음 실행에서 이어서")
             _MX_OFF.append(e.code)
