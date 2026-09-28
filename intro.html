@@ -26,9 +26,9 @@ a{color:inherit;text-decoration:none}
 @media (max-width:640px){.date{font-size:11.5px}.tr{gap:10px}.share{width:34px;height:34px}}
 .mid{text-align:center}
 .mid h1 .l{display:inline-block;background:linear-gradient(90deg,#12e3ff 0%,#3b7bff 50%,#8b2cff 100%);background-size:var(--w) 100%;background-position:calc(-1 * var(--x)) 0;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform,opacity,filter}
-.mid h1.fly .l{animation:fly .9s cubic-bezier(.16,.84,.28,1) both;animation-delay:var(--d)}
-@keyframes fly{0%{opacity:0;transform:translate(var(--dx),var(--dy)) scaleX(3.2) skewX(-18deg);filter:blur(10px)}55%{opacity:1;filter:blur(2px)}80%{transform:translate(calc(var(--dx) * -.03),calc(var(--dy) * -.03)) scaleX(.94)}100%{opacity:1;transform:none;filter:none}}
-.mid h1.fly::after{content:"";position:absolute;left:-10%;right:-10%;top:50%;height:2px;background:linear-gradient(90deg,transparent,#12e3ff,#8b2cff,transparent);opacity:0;animation:flash .7s ease-out .95s both}
+.mid h1.fly .l{animation:fly .42s cubic-bezier(.2,.9,.3,1) both;animation-delay:var(--d)}
+@keyframes fly{0%{opacity:0;transform:translate(var(--dx),var(--dy)) scaleX(3.4) skewX(-20deg);filter:blur(10px) brightness(2.5)}60%{opacity:1;transform:translate(calc(var(--dx) * -.02),calc(var(--dy) * -.02)) scaleX(.95);filter:blur(0) brightness(3) drop-shadow(0 0 14px #fff) drop-shadow(0 0 26px #12e3ff)}100%{opacity:1;transform:none;filter:none}}
+.mid h1.fly::after{content:"";position:absolute;left:-10%;right:-10%;top:50%;height:2px;background:linear-gradient(90deg,transparent,#12e3ff,#8b2cff,transparent);opacity:0;animation:flash .6s ease-out .78s both}
 @keyframes flash{0%{opacity:0;transform:scaleX(.2)}40%{opacity:.9}100%{opacity:0;transform:scaleX(1.3)}}
 @media (prefers-reduced-motion:reduce){.mid h1.fly .l,.mid h1.fly::after{animation:none}}
 .mid h1.split{background:none}@media (min-width:641px){.mid h1.split{position:relative}}
@@ -85,7 +85,7 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const ls=[...h.querySelectorAll('.l')],fit=()=>{h.style.setProperty('--w',h.offsetWidth+'px');ls.forEach(l=>l.style.setProperty('--x',l.offsetLeft+'px'));};
  fit();addEventListener('resize',fit);document.fonts&&document.fonts.ready.then(fit);
  ls.forEach((l,i)=>{const a=Math.random()*6.283,r=(innerWidth>640?900:420)*(.7+Math.random()*.6);
-  l.style.setProperty('--dx',Math.cos(a)*r+'px');l.style.setProperty('--dy',Math.sin(a)*r*.6+'px');l.style.setProperty('--d',(.15+i*.07+Math.random()*.08).toFixed(2)+'s');});
+  l.style.setProperty('--dx',Math.cos(a)*r+'px');l.style.setProperty('--dy',Math.sin(a)*r*.6+'px');l.style.setProperty('--d',(.08+i*.055).toFixed(3)+'s');});
  if(!reduce)h.classList.add('fly');})();
 try{
  const T=await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
