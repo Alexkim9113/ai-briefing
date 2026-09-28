@@ -653,7 +653,7 @@ CSS = """
 @media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bar:rgba(255,255,255,.86);--bar-text:#15172b;--bg:#f6f7fb;--card:#fff;--text:#33374d;--heading:#111325;--muted:#646b84;--line:#e3e6f0;
 --accent:#3552c9;--soft:#eef1fb;--shadow:0 6px 18px rgba(20,24,60,.08);--dot:rgba(20,24,60,.055);--glow:#e4e8ff;--field:#f1f3f9;--field-line:#e0e4ef;color-scheme:light}}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle,var(--dot) 1px,transparent 1.4px) 0 0/28px 28px fixed,radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 .serif{font-family:"Pretendard Variable",Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -697,6 +697,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .trend .thumb{border-radius:12px}.trend .thumb .tag{display:none}
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cd{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);margin-right:7px;vertical-align:.12em}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
 .kw strong{font-size:14px;margin-right:4px}.kw span,.kwb{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
 .kwb{font:inherit;font-size:13px;border:2px solid transparent;cursor:pointer;padding:2px 11px}.kwb:hover{border-color:var(--line)}
@@ -1120,7 +1121,7 @@ def meta_html(it, cats, with_cat=False):
     if t:
         parts.append(f"<span>{ICON_CLOCK}{t}</span>")
     if with_cat:
-        parts.append(f"<span>{esc(cats.get(it['category'], ''))}</span>")
+        parts.append(f"<span style=\"--c:{INTRO_COLORS.get(it['category'], DEFAULT_TINT)}\"><i class=\"cd\"></i>{esc(cats.get(it['category'], ''))}</span>")
     return '<div class="meta">' + "".join(parts) + "</div>"
 
 
@@ -1577,7 +1578,7 @@ def render_home(data, cats, posts):
                  + "".join(f'<button type="button" class="kwb" data-t="{esc("|".join(kw_terms(k)))}">#{esc(k)}</button>' for k in top_keywords(items))
                  + f'<span class="info">{info}</span></div>')
     tabs = ['<button class="on" data-cat="all" id="all">전체</button>']
-    tabs += [f'<button data-cat="{c}">{esc(n)} {len(by_cat.get(c, []))}</button>' for c, n in cats.items()]
+    tabs += [f'<button data-cat="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i class="cd"></i>{esc(n)} {len(by_cat.get(c, []))}</button>' for c, n in cats.items()]
     parts.append('<div class="tabs">' + "".join(tabs) + "</div>")
     for c, name in cats.items():  # 나머지는 그림 없이 최신순 8개씩, 페이지를 넘겨 본다
         rows = sorted(by_cat.get(c, []), key=lambda x: x.get("published") or "", reverse=True)
@@ -1657,7 +1658,7 @@ def write_feed(latest, sc):
 
 
 DEFAULT_TINT = "#3b7bff"
-INTRO_COLORS = {"news_ko": "#12e3ff", "news_global": "#3b7bff", "papers": "#8b2cff", "policy": "#5b5bff", "talks": "#2ff5c8"}
+INTRO_COLORS = {"news_ko": "#12e3ff", "news_global": "#3b7bff", "papers": "#a24bff", "policy": "#ffb020", "talks": "#2ff5a0"}  # 분야별로 확실히 다른 색(첫 화면 점·제목 막대·탭 공통)
 
 
 def render_intro(latest, cats, sc, enter="home.html", preview=False):
