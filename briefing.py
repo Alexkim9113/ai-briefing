@@ -258,7 +258,7 @@ def detail_lines(desc, title, summary=""):
     text = clean_text(desc)
     if not text or text == title or (text.startswith(title[:40]) and len(text) < len(title) + 40):
         return ""
-    sents = [x.strip() for x in _SENT.split(text) if x.strip() and len(x.strip()) >= 8]
+    sents = [x.strip() for x in _SENT.split(text) if x.strip() and len(x.strip()) >= 4]
     if len(sents) > 1 and (sents[-1].endswith(("…", "...")) or not re.search(r"[.!?。다요\"'”’)\]]$", sents[-1])):
         sents = sents[:-1]  # 피드에서 중간에 잘린 마지막 문장은 빼기
     if not sents:
