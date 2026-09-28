@@ -1275,6 +1275,7 @@ a{color:inherit;text-decoration:none}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:var(--muted)}
 .sres{position:absolute;z-index:60;top:calc(100% + 6px);right:0;width:min(440px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;background:var(--card,var(--bg));border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.35);padding:8px}
+mark.hl{background:#fde047;color:#111;border-radius:3px;padding:0 2px}
 .sres-h{margin:6px 10px 8px;font-size:12.5px;color:var(--muted)}.sres-e{margin:10px;font-size:14px;color:var(--muted)}
 .sres a{display:grid;gap:3px;padding:10px;border-radius:12px;color:inherit}.sres a:hover,.sres a:focus{background:var(--soft)}
 .sres a b{font-weight:600;font-size:14.5px;line-height:1.45}.sres a small{font-size:12px;color:var(--muted)}.sres-c{font-size:11px;font-weight:700;color:var(--accent)}
@@ -1434,6 +1435,11 @@ html:not(.op).cap .protect{filter:blur(18px);transition:filter .05s}
 JS = """
 // 기사 제목을 누르면 '주요 내용'(언론사가 공개한 소개글 발췌, 최대 5줄)과 원문으로 가는 버튼을 먼저 보여 준다
 function isOp(){try{return !!localStorage.getItem('metaxis_op');}catch(e){return false;}}
+function markTerms(root,terms){terms=(terms||[]).filter(t=>t&&t.length>0).sort((a,b)=>b.length-a.length);if(!root||!terms.length)return;  // 검색어 형광 표시
+ const rx=new RegExp('('+terms.map(t=>t.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&')).join('|')+')','gi');
+ const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentNode.closest('mark,script,style,button')||!rx.test(n.data)?(rx.lastIndex=0,2):(rx.lastIndex=0,1)});
+ const ns=[];while(w.nextNode())ns.push(w.currentNode);
+ ns.forEach(n=>{const f=document.createDocumentFragment();n.data.split(rx).forEach((p,i)=>{if(!p)return;if(i%2){const m=document.createElement('mark');m.className='hl';m.textContent=p;f.append(m);}else f.append(p);});n.replaceWith(f);});}
 function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const V=!!a.dataset.v,lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5),kos=(a.dataset.dk||'').split('\\n').filter(Boolean),pair=kos.length===lines.length;const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
@@ -1445,8 +1451,9 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
-(()=>{const m=location.hash.match(/^#a=([\w-]+)/);if(!m)return;history.replaceState(null,'',location.pathname+location.search);  // 첫 화면 흐르는 기사에서 왔을 때 그 기사 요약 창 열기
- addEventListener('load',()=>{const a=document.querySelector('a[data-id="'+m[1]+'"]');if(!a)return;const box=a.closest('article,.trend,.hero');box&&box.scrollIntoView({block:'center'});a.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));});})();
+(()=>{const m=location.hash.match(/^#a=([\w-]+)(?:&hl=([^&]*))?/);if(!m)return;history.replaceState(null,'',location.pathname+location.search);  // 흐르는 기사·검색 결과에서 왔을 때 그 기사 요약 창 열기(검색어는 형광 표시)
+ addEventListener('load',()=>{const a=document.querySelector('a[data-id="'+m[1]+'"]');if(!a)return;const box=a.closest('article,.trend,.hero');box&&box.scrollIntoView({block:'center'});a.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
+  if(m[2]){let t='';try{t=decodeURIComponent(m[2]).trim()}catch(_){}if(t){box&&markTerms(box,[t]);markTerms(document.querySelector('.brief'),[t]);}}});})();
 document.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;let a=ev.target.closest('a[data-d]');
  if(!a){const card=ev.target.closest('article,.trend,.hero>div:first-child');if(!card||(ev.target.closest('a,button')&&!ev.target.closest('[data-brief]')))return;a=card.querySelector('a[data-d]');if(!a)return;}
  ev.preventDefault();openBrief(a);});
@@ -1515,7 +1522,16 @@ if(q){ // 사이트 전체 검색: 지금까지 모은 모든 글(search.json)�
   pan.innerHTML=`<p class="sres-h">검색 결과 <b>${hit.length}</b>건</p>`+(hit.length?hit.slice(0,40).map(r=>`<a href="/${esc(r[6])}#a=${esc(r[0])}"><span class="sres-c">${esc(d.cats[r[4]]||'')}</span><b>${esc(r[2]||r[1])}</b><small>${esc(r[3])}${r[5]?' · '+esc(r[5].slice(5).replace('-','.')):''}</small></a>`).join(''):'<p class="sres-e">찾는 글이 없어요. 다른 말로 찾아보세요.</p>');
   pan.hidden=false;}
  q.oninput=()=>{clearTimeout(T);T=setTimeout(run,180);};
- q.onkeydown=e=>{if(e.key==='Escape'){q.value='';pan.hidden=true;}if(e.key==='Enter'){e.preventDefault();run();}};
+ q.onkeydown=e=>{if(e.key==='Escape'){q.value='';pan.hidden=true;}if(e.key==='Enter'){e.preventDefault();const v=q.value.trim();if(v)location.href='/search.html?q='+encodeURIComponent(v);}};
+ const SR=document.getElementById('sr'),sv=new URLSearchParams(location.search).get('q');
+ if(SR&&sv){q.value=sv;(async()=>{const d=await load(),v=sv.trim().toLowerCase();  // 검색 결과 페이지: 관련 글 전부 + 검색어 형광 표시
+  const g=related(v)||(d.kg||[]).find(g=>g.some(w=>w.toLowerCase()===v))||null,terms=[...new Set([v,...(g||[]).map(w=>w.toLowerCase())])];
+  const hit=d.rows.filter(r=>{const t=(r[1]+' '+r[2]+' '+r[3]+' '+(r[7]||'')+' '+(r[8]||[]).join(' ')).toLowerCase();return terms.some(w=>g?has(t,w):t.includes(w));});
+  hit.sort((a,b)=>(b[5]||'').localeCompare(a[5]||''));
+  document.getElementById('sq').innerHTML=`<b>‘${esc(sv)}’</b> 관련 글 <b>${hit.length}</b>건`;
+  SR.innerHTML=hit.length?hit.slice(0,300).map(r=>{const u='/'+esc(r[6])+'#a='+esc(r[0])+'&hl='+encodeURIComponent(sv);
+   return `<article><h3 class="serif"><a href="${u}">${esc(r[2]||r[1])}</a></h3>${r[7]?`<p class="summary">${esc(r[7])}</p>`:''}<div class="meta"><span class="sres-c">${esc(d.cats[r[4]]||'')}</span><span>${esc(r[3])}</span>${r[5]?`<span>${esc(r[5].slice(5).replace('-','.'))}</span>`:''}</div>${(r[8]||[]).length?`<div class="tags">${r[8].map(t=>`<span class="tg">#${esc(t)}</span>`).join('')}</div>`:''}</article>`}).join(''):'<p class="empty">찾는 글이 없어요. 다른 말로 찾아보세요.</p>';
+  markTerms(SR,terms);})();}
  document.addEventListener('click',e=>{if(!e.target.closest('.sres,.search'))pan.hidden=true;});
  q.onfocus=()=>{if(q.value.trim())run();};}
 document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dataset.url;
@@ -1797,6 +1813,10 @@ LIVE_JS = """
  try{const y=sessionStorage.getItem('mx_y');if(y){sessionStorage.removeItem('mx_y');addEventListener('load',()=>scrollTo(0,+y));}}catch(e){}
  setInterval(chk,60000);document.addEventListener('visibilitychange',chk);})();
 """
+
+
+SEARCH_BODY = ('<div class="ph" style="--c:#12e3ff"><h1 class="serif">검색</h1><span id="sq">검색어를 입력하고 엔터를 눌러 보세요.</span></div>'
+               '<div class="list" id="sr"></div>')
 
 
 def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True,
@@ -3168,12 +3188,17 @@ def build(keep_days=None):
         paths += render_category(c, name, items, cats, sc)
     # 사이트 전체 검색용 목록: [id, 제목, 번역 제목, 출처, 분야, 날짜, 그 글이 있는 쪽]
     per_cat = {c: sorted(every[c], key=lambda x: x.get("published") or "", reverse=True) for c in cats}
+    # [id, 제목, 번역 제목, 출처, 분야, 날짜, 그 글이 있는 쪽, 짧은 요약, 태그]
     rows = [[it["id"], it["title"], it.get("title_ko", ""), it.get("source", ""), c, (it.get("published") or "")[:10],
-             f'{c}/' + ("" if k // PER_PAGE == 0 else f"{k // PER_PAGE + 1}.html")]
+             f'{c}/' + ("" if k // PER_PAGE == 0 else f"{k // PER_PAGE + 1}.html"),
+             ((it.get("mx") or {}).get("b") or it.get("summary") or "")[:150], [n for n, _ in card_tags(it)]]
             for c in cats for k, it in enumerate(per_cat[c])]
-    rows += [[p["id"], p["title"], "", "에디터", "editor", (p.get("date") or p.get("published") or "")[:10], f'editor/{p["id"]}.html']
+    rows += [[p["id"], p["title"], "", "에디터", "editor", (p.get("date") or p.get("published") or "")[:10], f'editor/{p["id"]}.html',
+              clean_text(p.get("excerpt") or p.get("summary") or "")[:150], p.get("tags") or []]
              for p in posts]
     (SITE_DIR / "search.json").write_text(json.dumps({"cats": {**cats, "editor": "에디터"}, "kg": KW_GROUPS, "rows": rows}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (SITE_DIR / "search.html").write_text(page(f"검색 | {sc['name']}", SEARCH_BODY, "", cats, desc=f"{sc['name']} 전체 검색",
+                                               path="search.html", index=False), encoding="utf-8")
     paths += render_editor_pages(posts, cats, sc)
     paths += render_tags([it for c in cats for it in every[c]], cats, sc)
     credits = "".join(
