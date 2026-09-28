@@ -551,6 +551,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 .pager .on{background:var(--accent);border-color:var(--accent);color:#fff}.pager span{border:0;cursor:default;min-width:20px;padding:0}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
+.btn-w{display:inline-block;margin-left:14px;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
 .ph h1{font-size:28px;font-weight:700;color:var(--accent);margin:0}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
 .editor-h h2{font-size:22px;margin:0;color:var(--accent);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
@@ -1029,8 +1030,9 @@ def render_editor_pages(posts, cats, sc):
             f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
             f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span></div></div></article>' for p in chunk)
-        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요.</p>'
-        body = (f'<div class="ph"><h1 class="serif">에디터</h1><span>METAXIS가 직접 쓴 글 {len(posts)}편</span></div>'
+        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 오른쪽 위 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
+        body = (f'<div class="ph"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
+                f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
                 f'<div class="elist">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"에디터 글{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
