@@ -958,7 +958,7 @@ async function openList(){view('#v-list');msg('#list-msg','');loadStats();
  try{POSTS=await (await fetch('posts.json?'+Date.now())).json();}catch(e){POSTS=[];}
  showPending();renderList();
  const bad=(STATUS.results||[]).slice(-1)[0];if(bad&&!bad.ok&&/비밀번호/.test(bad.msg))msg('#list-msg','최근 요청이 비밀번호가 달라서 처리되지 않았어요. 다시 로그인해 주세요.',1);}
-function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.title)}</b> <span class="meta">${(p.date||'').slice(0,10)}</span>
+function renderList(){$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b>${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
   <button data-e="${i}">수정</button> <button data-d="${i}">삭제</button></li>`).join('')||'<li class="meta">아직 쓴 글이 없어요.</li>';
  $('#plist').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(POSTS[+b.dataset.e]));
  $('#plist').querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(POSTS[+b.dataset.d]));}
@@ -1680,7 +1680,7 @@ def render_md(body):
 def post_item(p):
     """에디터 글을 표지·목록에서 기사처럼 다루기 위한 형태."""
     return {"id": hashlib.sha1(p["id"].encode()).hexdigest(), "title": p["title"], "link": f'editor/{p["id"]}.html',
-            "source": "METAXIS 에디터", "category": "editor", "published": p.get("date"),
+            "source": "METAXIS 에디터", "category": "editor", "published": p.get("updated") or p.get("date"),
             "summary": p["summary"], "cover": p.get("cover", ""), "editor": True}
 
 
@@ -1688,7 +1688,7 @@ def post_card(p, base):
     it = post_item(p)
     href = base + it["link"]
     return (f'<article>{thumb_html(it, base, href=href, blank=False)}<h3 class="serif"><a href="{href}">{esc(p["title"])}</a></h3>'
-            f'<p>{esc(p["summary"])}</p><div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span></div></article>')
+            f'<p>{esc(p["summary"])}</p><div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span></div></article>')
 
 
 def render_editor_pages(posts, cats, sc):
@@ -1704,7 +1704,7 @@ def render_editor_pages(posts, cats, sc):
         rows = "".join(
             f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
-            f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span></div></div></article>' for p in chunk)
+            f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span></div></div></article>' for p in chunk)
         rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 위의 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
         body = (f'<div class="ph"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
                 f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
@@ -1724,7 +1724,7 @@ def render_editor_pages(posts, cats, sc):
         body_html = post_html(p)
         fams = [f for f in POST_FONTS if f in body_html]
         body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
-                f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span>'
+                f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
                 f'<button class="circle share" data-url="{sc["url"]}/{path}" data-title="{esc(p["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div>'
                 f'<div class="body">{body_html}</div>'
                 f'<p style="margin-top:40px"><a class="more" href="index.html">← 에디터 글 목록</a></p></article>')
