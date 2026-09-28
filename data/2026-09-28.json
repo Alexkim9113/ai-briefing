@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T19:50+09:00",
+ "generated_at": "2026-09-28T19:58+09:00",
  "items": [
   {
    "id": "199616a539405542",
@@ -1543,6 +1543,31 @@
    }
   },
   {
+   "id": "a140438baa35a14d",
+   "title": "AI leaders influencing discourse on regulation - Northwest Arkansas Democrat-Gazette",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdUo2SjhnbmV3NVJYNFpGNnBaOXZHeGstRHE2SU5hMC1lZFUwNEpBQXVRNDRGRUdOYnZwWjNhMEhfX3ExVVVySk80dWd5TU5QLXAtNFJtbVlRNFRaNmoyUXl3WWNDeC11UlQxb2VQUTdjX0FhTXBUZzRNeHZhRGhyTUgyXy1QZzlCVmRnMmt3SERfQW5m?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "규제 논의에 영향을 미치는 AI 리더들 - 노스웨스트 아칸소 데모크랫-가제트",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "글로벌 AI 업계 리더들이 인공지능 규제 방향성과 담론 형성에 직접적인 영향력을 행사하고 있다. 기술 발전 속도에 맞춘 법적 기준 마련을 두고 다양한 이해관계자 간의 논의가 이어지고 있다.",
+    "p": "민간 기업의 리더들이 정책 수립 과정에 깊숙이 관여하면서 산업 자율성과 공공 규제 사이의 균형점을 찾는 과정이 가속화되고 있다.",
+    "t": [
+     "인공지능",
+     "규제",
+     "정책",
+     "글로벌"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "b52edd2929027dc9",
    "title": "스캐터랩, AI 엔터테인먼트 플랫폼 ‘제타’에 ‘비주얼 노벨 모드’ 출시",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42078",
@@ -2931,7 +2956,18 @@
    "thumb": "",
    "title_ko": "트럼프의 AI 제국, 논란의 중심에 선 연회장, 그리고 9세 소년의 11만 8천 달러 실수",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "트럼프의 AI 인프라 구상과 관련 행사를 둘러싼 논란이 제기되는 가운데, 어린이의 고액 금융 사고 사례 등 기술 부작용이 조명받고 있다. 기술 확산에 따른 사회적 책임과 안전장치 마련의 필요성이 대두된다.",
+    "p": "정치적 구상과 일상 속 기술 사고가 맞물리면서 AI 인프라 통제와 윤리적 기준 정립에 대한 사회적 감시가 거세지고 있다.",
+    "t": [
+     "AI인프라",
+     "정치",
+     "규제",
+     "사회문제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "6f8075c506f73a26",
@@ -2942,7 +2978,18 @@
    "category": "papers",
    "published": "2026-09-28T03:06:55+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "서울대병원 연구팀이 비후성 심근증 환자의 좌심방 상태를 4단계로 분류하는 병기 체계를 개발했다. 이를 통해 심방세동 발생 위험을 정밀하게 예측할 수 있는 기반이 마련됐다.",
+    "p": "의료 현장에서 정량적 데이터 기반의 질환 예측 모델이 고도화되면서 심장질환 환자의 맞춤형 치료와 예방 전략 수립에 기여할 것으로 보인다.",
+    "t": [
+     "서울대병원",
+     "심장질환",
+     "의료AI",
+     "임상연구"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "a20f43cd01f528d4",
@@ -2956,7 +3003,18 @@
    "thumb": "",
    "title_ko": "현대 치의학에서의 인공지능: 치과 전문 분야별 적용 사례와 미래 과제",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "현대 치의학 전반에서 인공지능 기술의 적용 영역이 다각도로 확장되고 있으며 관련 과제들이 논의되고 있다. 진단과 치료 계획 수립에서 효율성이 높아지는 추세이다.",
+    "p": "특수 전문 분야인 치의학에서도 AI 도입이 보편화되면서 임상 정확도 향상과 함께 데이터 표준화 및 보안 과제가 중요해지고 있다.",
+    "t": [
+     "치의학",
+     "의료AI",
+     "진단",
+     "기술적용"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "81ff42a4b64bbf2e",
@@ -2967,7 +3025,18 @@
    "category": "papers",
    "published": "2026-09-28T03:02:18+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "국내 연구진이 단일 원자 내에서 신경망 구조와 유사한 양자적 특성을 규명했다. 미시 세계의 물리적 현상 속에서 새로운 연산 가능성의 단초를 확인했다.",
+    "p": "기초과학 연구가 차세대 인공지능 하드웨어와 양자 컴퓨팅의 원천 기술로 이어질 수 있는 가능성을 보여준다.",
+    "t": [
+     "기초과학",
+     "양자역학",
+     "신경망",
+     "국내연구"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "edd509b516aeb4bf",
@@ -2978,7 +3047,18 @@
    "category": "policy",
    "published": "2026-09-28T02:53:40+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "충청남도가 총 219개의 인공지능 관련 정책 과제를 발굴하고 내년 예산 편성을 통해 일상생활 현장에 적용하기로 했다. 공공 서비스와 지역 행정 전반에 AI를 본격 도입할 예정이다.",
+    "p": "중앙정부 중심에서 벗어나 지자체 차원에서 생활 밀착형 AI 정책을 집행하며 실질적인 체감 가치를 입증하려는 시도가 늘고 있다.",
+    "t": [
+     "충청남도",
+     "AI정책",
+     "지자체",
+     "공공서비스"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "20ea31c4d33262ad",
@@ -2992,7 +3072,18 @@
    "thumb": "",
    "title_ko": "기계가 모든 것을 해낼 수 있다면, 인간에게 남은 것은 무엇일까?",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "기계가 모든 영역의 작업을 수행할 수 있는 환경이 도래함에 따라 인간의 역할과 고유 가치에 대한 근본적인 질문이 제기되고 있다. 노동과 존재의 의미를 재정의하는 논의가 이어지고 있다.",
+    "p": "자동화의 한계가 확장되면서 기술 중심 사회에서 인간만이 수행할 수 있는 정체성과 사회적 가치 재정립이 시급한 화두로 떠오르고 있다.",
+    "t": [
+     "자동화",
+     "인간노동",
+     "철학",
+     "미래사회"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "f1e09f10ef95a3a5",
@@ -3003,7 +3094,18 @@
    "category": "policy",
    "published": "2026-09-28T02:35:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "트럼프와 앤트로픽의 다리오 아모데이 최고경영자가 AI 정책 방향성을 두고 단독 면담을 진행했다. 양측은 인공지능 발전 속도와 규제 수위를 놓고 이견을 조율했다.",
+    "p": "정치 권력과 주요 AI 기업 리더 간의 직접적인 소통은 향후 국가 차원의 기술 패권 경쟁과 규제 입법 방향에 결정적인 변수로 작용한다.",
+    "t": [
+     "앤트로픽",
+     "트럼프",
+     "AI정책",
+     "정부규제"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "046bd80008b09729",
@@ -4123,20 +4225,6 @@
    "trv": 2
   },
   {
-   "id": "0cbe09707a728c71",
-   "title": "Bill Gates warns AI could be used to trigger 'a billion deaths,' urges regulation",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQkdFSC1ueUlvYjhNSVllczNrVjZUYmxDYmhVcXJXeDdIMkFLTHVHSXFpQnBjZVRtMGRJTmtTWEVWQUFGaUVJZXpWTkZIcE9JbnkxWGgyeW9lOU9ITEFQMThGM1FlNEhtaEpuSnRVcXNjVjNCaEtnanlhaDRpTGtNUGpfTjBXNVRVdDd3d3JYdllfaXppV3FkeEVUOHNEVHFZaXMzVmk1Z0VkTWVSdTRuOXplRQ?oc=5",
-   "source": "Google News: AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T20:26:23+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "빌 게이츠, AI가 ‘10억 명의 사망’을 초래할 수 있다고 경고하며 규제 촉구",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "79b976d981ecb781",
    "title": "Bill Gates says AI without regulation is ‘completely irresponsible’",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVXZLY1Y0ZUxmbmQ1aHZIdUs2MHZSTlhDUXJibXlkdkJXcll3M0dtN1dHVHFzRldZc2dRRHlzdWdMdlhFaWZnay1XLWF0M1Z4MFZqbDRvYnBfVzllNlV2TU83dlJIbVFIaTFNN2dVclcwcW83TTltcjQyN215RDMwSEtfUzZocEg0T1ZvSWVfNjI2V0UtNFloVUQweTY1UGxrSkE0ODJUM1Bnd9IBrwFBVV95cUxPS29KMUZlVnFLc1ExUndoclYtZ2NWVVVmRk5YSXNrNk8zS0JIdGRTbWhDV3l6MmJyZnNJMkxlV2Zpb0c1YVNLMVFLb2JGYU5BOUd5MmdZd25FbHFkZ0xOTmpEWmcxbzZkd0NCLWU2MjRRY1ZXN1M2YkFBMUZ0OEctRjhaaHhEdVRwTC1YVzlXUldaay1YSDFJUk51NExrZXUzcVZzNENfUkkyTkZvWkhF?oc=5",
@@ -4447,9 +4535,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": true,
-   "count": 6,
-   "fetched": 10
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
   },
   {
    "name": "Google AI Blog",
@@ -4479,7 +4567,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 98
+   "fetched": 99
   },
   {
    "name": "Google News: AI 기업",
