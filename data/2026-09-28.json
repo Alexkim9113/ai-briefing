@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T10:15+09:00",
+ "generated_at": "2026-09-28T10:16+09:00",
  "items": [
+  {
+   "id": "4c30431d125b111f",
+   "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42082",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:16:02+00:00",
+   "summary": "생성형 인공지능(AI) 전문 기업 딥브레인AI(대표 장세영)는 국내 주요 은행에 공급해 온 대화형 AI 아바타 기술을 기반으로 중소기업의 고객 응대 효율화를 지원하는 서비스 개발에 착수했다고 28일 밝혔다.",
+   "thumb": ""
+  },
   {
    "id": "294ca0bb52496e50",
    "title": "Arm, 클라우드·엣지·피지컬 AI 아우르는 ‘AI 포털’ 공개",
@@ -94,7 +105,7 @@
    "id": "2a6254d6fcf9787f",
    "title": "[청년공감]“진짜인 줄 알았다”…SNS 뒤덮은 AI 생성물, 혼란·피로감 확산",
    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QUHhZeXdLeTlFUmVwR0VVZVRoNHdLcGVVUUZQM25KY3ZyRjdWRC1SMmZtTFJEdDhnckNYM0VUTmxoQXQtVWQyRXc3QmlDUU1Nazc3enN1ejUzQ2M?oc=5",
-   "source": "구글뉴스: 인공지능",
+   "source": "구글뉴스: 생성형 AI",
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T01:04:54+00:00",
@@ -116,7 +127,7 @@
    "id": "7e51a00bcf1fbd9e",
    "title": "전남광주통합특별시 북구, 인공지능(AI) 활용 행정 효율 높인다",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvNDZaenZrN25ncTJGZGdUcmc1TVdmSmU5MFpVZGRpWkE3ZEx1YkV1cmpIbXZsZlAwZGJId0lFSUdoU3BCMlY3blkyeVVrZklaSXI4T1dpZ0JLUDhZMGlhU3V0eFJhT2V2Smc?oc=5",
-   "source": "구글뉴스: 인공지능",
+   "source": "구글뉴스: 생성형 AI",
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T01:00:10+00:00",
@@ -720,7 +731,7 @@
    "id": "cd18f316871d4581",
    "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
-   "source": "구글뉴스: 인공지능",
+   "source": "구글뉴스: 생성형 AI",
    "field": "",
    "category": "news_ko",
    "published": "2026-09-27T21:36:00+00:00",
@@ -1752,9 +1763,9 @@
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
-   "ok": true,
-   "count": 5,
-   "fetched": 30
+   "ok": false,
+   "count": 0,
+   "error": "ParseError: not well-formed (invalid token): line 14, column 4"
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -1862,7 +1873,7 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 90
+   "fetched": 91
   },
   {
    "name": "구글뉴스: 생성형 AI",
