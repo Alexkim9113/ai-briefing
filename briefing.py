@@ -731,7 +731,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 .bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:wrap;overflow:visible;gap:4px 18px;margin:0;padding:2px 0}
 .search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.site-share{right:62px}.bar .wrap{position:relative}.bar{position:relative}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
-@media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
+@media (max-width:600px){body{font-size:16px;line-height:1.65;background:radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg)}.wrap{padding:0 16px}
 .logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
 .badge{margin:8px 0 0;top:0;display:table}.hero .thumb{aspect-ratio:16/8}.hero p.sum{font-size:16px;line-height:1.7}
 .trend{grid-template-columns:88px 1fr;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}.trend .thumb{aspect-ratio:1}
