@@ -13,11 +13,9 @@ jobs:
           U='https://export.arxiv.org/api/query?search_query=cat:cs.CY+AND+abs:law&sortBy=submittedDate&sortOrder=descending&max_results=3'
           Q='https://export.arxiv.org/api/query?search_query=%28abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22%29+AND+abs%3Aclimate&sortBy=submittedDate&sortOrder=descending&max_results=3'
           {
-          for ua in "Mozilla/5.0 (compatible; AI-Briefing-Bot/1.0; +https://github.com)" "METAXIS-briefing/1.0 (https://github.com/Alexkim9113/ai-briefing)" "curl/8"; do
-            for u in "$U" "$Q"; do echo "UA=$ua"; curl -s -o /tmp/o -w '%{http_code}\n' -A "$ua" -H 'Accept: */*' "$u"; head -c 300 /tmp/o; echo; done
-          done
-          echo NATURE; curl -sL -o /tmp/n -w '%{http_code} %{content_type}\n' -A "METAXIS-briefing/1.0" https://www.nature.com/subjects/machine-learning.rss; head -c 600 /tmp/n; echo
-          curl -sL -o /tmp/n2 -w '%{http_code} %{content_type}\n' -A "METAXIS-briefing/1.0" https://www.nature.com/natmachintell.rss; head -c 400 /tmp/n2
+          for u in https://www.nature.com/subjects/climate-change.rss https://www.nature.com/subjects/renewable-energy.rss https://www.nature.com/subjects/energy.rss https://www.nature.com/npjdigitalmed.rss https://www.nature.com/natmachintell.rss "https://rss.arxiv.org/rss/cs.SD+cs.MM+cs.HC" https://rss.arxiv.org/rss/cs.CY https://rss.arxiv.org/rss/eess.SY "https://www.nature.com/subjects/law.rss" "https://www.nature.com/subjects/art.rss" "https://export.arxiv.org/rss/cs.CY"; do
+            curl -sL -o /tmp/o -w "%{http_code} %{content_type} $u\n" -A "METAXIS-briefing/1.0" "$u"; grep -c "<item" /tmp/o; done
+          echo NATURE-RAW; curl -sL -A "METAXIS-briefing/1.0" https://www.nature.com/subjects/machine-learning.rss | sed -n 10,16p | cut -c1-300
           } > probe.txt 2>&1
           git config user.name bot; git config user.email bot@users.noreply.github.com
           git add probe.txt && git commit -m probe && git push
