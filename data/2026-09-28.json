@@ -1,7 +1,30 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T18:13+09:00",
+ "generated_at": "2026-09-28T18:18+09:00",
  "items": [
+  {
+   "id": "5100aa13abb9a877",
+   "title": "오퍼스 5.5, 자기개선 평가서 1위…'완전 RSI' 내년 7월로 앞당겨",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215714",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T18:00:00+09:00",
+   "summary": "앤트로픽의 최신 모델 '클로드 오퍼스 5.5'가 AI 벤치마크 평가기관 발스 AI(Vals AI)의 자기개선 연구 지표인 'RSI 인덱스(RSI Index)'에서 1위를 차지하며 장기 에이전트 자율 수행 영역에서 큰 진전을 이뤄냈다.",
+   "detail": "앤트로픽의 최신 모델 '클로드 오퍼스 5.5'가 AI 벤치마크 평가기관 발스 AI(Vals AI)의 자기개선 연구 지표인 'RSI 인덱스(RSI Index)'에서 1위를 차지하며 장기 에이전트 자율 수행 영역에서 큰 진전을 이뤄냈다.\n발스 AI가 최근 공개한 평가 결과에 따르면, 오퍼스 5.5는 RSI 인덱스를 구성하는 5개 연구 과제 중 4개 부문에서 정상에 올랐다.",
+   "thumb": "",
+   "mx": {
+    "b": "앤트로픽의 '클로드 오퍼스 5.5'가 AI 평가기관 발스 AI의 'RSI 인덱스' 평가에서 1위를 차지했다. 이 모델은 자기개선 연구 역량을 측정하는 5개 과제 중 4개 부문에서 최고점을 기록했다.",
+    "p": "외부 개발자의 개입 없이 AI가 자체적으로 성능을 고도화하는 재귀적 자기개선(RSI) 기술의 실현 가능성이 높아지고 있다. 장기 에이전트의 자율 문제 해결 능력이 급격히 발전함에 따라 AI 모델 개발 주기가 대폭 단축될 전망이다.",
+    "t": [
+     "앤트로픽",
+     "클로드",
+     "RSI",
+     "발스AI"
+    ],
+    "v": 1
+   }
+  },
   {
    "id": "67dd4805323458d6",
    "title": "앤트로픽, 클로드로 이론물리학 난제 ‘9루프 산란 진폭’ 계산 성공",
@@ -12,7 +35,31 @@
    "published": "2026-09-28T17:53:56+09:00",
    "summary": "이론 물리학자이자 과학 작가 맷 폰 히펠이 현대 AI의 능력 한계를 시험하기 위해 제기했던 물리학 난제 도전 과제가 앤트로픽의 '클로드'에 의해 한 달 만에 정복됐다.",
    "detail": "이론 물리학자이자 과학 작가 맷 폰 히펠이 현대 AI의 능력 한계를 시험하기 위해 제기했던 물리학 난제 도전 과제가 앤트로픽의 '클로드'에 의해 한 달 만에 정복됐다.\n앤트로픽은 25일(현지시간) 과학 연구 플랫폼 ‘클로드 사이언스(Claude Science)’에서 클로드 페이블 5.1이 이론물리학의 고난도 계산 과제인 ‘9루프 산란 진폭(nine-loop scattering amplitude)’ 계산에 성공했다고 밝혔다.\n기존 최고 기록인 8루프를 넘어선 결과다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "앤트로픽의 '클로드 페이블 5.1'이 과학 연구 플랫폼 '클로드 사이언스'를 통해 이론물리학 난제인 '9루프 산란 진폭' 계산에 성공했다. 이는 기존 학계의 최고 기록인 8루프를 넘어선 결과로, 제시된 지 한 달 만에 해결됐다.",
+    "p": "AI가 단순한 데이터 분석이나 코딩 보조를 넘어 극도로 복잡한 순수 기초과학 계산의 한계를 돌파하는 연구 주체로 부상했다. 이론물리학 등 고난도 수식 증명 및 계산이 필요한 분야에서 연구 속도를 획기적으로 앞당길 것으로 보인다.",
+    "t": [
+     "앤트로픽",
+     "클로드",
+     "이론물리학",
+     "AI과학연구"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "e823c7abbb255728",
+   "title": "비드래프트, ‘재귀적 자기개선’ AI로 글로벌 5개 리더보드 석권",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215729",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T17:50:00+09:00",
+   "summary": "국내 스타트업 비드래프트가 개발한 추론 모델이 5개 글로벌 리더보드에서 선두를 차지했다. 핵심은 사람의 개입 없이 모델 스스로 풀이를 검증하고 재학습하는 ‘재귀적 자기개선(RSI)’ 기술이다.",
+   "detail": "국내 스타트업 비드래프트가 개발한 추론 모델이 5개 글로벌 리더보드에서 선두를 차지했다.\n핵심은 사람의 개입 없이 모델 스스로 풀이를 검증하고 재학습하는 ‘재귀적 자기개선(RSI)’ 기술이다.\nAI 전문 비드래프트(대표 김민식)는 추론 모델 '다윈-180B-RSI(Darwin-180B-RSI)'가 허깅페이스(Hugging Face) 공인 벤치마크인 5개 리더보드에서 모두 1위에 올랐다고 28일 밝혔다.",
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "6910e1dd660af76d",
@@ -24,7 +71,18 @@
    "published": "2026-09-28T17:44:58+09:00",
    "summary": "이승돈 농촌진흥청장은 28일, 오후 경상북도 포항시 죽장면에 있는 사과 재배단지를 방문해 방제, 운반, 예찰 등 농업용 로봇의 활용 현황을 살피고, 농업인과 관계자 의견을 청취했다.",
    "detail": "이승돈 농촌진흥청장은 28일, 오후 경상북도 포항시 죽장면에 있는 사과 재배단지를 방문해 방제, 운반, 예찰 등 농업용 로봇의 활용 현황을 살피고, 농업인과 관계자 의견을 청취했다.\n농업용 로봇 실증 지원사업은 농촌진흥청이 개발한 농업용 로봇(방제·운반·예찰) 3종의 현장 적용성 및 농작업 효율성을 검증하기 위해 2023년부터 추진되고 있다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "농촌진흥청이 경북 포항 사과 재배단지에서 자체 개발한 농업용 로봇 3종(방제·운반·예찰)의 현장 실증을 진행했다. 이 실증 지원사업은 2023년부터 로봇의 작업 효율성과 현장 적용성을 검증하기 위해 추진되고 있다.",
+    "p": "농촌 고령화와 노동력 부족 문제에 대응하기 위해 현장 맞춤형 농업 로봇의 상용화 검증이 가속화되고 있다. 연구실 중심의 개발을 넘어 실제 과수원 환경에서 반복 실증을 거치며 현업 적용도를 높이는 단계로 진입했다.",
+    "t": [
+     "농촌진흥청",
+     "농업용로봇",
+     "사과과수원",
+     "현장실증"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "32acf9e4a5755019",
@@ -36,7 +94,18 @@
    "published": "2026-09-28T17:42:08+09:00",
    "summary": "생명과학 분야에서 인간 과학자와 AI의 능력을 정면 비교하려던 실험이 학계의 거센 우려를 반영해 협력 중심의 방식으로 바뀌었다.",
    "detail": "생명과학 분야에서 인간 과학자와 AI의 능력을 정면 비교하려던 실험이 학계의 거센 우려를 반영해 협력 중심의 방식으로 바뀌었다.\n25일(현지시간) 디 인포메이션에 따르면, 무세포 단백질 합성 분야를 연구하는 징코 바이오웍스(Ginkgo Bioworks)는 당초 마이클 주엣 스탠퍼드대학교 교수와 오픈AI의 최첨단 미공개 AI 에이전트가 단백질 설계 능력을 겨루는 ‘마이크 vs 기계(Mike Versus the Machines)’ 경연을 준비했다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "징코 바이오웍스가 추진하던 스탠퍼드대 마이클 주엣 교수와 오픈AI 미공개 AI 간 단백질 설계 대결이 '협력' 방식으로 전환됐다. AI에 대한 학계의 우려와 불안 여론을 반영해 정면 경쟁 구도를 조정한 결과다.",
+    "p": "첨단 AI와 인간 전문가 간의 극단적인 역량 대결이 학계 내부의 위기감과 반발을 촉발할 수 있음을 보여준다. 전문 연구 영역에서 AI의 역할을 대체재가 아닌 연구 보조 및 협업 도구로 안착시키려는 완충 전략이 나타나고 있다.",
+    "t": [
+     "징코바이오웍스",
+     "오픈AI",
+     "단백질설계",
+     "인간AI협력"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "b1778dbb687e5ad0",
@@ -48,7 +117,18 @@
    "published": "2026-09-28T17:30:00+09:00",
    "summary": "의사결정 특화 AI 모델 '제브(Jev)'가 앤트로픽의 클로드 오퍼스 5의 지원을 받아 게임 ‘포켓몬스터 레드’를 단 일주일 만에 클리어하고 명예의 전당에 입성했다. 기존 챗봇들이 게임을 완료하는 데 수주에서 수개월이 걸렸던 것과 비교하면 획기적인 성과다.",
    "detail": "의사결정 특화 AI 모델 '제브(Jev)'가 앤트로픽의 클로드 오퍼스 5의 지원을 받아 게임 ‘포켓몬스터 레드’를 단 일주일 만에 클리어하고 명예의 전당에 입성했다.\n기존 챗봇들이 게임을 완료하는 데 수주에서 수개월이 걸렸던 것과 비교하면 획기적인 성과다.\n스타트업 스탠다드 에이전트(Standard Agents)의 앤드류 보이드 창립자는 23일(현지시간) 제브가 포켓몬스터 레드에서 사천왕과 챔피언을 모두 물리쳤다고 밝혔다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "스탠다드 에이전트의 의사결정 특화 AI '제브'가 클로드 오퍼스 5의 연동 지원을 받아 게임 '포켓몬스터 레드'를 일주일 만에 완주했다. 이는 기존 챗봇들이 클리어까지 수주에서 수개월이 걸리던 기간을 크게 단축한 성과다.",
+    "p": "단순 명령 수행을 넘어 복잡한 규칙과 상태 변화가 이어지는 장기 환경에서 에이전트의 의사결정 능력이 비약적으로 개선됐다. 복합 추론 모델 간 연계를 통해 자율 에이전트의 문제 해결 속도와 효율성을 입증했다.",
+    "t": [
+     "제브",
+     "클로드",
+     "스탠다드에이전트",
+     "AI에이전트"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "7a432187752f2840",
@@ -60,7 +140,18 @@
    "published": "2026-09-28T17:23:34+09:00",
    "summary": "엔비디아 로고가 붙은 자율주행 트럭 스타트업의 트레일러를 훔친 절도범들이 정작 트레일러 안에서 발견한 것은 GPU가 아니라 모래 약 18톤이었던 황당한 사건이 벌어졌다.",
    "detail": "엔비디아 로고가 붙은 자율주행 트럭 스타트업의 트레일러를 훔친 절도범들이 정작 트레일러 안에서 발견한 것은 GPU가 아니라 모래 약 18톤이었던 황당한 사건이 벌어졌다.\n25일(현지시간) 와이어드에 따르면, 자율주행 트럭 스타트업 플러스AI(PlusAI)의 트레일러 2대가 미국 캘리포니아주 뉴어크의 회사 창고 인근에서 도난당했다가 회수됐다.\n두 트레일러에는 플러스AI와 엔비디아의 로고가 함께 붙어 있었다.\n이 회사는 엔비디아와 협력해 자율주행 트럭 기술을 공동 개발하고 있다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "미국 캘리포니아에서 자율주행 트럭 스타트업 플러스AI의 트레일러 2대가 도난당했다가 회수되는 사건이 발생했다. 트레일러 외부에는 엔비디아 로고가 붙어 있었으나 내부에는 GPU 대신 중량 테스트용 모래 약 18톤만 적재되어 있었다.",
+    "p": "AI 하드웨어의 높은 경제적 가치로 인해 관련 장비가 범죄의 표적이 될 정도로 시장 과열 양상이 심화되고 있음을 보여준다. 물류 및 주행 테스트 단계에서도 하드웨어 보안과 브랜드 노출에 대한 관리가 필요해지고 있다.",
+    "t": [
+     "엔비디아",
+     "플러스AI",
+     "자율주행트럭",
+     "보안"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "4b45086a8e8f8d15",
@@ -72,7 +163,8 @@
    "published": "2026-09-28T17:19:08+09:00",
    "summary": "한국지능정보사회진흥원(원장 김형철, 이하 NIA)은 국방부와 함께 28일, 서울 피스앤파크컨벤션에서 ‘장병e음’ 성과공유회를 개최했다. 이번 성과공유회는 3년간(’24~’26)의 추진성과를 공유하고, 10월 본 서비스 개시를 앞두고 주요 기능을 소개하기 위해 마련됐다.",
    "detail": "한국지능정보사회진흥원(원장 김형철, 이하 NIA)은 국방부와 함께 28일, 서울 피스앤파크컨벤션에서 ‘장병e음’ 성과공유회를 개최했다.\n이번 성과공유회는 3년간(’24~’26)의 추진성과를 공유하고, 10월 본 서비스 개시를 앞두고 주요 기능을 소개하기 위해 마련됐다.\n장병e음은 국방부 최초로 민간 클라우드를 기반으로 구축한 장병 통합 플랫폼이다.\n장병e음은 입대 전 병역 판정부터 복무 중, 전역 후 예비군에 이르기까지 장병의 전 생애주기를 하나로 잇는 원스톱 국방 통합 플랫폼이다.",
-   "thumb": ""
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "77728b40c2abfa19",
@@ -409,7 +501,7 @@
    "published": "2026-09-28T11:10:46+09:00",
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
    "thumb": "",
-   "hot": 4
+   "hot": 3
   },
   {
    "id": "784685ea95a776e8",
@@ -461,6 +553,17 @@
    "detail": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈 웨이트 모델의 성장세를 분석했다.\n보고서는 집계·비식별화된 마이크로소프트 텔레메트리 데이터를 기반으로 15~64세 인구 가운데 해당 기간 생성형 AI 제품을 사용한 비율을 AI 확산 지표로 측정했다.",
    "thumb": "",
    "hot": 3
+  },
+  {
+   "id": "9be5600d409cd305",
+   "title": "충남대병원 AI전환 착수…서울대병원 등과 공동연구",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jeDBsdmUtdUlwSTdVcEx5N1FnX2h2R3BOZE1RMFJhaW5pWTU5bHZvVGo4Nlp1cnpaUngzaTdaTjdVLXdEU29aOWRSVmR2WFk?oc=5",
+   "source": "v.daum.net",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T09:13:29+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "1bdc1f260b416720",
@@ -574,6 +677,20 @@
    "trv": 2,
    "summary_ko": "일련의 주목할 만한 AI 안전 사고들이 발생한 가운데, 엔비디아는 에이전트가 격리 구역을 벗어나는 것을 방지하는 데 도움이 되는 새로운 소프트웨어 도구를 선보이고 있다.",
    "detail_ko": "일련의 주목할 만한 AI 안전 사고가 잇따른 가운데, 엔비디아는 에이전트가 격리 구역을 벗어나지 못하도록 막아주는 새로운 소프트웨어 도구를 선보이고 있다."
+  },
+  {
+   "id": "b26d5d481175878f",
+   "title": "Nvidia debuts enhanced safety controls to rein in rogue AI agents",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOb3FuNTczVG9sd0FLNzlzbHRBSFRLYnBrb1Jyc0hnSEl3Tmd2MzJDWktlc0FjMWhfbVF5allBRTBOOFpnVzl0cHpvOC1UUThJYU9mTjZMT3RZTVJWeDA0LXBEcC1KZVJuNldiSnFEc0hmQmwxNThrTnAtMFRSZllrVGJ6QnRpM0ZweDJBd2dlTThuNjZ2czRKZVAybkttNTNEeHJIZg?oc=5",
+   "source": "SiliconANGLE",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T09:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "엔비디아, 통제 불능 AI 에이전트를 억제하기 위한 강화된 안전 제어 기능 공개",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "b52edd2929027dc9",
@@ -760,6 +877,17 @@
    "detail_ko": "MIT Technology Review가 설명합니다: 저희 필진들이 복잡하고 혼란스러운 기술의 세계를 풀어내어, 여러분이 앞으로 다가올 변화를 이해할 수 있도록 도와드립니다.\n이 시리즈의 다른 기사는 여기에서 더 읽어보실 수 있습니다.\n지난 몇 달간, AI 에이전트에 의한 연이은 사이버 공격이 전 세계를 충격에 빠뜨렸다."
   },
   {
+   "id": "ef569983e37ec1a5",
+   "title": "로봇 초지능 시대… 이제 한 발 남았다",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPa1c0YmtjbG9xQVZGME1oOGQxcEN0cjhDLVZqaDh6QlJncjZUbEJfOVdLdnNSQUFNVENDNEtQQzBxbFVud1FQZHdwdFAzd0NOMGJiX3dHZ3lmSkM3cjdqb3UwRGNTOVFPOFdxZDdKMWI2dVoybE0xT3NXU1BkaVdSMjl3YTRZckxOc1pnbQ?oc=5",
+   "source": "chosun.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:03:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "c036151ac49ac74f",
    "title": "충남도, 생성형 인공지능 통해 농업 업무지원 시스템 직접 개발",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE94NzFpdV90LTQzRnBBUTRMSjZ2eGJfM0cteEFmcTBVYXVIVW94OF9SSW9VQTJ2SDdSRWVLaF9aRFBDTS1OaWpYZlJhdFJpLWM?oc=5",
@@ -815,7 +943,8 @@
    "category": "news_ko",
    "published": "2026-09-28T07:56:18+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "hot": 8
   },
   {
    "id": "a503f173e1a7cd6d",
@@ -945,19 +1074,6 @@
    "trv": 2
   },
   {
-   "id": "d9a22b8bd7238a45",
-   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
-   "source": "인공지능신문 많이 본 기사",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:22:59+09:00",
-   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
-   "detail": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.\n세계경제포럼은 지난 24일(현지시간) 미국 뉴욕에서 열린 ‘지속가능개발 영향 회의 2026(Sustainable Development Impact Meetings 2026, SDIM26)’ 결과를 발표했다.",
-   "thumb": "",
-   "hot": 3
-  },
-  {
    "id": "6b971581348bdfc8",
    "title": "‘Things Will Never Be Chill Again’: The Doomers Who Shaped the AI Safety Freakout",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNX0x1SGNlamNDTERpWmxwS05vNTRkY0lONktYQmlGQ1lyNDdUeTBsempjT3N0UEJpT2FpWF9hdTFzUXNmU1NlbGFjWG56ZzRZUm1VcXprakhRVE5LV0xwal9CQlpSOTVlZ3VPR0hhVEQ5SUQ4WUswbHY4VEJYRVFTRA?oc=5",
@@ -994,17 +1110,6 @@
    "thumb": ""
   },
   {
-   "id": "cbd4e9c34ca91041",
-   "title": "[농진청] 인공지능(AI)으로 벼 생육 살핀다",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBMWXBvQm9MQnQ2cEFhMmlCZmd5SktkT1hlQWZuaElpRHBlZy1vYzBsV3B4U2RwN0QxcVdsdkk5bURQXzlJNDZNd1NydkhuaWtKcksxQmI1bW9HaWJiSnVSVHN4OWxLamJoYVQwN1BzdUFHdw?oc=5",
-   "source": "월간친환경",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:12:19+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "4f8f3180c1f9d9fc",
    "title": "Nvidia’s 2026 Dividend Hike Puts Dividend Growth Stocks in the Spotlight",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPemtvQ1lGSGt3RmtjanlJeWVtTFU3ZWF1dV9kczZxc2tBS2dJSW40TFJPdUNXYXdHdEdJQXBFUVhKRExKVE52S3NvTl9VcGkteHlwRENoeGhZZTh0aXVYOGEzdU5SeEFndTc4dlRzYmpPc3NLbHRkRFlEazNUek85RTN2ODNlVV9NVUNqODZQaHVyWWdoRTFUMGVGQ2JoMnFESEEwLXVrWkVPZmxf?oc=5",
@@ -1017,17 +1122,6 @@
    "title_ko": "엔비디아의 2026년 배당금 인상으로 배당 성장주가 주목받고 있다",
    "tr": "deepl",
    "trv": 2
-  },
-  {
-   "id": "9a327d085664af76",
-   "title": "‘방산 인공지능 전환’ 대전시·육군 협력 시동",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5OMElaQ09ZeEc4RHdqbjlyLTFuaGV4SlZjUTV2My16YVc5NXBtOGJfU29LdElWZEYwWncxUFdFUU1KWlRPZFF6NTlMV2hqSjRna3FYd2pCalJPQzVpR3N0anI1UGlQdXc3RkFF?oc=5",
-   "source": "디트NEWS24",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:02:23+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "3a99aad9e7a79fcd",
@@ -2803,22 +2897,6 @@
    "trv": 2
   },
   {
-   "id": "26b4356d7150af44",
-   "title": "AI agents do more of the work in model development, but humans still make the decisions",
-   "link": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T15:18:39+00:00",
-   "summary": "A research team analyzed 769 task logs from building its own AI model.",
-   "thumb": "",
-   "title_ko": "모델 개발 과정에서 AI 에이전트가 더 많은 작업을 수행하지만, 결정권은 여전히 인간이 쥐고 있다",
-   "detail_ko": "한 연구팀은 자체 AI 모델을 구축하는 과정에서 발생한 769건의 작업 로그를 분석했다.",
-   "summary_ko": "한 연구팀은 자체 AI 모델을 구축하는 과정에서 발생한 769건의 작업 로그를 분석했다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "ec03d6c9128e6d38",
    "title": "Meta's Muse agent is attacking one of the economy's most profitable weak spots",
    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE12NGNnN0FJaVdSRWRVR0tQcklzNlRMTTBpSjFOcVB4OGhCeFBIWkUzUENxSXlpQThkY1FZX3F2NjRZSVhJaWVleHkxbDQtd3N4OVlkWVZuQ3FkYk02VjA4WTU4ZGdHUFdQWkxrYjlOVzNrRzZBQkhV0gF3QVVfeXFMTXY0Y2c3QUlpV1JFZFVHS1BySXM2VExNMGlKMU5xUHg4aEJ4UEhaRTNQQ3FJeWlBOGRjUVlfcXY2NFlJWElpZWV4eTFsNC13c3g5WWRZVm5DcWRiTTZWMDhZNThkZ0dQV1BaTGtiOU5XM2tHNkFCSFU?oc=5",
@@ -2889,18 +2967,6 @@
    "published": "2026-09-27T03:05:00+00:00",
    "summary": "",
    "thumb": ""
-  },
-  {
-   "id": "8922ada21905ffb6",
-   "title": "“한국 AI 인재 77% 국내에 남았는데”…KAIST 3위, 기업은 ‘0’",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNDVwWUpDc0NJbF9xeEo1TnFWTHFaY2RSUVRxcUJ3LU9rcGJKWXB5bm1FR0xMdVNQRGZiVWwxMlh3bXRFVTVhTHpuem9ueVpPNS1JYWVDY3ZEMDcyR1RUNEVGdzNhZHZxTUt1eXd1cEJzQTJLc052TFc1STBFRm5HMQ?oc=5",
-   "source": "국내 대학·연구소 · 국내 연구",
-   "field": "국내 연구",
-   "category": "papers",
-   "published": "2026-09-27T01:41:20+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 0
   },
   {
    "id": "bbc70cc06b495f49",
@@ -3172,7 +3238,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 93
+   "fetched": 96
   },
   {
    "name": "Google News: AI 기업",
@@ -3430,7 +3496,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 68
+   "fetched": 74
   },
   {
    "name": "스테이지5",
