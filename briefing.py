@@ -1798,14 +1798,27 @@ DEFAULT_TINT = "#3b7bff"
 INTRO_COLORS = {"news_ko": "#12e3ff", "news_global": "#3b7bff", "papers": "#a24bff", "policy": "#ffb020", "talks": "#2ff5a0"}  # 분야별로 확실히 다른 색(첫 화면 점·제목 막대·탭 공통)
 
 
+def ticker_items(items, n=14):
+    """첫 화면 아래 흐르는 줄: 홈의 헤드라인·주요 소식을 먼저, 나머지는 최신순."""
+    hero, trend = pick_featured(items)
+    top = [x for x in [hero, *trend] if x]
+    ids = {x["id"] for x in top}
+    rest = sorted((x for x in items if x["id"] not in ids), key=lambda x: x.get("published") or "", reverse=True)
+    return [{"t": x.get("title_ko") or x["title"], "u": x["link"], "c": INTRO_COLORS.get(x["category"], DEFAULT_TINT)}
+            for x in (top + rest)[:n]]
+
+
+def tick_html(tk):
+    return "".join(f'<a href="{esc(x["u"])}" target="_blank" rel="noopener" style="--c:{x["c"]}">{esc(x["t"])}</a>' for x in tk)
+
+
 def render_intro(latest, cats, sc, enter="home.html", preview=False):
     """사이트 앞에 두는 3D 입장 페이지(intro.html 템플릿). 오늘 모인 글 수와 제목 몇 개를 띄운다."""
     items = latest["items"]
     count = {c: sum(1 for it in items if it["category"] == c) for c in cats}
     links = "".join(f'<a href="{c}/" data-go style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i></i><b>{esc(n)}</b></a>'
                     for c, n in cats.items())
-    heads = sorted(items, key=lambda x: x.get("published") or "", reverse=True)[:14]
-    tick = "".join(f"<span>{esc(it.get('title_ko') or it['title'])}</span>" for it in heads)
+    tick = tick_html(ticker_items(items))
     d = datetime.fromisoformat(latest["date"])
     verify = ""
     if sc["google"]:
@@ -1842,6 +1855,7 @@ def build(keep_days=None):
     posts = load_posts()
     # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
     (SITE_DIR / "index.html").write_text(render_intro(latest, cats, sc), encoding="utf-8")
+    (SITE_DIR / "ticker.json").write_text(json.dumps(ticker_items(latest["items"]), ensure_ascii=False), encoding="utf-8")
     (SITE_DIR / "home.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
     (SITE_DIR / "intro.html").unlink(missing_ok=True)
     paths = []
