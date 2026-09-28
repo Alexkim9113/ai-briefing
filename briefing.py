@@ -1773,6 +1773,8 @@ def render_editor_pages(posts, cats, sc):
                "author": {"@type": "Organization", "name": sc["name"]}, "publisher": {"@type": "Organization", "name": sc["name"]},
                "mainEntityOfPage": f'{sc["url"]}/{path}'}]
         body_html = post_html(p)
+        if p.get("cover") and "<img" not in body_html:  # 본문에 사진이 없으면 대표 이미지를 글 맨 위에 보여 준다
+            body_html = f'<figure class="lead"><img src="{esc(p["cover"])}" alt="{esc(p["title"])}"></figure>' + body_html
         fams = [f for f in POST_FONTS if f in body_html]
         body = (f'<article class="post"><h1 class="serif">{esc(p["title"])}</h1>'
                 f'<div class="meta"><span>{esc(sc["name"])} 에디터</span><span>{ICON_CLOCK}{fmt_time(p.get("updated") or p.get("date"))}</span>'
