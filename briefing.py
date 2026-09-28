@@ -461,7 +461,7 @@ def drop_same_story(items, history):
     kept = [story_sig(h) for h in history if h.get("category") in STORY_CATS]
     drop = set()
     for it in sorted(items, key=lambda x: x.get("published") or ""):
-        if it.get("category") not in STORY_CATS:
+        if it.get("category") not in STORY_CATS or it.get("pin"):
             continue
         sg = story_sig(it)
         if any(same_story(sg, k) for k in kept):
@@ -721,7 +721,7 @@ def _mx_call(batch, model=MX_MODEL):
                        "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}}).encode()
     req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body,
                                  {"x-goog-api-key": key, "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
+    with urllib.request.urlopen(req, timeout=240) as r:
         txt = "".join(p.get("text", "") for p in json.load(r)["candidates"][0]["content"]["parts"])
     txt = re.sub(r"^```(?:json)?\s*|\s*```$", "", txt.strip())
     return json.loads(txt)
@@ -739,7 +739,7 @@ def _mx_ok(it, r):
     return {"b": b, "p": p, "t": tags, "v": MX_VER}
 
 
-def ai_briefs(items, max_req=6, batch_size=20):
+def ai_briefs(items, max_req=8, batch_size=10):
     """최근 1주 글 중 METAXIS 브리핑이 없는 글을 최신순으로 작성. 쓴 요청 수를 돌려준다."""
     if not os.environ.get("GEMINI_KEY", "").strip() or _MX_OFF:
         return 0
@@ -910,6 +910,7 @@ def manual_items(cfg, now, fixtures=None):
         print(f"[manual] {url} → {'추가: ' + item['title'][:40] if item else '제목을 찾지 못함'}")
         if item:
             item.pop("_d", None)
+            item["pin"] = True  # 운영자 지정: 하루 상한·같은 내용 거르기에서 빠지지 않게
             out.append(item)
     return out
 
@@ -989,7 +990,7 @@ def collect(fixtures=None, now=None):
     uniq.sort(key=lambda x: x["published"] or "", reverse=True)
     mark_hot(uniq, hot_marks)
     per_cat = Counter()  # 30분마다 쌓이므로 분야별 하루 최대 개수를 넘으면 오래된 것부터 뺀다
-    uniq = [i for i in uniq if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
+    uniq = [i for i in uniq if i.get("pin") or (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
     per_topic = Counter()
     uniq = [i for i in uniq if not (i.get("field") and "news.google.com" in i["link"])
             or (per_topic.update([(i["category"], i["field"])]) or per_topic[(i["category"], i["field"])] <= TOPIC_CAP)]
