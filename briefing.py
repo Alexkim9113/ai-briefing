@@ -468,12 +468,13 @@ def best_translator():
     return "g"
 
 
-def translate_many(texts):
-    """여러 문장을 한 번에 번역. 결과 목록과 쓴 번역기 이름을 돌려준다."""
+def translate_many(texts, google_only=False):
+    """여러 문장을 한 번에 번역. 결과 목록과 쓴 번역기 이름을 돌려준다.
+    google_only=True면 무료 한도를 아끼려고 DeepL·MS를 건너뛰고 구글로만 번역한다."""
     if not texts:
         return [], "g"
     for name, fn in (("deepl", _deepl), ("ms", _ms)):
-        if best_translator() != name:
+        if google_only or best_translator() != name:
             continue
         try:
             res = fn(texts)
@@ -493,19 +494,40 @@ def brief_text(it):
     return it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
 
 
+FRESH_DAYS = 7  # 이보다 오래된 글은 무료 한도를 아끼려고 구글 번역만 쓴다
+
+
+def _is_fresh(it, now=None):
+    try:
+        pub = datetime.fromisoformat(it.get("published") or "")
+    except ValueError:
+        return False
+    if pub.tzinfo is None:
+        pub = pub.replace(tzinfo=timezone.utc)
+    return (now or datetime.now(timezone.utc)) - pub <= timedelta(days=FRESH_DAYS)
+
+
 def add_translations(items, fixtures=None, max_n=200):
     """해외 글(한글이 없는 제목·요약)에 번역을 붙인다. 논문 제목은 원문 그대로 둔다.
-    더 좋은 번역기를 쓸 수 있게 되면 예전(구글) 번역도 다시 번역한다."""
+    최근 1주 글은 최신 글부터 좋은 번역기(DeepL → MS)로, 더 좋은 번역기가 생기면 다시 번역한다.
+    1주가 지난 글은 번역이 없을 때만 구글로 넣는다(무료 한도 아끼기)."""
     if fixtures:
         return
     best = TR_RANK[best_translator()]
     foreign = lambda t: t and not _HANGUL.search(t)
-    need = lambda i, k: not i.get(k) or TR_RANK.get(i.get("tr", "g"), 1) < best
+    fresh = {id(i): _is_fresh(i) for i in items}
+    need = lambda i, k: not i.get(k) or (fresh[id(i)] and TR_RANK.get(i.get("tr", "g"), 1) < best)
     todo = [i for i in items if (foreign(i["title"]) and i["category"] != "papers" and need(i, "title_ko"))
             or (foreign(i.get("summary")) and need(i, "summary_ko"))
-            or (foreign(brief_text(i)) and need(i, "detail_ko"))][:max_n]
-    if not todo:
-        return
+            or (foreign(brief_text(i)) and need(i, "detail_ko"))]
+    todo.sort(key=lambda x: x.get("published") or "", reverse=True)  # 최신 글부터
+    todo = todo[:max_n]
+    for group, google_only in (([i for i in todo if fresh[id(i)]], False), ([i for i in todo if not fresh[id(i)]], True)):
+        if group:
+            _translate_items(group, foreign, google_only)
+
+
+def _translate_items(todo, foreign, google_only):
     jobs = []  # (항목, 칸, 줄 번호) — 요약 문장은 줄마다 따로 번역해 원문과 줄이 맞게
     for it in todo:
         if foreign(it["title"]) and it["category"] != "papers":
@@ -515,7 +537,7 @@ def add_translations(items, fixtures=None, max_n=200):
         if foreign(brief_text(it)):
             for n, line in enumerate(brief_text(it).split("\n")):
                 jobs.append((it, "detail_ko", n, line))
-    res, used = translate_many([j[3] for j in jobs])
+    res, used = translate_many([j[3] for j in jobs], google_only)
     got = {}
     for (it, k, n, src), ko in zip(jobs, res):
         if ko and _HANGUL.search(ko) and ko != src:
@@ -523,7 +545,7 @@ def add_translations(items, fixtures=None, max_n=200):
     for (_, k), (it, parts) in got.items():
         it[k] = "\n".join(parts[n] for n in sorted(parts)) if k == "detail_ko" else parts[0]
         it["tr"] = used
-    print(f"[번역] {len(todo)}건, {len(jobs)}문장 → {used}")
+    print(f"[번역] {'1주 지난 글 ' if google_only else ''}{len(todo)}건, {len(jobs)}문장 → {used}")
 
 
 # 자동 차단: 스팸·도박·성인·사기성 글, 파일 내려받기 링크, 안전하지 않은 주소
