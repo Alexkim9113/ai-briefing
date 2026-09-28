@@ -102,23 +102,6 @@ def parse_date(s):
     return d
 
 
-_IMG_SRC = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", re.I)
-
-
-def rss_image(e, html_text):
-    """RSS 항목에서 대표 이미지 주소를 찾는다(media:content, media:thumbnail, enclosure, 본문 img)."""
-    for c in e.iter():
-        name = local(c.tag)
-        url = c.get("url", "")
-        if not url:
-            continue
-        if name == "thumbnail" or (name == "content" and (c.get("medium") == "image" or c.get("type", "").startswith("image"))) \
-                or (name == "enclosure" and c.get("type", "").startswith("image")):
-            return url
-    m = _IMG_SRC.search(html.unescape(html_text or ""))
-    return m.group(1) if m and m.group(1).startswith("http") else ""
-
-
 def parse_feed(raw):
     """RSS 2.0 / RSS 1.0(RDF) / Atom 을 공통 형식으로 변환."""
     root = parse_xml(raw)
@@ -150,8 +133,7 @@ def parse_feed(raw):
             link = text_of(e, "link") or (child(e, "guid").text if child(e, "guid") is not None else "")
             desc = text_of(e, "description", "encoded", "summary")
             items.append({"title": text_of(e, "title"), "link": (link or "").strip(), "desc": desc,
-                          "date": text_of(e, "pubdate", "date", "published", "updated"),
-                          "thumb": rss_image(e, desc + " " + text_of(e, "encoded"))})
+                          "date": text_of(e, "pubdate", "date", "published", "updated"), "thumb": ""})
     return items
 
 
@@ -162,8 +144,7 @@ def parse_hf_papers(raw):
         pid = p.get("id", "")
         items.append({"title": p.get("title", ""), "link": f"https://huggingface.co/papers/{pid}",
                       "desc": p.get("summary", ""), "date": row.get("publishedAt") or p.get("publishedAt", ""),
-                      "thumb": f"https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/{pid}.png" if pid else "",
-                      "score": p.get("upvotes", 0)})
+                      "thumb": "", "score": p.get("upvotes", 0)})
     items.sort(key=lambda x: -x.get("score", 0))
     return items
 
@@ -286,15 +267,14 @@ def collect(fixtures=None, now=None):
                 kept.append({
                     "id": iid, "title": title, "link": it["link"], "source": src["name"],
                     "category": src["category"], "published": d.isoformat() if d else None,
-                    "summary": summarize(it["desc"], title), "thumb": it.get("thumb", ""),
+                    "summary": summarize(it["desc"], title),
+                    # 저작권 보호: 기사·논문 사진은 쓰지 않고, 공유용으로 제공되는 유튜브 공식 썸네일만 사용
+                    "thumb": it.get("thumb", "") if src["category"] == "youtube" else "",
                 })
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
                     break
             status.append({"name": src["name"], "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
-
-    if not fixtures:
-        add_og_images(results)
 
     # 소스 간 중복 제거(같은 링크 또는 같은 제목)
     uniq, keys = [], set()
@@ -317,33 +297,6 @@ def collect(fixtures=None, now=None):
     ok = sum(s["ok"] for s in status)
     print(f"[collect] {today} 항목 {len(uniq)}개, 소스 {ok}/{len(status)} 성공 → {path.relative_to(ROOT)}")
     return data
-
-
-_OG = re.compile(r"<meta[^>]+(?:property|name)=[\"'](?:og:image|twitter:image)[\"'][^>]*>", re.I)
-_CONTENT = re.compile(r"content=[\"']([^\"']+)[\"']", re.I)
-
-
-def og_image(link):
-    req = urllib.request.Request(link, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=10) as r:
-        head = r.read(300_000).decode("utf-8", errors="ignore")
-    m = _OG.search(head)
-    c = _CONTENT.search(m.group(0)) if m else None
-    url = html.unescape(c.group(1)) if c else ""
-    return urllib.parse.urljoin(link, url) if url else ""
-
-
-def add_og_images(items, max_fetch=60):
-    """썸네일이 없는 기사만 원문 페이지의 대표 이미지(og:image) 주소를 가져온다. 이미지는 복사하지 않고 링크만 쓴다."""
-    todo = [it for it in items if not it["thumb"] and it["category"] in ("news_ko", "news_global", "policy")
-            and "news.google.com" not in it["link"]][:max_fetch]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        for it, fut in [(it, pool.submit(og_image, it["link"])) for it in todo]:
-            try:
-                it["thumb"] = fut.result()
-            except Exception:
-                pass
-    print(f"[collect] 대표 이미지 {sum(1 for it in todo if it['thumb'])}/{len(todo)}개 확보")
 
 
 # ---------------------------------------------------------------- 키워드
@@ -392,8 +345,11 @@ a{color:inherit;text-decoration:none}
 .badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
 .thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--g1,#3d0f22),var(--g2,#7a1f3d))}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;color:#fff}
-.thumb .ph b{font-family:"Noto Serif KR",Georgia,serif;font-weight:500;font-size:18px}.thumb .ph span{font-size:12px;opacity:.75}
+.thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.22),transparent 45%),
+repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
+.thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;color:#fff}
+.thumb .ph i{position:absolute;top:14px;left:16px;font-style:normal;font-size:11.5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:99px}
+.thumb .ph b{font-family:"Noto Serif KR",Georgia,serif;font-weight:500;font-size:22px;line-height:1.3}.thumb .ph span{font-size:12px;opacity:.7}
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-size:13px;color:var(--muted)}
 .meta svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px}
 .hero .meta{margin:16px 0 10px}
@@ -405,7 +361,7 @@ a{color:inherit;text-decoration:none}
 .side-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
 .side-h h2{font-size:16px;margin:0;font-weight:600}.side-h a{font-size:13px;color:var(--muted)}
 .trend{display:grid;grid-template-columns:150px 1fr;gap:16px;margin-bottom:16px}
-.trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13px}.trend .thumb .ph{padding:8px 10px}
+.trend .thumb{border-radius:12px}.trend .thumb .ph b{font-size:13.5px}.trend .thumb .ph{padding:8px 10px}.trend .thumb .ph i,.trend .thumb .ph span{display:none}
 .trend h3{font-size:16.5px;line-height:1.4;font-weight:500;color:var(--accent);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
@@ -445,16 +401,21 @@ document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dat
 """
 
 WEEKDAYS = "월화수목금토일"
+CARDS_PER_CAT = 6  # 분야별로 표지 카드로 보여줄 개수(나머지는 목록)
 CAT_COLORS = {"news_ko": ("#3d0f22", "#8a2748"), "news_global": ("#2a1030", "#6b2d6b"), "papers": ("#1c1636", "#4b3a8c"),
               "policy": ("#10262a", "#2f6b67"), "youtube": ("#2b0d0d", "#9b2c2c")}
+# 표지 이미지 대신 쓰는 자체 제작 그라데이션(기사마다 다르게)
+COVER_COLORS = [("#3d0f22", "#8a2748"), ("#2a1030", "#6b2d6b"), ("#1c1636", "#4b3a8c"), ("#10262a", "#2f6b67"),
+                ("#2b0d0d", "#9b2c2c"), ("#2d1a0c", "#9a5b24"), ("#0f1f33", "#2f5d8c"), ("#261022", "#a3456f")]
 ICON_CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
 ICON_SRC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>'
 ICON_SHARE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>'
 ICON_SEARCH = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>'
-LOGO = '<svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#c9738f" stroke-width="2"><path d="M4 6l12 21L28 6"/><path d="M10 6l6 11 6-11"/></svg>'
+LOGO = ('<svg width="30" height="30" viewBox="0 0 32 32"><rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="#e58fae" stroke-width="1.6"/>'
+        '<path d="M16 7c.9 4.6 2.4 6.1 7 7-4.6.9-6.1 2.4-7 7-.9-4.6-2.4-6.1-7-7 4.6-.9 6.1-2.4 7-7z" fill="#f3e6eb"/></svg>')
 FAVICON = ("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22>"
            "<rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%232a0b17%22/>"
-           "<path d=%22M7 8l9 16 9-16%22 fill=%22none%22 stroke=%22%23e58fae%22 stroke-width=%223%22/></svg>")
+           "<path d=%22M16 6c1 5 2.7 6.7 8 8-5.3 1.3-7 3-8 8-1-5-2.7-6.7-8-8 5.3-1.3 7-3 8-8z%22 fill=%22%23f3e6eb%22/></svg>")
 
 
 def esc(s):
@@ -485,16 +446,17 @@ def page(title, body, base="", cats=None, search=True):
 <style>{CSS}</style></head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>AI 브리핑</span></a><nav>{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사와 이미지의 저작권은 원 저작자에게 있습니다. 전문은 각 원문 링크에서 확인하세요.</footer>
+<footer class="wrap">매일 오전 6시와 오후 6시에 자동으로 수집됩니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 기사 사진은 사용하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
 <script>{JS}</script></body></html>"""
 
 
 def thumb_html(it, cats):
-    g1, g2 = CAT_COLORS.get(it["category"], CAT_COLORS["news_ko"])
+    g1, g2 = COVER_COLORS[int(it["id"][:6], 16) % len(COVER_COLORS)] if it.get("id") else CAT_COLORS["news_ko"]
     img = (f'<img src="{esc(it["thumb"])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
            if it.get("thumb") else "")
     return (f'<a class="thumb" href="{esc(it["link"])}" target="_blank" rel="noopener" style="--g1:{g1};--g2:{g2}" tabindex="-1" aria-hidden="true">'
-            f'<div class="ph"><b>{esc(cats.get(it["category"], ""))}</b><span>{esc(it["source"])}</span></div>{img}</a>')
+            f'<div class="ph"><i>{esc(cats.get(it["category"], ""))}</i><b>{esc(re.sub(r"^(구글뉴스|Google News): ", "", it["source"]))}</b>'
+            f'<span>{fmt_time(it.get("published"))}</span></div>{img}</a>')
 
 
 def meta_html(it, cats, with_cat=False):
@@ -512,9 +474,9 @@ def title_link(it):
 
 
 def pick_featured(items):
-    """헤드라인 1개 + 주요 소식 4개. 이미지가 있는 뉴스를 우선하고 분야가 겹치지 않게 고른다."""
+    """헤드라인 1개 + 주요 소식 4개. 요약이 있는 뉴스를 우선하고 분야가 겹치지 않게 고른다."""
     pri = {"news_ko": 0, "news_global": 1, "policy": 2, "youtube": 3, "papers": 4}
-    ranked = sorted(items, key=lambda i: (not i.get("thumb"), not i.get("summary"), pri.get(i["category"], 9)))
+    ranked = sorted(items, key=lambda i: (not i.get("summary"), pri.get(i["category"], 9)))
     if not ranked:
         return None, []
     hero, trend, used = ranked[0], [], set()
@@ -561,7 +523,7 @@ def render_day(data, cats, base=""):
         for it in by_cat.get(c, []):  # 이미지가 있으면 카드, 없으면 간단한 목록으로
             summ = f"<p>{esc(it['summary'])}</p>" if it.get("summary") else ""
             q = esc((it["title"] + " " + it["source"] + " " + (it.get("summary") or "")).lower())
-            if it.get("thumb"):
+            if it.get("thumb") or len(cards) < CARDS_PER_CAT:
                 cards.append(f'<article class="card" data-q="{q}">{thumb_html(it, cats)}'
                              f'<h3 class="serif">{title_link(it)}</h3>{summ}{meta_html(it, cats)}</article>')
             else:
