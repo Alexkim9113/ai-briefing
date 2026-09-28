@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T20:54+09:00",
+ "generated_at": "2026-09-28T20:57+09:00",
  "items": [
   {
    "id": "8345a2704767261f",
@@ -2342,6 +2342,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T08:39:57+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "d6851aa0ca1879b9",
+   "title": "AI로 보고서 쓰는 국책硏…검증체계는 '빈칸'",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00QWlsdHRiZEFxUlhpRXYyRWlmaWJjeVY0dmhyc0ZtU2h0RjZTSVdXd2E5c3V4bzZTZmZGTUEyXzBkZWRNOEk3QkJJREU1N2s?oc=5",
+   "source": "v.daum.net",
+   "field": "사회·경제",
+   "category": "papers",
+   "published": "2026-09-28T08:39:13+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -6140,7 +6151,7 @@
    "name": "Europe PMC · 의료",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+   "error": "HTTPError: HTTP Error 502: Bad Gateway"
   },
   {
    "name": "Google AI Blog",
@@ -6266,7 +6277,7 @@
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
@@ -6350,7 +6361,7 @@
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 73
+   "fetched": 70
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
@@ -6362,13 +6373,13 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 61
+   "fetched": 59
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 39
+   "fetched": 37
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -6386,7 +6397,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "VentureBeat AI",
@@ -6487,7 +6498,7 @@
   {
    "name": "경향신문",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "fetched": 50
   },
   {
@@ -6530,7 +6541,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 37
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -6740,13 +6751,13 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 71
+   "fetched": 68
   },
   {
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "주제: 문화·예술 · 문화·예술",
@@ -6764,7 +6775,7 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 66
+   "fetched": 68
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -6788,7 +6799,7 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "주제: 정치 · 정치",
@@ -6800,7 +6811,7 @@
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 38
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -6818,7 +6829,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 536
+   "fetched": 535
   },
   {
    "name": "프레시안",
