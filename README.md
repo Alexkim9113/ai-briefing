@@ -38,3 +38,20 @@ python briefing.py build    # 저장된 data/ 로 사이트만 다시 생성
 # 네트워크 없이 테스트
 python tests/make_fixtures.py && python briefing.py --fixtures tests/fixtures
 ```
+
+## 주소(.com)를 바꿀 때
+
+1. 도메인 업체에서 DNS를 GitHub Pages로 연결합니다(`www`는 CNAME → `alexkim9113.github.io`, 루트 도메인은 A 레코드 185.199.108.153 / 109.153 / 110.153 / 111.153).
+2. `sources.json` 의 `site.domain` 에 도메인(예: `metaxis.com`)을 적습니다. 사이트 주소, 검색엔진용 정보, 사이트맵, CNAME 파일이 모두 새 주소로 바뀝니다.
+3. 저장소 Settings → Pages 에서 Custom domain 과 Enforce HTTPS 를 확인합니다. 예전 github.io 주소는 새 주소로 자동 연결됩니다.
+
+## 데이터 보관
+
+- 수집한 내용은 `data/날짜.json` 에 날짜별로 저장되어 저장소(main 브랜치)에 영구 보관됩니다. 사이트 화면(`site/`)은 매번 이 데이터로 새로 만들어지므로, 디자인이나 주소를 바꿔도 지난 기록은 그대로 남습니다.
+- 같은 데이터가 사이트의 `/data/날짜.json` 으로도 공개되어 다른 곳으로 옮길 때 그대로 가져갈 수 있습니다.
+
+## 검색 노출(SEO)
+
+- 모든 페이지에 제목·설명·대표 주소(canonical)·공유 이미지(og.png)·구조화 데이터(JSON-LD)가 들어갑니다.
+- `sitemap.xml`, `robots.txt`, RSS(`feed.xml`)를 자동으로 만듭니다.
+- 구글 서치 콘솔과 네이버 서치어드바이저에 사이트를 등록한 뒤, 받은 인증 코드를 `sources.json` 의 `google_verification`, `naver_verification` 에 넣으면 됩니다.

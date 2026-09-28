@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
   push:
     branches: [main]
-    paths: ["briefing.py", "sources.json", ".github/workflows/daily.yml"]
+    paths: ["briefing.py", "sources.json", "static/**", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write

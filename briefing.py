@@ -390,9 +390,9 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#141012;--card:#1d1619;--text:#f2e9ec;--muted:#b3a4aa;--line:#33262c;
 --accent:#e58fae;--soft:#3a2530;--shadow:0 6px 18px rgba(0,0,0,.4)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
-.serif{font-family:Pretendard,sans-serif;letter-spacing:-.01em}
+.serif{font-family:"Pretendard Variable",Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .bar{background:var(--bar);color:var(--bar-text)}
 .bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
@@ -404,9 +404,10 @@ a{color:inherit;text-decoration:none}
 .search{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:7px 14px;width:230px}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:rgba(243,230,235,.55)}
-.hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:36px 0 28px}
-.hero h1{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
-.badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted);margin:26px 0 0;letter-spacing:.01em}
+.hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
+.hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
+.badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 "Pretendard Variable",Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
 .thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--g1,#3d0f22),var(--g2,#7a1f3d))}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.22),transparent 45%),
@@ -438,12 +439,12 @@ repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14p
 section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .card h3{font-size:17px;line-height:1.5;font-weight:600;margin:14px 0 6px}
-.card h3 a:hover,.trend h3 a:hover,.hero h1 a:hover{text-decoration:underline}
+.card h3 a:hover,.trend h3 a:hover,.hero h2 a:hover{text-decoration:underline}
 .card p{margin:0 0 8px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:18px}
 .row{padding:14px 0 12px;border-bottom:1px solid var(--line)}.row h3{margin:0 0 4px;font-size:16px}.row p{-webkit-line-clamp:2;margin-bottom:6px}
 .empty{color:var(--muted);font-size:14px}
-footer{margin-top:56px;padding-top:26px;padding-bottom:40px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer{margin-top:56px;line-height:1.7;padding-top:26px;padding-bottom:40px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 details summary{cursor:pointer}ul.st{columns:3;padding-left:18px}ul.st .bad{color:#c2410c}
 ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;border-bottom:1px solid var(--line)}ul.days a{color:var(--accent)}
 [hidden]{display:none!important}
@@ -452,7 +453,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 .bar nav{justify-content:flex-end;flex:1}.bar nav a[data-go]{display:none}
 .search{order:3;width:100%}.search input{font-size:16px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
-.logo{font-size:18px}.hero{padding:20px 0 16px;gap:28px}.hero h1{font-size:23px;line-height:1.4;margin-bottom:14px}
+.logo{font-size:18px}.eyebrow{margin-top:18px;font-size:13px}.hero{padding:8px 0 16px;gap:28px}.hero h2{font-size:23px;line-height:1.4;margin-bottom:14px}
 .badge{margin:8px 0 0;top:0;display:table}.hero .thumb{aspect-ratio:16/8}.hero p.sum{font-size:16px;line-height:1.7}
 .trend{grid-template-columns:88px 1fr;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}.trend .thumb{aspect-ratio:1}
 .trend .thumb .ph b{font-size:11.5px}.trend h3{font-size:16px}.trend .meta span:last-child{display:none}
@@ -510,23 +511,53 @@ def fmt_time(iso):
     return d.strftime("%m.%d %H:%M")
 
 
-def page(title, body, base="", cats=None, search=True):
+def site_cfg():
+    s = load_config().get("site", {})
+    url = (f'https://{s["domain"]}' if s.get("domain") else s.get("url", "")).rstrip("/")
+    return {"name": s.get("name", "METAXIS"), "url": url, "domain": s.get("domain", ""),
+            "description": s.get("description", ""), "google": s.get("google_verification", ""),
+            "naver": s.get("naver_verification", "")}
+
+
+def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True):
+    sc = site_cfg()
+    canonical = f'{sc["url"]}/{path}'
+    desc = desc or sc["description"]
     nav = f'<a href="{base}index.html" class="on">오늘</a>'
     if cats:
         nav += "".join(f'<a href="#{c}" data-go="{c}">{esc(n)}</a>' for c, n in cats.items())
     nav += f'<a href="{base}archive.html">지난 브리핑</a>'
     box = (f'<label class="search">{ICON_SEARCH}<input type="search" placeholder="뉴스, 주제 검색" aria-label="검색"></label>'
            if search else "")
+    verify = ""
+    if sc["google"]:
+        verify += f'<meta name="google-site-verification" content="{esc(sc["google"])}">'
+    if sc["naver"]:
+        verify += f'<meta name="naver-site-verification" content="{esc(sc["naver"])}">'
+    ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     return f"""<!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title>
-<meta name="description" content="METAXIS: 국내외 AI 뉴스·논문·정책·유튜브를 매일 자동으로 모아 보여주는 AI 브리핑">
-<link rel="icon" href="{FAVICON}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<style>{CSS}</style></head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html">{LOGO}<span>METAXIS</span></a><nav>{nav}</nav>{box}</div></header>
+<meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{esc(canonical)}">
+<meta name="robots" content="{"index,follow,max-image-preview:large" if index else "noindex"}">
+<meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{esc(sc["name"])}">
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
+<meta property="og:url" content="{esc(canonical)}"><meta property="og:image" content="{sc["url"]}/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{sc["url"]}/og.png">
+<meta name="theme-color" content="#2a0b17">{verify}
+<link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>{CSS}</style>{ld}</head><body>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈">{LOGO}<span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap">30분마다 자동으로 새 소식을 모읍니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</footer>
+<footer class="wrap"><p>30분마다 자동으로 새 소식을 모읍니다. 요약은 원문 앞부분을 자동 발췌한 것이며, 기사 저작권은 원 저작자에게 있습니다. 원본의 사진·썸네일은 수집하지 않으며, 표지 이미지는 사이트가 자체 생성한 디자인입니다. 전문은 각 원문 링크에서 확인하세요.</p>
+<p><a href="{base}archive.html">지난 브리핑</a> · <a href="{sc["url"]}/feed.xml">RSS 구독</a></p></footer>
 <script>{JS}</script></body></html>"""
+
 
 # 표지 아이콘: 기사 제목·요약의 단어로 주제를 골라 직접 그린 아이콘을 넣는다(외부 이미지 없음)
 TOPICS = [
@@ -612,7 +643,7 @@ def pick_featured(items):
     return hero, trend
 
 
-def render_day(data, cats, base=""):
+def render_day(data, cats, base="", path=""):
     d = datetime.fromisoformat(data["date"])
     items = data["items"]
     by_cat = {c: [] for c in cats}
@@ -627,7 +658,7 @@ def render_day(data, cats, base=""):
             + (f"<p>{esc(i['summary'])}</p>" if i.get("summary") else "")
             + f"{meta_html(i, cats, True)}</div></div>" for i in trend)
         parts.append(
-            f'<div class="hero"><div><h1 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h1>'
+            f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
             f'{thumb_html(hero, cats)}{meta_html(hero, cats, True)}{summ}'
             f'<div class="actions"><a class="read" href="{esc(hero["link"])}" target="_blank" rel="noopener">원문 보기 →</a>'
             f'<button class="circle share" data-url="{esc(hero["link"])}" data-title="{esc(hero["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div></div>'
@@ -658,26 +689,97 @@ def render_day(data, cats, base=""):
                   f'{str(s["count"]) + "건" if s["ok"] else "실패"}</li>' for s in st)
     parts.append(f'<details style="margin-top:40px"><summary class="meta">수집 상태: 소스 {ok}/{len(st)}개 성공</summary>'
                  f'<ul class="st meta" style="display:block">{lis}</ul></details>')
-    return page(f"METAXIS · AI 브리핑 {data['date']}", "\n".join(parts), base, cats)
+    sc = site_cfg()
+    heading = f'<h1 class="eyebrow">{day_title(data["date"])} 오늘의 AI 브리핑</h1>'
+    if path:
+        title = f"{day_title(data['date'])} AI 브리핑 · 뉴스·논문·정책 {len(items)}건 | {sc['name']}"
+    else:
+        title = f"{sc['name']} | 오늘의 AI 뉴스·논문·정책 브리핑 · {day_title(data['date'])}"
+    ld = day_jsonld(data, f"{sc['url']}/{path}")
+    if not path:
+        ld.insert(0, {"@context": "https://schema.org", "@type": "WebSite", "name": sc["name"], "url": sc["url"] + "/",
+                      "description": sc["description"], "inLanguage": "ko"})
+    return page(title, heading + "\n".join(parts), base, cats, desc=day_desc(data, cats), path=path, jsonld=ld)
+
+
+def day_title(date):
+    d = datetime.fromisoformat(date)
+    return f"{d.year}년 {d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]})"
+
+
+def day_desc(data, cats):
+    cnt = Counter(i["category"] for i in data["items"])
+    parts = ", ".join(f"{n} {cnt[c]}건" for c, n in cats.items() if cnt.get(c))
+    hero, _ = pick_featured(data["items"])
+    s = f'{day_title(data["date"])} AI 브리핑: {parts}.' + (f' 헤드라인: {hero["title"]}' if hero else "")
+    return s[:155]
+
+
+def day_jsonld(data, url):
+    sc = site_cfg()
+    return [{"@context": "https://schema.org", "@type": "CollectionPage", "name": f'{day_title(data["date"])} AI 브리핑',
+             "url": url, "inLanguage": "ko", "datePublished": data["date"], "dateModified": data.get("generated_at", data["date"]),
+             "isPartOf": {"@type": "WebSite", "name": sc["name"], "url": sc["url"] + "/"},
+             "mainEntity": {"@type": "ItemList", "numberOfItems": len(data["items"]),
+                            "itemListElement": [{"@type": "ListItem", "position": n + 1, "url": it["link"], "name": it["title"]}
+                                                for n, it in enumerate(data["items"][:30])]}}]
+
+
+def write_feed(latest, sc):
+    items = []
+    for it in latest[:60]:
+        pub = email.utils.format_datetime(datetime.fromisoformat(it["published"])) if it.get("published") else ""
+        items.append(f'<item><title>{esc(it["title"])}</title><link>{esc(it["link"])}</link><guid isPermaLink="false">{it["id"]}</guid>'
+                     f'<category>{esc(it["source"])}</category>{"<pubDate>" + pub + "</pubDate>" if pub else ""}'
+                     f'<description>{esc(it.get("summary") or "")}</description></item>')
+    now = email.utils.format_datetime(datetime.now(timezone.utc))
+    xml = (f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{esc(sc["name"])} - AI 브리핑</title>'
+           f'<link>{sc["url"]}/</link><description>{esc(sc["description"])}</description><language>ko</language>'
+           f'<lastBuildDate>{now}</lastBuildDate>{"".join(items)}</channel></rss>')
+    (SITE_DIR / "feed.xml").write_text(xml, encoding="utf-8")
 
 
 def build(keep_days=None):
     cfg = load_config()
     cats = cfg["categories"]
+    sc = site_cfg()
     files = sorted(DATA_DIR.glob("*.json"), reverse=True)
     if not files:
         print("[build] 데이터가 없습니다. 먼저 collect 를 실행하세요.", file=sys.stderr)
         return
     (SITE_DIR / "archive").mkdir(parents=True, exist_ok=True)
-    days = []
+    (SITE_DIR / "data").mkdir(exist_ok=True)
+    days, latest = [], None
     for i, f in enumerate(files):
         data = json.loads(f.read_text(encoding="utf-8"))
-        days.append((data["date"], len(data["items"])))
-        (SITE_DIR / "archive" / f"{data['date']}.html").write_text(render_day(data, cats, "../"), encoding="utf-8")
+        days.append((data["date"], len(data["items"]), data.get("generated_at", data["date"])))
+        (SITE_DIR / "data" / f.name).write_text(f.read_text(encoding="utf-8"), encoding="utf-8")  # 원본 데이터도 함께 공개(백업·이전용)
+        path = f"archive/{data['date']}.html"
+        (SITE_DIR / path).write_text(render_day(data, cats, "../", path), encoding="utf-8")
         if i == 0:
-            (SITE_DIR / "index.html").write_text(render_day(data, cats), encoding="utf-8")
-    lis = "".join(f'<li><a href="archive/{d}.html">{d} ({WEEKDAYS[datetime.fromisoformat(d).weekday()]})</a> <span class="meta">· {n}건</span></li>' for d, n in days)
-    (SITE_DIR / "archive.html").write_text(page("지난 브리핑 · METAXIS", f'<h2 class="serif" style="font-weight:700;font-size:26px;margin:36px 0 12px">지난 브리핑</h2><ul class="days">{lis}</ul>', search=False), encoding="utf-8")
+            latest = data
+            (SITE_DIR / "index.html").write_text(render_day(data, cats, "", ""), encoding="utf-8")
+    lis = "".join(f'<li><a href="archive/{d}.html">{day_title(d)} AI 브리핑</a> <span class="meta">· {n}건</span></li>' for d, n, _ in days)
+    (SITE_DIR / "archive.html").write_text(page(
+        f"지난 AI 브리핑 모음 | {sc['name']}",
+        f'<h1 class="serif" style="font-weight:700;font-size:26px;margin:36px 0 12px">지난 AI 브리핑</h1><ul class="days">{lis}</ul>',
+        search=False, desc=f"{sc['name']}가 날짜별로 모아 둔 AI 뉴스·논문·정책 브리핑 {len(days)}일치 목록", path="archive.html"), encoding="utf-8")
+    (SITE_DIR / "404.html").write_text(page(
+        f"페이지를 찾을 수 없어요 | {sc['name']}",
+        f'<h1 class="serif" style="font-size:26px;margin:40px 0 8px">페이지를 찾을 수 없어요</h1><p><a class="read" href="{sc["url"]}/">오늘의 브리핑으로 가기 →</a></p>',
+        base=sc["url"] + "/", search=False, path="404.html", index=False), encoding="utf-8")
+    # 검색엔진용 파일
+    urls = [(f"{sc['url']}/", latest.get("generated_at", latest["date"]), "hourly", "1.0"),
+            (f"{sc['url']}/archive.html", latest["date"], "daily", "0.6")]
+    urls += [(f"{sc['url']}/archive/{d}.html", g, "weekly" if n2 else "daily", "0.5") for n2, (d, _, g) in enumerate(days)]
+    sm = "".join(f"<url><loc>{esc(u)}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>" for u, m, c, p in urls)
+    (SITE_DIR / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>', encoding="utf-8")
+    (SITE_DIR / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {sc['url']}/sitemap.xml\n", encoding="utf-8")
+    write_feed(latest["items"], sc)
+    for f in (ROOT / "static").glob("*"):  # 공유 이미지·아이콘
+        (SITE_DIR / f.name).write_bytes(f.read_bytes())
+    if sc["domain"]:
+        (SITE_DIR / "CNAME").write_text(sc["domain"] + "\n")
     (SITE_DIR / ".nojekyll").write_text("")
     print(f"[build] {len(days)}일치 페이지 생성 → {SITE_DIR.relative_to(ROOT)}/")
 
