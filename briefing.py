@@ -1340,8 +1340,15 @@ function renderHidden(){const h=STATUS.removed||[];$('#hidden-box').hidden=!h.le
  $('#hlist').innerHTML=h.map((x,i)=>`<li><b>${esc(x.title||x.id)}</b> <span class="meta">${esc((x.at||'').slice(0,16).replace('T',' '))} 삭제</span> <button data-u="${i}">되돌리기</button></li>`).join('');
  $('#hlist').querySelectorAll('[data-u]').forEach(b=>b.onclick=async()=>{const x=h[+b.dataset.u];if(!confirm(`'${x.title||x.id}' 기사를 다시 보이게 할까요?`))return;
   try{await send('unhide',{id:x.id,title:x.title});msg('#list-msg','되돌리기 요청을 보냈어요. 보통 1~2분 안에 다시 보여요.');showPending();}catch(e){msg('#list-msg',e.message,1);}});}
-function renderList(){renderHidden();$('#plist').innerHTML=POSTS.map((p,i)=>`<li><b class="pt" data-e="${i}" role="button" tabindex="0" title="눌러서 수정">${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
+let MOVED=false;  // 게시 순서: ▲▼로 옮긴 뒤 '순서 저장'을 누르면 사이트에 그 순서대로 보인다
+function move(i,d){const j=i+d;if(j<0||j>=POSTS.length)return;[POSTS[i],POSTS[j]]=[POSTS[j],POSTS[i]];MOVED=true;renderList();
+ const b=$('#plist').querySelector(`[data-m="${j}"][data-dir="${d}"]`)||$('#plist').querySelector(`[data-m="${j}"]`);b&&b.focus();}
+$('#order-save').onclick=async()=>{$('#order-save').disabled=true;msg('#list-msg','보내는 중…');
+ try{await send('order',{ids:POSTS.map(p=>p.id),title:'에디터 글 순서'});MOVED=false;renderList();msg('#list-msg','순서를 보냈어요. 보통 1~2분 안에 사이트에 반영돼요.');showPending();}
+ catch(e){msg('#list-msg',e.message,1);}finally{$('#order-save').disabled=false;}};
+function renderList(){renderHidden();$('#order-bar').hidden=!MOVED;$('#plist').innerHTML=POSTS.map((p,i)=>`<li><span class="ord"><button data-m="${i}" data-dir="-1" title="위로" aria-label="위로" ${i?'':'disabled'}>▲</button><button data-m="${i}" data-dir="1" title="아래로" aria-label="아래로" ${i<POSTS.length-1?'':'disabled'}>▼</button></span><b class="pt" data-e="${i}" role="button" tabindex="0" title="눌러서 수정">${i+1}. ${esc(p.title)}</b> <span class="meta">${(p.updated||p.date||'').slice(0,16).replace('T',' ')}</span>
   <button data-e="${i}">수정</button> <button data-d="${i}">삭제</button></li>`).join('')||'<li class="meta">아직 쓴 글이 없어요.</li>';
+ $('#plist').querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>move(+b.dataset.m,+b.dataset.dir));
  $('#plist').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(POSTS[+b.dataset.e]));
  $('#plist').querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>del(POSTS[+b.dataset.d]));}
 function newId(){const d=new Date(),z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}${z(d.getMonth()+1)}${z(d.getDate())}-${z(d.getHours())}${z(d.getMinutes())}${z(d.getSeconds())}`;}
@@ -2288,7 +2295,12 @@ def load_posts():
                                     else p.get("body", ""))
         posts.append(p)
     posts.sort(key=lambda p: p.get("date", ""), reverse=True)
-    return posts
+    try:  # 운영자가 정한 순서(posts/order.json). 순서를 정한 뒤 새로 쓴 글은 맨 위에 온다
+        order = json.loads((POSTS_DIR / "order.json").read_text(encoding="utf-8")).get("ids", [])
+    except (OSError, ValueError):
+        order = []
+    rank = {pid: i for i, pid in enumerate(order)}
+    return [p for p in posts if p["id"] not in rank] + sorted((p for p in posts if p["id"] in rank), key=lambda p: rank[p["id"]])
 
 
 def post_summary(body, n=120):
@@ -2432,7 +2444,8 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <p><input id="pin" class="inp pin" inputmode="numeric" maxlength="4" type="password" autocomplete="off" placeholder="••••"></p>
 <p id="lock-msg" class="meta"></p></section>
 <section id="v-list" hidden><p><button id="new" class="btn">새 글 쓰기</button> <button id="logout" class="linkbtn">로그아웃</button> <span id="list-msg" class="meta"></span></p>
-<ul id="pend" class="plist pend"></ul><ul id="plist" class="plist"></ul>
+<ul id="pend" class="plist pend"></ul>
+<p id="order-bar" class="order-bar" hidden><span>순서를 바꿨어요. 저장해야 사이트에 반영돼요.</span> <button id="order-save" class="btn">순서 저장</button></p><ul id="plist" class="plist"></ul>
 <details class="stats" id="hidden-box" hidden><summary>삭제한 기사 <span class="meta">되돌릴 수 있어요</span></summary><ul id="hlist" class="plist"></ul></details>
 <details class="stats"><summary>수집 현황 <span class="meta">관리자에게만 보여요</span></summary><div id="stats"></div></details></section>
 <section id="v-hide" hidden><p>이 기사를 사이트에서 삭제할까요? 운영자 비밀번호가 맞아야 삭제돼요.</p><p><b id="hide-t"></b></p>
@@ -2482,7 +2495,8 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 #v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.stats{margin:26px 0 0;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.stats summary{cursor:pointer;font-weight:700}
 .stab{border-collapse:collapse;margin:8px 0;font-size:15px}.stab td{padding:5px 18px 5px 0;border-bottom:1px solid var(--line)}.slist{columns:2;font-size:13px;color:var(--muted);padding-left:1.1em}.slist .bad{color:#e5484d}
 @media (max-width:600px){.slist{columns:1}}
-.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
+.plist{list-style:none;padding:0}.plist .ord{display:inline-flex;gap:4px;margin-right:8px;vertical-align:middle}.plist .ord button{margin:0;padding:2px 9px;font-size:12px}.plist .ord button:disabled{opacity:.3}
+.order-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--accent);border-radius:14px;background:var(--soft)}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
 .plist .pt{cursor:pointer}.plist .pt:hover{color:var(--accent,#3b7bff);text-decoration:underline}.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
@@ -2884,6 +2898,12 @@ def editor_inbox():
                      "updated": datetime.now(KST).isoformat(timespec="seconds")}
             old_f.write_text(json.dumps(clean, ensure_ascii=False, indent=1), encoding="utf-8")
             result(ref, True, "게시했어요")
+            changed = True
+        elif op == "order":  # 에디터 글 게시 순서 바꾸기
+            ids = [str(x) for x in (req.get("ids") or []) if re.fullmatch(r"[\w-]{1,40}", str(x))][:500]
+            POSTS_DIR.mkdir(exist_ok=True)
+            (POSTS_DIR / "order.json").write_text(json.dumps({"ids": list(dict.fromkeys(ids))}, ensure_ascii=False, indent=1), encoding="utf-8")
+            result(ref, True, "글 순서를 바꿨어요")
             changed = True
         elif op in ("hide", "unhide"):  # 뉴스·논문·정책·영상 기사를 사이트에서 빼기 / 되돌리기
             iid = str(req.get("id", ""))
