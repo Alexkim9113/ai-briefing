@@ -1201,7 +1201,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 [hidden]{display:none!important}
 @media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
-.bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:18px;margin:0;padding:2px 24px 4px 0;mask-image:linear-gradient(90deg,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}.bar nav::-webkit-scrollbar{display:none}.bar nav a{flex:0 0 auto}
+.bar nav{order:2;flex:1 0 100%;box-sizing:border-box;min-width:0;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:18px;margin:0;padding:2px 24px 4px 0;mask-image:linear-gradient(90deg,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}.bar nav::-webkit-scrollbar{display:none}.bar nav a{flex:0 0 auto}
 .search{order:3;width:100%}.search input{font-size:16px}.theme{position:absolute;right:16px;top:10px}.site-share{right:62px}.bar .wrap{position:relative}.bar{position:relative}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65;background:radial-gradient(ellipse at 50% -10%,var(--glow) 0%,var(--bg) 55%) fixed,var(--bg)}.wrap{padding:0 16px}
@@ -1236,7 +1236,8 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 .rows p{margin:0 0 6px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pager{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:22px 0 4px}
 .pager a,.pager button,.pager span{min-width:38px;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:14px;display:inline-grid;place-items:center;cursor:pointer}
-.pager .on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--heading);font-weight:700}.pager span{border:0;cursor:default;min-width:20px;padding:0}
+.pager .on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--heading);font-weight:700}
+.pager .nums{display:flex;gap:6px;border:0;padding:0;min-width:0;height:auto;background:none;cursor:default}.pager .off,.pager button:disabled{opacity:.3;cursor:default}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 .btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
@@ -1244,7 +1245,10 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 .ph h1{font-size:28px;font-weight:700;margin:0;color:var(--heading)}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
 .editor-h h2{font-size:22px;margin:0;color:var(--heading);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
-.egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:26px}
+.egrid{display:flex;gap:24px;margin-bottom:26px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}.egrid::-webkit-scrollbar{display:none}
+.egrid>*{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start}
+.eh-r{display:flex;align-items:center;gap:8px}.enav{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0 0 2px}
+.enav:disabled{opacity:.3;cursor:default}.enav:not(:disabled):hover{border-color:var(--accent);color:var(--accent)}.eh-r a{margin-left:6px}
 .egrid h3{font-size:17px;line-height:1.5;margin:12px 0 4px;font-weight:600}.egrid p{margin:0 0 6px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .elist article{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
 .elist .thumb{border-radius:12px;box-shadow:none}.elist h3{font-size:19px;margin:0 0 6px;line-height:1.45}.elist p{margin:0 0 8px;color:var(--muted);font-size:14.5px}
@@ -1260,13 +1264,14 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 .post .body mark{background:#fff27a;color:#111;padding:0 2px;border-radius:2px}.post .body ul,.post .body ol{padding-left:1.4em}
 .post .body [style*="background-color"]{color:#111;border-radius:2px;padding:0 1px}
 .credits li{margin-bottom:6px;font-size:14px}
-@media (max-width:960px){.egrid{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){.egrid>*{flex-basis:calc((100% - 24px)/2)}}
 @media (max-width:600px){.rows{grid-template-columns:1fr}
-.egrid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:0 -16px 26px;padding:0 16px 6px;scrollbar-width:none}.egrid::-webkit-scrollbar{display:none}
-.egrid>*{flex:0 0 78%;scroll-snap-align:start}.egrid>*:only-child{flex-basis:100%}.egrid h3{font-size:17px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
+.egrid{gap:14px;scroll-padding:0 16px;margin:0 -16px 26px;padding:0 16px 6px}
+.egrid>*{flex:0 0 78%}.egrid>*:only-child{flex-basis:100%}.enav{width:32px;height:32px;font-size:18px}.egrid h3{font-size:17px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
 .post .body [style*="text-align:justify"]{text-align:left!important}
 .elist .thumb .tag{display:none}.ph h1{font-size:23px}.post h1{font-size:25px;margin-top:26px}.post .body{font-size:17px}
-.pager a,.pager button{min-width:40px;height:40px}}
+.pager{gap:6px 4px}.pager .nums{flex:1 0 100%;order:-1;justify-content:center;gap:3px}
+.pager .nums a,.pager .nums button{min-width:0;width:calc((100% - 27px)/10);max-width:40px;height:38px;padding:0;font-size:13.5px}.pager .arw{min-width:44px;height:38px}}
 """
 
 JS = """
@@ -1288,6 +1293,11 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
 document.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;let a=ev.target.closest('a[data-d]');
  if(!a){const card=ev.target.closest('article,.trend,.hero>div:first-child');if(!card||(ev.target.closest('a,button')&&!ev.target.closest('[data-brief]')))return;a=card.querySelector('a[data-d]');if(!a)return;}
  ev.preventDefault();openBrief(a);});
+document.querySelectorAll('.editor-h').forEach(h=>{const g=h.nextElementSibling;if(!g||!g.classList.contains('egrid'))return;  // 에디터 글: 화살표로 한 장씩 옆으로
+ const bs=h.querySelectorAll('.enav'),upd=()=>{const max=g.scrollWidth-g.clientWidth-2;bs[0].disabled=g.scrollLeft<=2;bs[1].disabled=g.scrollLeft>=max;
+};
+ bs.forEach(b=>b.onclick=()=>{const c=g.firstElementChild;if(!c)return;const step=c.getBoundingClientRect().width+parseFloat(getComputedStyle(g).columnGap||0);g.scrollBy({left:step*+b.dataset.d,behavior:'smooth'});});
+ g.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
 function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),2200);}
 document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
  try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 관련 정보를 한눈에 볼 수 있는 곳',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
@@ -1296,14 +1306,16 @@ document.querySelectorAll('.theme:not(.site-share)').forEach(b=>b.onclick=()=>{c
  r.dataset.theme=n;try{localStorage.setItem('metaxis_theme',n);}catch(e){}});
 try{if(localStorage.getItem('metaxis_op'))document.querySelectorAll('.op-edit,.op-only').forEach(a=>a.hidden=false);}catch(e){} // 운영자로 로그인한 기기에만 '수정' 표시
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
-function pageLinks(p,n){const s=new Set([0,n-1,p-1,p,p+1]);let h=p>0?`<button data-p="${p-1}" aria-label="이전">‹</button>`:'',last=-1;
- for(let i=0;i<n;i++){if(!s.has(i))continue;if(i-last>1)h+='<span>…</span>';h+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;last=i;}
- return h+(p<n-1?`<button data-p="${p+1}" aria-label="다음">›</button>`:'');}
-boxes.forEach(box=>{const items=[...box.children],pager=box.nextElementSibling,n=Math.ceil(items.length/PER);
- box._go=(p,scroll)=>{items.forEach((a,i)=>a.hidden=Math.floor(i/PER)!==p);pager.hidden=false;pager.innerHTML=box.closest('section.cat')?'':(n>1?pageLinks(p,n):''); // 홈: 쪽 번호 없이 8개만, 나머지는 '지난 기록 더 보기'에서
+function pageLinks(p,n){const b0=Math.floor(p/10)*10,b1=Math.min(n,b0+10);let nums='';  // 쪽 번호는 10개씩 한 번에(1~10, 11~20 …)
+ for(let i=b0;i<b1;i++)nums+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;
+ const bt=(q,l,t,x)=>`<button data-p="${q}" class="arw ${x}" aria-label="${l}"${q<0||q>=n?' disabled':''}>${t}</button>`;
+ return (n>10?bt(b0-10<0?-1:b0-10,'이전 10쪽','«','fl'):'')+bt(p-1,'이전','‹','pv')+`<span class="nums">${nums}</span>`+bt(p+1<n?p+1:n,'다음','›','nx')+(n>10?bt(b1<n?b1:n,'다음 10쪽','»','fr'):'');}
+const HOME_M=matchMedia('(max-width:600px)');  // 모바일 홈은 분야별 4개만(더 보려면 '지난 기록 더 보기')
+boxes.forEach(box=>{const items=[...box.children],pager=box.nextElementSibling,per=()=>box.closest('section.cat')&&HOME_M.matches?4:PER,n=Math.ceil(items.length/per());
+ box._go=(p,scroll)=>{const k=per();items.forEach((a,i)=>a.hidden=Math.floor(i/k)!==p);pager.hidden=false;pager.innerHTML=box.closest('section.cat')?'':(n>1?pageLinks(p,n):''); // 홈: 쪽 번호 없이 8개만, 나머지는 '지난 기록 더 보기'에서
   pager.querySelectorAll('button').forEach(b=>b.onclick=()=>box._go(+b.dataset.p,true));
   if(scroll)box.closest('section').scrollIntoView({behavior:'smooth'});};
- box._go(0);});
+ box._go(0);HOME_M.addEventListener&&HOME_M.addEventListener('change',()=>box._go(0));});
 function show(c){tabs.forEach(x=>x.classList.toggle('on',x.dataset.cat===c));secs.forEach(s=>s.hidden=c!=='all'&&s.dataset.cat!==c);}
 tabs.forEach(b=>b.onclick=()=>show(b.dataset.cat));
 document.querySelectorAll('a[data-tab]').forEach(a=>a.onclick=e=>{e.preventDefault();show(a.dataset.tab);document.querySelector('.tabs').scrollIntoView({behavior:'smooth'});});
@@ -2222,20 +2234,16 @@ def pager_html(p, n, href):
     """정적 페이지 번호. href(i)는 i번째(0부터) 페이지 주소."""
     if n <= 1:
         return ""
-    show = {0, n - 1, p - 1, p, p + 1}
-    h, last = [], -1
-    if p > 0:
-        h.append(f'<a href="{href(p - 1)}" aria-label="이전">‹</a>')
-    for i in range(n):
-        if i not in show:
-            continue
-        if i - last > 1:
-            h.append("<span>…</span>")
-        h.append(f'<a href="{href(i)}"{" class=on aria-current=page" if i == p else ""}>{i + 1}</a>')
-        last = i
-    if p < n - 1:
-        h.append(f'<a href="{href(p + 1)}" aria-label="다음">›</a>')
-    return '<nav class="pager" aria-label="페이지">' + "".join(h) + "</nav>"
+    b0 = p // 10 * 10  # 쪽 번호는 10개씩 한 번에(1~10, 11~20 …)
+    b1 = min(n, b0 + 10)
+
+    def arw(q, label, t, cls):
+        return (f'<a class="arw {cls}" href="{href(q)}" aria-label="{label}">{t}</a>' if 0 <= q < n
+                else f'<span class="arw {cls} off" aria-hidden="true">{t}</span>')
+    nums = "".join(f'<a href="{href(i)}"{" class=on aria-current=page" if i == p else ""}>{i + 1}</a>' for i in range(b0, b1))
+    h = (arw(b0 - 10, "이전 10쪽", "«", "fl") if n > 10 else "") + arw(p - 1, "이전", "‹", "pv") + f'<span class="nums">{nums}</span>' \
+        + arw(p + 1, "다음", "›", "nx") + (arw(b1, "다음 10쪽", "»", "fr") if n > 10 else "")
+    return '<nav class="pager" aria-label="페이지">' + h + "</nav>"
 
 
 # ---------------------------------------------------------------- 에디터 글
@@ -2607,8 +2615,10 @@ def render_home(data, cats, posts):
             f'</div>'
             f'<aside><div class="side-h"><h2>주요 소식</h2><a href="#all" data-tab="all">전체 보기</a></div>{side}</aside></div>')
     if posts:
-        parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터</h2><a href="editor/">전체 보기 →</a></div>'
-                     f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:3])}</div>')
+        parts.append(f'<div class="editor-h" style="--c:{EDITOR_COLOR}"><h2 class="serif">에디터</h2><span class="eh-r">'
+                     '<button type="button" class="enav" data-d="-1" aria-label="이전 글">‹</button><button type="button" class="enav" data-d="1" aria-label="다음 글">›</button>'
+                     '<a href="editor/">전체 보기 →</a></span></div>'
+                     f'<div class="egrid">{"".join(post_card(p, "") for p in posts[:12])}</div>')
     info = f'{d.month}월 {d.day}일 ({WEEKDAYS[d.weekday()]}) · {esc(data["generated_at"][11:16])} 업데이트'
     parts.append(f'<div class="kw" data-kg="{esc(json.dumps(KW_GROUPS, ensure_ascii=False))}"><strong>오늘의 키워드</strong>'
                  + "".join(f'<button type="button" class="kwb" data-t="{esc("|".join(kw_terms(k)))}">#{esc(k)}</button>' for k in top_keywords(items))
