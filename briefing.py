@@ -636,7 +636,7 @@ ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;bord
 [hidden]{display:none!important}
 @media (max-width:960px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:repeat(2,1fr)}
 .bar .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:10px 16px}
-.bar nav{order:2;flex:1 0 100%;justify-content:flex-start;gap:20px;margin:0 -16px;padding:2px 16px}
+.bar nav{order:2;flex:1 0 100%;justify-content:flex-start;flex-wrap:wrap;overflow:visible;gap:4px 18px;margin:0;padding:2px 0}
 .search{order:3;width:100%}.search input{font-size:16px}}
 @media (max-width:600px){.connect{gap:6px 16px}.connect h4{display:none}.connect a{font-size:14px;gap:6px}.connect a svg{width:15px;height:15px}}
 @media (max-width:600px){body{font-size:16px;line-height:1.65}.wrap{padding:0 16px}
@@ -1191,7 +1191,7 @@ def render_editor_pages(posts, cats, sc):
             f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
             f'<div class="meta"><span>{ICON_CLOCK}{fmt_time(p.get("date"))}</span></div></div></article>' for p in chunk)
-        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 오른쪽 위 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
+        rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요. 위의 <b>운영자 글쓰기</b>를 눌러 첫 글을 올려 보세요.</p>'
         body = (f'<div class="ph"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
                 f'<a class="btn-w" href="write.html">✎ 운영자 글쓰기</a></span></div>'
                 f'<div class="elist">{rows}</div>{pager_html(pg, n, href)}')
@@ -1227,9 +1227,9 @@ def render_editor_pages(posts, cats, sc):
 
 WRITE_HTML = """<div class="post" id="w" data-repo="{REPO}"><h1 class="serif">에디터 글쓰기</h1>
 <section id="v-setup" hidden><p>이 기기에서 처음 쓰는 거라 한 번만 설정이 필요해요.</p>
-<ol class="meta" style="display:block;line-height:1.9"><li><a class="more" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub 토큰 만들기 페이지</a>를 열어요.</li>
+<ol class="meta" style="display:block;line-height:1.9"><li><a class="more" href="https://github.com/settings/personal-access-tokens/new?name=METAXIS+editor&amp;description=METAXIS+%EC%97%90%EB%94%94%ED%84%B0+%EA%B8%80%EC%93%B0%EA%B8%B0&amp;target_name=Alexkim9113&amp;expires_in=none&amp;contents=write" target="_blank" rel="noopener">GitHub 토큰 만들기 페이지</a>를 열어요.</li>
 <li>Repository access에서 <b>Only select repositories</b> → <b>ai-briefing</b> 선택</li>
-<li>Permissions → Repository permissions → <b>Contents: Read and write</b></li>
+<li>Permissions에 <b>Contents: Read and write</b>가 들어가 있는지 확인 (링크로 열면 자동으로 채워져요)</li>
 <li>맨 아래 Generate token을 누르고 나온 토큰을 복사해서 아래에 붙여넣어요.</li></ol>
 <p><input id="tok" class="inp" placeholder="github_pat_로 시작하는 토큰" autocomplete="off"></p>
 <p><input id="pin1" class="inp pin" inputmode="numeric" maxlength="4" type="password" placeholder="비밀번호 4자리">
@@ -1252,7 +1252,14 @@ WRITE_HTML = """<div class="post" id="w" data-repo="{REPO}"><h1 class="serif">�
 .btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--accent);color:#fff;cursor:pointer;display:inline-block}
 .btn.ghost{background:var(--soft);color:var(--accent)}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
 .thumbs{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}.thumbs figure{margin:0;width:140px}.thumbs img{width:140px;height:90px;object-fit:cover;border-radius:8px}
-.thumbs label{font-size:12.5px;color:var(--muted)}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
+.thumbs label{font-size:12.5px;color:var(--muted)}
+@media (max-width:600px){.post#w h1{font-size:25px}.pin{width:calc(50% - 6px)}#v-lock .pin{width:100%;font-size:22px}
+#setup-go,#new{width:100%;padding:14px}#v-list .meta,#setup-msg{display:block;margin-top:8px}
+.plist li{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.plist li b{flex:1 0 100%}.plist button{margin:0;padding:8px 14px}
+#v-edit label.btn{display:block;text-align:center;padding:12px;margin-bottom:8px}#body{min-height:40vh}
+.thumbs figure,.thumbs img{width:calc((100vw - 56px)/3)}.thumbs img{height:auto;aspect-ratio:3/2}
+#v-edit>p:last-child{position:sticky;bottom:0;background:var(--bg);padding:10px 0 calc(10px + env(safe-area-inset-bottom));margin:0 0 -10px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);z-index:5}
+#v-edit>p:last-child .btn{flex:1;padding:14px}#edit-msg{flex:1 0 100%}}.plist{list-style:none;padding:0}.plist li{padding:12px 0;border-bottom:1px solid var(--line)}
 .plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
