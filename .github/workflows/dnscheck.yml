@@ -8,3 +8,5 @@ jobs:
           for n in metaxis.kr www.metaxis.kr; do echo "== $n"; dig +short $n A; dig +short $n CNAME; dig +short @8.8.8.8 $n A; done
           echo "== NS"; dig +short metaxis.kr NS
           curl -sI -m 15 http://metaxis.kr | head -5 || true
+          echo "== https"; curl -sI -m 15 https://metaxis.kr | head -3 || echo "https not ready"
+          curl -sI -m 15 https://alexkim9113.github.io/ai-briefing/ | grep -i "^location\|^HTTP" || true
