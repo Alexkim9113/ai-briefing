@@ -1,7 +1,19 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T17:51+09:00",
+ "generated_at": "2026-09-28T17:57+09:00",
  "items": [
+  {
+   "id": "67dd4805323458d6",
+   "title": "앤트로픽, 클로드로 이론물리학 난제 ‘9루프 산란 진폭’ 계산 성공",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215716",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T17:53:56+09:00",
+   "summary": "이론 물리학자이자 과학 작가 맷 폰 히펠이 현대 AI의 능력 한계를 시험하기 위해 제기했던 물리학 난제 도전 과제가 앤트로픽의 '클로드'에 의해 한 달 만에 정복됐다.",
+   "detail": "이론 물리학자이자 과학 작가 맷 폰 히펠이 현대 AI의 능력 한계를 시험하기 위해 제기했던 물리학 난제 도전 과제가 앤트로픽의 '클로드'에 의해 한 달 만에 정복됐다.\n앤트로픽은 25일(현지시간) 과학 연구 플랫폼 ‘클로드 사이언스(Claude Science)’에서 클로드 페이블 5.1이 이론물리학의 고난도 계산 과제인 ‘9루프 산란 진폭(nine-loop scattering amplitude)’ 계산에 성공했다고 밝혔다.\n기존 최고 기록인 8루프를 넘어선 결과다.",
+   "thumb": ""
+  },
   {
    "id": "6910e1dd660af76d",
    "title": "사과 과수원 누비는 농업용 로봇, 현장 실증으로 완성도 높인다!",
@@ -12,6 +24,30 @@
    "published": "2026-09-28T17:44:58+09:00",
    "summary": "이승돈 농촌진흥청장은 28일, 오후 경상북도 포항시 죽장면에 있는 사과 재배단지를 방문해 방제, 운반, 예찰 등 농업용 로봇의 활용 현황을 살피고, 농업인과 관계자 의견을 청취했다.",
    "detail": "이승돈 농촌진흥청장은 28일, 오후 경상북도 포항시 죽장면에 있는 사과 재배단지를 방문해 방제, 운반, 예찰 등 농업용 로봇의 활용 현황을 살피고, 농업인과 관계자 의견을 청취했다.\n농업용 로봇 실증 지원사업은 농촌진흥청이 개발한 농업용 로봇(방제·운반·예찰) 3종의 현장 적용성 및 농작업 효율성을 검증하기 위해 2023년부터 추진되고 있다.",
+   "thumb": ""
+  },
+  {
+   "id": "32acf9e4a5755019",
+   "title": "AI 불안 확산에 '인간 과학자 vs AI' 연구 맞대결서 '협력'으로 선회",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215726",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T17:42:08+09:00",
+   "summary": "생명과학 분야에서 인간 과학자와 AI의 능력을 정면 비교하려던 실험이 학계의 거센 우려를 반영해 협력 중심의 방식으로 바뀌었다.",
+   "detail": "생명과학 분야에서 인간 과학자와 AI의 능력을 정면 비교하려던 실험이 학계의 거센 우려를 반영해 협력 중심의 방식으로 바뀌었다.\n25일(현지시간) 디 인포메이션에 따르면, 무세포 단백질 합성 분야를 연구하는 징코 바이오웍스(Ginkgo Bioworks)는 당초 마이클 주엣 스탠퍼드대학교 교수와 오픈AI의 최첨단 미공개 AI 에이전트가 단백질 설계 능력을 겨루는 ‘마이크 vs 기계(Mike Versus the Machines)’ 경연을 준비했다.",
+   "thumb": ""
+  },
+  {
+   "id": "b1778dbb687e5ad0",
+   "title": "제브, 클로드 오퍼스 5 지원받아 '포켓몬' 명예의 전당 입성",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215712",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T17:30:00+09:00",
+   "summary": "의사결정 특화 AI 모델 '제브(Jev)'가 앤트로픽의 클로드 오퍼스 5의 지원을 받아 게임 ‘포켓몬스터 레드’를 단 일주일 만에 클리어하고 명예의 전당에 입성했다. 기존 챗봇들이 게임을 완료하는 데 수주에서 수개월이 걸렸던 것과 비교하면 획기적인 성과다.",
+   "detail": "의사결정 특화 AI 모델 '제브(Jev)'가 앤트로픽의 클로드 오퍼스 5의 지원을 받아 게임 ‘포켓몬스터 레드’를 단 일주일 만에 클리어하고 명예의 전당에 입성했다.\n기존 챗봇들이 게임을 완료하는 데 수주에서 수개월이 걸렸던 것과 비교하면 획기적인 성과다.\n스타트업 스탠다드 에이전트(Standard Agents)의 앤드류 보이드 창립자는 23일(현지시간) 제브가 포켓몬스터 레드에서 사천왕과 챔피언을 모두 물리쳤다고 밝혔다.",
    "thumb": ""
   },
   {
@@ -84,6 +120,18 @@
    "published": "2026-09-28T16:48:20+09:00",
    "summary": "미국과 러시아가 치명적 자율무기 사용을 규제하기 위한 유엔 협상에서 AI가 지정한 공격 목표를 사람이 사전에 검토해야 한다는 핵심 안전 조항을 삭제한 것으로 전해졌다.",
    "detail": "미국과 러시아가 치명적 자율무기 사용을 규제하기 위한 유엔 협상에서 AI가 지정한 공격 목표를 사람이 사전에 검토해야 한다는 핵심 안전 조항을 삭제한 것으로 전해졌다.\n워싱턴포스트는 26일(현지시간) 9월 초 스위스 제네바에서 열린 유엔 ‘치명적 자율무기 체계(LAWS)’ 정부 전문가 그룹 협상 마지막 날 미국과 러시아 대표단이 약 15시간 동안 문구를 집중적으로 수정했다고 보도했다.",
+   "thumb": ""
+  },
+  {
+   "id": "3db86af38953f48b",
+   "title": "모빌린트 “LG·두산·대동 로봇 맞춤형 온디바이스 AI 반도체 개발할 것”",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215731",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T16:40:00+09:00",
+   "summary": "모빌린트가 LG전자, 두산로보틱스, 대동과 온디바이스 AI 반도체 개발 협업에 나선다. 국내 대표 제조기업들과 개발 초기 단계부터 요구사항을 맞춰가며 ‘제품 최적화 반도체’를 개발한다는 점에서 차별화된다.",
+   "detail": "모빌린트가 LG전자, 두산로보틱스, 대동과 온디바이스 AI 반도체 개발 협업에 나선다.\n국내 대표 제조기업들과 개발 초기 단계부터 요구사항을 맞춰가며 ‘제품 최적화 반도체’를 개발한다는 점에서 차별화된다.\nAI 반도체 전문 모빌린트(대표 신동주)는 산업통상부(한국산업기술기획평가원)가 추진하는 ‘K-온디바이스 AI 반도체 기술개발사업’ 4개 과제에 참여해 LG전자·두산로보틱스·대동과 온디바이스 AI 반도체 기술 개발에 나선다고 28일 밝혔다.",
    "thumb": ""
   },
   {
@@ -428,6 +476,42 @@
    "hot": 6
   },
   {
+   "id": "661fff4a1b35aa81",
+   "title": "Artificial Intelligence(AI) Inspection Market Is Projected to Grow to $63.81 Billion by 2030, Exhibiting a CAGR of 18.4%",
+   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWHVpYnpRc1UydjBzQkk3NUZpcDlkbmVPb2R6OTlSa3dWWF9TdlhZdU1zVDZmYmlJRU9OdlVUOTBwQllVZmZGVTdxa0lDNnZ4bE1DblEyVUZqUW84elQxRnVDOUNsaXMwSjVnWW5CSl92dnpWOXdBbTY0ZlM2UUlJVjZXS3BlYmI5RzRWM3A4MDZ4M1VmN1U4RTl0cnJWWEs4SXpKdEVpOFVWbHRnU0JxWVN6VGxKRzRYZW55bmM0QjEzdkVuQkM1SS0ySG9ES1hZbHNQOUt3bFVVaEtBS0JiTlViYTRSVlNvTnlUM3pwRQ?oc=5",
+   "source": "EIN News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T08:51:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "인공지능(AI) 검사 시장, 2030년까지 638억 1천만 달러 규모로 성장할 전망… 연평균 성장률(CAGR) 18.4% 기록",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "cdc0dbe19b27b68d",
+   "title": "모두를 위한 AI 해법 찾는다⋯ 29일 ‘춘천 AI 포럼’",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBSaHJib1A5dEpaVU9LYTJxazJDWXlmeTZMcHJ6dWxseHNVNWNGNnZRaDB4NmRwNmVLWVd0TmdVYl9KaFE2TnQ1bXZHTFVNMUE?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:44:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "3362f8b568d75cea",
+   "title": "충남 인공지능 데이터센터 잇단 추진… 전력·용수 부담 따져야",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBSY1pYb09RRnA3X2FYOWxaVm1mT2g2X1pIbHNIRGl4NXNEMmxJN3Q3ZVI3aHZpanZpa2NicGVDR01MOExqYXJ5dkZ2REJabTg?oc=5",
+   "source": "v.daum.net",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T08:43:59+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "c9b5c0c9b9961d6e",
    "title": "세계 각국, AI 규제 뒤쳐져...美中 선례 대기 중",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE90UzVhUkpPWmlvNk5Ma0RwcWVhUjFLS2p0dXdrNDVUOU0yaWp0bjZWSG01VnQ4UlhHbmJBcElmZzNiVV9jT01nUDh1YmMzQXJrNmNydGNLS213Zw?oc=5",
@@ -572,6 +656,20 @@
    "published": "2026-09-28T08:00:00+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "64518cad73d2f295",
+   "title": "States Are Leading the Way on AI Safety Regulation",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWUhHSWFVNEMxaFJDT3RBdWNZVFRCVWNCczdCMXhVdllRRzktLUxEZHhCNHAtbUp2SnZOajJmWVJLcGdOdnlDTVdCOEVlbC13SXJlVHlyaEZnMVptcU85Q0VyblUtMmlIb29tN3dwWkZoMnJpel85QUlTYk0xYlJhNmNXUUlvamYzREU5Y0tCRUE?oc=5",
+   "source": "WSJ",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T08:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI 안전 규제 분야에서 주도적인 역할을 하고 있는 주 정부들",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "76b2dcaa89cee139",
@@ -816,18 +914,6 @@
    "thumb": ""
   },
   {
-   "id": "09618efa4b7e66f8",
-   "title": "[단독] 정부, ‘국가대표 AI’ 중단 검토...세금 5조 투입하는 SPC 설립 논의",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdmVNYjlTWkg5UFZ1eHNmbHRXNWJuZVVWR3dlSFVOV0J0SUVPTm84TjFZM2FWZll3N2JoQXg2OWxqRFZUd0NzYmd5a1ozblZHVXA3czBGb0FOelIzSHVoUWVrdTNMVEdEaDBVSkNWWGR6TnItUjFyRUtxc1RQcGRvc2RWaw?oc=5",
-   "source": "조선일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:49:35+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 0
-  },
-  {
    "id": "402b5453964c27e4",
    "title": "Pepperdine Hosts Two-Day Human-Centered AI Conference",
    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRnlVdXhzbHMyRlZXUDk4R3lyNkctMEFwYl9yTjRKQUt6NGYybFZrcENiOFpnN3kzZWRNREpiOGgyeHkwZ3cwcjhpb054VWxPUjNiLVZwNkR0c1JGS25hVHFQSEJlLU1YVVQ2VWdBMl81ekxyUWxlQXlxSWd2TV9NNlVTTEpvOWNfZUpsb193?oc=5",
@@ -840,61 +926,6 @@
    "title_ko": "페퍼다인 대학교, 이틀간 ‘인간 중심 AI’ 컨퍼런스 개최",
    "tr": "deepl",
    "trv": 2
-  },
-  {
-   "id": "1a38916787915e23",
-   "title": "배차 넘어 주문도 인공지능…배달업계 AI 활용 드라이브",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80RXdJUmRMZjJEN2Nxclkwc1VZbHNRSWVlb3BUeGJpaFBkcFVVYWpoUmRseXJNOFpqcG1iX0JETklJZ1ZIMVE2LVgxQ1hmbFIzWHJvejVJVThoRGtselE?oc=5",
-   "source": "아시아타임즈",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:42:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "27aeb6f9e7592cfd",
-   "title": "울산·전남광주 손잡았다…자동차·AI·에너지 ‘초광역 동반성장’ 시동",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvT3F3Vm1IWkJ6WGlKTWtfczhXRU43U0ZOWkRVaHNqUHdpWGh4Rlh0T3BRdG5YWmw2ZGk4R083TTV0clJHN3F1MU1qVl9rWWc?oc=5",
-   "source": "v.daum.net",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:40:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f0fd1559d04523e7",
-   "title": "MS “韓 생성형 AI 사용률 40% 첫 돌파…세계 12위로 상승”",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5pZVFKV2k1UnVBdzRWanFkR1Q4RXU3MmhXMm9Lem9mVDdLOFczX1FxQlF4b1JjWklMV0pETmhCdFBPUWdFeVBfTHhpQ0F5Zw?oc=5",
-   "source": "전자신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:38:20+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "fe20d989eef97499",
-   "title": "울산-전남광주, 산업 인공지능 전환 맞손… 문화·관광도 협력",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zdnJGVWtscXNlTDE5bUpQUWpia0xpSXVvTFNmTk1WdTZYaXpaRzBDTU1LeTRPckZIdE9od29CbDNOSHNQRjZaSjFNVmZGLTNhRnF3WmhNdHVhTDRnY2RSeUMwUGw?oc=5",
-   "source": "한겨레",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:38:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6b94952b0323790d",
-   "title": "인공지능 기반 계정 해킹이 다크 웹에서 만연하고 있습니다.",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTGs3RFgxc3p5bWg4S0ljWEE0YVg4REtYckU0UHowYWxqbHVrUzVZeXlqbXhEMHV1U1E0WE41cUFnQ0laWVpaLVVYNnFfMk5SMmRpZ1NYRmNIR01zSkFPUzVHcmpIVy14bGZqZUNVX3k3TjFqYXA1MU9PUG5tS1o2MTRyWTBIT1VSOFE?oc=5",
-   "source": "Vietnam.vn",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T06:37:29+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "942abf1b1b872b10",
@@ -2779,22 +2810,6 @@
    "trv": 2
   },
   {
-   "id": "8bab571166967e41",
-   "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
-   "link": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
-   "source": "The Decoder",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-27T11:01:13+00:00",
-   "summary": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a conversation.",
-   "thumb": "",
-   "title_ko": "엔비디아, 최대 8명의 화자를 실시간으로 식별하는 1억 파라미터 무료 모델 공개",
-   "detail_ko": "엔비디아는 대화 중 특정 순간에 누가 말하고 있는지 식별하는 AI 모델인 ‘네모트론 3 다이아리제이션(Nemotron 3 Diarization)’을 출시했다.",
-   "summary_ko": "엔비디아는 대화 중 특정 순간에 누가 말하고 있는지 식별하는 AI 모델인 ‘네모트론 3 다이아라이제이션(Nemotron 3 Diarization)’을 출시했다.",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "998f6b2f76aa75e0",
    "title": "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX3U0dW9FbGNsVVd0bGt4MlRzRTBZMkE2NWZOYUZlUkxOd3puUEwxdkR1YXNIaHdFNUtaYzJ3cGlOTHM2ckdBbHhLZmYtbUlnalJ2QmZYVS00RFROaksyY01xUnRCSXFzcEppNElYd1NOV21KNWJXVEVPVHBVZUppSEZPRVQzVmhtdlA4ZWp4emlaQmwxblpxVjRVWGM0dw?oc=5",
@@ -3102,9 +3117,9 @@
   },
   {
    "name": "Europe PMC · 의료",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+   "ok": true,
+   "count": 6,
+   "fetched": 10
   },
   {
    "name": "Google AI Blog",
@@ -3116,7 +3131,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
@@ -3134,7 +3149,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 90
+   "fetched": 92
   },
   {
    "name": "Google News: AI 기업",
@@ -3175,8 +3190,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -3349,14 +3364,14 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스 주요 뉴스: IT",
@@ -3392,7 +3407,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 69
+   "fetched": 70
   },
   {
    "name": "스테이지5",
