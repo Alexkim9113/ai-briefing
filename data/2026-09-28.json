@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T13:51+09:00",
+ "generated_at": "2026-09-28T13:54+09:00",
  "items": [
   {
    "id": "5a871f1b164a4c7d",
@@ -578,6 +578,17 @@
    "thumb": ""
   },
   {
+   "id": "7b91b4d0b8029c7c",
+   "title": "충남도, 생성형 AI로 농업 재해 업무시스템 개발",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9SZTdibVpnZ2Z1V1JjbnQ0LUpCT2h0QVlhM0g0c3VJWUlNZ1VMQ04zeTgwU09pYUFCeTJwYUktM1l0eVV6XzBJLS1jMWphaGs?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:58:07+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "ae276a9db5d2f8e9",
    "title": "야놀자, '인공지능 페스타'서 여행·주거·호텔 운영 AI 기술 선뵌다",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pSWFmR2p2UGNfSFJBTE1UZ1VuVVFTZl81YkdQaXNDOTVubTBqRzEwQktxN01RcTJCYjJLUzllR1BIcmc1c2FkYW9RNTF0YWJkTDhIazZ3ODRhMFJaVTVnOUFtS2NYcnpLWnc?oc=5",
@@ -1116,17 +1127,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T00:10:40+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "0602177b9228005a",
-   "title": "울산소방본부 “인공지능(AI)으로 혁신하고, 데이터로 대응한다”",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5POENmZGdmNXMyMEotTGMwOThERm9pLTk2d0M5YWNEVVpvNTNRcWxrOThIbDUtYVFhYlRybGZGVndjTzZxdTNJOEd6TnBNSmxPMV9zczgzcndOYnFxeTJqNFFTV1RHQkpmOWc?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:10:18+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2583,7 +2583,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News: AI",
@@ -2595,7 +2595,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 80
   },
   {
    "name": "Google News: AI 기업",
@@ -2642,8 +2642,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2677,15 +2677,15 @@
   },
   {
    "name": "TED",
-   "ok": true,
-   "count": 1,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TED-Ed",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "fetched": 15
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TEDx Talks",
@@ -2774,8 +2774,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2805,13 +2805,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 44
+   "fetched": 43
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 50
+   "fetched": 51
   },
   {
    "name": "스테이지5",
