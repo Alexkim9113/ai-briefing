@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:24+09:00",
+ "generated_at": "2026-09-28T09:26+09:00",
  "items": [
   {
    "id": "1d2fb5cd0f0af97c",
@@ -53,12 +53,32 @@
    "thumb": ""
   },
   {
+   "id": "853d1064b10d3503",
+   "title": "\"잊고 있던 자동결제 잡아낸다\"…'구독 경제' 위협하는 AI",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE51UGRreGF3NXg3bDRqU0R4U2NUbllQQV9QbVR1TWVFcWNlNUszSkFZREpSdnl4Wi1LQUdHbFd6SXJuNmx4MUJTZDY0Yjdvdlk?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-28T00:21:50+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "044efe812f4dc4da",
    "title": "Trump To Meet Anthropic CEO As AI Regulation Debate Deepens",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQUZPQm1xU2JMY1B4UTJJZ19XdUhiTVAtTXhkb2h3WWxkUTd2cEdjRXdTR0Z6aU5aNkctMmNGNXJsbDdYT0x5RFdLcUtQU2ozWFN6TG9OTEtHZmE1bWRIWXgtRDZQVng4U2RBN3R0bmNfaEZ6bWdsdTVfZFpINFhJby0tbl9LQWhRZ0NLa3ktM2VsVkRHRnFUamRiWjJZZEtLWUwyLWpxMA?oc=5",
    "source": "Google News: AI regulation",
    "category": "policy",
    "published": "2026-09-28T00:17:45+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "5fe64240e41ee2db",
+   "title": "충남도 농축산국, 생성형 AI로 농업업무 시스템 직접 개발",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5QbWJJRDBLT1RhUmlUNklXQldvQ2loS2VVTDEtRGRWWGRIYUJma0g1c2k3bkQ5UjlvWWc0Qmx2c1lqUnlfN2FtM1pMa3JIbFZULW9DbTRya1h2RDdLN2lrTXBvWmVKZl9KNm43NQ?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:15:19+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -186,8 +206,8 @@
    "id": "88b9df154621717e",
    "title": "AI 발전 못 따라가는 정부 정책…기업이 규칙 만드는 상황 도래",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Rbk9zdHN5N2EyNmFfR2dSRS00M1daOV9IZVMxQVByVWFqUW10NXRpdnVRQnV1NVFnaGpRQldjcVNadHpCVEZiTDhORkNoMjQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
    "published": "2026-09-27T23:24:41+00:00",
    "summary": "",
    "thumb": ""
@@ -283,12 +303,12 @@
    "thumb": ""
   },
   {
-   "id": "cfe39dba6ca972ec",
+   "id": "0b5bcc11c15c5518",
    "title": "[AI 프리즘] 'AI 규제 갈등' 앤트로픽 CEO, 트럼프와 백악관 단독 만찬...껄끄러운 관계 청산할까",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vQ1dDRWxnQS1XNXpkYWNMRVRuRHF1cUozX2xRcmpJakdYLWFWU0hMRmtJcmpLZk9yUWlVYkdLWWNlRjVodzZkZTlHdFpPcWo2aWVRWGcwZk5nQl84MGdDZkVrZnJ2Vi1oLV9xVHBB0gFuQVVfeXFMTW9DV0NFbGdBLVc1emRhY0xFVG5EcXVxSjNfbFFyaklqR1gtYVZTSExGa0lyaktmT3JRaVViR0tZY2VGNWh3NmRlOUd0Wk9xajZpZVFYZzBmTmdCXzgwZ0NmRWtmcnZWLWgtX3FUcEE?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE45bzFlTUE4em41V2lja1NPNzdWRzNiS2xETU5VdDdxTnM0MUI5a3dsMnJyczdvanh3Q09QWTVHbXFFeDZHdzZrUWV0X3p6R1VrZ3dWNmpYQ25tYjJRdHZCczBWNmQ4ZURRTWlj0gFuQVVfeXFMTW9DV0NFbGdBLVc1emRhY0xFVG5EcXVxSjNfbFFyaklqR1gtYVZTSExGa0lyaktmT3JRaVViR0tZY2VGNWh3NmRlOUd0Wk9xajZpZVFYZzBmTmdCXzgwZ0NmRWtmcnZWLWgtX3FUcEE?oc=5",
    "source": "구글뉴스: AI 정책",
    "category": "policy",
-   "published": "2026-09-27T22:01:46+00:00",
+   "published": "2026-09-27T21:51:07+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -623,16 +643,6 @@
    "thumb": ""
   },
   {
-   "id": "2eeb9c10ad70be60",
-   "title": "CG 없이 대규모 전쟁·액션신 뚝딱…생성형 AI 활용 본격화",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLXBIS3paaXNrSEVnSXdPUGtvdkpTczc0WDI3akg1NFhkTUZxOVZkMFRzZzlLUHluNWpQNVRJdXlaZlAzbjI0YXhLbVB0ZEJ4TEM5enF5UHpjMkJ6RFhOWFo1STQ4aWY2UEV3OW5MdmI0OW1YZTBha3JfS0Z6cm8ta1dNbFZabEEtWDBZV1R3?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T08:25:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "7777e45713742871",
    "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
    "link": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
@@ -673,13 +683,163 @@
    "thumb": ""
   },
   {
+   "id": "c39d3732b86df64a",
+   "title": "Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs",
+   "link": "https://huggingface.co/papers/2609.29845",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-23T20:00:00+00:00",
+   "summary": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text…",
+   "thumb": ""
+  },
+  {
+   "id": "48ed5d53175a2a3a",
+   "title": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
+   "link": "https://huggingface.co/papers/2609.30221",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-23T20:00:00+00:00",
+   "summary": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels.",
+   "thumb": ""
+  },
+  {
+   "id": "92e245d70511c8ea",
+   "title": "Rufus-Air: An Open LLM Post-Training Recipe",
+   "link": "https://huggingface.co/papers/2609.29421",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-23T20:00:00+00:00",
+   "summary": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL…",
+   "thumb": ""
+  },
+  {
+   "id": "d862aca1901364c6",
+   "title": "Training Object Permanence in World Models",
+   "link": "https://huggingface.co/papers/2609.28654",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-22T20:00:00+00:00",
+   "summary": "Object permanence and solidity are hallmarks of human cognitive priors.",
+   "thumb": ""
+  },
+  {
+   "id": "56b35df7aa8226f1",
+   "title": "The Past Frames the Future: Memory for Autoregressive Video Generation",
+   "link": "https://huggingface.co/papers/2609.28466",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-22T20:00:00+00:00",
+   "summary": "Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments.",
+   "thumb": ""
+  },
+  {
+   "id": "8f308b0e1d8ffeb1",
+   "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+   "link": "https://huggingface.co/papers/2609.27334",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-22T20:00:00+00:00",
+   "summary": "Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is…",
+   "thumb": ""
+  },
+  {
+   "id": "07b58d37b3acc6ca",
+   "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
+   "link": "https://huggingface.co/papers/2609.28416",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-22T20:00:00+00:00",
+   "summary": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments.",
+   "thumb": ""
+  },
+  {
+   "id": "1d00d76af2ce26d4",
+   "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
+   "link": "https://huggingface.co/papers/2609.26780",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-21T20:00:00+00:00",
+   "summary": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each…",
+   "thumb": ""
+  },
+  {
+   "id": "11e69b866c879181",
+   "title": "PACT: From Credit Assignment to Critic Alignment",
+   "link": "https://huggingface.co/papers/2609.26355",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-21T20:00:00+00:00",
+   "summary": "Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition…",
+   "thumb": ""
+  },
+  {
+   "id": "2352af9e9764aed7",
+   "title": "Capable yet Parsimonious: Extracting and Characterizing Hidden Chain-of-Thought in Frontier Models",
+   "link": "https://huggingface.co/papers/2609.26637",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-21T20:00:00+00:00",
+   "summary": "The rapid capability gains of frontier language models are widely attributed to improved reasoning abilities, yet this cannot be verified as raw CoT traces in closed-source…",
+   "thumb": ""
+  },
+  {
+   "id": "f2fc2dab3ae3ca26",
+   "title": "GeoPair: Geometry-Preserving Cross-Layer Factorization for Training-Free Transformer Compression",
+   "link": "https://huggingface.co/papers/2609.25963",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-21T20:00:00+00:00",
+   "summary": "Transformer architectures exhibit cross-layer redundancies, yet post-training compression pipelines typically optimize layers in isolation or rely on heuristic grouping strategies…",
+   "thumb": ""
+  },
+  {
+   "id": "fa4018eec153851b",
+   "title": "HappyWorld-Bench",
+   "link": "https://huggingface.co/papers/2609.24308",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-20T20:00:00+00:00",
+   "summary": "Evaluating world models requires assessing both the quality of the worlds they generate and their consistency and responsiveness under exploration, interaction, and modification.",
+   "thumb": ""
+  },
+  {
+   "id": "409ed6e622c5fe69",
+   "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+   "link": "https://huggingface.co/papers/2609.23407",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-19T20:00:00+00:00",
+   "summary": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents.",
+   "thumb": ""
+  },
+  {
+   "id": "6fb67b6b8e291bb5",
+   "title": "Spatial-Interactor: Learning Spatial Reasoning through Interaction with the Observable Physical World",
+   "link": "https://huggingface.co/papers/2609.23038",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-18T20:00:00+00:00",
+   "summary": "Spatial reasoning is essential for vision-language models (VLMs) to understand and act in the physical world.",
+   "thumb": ""
+  },
+  {
+   "id": "860d76a3788f02fe",
+   "title": "RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling",
+   "link": "https://huggingface.co/papers/2609.22947",
+   "source": "Hugging Face 오늘의 논문",
+   "category": "papers",
+   "published": "2026-09-18T20:00:00+00:00",
+   "summary": "Reinforcement learning (RL) is vital for optimizing video generation models, with a robust reward model (RM) serving as the cornerstone.",
+   "thumb": ""
+  },
+  {
    "id": "ae17b9f530f32830",
    "title": "「사이버보안 특화 AI 모델 개발」 프로젝트 착수 간담회 개최",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187805",
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "네이버클라우드 컨소시엄의 사이버보안 특화 모델 개발 계획 발표",
+   "summary": "네이버클라우드 컨소시엄의 사이버보안 특화 모델 개발 계획 발표<!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1, \"dv\": 0, \"dr\": 1, \"do\": 1, \"vj\": \"1.1\", \"an\"…",
    "thumb": ""
   },
   {
@@ -689,7 +849,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "-「피지컬 AI 지역거점 발전 포럼」참석하고 피지컬 AI 기술 시연 참관",
+   "summary": "-「피지컬 AI 지역거점 발전 포럼」참석하고 피지컬 AI 기술 시연 참관<!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1, \"dv\": 0, \"dr\": 1, \"do\": 1, \"vj\": \"1.1\"…",
    "thumb": ""
   },
   {
@@ -709,7 +869,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속",
+   "summary": "- 인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속<!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1, \"dv\": 0, \"dr\": 1, \"do\": 1, \"vj\": \"1.1\"…",
    "thumb": ""
   },
   {
@@ -719,7 +879,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환",
+   "summary": "- 노벨상 수상자들과 인공지능 시대 과학기술의 미래에 대한 의견 교환<!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1, \"dv\": 0, \"dr\": 1, \"do\": 1, \"vj\": \"1.1\"…",
    "thumb": ""
   },
   {
@@ -729,7 +889,7 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상",
+   "summary": "- AI 생성 콘텐츠 위변조 방지, 딥페이크 여부 등 진위 판별 기술을 보유한 ‘스틸컷’ 최종 우승하여 부총리 겸 과기정통부 장관상 수상 <!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1…",
    "thumb": ""
   },
   {
@@ -739,7 +899,37 @@
    "source": "과학기술정보통신부 보도자료",
    "category": "policy",
    "published": null,
-   "summary": "- 고위급 정책협의회(6.10) 시 합의된 AI·OTT 분야 협력방안 추진현황 점검",
+   "summary": "- 고위급 정책협의회(6.10) 시 합의된 AI·OTT 분야 협력방안 추진현황 점검<!--[data-hwpjson]{ \"documentPr\": { \"di\": \"\", \"dp\": { \"dn\": \"test.hwp\", \"ta\": 1, \"d1\": 5, \"d2\": 1, \"dv\": 0, \"dr\": 1, \"do\": 1, \"vj\"…",
+   "thumb": ""
+  },
+  {
+   "id": "e128a10c326b8307",
+   "title": "「AI를 일상에서 한글·산수처럼」 전국민 AI 역량 강화 정책, 국민이 직접 이름 짓는다",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187791",
+   "source": "과학기술정보통신부 보도자료",
+   "category": "policy",
+   "published": null,
+   "summary": "- 과기정통부, ｢전국민AI 역량 강화 정책 브랜드 공모전｣ 9.17.~9.30.",
+   "thumb": ""
+  },
+  {
+   "id": "cfe39dba6ca972ec",
+   "title": "[AI 프리즘] 'AI 규제 갈등' 앤트로픽 CEO, 트럼프와 백악관 단독 만찬...껄끄러운 관계 청산할까",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vQ1dDRWxnQS1XNXpkYWNMRVRuRHF1cUozX2xRcmpJakdYLWFWU0hMRmtJcmpLZk9yUWlVYkdLWWNlRjVodzZkZTlHdFpPcWo2aWVRWGcwZk5nQl84MGdDZkVrZnJ2Vi1oLV9xVHBB0gFuQVVfeXFMTW9DV0NFbGdBLVc1emRhY0xFVG5EcXVxSjNfbFFyaklqR1gtYVZTSExGa0lyaktmT3JRaVViR0tZY2VGNWh3NmRlOUd0Wk9xajZpZVFYZzBmTmdCXzgwZ0NmRWtmcnZWLWgtX3FUcEE?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-27T22:01:46+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2eeb9c10ad70be60",
+   "title": "CG 없이 대규모 전쟁·액션신 뚝딱…생성형 AI 활용 본격화",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLXBIS3paaXNrSEVnSXdPUGtvdkpTczc0WDI3akg1NFhkTUZxOVZkMFRzZzlLUHluNWpQNVRJdXlaZlAzbjI0YXhLbVB0ZEJ4TEM5enF5UHpjMkJ6RFhOWFo1STQ4aWY2UEV3OW5MdmI0OW1YZTBha3JfS0Z6cm8ta1dNbFZabEEtWDBZV1R3?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T08:25:00+00:00",
+   "summary": "",
    "thumb": ""
   }
  ],
@@ -747,68 +937,74 @@
   {
    "name": "AI Explained",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 15
   },
   {
    "name": "AI타임스",
    "ok": true,
-   "count": 8
-  },
-  {
-   "name": "Andrej Karpathy",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "Google AI Blog",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 20
   },
   {
    "name": "Google DeepMind",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 100
   },
   {
    "name": "Google News: AI regulation",
    "ok": true,
-   "count": 12
+   "count": 12,
+   "fetched": 81
   },
   {
    "name": "Hugging Face Blog",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 868
   },
   {
    "name": "Hugging Face 오늘의 논문",
    "ok": true,
-   "count": 0
+   "count": 15,
+   "fetched": 50
   },
   {
    "name": "MIT Technology Review",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 10
   },
   {
    "name": "OpenAI",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 1230
   },
   {
    "name": "TechCrunch AI",
    "ok": true,
-   "count": 6
+   "count": 6,
+   "fetched": 20
   },
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 3
+   "count": 3,
+   "fetched": 10
   },
   {
    "name": "Two Minute Papers",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 15
   },
   {
    "name": "VentureBeat AI",
@@ -819,52 +1015,62 @@
   {
    "name": "Yannic Kilcher",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 15
   },
   {
    "name": "arXiv cs.AI",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "arXiv cs.CL",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "arXiv cs.LG",
    "ok": true,
-   "count": 0
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
    "ok": true,
-   "count": 8
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "구글뉴스: AI 정책",
    "ok": true,
-   "count": 12
+   "count": 12,
+   "fetched": 87
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
-   "count": 10
+   "count": 10,
+   "fetched": 65
   },
   {
    "name": "구글뉴스: 인공지능",
    "ok": true,
-   "count": 15
+   "count": 15,
+   "fetched": 100
   },
   {
    "name": "인공지능신문",
    "ok": true,
-   "count": 8
+   "count": 8,
+   "fetched": 50
   },
   {
    "name": "조코딩",
    "ok": true,
-   "count": 1
+   "count": 1,
+   "fetched": 15
   }
  ]
 }
