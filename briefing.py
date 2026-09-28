@@ -2798,7 +2798,8 @@ def render_intro(latest, cats, sc, enter="home.html", preview=False):
     page_ = (ROOT / "intro.html").read_text(encoding="utf-8")
     for k, v in {"{NAME}": esc(sc["name"]), "{DESC}": esc(sc["description"]), "{URL}": sc["url"], "{OG}": og_main(), "{OGV}": og_ver(), "{VERIFY}": verify,
                  "{AI_NOTICE}": AI_NOTICE, "{ROBOTS}": '<meta name="robots" content="noindex">' if preview else '<meta name="robots" content="index,follow,noai,noimageai"><meta name="tdm-reservation" content="1">', "{FAVICON}": FAVICON,
-                 "{DATE}": f"{d.month}월 {d.day}일", "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
+                 "{DATE}": f"{d.year}년 {d.month}월 {d.day}일 ({'월화수목금토일'[d.weekday()]})",
+                 "{UPDATED}": (latest.get("generated_at") or "")[11:16], "{TOTAL}": str(len(items)), "{CATS}": links, "{TICK}": tick}.items():
         page_ = page_.replace(k, v)
     return page_.replace('href="home.html"', f'href="{enter}"')
 
