@@ -624,7 +624,12 @@ section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--acc
 .list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:18px}
 .row{padding:14px 0 12px;border-bottom:1px solid var(--line)}.row h3{margin:0 0 4px;font-size:16px}.row p{-webkit-line-clamp:2;margin-bottom:6px}
 .empty{color:var(--muted);font-size:14px}
-footer{margin-top:56px;line-height:1.7;padding-top:26px;padding-bottom:40px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer{margin-top:56px;line-height:1.7;padding-top:30px;padding-bottom:44px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer.wrap{margin-top:64px}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}.fbrand p{margin:6px 0 0}.fbrand .copy{font-size:12px;opacity:.85}
+.flogo{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.14em;color:var(--text);font-size:16px}.flogo svg{width:24px;height:24px}.flogo rect{stroke:var(--accent)}.flogo path{fill:var(--accent)}
+.connect{display:flex;flex-direction:column;gap:6px;min-width:140px}.connect h4{margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.connect a{color:var(--text);font-size:15px}.connect a:hover{color:var(--accent);text-decoration:underline}
 details summary{cursor:pointer}ul.st{columns:3;padding-left:18px}ul.st .bad{color:#c2410c}
 ul.days{list-style:none;padding:0;max-width:640px}ul.days li{padding:12px 0;border-bottom:1px solid var(--line)}ul.days a{color:var(--accent)}
 [hidden]{display:none!important}
@@ -817,7 +822,19 @@ def site_cfg():
     url = (f'https://{s["domain"]}' if s.get("domain") else s.get("url", "")).rstrip("/")
     return {"name": s.get("name", "METAXIS"), "url": url, "domain": s.get("domain", ""),
             "description": s.get("description", ""), "google": s.get("google_verification", ""),
-            "naver": s.get("naver_verification", ""), "repo": s.get("repo", "Alexkim9113/ai-briefing")}
+            "naver": s.get("naver_verification", ""), "repo": s.get("repo", "Alexkim9113/ai-briefing"),
+            "email": s.get("contact_email", ""), "instagram": s.get("instagram", ""), "x": s.get("x", "")}
+
+
+def connect_links(sc, base):
+    contact = f'mailto:{sc["email"]}' if sc.get("email") else f"{base}policy.html#contact"
+    links = [("Contact", contact, False)]
+    if sc.get("instagram"):
+        links.append(("Instagram", sc["instagram"], True))
+    if sc.get("x"):
+        links.append(("X", sc["x"], True))
+    links.append(("정책", f"{base}policy.html", False))
+    return "".join(f'<a href="{esc(u)}"{" target=_blank rel=noopener" if ext else ""}>{n}</a>' for n, u, ext in links)
 
 
 def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonld=None, og_type="website", index=True,
@@ -857,8 +874,9 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 <style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈">{LOGO}<span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
-<footer class="wrap"><p><strong>저작권 안내</strong> · 이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝히며, 요약은 원문 앞부분을 짧게 발췌한 것입니다. 전문은 반드시 원문 링크에서 확인해 주세요. 원문의 사진·썸네일은 가져오지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. 저작권 관련 문의나 삭제 요청이 있으면 바로 반영하겠습니다.</p>
-<p><a href="{base}editor/">에디터</a> · <a href="{base}credits.html">사진 출처</a> · <a href="{sc["url"]}/feed.xml">RSS 구독</a></p></footer>
+<footer class="wrap foot"><div class="fbrand"><a class="flogo" href="{base}index.html">{LOGO}<span>{esc(sc["name"])}</span></a>
+<p>국내외 AI 뉴스·논문·정책·영상 강연을 30분마다 모아 전합니다.</p><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 모든 기사의 저작권은 원작자에게 있습니다.</p></div>
+<div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
 <script>{JS}{script}</script></body></html>"""
 
 
@@ -974,26 +992,47 @@ PER_PAGE = 8  # 목록 한 페이지에 보여줄 글 수
 def load_photos():
     p = ROOT / "static" / "photos" / "credits.json"
     if not p.exists():
-        return [], {}
+        return [], {}, []
     credits = json.loads(p.read_text(encoding="utf-8"))
     by = {}
     for c in credits:
-        by.setdefault(TOPIC_SLUG.get(c["topic"], "ai"), []).append(c["file"])
-    return credits, by
+        if c.get("topic"):
+            by.setdefault(TOPIC_SLUG.get(c["topic"], "ai"), []).append(c["file"])
+    tagged = [(c["file"], [t.lower() for t in c.get("tags", [])]) for c in credits if c.get("tags")]
+    return credits, by, tagged
 
 
-PHOTO_CREDITS, PHOTOS = load_photos()
+PHOTO_CREDITS, PHOTOS, PHOTO_TAGS = load_photos()
+
+
+def _hit(tag, text):
+    if tag.isascii() and len(tag) <= 3:
+        return re.search(r"(?<![a-z0-9])" + re.escape(tag) + r"(?![a-z0-9])", text) is not None
+    return tag in text
 
 
 def photo_for(it, used=None):
-    topic, _ = topic_of(it)
-    files = PHOTOS.get(TOPIC_SLUG.get(topic, "ai")) or PHOTOS.get("ai") or []
+    """기사 제목(번역 제목 포함)·요약과 사진 태그가 가장 많이 겹치는 사진. 없으면 주제별 사진."""
+    title = (it["title"] + " " + it.get("title_ko", "")).lower()
+    summ = (it.get("summary") or "")[:200].lower()
+    best, files = 0, []
+    for f, tags in PHOTO_TAGS:
+        score = sum(3 if _hit(t, title) else 1 if _hit(t, summ) else 0 for t in tags)
+        if score > best:
+            best, files = score, [f]
+        elif score == best and score:
+            files.append(f)
+    if not files:
+        topic, _ = topic_of(it)
+        files = PHOTOS.get(TOPIC_SLUG.get(topic, "ai")) or PHOTOS.get("ai") or []
     if not files:
         return None
     start = int((it.get("id") or "0")[:8] or "0", 16) % len(files)
+    f = files[start]
     for k in range(len(files)):  # 같은 화면에 같은 사진이 두 번 나오지 않게
-        f = files[(start + k) % len(files)]
-        if used is None or f not in used:
+        cand = files[(start + k) % len(files)]
+        if used is None or cand not in used:
+            f = cand
             break
     if used is not None:
         used.add(f)
@@ -1240,12 +1279,6 @@ def render_home(data, cats, posts):
                 if rows else '<p class="empty">오늘은 새 소식이 없습니다.</p>')
         parts.append(f'<section class="cat" data-cat="{c}" id="{c}"><h2 class="serif">{esc(name)}</h2>{body}'
                      f'<a class="more" href="{c}/">{esc(name)} 지난 기록 모두 보기 →</a></section>')
-    st = data.get("status", [])
-    ok = sum(s["ok"] for s in st)
-    lis = "".join(f'<li class="{"" if s["ok"] else "bad"}">{esc(s["name"])}: '
-                  f'{str(s["count"]) + "건" if s["ok"] else "실패"}</li>' for s in st)
-    parts.append(f'<details style="margin-top:40px"><summary class="meta">수집 상태: 소스 {ok}/{len(st)}개 성공</summary>'
-                 f'<ul class="st meta" style="display:block">{lis}</ul></details>')
     sc = site_cfg()
     heading = f'<h1 class="eyebrow">{day_title(data["date"])} 오늘의 AI 브리핑</h1>'
     title = f"{sc['name']} | 오늘의 AI 뉴스·논문·정책 브리핑 · {day_title(data['date'])}"
@@ -1352,6 +1385,24 @@ def build(keep_days=None):
         '<div class="post"><h1 class="serif">사진 출처</h1><p>기사 표지에 쓰는 사진은 모두 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. '
         '기사 원본의 사진은 사용하지 않습니다.</p><ul class="credits">' + credits + "</ul></div>",
         "", cats, search=False, path="credits.html"), encoding="utf-8")
+    st = latest.get("status", [])
+    lis = "".join(f'<li class="{"" if x["ok"] else "bad"}">{esc(x["name"])}: {str(x["count"]) + "건" if x["ok"] else "실패"}</li>' for x in st)
+    contact = (f'<a class="more" href="mailto:{esc(sc["email"])}">{esc(sc["email"])}</a>' if sc.get("email")
+               else "문의 창구는 곧 열립니다.")
+    policy = f"""<div class="post"><h1 class="serif">정책</h1>
+<h2 class="serif" style="font-size:21px;margin-top:30px">저작권 안내</h2>
+<p>이 사이트에 소개된 모든 기사·논문·영상의 저작권은 원작자와 원 매체에 있습니다. {esc(sc["name"])}는 각 글마다 출처(매체·기관명)와 원문 링크를 분명히 밝히며,
+요약은 원문 앞부분을 짧게 발췌한 것입니다. 전문은 반드시 원문 링크에서 확인해 주세요.</p>
+<p>원문의 사진·썸네일은 가져오지 않으며, 표지 사진은 저작권이 없는 퍼블릭 도메인(CC0) 사진입니다. <a class="more" href="credits.html">사진 출처 보기 →</a></p>
+<p>저작권 관련 문의나 삭제 요청이 있으면 바로 반영하겠습니다.</p>
+<h2 class="serif" style="font-size:21px;margin-top:30px">개인정보</h2>
+<p>이 사이트는 회원가입·댓글이 없고 방문자의 개인정보를 수집하지 않습니다.</p>
+<h2 class="serif" style="font-size:21px;margin-top:30px" id="contact">문의</h2><p>{contact}</p>
+<h2 class="serif" style="font-size:21px;margin-top:30px">수집 현황</h2>
+<p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))} · 소스 {sum(x["ok"] for x in st)}/{len(st)}개 정상 ·
+<a href="{sc["url"]}/feed.xml">RSS 구독</a></p><ul class="st meta" style="display:block">{lis}</ul></div>"""
+    (SITE_DIR / "policy.html").write_text(page(f"정책 | {sc['name']}", policy, "", cats, search=False, path="policy.html"), encoding="utf-8")
+    paths.append("policy.html")
     (SITE_DIR / "404.html").write_text(page(
         f"페이지를 찾을 수 없어요 | {sc['name']}",
         f'<h1 class="serif" style="font-size:26px;margin:40px 0 8px">페이지를 찾을 수 없어요</h1><p><a class="read" href="{sc["url"]}/">오늘의 브리핑으로 가기 →</a></p>',
