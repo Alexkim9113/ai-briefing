@@ -1,7 +1,40 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T12:50+09:00",
+ "generated_at": "2026-09-28T12:58+09:00",
  "items": [
+  {
+   "id": "a0a4059ef341dc1d",
+   "title": "포지큐브, 하나은행에 AI 에이전트 서비스 구축...\"금융 AX 가속\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215713",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:56:41+09:00",
+   "summary": "포지큐브(대표 오성조)는 자체 멀티 에이전트 기반 AI 플랫폼 '로비 G 맥스'를 활용해 하나은행의 AI 에이전트 서비스를 구축했다고 28일 밝혔다. 로비 G 맥스는 멀티 에이전트 기반 아키텍처로 기업 환경에 최적화된 생성형 AI 서비스를 제공한다.",
+   "thumb": ""
+  },
+  {
+   "id": "a79f4f1b97a1867f",
+   "title": "카카오, CA협의체 공동 의장에 김도영 카카오X 대표 내정자 확정",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215709",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:55:48+09:00",
+   "summary": "카카오가 인적분할을 앞두고 그룹 차원의 체계적 전환 준비에 나선다. 카카오그룹은 28일 그룹협의회를 개최, 협약사 CEO들의 결의에 따라 김도영 카카오X 대표 내정자를 CA협의체 공동의장으로 정했다고 밝혔다. 김 내정자는 정신아 의장과 함께 공동 의장으로서 CA협의체를 이끌게 됐다.",
+   "thumb": ""
+  },
+  {
+   "id": "e78baf68227aadcd",
+   "title": "SKT·삼성전자·하나금융, 금융권 첫 '5G 스마트오피스' 구축",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215705",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T12:54:09+09:00",
+   "summary": "SK텔레콤(대표 정재헌)은 하나금융그룹, 삼성전자와 금융권 최초로 5G 특화망 기반 스마트 오피스를 구축했다고 28일 밝혔다. 이번 사업은 이달부터 인천 청라로 단계적 이전 중인 하나금융그룹 헤드쿼터의 10개 관계사, 임직원 3000여명을 대상으로 한다.",
+   "thumb": ""
+  },
   {
    "id": "c54492f4dae2d495",
    "title": "“민원 신청은 쉽게, 답변은 신속하게”...국민권익위, '국민신문고' 인공지능 통해 혁신 이룬다",
@@ -77,6 +110,17 @@
    "category": "news_ko",
    "published": "2026-09-28T06:15:40+09:00",
    "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
+   "thumb": ""
+  },
+  {
+   "id": "655bd5362be42b9c",
+   "title": "행안부, 루마니아·조지아에 'AI 정부' 알린다…디지털 협력 확대",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBTc1llT2JxaVAtN2IyMXRhaGdnYkFKejNfemJBTk5TVlgyWGd6R1BHOXpqSkUxSUo1TXJzdHNsRkU2c1B2R2lBZWpyS2M0QnRRSEROd0l3?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T03:55:06+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -232,6 +276,17 @@
    "field": "국내 연구",
    "category": "papers",
    "published": "2026-09-28T02:21:59+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "27e254a55b7a7fa3",
+   "title": "AI 발전 못 따라가는 각국 정부…2년 전 만든 법도 벌써 한계",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5PUEZ4U1dVMG1fS2M1Z1RoN3pIbVNhaWVMWlNxQmNLcUdqZTE1RXJRVjNGTUdUeTlSM1BtTnd3YzBUbUlNdzJzT2VRYmxOY2hfbXVwSkRvU0FWYVAzMDBYb3hrOFlQellRNnBwV19CWWxTam1xU1ZiatIBeEFVX3lxTE5PUEZ4U1dVMG1fS2M1Z1RoN3pIbVNhaWVMWlNxQmNLcUdqZTE1RXJRVjNGTUdUeTlSM1BtTnd3YzBUbUlNdzJzT2VRYmxOY2hfbXVwSkRvU0FWYVAzMDBYb3hrOFlQellRNnBwV19CWWxTam1xU1Ziag?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T02:18:01+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1224,16 +1279,6 @@
    "thumb": ""
   },
   {
-   "id": "417a7f0969dd191f",
-   "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JVG9ZMWFEOVhaakd5QUZOY2JnYlpPZXczQXlta2Zwd29yUTlfdDJ1TU02OHdDOVdoejVFOWt6d0x6UGI1ZW50Q2RjdjlnSUE?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T23:06:51+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "651ced999ded9424",
    "title": "Trump confirms meeting with Anthropic's Amodei, repeats dismissal of AI fears",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQmNRNTdyaGdENWhHUlEzVFpTVnRndmtXcDBfZlVmTVZpWWF2SEF6M1FwXzBtbFZRdWJWOGNKc2JfYll1aEZxamJYYTJwZ2pXMUZ0NW1wWjEyQXRObnRJa29BbzhrLWxXOTFmSVZlRlkyS1Z3endodzAyYm9Sc0NOYlE5REhwbnZQbERfdWc2Mi1LbWVyaGpiOGtjZ1dVWGQ2cTJib1FVM1ZJYkVZbmRJWA?oc=5",
@@ -1267,27 +1312,6 @@
    "summary": "An independent researcher has tied more than 16,000 scans of a United Nations statistics portal to artificial intelligence agents the researcher considers highly likely to have…",
    "thumb": "",
    "title_ko": "연구원은 UN 통계 포털의 16,000개 스캔을 OpenAI 에이전트에 연결합니다."
-  },
-  {
-   "id": "d9a22b8bd7238a45",
-   "title": "세계경제포럼, AI 지속가능성 논의…“컴퓨트·에너지·인재 투자 필요”",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42075",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T22:22:59+00:00",
-   "summary": "세계경제포럼(WEF)이 인공지능(AI)과 프런티어 기술의 확산에 대응해 컴퓨팅과 에너지, 인프라, 인재에 대한 투자를 확대하고 AI 접근성과 거버넌스, 신뢰 격차를 줄여야 한다고 강조했다.",
-   "thumb": ""
-  },
-  {
-   "id": "239cce964dd9c83f",
-   "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T22:05:44+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "695f1540d61201ee",
@@ -2560,7 +2584,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 73
+   "fetched": 79
   },
   {
    "name": "Google News: AI 기업",
@@ -2595,8 +2619,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -2739,14 +2763,14 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
