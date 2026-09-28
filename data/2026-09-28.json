@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T11:13+09:00",
+ "generated_at": "2026-09-28T11:21+09:00",
  "items": [
   {
    "id": "f979042d322b7327",
@@ -11,6 +11,28 @@
    "category": "news_ko",
    "published": "2026-09-28T11:10:46+09:00",
    "summary": "앤트로픽이 ‘클로드 소네트 5.5(Claude Sonnet 5.5)’의 기습 출시를 준비하고 있다는 정황이 잇따라 나오고 있다. 오픈AI의 개발자 행사 ‘데브데이’를 앞두고 출시 시점을 앞당길 가능성이 제기되면서, 양사의 개발자용 AI 모델 경쟁이 한층 치열해질 전망이다.",
+   "thumb": ""
+  },
+  {
+   "id": "e43aaa101b8b620f",
+   "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EemYwZG9HSE5oSWhfbnkwWWxZOWlRVTZjNk1adzZvOGF0dGlLa3djeGcxeDYtazFDOXNERHFLNzlvcnIyM0pUUld4RWRPay1VRDJpbDVHYmVPVTVGSzNtMjRtN1A4QQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T02:17:24+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "bdaf5a0779594d60",
+   "title": "화순전남대병원, 342억 원 규모 대형 국가 R&D 사업 2개 동시 선정",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBnSkNza0VDMlVKSnViOERRUTBrcXM3SHVnazhmaXhxQ05jRGUwaWJJWERiN2ZjUUEya0VDZnBpcFJUZER6N1M5dHRjVVFrX0NzSjNfbUpNNEE2ZzMtZ3RxckJRcldDemIwazN3RUJB?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T02:07:25+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -135,6 +157,18 @@
    "summary": "",
    "thumb": "",
    "title_ko": "중국이 AI에 회의적인 놀라운 이유 안전 통화"
+  },
+  {
+   "id": "b0ee3cb81573b6ac",
+   "title": "How NVIDIA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency | NVIDIA Technical Blog",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUlB4UzdsdU5wQzVkdkY2akdtRHB2R2ZYUUhibmlRVHkzbTBIVkV0LUo4SG9uSjFMbXF3SXYzNDF6OU1LM09EcHRscmdaRzAxT3ZncWlrbFNxaVBVVDZTcXhWSTJHM0Ffd1lSMWdXN1pfc2dJdm1Xel9Md0dpTjF1WlhBbFBZakhNdU1hdTF2WVRTeG1xc2NGcWNZZVFZREpvYjF4cUFn?oc=5",
+   "source": "Google News: AI 기업",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T01:26:01+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "NVIDIA DSX MaxLPS가 AI 공장 처리량과 효율성을 극대화하는 방법 | NVIDIA 기술 블로그"
   },
   {
    "id": "6f9f4d846681b00d",
@@ -290,6 +324,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "OpenAI, 최신 보안 사고 이후 AI 훈련 속도 저하"
+  },
+  {
+   "id": "f041c0d871f3bd46",
+   "title": "한국인 10명 중 4명은 생성형 AI 쓴다…세계 12위로 '껑충'",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00Vm5SUWZtRXlYSGtRTGhCbGlybXVKRmRoOGwyUGlxeHU3Y2NPM3IxSTYta1lCaVgzY2h1S09ybzlIZ3EwMEhUVDRDUnQ0eW8?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T00:57:30+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "e1b66b391d8fd729",
@@ -1616,17 +1661,6 @@
    "thumb": ""
   },
   {
-   "id": "4de1baf7834ba16a",
-   "title": "LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42071",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-27T02:15:10+00:00",
-   "summary": "LG전자(대표이사 류재철)가 27일, 엔비디아의 공식 파트너 프로그램인 ‘엔비디아 파트너 네트워크(NVIDIA Partner Network, 이하 NPN)’에 선정되며, 글로벌 인공지능 데이터센터(AIDC) 냉각 솔루션 시장 공략에 속도를 낸다.",
-   "thumb": ""
-  },
-  {
    "id": "8922ada21905ffb6",
    "title": "“한국 AI 인재 77% 국내에 남았는데”…KAIST 3위, 기업은 ‘0’",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNDVwWUpDc0NJbF9xeEo1TnFWTHFaY2RSUVRxcUJ3LU9rcGJKWXB5bm1FR0xMdVNQRGZiVWwxMlh3bXRFVTVhTHpuem9ueVpPNS1JYWVDY3ZEMDcyR1RUNEVGdzNhZHZxTUt1eXd1cEJzQTJLc052TFc1STBFRm5HMQ?oc=5",
@@ -1999,18 +2033,6 @@
    "title_ko": "2026년 Google 월렛에는 많은 새로운 기능이 추가되었습니다. 이 5가지가 제가 가장 좋아하는 것입니다."
   },
   {
-   "id": "536e8a6f56762161",
-   "title": "I Think I Found an AI Agent Worth the Risk",
-   "link": "https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-24T19:36:35+00:00",
-   "summary": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare.",
-   "thumb": "",
-   "title_ko": "위험을 감수할 가치가 있는 AI 에이전트를 찾은 것 같습니다."
-  },
-  {
    "id": "356e826b460b6d0d",
    "title": "What if AI wasn’t a shortcut, but a learning partner? #TEDTalks",
    "link": "https://www.youtube.com/shorts/QT3e6x5CZC8",
@@ -2316,17 +2338,6 @@
    "thumb": ""
   },
   {
-   "id": "5ab6e22e6b6b2cf5",
-   "title": "Deep learning-driven de novo design of ribosome binding sites in Paracoccus denitrificans .",
-   "link": "https://europepmc.org/article/MED/42630760",
-   "source": "Europe PMC · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-08-13T00:00:00+00:00",
-   "summary": "Paracoccus denitrificans is a heterotrophic nitrifying-aerobic denitrifying bacterium widely used in wastewater treatment and as a model system for studying electron transport…",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -2471,8 +2482,8 @@
   {
    "name": "Google DeepMind",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 1,
+   "fetched": 100
   },
   {
    "name": "Google News: AI",
@@ -2663,8 +2674,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -2676,7 +2687,7 @@
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 92
+   "fetched": 93
   },
   {
    "name": "구글뉴스: 생성형 AI",
