@@ -33,8 +33,7 @@
     {"name": "Two Minute Papers", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"},
     {"name": "Yannic Kilcher", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew"},
     {"name": "AI Explained", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw"},
-    {"name": "Andrej Karpathy", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PsmIPBUVA"},
     {"name": "조코딩", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQNE2JmbasNYbjGAcuBiRRg", "filter": true}
   ],
-  "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "반도체", "데이터센터", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘", "모델", "model"]
+  "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘"]
 }

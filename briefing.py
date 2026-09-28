@@ -151,6 +151,7 @@ def parse_hf_papers(raw):
 
 # ---------------------------------------------------------------- 요약
 
+_COMMENT = re.compile(r"<!--.*?(-->|$)", re.S)
 _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"\s+")
 _ARXIV_PREFIX = re.compile(r"^arXiv:\S+\s+Announce Type:\s*\S+\s*(Abstract:)?\s*", re.I)
@@ -158,7 +159,8 @@ _SENT = re.compile(r"(?<=[.!?。])\s+|(?<=다\.)\s*|(?<=요\.)\s*")
 
 
 def clean_text(s):
-    s = _TAG.sub(" ", s or "")
+    s = _COMMENT.sub(" ", s or "")
+    s = _TAG.sub(" ", s)
     s = html.unescape(html.unescape(s))
     s = _WS.sub(" ", s).strip()
     return _ARXIV_PREFIX.sub("", s)
@@ -254,7 +256,7 @@ def collect(fixtures=None, now=None):
                 if src.get("url", "").startswith("https://news.google.com"):
                     title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
                 d = parse_date(it["date"])
-                if d and d < cutoff:
+                if d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
                     continue
                 if src.get("filter") and not is_ai_related(it, keywords):
                     continue
@@ -268,7 +270,7 @@ def collect(fixtures=None, now=None):
                 })
                 if len(kept) >= src.get("limit", DEFAULT_LIMIT):
                     break
-            status.append({"name": src["name"], "ok": True, "count": len(kept)})
+            status.append({"name": src["name"], "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
 
     # 소스 간 중복 제거(같은 링크 또는 같은 제목)
