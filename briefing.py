@@ -1044,8 +1044,10 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
 .ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0;font-family:"Pretendard Variable",Pretendard,sans-serif}
-/* 기사 제목만 신문 제목 느낌의 명조(노토 세리프), 본문·번역은 프리텐다드 */
-h3.serif,.hero h2.serif,.brief h3{font-family:"Noto Serif KR","Pretendard Variable",Pretendard,serif;letter-spacing:-.015em}h3.serif{font-weight:600}.hero h2.serif,.brief h3{font-weight:700}
+/* 기사 제목만 KoPub바탕(굵게, 없는 글자는 노토 세리프), 본문·번역은 프리텐다드 */
+@font-face{font-family:"KoPub Batang";font-weight:400;font-display:swap;src:url(/fonts/kopub-batang-400.woff2) format("woff2")}
+@font-face{font-family:"KoPub Batang";font-weight:700;font-display:swap;src:url(/fonts/kopub-batang-700.woff2) format("woff2")}
+h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pretendard Variable",Pretendard,serif;letter-spacing:-.02em;font-weight:700}
 .hero h2 .ko{font-size:.6em;line-height:1.5;margin-top:8px}
 .bar nav a[data-go]{display:inline}
 .rows{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
