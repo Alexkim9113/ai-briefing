@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T16:44+09:00",
+ "generated_at": "2026-09-28T16:45+09:00",
  "items": [
   {
    "id": "7168433343067ae3",
@@ -493,7 +493,7 @@
    "published": "2026-09-28T06:49:35+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 2
+   "hot": 1
   },
   {
    "id": "1a38916787915e23",
@@ -2946,7 +2946,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2964,7 +2964,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 85
+   "fetched": 80
   },
   {
    "name": "Google News: AI 기업",
@@ -3179,8 +3179,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3192,7 +3192,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -3216,13 +3216,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 68
+   "fetched": 69
   },
   {
    "name": "스테이지5",
