@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T14:41+09:00",
+ "generated_at": "2026-09-28T14:46+09:00",
  "items": [
   {
    "id": "d30a3073950a0d17",
@@ -171,6 +171,18 @@
    "thumb": ""
   },
   {
+   "id": "1d2fb5cd0f0af97c",
+   "title": "마이크로소프트 '글로벌 AI 확산 보고서', 한국 AI 사용률 40.6%…세계 12위",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42080",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T09:23:03+09:00",
+   "summary": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈…",
+   "detail": "마이크로소프트의 싱크탱크인 인공지능 이코노미 인스티튜트(AI Economy Institute)가 ‘AI 확산 보고서: 2026년 2분기 트렌드와 인사이트(Global AI Diffusion: Q2 2026 Trends and Insights)’를 발표하고, 전 세계 생성형 AI 사용 현황과 지역별 활용 방식, 오픈 웨이트 모델의 성장세를 분석했다.\n보고서는 집계·비식별화된 마이크로소프트 텔레메트리 데이터를 기반으로 15~64세 인구 가운데 해당 기간 생성형 AI 제품을 사용한 비율을 AI 확산 지표로 측정했다.",
+   "thumb": ""
+  },
+  {
    "id": "2da95cc9c3be10c1",
    "title": "트럼프, 아모데이와 백악관 첫 일대일 만찬 개최",
    "link": "https://www.aitimes.com/news/articleView.html?idxno=215694",
@@ -222,6 +234,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T05:07:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "323df270d2af56a8",
+   "title": "KMAC, 'AI 기본법 대응 실전 전략 세미나' 개최…5대 과제 제시",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBPc2VzbW9UT2ZyYWV4cEkteFJMVExteDRMRThuenhKTWFzMFRTWUVvZDFOQ0c0R3VKdG03ZlU5OWVaZmY2WWVJQnhUa3psYnpkMlZONk43dkItUQ?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T05:00:02+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -730,6 +753,17 @@
    "thumb": ""
   },
   {
+   "id": "126d11d2b610781f",
+   "title": "[김희대의 이로운 기술, 다정한 도시] 인공지능의 새로운 원료, 취향 혹은 아비투스",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1MWVBDYVZ2Qng5RjZZODEyWWlKZjFiLTREcG9VdzBqT3VuTnhSSWV3MUhHU0hWakZ0LXFlUUlUM2p2LTZaWUhMRFVwazFZaGcxZndDNHN0d3NVeHlaem9EZHo0Vl9WTWI5?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:58:17+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "7b91b4d0b8029c7c",
    "title": "충남도, 생성형 AI로 농업 재해 업무시스템 개발",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9SZTdibVpnZ2Z1V1JjbnQ0LUpCT2h0QVlhM0g0c3VJWUlNZ1VMQ04zeTgwU09pYUFCeTJwYUktM1l0eVV6XzBJLS1jMWphaGs?oc=5",
@@ -1062,28 +1096,6 @@
    "summary": "",
    "thumb": "",
    "title_ko": "OpenAI, 최신 보안 사고 이후 AI 훈련 속도 저하"
-  },
-  {
-   "id": "f041c0d871f3bd46",
-   "title": "한국인 10명 중 4명은 생성형 AI 쓴다…세계 12위로 '껑충'",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00Vm5SUWZtRXlYSGtRTGhCbGlybXVKRmRoOGwyUGlxeHU3Y2NPM3IxSTYta1lCaVgzY2h1S09ybzlIZ3EwMEhUVDRDUnQ0eW8?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:57:30+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e1b66b391d8fd729",
-   "title": "전남광주시 북구, 생성형 AI·당직 콜봇 행정업무에 도입",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15VXRhTmxydzFpR3AwTUhUSFV5NzJIS0tqRDNlTDRhNzBmMWplV21NZnd3aVBHZ3JpWDI2cDI3amtHSjFfaW92ZTVjRk1xSGlPeXBVYjZ2eDJaY0NZaVJr?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:56:16+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "d30ebc02879d11bb",
@@ -2631,7 +2643,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 81
   },
   {
    "name": "Google News: AI 기업",
@@ -2678,8 +2690,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -2709,7 +2721,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 44
+   "fetched": 46
   },
   {
    "name": "TED",
@@ -2810,14 +2822,14 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2841,7 +2853,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
