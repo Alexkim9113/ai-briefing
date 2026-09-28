@@ -1641,10 +1641,9 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
     canonical = f'{sc["url"]}/{path}'
     desc = desc or sc["description"]
     on = lambda k: ' class="on" aria-current="page"' if k == active else ""
-    nav = f'<a href="{base}home.html"{on("home")}>홈</a>'
+    nav = f'<a href="{base}home.html"{on("home")}>홈</a><a href="{base}editor/"{on("editor")}>에디터</a>'  # 홈 화면 순서대로: 에디터가 홈 바로 옆
     if cats:
         nav += "".join(f'<a href="{base}{c}/"{on(c)}>{esc(n)}</a>' for c, n in cats.items())
-    nav += f'<a href="{base}editor/"{on("editor")}>에디터</a>'
     box = (f'<label class="search">{ICON_SEARCH}<input type="search" placeholder="뉴스, 주제 검색" aria-label="검색"></label>'
            if search else "")
     verify = ""
