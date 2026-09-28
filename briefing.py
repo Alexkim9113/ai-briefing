@@ -32,6 +32,7 @@ SITE_DIR = ROOT / "site"
 KST = timezone(timedelta(hours=9))
 
 SUMMARY_CHARS = 180        # 발췌 요약 최대 길이(저작권상 짧게 유지)
+DETAIL_CHARS = 300         # '주요 내용' 창: 언론사가 피드로 공개한 소개글에서 최대 5문장·300자만
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
@@ -230,6 +231,24 @@ def summarize(desc, title):
     return out
 
 
+def detail_lines(desc, title, summary=""):
+    """기사를 눌렀을 때 보이는 '주요 내용': 피드 소개글의 앞 문장들(최대 5줄). 요약과 같으면 비워 둔다."""
+    text = clean_text(desc)
+    if not text or text == title or (text.startswith(title[:40]) and len(text) < len(title) + 40):
+        return ""
+    lines, total = [], 0
+    for sent in _SENT.split(text):
+        sent = sent.strip()
+        if not sent or (sent.endswith(("…", "...")) and lines):
+            continue
+        if len(lines) >= 5 or total + len(sent) > DETAIL_CHARS:
+            break
+        lines.append(sent)
+        total += len(sent)
+    out = "\n".join(lines)
+    return "" if not out or out.replace("\n", " ") == summary else out
+
+
 def is_ai_related(item, keywords, title_only=False):
     blob = (item["title"] if title_only else item["title"] + " " + clean_text(item["desc"])[:400]).lower()
     for k in keywords:
@@ -395,11 +414,14 @@ def make_item(src, it, keywords, now):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
     if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords):
         return None
+    summary = summarize(it["desc"], title)
+    detail = detail_lines(it["desc"], title, summary)
     return {
         "id": item_id(it["link"], title), "title": title, "link": it["link"],
         "source": label(src), "field": src.get("field", ""),
         "category": src["category"], "published": d.isoformat() if d else None,
-        "summary": summarize(it["desc"], title),
+        "summary": summary,
+        **({"detail": detail} if detail else {}),
         "thumb": "",  # 저작권 보호: 원본의 썸네일·사진은 수집하지 않는다
         "_d": d,
     }
@@ -698,6 +720,16 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .cd{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);margin-right:7px;vertical-align:.12em}
+.brief-bg{position:fixed;inset:0;z-index:50;background:rgba(3,3,12,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;animation:bfade .18s ease}
+.brief{position:relative;width:min(560px,100%);max-height:86vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:18px;padding:26px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.brief-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--soft);color:var(--text);font-size:15px;cursor:pointer}
+.brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}
+.brief h4{margin:18px 0 8px;font-size:14px;color:var(--heading)}.brief h4::before{content:"";display:inline-block;width:4px;height:.9em;border-radius:2px;background:var(--c);margin-right:8px;vertical-align:-.1em}
+.brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
+.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}
+@keyframes bfade{from{opacity:0}}
+@media (max-width:600px){.brief-bg{place-items:end stretch;padding:0}.brief{width:100%;max-height:88vh;border-radius:20px 20px 0 0;padding:24px 18px calc(18px + env(safe-area-inset-bottom));animation:bup .22s ease}.brief h3{font-size:19px}}
+@keyframes bup{from{transform:translateY(40px);opacity:.3}}
 .kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
 .kw strong{font-size:14px;margin-right:4px}.kw span,.kwb{background:var(--soft);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13px}
 .kwb{font:inherit;font-size:13px;border:2px solid transparent;cursor:pointer;padding:2px 11px}.kwb:hover{border-color:var(--line)}
@@ -790,6 +822,17 @@ ul.st{columns:1}footer{margin-top:36px}}
 """
 
 JS = """
+// 기사 제목을 누르면 '주요 내용'(언론사가 공개한 소개글 발췌, 최대 5줄)과 원문으로 가는 버튼을 먼저 보여 준다
+function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5);const bg=document.createElement('div');bg.className='brief-bg';
+ bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
+ <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
+ <h4>주요 내용</h4>${lines.length?`<ul>${lines.map(l=>`<li>${e(l)}</li>`).join('')}</ul>`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">원문 더 읽어보기 →</a><p class="brief-note">주요 내용은 언론사가 공개한 소개글에서 발췌했어요. 전체 기사와 저작권은 원문에 있어요.</p></div>`;
+ const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
+ bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
+ document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
+document.addEventListener('click',ev=>{const a=ev.target.closest('a[data-d]');if(!a||ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;ev.preventDefault();openBrief(a);});
 function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),2200);}
 document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
  try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
@@ -1167,7 +1210,11 @@ def meta_html(it, cats, with_cat=False):
 
 def title_link(it):
     ko = f'<span class="ko">{esc(it["title_ko"])}</span>' if it.get("title_ko") else ""  # 해외 글: 원문 제목 아래 자동 번역 제목
-    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>{ko}'
+    d = it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
+    info = " · ".join(x for x in (it.get("source", ""), fmt_time(it.get("published"))) if x)
+    extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
+             + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")) if not it.get("editor") else ""
+    return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{extra}>{esc(it["title"])}</a>{ko}'
 
 
 def pick_featured(items):
