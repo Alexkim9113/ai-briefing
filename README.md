@@ -25,7 +25,8 @@
 - `field`: 논문·연구 분야 표시(예: 의료, 법·윤리·정책, 에너지·환경, 문화·예술)
 - `limit`: 하루 최대 항목 수(기본 8)
 - `filter`: `true` 이면 AI 관련 단어(`ai_keywords`)가 들어간 글만 남깁니다
-- 유튜브 채널 추가: `https://www.youtube.com/feeds/videos.xml?channel_id=채널ID`
+- 유튜브 채널 추가: `https://www.youtube.com/feeds/videos.xml?channel_id=채널ID` (현재는 TED·TEDx·TED-Ed의 AI 관련 영상만)
+- `keywords`: 이 단어가 제목·설명에 있는 글만 남김, `max_age_days`: 새 글이 드문 소스의 수집 기간(일)
 
 수집에 실패한 소스는 사이트 맨 아래 "수집 상태"에서 확인할 수 있습니다. 한 소스가 실패해도 나머지는 정상 수집됩니다.
 

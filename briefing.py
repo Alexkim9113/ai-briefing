@@ -316,7 +316,10 @@ def collect(fixtures=None, now=None):
                 if src.get("url", "").startswith("https://news.google.com"):
                     title = _TITLE_SUFFIX.sub("", title)  # "제목 - 언론사" 에서 언론사 꼬리 제거
                 d = parse_date(it["date"])
-                if d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
+                if src.get("max_age_days"):  # 새 영상이 드문 채널: 더 긴 기간 허용(최근 7일 브리핑과 중복은 제외)
+                    if d and d < now - timedelta(days=src["max_age_days"]):
+                        continue
+                elif d and d < cutoff and src["category"] != "papers":  # 논문은 주말·발표 지연이 있어 기간 제한 없이 최근 7일 중복만 제외
                     continue
                 if src.get("keywords") and not is_ai_related(it, src["keywords"]):
                     continue  # 분야 키워드(예: 법·교육·에너지)가 있는 글만

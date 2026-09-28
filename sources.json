@@ -52,10 +52,9 @@
     {"name": "Google News: AI regulation", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
     {"name": "과학기술정보통신부 보도자료", "category": "policy", "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94", "filter": true},
 
-    {"name": "Two Minute Papers", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"},
-    {"name": "Yannic Kilcher", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew"},
-    {"name": "AI Explained", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw"},
-    {"name": "조코딩", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQNE2JmbasNYbjGAcuBiRRg", "filter": true}
+    {"name": "TED", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30},
+    {"name": "TEDx Talks", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30},
+    {"name": "TED-Ed", "category": "youtube", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30}
   ],
   "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘"]
 }
