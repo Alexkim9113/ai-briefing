@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T09:55+09:00",
+ "generated_at": "2026-09-28T09:56+09:00",
  "items": [
   {
    "id": "1d2fb5cd0f0af97c",
@@ -193,12 +193,32 @@
    "thumb": ""
   },
   {
+   "id": "6bf519d1e9c79a0c",
+   "title": "한국 생성형 AI 사용률 40.6%…세계 12위로 네 계단 상승",
+   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPNWRJQldQNTVaYTBLSldqcG8wWmVveTdubHZmMmRiZUs2TUg3VmZxZ0x1VGFiVGRYaFZTUGJndnpLandnMDB1U0l4Y0hqeFlwbFAtYnlNZkRfMF94QjJ0V2dZSW1rZ0dtN3FmQUh4ZUdBcmhqVUJQcXZOaVV4YWp4VkQ4NnNnczctaXNjYXd5NkJ1OHZkcmRVMTZWYmVtdnZsWDBYbDQ5N216ODE0VWxhY0E2ZkRYRXEzeFFkOGNkYklvb0RldUhWRTZoYmJ1THg0ZUhnMGROTUpVbVYzTXI1Vk44eUI2N05OY0RlSFBrcENQcHdNbmdsSEI3TXJJVkh2WFF3YmRFTVl0aXRhcEpRNE1jTkRhb21DUmp5OEZ3MnM?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-28T00:12:38+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "0602177b9228005a",
    "title": "울산소방본부 “인공지능(AI)으로 혁신하고, 데이터로 대응한다”",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5POENmZGdmNXMyMEotTGMwOThERm9pLTk2d0M5YWNEVVpvNTNRcWxrOThIbDUtYVFhYlRybGZGVndjTzZxdTNJOEd6TnBNSmxPMV9zczgzcndOYnFxeTJqNFFTV1RHQkpmOWc?oc=5",
    "source": "구글뉴스: 인공지능",
    "category": "news_ko",
    "published": "2026-09-28T00:10:18+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "663a777ff2b4ac30",
+   "title": "빌 게이츠 “10억명 죽일 수도” 경고… 트럼프 ‘AI 규제 사기론’ 정면 반박",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1Yd3FUTUpHT1Juc1o2Nm9vS1dubnlvRWxOV2ZzWnJlRWhhVWc2OWZwZk1fbVlEN1Z5SkR5MFRkbjZ2bHgyUVVwc0lEbkxLX1B6S296dk9lMjN6ZE9hRnYyWWxDUEN2Tmt5M18zSDZ5d9IBb0FVX3lxTE1Yd3FUTUpHT1Juc1o2Nm9vS1dubnlvRWxOV2ZzWnJlRWhhVWc2OWZwZk1fbVlEN1Z5SkR5MFRkbjZ2bHgyUVVwc0lEbkxLX1B6S296dk9lMjN6ZE9hRnYyWWxDUEN2Tmt5M18zSDZ5dw?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-28T00:09:14+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -243,12 +263,52 @@
    "thumb": ""
   },
   {
+   "id": "a56355b4370c5ad4",
+   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oNDF1d2NXd3lSNFdSbnNpTGR4WHhqMC02WjNBUHJDNGkwRFBzbl8zdXFlRFRKekxRU2EyZXBiMjJaTDNuZ0hmdVlSMnlUcGM?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T23:42:01+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "55ee36553167664e",
+   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1CbW5QZEo1a3J1SkJPOFBUVkFsRWhjaV9tVEw3elJhdnRsanVOUTdWS1B5dDgxWE5ZQlVobmxsU01kRUVuNWtKY1BScDhVVTYwVmFZNQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T23:42:01+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "c1e3c7d0c9c4c9d9",
    "title": "More AI regulation ordered by Oregon governor",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNEZ3UEdJYUpyd2RyWkxDczBsekdnWHpNX2JwY1cwOWpzek1zdVJzX0sxVDhROXhqQU9ETXVCMzVCNEp3c2V5Q2FmT0Fub1NKV0E2QXpWTjE0UlI5ZFl5ZXVKM0w3YWxYUTZhTF9iNkV6YkMydzFTNkU3d1JtcFVESktaM19Ocno0b054QUw4RGFPd3JfNnc4?oc=5",
    "source": "Google News: AI regulation",
    "category": "policy",
    "published": "2026-09-27T23:39:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "aed1db3846a8b299",
+   "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1SSFQ5REhBMllYSUdUYmZCa182c19NYWdELWdUMUt5OHI2ZUxKRGVrbEgzdXFBT2dCVHIxNXVVN3BybGVFMlZYSWljQnRDeThkT3pPdl8zUG5aZ3JyRVFsdkJ3a1dzdw?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T23:37:07+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "93d6814b8792a251",
+   "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51emdWaFNkLVNvWFdndUxvTzFYVzUwTDM2T1M1OVFDS25kbUd1T2U0aVVESzdzNVdfYjNhQ0lGYUoxT1lqeUpjNUZnbDk1UFViblc5OXJTbFZTV3U3YWVvTU1lRFR4NE0?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T23:37:07+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -333,6 +393,16 @@
    "thumb": ""
   },
   {
+   "id": "417a7f0969dd191f",
+   "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JVG9ZMWFEOVhaakd5QUZOY2JnYlpPZXczQXlta2Zwd29yUTlfdDJ1TU02OHdDOVdoejVFOWt6d0x6UGI1ZW50Q2RjdjlnSUE?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T23:06:51+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b6c53925c5aa08b7",
    "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CSk9ZdGRuMHRYMHBJRV9Jank2ZEN3ZklaenZSM2t6VUtSalRtZkN3dE52RkI2NXNxZHM3UnJKdk9ZSEx0eUJobWdQek5nRkczZkp5Y1NQU2ZTbndkWGZuVmE3UkUyVU41OWZWV0J2NA?oc=5",
@@ -363,12 +433,42 @@
    "thumb": ""
   },
   {
+   "id": "1e0055b0593bf80a",
+   "title": "AG hopefuls Savit, Lloyd spar over Line 5, AI regulation in first debate",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUHppRGtoVEFVSXFUNWwwLWpkQXZueGN6cnZuZDJySXhuVHNvaXBaWVBaLTVCT3d4N3ROS0V1OXQ4WHNJTTFFREJRRXZkMFpCcjEzUGFabklQSkI5QUxhQ05zZzU4VW5VQTZqV1JHTGQ1MnFiZXlqWUg3ZzZ0WWVDcFRBZ3FfSnB4dzhSOXNaVXRodw?oc=5",
+   "source": "Google News: AI regulation",
+   "category": "policy",
+   "published": "2026-09-27T22:38:52+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "239cce964dd9c83f",
+   "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T22:05:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b91ae65d6d7d8b9d",
    "title": "\"트럼프, 앤트로픽 CEO와 단독 만찬\"...AI 규제갈등 해빙 신호? - 머니투데이",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fOU9xWlMwUlZjYWFubk5oU01nd05ESkNCNnkyT2VBTnktdFhHay1qMlI5b0syMEdnY2EtN2NEU2R0V2txa2h6Z0FCSHpFSUFDQUxPdVZkVktjNldyT19UU3kzS2ZuS2tWT25yUDlR0gFuQVVfeXFMTl85T3FaUzBSVmNhYW5uTmhTTWd3TkRKQ0I2eTJPZUFOeS10WEdrLWoyUjlvSzIwR2djYS03Y0RTZHRXa3FraHpnQUJIekVJQUNBTE91VmRWS2M2V3JPX1RTeTNLZm5La1ZPbnJQOVE?oc=5",
    "source": "구글뉴스: AI 정책",
    "category": "policy",
    "published": "2026-09-27T22:02:19+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "cfe39dba6ca972ec",
+   "title": "[AI 프리즘] 'AI 규제 갈등' 앤트로픽 CEO, 트럼프와 백악관 단독 만찬...껄끄러운 관계 청산할까",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vQ1dDRWxnQS1XNXpkYWNMRVRuRHF1cUozX2xRcmpJakdYLWFWU0hMRmtJcmpLZk9yUWlVYkdLWWNlRjVodzZkZTlHdFpPcWo2aWVRWGcwZk5nQl84MGdDZkVrZnJ2Vi1oLV9xVHBB0gFuQVVfeXFMTW9DV0NFbGdBLVc1emRhY0xFVG5EcXVxSjNfbFFyaklqR1gtYVZTSExGa0lyaktmT3JRaVViR0tZY2VGNWh3NmRlOUd0Wk9xajZpZVFYZzBmTmdCXzgwZ0NmRWtmcnZWLWgtX3FUcEE?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-27T22:01:46+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -383,12 +483,32 @@
    "thumb": ""
   },
   {
+   "id": "e2f0400b1131ca78",
+   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T21:41:43+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "cd18f316871d4581",
    "title": "[AI&] “유쾌한 홍보부터 재난 대응까지“…지자체 ’AI 행정’ 성과 外",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5sS3ZkYy1oeURkOTFOYnlta0tIMHY3Ny1QaTVHM0Z1TEt2dWRtTmN6XzNjeGtZRlFXcDQ4V2ZsXy1wc2w4X0ZmZkphSzRidFRwQWo5SnpCbXdaZHZGQWxzVVQtQjdZRUk?oc=5",
-   "source": "구글뉴스: 인공지능",
+   "source": "구글뉴스: 생성형 AI",
    "category": "news_ko",
    "published": "2026-09-27T21:36:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "0736d9eb6b9a4bcc",
+   "title": "경기도, ‘대한민국 AI 콘텐츠 어워즈’ 공모에 1,528편 접수. 20편 본선 진출",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1RjRqdFZXNzNqMFh1anlkTHdTT0lfTG1sTGRxVGk0ekJ1cno5UzUxQ1p0bUc3OHRfNl9QcmRfeEUxY2NkbWhBNHR1OVJ6Y3R5TnVmd1JuSWRQcGM2UFk0Z19IYzM?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "category": "news_ko",
+   "published": "2026-09-27T21:30:35+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -429,6 +549,16 @@
    "source": "구글뉴스: AI 정책",
    "category": "policy",
    "published": "2026-09-27T21:02:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "1d34110e9e5176a4",
+   "title": "유럽, 동물시험 대체 자료 접수·AI 의료 규제 논의…의약품 안전관리도 강화",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fUExfYU4wTXU0WER3UzIzdkVla1RxZ2ZBT2tVUE9SbF9OSGMwRHc4bGFob2M0UFk5OHNXR2NQZEhnSk84VGR3VDEyZWx1ckptbnpXS2lOakdnYlJoaU5EdklXejh3bmNvS1RSem1n?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "category": "policy",
+   "published": "2026-09-27T21:00:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -679,6 +809,16 @@
    "source": "Google News: AI regulation",
    "category": "policy",
    "published": "2026-09-27T09:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "2eeb9c10ad70be60",
+   "title": "CG 없이 대규모 전쟁·액션신 뚝딱…생성형 AI 활용 본격화",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLXBIS3paaXNrSEVnSXdPUGtvdkpTczc0WDI3akg1NFhkTUZxOVZkMFRzZzlLUHluNWpQNVRJdXlaZlAzbjI0YXhLbVB0ZEJ4TEM5enF5UHpjMkJ6RFhOWFo1STQ4aWY2UEV3OW5MdmI0OW1YZTBha3JfS0Z6cm8ta1dNbFZabEEtWDBZV1R3?oc=5",
+   "source": "구글뉴스: 생성형 AI",
+   "category": "news_ko",
+   "published": "2026-09-27T08:25:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -951,126 +1091,6 @@
    "published": null,
    "summary": "- 과기정통부, ｢전국민AI 역량 강화 정책 브랜드 공모전｣ 9.17.~9.30. 개최- 전문가 심사로 5개 후보 압축 후, 최종 당선작은 대국민 투표로 결정 - 선정 브랜드는 범부처 AI 역량 강화 정책의 통합 브랜드로 활용",
    "thumb": ""
-  },
-  {
-   "id": "55ee36553167664e",
-   "title": "국민신문고에 한 문장만 써도…AI가 민원 신청까지 척척",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1CbW5QZEo1a3J1SkJPOFBUVkFsRWhjaV9tVEw3elJhdnRsanVOUTdWS1B5dDgxWE5ZQlVobmxsU01kRUVuNWtKY1BScDhVVTYwVmFZNQ?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T23:42:01+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "aed1db3846a8b299",
-   "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1SSFQ5REhBMllYSUdUYmZCa182c19NYWdELWdUMUt5OHI2ZUxKRGVrbEgzdXFBT2dCVHIxNXVVN3BybGVFMlZYSWljQnRDeThkT3pPdl8zUG5aZ3JyRVFsdkJ3a1dzdw?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T23:37:07+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "93d6814b8792a251",
-   "title": "“올 2분기 전 세계 생성형 AI 사용률, 18.8% 기록”",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51emdWaFNkLVNvWFdndUxvTzFYVzUwTDM2T1M1OVFDS25kbUd1T2U0aVVESzdzNVdfYjNhQ0lGYUoxT1lqeUpjNUZnbDk1UFViblc5OXJTbFZTV3U3YWVvTU1lRFR4NE0?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T23:37:07+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "1d34110e9e5176a4",
-   "title": "유럽, 동물시험 대체 자료 접수·AI 의료 규제 논의…의약품 안전관리도 강화",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fUExfYU4wTXU0WER3UzIzdkVla1RxZ2ZBT2tVUE9SbF9OSGMwRHc4bGFob2M0UFk5OHNXR2NQZEhnSk84VGR3VDEyZWx1ckptbnpXS2lOakdnYlJoaU5EdklXejh3bmNvS1RSem1n?oc=5",
-   "source": "구글뉴스: AI 정책",
-   "category": "policy",
-   "published": "2026-09-27T21:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6bf519d1e9c79a0c",
-   "title": "한국 생성형 AI 사용률 40.6%…세계 12위로 네 계단 상승",
-   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPNWRJQldQNTVaYTBLSldqcG8wWmVveTdubHZmMmRiZUs2TUg3VmZxZ0x1VGFiVGRYaFZTUGJndnpLandnMDB1U0l4Y0hqeFlwbFAtYnlNZkRfMF94QjJ0V2dZSW1rZ0dtN3FmQUh4ZUdBcmhqVUJQcXZOaVV4YWp4VkQ4NnNnczctaXNjYXd5NkJ1OHZkcmRVMTZWYmVtdnZsWDBYbDQ5N216ODE0VWxhY0E2ZkRYRXEzeFFkOGNkYklvb0RldUhWRTZoYmJ1THg0ZUhnMGROTUpVbVYzTXI1Vk44eUI2N05OY0RlSFBrcENQcHdNbmdsSEI3TXJJVkh2WFF3YmRFTVl0aXRhcEpRNE1jTkRhb21DUmp5OEZ3MnM?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-28T00:12:38+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "417a7f0969dd191f",
-   "title": "오픈AI·앤트로픽, AI 보안사고 수만 건 조사…최고 성능 모델 훈련 중단",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JVG9ZMWFEOVhaakd5QUZOY2JnYlpPZXczQXlta2Zwd29yUTlfdDJ1TU02OHdDOVdoejVFOWt6d0x6UGI1ZW50Q2RjdjlnSUE?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T23:06:51+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "1e0055b0593bf80a",
-   "title": "AG hopefuls Savit, Lloyd spar over Line 5, AI regulation in first debate",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUHppRGtoVEFVSXFUNWwwLWpkQXZueGN6cnZuZDJySXhuVHNvaXBaWVBaLTVCT3d4N3ROS0V1OXQ4WHNJTTFFREJRRXZkMFpCcjEzUGFabklQSkI5QUxhQ05zZzU4VW5VQTZqV1JHTGQ1MnFiZXlqWUg3ZzZ0WWVDcFRBZ3FfSnB4dzhSOXNaVXRodw?oc=5",
-   "source": "Google News: AI regulation",
-   "category": "policy",
-   "published": "2026-09-27T22:38:52+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "239cce964dd9c83f",
-   "title": "[에이전틱 AI 맵 2026] 미소정보기술, AI 에이전트 개발부터 운영까지 ‘액틱’으로 통합",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1zSVdVaHV5Z3Z5T2lJVzk0SE9TSXBpNnZPWUVuc1RTVzV1ZTA3RTFPT1ZaVDJtVWsyYXF4Rkw0UWt0ZjZtTDdLWXRSY3FKRDh3QnlpWGhkVnYtel8yZzZEbUFVWnViTVY3R0tsbWw5blBnT2dw0gF0QVVfeXFMTXNJV1VodXlndnlPaUlXOTRIT1NJcGk2dk9ZRW5zVFNXNXVlMDdFMU9PVlpUMm1VazJhcXhGTDRRa3RmNm1MN0tZdFJjcUpEOHdCeWlYaGRWdi16XzJnNkRtQVVadWJNVjdHS2xtbDluUGdPZ3A?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T22:05:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e2f0400b1131ca78",
-   "title": "생성형 AI 서비스 1조원 시대...이용자 보호·사업자 책임 과제로",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JQzVFZkhoa2F2NTl4bUdDTmdsdG5EVjBTUmFwMklENExObmpjT3FYMi1wdkpadmdlekxxdE9vN0J6aG9FNUhlMGhZaU93LWJOSWFmM0poYjNWOTNkYXB6dkRieXNtZlRXNTYwV1BELVFQdUE?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T21:41:43+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "0736d9eb6b9a4bcc",
-   "title": "경기도, ‘대한민국 AI 콘텐츠 어워즈’ 공모에 1,528편 접수. 20편 본선 진출",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1RjRqdFZXNzNqMFh1anlkTHdTT0lfTG1sTGRxVGk0ekJ1cno5UzUxQ1p0bUc3OHRfNl9QcmRfeEUxY2NkbWhBNHR1OVJ6Y3R5TnVmd1JuSWRQcGM2UFk0Z19IYzM?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "category": "news_ko",
-   "published": "2026-09-27T21:30:35+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "cfe39dba6ca972ec",
-   "title": "[AI 프리즘] 'AI 규제 갈등' 앤트로픽 CEO, 트럼프와 백악관 단독 만찬...껄끄러운 관계 청산할까",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vQ1dDRWxnQS1XNXpkYWNMRVRuRHF1cUozX2xRcmpJakdYLWFWU0hMRmtJcmpLZk9yUWlVYkdLWWNlRjVodzZkZTlHdFpPcWo2aWVRWGcwZk5nQl84MGdDZkVrZnJ2Vi1oLV9xVHBB0gFuQVVfeXFMTW9DV0NFbGdBLVc1emRhY0xFVG5EcXVxSjNfbFFyaklqR1gtYVZTSExGa0lyaktmT3JRaVViR0tZY2VGNWh3NmRlOUd0Wk9xajZpZVFYZzBmTmdCXzgwZ0NmRWtmcnZWLWgtX3FUcEE?oc=5",
-   "source": "구글뉴스: AI 정책",
-   "category": "policy",
-   "published": "2026-09-27T22:01:46+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "2eeb9c10ad70be60",
-   "title": "CG 없이 대규모 전쟁·액션신 뚝딱…생성형 AI 활용 본격화",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOLXBIS3paaXNrSEVnSXdPUGtvdkpTczc0WDI3akg1NFhkTUZxOVZkMFRzZzlLUHluNWpQNVRJdXlaZlAzbjI0YXhLbVB0ZEJ4TEM5enF5UHpjMkJ6RFhOWFo1STQ4aWY2UEV3OW5MdmI0OW1YZTBha3JfS0Z6cm8ta1dNbFZabEEtWDBZV1R3?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "category": "news_ko",
-   "published": "2026-09-27T08:25:00+00:00",
-   "summary": "",
-   "thumb": ""
   }
  ],
  "status": [
@@ -1102,7 +1122,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 79
+   "fetched": 80
   },
   {
    "name": "Hugging Face Blog",
@@ -1178,21 +1198,21 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 85
+   "fetched": 87
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 81
+   "fetched": 79
   },
   {
    "name": "구글뉴스: 인공지능",
