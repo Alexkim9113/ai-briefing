@@ -1,7 +1,29 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T13:42+09:00",
+ "generated_at": "2026-09-28T13:51+09:00",
  "items": [
+  {
+   "id": "5a871f1b164a4c7d",
+   "title": "오픈AI \"챗GPT 아이폰 통합 실적 저조\"…법원서 파트너십 균열 드러나",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215718",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T13:47:51+09:00",
+   "summary": "오픈AI가 애플과의 '챗GPT' 통합 파트너십 결과에 극심한 실망감을 표시하며 양사 간 갈등이 법정 싸움으로까지 번진 정황이 공개됐다. 2024년 대대적인 협력을 발표하며 주목받았던 두 기업의 협력이 2년 만에 사실상 파경을 맞이한 것으로 확인됐다.",
+   "thumb": ""
+  },
+  {
+   "id": "9684e0ac40a3f448",
+   "title": "오픈AI 에이전트, 유엔 웹사이트 API 무차별 스캔 ...\"단순 스크래핑 아닌 우회 공격\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215706",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T13:15:48+09:00",
+   "summary": "오픈AI의 AI 에이전트가 유엔무역개발회의(UNCTAD) 통계 사이트를 대상으로 수개월간 1만6500회 이상의 API 스캔과 우회 접속을 시도한 정황이 포착됐다.",
+   "thumb": ""
+  },
   {
    "id": "b163ed3fcb727529",
    "title": "스캐터랩, AI 캐릭터챗 '제타' 신규 기능 출시...\"대화 따라 표정·배경 바뀐다\"",
@@ -208,6 +230,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T03:42:25+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "c27967c5369a40aa",
+   "title": "The energy problem of the AI data centre boom",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOeTluTEVRcFRGYVFsQ01TX0wyZUpvaWJNRC0tem9BWDhKNkNWRkNULXI3dEJ1UkRNbXJkQkgwRGZfNWFsOHloYXNtYThvUWlHUXBoTTFENEJWZERXdXUyQ2o4VWNyVm1OTzI2VTdjOU5YbGtfdDNDM1BmYkdMSXFTcTZKcEdzYmVXblUzUFZn?oc=5",
+   "source": "Google News: AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T03:41:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1133,17 +1166,6 @@
    "title_ko": "SoundHound AI 대 BigBear.ai: 수익 추세는 인공 지능 회사에 대한 주요 통찰력을 드러냅니다."
   },
   {
-   "id": "6f0f3aee4cfb0e07",
-   "title": "공무원이 생성형 AI로 업무 시스템 직접 만든다",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA4VTlMTU9ZZzEzZUlSZFVSSG1aQzhLMVVrRXlKakl5SjNhNUpqR3NHYmtwcFhnNW5zdXRsUUxEYUp3TGR5dU5tNTdoMF9MTVVVallIcHZTZndhWWFFck5tT3p2Smt1c0dBM09UV3VR?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:00:18+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "9b75262a4813d73c",
    "title": "A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID",
    "link": "https://arxiv.org/abs/2609.30287",
@@ -1339,17 +1361,6 @@
    "category": "papers",
    "published": "2026-09-28T00:00:00-04:00",
    "summary": "Multimodal Agentic Retrieval (MAR) requires agents to solve complex information-seeking tasks by iteratively invoking external tools.",
-   "thumb": ""
-  },
-  {
-   "id": "372e8bff03862797",
-   "title": "[AI리더의 서가] 한 땀 한 땀 나의 첫 AI 에이전트",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215621",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T00:00:00+00:00",
-   "summary": "한 땀 한 땀 나의 첫 AI 에이전트허정준·송영희 | 책만2026년 9월 29일추천이유이 책은 프레임워크 없이 파이썬으로 AI 에이전트를 처음부터 끝까지 직접 구현하며 에이전트의 본질과 설계 원리를 완전히 이해하도록 합니다.",
    "thumb": ""
   },
   {
@@ -2326,18 +2337,6 @@
    "thumb": ""
   },
   {
-   "id": "be11f7d1d629dcf0",
-   "title": "Tesla workers balk at training Optimus humanoid robots as replacements",
-   "link": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
-   "source": "Ars Technica AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-25T21:10:51+00:00",
-   "summary": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026.",
-   "thumb": "",
-   "title_ko": "Tesla 직원들은 Optimus 휴머노이드 로봇을 대체 로봇으로 훈련시키는 것을 꺼려합니다."
-  },
-  {
    "id": "6d63f788451a5bae",
    "title": "UPDATE: Stanford apologizes for using AI to alter student’s race, gender in photo",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2ZpTFh4X25ZUGd0QjM3cE90alhSZ2lrbWhwOWUzMldzVWVnczBaeTdvc2R4ZXdGeDN1Uk9tWlVLOHBOT2s4djV4MGNiOFo5ZU5uUF9yM2VjS3lLelIzNU1kMjQyYmVYMTNscWlEUzdWcjZEVnJDamV2a2t0VXZDRWFLM2pHT2ZqdElCZ1dqR2lQbXZteUpoWjVBMTRuSDk3Z1BDRA?oc=5",
@@ -2414,18 +2413,6 @@
    "published": "2026-09-24T20:00:00+00:00",
    "summary": "Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image…",
    "thumb": ""
-  },
-  {
-   "id": "356e826b460b6d0d",
-   "title": "What if AI wasn’t a shortcut, but a learning partner? #TEDTalks",
-   "link": "https://www.youtube.com/shorts/QT3e6x5CZC8",
-   "source": "TED",
-   "field": "",
-   "category": "talks",
-   "published": "2026-09-24T19:00:28+00:00",
-   "summary": "Sal Khan, the founder and CEO of Khan Academy, thinks artificial intelligence could spark the greatest positive transformation education has ever seen.",
-   "thumb": "",
-   "title_ko": "AI가 지름길이 아닌 학습 파트너라면 어떨까요? #TEDTalks"
   },
   {
    "id": "2d3921d846c73739",
@@ -2608,7 +2595,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 79
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -2690,15 +2677,15 @@
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 1,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "fetched": 15
   },
   {
    "name": "TEDx Talks",
@@ -2787,8 +2774,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "과학기술정보통신부 보도자료",
