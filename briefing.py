@@ -991,7 +991,7 @@ SOCIAL_ICONS = {
 def connect_links(sc, base):
     """하단 CONNECT: Contact · Instagram · X · Policy. 주소가 아직 없는 SNS는 아이콘만 보이고 링크는 걸리지 않는다."""
     contact = f'mailto:{sc["email"]}' if sc.get("email") else f"{base}policy.html#contact"
-    links = [("Contact", contact, False), ("Instagram", sc.get("instagram"), True),
+    links = [("Contact", contact, False), ("Instagram", sc.get("instagram"), True), ("X", sc.get("x"), True),
              ("Policy", f"{base}policy.html", False)]
     out = []
     for n, u, ext in links:
