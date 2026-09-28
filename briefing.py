@@ -299,6 +299,57 @@ def item_id(link, title):
     return hashlib.sha1((norm_link(link) or title).encode()).hexdigest()[:16]
 
 
+CHAPTERS_FILE = DATA_DIR / "meta" / "chapters.json"  # 영상 id → 채널이 설명란에 적은 구간 목차
+_CHAP_LINE = re.compile(r"^\s*[\(\[]?((?:\d{1,2}:)?\d{1,2}:\d{2})[\)\]]?\s*[-–—:|·]?\s*(.{2,90}?)\s*$")
+
+
+def parse_chapters(desc):
+    """영상 설명란의 '0:00 소개' 같은 구간 목차(채널이 직접 적은 것)만 뽑는다. 3개 이상, 0:00부터, 시간순일 때만."""
+    out = []
+    for line in (desc or "").splitlines():
+        m = _CHAP_LINE.match(line)
+        if not m:
+            continue
+        sec = 0
+        for part in m.group(1).split(":"):
+            sec = sec * 60 + int(part)
+        label = re.sub(r"https?://\S+", "", m.group(2)).strip(" -–—:|·")
+        if not label or (out and sec <= out[-1][0]):
+            continue
+        out.append([sec, label[:70]])
+    if len(out) < 3 or out[0][0] != 0:
+        return []
+    return out[:15]
+
+
+def load_chapters():
+    try:
+        return json.loads(CHAPTERS_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def save_chapters(found, fixtures=None):
+    """이번 수집에서 찾은 구간 목차를 저장한다. 한글이 없는 목차는 무료 번역(구글)으로 한국어를 붙인다."""
+    if not found:
+        return
+    ch = load_chapters()
+    new = {k: v for k, v in found.items() if k not in ch}
+    todo = [(k, n) for k, v in new.items() for n, (_, lab) in enumerate(v) if not _HANGUL.search(lab)]
+    if todo and not fixtures:
+        try:
+            out, _ = translate_many([new[k][n][1] for k, n in todo], True, "title")
+            for (k, n), ko in zip(todo, out):
+                if ko:
+                    new[k][n].append(ko.rstrip("."))
+        except Exception as e:
+            print(f"[구간] 번역 실패: {e}", file=sys.stderr)
+    ch.update(new)
+    CHAPTERS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CHAPTERS_FILE.write_text(json.dumps(ch, ensure_ascii=False), encoding="utf-8")
+    print(f"[구간] 영상 구간 목차 {len(new)}개 새로 저장")
+
+
 HOT_DAYS = 2  # '많이 본 기사' 목록에서 이보다 오래된 글은 순위에 넣지 않는다
 _TITLE_SUFFIX = re.compile(r"\s+-\s+[^-]{1,40}$")
 
@@ -828,7 +879,7 @@ def collect(fixtures=None, now=None):
         history.add(it)
     keywords = cfg.get("ai_keywords", [])
 
-    results, status = [], []
+    results, status, chapters_found = [], [], {}
     hot_marks, hot_marks_src = [], {s["name"]: [] for s in cfg["sources"]}
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         futs = {pool.submit(collect_source, s, fixtures): s for s in cfg["sources"]}
@@ -840,6 +891,11 @@ def collect(fixtures=None, now=None):
                 status.append({"name": label(src), "ok": False, "count": 0, "error": f"{type(e).__name__}: {e}"[:200]})
                 continue
             kept = []
+            if src["category"] == "talks":
+                for it in raw_items:
+                    c = parse_chapters(it.get("desc"))
+                    if c and it.get("link"):
+                        chapters_found[item_id(it["link"], clean_text(it["title"]))] = c
             for it in raw_items:
                 item = make_item(src, it, keywords, now)
                 if not item:
@@ -892,6 +948,7 @@ def collect(fixtures=None, now=None):
     per_src = Counter()  # 영상·강연은 한 채널이 하루를 다 차지하지 않게 채널당 최대 2개
     uniq = [i for i in uniq if i["category"] != "talks" or (per_src.update([i["source"]]) or per_src[i["source"]] <= 2)]
     add_translations(uniq, fixtures)
+    save_chapters(chapters_found, fixtures)
     gone = load_removed()
     uniq = [i for i in uniq if i["id"] not in gone]  # 운영자가 삭제한 기사는 다시 모으지 않는다
     uniq = drop_same_story(uniq, recent_items(today))  # 언론사가 달라도 같은 내용이면 먼저 나온 기사 하나만
@@ -1160,9 +1217,6 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .trend .thumb{border-radius:12px}.trend .thumb .tag{display:none}
 .trend h3{font-size:16.5px;line-height:1.45;font-weight:600;color:var(--heading);margin:0 0 4px}
 .trend p{margin:0 0 4px;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.ib-h{display:block!important;margin:0 0 4px!important;font-size:11px!important;font-weight:800;letter-spacing:.14em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important}
-.ib-p{margin:4px 0 12px;padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,rgba(18,227,255,.08),rgba(139,44,255,.10));border:1px solid var(--line)}.ib-p p{margin:0}
-.hero .ib-p p:not(.ib-h){font-size:15px;line-height:1.7;color:var(--text,inherit)}.trend .ib-p{padding:8px 10px;margin:2px 0 6px}
 .cd{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);margin-right:7px;vertical-align:.12em}
 .brief-bg{position:fixed;inset:0;z-index:50;background:rgba(3,3,12,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center;padding:20px;animation:bfade .18s ease}
 .brief{position:relative;box-sizing:border-box;width:min(560px,100%);min-width:0;overflow-x:hidden;overflow-wrap:anywhere;word-break:keep-all;max-height:86vh;overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:18px;padding:26px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
@@ -1173,7 +1227,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
 .brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
 article:has(a[data-d]),.trend:has(a[data-d]){cursor:pointer}
-.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}.brief-del{display:block;width:max-content;margin:14px auto 0;font-size:13px;font-weight:600;color:#e5484d;border:1px solid currentColor;border-radius:99px;padding:6px 16px}.mx-s{margin:0 0 4px;line-height:1.7}.mx-v{margin:16px 0 4px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(18,227,255,.10),rgba(139,44,255,.12));border:1px solid var(--line)}.mx-v b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-v p{margin:0;line-height:1.7}.mx-t{margin:14px 0 4px}.mx-t span.tg{cursor:default}
+.brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}.brief-del{display:block;width:max-content;margin:14px auto 0;font-size:13px;font-weight:600;color:#e5484d;border:1px solid currentColor;border-radius:99px;padding:6px 16px}.mx-s{margin:0 0 4px;line-height:1.7}.mx-v{margin:16px 0 4px;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(18,227,255,.10),rgba(139,44,255,.12));border:1px solid var(--line)}.mx-v b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-v p{margin:0;line-height:1.7}.mx-c{margin:14px 0 4px}.mx-c b{display:block;font-size:11.5px;letter-spacing:.14em;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.mx-c ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}.mx-c li{display:flex;gap:10px;align-items:baseline;line-height:1.55}.mx-c li a{flex:none;min-width:52px;font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}.mx-t{margin:14px 0 4px}.mx-t span.tg{cursor:default}
 @keyframes bfade{from{opacity:0}}
 @media (max-width:600px){.brief-bg{align-items:end;justify-items:stretch;padding:0}.brief{width:100%;max-height:88vh;border-radius:20px 20px 0 0;padding:24px 18px calc(18px + env(safe-area-inset-bottom));animation:bup .22s ease}.brief h3{font-size:19px}}
 @keyframes bup{from{transform:translateY(40px);opacity:.3}}
@@ -1295,7 +1349,7 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
  ${(()=>{let tg=[];try{tg=JSON.parse(a.dataset.mt||'[]')}catch(_){}
-  return `<h4>QUICK BRIEF</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS POINT</b><p>${e(a.dataset.mv)}</p></div>`:''}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
+  return `<h4>QUICK BRIEF</h4><p class="mx-s">${e(a.dataset.ms)}</p>${a.dataset.mv?`<div class="mx-v"><b>METAXIS POINT</b><p>${e(a.dataset.mv)}</p></div>`:''}${(()=>{let ch=[];try{ch=JSON.parse(a.dataset.ch||'[]')}catch(_){}if(!ch.length)return'';const t=n=>{const h=Math.floor(n/3600),m=Math.floor(n%3600/60),x=String(n%60).padStart(2,'0');return h?`${h}:${String(m).padStart(2,'0')}:${x}`:`${m}:${x}`};const u=n=>a.href+(a.href.includes('?')?'&':'?')+'t='+n+'s';return `<div class="mx-c"><b>TIMELINE</b><ol>${ch.map(([n,l,k])=>`<li><a href="${e(u(n))}" target="_blank" rel="noopener">${t(n)}</a><span>${e(k||l)}</span></li>`).join('')}</ol></div>`})()}${tg.length?`<div class="tags mx-t">${tg.map(([n,h])=>h?`<a class="tg" href="${e(h)}">#${e(n)}</a>`:`<span class="tg">#${e(n)}</span>`).join('')}</div>`:''}`})()}
  <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
  <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">${V?'▶ 영상 보기':'더 읽어보기 →'}</a><p class="brief-note">${V?'전체 영상과 저작권은 원작자에게 있습니다.':'전체 기사와 저작권은 원작자에게 있습니다.'}</p>${isOp()&&a.dataset.id?`<a class="brief-del" href="/editor/write.html#hide=${e(a.dataset.id)}&t=${encodeURIComponent(a.textContent.trim().slice(0,120))}">이 기사 삭제</a>`:''}</div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
@@ -1781,6 +1835,19 @@ def _mx_attrs(it):
             f' data-mt="{esc(json.dumps(tags, ensure_ascii=False))}"')
 
 
+_CH_CACHE = []
+
+
+def _ch_attr(it):
+    """영상: 채널이 적은 구간 목차가 있으면 기사 창의 TIMELINE으로 넘긴다."""
+    if it.get("category") != "talks":
+        return ""
+    if not _CH_CACHE:
+        _CH_CACHE.append(load_chapters())
+    c = _CH_CACHE[0].get(it.get("id", ""))
+    return f' data-ch="{esc(json.dumps(c, ensure_ascii=False))}"' if c else ""
+
+
 def title_link(it):
     ko = f'<span class="ko">{esc(it["title_ko"])}</span>' if it.get("title_ko") else ""  # 해외 글: 원문 제목 아래 자동 번역 제목
     d = brief_text(it)
@@ -1788,7 +1855,7 @@ def title_link(it):
     extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
              + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")
              + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") else "")
-             + (' data-v="1"' if it.get("category") == "talks" else "") + _mx_attrs(it)) if not it.get("editor") else ""
+             + (' data-v="1"' if it.get("category") == "talks" else "") + _ch_attr(it) + _mx_attrs(it)) if not it.get("editor") else ""
     aid = f' data-id="{esc(it["id"])}"' if it.get("id") and not it.get("editor") else ""
     return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{aid}{extra}>{esc(it["title"])}</a>{ko}'
 
@@ -2183,6 +2250,84 @@ def _talk_speaker(it):
     return m.group(1).strip() if m else ""
 
 
+# 사건 유형이 안 잡힐 때 쓰는 주제별 시사점: (주제 정규식, 뉴스 문장, 연구 문장). {k} = 핵심어
+_TOPIC_VIEWS = [
+    (re.compile(r"의료|병원|진단|환자|임상|질환|암\b|치료|헬스|health|medic|clinic|patient|disease|cancer|diagnos", re.I),
+     "AI가 진단·치료 현장에서 얼마나 믿고 쓸 수 있는 도구가 되는지를 가늠하게 해요.",
+     "의료 분야에 AI를 적용한 연구로, 실제 진료에 쓰이려면 어떤 데이터와 검증 절차가 필요한지 보여 줘요."),
+    (re.compile(r"저작권|창작|표절|작가|아티스트|copyright|artist|author|plagiar", re.I),
+     "AI가 만든 결과물과 학습 데이터의 권리를 누가 갖는지, 창작자 보상 기준이 어떻게 정해질지와 맞닿은 이슈예요.",
+     "AI 학습과 창작물 권리의 경계를 다룬 연구로, 저작권 기준을 정하는 논의에 근거가 될 수 있어요."),
+    (re.compile(r"에너지|전력|원전|탄소|기후|환경|climate|energy|power grid|carbon|emission|environment", re.I),
+     "AI 확산이 전력·환경 부담을 키우는 동시에, 기후·에너지 문제를 푸는 도구도 될 수 있다는 양면을 보여 줘요.",
+     "에너지·환경 문제에 AI를 활용한 연구로, 에너지 효율과 환경 부담을 함께 따져 볼 근거가 돼요."),
+    (re.compile(r"동물|반려|야생|생태|animal|wildlife|species|ecolog", re.I),
+     "AI가 동물 보호와 생태 관찰에까지 쓰이며 활용 범위가 사람 밖으로 넓어지고 있어요.",
+     "AI로 동물·생태 데이터를 분석한 연구로, 사람이 일일이 관찰하기 어려운 영역을 넓혀 줘요."),
+    (re.compile(r"자살|우울|정신건강|심리|mental health|suicid|depress|loneli", re.I),
+     "AI가 정신건강 영역에 들어오면서 위기 신호를 어떻게 다루고 누가 책임지는지가 핵심 과제가 되고 있어요.",
+     "AI와 정신건강의 관계를 다룬 연구로, 상담·위기 대응에 AI를 쓸 때의 안전 기준을 생각하게 해요."),
+    (re.compile(r"청소년|아동|학생|어린이|10대|teen|child|kid|student|minor", re.I),
+     "AI를 가장 먼저, 가장 많이 쓰는 세대가 청소년이라 보호 장치와 교육 방식이 함께 논의돼야 하는 주제예요.",
+     "청소년·아동의 AI 사용을 다룬 연구로, 학습과 보호 정책을 설계할 때 참고할 근거가 돼요."),
+    (re.compile(r"여성|성평등|젠더|성차별|women|gender|female", re.I),
+     "AI가 성별 격차를 줄일 수도, 기존 편향을 굳힐 수도 있다는 점에서 설계와 운영 기준이 중요해져요.",
+     "AI와 성별 격차를 다룬 연구로, 데이터 편향을 어떻게 줄일지에 대한 근거를 더해요."),
+    (re.compile(r"가족|출산|저출생|육아|부모|family|parent|birth|fertility", re.I),
+     "AI가 돌봄·육아처럼 가정 안의 일에까지 들어오면서 생활 방식이 바뀌는 흐름이에요.",
+     "AI와 가족·돌봄의 관계를 다룬 연구로, 인구·복지 정책과도 이어지는 주제예요."),
+    (re.compile(r"딥페이크|가짜뉴스|허위정보|언론|미디어|방송|기자|deepfake|misinformation|disinformation|journalis|media|news", re.I),
+     "AI가 만든 콘텐츠가 늘수록 무엇이 진짜인지 가려내는 기준과 언론의 역할이 더 중요해지고 있어요.",
+     "AI와 정보 생태계를 다룬 연구로, 허위 정보 대응과 미디어 신뢰 문제에 근거를 더해요."),
+    (re.compile(r"선거|정치|국회|정당|대통령|election|politic|congress|senate|parliament|campaign", re.I),
+     "AI를 둘러싼 정치권의 판단이 규제 방향과 산업 경쟁력을 함께 좌우하는 국면이에요.",
+     "AI가 정치·여론에 미치는 영향을 다룬 연구로, 선거와 민주주의 제도를 보완할 근거가 될 수 있어요."),
+    (re.compile(r"윤리|철학|인문|도덕|ethic|philosoph|moral|humanit", re.I),
+     "AI를 어디까지 믿고 맡길지, 사람의 판단을 어떻게 지킬지에 대한 질문을 다시 던지는 이슈예요.",
+     "AI 윤리·철학 문제를 다룬 연구로, 기술 기준을 만들 때 사람 중심의 원칙을 세우는 데 도움이 돼요."),
+    (re.compile(r"예술|음악|영화|미술|문학|공연|배우|art\b|music|film|movie|actor|hollywood|novel", re.I),
+     "AI가 창작 과정에 들어오면서 예술가의 역할과 작품의 가치를 어떻게 볼지가 쟁점이 되고 있어요.",
+     "AI와 예술·창작의 관계를 다룬 연구로, 창작 도구로서의 가능성과 한계를 함께 보여 줘요."),
+    (re.compile(r"국방|군사|전쟁|무기|안보|military|defen[cs]e|war\b|weapon|pentagon", re.I),
+     "AI가 국방과 안보의 핵심 기술로 떠오르면서 사람의 통제를 어디까지 유지할지가 과제로 남아 있어요.",
+     "AI의 군사·안보 활용을 다룬 연구로, 자율 무기와 통제 원칙 논의에 근거를 더해요."),
+    (re.compile(r"일자리|노동|고용|채용|해고|직장|jobs?\b|labor|labour|worker|employ|hiring|layoff", re.I),
+     "AI가 일하는 방식을 바꾸면서 어떤 일자리가 줄고 새로 생기는지가 사회적 과제가 되고 있어요.",
+     "AI가 일자리와 노동에 미치는 영향을 다룬 연구로, 고용 정책과 재교육 논의에 근거가 돼요."),
+    (re.compile(r"교육|학교|수업|교사|대학|education|school|teacher|classroom|learning outcome", re.I),
+     "AI가 수업과 평가 방식을 바꾸면서 무엇을 어떻게 가르칠지 다시 정해야 하는 흐름이에요.",
+     "AI를 교육에 적용한 연구로, 학습 효과와 교사의 역할을 함께 따져 볼 근거가 돼요."),
+    (re.compile(r"경제|금융|증시|주가|물가|은행|economy|financ|stock|market|bank|inflation", re.I),
+     "AI 기대가 실제 매출과 생산성으로 이어지는지가 시장의 다음 관심사예요.",
+     "AI가 경제·금융에 미치는 영향을 다룬 연구로, 생산성과 시장 변화를 가늠할 근거가 돼요."),
+    (re.compile(r"보안|해킹|사이버|개인정보|프라이버시|security|hack|cyber|privacy|breach", re.I),
+     "AI가 공격과 방어 양쪽에 쓰이면서 보안·개인정보 보호 기준을 새로 세워야 하는 상황이에요.",
+     "AI 보안·개인정보 문제를 다룬 연구로, 방어 기술과 기준을 만드는 데 근거가 돼요."),
+    (re.compile(r"로봇|자율주행|휴머노이드|드론|robot|autonomous|humanoid|drone|self-driving", re.I),
+     "AI가 화면 밖 물리 세계로 나오면서 안전 기준과 상용화 속도가 함께 중요해지고 있어요.",
+     "로봇·자율 시스템에 AI를 적용한 연구로, 실제 환경에서의 안전성과 신뢰성을 높이는 데 초점이 있어요."),
+    (re.compile(r"반도체|칩|GPU|HBM|데이터센터|semiconductor|chip|data ?center", re.I),
+     "AI 경쟁이 결국 반도체와 인프라 확보 경쟁이라는 점을 다시 보여 줘요.",
+     "AI 연산 효율과 하드웨어를 다룬 연구로, 비용과 전력 부담을 줄이는 방향과 맞닿아 있어요."),
+    (re.compile(r"언어\s?모델|LLM|챗봇|GPT|Claude|Gemini|language model|chatbot|reasoning|agent", re.I),
+     "AI 모델 경쟁이 성능 수치를 넘어 실제로 어떤 일을 맡길 수 있는지로 옮겨 가고 있어요.",
+     "언어모델의 능력과 한계를 다룬 연구로, 어떤 작업에 믿고 쓸 수 있을지 판단할 근거가 돼요."),
+]
+
+
+def _topic_view(it, cat, k, strict=False):
+    """사건 유형이 없을 때: 글의 주제(분야·제목·소개)에 맞는 시사점 한 문장. strict면 주제가 잡힐 때만."""
+    text = " ".join([it.get("field", ""), it["title"], it.get("title_ko", ""), it.get("summary") or "", it.get("summary_ko") or ""])
+    for rx, news, paper in _TOPIC_VIEWS:
+        if rx.search(text):
+            return (paper if cat == "papers" else news).format(k=k)
+    if strict:
+        return ""
+    if cat == "papers":
+        return f"{k}에 AI를 적용한 연구로, 같은 분야에서 AI를 실제로 쓸 수 있을지 판단하는 근거를 더해요."
+    return f"{k} 영역에서도 AI가 실제로 쓰이기 시작했다는 점을 보여 주는 소식이에요."
+
+
 def mx_note(it):
     """(요약, METAXIS VIEW, 태그). 원문 문장은 쓰지 않고, 핵심 낱말·주체·사건 유형을 조합해 새로 쓴다.
     기업 주장은 발표 기준으로, 논문은 검증 전으로, 정책은 제안/확정/시행 단계를 나눠 쓴다."""
@@ -2225,10 +2370,14 @@ def mx_note(it):
             f"제목 기준으로는 {st} 단계로 보여요." if st else f'핵심 키워드는 {"·".join(k_show) or tg} 등이에요.')
     # 시사점
     view = []
-    if ev:
+    tv = _topic_view(it, cat, tg, strict=True) if ev and ev[0][0] in ("출시", "협력") else ""
+    if tv:  # '행보'류의 일반적인 사건 문장보다 글의 주제(예: 여성·예술·의료)에 맞는 문장을 먼저
+        view.append(tv)
+        ev = []
+    elif ev:
         view.append(ev[0][3].format(s=subj, t=tg))
     else:
-        view.append(f"{tg} 흐름 속에서 나온 소식으로, 후속 보도와 함께 보면 방향을 가늠하기 좋아요.")
+        view.append(_topic_view(it, cat, tg))
     i0 = next((i for _, i in tags if i is not None), None)
     days = _MX["days"]
     if i0 is not None and days:
@@ -2241,13 +2390,12 @@ def mx_note(it):
                 others.append(nm)
         if len(rec) >= 5:
             view.append(f'최근 7일 METAXIS에 #{tg} 관련 글이 {len(rec)}건 모였고' + (f' {"·".join(others[:2])}에서도 다뤄져, 한 분야를 넘는 이슈예요.' if others else ", 관심이 이어지는 주제예요."))
-    caution = {"papers": "다만 연구 결과는 후속 검증 전일 수 있어 확정된 사실로 보기는 어려워요.",
-               "talks": "발언은 연사 개인의 관점이라 사실관계는 따로 확인이 필요할 수 있어요."}.get(cat)
+    caution = {"talks": "발언은 연사 개인의 관점이라 사실관계는 따로 확인이 필요할 수 있어요."}.get(cat)
     if cat == "policy":
         caution = {"제안": "아직 제안·검토 단계로 보여 최종 내용은 바뀔 수 있어요.",
                    "확정": "확정된 내용이라도 시행 시점과 세부 기준은 따로 확인이 필요해요.",
                    "시행": "시행 단계로 보여 적용 대상과 시점을 확인할 필요가 있어요."}.get(_mx_stage(head_t), "진행 단계(제안·확정·시행)는 공식 발표로 확인하는 게 좋아요.")
-    elif not caution and ev and ev[0][0] in ("출시", "투자", "실적", "협력") and _CLAIM.search(head_t):
+    elif not caution and ev and ev[0][0] in ("출시", "실적") and _CLAIM.search(head_t):
         caution = "성능이나 효과는 아직 발표 기준이며, 독립적으로 검증된 결과는 아니에요."
     if caution:
         view = view[:2] + [caution]
@@ -2624,24 +2772,6 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 .plist .pt{cursor:pointer}.plist .pt:hover{color:var(--accent,#3b7bff);text-decoration:underline}.plist button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:4px 12px;cursor:pointer;margin-left:6px}</style>"""
 
 
-def mx_brief(it):
-    """(QUICK BRIEF, METAXIS POINT): METAXIS 브리핑(AI)이 있으면 그것, 없으면 규칙 방식."""
-    mx = it.get("mx") or {}
-    if mx:
-        return mx.get("b", ""), mx.get("p", "")
-    summ, view, _ = mx_note(it)
-    return summ, view
-
-
-def inline_brief(it):
-    """헤드라인·주요 소식 본문: 기사 창과 같은 QUICK BRIEF·METAXIS POINT."""
-    b, p = mx_brief(it)
-    out = f'<p class="ib-h">QUICK BRIEF</p><p class="sum">{esc(b)}</p>' if b else ""
-    if p:
-        out += f'<div class="ib-p"><p class="ib-h">METAXIS POINT</p><p>{esc(p)}</p></div>'
-    return out
-
-
 def sum_ko(it):
     """해외 글: 요약 바로 아래에 자동 번역을 붙인다."""
     return f'<p class="sum-ko">{esc(it["summary_ko"])}</p>' if it.get("summary_ko") else ""
@@ -2656,10 +2786,10 @@ def render_home(data, cats, posts):
     parts, used = [], set()
     hero, trend = pick_featured(items)
     if hero:  # 사진은 헤드라인과 주요 소식에만
-        summ = inline_brief(hero)
+        summ = (f'<p class="sum">{esc(hero["summary"])}</p>' if hero.get("summary") else "") + sum_ko(hero)
         side = "".join(
             f'<div class="trend">{thumb_html(i, "", used)}<div><h3 class="serif">{title_link(i)}</h3>'
-            + inline_brief(i)
+            + (f"<p>{esc(i['summary'])}</p>" if i.get("summary") else "") + sum_ko(i)
             + f"{meta_html(i, cats, True)}</div></div>" for i in trend)
         parts.append(
             f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
