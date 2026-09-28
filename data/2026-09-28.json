@@ -1,7 +1,18 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T10:39+09:00",
+ "generated_at": "2026-09-28T10:57+09:00",
  "items": [
+  {
+   "id": "784685ea95a776e8",
+   "title": "반디캠컴퍼니, AI 영상툴 ‘반디캠 AI 스튜디오’ 출시",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42083",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:56:17+00:00",
+   "summary": "화면 녹화 프로그램 ‘반디캠’ 개발사 반디캠컴퍼니가 인공지능(AI) 영상툴 ‘반디캠 AI 스튜디오’를 국내외 시장에 정식 출시하고 생성형 AI 사업에 진출한다고 28일 밝혔다. 반디캠 AI 스튜디오는 영상 기획부터 생성, 편집까지 하나의 환경에서 처리할 수 있도록 설계한 올인원 AI 영상 제작 플랫폼이다.",
+   "thumb": ""
+  },
   {
    "id": "4c30431d125b111f",
    "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
@@ -77,6 +88,39 @@
    "category": "news_ko",
    "published": "2026-09-28T06:15:40+00:00",
    "summary": "도널드 트럼프 미국 대통령이 다리오 아모데이 앤트로픽 CEO를 백악관으로 초청해 비공개 만찬을 가진다. 악시오스는 27일(현지시간) 트럼프 대통령이 이날 저녁 백악관에서 아모데이 CEO와 만난다고 보도했다. 이는 백악관이 주요 AI 기업 수장들을 소집해 개최할 예정인 회의를 앞두고 이뤄진 독대 자리다.",
+   "thumb": ""
+  },
+  {
+   "id": "d9174ae236f11b26",
+   "title": "트럼프 ‘AI Force’ 이끌 새 AI 총괄 누구…美 기술정책 핵심 인선 경쟁",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVN3pGMjBhTnphWjEzaHBVajMzSXVDNFE1aUh5QjhCenhzWDBteVhoYjhBWWVPaDJVeU52bjFKTDFCRXowMWpwaHFNTEtuZ0lhOW0zQzJqQWhvUFRSbmpaVXhVVnktN2M0blI3Ug?oc=5",
+   "source": "구글뉴스: AI 정책",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-28T01:45:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "d96ec321e25cdd18",
+   "title": "“AI의 미래”...AI4Sci Korea 2026 국제학술대회 서울서 개막",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBFemRMZFJmR3BlMHlCbDZTaU1iSnZ3S2xFdTNPaVd1aWhWT0Z3dzl0R0VhUmZkMHJfQWQ5ZTFsNDFZY0dYYXVfWWlSMHpWVVpIYjJ0V3BCMXZsZnpvRUVtNXNnSzA5SjhTNUU0Q0FR?oc=5",
+   "source": "국내 분야별 연구 · 국내 연구",
+   "field": "국내 연구",
+   "category": "papers",
+   "published": "2026-09-28T01:40:14+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "0374027cbd19ac85",
+   "title": "한동대·에스포항병원, 척추 엑스레이 분석 인공지능 개발",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2b25RdmhBd3NGbFc0eDEyWW5sTU02WWpzSEVEUTQ4azBXS1lxSTNCdDNSUlctc3QteU92aUlEM1VyNXFOMldvcnVycWNXSG5RWk5DTHpIVkNpYUN3cUZUUHJoV0sxMGFxYXc1Q29n0gFzQVVfeXFMTXFNZjNBb01ZbmowTkQxS0h6eDJDdW5sUkZSTFJDR3VyNUZ0eGpnRUc0MFNoZHVhRUlqS3FlUzl3ZVZmMktmODBaQ2M5ZWxxd0hkTjFaUVh1aF8zVnFCMVN0bzYyX1VkSjZqb2JMSmR2S2VzQQ?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:40:00+00:00",
+   "summary": "",
    "thumb": ""
   },
   {
@@ -164,6 +208,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T01:00:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "f52ceebf9117e5b1",
+   "title": "[AI픽] AI가 과학 연구에 참여한다…'AI4Sci 코리아' 첫 개최",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9SZ2NTU2Z0bm9ZT2puSnRlNGYtNktqSGt1NzVWZ0UtanJkNzBfNjZfd2lraktXU0FFR1ZfV09Eelh1c0ZlbkpfcktWaExhNXM2VEN1a2dVZ2ZaTnPSAWBBVV95cUxONjgxQ1lmVy00elpZUXEybWhucVg4eGdXUXdYNEI5bjJma3cyYXNQRVNPYWVhZHBpNk1CV1hfVS1CWkp0ZzZUZUxFRXdGdzhPMnNTWE93MEVFWFpmbGUwMjg?oc=5",
+   "source": "구글뉴스: 인공지능",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T01:00:05+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -1583,17 +1638,6 @@
    "thumb": ""
   },
   {
-   "id": "9c310ab7eca632c7",
-   "title": "Stage-aware deep learning with adversarial data synthesis enables prospective season-scale A/H1N1 influenza forecasting in China.",
-   "link": "https://europepmc.org/article/MED/42571518",
-   "source": "Europe PMC · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-07-28T00:00:00+00:00",
-   "summary": "Accurate influenza forecasting is essential for public health preparedness, yet many models require future covariates, provide limited interpretability, and degrade under…",
-   "thumb": ""
-  },
-  {
    "id": "652024649d8dd002",
    "title": "AI기반 과학기술 연구의 현재와 미래, 국내외 석학 모여 논의 - ｢AI4Sci Korea 2026｣ 국제학술대회 국내 첫 개최 -",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187809",
@@ -1722,7 +1766,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 77
+   "fetched": 76
   },
   {
    "name": "Hugging Face Blog",
@@ -1751,8 +1795,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -1788,13 +1832,13 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 43
+   "fetched": 44
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 2,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
@@ -1804,9 +1848,9 @@
   },
   {
    "name": "TEDx Talks",
-   "ok": true,
-   "count": 1,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TechCrunch AI",
@@ -1870,21 +1914,21 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 87
+   "fetched": 91
   },
   {
    "name": "구글뉴스: 생성형 AI",
    "ok": true,
    "count": 10,
-   "fetched": 93
+   "fetched": 95
   },
   {
    "name": "구글뉴스: 인공지능",
@@ -1896,13 +1940,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 42
+   "fetched": 41
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "스테이지5",
