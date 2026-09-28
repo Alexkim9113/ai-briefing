@@ -414,18 +414,23 @@ def translate_ko(text):
         return ""
 
 
+def brief_text(it):
+    """'주요 내용 요약' 창에 보여 줄 줄들(요약 문장이 따로 없으면 짧은 요약을 문장으로 나눈다)."""
+    return it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
+
+
 def add_translations(items, fixtures=None, max_n=200):
     """해외 글(한글이 없는 제목)에 번역 제목(title_ko)을 붙인다. 논문 제목은 원문 그대로 둔다."""
     todo = [i for i in items if i["category"] != "papers" and not i.get("title_ko") and not _HANGUL.search(i["title"])][:max_n]
     # 해외 글의 '주요 내용 요약'도 한 줄씩 번역해 둔다(원문 요약 아래에 보여 준다)
-    dtodo = [i for i in items if i.get("detail") and not i.get("detail_ko") and not _HANGUL.search(i["detail"])][:max_n]
+    dtodo = [i for i in items if brief_text(i) and not i.get("detail_ko") and not _HANGUL.search(brief_text(i))][:max_n]
     if fixtures or not (todo or dtodo):
         return
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for it, ko in zip(todo, pool.map(translate_ko, [i["title"] for i in todo])):
             if ko and ko != it["title"] and _HANGUL.search(ko):
                 it["title_ko"] = ko
-        for it, ko in zip(dtodo, pool.map(translate_ko, [i["detail"] for i in dtodo])):
+        for it, ko in zip(dtodo, pool.map(translate_ko, [brief_text(i) for i in dtodo])):
             if ko and _HANGUL.search(ko):
                 it["detail_ko"] = "\n".join(x.strip() for x in ko.split("\n") if x.strip())
 
@@ -1324,11 +1329,11 @@ def meta_html(it, cats, with_cat=False):
 
 def title_link(it):
     ko = f'<span class="ko">{esc(it["title_ko"])}</span>' if it.get("title_ko") else ""  # 해외 글: 원문 제목 아래 자동 번역 제목
-    d = it.get("detail") or "\n".join(x.strip() for x in _SENT.split(it.get("summary") or "") if x.strip())
+    d = brief_text(it)
     info = " · ".join(x for x in (it.get("source", ""), fmt_time(it.get("published"))) if x)
     extra = (f' data-d="{esc(d)}" data-i="{esc(info)}" data-c="{INTRO_COLORS.get(it.get("category"), DEFAULT_TINT)}"'
              + (f' data-ko="{esc(it["title_ko"])}"' if it.get("title_ko") else "")
-             + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") and it.get("detail") else "")) if not it.get("editor") else ""
+             + (f' data-dk="{esc(it["detail_ko"])}"' if it.get("detail_ko") else "")) if not it.get("editor") else ""
     return f'<a href="{esc(it["link"])}" target="_blank" rel="noopener"{extra}>{esc(it["title"])}</a>{ko}'
 
 
