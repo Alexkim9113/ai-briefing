@@ -578,6 +578,17 @@
    "thumb": ""
   },
   {
+   "id": "0cec42e6e311702d",
+   "title": "한국인 AI 사용률 40% 첫 돌파···주요국 중 상승폭 ‘최상위’",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB3ZkFFeEtUUV8xbE1mOTRGT3RjSkNQZDVwa3FRQXI4RjJEQ21BUDdaNDZKU003Z184UDBxRFl2LTJ2LTBvT3RSRnIyQ2Zjcml6eGZ2UndQeDhXNDJJMzR30gFfQVVfeXFMUHdmQUV4S1RRXzFsTWY5NEZPdGNKQ1BkNXBrcVFBcjhGMkRDbUFQN1o0NkpTTTdnXzhQMHFEWXYtMnYtMG9PdFJGcjJDZmNyaXp4ZnZSd1B4OFc0MkkzNHc?oc=5",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T04:40:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "e6f00450eec78131",
    "title": "Trump to dine with Anthropic chief Amodei despite months of conflict",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPV3plcFNyTXNheWswblpLblZUQmJBaGNxMllDeGpYOW1mVlcwU1RkX3NVRnBZNF9IcUEtUnpOcHhrX2ZlSDFvRk1WVmo2ZzZnV1BoUGRNZXlEb2NUNGc1TU5VaWhXYVRSM0NXeXRYTm03bWpxVnlkUG9XSzZyOEZMdUNCd3hIcF9MY1RGMTdKTk52X3YxVG9mMWU2V2dhY0NPb3NxSER0RVhqN2hVc0VHWUxieGI3UmQwNVhYOHdiQ0hKR0pW?oc=5",
@@ -1071,17 +1082,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T02:03:48+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f037d2146e81df76",
-   "title": "“AI로 배우고 성장한다”…'글로컬 대학' 국립목포대, 교수·학생 AI 역량 확대",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE93ZTJTaTFLWjVoVkdpaUt1YXpWelJpYklVODk1MDNaZEZUUWNYTFRwUF9BeTV1SXpPV2Z1MTBVWkxNZmJYTEhhWGhpZkg4dw?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T02:02:04+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2717,7 +2717,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2735,7 +2735,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 82
+   "fetched": 84
   },
   {
    "name": "Google News: AI 기업",
@@ -2817,9 +2817,9 @@
   },
   {
    "name": "TED",
-   "ok": false,
-   "count": 0,
-   "error": "HTTPError: HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 1,
+   "fetched": 15
   },
   {
    "name": "TED-Ed",
@@ -2927,7 +2927,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 65
+   "fetched": 64
   },
   {
    "name": "구글뉴스: AI 정책",
