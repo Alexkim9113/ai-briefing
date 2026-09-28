@@ -13,8 +13,11 @@ jobs:
           U='https://export.arxiv.org/api/query?search_query=cat:cs.CY+AND+abs:law&sortBy=submittedDate&sortOrder=descending&max_results=3'
           Q='https://export.arxiv.org/api/query?search_query=%28abs%3A%22machine+learning%22+OR+abs%3A%22deep+learning%22%29+AND+abs%3Aclimate&sortBy=submittedDate&sortOrder=descending&max_results=3'
           {
-          for h in TED TEDx TEDEd; do echo "== $h"; curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36" -H "Accept-Language: en" "https://www.youtube.com/@$h" | grep -o '"externalId":"UC[^"]*"\|channel/UC[A-Za-z0-9_-]\{22\}' | sort | uniq -c | sort -rn | head -3 || true; done
-          for id in UCAuUUnT6oDeKwE6v1NGQxug UCsT0YIqwnpJCM-mx7-gSA4Q UCsooa4yRKGN_zEE8iknghZA UCbfYPyITQ-7l4upoX8nvctg; do curl -s -o /tmp/o -w "%{http_code} $id\n" "https://www.youtube.com/feeds/videos.xml?channel_id=$id"; grep -o "<title>[^<]*" /tmp/o | head -2 || true; done
+          curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36" -H "Accept-Language: ko" "https://www.youtube.com/@stage_5" > /tmp/h
+          grep -o '"externalId":"UC[^"]*"\|channel/UC[A-Za-z0-9_-]\{22\}' /tmp/h | sort | uniq -c | sort -rn | head -3 || true
+          grep -o '<meta property="og:title" content="[^"]*"\|<meta property="og:description" content="[^"]*"' /tmp/h | head -2 || true
+          id=$(grep -o '"externalId":"UC[^"]*"' /tmp/h | head -1 | cut -d'"' -f4)
+          for u in "channel_id=$id" "playlist_id=UU${id#UC}"; do curl -s -o /tmp/o -w "%{http_code} $u\n" "https://www.youtube.com/feeds/videos.xml?$u"; grep -o "<title>[^<]*" /tmp/o | head -16 || true; done
           } > probe.txt 2>&1
           git config user.name bot; git config user.email bot@users.noreply.github.com
           git add probe.txt && git commit -m probe && git push
