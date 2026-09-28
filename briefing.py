@@ -105,9 +105,37 @@ def parse_date(s):
     return d
 
 
+def _rx(block, *names):
+    for n in names:
+        m = re.search(rf"<(?:\w+:)?{n}\b[^>]*>(.*?)</(?:\w+:)?{n}>", block, re.S | re.I)
+        if m:
+            v = m.group(1).strip()
+            return v[9:-3].strip() if v.startswith("<![CDATA[") and v.endswith("]]>") else v
+    return ""
+
+
+def parse_feed_loose(raw):
+    """XML 문법이 깨진 피드용 예비 파서: <item>/<entry> 블록에서 필요한 값만 정규식으로 뽑는다."""
+    s = raw.decode("utf-8", errors="replace")
+    items = []
+    for m in re.finditer(r"<(item|entry)\b[^>]*>(.*?)</\1>", s, re.S | re.I):
+        b = m.group(2)
+        link = _rx(b, "link")
+        if not link:
+            h = re.search(r"<link\b[^>]*href=[\"']([^\"']+)", b, re.I)
+            link = h.group(1) if h else _rx(b, "guid")
+        items.append({"title": html.unescape(_rx(b, "title")), "link": html.unescape(link),
+                      "desc": html.unescape(_rx(b, "description", "summary", "encoded", "content")),
+                      "date": _rx(b, "pubDate", "date", "published", "updated"), "thumb": ""})
+    return items
+
+
 def parse_feed(raw):
     """RSS 2.0 / RSS 1.0(RDF) / Atom 을 공통 형식으로 변환."""
-    root = parse_xml(raw)
+    try:
+        root = parse_xml(raw)
+    except ET.ParseError:
+        return parse_feed_loose(raw)
     items = []
     if local(root.tag) == "feed":  # Atom
         for e in root:
