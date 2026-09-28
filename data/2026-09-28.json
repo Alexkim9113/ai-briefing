@@ -1,7 +1,30 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T21:30+09:00",
+ "generated_at": "2026-09-28T21:36+09:00",
  "items": [
+  {
+   "id": "3e6bd96621ba3bd8",
+   "title": "오스코텍 최대주주 김성연, 2대주주와 손잡고 이사회 재편 시동",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=04942966645584712",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T21:32:02+09:00",
+   "summary": "김정근 전 오스코텍(039200) 창업주의 외아들이자 최대주주인 김성연 제노스코 이사가 오스코텍 경영권 참여를 위해 이사회 재편에 나선다. 김 이사는 임시주주총회를 통해 자신을 포함한 신규 이사 3명을 선임하고, 그동안 지배구조 문제로 지적돼 온 초다수결의제 폐지도 추진한다.",
+   "thumb": ""
+  },
+  {
+   "id": "a6a095b728b64bb5",
+   "title": "AI의 결제 실수…책임은 누구의 몫인가",
+   "link": "https://www.khan.co.kr/article/202609282131005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T21:31:00+09:00",
+   "summary": "이상행동 불거진 ‘AI 에이전트’오픈AI, 예상밖 행동 ‘훈련 중단’ 글로벌 은행 등 결제업계는 우려 “잘못 구입·너무 많은 돈 쓸 수도” 미·유럽은 개발사에 책임 무게생성형 인공지능(AI)이 질문에 답하는 챗봇을 넘어 스스로 결제하고 e메일을 보내는 ‘AI 에이전트’로 진화하면서 사고 책임을 둘러싼 논란도 커지고…",
+   "detail": "이상행동 불거진 ‘AI 에이전트’오픈AI, 예상밖 행동 ‘훈련 중단’ 글로벌 은행 등 결제업계는 우려 “잘못 구입·너무 많은 돈 쓸 수도” 미·유럽은 개발사에 책임 무게생성형 인공지능(AI)이 질문에 답하는 챗봇을 넘어 스스로 결제하고 e메일을 보내는 ‘AI 에이전트’로 진화하면서 사고 책임을 둘러싼 논란도 커지고 있다.",
+   "thumb": ""
+  },
   {
    "id": "2dbe11e93125dc9b",
    "title": "[유튜브 속 경향]한국 로봇 산업의 ‘해자’ 제조업 역량",
@@ -1473,6 +1496,34 @@
    }
   },
   {
+   "id": "641a71ff188a7303",
+   "title": "Nvidia Releases Software It Says Can Prevent AI Agents From Going Rogue",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOLTVMVzBocmRINk1yNmRPX3RrRUFUeUd5N2s1ejYwam83ZFV5WXpfaFVFUGtNLVRKM1J5eFg5T3RBZzFOVTlFZ3BYRElXRFpRank0N2VlcFN5clpxUG02ZzFLWG1MTTBLcXBCU3I0a3FFNEFtWXVxUkJPZ1RVWkc4dDJHMlNCTHZfUHRJb09sWnpqVFNsdHpqRHVibFk3cG1jUXkxQW9TTjdxcFRk?oc=5",
+   "source": "WSJ",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-28T12:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "엔비디아, AI 에이전트의 제어 불능 상태를 방지할 수 있다고 주장하는 소프트웨어 출시",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "40d7ecedf5e75bb1",
+   "title": "Teachers at Euan Blair firm report ‘horrendous stress’ after AI used to rate their work",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdjlPTWVXNmhvUHQ0TFRscEhzcmE4YS1YR3BmaURRZXVpbzJiM0hvNEZXS0lEXzItTUk4YkhabjhneHdiczc0Q0tjUWlUVVJOQk9DMzloMk1jeEczYVE1dEIzVG5KdjJHRW43MXNTWUVzNnBNbFIzMkV2Q183NS1kYXRaZWR4NVB3WGdUdGRhTTdmaWdINGVXY29IOEJjVWhOanRCNkpOQjYwLWVBaHlxMXdZUWJScV9ZTzVWdVVCTldpUkY2bUE?oc=5",
+   "source": "The Guardian",
+   "field": "사회·노동",
+   "category": "news_global",
+   "published": "2026-09-28T11:57:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "유안 블레어(Euan Blair) 소속 교사들, 업무 평가에 AI가 도입된 후 ‘극심한 스트레스’ 호소",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "c6f0290502f08b10",
    "title": "中.민간 AI기업과 반도체 전문가들 해외여행 제한",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0REdmN1NsS3FsbVVwWWRUdTVEa1h0YVI4NXhLUVUxZUtWcENpekt5TDZsTmVMT0laelF2NmU4dHU1VFVDMmdxYU05M3paSXFsamVSVlQ1SURfdw?oc=5",
@@ -1789,6 +1840,17 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "4d9f1aabc29a8184",
+   "title": "소녀시대 윤아, 미혼인데…AI로 '임신 사진' 생성 - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PZlE0cENCY1hkLUhRZWxYNmR5RjJ5bC1KbXc1V3RHanB0S0FKMDJ3dEp6bGtpc0NueUpvYzNuWWd2d1ByS2J3UjdWQ3FRd19JV09lVTNpcFVpTGJMVEo2U3RraFVkQ3pPa1pYN3N1WXZjdGvSAXhBVV95cUxQT1oyYzdlWU5mMXN2QVAweEVlcW9IRlhCVVo2eG84OGR5S2RPMTdkbXFRaGk4OFY3MnpWUEc1UU5MWVBidmZSMExkVG82d0lhUHlnOEdvVEFtUEZ5MURvVHFSdWFya2tEd0JMYXFtQnhxanZoT19RZWM?oc=5",
+   "source": "mt.co.kr",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T11:21:13+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "4686aa6aaf8a87a5",
@@ -2669,32 +2731,6 @@
      "부당청구",
      "미국병원",
      "AI역기능"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "ff30a7ccab2faffe",
-   "title": "Axios C-Suite: Europe's $2B AI upstart says OpenAI, Anthropic are lying about safety",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNR191S0hnNzBhWW1XMU5yQmQyZ3U3djJ2RHZLVDFGc2ZtUElOeUMweW05dDZ5Z1Y4eHplUFVKWHJ2TnoxZVdJNEtYUld1cVhuZlVseFpFMF9qSjRaVHV6YmlkR0kzaXY1R3d5V2x4RkFZVjRUS3lsVjhkeExkaFg4dERieDItbUlHT3BDVA?oc=5",
-   "source": "Axios",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T09:33:31+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "Axios C-Suite: 유럽의 20억 달러 규모 AI 신생 기업, “OpenAI와 Anthropic이 안전성에 대해 거짓말을 하고 있다”고 주장",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "유럽의 20억 달러 규모 AI 스타트업이 오픈AI와 앤스로픽 등 선두 기업들의 안전성 주장이 사실과 다르다고 비판했다. 이들은 현재 대형 AI 기업들의 안전 통제 체계와 공표 방식에 문제를 제기했다.",
-    "p": "글로벌 AI 시장에서 미국 빅테크 중심의 안전성 담론에 대한 유럽 신흥 기업들의 견제와 주권 경쟁이 본격화되고 있다.",
-    "t": [
-     "유럽AI",
-     "스타트업",
-     "인공지능안전",
-     "오픈AI",
-     "앤스로픽"
     ],
     "v": 1
    }
@@ -4831,90 +4867,6 @@
    }
   },
   {
-   "id": "56e5b6343550ac63",
-   "title": "충남도, AI 전환 과제 219건 발굴…내년 예산 반영 추진",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKazlwbUlpUS03UE00R2JyLTdFemtBRnd0Wm1JUWlZYzRfSjhld1pMWkVUS0M1cDd0Y3FvLVZpU2dBT053eE5Sek14UFpOcW5Qc2VFLVEyaTNtRFnSAVZBVV95cUxPSi1nT0hFTHY3ZWZLTmlkdE5BRUJ6cDB0MTlDSS1oU01NVU83RWhmaXE3VUxlREdxUWVVcnJobjBJNWpwaHNtOXo0cjc4Mm5oaWN0ZkpKZw?oc=5",
-   "source": "더팩트",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:16:59+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "충남도가 자체적으로 219건의 AI 전환 과제를 발굴하고 내년도 예산 반영을 추진한다. 도정 전반에 인공지능을 접목하여 실질적인 행정 및 산업 체질 개선에 나선다.",
-    "p": "광역 지자체가 단발성 시범 사업을 넘어 대규모 AI 전환 과제를 도정 예산과 직접 연계하여 지속 가능한 지역 혁신 동력을 확보하고 있다.",
-    "t": [
-     "충남도",
-     "AI전환",
-     "지자체예산"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "8bedda301604d618",
-   "title": "AI 시대에 '공자 가르침' 꺼냈다…한국 유교계, 윤리 원칙 공개",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43MHZ0V0hsaklfWXZncEhtNFNCWXJnS3JIeF9XLTZ5cFhIV3l5NTdOT3FnbjJGTWNXbmNQODRQbklUY2xpSXl1NHFCTnVOanRNdkQtVU12ZXpwQQ?oc=5",
-   "source": "한국경제",
-   "field": "철학·윤리",
-   "category": "news_ko",
-   "published": "2026-09-28T07:15:56+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "한국 유교계가 AI 시대에 대응하여 공자의 가르침을 바탕으로 한 인공지능 윤리 원칙을 공개했다.",
-    "p": "서구 중심의 기술 윤리를 넘어 전통 사상을 접목해 동양적 관점의 AI 규범 정립을 시도한다는 점에서 의의가 있다.",
-    "t": [
-     "유교계",
-     "AI윤리",
-     "철학"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "cbd4e9c34ca91041",
-   "title": "[농진청] 인공지능(AI)으로 벼 생육 살핀다",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBMWXBvQm9MQnQ2cEFhMmlCZmd5SktkT1hlQWZuaElpRHBlZy1vYzBsV3B4U2RwN0QxcVdsdkk5bURQXzlJNDZNd1NydkhuaWtKcksxQmI1bW9HaWJiSnVSVHN4OWxLamJoYVQwN1BzdUFHdw?oc=5",
-   "source": "월간친환경",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T07:12:19+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "농촌진흥청이 인공지능 기술을 활용해 벼 생육 상태를 정밀하게 진단하고 관리하는 시스템을 선보였다.",
-    "p": "전통적인 농업 분야에 첨단 AI 분석을 도입해 기후변화 속 농작물 수급 예측과 생산성 향상에 기여할 것으로 보인다.",
-    "t": [
-     "농촌진흥청",
-     "스마트팜",
-     "AI농업"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "e6c357070e2e70f9",
-   "title": "수원시, AI로 시민 마음건강 돌본다",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wS1B1U21LRHl1VGppRkh1WkNQTGlXSkFSenRXdVZFajlRb05UdXEwU2hKR203VlhtcHZONFFmMXhBQUZ4eE0tX0x2Mlc1WUdWOEk1N0JBSlZhWm5yRkZJ?oc=5",
-   "source": "매일경제",
-   "field": "정신건강",
-   "category": "news_ko",
-   "published": "2026-09-28T07:11:31+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "수원시가 인공지능 기술을 도입해 시민들의 마음 건강을 돌보고 위기 징후를 살피는 지원 사업에 나선다.",
-    "p": "지자체 복지 행정에 AI 상시 모니터링 시스템을 결합해 정신건강 사각지대를 줄이는 행정 서비스 혁신 사례로 볼 수 있다.",
-    "t": [
-     "수원시",
-     "디지털헬스케어",
-     "마음건강"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "81ebe6bbeb6a73fa",
    "title": "전남대 인공지능융합학과 연구팀, NeurIPS 2026 논문 채택",
    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9yZGZ3MHdNNFpIVlhzYUZzcS1oVDl1MmFDZUs5VjBBeTlSdDQtX2ZiaU1pWUtIa2Ytb0wzNG4yd1ZJNlBqNmtZbmlod3hvUWxLaHFXN1BTWW5KYXdtb1ZBN2dwRQ?oc=5",
@@ -5449,33 +5401,6 @@
      "MIT",
      "바이오제형",
      "나노입자"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "3670abd6c9a72afe",
-   "title": "Anthropic and OpenAI sound the alarm on AI safety—and seek to shape how it's controlled",
-   "link": "https://techxplore.com/news/2026-09-anthropic-openai-alarm-ai-safety.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T04:30:02-04:00",
-   "summary": "As tech titans warned an AI-weary world that their own advanced systems could endanger humanity, the question emerged: What do they have to gain?",
-   "thumb": "",
-   "title_ko": "Anthropic과 OpenAI, AI 안전성에 대한 경종을 울리며… AI 통제 방식 정립에 나서다",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "AI에 지친 전 세계를 향해 기술 거물들이 자신들의 첨단 시스템이 인류를 위협할 수 있다고 경고하자, 다음과 같은 의문이 제기되었다. 과연 그들은 무엇을 얻으려는 것일까?",
-   "detail_ko": "AI에 지친 전 세계에 자신들의 첨단 시스템이 인류를 위협할 수 있다고 기술 대기업들이 경고하면서, 한 가지 의문이 제기되었다. 과연 그들이 얻을 수 있는 이득은 무엇일까?",
-   "mx": {
-    "b": "앤스로픽과 OpenAI 등 주요 빅테크 기업들이 고성능 AI 시스템의 잠재적 위험성을 경고하며 통제 방안 마련을 촉구했다. 기업들의 이러한 행보는 향후 기술 규제 주도권을 선점하려는 의도와 맞물려 있다.",
-    "p": "선도 기업들의 안전성 강조는 사회적 책임 이행인 동시에 향후 산업 표준과 규제 틀을 자사에 유리하게 설계하려는 전략적 포석으로 해석된다.",
-    "t": [
-     "앤스로픽",
-     "OpenAI",
-     "AI안전성",
-     "기술규제"
     ],
     "v": 1
    }
@@ -9242,6 +9167,19 @@
    }
   },
   {
+   "id": "8f5ca8c3d4c8c4b1",
+   "title": "청년변호사단체 새변, 미래헌법포럼 숙의토론 ‘참정권과 미래헌법’",
+   "link": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988",
+   "source": "로리더",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-21T09:54:31+09:00",
+   "summary": "[로리더] ‘새로운 미래를 위한 청년변호사 모임(새변)’이 17일 이화여자대학교 앞 스투디아B에서 미래헌법포럼 숙의토론 ‘참정권과 미래 헌법’을 개최했다. 이번 토론은 지난 6월 3일 선거관리 실패 이후 제기된 참정권 문제를 구체적으로 논의하기 위해 마련됐다.",
+   "detail": "[로리더] ‘새로운 미래를 위한 청년변호사 모임(새변)’이 17일 이화여자대학교 앞 스투디아B에서 미래헌법포럼 숙의토론 ‘참정권과 미래 헌법’을 개최했다.\n이번 토론은 지난 6월 3일 선거관리 실패 이후 제기된 참정권 문제를 구체적으로 논의하기 위해 마련됐다.\n제1회 미래헌법포럼에서 다룬 여섯 개 분야 중 참정권 분야의 후속 논의다.\n김용태 국민의힘 국회의원과 한국청년입법정책학회, 신촌 연합 토론 동아리 아우름(서강대ㆍ연세대ㆍ이화여대)이 공동주최했다.",
+   "thumb": "",
+   "pin": true
+  },
+  {
    "id": "409ed6e622c5fe69",
    "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
    "link": "https://huggingface.co/papers/2609.23407",
@@ -9459,7 +9397,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 100
   },
   {
    "name": "Google News Top: Technology",
@@ -9567,7 +9505,7 @@
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 57
+   "fetched": 58
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -9585,7 +9523,7 @@
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "Sequoia Capital",
@@ -9609,7 +9547,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "TED",
@@ -9657,31 +9595,31 @@
    "name": "Topic: 법률 · 법률",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 75
   },
   {
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 72
+   "fetched": 73
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 75
+   "fetched": 74
   },
   {
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 35
+   "fetched": 37
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -9693,13 +9631,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 57
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 52
   },
   {
    "name": "VentureBeat AI",
@@ -9794,13 +9732,13 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "경향신문",
    "ok": true,
-   "count": 2,
+   "count": 4,
    "fetched": 50
   },
   {
@@ -9867,19 +9805,19 @@
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 36
+   "fetched": 35
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 36
+   "fetched": 37
   },
   {
    "name": "국민일보",
@@ -10065,7 +10003,7 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 50
+   "fetched": 49
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -10083,7 +10021,7 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 67
+   "fetched": 68
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -10101,7 +10039,7 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 27
+   "fetched": 26
   },
   {
    "name": "주제: 정신건강 · 정신건강",
@@ -10125,7 +10063,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "중앙일보",
@@ -10137,7 +10075,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 490
+   "fetched": 488
   },
   {
    "name": "프레시안",
