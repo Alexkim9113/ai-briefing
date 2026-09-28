@@ -3104,8 +3104,7 @@ def build(keep_days=None):
 <p>이 사이트는 회원가입·댓글이 없고 방문자의 개인정보를 수집하지 않습니다.</p>
 {contact}
 <h2 class="serif" style="font-size:21px;margin-top:30px">업데이트</h2>
-<p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))} ·
-<a href="{sc["url"]}/feed.xml">RSS 구독</a></p></div>"""
+<p class="meta" style="display:block">30분마다 자동 수집 · 마지막 업데이트 {esc(latest.get("generated_at", "")[:16].replace("T", " "))}</p></div>"""
     (SITE_DIR / "policy.html").write_text(page(f"정책 | {sc['name']}", policy, "", cats, search=False, path="policy.html"), encoding="utf-8")
     paths.append("policy.html")
     (SITE_DIR / "404.html").write_text(page(
