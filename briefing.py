@@ -15,6 +15,7 @@ import email.utils
 import hashlib
 import html
 import json
+import math
 import re
 import sys
 import threading
@@ -231,22 +232,45 @@ def summarize(desc, title):
     return out
 
 
+def _grams(s):
+    s = re.sub(r"[^0-9a-z가-힣]+", " ", s.lower())
+    return {s[i:i + 2] for i in range(len(s) - 1) if " " not in s[i:i + 2]}
+
+
+def textrank(sents, n):
+    """토큰 없는 자동 요약(TextRank): 다른 문장들과 많이 겹치는 '중심 문장'에 높은 점수를 주고, 점수 높은 n개를 원래 순서대로."""
+    if len(sents) <= n:
+        return list(range(len(sents)))
+    g = [_grams(x) for x in sents]
+    k = len(sents)
+    w = [[(len(g[i] & g[j]) / math.sqrt(len(g[i]) * len(g[j]))) if i != j and g[i] and g[j] else 0.0
+          for j in range(k)] for i in range(k)]
+    out_sum = [sum(r) or 1.0 for r in w]
+    sc = [1.0] * k
+    for _ in range(40):
+        sc = [0.15 + 0.85 * sum(w[j][i] / out_sum[j] * sc[j] for j in range(k)) for i in range(k)]
+    sc[0] += 0.3  # 기사 첫 문장(리드)은 보통 핵심이라 조금 더 믿는다
+    return sorted(sorted(range(k), key=lambda i: -sc[i])[:n])
+
+
 def detail_lines(desc, title, summary=""):
-    """기사를 눌렀을 때 보이는 '주요 내용': 피드 소개글의 앞 문장들(최대 5줄). 요약과 같으면 비워 둔다."""
+    """기사를 눌렀을 때 보이는 '주요 내용 요약': 언론사가 피드로 공개한 소개글 안에서 TextRank로 고른 핵심 문장(최대 5줄·300자)."""
     text = clean_text(desc)
     if not text or text == title or (text.startswith(title[:40]) and len(text) < len(title) + 40):
         return ""
-    lines, total = [], 0
-    for sent in _SENT.split(text):
-        sent = sent.strip()
-        if not sent or (sent.endswith(("…", "...")) and lines):
-            continue
-        if len(lines) >= 5 or total + len(sent) > DETAIL_CHARS:
+    sents = [x.strip() for x in _SENT.split(text) if x.strip() and len(x.strip()) >= 8]
+    if len(sents) > 1 and (sents[-1].endswith(("…", "...")) or not re.search(r"[.!?。다요\"'”’)\]]$", sents[-1])):
+        sents = sents[:-1]  # 피드에서 중간에 잘린 마지막 문장은 빼기
+    if not sents:
+        return ""
+    for n in range(5, 0, -1):  # 300자 안에 들어갈 때까지 줄 수를 줄인다
+        pick = [sents[i] for i in textrank(sents, n)]
+        if sum(map(len, pick)) <= DETAIL_CHARS or n == 1:
             break
-        lines.append(sent)
-        total += len(sent)
-    out = "\n".join(lines)
-    return "" if not out or out.replace("\n", " ") == summary else out
+    if sum(map(len, pick)) > DETAIL_CHARS:
+        pick = [pick[0][:DETAIL_CHARS].rsplit(" ", 1)[0] + "…"]
+    out = "\n".join(pick)
+    return "" if out.replace("\n", " ") == summary else out
 
 
 def is_ai_related(item, keywords, title_only=False):
@@ -710,7 +734,7 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .hero .meta{margin:16px 0 10px}
 .hero p.sum{font-size:17px;color:var(--muted);margin:0 0 16px}
 .actions{display:flex;align-items:center;gap:14px}
-.read{color:var(--accent);font-weight:600;padding:6px}
+.read{color:var(--accent);font-weight:600;padding:6px;background:none;border:0;font:inherit;font-weight:600;cursor:pointer}
 .read:hover{text-decoration:underline}
 .circle{width:36px;height:36px;border-radius:50%;border:0;background:var(--soft);color:var(--accent);display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 6px rgba(42,11,23,.12)}
 .side-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
@@ -726,6 +750,8 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .brief-i{margin:0 44px 8px 0;font-size:13px;color:var(--muted)}.brief h3{margin:0 0 6px;font-size:20px;line-height:1.45;color:var(--heading);padding-right:30px}.brief-ko{margin:0 0 6px;color:var(--muted);font-size:15px}
 .brief h4{margin:18px 0 8px;font-size:14px;color:var(--heading)}.brief h4::before{content:"";display:inline-block;width:4px;height:.9em;border-radius:2px;background:var(--c);margin-right:8px;vertical-align:-.1em}
 .brief ul{margin:0;padding-left:1.2em;font-size:16px;line-height:1.7}.brief li{margin-bottom:6px}.brief-none{color:var(--muted);font-size:15px}
+.brief-src{margin:18px 0 0;font-size:13.5px;color:var(--muted)}.brief-src b{color:var(--heading)}.brief-src a{color:var(--accent);text-decoration:underline}
+article:has(a[data-d]),.trend:has(a[data-d]){cursor:pointer}
 .brief-go{display:block;text-align:center;margin:20px 0 10px;padding:14px;border-radius:99px;background:var(--grad);color:#fff;font-weight:700}.brief-note{margin:0;font-size:12px;color:var(--muted)}
 @keyframes bfade{from{opacity:0}}
 @media (max-width:600px){.brief-bg{place-items:end stretch;padding:0}.brief{width:100%;max-height:88vh;border-radius:20px 20px 0 0;padding:24px 18px calc(18px + env(safe-area-inset-bottom));animation:bup .22s ease}.brief h3{font-size:19px}}
@@ -818,6 +844,7 @@ ul.st{columns:1}footer{margin-top:36px}}
 @media (max-width:600px){.rows{grid-template-columns:1fr}
 .egrid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:0 -16px 26px;padding:0 16px 6px;scrollbar-width:none}.egrid::-webkit-scrollbar{display:none}
 .egrid>*{flex:0 0 78%;scroll-snap-align:start}.egrid>*:only-child{flex-basis:100%}.egrid h3{font-size:17px}.elist article{grid-template-columns:110px 1fr;gap:14px}.elist .thumb{aspect-ratio:1}.elist h3{font-size:16.5px}
+.post .body [style*="text-align:justify"]{text-align:left!important}
 .elist .thumb .tag{display:none}.ph h1{font-size:23px}.post h1{font-size:25px;margin-top:26px}.post .body{font-size:17px}
 .pager a,.pager button{min-width:40px;height:40px}}
 """
@@ -828,12 +855,15 @@ function openBrief(a){const e=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;
  const lines=(a.dataset.d||'').split('\\n').filter(Boolean).slice(0,5);const bg=document.createElement('div');bg.className='brief-bg';
  bg.innerHTML=`<div class="brief" role="dialog" aria-modal="true" aria-label="주요 내용" style="--c:${/^#[0-9a-f]{6}$/i.test(a.dataset.c)?a.dataset.c:'#3b7bff'}">
  <button class="brief-x" type="button" aria-label="닫기">✕</button><p class="brief-i"><i class="cd"></i>${e(a.dataset.i)}</p><h3>${e(a.textContent)}</h3>${a.dataset.ko?`<p class="brief-ko">${e(a.dataset.ko)}</p>`:''}
- <h4>주요 내용</h4>${lines.length?`<ul>${lines.map(l=>`<li>${e(l)}</li>`).join('')}</ul>`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
- <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">원문 더 읽어보기 →</a><p class="brief-note">주요 내용은 언론사가 공개한 소개글에서 발췌했어요. 전체 기사와 저작권은 원문에 있어요.</p></div>`;
+ <h4>주요 내용 요약</h4>${lines.length?`<ul>${lines.map(l=>`<li>${e(l)}</li>`).join('')}</ul>`:'<p class="brief-none">언론사가 소개글을 제공하지 않은 기사예요. 원문에서 확인해 주세요.</p>'}
+ <p class="brief-src">출처 <b>${e((a.dataset.i||'').split(' · ')[0])}</b> · <a href="${e(a.href)}" target="_blank" rel="noopener">${e(a.hostname.replace(/^www\./,''))}</a></p>
+ <a class="brief-go" href="${e(a.href)}" target="_blank" rel="noopener">더 읽어보기 →</a><p class="brief-note">요약은 언론사가 공개한 소개글에서 핵심 문장을 자동으로 골라 보여 준 것이에요. 전체 기사와 저작권은 출처에 있어요.</p></div>`;
  const close=()=>{bg.remove();document.removeEventListener('keydown',k);document.body.style.overflow='';};const k=ev=>{if(ev.key==='Escape')close();};
  bg.onclick=ev=>{if(ev.target===bg||ev.target.closest('.brief-x'))close();};bg.querySelector('.brief-go').addEventListener('click',()=>setTimeout(close,300));
  document.addEventListener('keydown',k);document.body.append(bg);document.body.style.overflow='hidden';bg.querySelector('.brief-x').focus();}
-document.addEventListener('click',ev=>{const a=ev.target.closest('a[data-d]');if(!a||ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;ev.preventDefault();openBrief(a);});
+document.addEventListener('click',ev=>{if(ev.ctrlKey||ev.metaKey||ev.shiftKey||ev.button)return;let a=ev.target.closest('a[data-d]');
+ if(!a){const card=ev.target.closest('article,.trend,.hero>div:first-child');if(!card||(ev.target.closest('a,button')&&!ev.target.closest('[data-brief]')))return;a=card.querySelector('a[data-d]');if(!a)return;}
+ ev.preventDefault();openBrief(a);});
 function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),2200);}
 document.querySelectorAll('.site-share').forEach(b=>b.onclick=async e=>{e.stopImmediatePropagation();const u=b.dataset.url,t=b.dataset.title;
  try{if(navigator.share){await navigator.share({title:t,text:t+' | 국내외 AI 뉴스·논문·정책·영상',url:u});}else{await navigator.clipboard.writeText(u);toast('사이트 링크를 복사했어요');}}catch(err){}});
@@ -1793,7 +1823,7 @@ def render_home(data, cats, posts):
         parts.append(
             f'<div class="hero"><div><h2 class="serif">{title_link(hero)}<span class="badge">오늘의 헤드라인</span></h2>'
             f'{thumb_html(hero, "", used)}{meta_html(hero, cats, True)}{summ}'
-            f'<div class="actions"><a class="read" href="{esc(hero["link"])}" target="_blank" rel="noopener">원문 보기 →</a>'
+            f'<div class="actions"><button type="button" class="read" data-brief>요약 보기 →</button>'
             f'<button class="circle share" data-url="{esc(hero["link"])}" data-title="{esc(hero["title"])}" title="공유" aria-label="공유">{ICON_SHARE}</button></div></div>'
             f'<aside><div class="side-h"><h2>주요 소식</h2><a href="#all" data-tab="all">전체 보기</a></div>{side}</aside></div>')
     if posts:
