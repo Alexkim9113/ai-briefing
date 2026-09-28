@@ -564,30 +564,28 @@ def top_keywords(items, n=12):
 # ---------------------------------------------------------------- 사이트 생성
 
 CSS = """
-:root{--bar:#2a0b17;--bar-text:#f3e6eb;--bg:#fff;--card:#fff;--text:#1f1a1c;--muted:#6f6468;--line:#eee3e7;
---accent:#7a1f3d;--soft:#f7eaef;--shadow:0 6px 18px rgba(42,11,23,.12)}
-@media (prefers-color-scheme:dark){:root{--bg:#141012;--card:#1d1619;--text:#f2e9ec;--muted:#b3a4aa;--line:#33262c;
---accent:#e58fae;--soft:#3a2530;--shadow:0 6px 18px rgba(0,0,0,.4)}}
+:root{--bar:rgba(6,5,13,.86);--bar-text:#eef2ff;--bg:#07061a;--card:#0f0d26;--text:#eef2ff;--muted:#9aa3c7;--line:#1f1c40;
+--accent:#6fb0ff;--soft:#16143a;--shadow:0 8px 24px rgba(0,0,0,.45);--grad:linear-gradient(90deg,#12e3ff,#3b7bff 55%,#8b2cff);color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle,rgba(255,255,255,.045) 1px,transparent 1.4px) 0 0/28px 28px fixed,radial-gradient(ellipse at 50% -10%,#1a1340 0%,#07061a 55%) fixed,var(--bg);color:var(--text);font:16px/1.6 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 .serif{font-family:"Pretendard Variable",Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.bar{background:var(--bar);color:var(--bar-text)}
+.bar{background:var(--bar);color:var(--bar-text);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo svg{flex:none}
 .bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
 .bar nav a{opacity:.72;padding:4px 0;border-bottom:2px solid transparent;white-space:nowrap}
-.bar nav a:hover,.bar nav a.on{opacity:1;border-color:var(--bar-text)}
+.bar nav a:hover,.bar nav a.on{opacity:1;border-image:var(--grad) 1}
 .search{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:7px 14px;width:230px}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
-.search input::placeholder{color:rgba(243,230,235,.55)}
+.search input::placeholder{color:rgba(238,242,255,.5)}
 .eyebrow{font-size:14px;font-weight:600;color:var(--muted);margin:26px 0 0;letter-spacing:.01em}
 .hero{display:grid;grid-template-columns:1.12fr 1fr;gap:56px;padding:14px 0 28px}
 .hero h2{font-size:32px;line-height:1.35;font-weight:700;letter-spacing:-.02em;color:var(--accent);margin:0 0 18px}
-.badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font:600 12px/1 "Pretendard Variable",Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
-.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:#2a0b17}
+.badge{display:inline-block;vertical-align:middle;background:var(--grad);color:#fff;font:600 12px/1 "Pretendard Variable",Pretendard,sans-serif;padding:7px 12px;border-radius:99px;margin-left:10px;position:relative;top:-3px;box-shadow:var(--shadow)}
+.thumb{position:relative;display:block;overflow:hidden;border-radius:16px;aspect-ratio:16/9;box-shadow:var(--shadow);background:#0f0d26}
 .thumb .art{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s}
 .thumb:hover .art{transform:scale(1.04)}
 .thumb .ico{display:none}
@@ -615,8 +613,8 @@ background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);backdrop-filte
 .kw .info{background:none;color:var(--muted);margin-left:auto;padding:0}
 .tabs{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
-.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--accent)}
+.tabs button.on{background:var(--grad);border-color:transparent;color:#fff}
+section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .card h3{font-size:17px;line-height:1.5;font-weight:600;margin:14px 0 6px}
 .card h3 a:hover,.trend h3 a:hover,.hero h2 a:hover{text-decoration:underline}
@@ -663,11 +661,11 @@ ul.st{columns:1}footer{margin-top:36px}}
 .rows p{margin:0 0 6px;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pager{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:22px 0 4px}
 .pager a,.pager button,.pager span{min-width:38px;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:14px;display:inline-grid;place-items:center;cursor:pointer}
-.pager .on{background:var(--accent);border-color:var(--accent);color:#fff}.pager span{border:0;cursor:default;min-width:20px;padding:0}
+.pager .on{background:var(--grad);border-color:transparent;color:#fff}.pager span{border:0;cursor:default;min-width:20px;padding:0}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
-.btn-w{display:inline-block;margin-left:14px;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
-.ph h1{font-size:28px;font-weight:700;color:var(--accent);margin:0}.ph span{color:var(--muted);font-size:14px}
+.btn-w{display:inline-block;margin-left:14px;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}.btn-w:hover{opacity:.9}
+.ph h1{font-size:28px;font-weight:700;margin:0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.ph span{color:var(--muted);font-size:14px}
 .editor-h{display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 14px}
 .editor-h h2{font-size:22px;margin:0;color:var(--accent);font-weight:700}.editor-h a{font-size:13.5px;color:var(--muted)}
 .egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:26px}
@@ -804,8 +802,9 @@ ICON_SEARCH = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" strok
 LOGO = ('<svg width="30" height="30" viewBox="0 0 32 32"><rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="#e58fae" stroke-width="1.6"/>'
         '<path d="M16 7c.9 4.6 2.4 6.1 7 7-4.6.9-6.1 2.4-7 7-.9-4.6-2.4-6.1-7-7 4.6-.9 6.1-2.4 7-7z" fill="#f3e6eb"/></svg>')
 FAVICON = ("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22>"
-           "<rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%232a0b17%22/>"
-           "<path d=%22M16 6c1 5 2.7 6.7 8 8-5.3 1.3-7 3-8 8-1-5-2.7-6.7-8-8 5.3-1.3 7-3 8-8z%22 fill=%22%23f3e6eb%22/></svg>")
+           "<rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%2306050d%22/>"
+           "<circle cx=%2216%22 cy=%2216%22 r=%229%22 fill=%22none%22 stroke=%22%233b7bff%22 stroke-width=%221.6%22/>"
+           "<path d=%22M16 3v26%22 stroke=%22%2312e3ff%22 stroke-width=%222%22/><path d=%22M3 16h26%22 stroke=%22%238b2cff%22 stroke-width=%222%22/></svg>")
 
 
 def esc(s):
@@ -857,7 +856,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
     canonical = f'{sc["url"]}/{path}'
     desc = desc or sc["description"]
     on = lambda k: ' class="on" aria-current="page"' if k == active else ""
-    nav = f'<a href="{base}index.html"{on("home")}>홈</a>'
+    nav = f'<a href="{base}home.html"{on("home")}>홈</a>'
     if cats:
         nav += "".join(f'<a href="{base}{c}/"{on(c)}>{esc(n)}</a>' for c, n in cats.items())
     nav += f'<a href="{base}editor/"{on("editor")}>에디터</a>'
@@ -880,13 +879,13 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 {"" if image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{esc(image or sc["url"] + "/og.png")}">
-<meta name="theme-color" content="#2a0b17">{verify}
+<meta name="theme-color" content="#06050d">{verify}
 <link rel="icon" href="{FAVICON}"><link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(sc["name"])} RSS" href="{sc["url"]}/feed.xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>{ld}</head><body>
-<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
+<header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}</div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
@@ -940,9 +939,9 @@ ART_PALETTES = {
     "반도체": ("#0d1b2e", ["#3b82f6", "#7dd3fc", "#1e3a8a"]), "로봇": ("#1a1f2b", ["#64748b", "#cbd5e1", "#38bdf8"]),
     "에너지·환경": ("#10261c", ["#34d399", "#bef264", "#0f766e"]), "문화·예술": ("#2a1026", ["#f472b6", "#fbbf24", "#a855f7"]),
     "교육": ("#2a1d0c", ["#f59e0b", "#fde68a", "#b45309"]), "보안": ("#101826", ["#475569", "#94a3b8", "#0ea5e9"]),
-    "투자·기업": ("#0f2419", ["#22c55e", "#86efac", "#15803d"]), "언어모델": ("#2a0b17", ["#e58fae", "#a33a5c", "#f9c6d6"]),
+    "투자·기업": ("#0f2419", ["#22c55e", "#86efac", "#15803d"]), "언어모델": ("#0d1030", ["#3b7bff", "#12e3ff", "#8b2cff"]),
     "신제품·서비스": ("#2b1208", ["#fb923c", "#fca5a5", "#c2410c"]), "연구": ("#141a33", ["#6366f1", "#a5b4fc", "#312e81"]),
-    "영상": ("#2b0d0d", ["#ef4444", "#fca5a5", "#7f1d1d"]), "AI": ("#2a0b17", ["#a33a5c", "#e58fae", "#5b1a33"]),
+    "영상": ("#2b0d0d", ["#ef4444", "#fca5a5", "#7f1d1d"]), "AI": ("#0b0a24", ["#8b2cff", "#12e3ff", "#3b7bff"]),
 }
 
 
@@ -1373,7 +1372,7 @@ WRITE_HTML = """<div class="post" id="w" data-repo="{REPO}"><h1 class="serif">�
 </div>
 <style>.inp{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
 .pin{width:160px;letter-spacing:.4em;text-align:center}.pin::placeholder{letter-spacing:normal}textarea.inp{line-height:1.7;resize:vertical}
-.btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--accent);color:#fff;cursor:pointer;display:inline-block}
+.btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:10px 20px;background:var(--grad);color:#fff;cursor:pointer;display:inline-block}
 .btn.ghost{background:var(--soft);color:var(--accent)}.btn:disabled{opacity:.5}.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:13px}
 .thumbs{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}.thumbs figure{margin:0;width:140px}.thumbs img{width:140px;height:90px;object-fit:cover;border-radius:8px}
 .thumbs label{font-size:12.5px;color:var(--muted)}
@@ -1429,7 +1428,7 @@ def render_home(data, cats, posts):
     ld = day_jsonld(data, f"{sc['url']}/")
     ld.insert(0, {"@context": "https://schema.org", "@type": "WebSite", "name": sc["name"], "url": sc["url"] + "/",
                   "description": sc["description"], "inLanguage": "ko"})
-    return page(title, heading + "\n".join(parts), "", cats, desc=day_desc(data, cats), path="", jsonld=ld, active="home")
+    return page(title, heading + "\n".join(parts), "", cats, desc=day_desc(data, cats), path="home.html", jsonld=ld, active="home")
 
 
 def render_category(c, name, items, cats, sc):
@@ -1494,8 +1493,8 @@ def write_feed(latest, sc):
     (SITE_DIR / "feed.xml").write_text(xml, encoding="utf-8")
 
 
-DEFAULT_TINT = "#e58fae"
-INTRO_COLORS = {"news_ko": "#ff7aa8", "news_global": "#8fb8ff", "papers": "#b99bff", "policy": "#ffc36b", "talks": "#6fe0c2"}
+DEFAULT_TINT = "#3b7bff"
+INTRO_COLORS = {"news_ko": "#12e3ff", "news_global": "#3b7bff", "papers": "#8b2cff", "policy": "#5b5bff", "talks": "#2ff5c8"}
 
 
 def render_intro(latest, cats, sc, enter="home.html", preview=False):
@@ -1540,9 +1539,10 @@ def build(keep_days=None):
                 seen.add(it["id"])
                 every[it["category"]].append(it)
     posts = load_posts()
-    (SITE_DIR / "index.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
-    # 입장 페이지 미리보기(운영자 확인용). 확정되면 index.html 로 옮긴다.
-    (SITE_DIR / "intro.html").write_text(render_intro(latest, cats, sc, enter="index.html", preview=True), encoding="utf-8")
+    # 첫 화면은 3D 입장 페이지, ENTER 를 누르면 오늘의 브리핑(home.html)
+    (SITE_DIR / "index.html").write_text(render_intro(latest, cats, sc), encoding="utf-8")
+    (SITE_DIR / "home.html").write_text(render_home(latest, cats, posts), encoding="utf-8")
+    (SITE_DIR / "intro.html").unlink(missing_ok=True)
     paths = []
     for c, name in cats.items():
         items = sorted(every[c], key=lambda x: x.get("published") or "", reverse=True)
@@ -1577,11 +1577,11 @@ def build(keep_days=None):
     paths.append("policy.html")
     (SITE_DIR / "404.html").write_text(page(
         f"페이지를 찾을 수 없어요 | {sc['name']}",
-        f'<h1 class="serif" style="font-size:26px;margin:40px 0 8px">페이지를 찾을 수 없어요</h1><p><a class="read" href="{sc["url"]}/">오늘의 브리핑으로 가기 →</a></p>',
+        f'<h1 class="serif" style="font-size:26px;margin:40px 0 8px">페이지를 찾을 수 없어요</h1><p><a class="read" href="{sc["url"]}/home.html">오늘의 브리핑으로 가기 →</a></p>',
         base=sc["url"] + "/", cats=cats, search=False, path="404.html", index=False), encoding="utf-8")
     # 검색엔진용 파일
     now = latest.get("generated_at", latest["date"])
-    urls = [(f"{sc['url']}/", now, "hourly", "1.0")]
+    urls = [(f"{sc['url']}/", now, "hourly", "1.0"), (f"{sc['url']}/home.html", now, "hourly", "0.9")]
     urls += [(f"{sc['url']}/{p}", now, "hourly" if p.endswith("/") else "daily", "0.7" if p.endswith("/") else "0.5") for p in paths]
     sm = "".join(f"<url><loc>{esc(u)}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>" for u, m, c, p in urls)
     (SITE_DIR / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>', encoding="utf-8")
