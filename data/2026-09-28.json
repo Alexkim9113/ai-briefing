@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:50+09:00",
+ "generated_at": "2026-09-28T15:53+09:00",
  "items": [
   {
    "id": "d729869c6d2683f2",
@@ -571,6 +571,17 @@
    "title_ko": "AI는 핵 이미지에서 혈액줄기세포의 노화 징후를 감지합니다."
   },
   {
+   "id": "79ba21c29f0f7cd7",
+   "title": "강원대, 영국서 AI 교육 혁신 논의…해외 대학과 교류 확대",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5zRHhiTTFVZWg5X2t0N3BRb3djVTZQY1RIS29sbXdlYTdWOU4xdWdDeHdRS3RBcjh6Q19WZ1AyT1JteXp2TjFIRWJiY0oxa0ZMU2FndXNSaG1DTXM4eE5LddIBYEFVX3lxTE5zRHhiTTFVZWg5X2t0N3BRb3djVTZQY1RIS29sbXdlYTdWOU4xdWdDeHdRS3RBcjh6Q19WZ1AyT1JteXp2TjFIRWJiY0oxa0ZMU2FndXNSaG1DTXM4eE5LdQ?oc=5",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:32:28+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "bf416ff60ec6aa7c",
    "title": "기업 내 생성형 AI 사용과 비밀정보 보호",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUdIBckFVX3lxTE84cXRUR2NmOHc5N1JrMmZHajlFUmFpMXUyU2VYOWprX1NaRklyRktUbEtfdy1QWGI3aVo3N2dhNVNRb3M0TFNiNXBDc2RpZC1mdElETWJZNVJET3dkX1JSSVBnUzVKTEpNb0dxLUJRQjkzUQ?oc=5",
@@ -845,17 +856,6 @@
    "field": "",
    "category": "policy",
    "published": "2026-09-28T03:55:06+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d36d1cc70a3b2657",
-   "title": "인공지능은 공장들이 수십억 달러를 절약하는 데 어떻게 도움을 주고 있을까요?",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd1ltZjY2cGlOejB4bWJ2MnA1bkQ1TzBkOVJxb29DWHA0b0RpSXlHajViSnc3a0lPTHdmajg3d1RHVGxnX2tPcVRiQVFsWDBMOXVyYXpmRHdoR2dGTV9wMXRmOHAzdFpxLVU0SUV2bXh3LVA5NG5zZ2RVbXpnMUZURmc3OWJXNHpPSklaRnhucXh6WVhtMjI3Ug?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T03:42:25+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2858,8 +2858,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -3002,8 +3002,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "과학기술정보통신부 보도자료",
@@ -3039,13 +3039,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 48
+   "fetched": 46
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 64
+   "fetched": 66
   },
   {
    "name": "스테이지5",
