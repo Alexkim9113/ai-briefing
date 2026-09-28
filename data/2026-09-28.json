@@ -1,6 +1,6 @@
 {
  "date": "2026-09-28",
- "generated_at": "2026-09-28T15:28+09:00",
+ "generated_at": "2026-09-28T15:33+09:00",
  "items": [
   {
    "id": "4ac4ee106644c7ee",
@@ -232,6 +232,18 @@
    "hot": 5
   },
   {
+   "id": "784685ea95a776e8",
+   "title": "반디캠컴퍼니, AI 영상툴 ‘반디캠 AI 스튜디오’ 출시",
+   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42083",
+   "source": "인공지능신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T10:56:17+09:00",
+   "summary": "화면 녹화 프로그램 ‘반디캠’ 개발사 반디캠컴퍼니가 인공지능(AI) 영상툴 ‘반디캠 AI 스튜디오’를 국내외 시장에 정식 출시하고 생성형 AI 사업에 진출한다고 28일 밝혔다. 반디캠 AI 스튜디오는 영상 기획부터 생성, 편집까지 하나의 환경에서 처리할 수 있도록 설계한 올인원 AI 영상 제작 플랫폼이다.",
+   "detail": "화면 녹화 프로그램 ‘반디캠’ 개발사 반디캠컴퍼니가 인공지능(AI) 영상툴 ‘반디캠 AI 스튜디오’를 국내외 시장에 정식 출시하고 생성형 AI 사업에 진출한다고 28일 밝혔다.\n반디캠 AI 스튜디오는 영상 기획부터 생성, 편집까지 하나의 환경에서 처리할 수 있도록 설계한 올인원 AI 영상 제작 플랫폼이다.\n복잡한 프롬프트를 직접 작성하지 않아도 사용자가 원하는 영상의 아이디어를 입력하면 장면 구성과 스토리보드, 영상 생성에 필요한 프롬프트를 자동으로 만들어 주는 ‘AI 디렉터’를 핵심 기능으로 탑재했다.",
+   "thumb": ""
+  },
+  {
    "id": "4c30431d125b111f",
    "title": "“AI 아바타가 인력 공백 채운다”...딥브레인AI, 중소기업용 ‘고객 응대 AI 아바타’ 도입 추진",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42082",
@@ -387,6 +399,17 @@
    "summary": "",
    "thumb": "",
    "title_ko": "교수들은 교실에서 인공지능을 활용하는 방법에 대해 다양했습니다."
+  },
+  {
+   "id": "797fc0455b6790dd",
+   "title": "군 생활, 이제 AI에 묻는다…장병용 AI 10월 가동",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5TYjZyX1lMSmVfZTEtRks5RmxsOTZlQmkzd21CTGZJTmJNRkF6WGowRExVZE5pZElGZHhNdVFCODZoV1VnSjNSZ1d0TDRhX1p0Z1VxOUhB?oc=5",
+   "source": "지디넷코리아",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-28T05:57:31+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "c195546b1c3eeb57",
@@ -1059,28 +1082,6 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-09-28T02:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "126d11d2b610781f",
-   "title": "[김희대의 이로운 기술, 다정한 도시] 인공지능의 새로운 원료, 취향 혹은 아비투스",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1MWVBDYVZ2Qng5RjZZODEyWWlKZjFiLTREcG9VdzBqT3VuTnhSSWV3MUhHU0hWakZ0LXFlUUlUM2p2LTZaWUhMRFVwazFZaGcxZndDNHN0d3NVeHlaem9EZHo0Vl9WTWI5?oc=5",
-   "source": "구글뉴스: 인공지능",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:58:17+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "7b91b4d0b8029c7c",
-   "title": "충남도, 생성형 AI로 농업 재해 업무시스템 개발",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9SZTdibVpnZ2Z1V1JjbnQ0LUpCT2h0QVlhM0g0c3VJWUlNZ1VMQ04zeTgwU09pYUFCeTJwYUktM1l0eVV6XzBJLS1jMWphaGs?oc=5",
-   "source": "구글뉴스: 생성형 AI",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-28T01:58:07+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -2713,7 +2714,7 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
@@ -2731,7 +2732,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 84
+   "fetched": 82
   },
   {
    "name": "Google News: AI 기업",
@@ -2809,13 +2810,13 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "TED",
-   "ok": true,
-   "count": 1,
-   "fetched": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 404: Not Found"
   },
   {
    "name": "TED-Ed",
@@ -2923,7 +2924,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 65
+   "fetched": 66
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -2947,7 +2948,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 46
+   "fetched": 48
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
