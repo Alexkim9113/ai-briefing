@@ -958,7 +958,7 @@ function pageLinks(p,n){const s=new Set([0,n-1,p-1,p,p+1]);let h=p>0?`<button da
  for(let i=0;i<n;i++){if(!s.has(i))continue;if(i-last>1)h+='<span>…</span>';h+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;last=i;}
  return h+(p<n-1?`<button data-p="${p+1}" aria-label="다음">›</button>`:'');}
 boxes.forEach(box=>{const items=[...box.children],pager=box.nextElementSibling,n=Math.ceil(items.length/PER);
- box._go=(p,scroll)=>{items.forEach((a,i)=>a.hidden=Math.floor(i/PER)!==p);pager.hidden=false;pager.innerHTML=n>1?pageLinks(p,n):'';
+ box._go=(p,scroll)=>{items.forEach((a,i)=>a.hidden=Math.floor(i/PER)!==p);pager.hidden=false;pager.innerHTML=box.closest('section.cat')?'':(n>1?pageLinks(p,n):''); // 홈: 쪽 번호 없이 8개만, 나머지는 '지난 기록 더 보기'에서
   pager.querySelectorAll('button').forEach(b=>b.onclick=()=>box._go(+b.dataset.p,true));
   if(scroll)box.closest('section').scrollIntoView({behavior:'smooth'});};
  box._go(0);});
@@ -1965,12 +1965,12 @@ def render_home(data, cats, posts):
     tabs = ['<button class="on" data-cat="all" id="all">전체</button>']
     tabs += [f'<button data-cat="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><i class="cd"></i>{esc(n)}</button>' for c, n in cats.items()]
     parts.append('<div class="tabs">' + "".join(tabs) + "</div>")
-    for c, name in cats.items():  # 나머지는 그림 없이 최신순 8개씩, 페이지를 넘겨 본다
+    for c, name in cats.items():  # 나머지는 그림 없이 최신순 8개만, 더 보려면 분야 페이지(쪽 번호 있음)로
         rows = sorted(by_cat.get(c, []), key=lambda x: x.get("published") or "", reverse=True)
         body = (f'<div class="rows" data-pg>{"".join(row_html(it, cats) for it in rows)}</div><div class="pager"></div>'
                 if rows else '<p class="empty">오늘은 새 소식이 없습니다.</p>')
         parts.append(f'<section class="cat" data-cat="{c}" id="{c}" style="--c:{INTRO_COLORS.get(c, DEFAULT_TINT)}"><h2 class="serif">{esc(name)}</h2>{body}'
-                     f'<a class="more" href="{c}/">{esc(name)} 지난 기록 모두 보기 →</a></section>')
+                     f'<a class="more" href="{c}/">{esc(name)} 지난 기록 더 보기 →</a></section>')
     sc = site_cfg()
     heading = f'<h1 class="eyebrow">{day_title(data["date"])}</h1>'
     title = f"{sc['name']} | 오늘의 AI 뉴스·논문·정책 브리핑 · {day_title(data['date'])}"
