@@ -894,7 +894,12 @@ def manual_items(cfg, now, fixtures=None):
                         break
             if not found and not fixtures:
                 raw = fetch(url).decode("utf-8", "replace")
-                meta = lambda p: html.unescape((re.search(rf'<meta[^>]+property=["\']{p}["\'][^>]+content=["\']([^"\']*)', raw) or [None, ""])[1])
+                def meta(p):
+                    for tag in re.findall(r"<meta\b[^>]*>", raw, re.I):
+                        if re.search(rf'(?:property|name)=["\']{re.escape(p)}["\']', tag, re.I):
+                            m2 = re.search(r'content=["\']([^"\']*)', tag, re.I)
+                            return html.unescape(m2.group(1)) if m2 else ""
+                    return ""
                 pub = meta("article:published_time")
                 found = {"title": meta("og:title"), "link": url, "desc": meta("og:description"), "date": pub, "thumb": ""}
         except Exception as e:
@@ -902,6 +907,7 @@ def manual_items(cfg, now, fixtures=None):
             continue
         src = {"name": m.get("outlet", ""), "outlet": m.get("outlet", ""), "category": m.get("category", "news_ko"), "url": m.get("feed", url), "tz": 9}
         item = make_item(src, found, [], now) if found and found.get("title") else None
+        print(f"[manual] {url} → {'추가: ' + item['title'][:40] if item else '제목을 찾지 못함'}")
         if item:
             item.pop("_d", None)
             out.append(item)
@@ -960,7 +966,9 @@ def collect(fixtures=None, now=None):
             status.append({"name": label(src), "ok": True, "count": len(kept), "fetched": len(raw_items)})
             results.extend(kept)
 
-    results.extend(i for i in manual_items(cfg, now, fixtures) if not history.is_dup(i))
+    if cfg.get("manual"):  # 운영자가 지정한 기사: 이미 어느 날짜에든 들어가 있으면 다시 넣지 않는다
+        have = {i["id"] for f in DATA_DIR.glob("*.json") for i in json.loads(f.read_text(encoding="utf-8"))["items"]}
+        results.extend(i for i in manual_items(cfg, now, fixtures) if i["id"] not in have)
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / f"{today.isoformat()}.json"
     # 오늘 이미 올린 글을 먼저 두고, 새 글은 그것들·서로와 겹치지 않을 때만 더한다
@@ -1024,16 +1032,24 @@ def mark_hot(items, marks):
 _WHEN = re.compile(r"when(?::|%3A)\d+d", re.I)
 
 
-def backfill(start, fixtures=None, now=None):
-    """지난 날짜의 글을 거슬러 모은다. 구글 뉴스는 날짜별 검색, 나머지는 피드에 남아 있는 글에서 고른다."""
+def backfill(start, fixtures=None, now=None, until=None, only=None, limit=None):
+    """지난 날짜의 글을 거슬러 모은다. 구글 뉴스는 날짜별 검색, 나머지는 피드에 남아 있는 글에서 고른다.
+    until: 마지막 날짜(포함), only: 이 말이 이름·분야에 들어간 소스만(정규식), limit: 소스별 하루 최대 개수."""
     cfg = load_config()
+    if only:
+        rx = re.compile(only)
+        cfg["sources"] = [s for s in cfg["sources"] if rx.search(s["name"] + " " + s.get("field", ""))]
+        print(f"[backfill] 소스 {len(cfg['sources'])}개: {', '.join(s['name'] for s in cfg['sources'])}")
+    if limit:
+        cfg["sources"] = [{**s, "limit": limit} for s in cfg["sources"]]
     now = now or datetime.now(timezone.utc)
     today = now.astimezone(KST).date()
-    days = [start + timedelta(days=i) for i in range((today - start).days)]
+    end = min(today, until + timedelta(days=1)) if until else today
+    days = [start + timedelta(days=i) for i in range((end - start).days)]
     if not days:
         return
     lo = datetime.combine(start, datetime.min.time(), KST)
-    hi = datetime.combine(today, datetime.min.time(), KST)
+    hi = datetime.combine(end, datetime.min.time(), KST)
     keywords = cfg.get("ai_keywords", [])
     seen = Deduper()
     for f in sorted(DATA_DIR.glob("*.json")):
@@ -1082,15 +1098,16 @@ def backfill(start, fixtures=None, now=None):
             continue
         seen.add(it)
         by_day.setdefault(it.pop("_d").astimezone(KST).date(), []).append(it)
-    for f in sorted(DATA_DIR.glob("*.json")):  # 새 글이 없던 날도 번역 제목은 채운다
-        by_day.setdefault(datetime.fromisoformat(f.stem).date(), [])
+    for f in sorted(DATA_DIR.glob("*.json")):  # 새 글이 없던 날도 번역 제목은 채운다(일부 소스만 모을 땐 그 기간만)
+        if not only or start <= datetime.fromisoformat(f.stem).date() < end:
+            by_day.setdefault(datetime.fromisoformat(f.stem).date(), [])
     for day, items in sorted(by_day.items()):
         path = DATA_DIR / f"{day.isoformat()}.json"
         data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else \
             {"date": day.isoformat(), "generated_at": f"{day.isoformat()}T23:59+09:00", "items": [], "status": []}
         merged = sorted(data["items"] + items, key=lambda x: x["published"] or "", reverse=True)
         per_cat = Counter()
-        data["items"] = [i for i in merged if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= MAX_PER_CAT)]
+        data["items"] = [i for i in merged if (per_cat.update([i["category"]]) or per_cat[i["category"]] <= CAT_CAP.get(i["category"], MAX_PER_CAT))]
         add_translations(data["items"], fixtures)
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"[backfill] {day}: +{len(items)} → {len(data['items'])}개 {dict(Counter(i['category'] for i in data['items']))}")
@@ -1218,7 +1235,7 @@ a{color:inherit;text-decoration:none}
 .serif{font-family:"Pretendard Variable",Pretendard,sans-serif;letter-spacing:-.01em}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .bar{background:var(--bar);color:var(--bar-text);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.bar .wrap{display:flex;align-items:center;gap:28px;height:64px;position:relative}
 .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.14em;white-space:nowrap}.logo span{font-family:Unbounded,"Pretendard Variable",sans-serif;font-weight:700;letter-spacing:.08em;font-size:19px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo svg{flex:none}
 .bar nav{display:flex;gap:22px;flex:1;justify-content:center;font-size:15px;font-weight:600;overflow-x:auto;scrollbar-width:none}
@@ -1227,6 +1244,10 @@ a{color:inherit;text-decoration:none}
 .search{display:flex;align-items:center;gap:8px;background:var(--field);border:1px solid var(--field-line);border-radius:99px;padding:7px 14px;width:230px}
 .search input{background:none;border:0;outline:0;color:var(--bar-text);font:inherit;font-size:14px;width:100%}
 .search input::placeholder{color:var(--muted)}
+.sres{position:absolute;z-index:60;top:calc(100% + 6px);right:0;width:min(440px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;background:var(--card,var(--bg));border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.35);padding:8px}
+.sres-h{margin:6px 10px 8px;font-size:12.5px;color:var(--muted)}.sres-e{margin:10px;font-size:14px;color:var(--muted)}
+.sres a{display:grid;gap:3px;padding:10px;border-radius:12px;color:inherit}.sres a:hover,.sres a:focus{background:var(--soft)}
+.sres a b{font-weight:600;font-size:14.5px;line-height:1.45}.sres a small{font-size:12px;color:var(--muted)}.sres-c{font-size:11px;font-weight:700;color:var(--accent)}
 .theme{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--field-line);background:var(--field);color:var(--bar-text);display:grid;place-items:center;cursor:pointer}
 .theme svg{width:18px;height:18px}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--heading);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:50;box-shadow:var(--shadow);white-space:nowrap}.theme .moon{display:none}:root[data-theme=light] .theme .sun{display:none}:root[data-theme=light] .theme .moon{display:block}
 
@@ -1326,10 +1347,8 @@ section.cat>h2{font-size:21px;margin:26px 0 8px}
 ul.st{columns:1}footer{margin-top:36px}}
 .thumb img.art{object-fit:cover;display:block}
 .ko{display:block;color:var(--muted);font-size:.84em;font-weight:500;line-height:1.5;margin-top:3px;letter-spacing:0;font-family:"Pretendard Variable",Pretendard,sans-serif}
-/* 기사 제목만 KoPub바탕(굵게, 없는 글자는 노토 세리프), 본문·번역은 프리텐다드 */
-@font-face{font-family:"KoPub Batang";font-weight:400;font-display:swap;src:url(/fonts/kopub-batang-400.woff2) format("woff2")}
-@font-face{font-family:"KoPub Batang";font-weight:700;font-display:swap;src:url(/fonts/kopub-batang-700.woff2) format("woff2")}
-h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pretendard Variable",Pretendard,serif;letter-spacing:-.02em;font-weight:700}
+/* 기사 제목은 노토 세리프(모든 한글·영문 글자가 들어 있어 글꼴이 섞이거나 깨지지 않음), 본문·번역은 프리텐다드 */
+h3.serif,.hero h2.serif,.brief h3{font-family:"Noto Serif KR","Pretendard Variable",Pretendard,serif;letter-spacing:-.02em;font-weight:700}
 .hero h2 .ko{font-size:.6em;line-height:1.5;margin-top:8px}
 .bar nav a[data-go]{display:inline}
 .rows{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
@@ -1339,7 +1358,7 @@ h3.serif,.hero h2.serif,.brief h3{font-family:"KoPub Batang","Noto Serif KR","Pr
 .pager{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:22px 0 4px}
 .pager a,.pager button,.pager span{min-width:38px;height:38px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:14px;display:inline-grid;place-items:center;cursor:pointer}
 .pager .on{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--heading);font-weight:700}
-.pager .nums{display:flex;gap:6px;border:0;padding:0;min-width:0;height:auto;background:none;cursor:default}.pager .off,.pager button:disabled{opacity:.3;cursor:default}
+.pager .nums{display:flex;gap:6px;border:0;padding:0;min-width:0;height:auto;background:none;cursor:default}.pager .m5a{display:none}.pager .off,.pager button:disabled{opacity:.3;cursor:default}
 .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:14px}.more:hover{text-decoration:underline}
 .ph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:36px 0 8px}
 /* 에디터 글 보호: 방문자는 글 복사·끌기·오른쪽 클릭·인쇄가 안 되고, 화면 캡처 도구가 뜨면 글이 흐려진다(운영자 기기는 제외) */
@@ -1378,7 +1397,8 @@ html:not(.op).cap .protect{filter:blur(18px);transition:filter .05s}
 .post .body [style*="text-align:justify"]{text-align:left!important}
 .elist .thumb .tag{display:none}.ph h1{font-size:23px}.post h1{font-size:25px;margin-top:26px}.post .body{font-size:17px}
 .pager{gap:6px 4px}.pager .nums{flex:1 0 100%;order:-1;justify-content:center;gap:3px}
-.pager .nums a,.pager .nums button{min-width:0;width:calc((100% - 27px)/10);max-width:40px;height:38px;padding:0;font-size:13.5px}.pager .arw{min-width:44px;height:38px}}
+.pager .nums a,.pager .nums button{min-width:0;width:calc((100% - 24px)/5);max-width:52px;height:40px;padding:0;font-size:14.5px}.pager .arw{min-width:44px;height:38px}
+.pager .d10,.pager .nums a:not(.m5){display:none}.pager .m5a{display:inline-grid}}
 """
 
 JS = """
@@ -1422,10 +1442,10 @@ try{if(localStorage.getItem('metaxis_op')){document.documentElement.classList.ad
  addEventListener('blur',()=>R.classList.add('cap'));addEventListener('focus',()=>R.classList.remove('cap'));
  document.addEventListener('visibilitychange',()=>R.classList.toggle('cap',document.hidden));})();
 const PER=8,tabs=document.querySelectorAll('.tabs button'),secs=document.querySelectorAll('section.cat'),boxes=document.querySelectorAll('.rows[data-pg]');
-function pageLinks(p,n){const b0=Math.floor(p/10)*10,b1=Math.min(n,b0+10);let nums='';  // 쪽 번호는 10개씩 한 번에(1~10, 11~20 …)
+function pageLinks(p,n){const K=matchMedia('(max-width:600px)').matches?5:10,b0=Math.floor(p/K)*K,b1=Math.min(n,b0+K);let nums='';  // 쪽 번호는 웹 10개·모바일 5개씩 한 번에
  for(let i=b0;i<b1;i++)nums+=`<button data-p="${i}" class="${i===p?'on':''}">${i+1}</button>`;
  const bt=(q,l,t,x)=>`<button data-p="${q}" class="arw ${x}" aria-label="${l}"${q<0||q>=n?' disabled':''}>${t}</button>`;
- return (n>10?bt(b0-10<0?-1:b0-10,'이전 10쪽','«','fl'):'')+bt(p-1,'이전','‹','pv')+`<span class="nums">${nums}</span>`+bt(p+1<n?p+1:n,'다음','›','nx')+(n>10?bt(b1<n?b1:n,'다음 10쪽','»','fr'):'');}
+ return (n>K?bt(b0-K<0?-1:b0-K,`이전 ${K}쪽`,'«','fl'):'')+bt(p-1,'이전','‹','pv')+`<span class="nums">${nums}</span>`+bt(p+1<n?p+1:n,'다음','›','nx')+(n>K?bt(b1<n?b1:n,`다음 ${K}쪽`,'»','fr'):'');}
 const HOME_M=matchMedia('(max-width:600px)');  // 모바일 홈은 분야별 4개만(더 보려면 '지난 기록 더 보기')
 boxes.forEach(box=>{const items=[...box.children],pager=box.nextElementSibling,per=()=>box.closest('section.cat')&&HOME_M.matches?4:PER,n=Math.ceil(items.length/per());
  box._go=(p,scroll)=>{const k=per();items.forEach((a,i)=>a.hidden=Math.floor(i/k)!==p);pager.hidden=false;pager.innerHTML=box.closest('section.cat')?'':(n>1?pageLinks(p,n):''); // 홈: 쪽 번호 없이 8개만, 나머지는 '지난 기록 더 보기'에서
@@ -1454,8 +1474,20 @@ if(KWD)KWD.querySelectorAll('.kwb').forEach(b=>b.onclick=()=>{
  if(b.classList.contains('on')){clearKw();filter(null);return;}
  clearKw();b.classList.add('on');if(q)q.value='';const terms=b.dataset.t.split('|'),label=b.textContent.slice(1);
  const n=filter(terms,label);kwBanner(label,terms,n);document.querySelector('.kwres').scrollIntoView({behavior:'smooth',block:'start'});});
-if(q)q.oninput=()=>{clearKw();const v=q.value.trim();if(!v){filter(null);return;}
- const g=related(v);if(g){const n=filter(g,v);kwBanner(v,g,n);}else filter([v],v,v.toLowerCase());};
+if(q){ // 사이트 전체 검색: 지금까지 모은 모든 글(search.json)에서 제목·번역 제목·출처로 찾는다
+ const lab=q.closest('.search');let IDX=null,T=0;
+ const pan=document.createElement('div');pan.className='sres';pan.hidden=true;lab.after(pan);
+ const esc=x=>String(x||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ async function load(){if(!IDX){try{IDX=await (await fetch('/search.json?'+Math.floor(Date.now()/6e5))).json();}catch(e){IDX={rows:[],cats:{}};}}return IDX;}
+ async function run(){const v=q.value.trim().toLowerCase();if(!v){pan.hidden=true;return;}const d=await load();
+  const g=related(v)||(d.kg||[]).find(g=>g.some(w=>w.toLowerCase()===v))||null,terms=(g||[v]).map(w=>w.toLowerCase());
+  const hit=d.rows.filter(r=>{const t=(r[1]+' '+r[2]+' '+r[3]).toLowerCase();return g?terms.some(w=>has(t,w)):t.includes(v);});
+  pan.innerHTML=`<p class="sres-h">검색 결과 <b>${hit.length}</b>건</p>`+(hit.length?hit.slice(0,40).map(r=>`<a href="/${esc(r[6])}#a=${esc(r[0])}"><span class="sres-c">${esc(d.cats[r[4]]||'')}</span><b>${esc(r[2]||r[1])}</b><small>${esc(r[3])}${r[5]?' · '+esc(r[5].slice(5).replace('-','.')):''}</small></a>`).join(''):'<p class="sres-e">찾는 글이 없어요. 다른 말로 찾아보세요.</p>');
+  pan.hidden=false;}
+ q.oninput=()=>{clearTimeout(T);T=setTimeout(run,180);};
+ q.onkeydown=e=>{if(e.key==='Escape'){q.value='';pan.hidden=true;}if(e.key==='Enter'){e.preventDefault();run();}};
+ document.addEventListener('click',e=>{if(!e.target.closest('.sres,.search'))pan.hidden=true;});
+ q.onfocus=()=>{if(q.value.trim())run();};}
 document.querySelectorAll('.share').forEach(b=>b.onclick=async()=>{const u=b.dataset.url;
  try{if(navigator.share)await navigator.share({url:u,title:b.dataset.title});else{await navigator.clipboard.writeText(u);b.title='링크 복사됨';}}catch(e){}});
 """
@@ -2465,9 +2497,13 @@ def pager_html(p, n, href):
     def arw(q, label, t, cls):
         return (f'<a class="arw {cls}" href="{href(q)}" aria-label="{label}">{t}</a>' if 0 <= q < n
                 else f'<span class="arw {cls} off" aria-hidden="true">{t}</span>')
-    nums = "".join(f'<a href="{href(i)}"{" class=on aria-current=page" if i == p else ""}>{i + 1}</a>' for i in range(b0, b1))
-    h = (arw(b0 - 10, "이전 10쪽", "«", "fl") if n > 10 else "") + arw(p - 1, "이전", "‹", "pv") + f'<span class="nums">{nums}</span>' \
-        + arw(p + 1, "다음", "›", "nx") + (arw(b1, "다음 10쪽", "»", "fr") if n > 10 else "")
+    m0 = p // 5 * 5  # 모바일은 5개씩(1~5, 6~10 …): 그 밖의 번호는 CSS로 숨긴다
+    cls = lambda i: " ".join(x for x in ("on" if i == p else "", "m5" if m0 <= i < m0 + 5 else "") if x)
+    nums = "".join(f'<a href="{href(i)}"' + (f' class="{cls(i)}"' if cls(i) else "") + (" aria-current=page" if i == p else "") + f">{i + 1}</a>"
+                   for i in range(b0, b1))
+    h = (arw(b0 - 10, "이전 10쪽", "«", "fl d10") if n > 10 else "") + (arw(m0 - 5, "이전 5쪽", "«", "fl m5a") if n > 5 else "") \
+        + arw(p - 1, "이전", "‹", "pv") + f'<span class="nums">{nums}</span>' + arw(p + 1, "다음", "›", "nx") \
+        + (arw(b1, "다음 10쪽", "»", "fr d10") if n > 10 else "") + (arw(m0 + 5 if m0 + 5 < n else n, "다음 5쪽", "»", "fr m5a") if n > 5 else "")
     return '<nav class="pager" aria-label="페이지">' + h + "</nav>"
 
 
@@ -2711,7 +2747,7 @@ def render_editor_pages(posts, cats, sc):
                 f'<div class="elist protect">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"에디터{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
-        (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, active="editor",
+        (out / href(pg)).write_text(page(title, body, "../", cats, search=True, path=path, active="editor",
                                          desc=f"{sc['name']} 에디터가 직접 쓴 AI 칼럼과 분석 글"), encoding="utf-8")
         pages.append(path)
     for p in posts:
@@ -2885,7 +2921,7 @@ def render_category(c, name, items, cats, sc):
                "mainEntity": {"@type": "ItemList", "itemListElement": [
                    {"@type": "ListItem", "position": k + 1, "url": it["link"], "name": it["title"]} for k, it in enumerate(chunk)]}}]
         desc = f"{sc['name']}가 모은 AI {name} 소식을 최신순으로 봅니다." + (f" 최신: {chunk[0]['title']}" if chunk else "")
-        (out / href(pg)).write_text(page(title, body, "../", cats, search=False, path=path, desc=desc[:155], jsonld=ld,
+        (out / href(pg)).write_text(page(title, body, "../", cats, search=True, path=path, desc=desc[:155], jsonld=ld,
                                          active=c), encoding="utf-8")
         paths.append(path)
     return paths
@@ -2912,7 +2948,7 @@ def render_tags(items, cats, sc):
                     + f'<div class="rows">{"".join(row_html(it, cats, True, "../") for it in chunk)}</div>{pager_html(pg, n, href)}')
             path = f"tag/{href(pg)}"
             (out / href(pg)).write_text(page(f"#{name} 관련 AI 소식{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}", body, "../", cats,
-                                             search=False, path=path, desc=f"{sc['name']}가 모은 '{name}' 관련 AI 뉴스·논문·정책·영상을 한곳에서 봅니다."),
+                                             search=True, path=path, desc=f"{sc['name']}가 모은 '{name}' 관련 AI 뉴스·논문·정책·영상을 한곳에서 봅니다."),
                                         encoding="utf-8")
             paths.append(path)
     return paths
@@ -3036,6 +3072,14 @@ def build(keep_days=None):
     for c, name in cats.items():
         items = sorted(every[c], key=lambda x: x.get("published") or "", reverse=True)
         paths += render_category(c, name, items, cats, sc)
+    # 사이트 전체 검색용 목록: [id, 제목, 번역 제목, 출처, 분야, 날짜, 그 글이 있는 쪽]
+    per_cat = {c: sorted(every[c], key=lambda x: x.get("published") or "", reverse=True) for c in cats}
+    rows = [[it["id"], it["title"], it.get("title_ko", ""), it.get("source", ""), c, (it.get("published") or "")[:10],
+             f'{c}/' + ("" if k // PER_PAGE == 0 else f"{k // PER_PAGE + 1}.html")]
+            for c in cats for k, it in enumerate(per_cat[c])]
+    rows += [[p["id"], p["title"], "", "에디터", "editor", (p.get("date") or p.get("published") or "")[:10], f'editor/{p["id"]}.html']
+             for p in posts]
+    (SITE_DIR / "search.json").write_text(json.dumps({"cats": {**cats, "editor": "에디터"}, "kg": KW_GROUPS, "rows": rows}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     paths += render_editor_pages(posts, cats, sc)
     paths += render_tags([it for c in cats for it in every[c]], cats, sc)
     credits = "".join(
@@ -3267,6 +3311,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", nargs="?", default="all", choices=["all", "collect", "build", "backfill", "photos", "inbox"])
     ap.add_argument("--since", help="backfill 시작 날짜(YYYY-MM-DD)")
+    ap.add_argument("--until", help="backfill 마지막 날짜(YYYY-MM-DD, 포함)")
+    ap.add_argument("--only", help="backfill할 소스 이름·분야(정규식)")
+    ap.add_argument("--limit", type=int, help="backfill 소스별 하루 최대 개수")
     ap.add_argument("--fixtures", help="네트워크 대신 사용할 로컬 피드 폴더(테스트용)")
     a = ap.parse_args()
     if a.cmd == "inbox":
@@ -3276,7 +3323,8 @@ def main():
         collect_photos()
         return
     if a.cmd == "backfill":
-        backfill(datetime.fromisoformat(a.since).date(), a.fixtures)
+        backfill(datetime.fromisoformat(a.since).date(), a.fixtures, until=datetime.fromisoformat(a.until).date() if a.until else None,
+                 only=a.only, limit=a.limit)
         build()
         return
     if a.cmd in ("all", "collect"):

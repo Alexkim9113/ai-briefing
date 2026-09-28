@@ -9,6 +9,18 @@ on:
         description: "지난 글 다시 모으기 시작 날짜(YYYY-MM-DD). 비우면 평소처럼 수집"
         required: false
         default: ""
+      until:
+        description: "지난 글 다시 모으기 마지막 날짜(YYYY-MM-DD, 비우면 어제까지)"
+        required: false
+        default: ""
+      only:
+        description: "지난 글 다시 모을 소스 이름·분야(예: 법률)"
+        required: false
+        default: ""
+      limit:
+        description: "지난 글 다시 모으기: 소스별 하루 최대 개수"
+        required: false
+        default: ""
       photos:
         description: "무료(CC0) 표지 사진 지금 모으기 (yes 입력)"
         required: false
@@ -58,12 +70,15 @@ jobs:
       - name: 수집 + 사이트 생성
         env:
           SINCE: ${{ inputs.since }}
+          UNTIL: ${{ inputs.until }}
+          ONLY: ${{ inputs.only }}
+          LIMIT: ${{ inputs.limit }}
           DEEPL_KEY: ${{ secrets.DEEPL_KEY }}
           MS_TRANSLATOR_KEY: ${{ secrets.MS_TRANSLATOR_KEY }}
           MS_TRANSLATOR_REGION: ${{ secrets.MS_TRANSLATOR_REGION }}
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
         run: |
-          if [ -n "$SINCE" ]; then python briefing.py backfill --since "$SINCE"; else python briefing.py; fi
+          if [ -n "$SINCE" ]; then python briefing.py backfill --since "$SINCE" ${UNTIL:+--until "$UNTIL"} ${ONLY:+--only "$ONLY"} ${LIMIT:+--limit "$LIMIT"} && python briefing.py build; else python briefing.py; fi
       - name: 수집 데이터 저장(카테고리 아카이브 보관용)
         run: |
           git config user.name "briefing-bot"
