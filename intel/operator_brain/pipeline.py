@@ -7,18 +7,20 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import context_builder
 import evidence_sufficiency
 import intent_classifier
 import query_parser
 import retriever
 import scope_parser
+from common import context_hash
 
 
 def ask(question_text, mode):
-    """PHASE A+B+C: query 정규화 -> intent 분류 -> scope 추출 -> retrieval(FACT/EVENT/CHANGE
-    + provenance) -> evidence sufficiency/claim ceiling. Context Pack/Claude 호출은 이후
-    Phase에서 추가된다(섹션 60, 아직 미구현) - 지금은 항상 retrieval-only 결과만 반환한다
-    (Claude=0)."""
+    """PHASE A+B+C+D: query 정규화 -> intent 분류 -> scope 추출 -> retrieval(FACT/EVENT/
+    CHANGE + provenance) -> evidence sufficiency/claim ceiling -> Context Pack(budget 적용).
+    Claude 호출은 아직 없다(PHASE G, 미구현) - 지금은 항상 retrieval-only 결과만 반환한다
+    (섹션 8: Claude AUTO-CALL OFF, 기본 RETRIEVAL_ONLY)."""
     now_iso = datetime.now(timezone.utc).isoformat()
     record = query_parser.parse_query(question_text, mode, now_iso)
     record["intent"] = intent_classifier.classify_intent(record["normalized_text"])
@@ -29,6 +31,11 @@ def ask(question_text, mode):
     # 있는 척 만들어내지 않는다.
     record["evidence_sufficiency"] = evidence_sufficiency.assess(
         retrieval["results"], record["intent"], counter_evidence_results=[])
+    context_pack, budget_info = context_builder.build_context_pack(
+        record, retrieval, record["evidence_sufficiency"])
+    record["context_pack"] = context_pack
+    record["context_budget"] = budget_info
+    record["context_hash"] = context_hash(context_pack)
     return record
 
 
