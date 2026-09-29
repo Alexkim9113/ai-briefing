@@ -36,6 +36,7 @@
   "date": "2026-09-29T08:19:02+09:00",
   "document_ids": [
    "e5cf82c318ebff37",
+   "4847d061d1f249e6",
    "95fdbc0adbb37fc8"
   ],
   "entities": [
@@ -43,7 +44,7 @@
   ],
   "event_id": "evt_e5cf82c318ebff37",
   "event_name": "“사람처럼 움직임 기억한다”…KAIST, ‘몸에 붙이는 AI 반도체’ 개발",
-  "merge_evidence_count": 1,
+  "merge_evidence_count": 2,
   "merge_method": "rule",
   "status": "RESOLVED",
   "topic": "반도체"

@@ -13,6 +13,18 @@
  },
  {
   "a": "e5cf82c318ebff37",
+  "b": "4847d061d1f249e6",
+  "merge_method": "rule",
+  "merge_score": 0.36,
+  "merge_evidence": {
+   "entity_match": true,
+   "topic_match": true,
+   "date_distance_days": 0,
+   "title_similarity": 0.36
+  }
+ },
+ {
+  "a": "e5cf82c318ebff37",
   "b": "95fdbc0adbb37fc8",
   "merge_method": "rule",
   "merge_score": 0.3,

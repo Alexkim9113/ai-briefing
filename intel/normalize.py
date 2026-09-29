@@ -17,7 +17,26 @@ from source_service import normalize_sources, _domain_from_url  # noqa: E402
 from document_service import to_document  # noqa: E402
 from fact_service import make_fact_candidate  # noqa: E402
 from event_service import cluster_events  # noqa: E402
+from evidence_service import extract_identifiers, build_evidence_for_document, resolve_reports_on  # noqa: E402
 from storage.json_store import JsonStore  # noqa: E402
+
+# arXiv/Nature 원문 URL에서 그 문서 자신의 "1차 식별자"를 뽑는다(Evidence Pilot 전용).
+# 이건 문서 안 텍스트에서 찾는 extract_identifiers와 다르다 — "이 문서가 그 논문 자체"라는 뜻.
+import re as _re  # noqa: E402
+_PRIMARY_ARXIV_URL = _re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", _re.I)
+_PRIMARY_NATURE_DOI = _re.compile(r"nature\.com/articles/([a-z0-9.\-]+)", _re.I)
+
+
+def _primary_identifier_of(item):
+    link = item.get("link") or ""
+    m = _PRIMARY_ARXIV_URL.search(link)
+    if m:
+        return "ARXIV_ID", m.group(1)
+    m = _PRIMARY_NATURE_DOI.search(link)
+    if m:
+        slug = m.group(1)
+        return "DOI", f"10.1038/{slug}"
+    return None, None
 
 INTEL_DIR = ROOT / "intel"
 PILOT_CATEGORIES = ["news_ko", "news_global", "papers", "policy"]
@@ -71,9 +90,10 @@ def run():
     dup_ids = Counter(it["id"] for it in sample)
     sample = list({it["id"]: it for it in sample}.values())  # 같은 id가 여러 날짜 파일에 걸쳐 있으면 하나만
 
-    source_store, doc_store, fact_store, event_store = (
+    source_store, doc_store, fact_store, event_store, evidence_store, rel_store = (
         JsonStore(INTEL_DIR / "sources.json"), JsonStore(INTEL_DIR / "documents.json"),
-        JsonStore(INTEL_DIR / "facts.json"), JsonStore(INTEL_DIR / "events.json"))
+        JsonStore(INTEL_DIR / "facts.json"), JsonStore(INTEL_DIR / "events.json"),
+        JsonStore(INTEL_DIR / "evidence.json"), JsonStore(INTEL_DIR / "relationships.json"))
 
     # 1) SOURCE
     source_records, alias_report = normalize_sources([it.get("source") for it in sample])
@@ -112,9 +132,34 @@ def run():
     for eid, rec in events.items():
         event_store.upsert(eid, rec)
 
+    # 5) EVIDENCE + REPORTS_ON (EXACT IDENTIFIER ONLY — 운영자 지시: 외부 API/LLM/퍼지매칭 없음)
+    documents_by_id = {did: doc_store.get(did) for did, _ in doc_items}
+    arxiv_index, doi_index = {}, {}
+    for did, it in doc_items:
+        kind, norm_id = _primary_identifier_of(it)
+        if kind == "ARXIV_ID":
+            arxiv_index[norm_id] = did
+        elif kind == "DOI":
+            doi_index[norm_id.lower()] = did
+
+    for did, it in doc_items:
+        text = f"{it.get('title', '')}\n{it.get('summary') or ''}"
+        idents = extract_identifiers(text)
+        doc = documents_by_id[did]
+        doc["_identifiers"] = idents
+        is_primary = _primary_identifier_of(it)[0] is not None
+        ev = build_evidence_for_document(doc, is_primary, idents)
+        evidence_store.upsert(ev["evidence_id"], ev)
+
+    relationships, review = resolve_reports_on(documents_by_id, arxiv_index, doi_index)
+    for rid, rec in relationships.items():
+        rel_store.upsert(rid, rec)
+
     source_store.save(); doc_store.save(); fact_store.save(); event_store.save()
+    evidence_store.save(); rel_store.save()
     (INTEL_DIR / "source_aliases.json").write_text(json.dumps(alias_report, ensure_ascii=False, indent=1), encoding="utf-8")
     (INTEL_DIR / "event_merge_log.json").write_text(json.dumps(merge_log, ensure_ascii=False, indent=1), encoding="utf-8")
+    (INTEL_DIR / "evidence_review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
 
     resolved_docs = sum(1 for v in doc_event.values() if v)
     metrics = {
@@ -134,9 +179,16 @@ def run():
         "processing_time_sec": round(time.time() - t0, 2),
         "gemini_calls_added": 0,
         "claude_calls_added": 0,
+        "external_api_calls": 0,
+        "evidence_records": len(evidence_store.all()),
+        "reports_on_created": len(relationships),
+        "identifier_candidates_reviewed": len(review),
+        "self_references": sum(1 for r in review if r["result"] == "SELF_REFERENCE"),
+        "no_match": sum(1 for r in review if r["result"] == "NO_MATCH"),
+        "matches": sum(1 for r in review if r["result"] == "MATCH"),
     }
     (INTEL_DIR / "pilot_metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=1), encoding="utf-8")
-    return metrics, source_records, alias_report, doc_items, fact_store, events, merge_log, doc_event
+    return metrics, source_records, alias_report, doc_items, fact_store, events, merge_log, doc_event, relationships, review
 
 
 if __name__ == "__main__":

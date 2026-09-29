@@ -1,5 +1,11 @@
 [
  {
+  "alias": "뉴스핌",
+  "source_id": "src_newspim_com",
+  "canonical_name": "newspim.com",
+  "reason": "same normalized name"
+ },
+ {
   "alias": "파이낸셜뉴스",
   "source_id": "src_fnnews_com",
   "canonical_name": "fnnews.com",

@@ -449,6 +449,15 @@
   "source_id": "src_defensescoop",
   "source_type": "OTHER"
  },
+ "src_deloitte_com": {
+  "aliases": [],
+  "canonical_name": "deloitte.com",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_deloitte_com",
+  "source_type": "OTHER"
+ },
  "src_donga_science": {
   "aliases": [],
   "canonical_name": "DongA Science",
@@ -566,6 +575,15 @@
   "source_id": "src_ewtn_news",
   "source_type": "OTHER"
  },
+ "src_ezyeconomy_com": {
+  "aliases": [],
+  "canonical_name": "ezyeconomy.com",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_ezyeconomy_com",
+  "source_type": "OTHER"
+ },
  "src_fast_company": {
   "aliases": [],
   "canonical_name": "Fast Company",
@@ -665,6 +683,15 @@
   "domain": null,
   "language": null,
   "source_id": "src_gurufocus",
+  "source_type": "OTHER"
+ },
+ "src_gyeonggi1news_com": {
+  "aliases": [],
+  "canonical_name": "gyeonggi1news.com",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_gyeonggi1news_com",
   "source_type": "OTHER"
  },
  "src_hai_stanford_edu": {
@@ -1181,7 +1208,9 @@
   "source_type": "NEWS_MEDIA"
  },
  "src_newspim_com": {
-  "aliases": [],
+  "aliases": [
+   "뉴스핌"
+  ],
   "canonical_name": "newspim.com",
   "country": null,
   "domain": null,
@@ -1675,6 +1704,15 @@
   "source_id": "src_the_economy_korea",
   "source_type": "OTHER"
  },
+ "src_the_fabricator": {
+  "aliases": [],
+  "canonical_name": "The Fabricator",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_the_fabricator",
+  "source_type": "OTHER"
+ },
  "src_the_guardian": {
   "aliases": [],
   "canonical_name": "The Guardian",
@@ -1790,6 +1828,15 @@
   "domain": null,
   "language": null,
   "source_id": "src_topic_사회_노동_사회_노동",
+  "source_type": "OTHER"
+ },
+ "src_tradingview": {
+  "aliases": [],
+  "canonical_name": "TradingView",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_tradingview",
   "source_type": "OTHER"
  },
  "src_trendingtopics_eu": {
@@ -2269,6 +2316,15 @@
   "source_id": "src_뉴스더보이스헬스케어",
   "source_type": "OTHER"
  },
+ "src_뉴스후플러스": {
+  "aliases": [],
+  "canonical_name": "뉴스후플러스",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_뉴스후플러스",
+  "source_type": "OTHER"
+ },
  "src_대전mbc": {
   "aliases": [],
   "canonical_name": "대전MBC",
@@ -2404,6 +2460,15 @@
   "source_id": "src_산학뉴스",
   "source_type": "OTHER"
  },
+ "src_서울pn": {
+  "aliases": [],
+  "canonical_name": "서울Pn",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_서울pn",
+  "source_type": "OTHER"
+ },
  "src_서울경제tv": {
   "aliases": [],
   "canonical_name": "서울경제TV",
@@ -2440,6 +2505,15 @@
   "source_id": "src_에너지경제신문",
   "source_type": "OTHER"
  },
+ "src_위키리크스한국": {
+  "aliases": [],
+  "canonical_name": "위키리크스한국",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_위키리크스한국",
+  "source_type": "OTHER"
+ },
  "src_의약뉴스": {
   "aliases": [],
   "canonical_name": "의약뉴스",
@@ -2465,6 +2539,15 @@
   "domain": null,
   "language": null,
   "source_id": "src_이코노미스트",
+  "source_type": "OTHER"
+ },
+ "src_인포스탁데일리": {
+  "aliases": [],
+  "canonical_name": "인포스탁데일리",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_인포스탁데일리",
   "source_type": "OTHER"
  },
  "src_일간투데이": {
@@ -2510,6 +2593,15 @@
   "domain": null,
   "language": null,
   "source_id": "src_전자신문",
+  "source_type": "OTHER"
+ },
+ "src_정책브리핑": {
+  "aliases": [],
+  "canonical_name": "정책브리핑",
+  "country": null,
+  "domain": null,
+  "language": null,
+  "source_id": "src_정책브리핑",
   "source_type": "OTHER"
  },
  "src_중소기업투데이": {
