@@ -1,15 +1,15 @@
 {
  "claims_by_status": {
-  "INSUFFICIENT_SOURCE": 340,
-  "SECONDARY_ONLY": 171,
+  "INSUFFICIENT_SOURCE": 350,
+  "SECONDARY_ONLY": 164,
   "SOURCE_LOCATED": 57,
-  "SUMMARY_DERIVED": 60
+  "SUMMARY_DERIVED": 57
  },
  "claims_by_type": {
-  "COMPANY_REPORTED": 33,
+  "COMPANY_REPORTED": 31,
   "COURT_FINDING": 1,
   "MEASURED": 10,
-  "MEDIA_REPORTED": 527,
+  "MEDIA_REPORTED": 529,
   "RESEARCH_FINDING": 57
  },
  "claims_extracted": 628,
@@ -27,8 +27,8 @@
  "gemini_calls_added": 15,
  "human_review_by_priority": {
   "HIGH": 5,
-  "LOW": 537,
-  "MEDIUM": 90
+  "LOW": 539,
+  "MEDIUM": 88
  },
  "human_review_pending": 632,
  "independence_overall": {
@@ -38,7 +38,7 @@
   "syndication_collapsed": 0
  },
  "interpretation_candidates": 4,
- "level3_flagged_documents": 153,
+ "level3_flagged_documents": 145,
  "lineage_stopped_at_distribution": {
   "CLAIM": 625,
   "EVIDENCE_RECORD": 3
