@@ -7,6 +7,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import evidence_sufficiency
 import intent_classifier
 import query_parser
 import retriever
@@ -14,15 +15,20 @@ import scope_parser
 
 
 def ask(question_text, mode):
-    """PHASE A+B: query 정규화 -> intent 분류 -> scope 추출 -> retrieval(FACT/EVENT/CHANGE
-    + provenance). Context Pack/Claude 호출은 이후 Phase에서 추가된다(섹션 60, 아직 미구현) -
-    지금은 RETRIEVE 모드와 동일하게 항상 retrieval-only 결과만 반환한다(Claude=0)."""
+    """PHASE A+B+C: query 정규화 -> intent 분류 -> scope 추출 -> retrieval(FACT/EVENT/CHANGE
+    + provenance) -> evidence sufficiency/claim ceiling. Context Pack/Claude 호출은 이후
+    Phase에서 추가된다(섹션 60, 아직 미구현) - 지금은 항상 retrieval-only 결과만 반환한다
+    (Claude=0)."""
     now_iso = datetime.now(timezone.utc).isoformat()
     record = query_parser.parse_query(question_text, mode, now_iso)
     record["intent"] = intent_classifier.classify_intent(record["normalized_text"])
     record["scope"] = scope_parser.extract_scope(question_text)
     retrieval = retriever.retrieve(record["intent"], record["scope"])
     record["retrieval"] = retrieval
+    # 이 corpus엔 아직 COUNTER_EVIDENCE 객체가 없다(Stage 6 readiness: 0건, 정직한 결과) -
+    # 있는 척 만들어내지 않는다.
+    record["evidence_sufficiency"] = evidence_sufficiency.assess(
+        retrieval["results"], record["intent"], counter_evidence_results=[])
     return record
 
 
