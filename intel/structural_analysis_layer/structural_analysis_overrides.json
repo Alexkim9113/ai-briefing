@@ -1,0 +1,9 @@
+{
+  "drivers": {"human_confirmed": [], "human_rejected": []},
+  "dependencies": {"human_confirmed": [], "human_rejected": []},
+  "controls": {"human_confirmed": [], "human_rejected": []},
+  "power_shifts": {"human_confirmed": [], "human_rejected": []},
+  "value_shifts": {"human_confirmed": [], "human_rejected": []},
+  "scarcity_shifts": {"human_confirmed": [], "human_rejected": []},
+  "bottlenecks": {"human_confirmed": [], "human_rejected": []}
+}

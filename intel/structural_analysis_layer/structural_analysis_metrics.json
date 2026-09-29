@@ -1,0 +1,17 @@
+{
+ "input_active_structural_changes": 0,
+ "input_evidence_records": 0,
+ "drivers_total": 0,
+ "dependencies_total": 0,
+ "controls_total": 0,
+ "power_shifts_total": 0,
+ "value_shifts_total": 0,
+ "scarcity_shifts_total": 0,
+ "bottlenecks_total": 0,
+ "structural_analyses_total": 0,
+ "drivers_by_status": {},
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

@@ -1,0 +1,28 @@
+{
+ "supports_weekly_queries": [
+  "NEW_DRIVERS",
+  "NEW_DEPENDENCIES",
+  "NEW_BOTTLENECKS",
+  "POWER_SHIFTS",
+  "VALUE_SHIFTS",
+  "SCARCITY_SHIFTS",
+  "CONTROL_CONCENTRATION",
+  "DEPENDENCY_EXPANSION",
+  "STRUCTURAL_CONTRADICTIONS"
+ ],
+ "supports_ask_metaxis_queries": [
+  "dimensions",
+  "from_state",
+  "to_state",
+  "time",
+  "domains",
+  "event_types",
+  "entities",
+  "institutions",
+  "resources"
+ ],
+ "obsidian_export_ready_ids": true,
+ "contradiction_uncertainty_generated": false,
+ "scenario_generated": false,
+ "policy_recommendation_generated": false
+}
