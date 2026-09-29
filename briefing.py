@@ -299,6 +299,55 @@ def is_ai_related(item, keywords, title_only=False, strict=False):
     return _kw_count(clean_text(item["desc"])[:600].lower(), keywords) >= (2 if strict else 1)
 
 
+# SOURCE INTELLIGENCE remediation (item 2): SHADOW-ONLY AI relevance 비교 배선.
+# source_intelligence/ai_relevance.py의 assess_ai_relevance()를 is_ai_related()의 실제
+# KEEP/DROP 판정 옆에서 "그림자"로만 돌려 비교 기록을 남긴다 - site 출력, KEEP/DROP
+# 결정, DB/production 상태 그 무엇도 이 값이 바꾸지 않는다(REMEDIATION 지시사항의 핵심
+# 제약). source_intelligence는 자체 schema.py를 갖고 있어 evidence_pipeline/pipeline.py와
+# 이름이 충돌하므로 bare sys.path.insert 대신 동일한 importlib 격리 패턴을 쓴다.
+import importlib.util as _si_ilu  # noqa: E402
+
+AI_RELEVANCE_SHADOW_LOG = DATA_DIR / "meta" / "ai_relevance_shadow.jsonl"
+
+
+def _load_ai_relevance_module():
+    key = "_si_for_briefing__ai_relevance"
+    if key in sys.modules:
+        return sys.modules[key]
+    path = ROOT / "intel" / "source_intelligence" / "ai_relevance.py"
+    spec = _si_ilu.spec_from_file_location(key, path)
+    mod = _si_ilu.module_from_spec(spec)
+    sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def shadow_log_ai_relevance(item, keywords, existing_ai_result, strict=False):
+    """item 2: KEEP/DROP·site 출력에 아무 영향 없는 순수 로깅. 실패해도 절대 브리핑
+    생성을 막지 않는다(그래서 통째로 try/except - 로깅 자체의 버그가 production을
+    깨는 일은 없어야 한다)."""
+    try:
+        mod = _load_ai_relevance_module()
+        title = item.get("title", "")
+        summary = clean_text(item.get("desc", "")) or ""
+        result = mod.assess_ai_relevance(title, summary, keywords)
+        row = {
+            "document_id": item_id(item.get("link", ""), title),
+            "title": title,
+            "existing_ai_result": bool(existing_ai_result),
+            "new_ai_relevance": result.get("status"),
+            "reason": result.get("reason"),
+            "ai_mention_count": result.get("ai_mention_count"),
+            "strict": bool(strict),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
+        AI_RELEVANCE_SHADOW_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with AI_RELEVANCE_SHADOW_LOG.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except Exception:
+        pass  # 그림자 로깅은 절대 production 흐름을 막지 않는다
+
+
 def norm_link(link):
     u = urllib.parse.urlsplit(link)
     q = [(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not k.lower().startswith("utm_")]
@@ -917,8 +966,12 @@ def make_item(src, it, keywords, now):
         d = now
     if src.get("keywords") and not is_ai_related(it, src["keywords"], src.get("title_only")):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
-    if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only"), strict=bool(src.get("require_ai"))):
-        return None
+    if src.get("filter") or src.get("require_ai"):
+        _strict = bool(src.get("require_ai"))
+        _existing_ai = is_ai_related(it, keywords, src.get("title_only"), strict=_strict)
+        shadow_log_ai_relevance(it, keywords, _existing_ai, strict=_strict)  # item 2: SHADOW ONLY, 결정에 영향 없음
+        if not _existing_ai:
+            return None
     if classify_noise(title, it.get("desc", ""))["decision"] == "DROP":
         return None  # 확실한 증권가 시황·홍보·행사 공지·채용 공고: Gemini까지 보내기 전에 제거(비용 0, 품질 개선)
     if src.get("url", "").startswith("https://news.google.com"):
