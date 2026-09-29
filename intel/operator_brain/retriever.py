@@ -39,10 +39,16 @@ def retrieve(intent, scope, note_type_filter=None, limit=20):
         candidates += adapter.filter_index(index, concept=concept)
 
     if not matched_any_filter:
-        # scope 신호가 없으면 intent가 실제로 의미 있는 note_type으로 제한한 broad recall.
-        # 그 매핑도 없는 intent(GENERAL_SYNTHESIS/UNKNOWN 등)만 index 전체를 본다.
-        allowed_types = _INTENT_NOTE_TYPES.get(intent)
-        candidates = [c for c in index if c["note_type"] in allowed_types] if allowed_types else list(index)
+        if intent == "UNKNOWN":
+            # 섹션 0(Te CONTINUE) CORE RULE: NO EVIDENCE != FILL WITH SOMETHING. intent조차
+            # 못 알아낸 질문에 scope 신호까지 없으면 아무 근거도 없이 index 전체를 "관련
+            # 있다"고 우기지 않는다 - 정직하게 0건.
+            candidates = []
+        else:
+            # intent는 알지만(예: GENERAL_SYNTHESIS, "최근 Policy 변화는?") scope로 좁힐
+            # 신호가 없는 경우 - intent가 의미 있는 note_type으로 제한한 broad recall.
+            allowed_types = _INTENT_NOTE_TYPES.get(intent)
+            candidates = [c for c in index if c["note_type"] in allowed_types] if allowed_types else list(index)
 
     if intent == "COUNTER_EVIDENCE_SEARCH":
         # counter_evidence_ids가 실제로 있는 note만 - 없으면(현재 corpus 전부 그렇다) 0건이

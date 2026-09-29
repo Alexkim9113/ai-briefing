@@ -26,6 +26,15 @@ def test_ask_metaxis_no_result_question_reports_insufficient_not_silent():
     assert "NO RESULT" in result["answer_text"] or result["structured_response"]["evidence_sufficiency"]
 
 
+def test_unknown_intent_with_no_scope_never_guesses_broad_recall():
+    # Te CONTINUE 섹션 0 CORE RULE: NO EVIDENCE != FILL WITH SOMETHING. intent도 못 알아낸
+    # 질문에 scope 신호까지 없으면 index 전체를 "관련 있다"고 우기지 않고 정직하게 0건.
+    result = ask_metaxis("완전히 무관한 점심 메뉴 추천")
+    assert result["query_record"]["intent"] == "UNKNOWN"
+    assert len(result["query_record"]["retrieval"]["results"]) == 0
+    assert result["structured_response"]["evidence_sufficiency"] == "INSUFFICIENT_EVIDENCE"
+
+
 def test_ask_metaxis_citation_guard_fact_ids_match_answer_text():
     result = ask_metaxis("최근 AI Agent 관련 중요한 Event는?")
     for fid in result["structured_response"]["used_fact_ids"]:
