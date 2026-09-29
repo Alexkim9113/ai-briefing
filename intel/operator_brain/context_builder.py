@@ -30,6 +30,7 @@ def build_context_pack(query_record, retrieval, sufficiency):
     })
 
     pack["claim_ceiling"] = sufficiency.get("claim_ceiling")
+    pack["interpretation_ceiling"] = sufficiency.get("interpretation_ceiling")
     pack["metrics"] = {
         "evidence_sufficiency": sufficiency.get("state"),
         "supporting_evidence_count": len(retrieval["results"]),

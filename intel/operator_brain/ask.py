@@ -93,6 +93,7 @@ def ask_metaxis(question_text, mode="RETRIEVE", client_factory=None):
     structured["used_change_ids"] = [c["note_id"] for c in record["context_pack"]["observed_changes"]]
     structured["used_source_ids"] = record["context_pack"]["source_references"]
     structured["claim_ceiling"] = record["evidence_sufficiency"]["claim_ceiling"]
+    structured["interpretation_ceiling"] = record["evidence_sufficiency"].get("interpretation_ceiling")
     structured["evidence_sufficiency"] = record["evidence_sufficiency"]["state"]
     structured["context_hash"] = record["context_hash"]
     structured["model"] = model_for_mode(mode) if claude_used else None
