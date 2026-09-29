@@ -1,0 +1,28 @@
+{
+ "supports_weekly_queries": [
+  "NEW_STRUCTURAL_CHANGES",
+  "STRENGTHENING_STRUCTURAL_CHANGES",
+  "WEAKENING_STRUCTURAL_CHANGES",
+  "REVERSALS",
+  "NEW_COUNTER_EVIDENCE",
+  "CONFIDENCE_CHANGES",
+  "VIEW_REVISIONS"
+ ],
+ "supports_operator_queries": [
+  "dimensions",
+  "from_state",
+  "to_state",
+  "time",
+  "domains",
+  "event_types",
+  "entities",
+  "institutions",
+  "resources"
+ ],
+ "supports_futures_chain": "STRUCTURAL_CHANGE -> DRIVER (not implemented this phase)",
+ "driver_generated": false,
+ "uncertainty_generated": false,
+ "scenario_generated": false,
+ "second_order_effects_generated": false,
+ "historical_analogies_generated": false
+}
