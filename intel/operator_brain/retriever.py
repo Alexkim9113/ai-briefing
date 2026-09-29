@@ -8,6 +8,22 @@ import reranker
 from retrieval_planner import plan_retrieval
 
 
+# 실제 corpus pilot(섹션 63)에서 발견한 문제 수정: scope 신호가 전혀 없을 때 intent를
+# 무시하고 index 전체를 반환하면, 예를 들어 COUNTER_EVIDENCE_SEARCH 질문이 아무 관련 없는
+# FACT/EVENT 20건을 "결과"로 돌려줘서 실제로는 0건이라는 사실을 숨기게 된다(섹션 63
+# 리뷰 기준: FALSE CONNECTION / MISSING IMPORTANT EVIDENCE). intent가 특정 note_type만
+# 의미 있게 다루는 경우 broad recall도 그 note_type으로 제한한다 - "모르면 전체 반환"이
+# 아니라 "모르면 intent가 말이 되는 범위로 제한 후 0건이면 정직하게 0건".
+_INTENT_NOTE_TYPES = {
+    "FACT_LOOKUP": ("FACT",),
+    "EVENT_LOOKUP": ("EVENT",),
+    "CHANGE_ANALYSIS": ("EVENT", "CHANGE"),
+    "TREND_ANALYSIS": ("CHANGE",),
+    "COUNTER_EVIDENCE_SEARCH": ("FACT", "EVENT", "CHANGE"),  # 아래에서 추가로 필터링
+    "HYPOTHESIS_TEST": ("FACT", "EVENT", "CHANGE"),
+}
+
+
 def retrieve(intent, scope, note_type_filter=None, limit=20):
     plan = plan_retrieval(intent)
     notes = adapter.load_notes()
@@ -23,8 +39,15 @@ def retrieve(intent, scope, note_type_filter=None, limit=20):
         candidates += adapter.filter_index(index, concept=concept)
 
     if not matched_any_filter:
-        # scope 신호가 전혀 없으면 intent가 허용하는 note_type 전체를 broad recall.
-        candidates = list(index)
+        # scope 신호가 없으면 intent가 실제로 의미 있는 note_type으로 제한한 broad recall.
+        # 그 매핑도 없는 intent(GENERAL_SYNTHESIS/UNKNOWN 등)만 index 전체를 본다.
+        allowed_types = _INTENT_NOTE_TYPES.get(intent)
+        candidates = [c for c in index if c["note_type"] in allowed_types] if allowed_types else list(index)
+
+    if intent == "COUNTER_EVIDENCE_SEARCH":
+        # counter_evidence_ids가 실제로 있는 note만 - 없으면(현재 corpus 전부 그렇다) 0건이
+        # 맞다(Stage 6 readiness: 실전 Counter Evidence 0건, 정직한 결과이지 결함이 아님).
+        candidates = [c for c in candidates if notes.get(c["note_id"], {}).get("counter_evidence_ids")]
 
     if note_type_filter:
         candidates = [c for c in candidates if c["note_type"] in note_type_filter]
