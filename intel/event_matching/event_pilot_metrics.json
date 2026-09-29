@@ -1,0 +1,35 @@
+{
+ "gold_set_size": 21,
+ "old_engine": {
+  "true_positives": 1,
+  "false_positives": 0,
+  "true_negatives": 11,
+  "false_negatives": 9,
+  "precision": 1.0,
+  "recall": 0.1
+ },
+ "new_pilot_confirmed_only": {
+  "true_positives": 4,
+  "false_positives": 0,
+  "true_negatives": 11,
+  "false_negatives": 6,
+  "precision": 1.0,
+  "recall": 0.4
+ },
+ "new_pilot_confirmed_or_candidate": {
+  "true_positives": 9,
+  "false_positives": 4,
+  "true_negatives": 7,
+  "false_negatives": 1,
+  "precision": 0.692,
+  "recall": 0.9
+ },
+ "shadow_run_documents": 525,
+ "shadow_run_confirmed_events": 26,
+ "shadow_run_confirmed_documents": 78,
+ "shadow_run_candidate_pairs": 1727,
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

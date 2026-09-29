@@ -1,0 +1,150 @@
+[
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "Seeing the unseen, coloring anime: How AI and physics are shaping the future of imaging, Q&A",
+  "b_source": "TechXplore AI",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "해운물류 분야 미래 인재들, 인공지능 기술 활용해 항만 현장 문제 해결",
+  "b_source": "서울Pn",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "Trimble: Taking Artificial Intelligence in Trucking Beyond Faster Tasks",
+  "b_source": "truckinginfo.com",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "AI labs' chat logs are the wrong ruler for UK jobs policy",
+  "b_source": "Resultsense",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "Transparency From AI Labs Is Key to a U.S.–China AI Agreement",
+  "b_source": "The Regulatory Review",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "AI companies investigating possible future of rights, protection for artificial intelligence agents",
+  "b_source": "Google News: AI regulation",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+  "b_source": "OpenAI",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+  "a_source": "AEI",
+  "b_title": "Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going",
+  "b_source": "The Decoder",
+  "score": 4.5,
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ]
+ },
+ {
+  "a_title": "Nvidia Adds $150 Billion to Massive Stock Buyback, the Largest Ever",
+  "a_source": "The New York Times",
+  "b_title": "[뉴욕증시] 국채 매도세 속 하락…엔비디아, 1.7% 상승",
+  "b_source": "파이낸셜뉴스",
+  "score": 6.0,
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ]
+ },
+ {
+  "a_title": "Nvidia Adds $150 Billion to Massive Stock Buyback, the Largest Ever",
+  "a_source": "The New York Times",
+  "b_title": "中, 1년만에 엔비디아 빗장 푼다… GPU 구매 승인 가닥",
+  "b_source": "동아일보",
+  "score": 6.0,
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ]
+ }
+]

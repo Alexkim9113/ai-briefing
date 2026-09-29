@@ -1,0 +1,222 @@
+[
+ {
+  "event_name": "엔비디아, 사상 최대 규모의 주식 환매에 1,500억 달러 추가",
+  "documents": [
+   {
+    "id": "003dea2169532db9",
+    "title": "Nvidia Adds $150 Billion to Massive Stock Buyback, the Largest Ever",
+    "source": "The New York Times"
+   },
+   {
+    "id": "57dbd0f7c4aa58cd",
+    "title": "젠슨 황 “역사상 최대 AI 인프라 구축 시작…韓과 ‘지능공장’ 짓는다”",
+    "source": "이데일리"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "대신證 \"LG전자, 가전아닌 로봇·AI주로 봐야…목표가 12.5%↑\"",
+  "documents": [
+   {
+    "id": "01c3e8f27fbd8406",
+    "title": "대신證 \"LG전자, 가전아닌 로봇·AI주로 봐야…목표가 12.5%↑\"",
+    "source": "뉴스1"
+   },
+   {
+    "id": "1e258d51319b94bf",
+    "title": "\"LG전자, 하반기 AI데이터센터 공조 최대 3조원 수주\" 대신證",
+    "source": "파이낸셜뉴스"
+   },
+   {
+    "id": "4f20354442be35fe",
+    "title": "LG전자, 데이터센터 냉각 넘어 '설계·구축·운영'까지…AI 인프라 파트너로",
+    "source": "데일리안"
+   },
+   {
+    "id": "af55192d35ffee3b",
+    "title": "“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’ 승부수",
+    "source": "매일경제"
+   },
+   {
+    "id": "fbafabe17015a664",
+    "title": "\"AI DC 구축기간·투자부담 줄인다\"…LG전자, 모듈형 냉각 기술력 공개",
+    "source": "뉴시스"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "메타 AI 글래스에 네이버지도 연동… “음성으로 길 안내 받는다” - 조선비즈",
+  "documents": [
+   {
+    "id": "0570e4ca485cbe49",
+    "title": "메타 AI 글래스에 네이버지도 연동… “음성으로 길 안내 받는다” - 조선비즈",
+    "source": "Chosunbiz"
+   },
+   {
+    "id": "626a1a31b56e8ec9",
+    "title": "메타 AI안경으로 네이버 길찾기 된다",
+    "source": "매일경제"
+   },
+   {
+    "id": "e201ae42e96f2746",
+    "title": "인공지능 안경 도보 안내 시대, 네이버와 메타의 결합",
+    "source": "2news.co.kr"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "“AI로 10억명 죽을 수도”…트럼프, ‘속도조절론’ 아모데이와 담판",
+  "documents": [
+   {
+    "id": "13b2ecb05be9b676",
+    "title": "“AI로 10억명 죽을 수도”…트럼프, ‘속도조절론’ 아모데이와 담판",
+    "source": "에너지경제신문"
+   },
+   {
+    "id": "39318c552e3132ec",
+    "title": "트럼프, AI 기업 수장들과 회동…속도조절론 이견 봉합하나",
+    "source": "파이낸셜뉴스"
+   },
+   {
+    "id": "651ced999ded9424",
+    "title": "Trump confirms meeting with Anthropic's Amodei, repeats dismissal of AI fears",
+    "source": "Google News: AI regulation"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "中, 1년만에 엔비디아 빗장 푼다… GPU 구매 승인 가닥",
+  "documents": [
+   {
+    "id": "1cf7a4f18314cfa2",
+    "title": "中, 1년만에 엔비디아 빗장 푼다… GPU 구매 승인 가닥",
+    "source": "동아일보"
+   },
+   {
+    "id": "787b62a3a5306ff0",
+    "title": "중국 ‘AI 쇄국정책’ 결국 접었다…엔비디아 최신칩 1년만에 수입허용",
+    "source": "v.daum.net"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "호주는 Medicare 위반 후 OpenAI, Anthropic CEO에게 상원 AI 조사 요청",
+  "documents": [
+   {
+    "id": "25428a889e4e17d3",
+    "title": "Australia calls OpenAI, Anthropic CEOs to Senate AI inquiry after Medicare breach",
+    "source": "Google News: AI regulation"
+   },
+   {
+    "id": "452cfc6087a1ac77",
+    "title": "호주 상원, 오픈AI·앤스로픽 CEO 출석 요구…AI 규제 논의 확대",
+    "source": "구글뉴스: AI 정책"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "삼성SDI, 3분기 실적 기대감 '쑥'…내년 영업익 1조 보인다",
+  "documents": [
+   {
+    "id": "29f9b767f0c23a89",
+    "title": "삼성SDI, 3분기 실적 기대감 '쑥'…내년 영업익 1조 보인다",
+    "source": "뉴시스"
+   },
+   {
+    "id": "a6a4027d9878143d",
+    "title": "삼성SDI, 'DCWA 2026'서 AI 데이터센터용 배터리솔루션 공개",
+    "source": "이데일리"
+   },
+   {
+    "id": "e97fa667cee7e431",
+    "title": "삼성SDI, 싱가포르 DCWA서 AI 데이터센터 정조준…‘원통형 LFP’ 첫선",
+    "source": "경향신문"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "오픈AI, 안전성 우려에 차세대 AI 모델 출시 철회 - 조선비즈",
+  "documents": [
+   {
+    "id": "2fa01e8819fd9906",
+    "title": "오픈AI, 안전성 우려에 차세대 AI 모델 출시 철회 - 조선비즈",
+    "source": "Chosunbiz"
+   },
+   {
+    "id": "309d3a4f83f0a017",
+    "title": "Florida invokes extinction fears in legal bid to halt OpenAI development",
+    "source": "Ars Technica AI"
+   },
+   {
+    "id": "499b5712c021b4e7",
+    "title": "The Week Ahead in AI: OpenAI Halts Training, Amodei Dines with Trump, China Considering Nvidia Chip Greenlight, Plus Micron Earnings & Upcoming Events",
+    "source": "AI Insider"
+   },
+   {
+    "id": "6ba7417936458e58",
+    "title": "OpenAI Says It Will Not Release Newest Astra A.I. Model Over Safety Concerns",
+    "source": "The New York Times"
+   },
+   {
+    "id": "8d36a93d57a1921a",
+    "title": "OpenAI abandons plan to release upcoming model as safety concerns escalate",
+    "source": "CNBC"
+   },
+   {
+    "id": "905fba6e1f01d1ac",
+    "title": "\"사용자 기만적 행동\"…오픈AI, GPT-6.1 출시 보류",
+    "source": "마켓인"
+   },
+   {
+    "id": "dcd4b5a345a64a9b",
+    "title": "OpenAI halts frontier-model training amid string of agent misalignment incidents",
+    "source": "Ars Technica AI"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "OpenAI는 자사 모델이 새로운 모델의 잘못된 행동 공개를 위해 미국 정부 웹사이트와 협력했다고 밝혔습니다.",
+  "documents": [
+   {
+    "id": "2fb8820ccff50440",
+    "title": "OpenAI says its models engaged with US government websites in new model misbehavior disclosure",
+    "source": "Google News: AI regulation"
+   },
+   {
+    "id": "4d987bc13622185d",
+    "title": "OpenAI still doesn’t seem to have a handle on all of its rogue AI activity",
+    "source": "TechCrunch AI"
+   }
+  ],
+  "status": "CONFIRMED"
+ },
+ {
+  "event_name": "트럼프 \"중국만 좋아할 역겨운 AI 음모론\"…교황 정면 반박",
+  "documents": [
+   {
+    "id": "357fe251fe22eff2",
+    "title": "트럼프 \"중국만 좋아할 역겨운 AI 음모론\"…교황 정면 반박",
+    "source": "한국경제"
+   },
+   {
+    "id": "55148847538c1fbd",
+    "title": "Contradicting Trump, Pope Leo says artificial intelligence safety concerns not 'fake news'",
+    "source": "Stamford Advocate"
+   },
+   {
+    "id": "663a777ff2b4ac30",
+    "title": "빌 게이츠 “10억명 죽일 수도” 경고… 트럼프 ‘AI 규제 사기론’ 정면 반박",
+    "source": "구글뉴스: AI 정책"
+   }
+  ],
+  "status": "CONFIRMED"
+ }
+]
