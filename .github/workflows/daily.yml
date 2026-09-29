@@ -100,3 +100,41 @@ jobs:
           git add -A
           git commit -q -m "사이트 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+
+  # PRODUCTION EVIDENCE SUPPLY v1.0 SUBSTEP G/H(운영자 승인 2026-09-29). Evidence Pipeline을
+  # 완전히 분리된 job으로 SHADOW 실행한다 — build job과 독립된 concurrency group을 써서
+  # build가 실패하거나 늦어져도 이 job이 그것 때문에 막히지 않고, 반대로 이 job이 실패해도
+  # (shadow_runner.py는 절대 exit 1로 끝나지 않지만, checkout/push 등 워크플로 자체 단계가
+  # 실패할 가능성까지 대비해 continue-on-error도 같이 건다) build/사이트 게시에는 전혀 영향이
+  # 없다(섹션 20: COLLECTION SUCCESS + PUBLIC SITE SUCCESS + EVIDENCE PIPELINE FAILURE 동시
+  # 가능해야 함). 이 job은 intel/ 아래 결과 파일만 커밋한다 — briefing.py/site/데이터 수집
+  # 파일은 전혀 건드리지 않는다.
+  evidence_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # build job이 방금 올린 최신 documents.json/evidence_pipeline 상태를 받는다
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Evidence Pipeline Shadow 실행(REPORTS_ON + Claim/Evidence/Gemini L3 라우팅)
+        continue-on-error: true   # 이 단계가 실패해도 job 자체는 계속 진행(커밋 단계까지 도달)
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+        run: python3 intel/evidence_supply/shadow_runner.py
+      - name: Evidence 결과 저장(intel/ 만, Public Site와 완전히 분리)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/
+          git diff --cached --quiet || git commit -m "Evidence Pipeline Shadow 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done

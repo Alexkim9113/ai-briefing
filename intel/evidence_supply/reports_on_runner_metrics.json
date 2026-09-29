@@ -1,0 +1,12 @@
+{
+ "documents_examined": 569,
+ "arxiv_primary_documents": 52,
+ "doi_primary_documents": 5,
+ "case_number_pattern_hits_unmatched": 0,
+ "reports_on_relationships_created": 0,
+ "identifier_candidates_reviewed": 3,
+ "self_references": 3,
+ "no_match": 0,
+ "matches": 0,
+ "note": "case_number 패턴은 인식되지만 corpus에 Court/Law Primary 문서 자체가 없어 실제 매칭은 0건이다 — 이는 결함이 아니라 Collection 단계의 한계(SUBSTEP D가 먼저 해결해야 할 부분)이며, 억지로 채우지 않았다."
+}

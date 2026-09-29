@@ -1,0 +1,72 @@
+[
+ {
+  "candidate_id": "cand_eu_commission_ai",
+  "canonical_name": "European Commission (Digital strategy / AI policy)",
+  "official_domain": "digital-strategy.ec.europa.eu",
+  "source_type": "GOVERNMENT",
+  "country": "EU",
+  "jurisdiction": "European Union",
+  "institution_type": "EXECUTIVE_BRANCH",
+  "candidate_document_types": ["POLICY", "REGULATION", "OFFICIAL_REPORT"],
+  "feed_url_candidate": "https://digital-strategy.ec.europa.eu/en/rss.xml",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "This session's outbound network is fully blocked to all external hosts (confirmed via curl against whitehouse.gov, ec.europa.eu, un.org, congress.gov, courtlistener.com, law.go.kr, gov.kr, kcc.go.kr - all returned 'CONNECT tunnel failed, response 403'). This entry is NOT registered into sources.json and must not be treated as an active collection source until verify_source_candidates.py confirms it with a real fetcher (in an environment with outbound access, e.g. the GitHub Actions runner)."
+ },
+ {
+  "candidate_id": "cand_us_ftc_ai",
+  "canonical_name": "U.S. Federal Trade Commission",
+  "official_domain": "ftc.gov",
+  "source_type": "REGULATOR",
+  "country": "US",
+  "jurisdiction": "United States (federal)",
+  "institution_type": "INDEPENDENT_AGENCY",
+  "candidate_document_types": ["ENFORCEMENT_ACTION", "GUIDANCE", "OFFICIAL_REPORT"],
+  "feed_url_candidate": "https://www.ftc.gov/feeds/press-release.xml",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "Same network constraint as cand_eu_commission_ai. Not registered into sources.json."
+ },
+ {
+  "candidate_id": "cand_kr_pipc_ai",
+  "canonical_name": "개인정보보호위원회 (Personal Information Protection Commission, Korea)",
+  "official_domain": "pipc.go.kr",
+  "source_type": "REGULATOR",
+  "country": "KR",
+  "jurisdiction": "Republic of Korea",
+  "institution_type": "INDEPENDENT_AGENCY",
+  "candidate_document_types": ["POLICY", "GUIDANCE", "ENFORCEMENT_ACTION"],
+  "feed_url_candidate": "https://www.pipc.go.kr/np/rss/RSS.do",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "Same network constraint. Not registered into sources.json. METAXIS covers Korean AI news; PIPC issues real AI-relevant guidance (e.g. AI/personal-data processing standards), making it a directly relevant regulator candidate for a small pilot."
+ },
+ {
+  "candidate_id": "cand_us_congress_bills",
+  "canonical_name": "U.S. Congress (Congress.gov, AI-related bills)",
+  "official_domain": "congress.gov",
+  "source_type": "LEGISLATURE",
+  "country": "US",
+  "jurisdiction": "United States (federal)",
+  "institution_type": "LEGISLATIVE_BRANCH",
+  "candidate_document_types": ["BILL", "LEGISLATIVE_RECORD"],
+  "feed_url_candidate": "https://www.congress.gov/rss/most-viewed-bills.xml",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "Same network constraint. Not registered into sources.json. Feed candidate is generic ('most viewed bills'), not AI-filtered - if verified reachable, still needs a query/filter step before being usable (e.g. congress.gov's search RSS with an AI keyword query), which is a separate follow-up, not assumed here."
+ },
+ {
+  "candidate_id": "cand_us_courtlistener",
+  "canonical_name": "CourtListener (Free Law Project - US federal/state court opinions)",
+  "official_domain": "courtlistener.com",
+  "source_type": "COURT",
+  "country": "US",
+  "jurisdiction": "United States",
+  "institution_type": "JUDICIAL_RECORDS_AGGREGATOR",
+  "candidate_document_types": ["JUDGMENT", "OPINION", "DOCKET"],
+  "feed_url_candidate": "https://www.courtlistener.com/feed/",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "CourtListener aggregates real court opinions and is not itself a court, so source_type/institution_type here mark it as an aggregator, not the court of record - individual opinions still carry their own court/jurisdiction/case_number once fetched. Same network constraint; not registered into sources.json."
+ }
+]

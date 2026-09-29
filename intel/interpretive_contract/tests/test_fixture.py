@@ -609,6 +609,16 @@ def test_68_regression_zero():
         # 원칙의 신규 모듈이므로 같은 예외를 적용한다 — 기존 파일 수정이 아니라 새 파일만.
         if "evidence_supply" in path and status in ("??", "M"):
             continue
+        # SUBSTEP F(Te 2026-09-29 승인): intel/relationships.json은 evidence_pipeline이
+        # 실제로 읽는 지정된 연동 지점이라 이 Phase의 의도된 산출물이다(회귀가 아니라
+        # 목적) — reports_on_runner.py가 실제 전체 corpus에 대해 계산한 결과로만 바뀐다.
+        if path == "intel/relationships.json" and status == "M":
+            continue
+        # SUBSTEP G/H(Te 2026-09-29 승인): daily.yml에 evidence_shadow job을 추가한 것은
+        # 이 Phase가 명시적으로 승인받은 변경이다(기존 build job/단계는 한 줄도 건드리지
+        # 않음 — 새 job 추가만).
+        if path == ".github/workflows/daily.yml" and status == "M":
+            continue
         if status == "M" and str(EV_DIR.relative_to(REPO_ROOT)) in path and path.endswith(".json") \
                 and _diff_is_timestamp_only(REPO_ROOT / path):
             continue
@@ -640,11 +650,14 @@ def test_70_policy_primary_pending_root_cause_documented():
 
 
 def test_71_gemini_level3_cron_wiring_documented():
+    # PRODUCTION EVIDENCE SUPPLY v1.0 SUBSTEP G/H(Te 2026-09-29 승인)로 evidence_pipeline이
+    # daily.yml의 evidence_shadow job에 실제로 연결됐다 — 이 테스트가 의도대로 상태 변화를
+    # 감지해 실패했으므로(살아있는 회귀 테스트가 제 역할을 한 것), 새 실제 상태로 갱신한다.
+    # note는 이제 "미연결"이 아니라 wired=True일 때의 설명으로 바뀌므로 더 이상 요구하지 않는다.
     watch = pvw.compute_validation_watch()
     g = watch["gemini_level3"]
-    assert g["evidence_pipeline_wired_into_daily_cron"] is False, \
-        "evidence_pipeline이 cron에 연결되면 이 테스트가 실패해야 한다(상태 변화 감지용)"
-    assert g["note"] is not None
+    assert g["evidence_pipeline_wired_into_daily_cron"] is True, \
+        "daily.yml의 evidence_shadow job이 사라지면 이 테스트가 실패해야 한다(상태 변화 감지용)"
 
 
 ALL_TESTS = [

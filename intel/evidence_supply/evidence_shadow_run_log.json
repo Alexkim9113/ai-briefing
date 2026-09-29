@@ -1,0 +1,78 @@
+{
+ "error": null,
+ "gemini_call_budget": 15,
+ "gemini_enabled": false,
+ "pipeline_metrics": {
+  "claims_by_status": {
+   "INSUFFICIENT_SOURCE": 247,
+   "SECONDARY_ONLY": 213,
+   "SOURCE_LOCATED": 57,
+   "SUMMARY_DERIVED": 111
+  },
+  "claims_by_type": {
+   "COMPANY_REPORTED": 40,
+   "COURT_FINDING": 1,
+   "MEASURED": 12,
+   "MEDIA_REPORTED": 518,
+   "RESEARCH_FINDING": 57
+  },
+  "claims_extracted": 628,
+  "claude_calls_added": 0,
+  "counter_evidence_pairs": 0,
+  "documents_examined": 569,
+  "embedding_calls": 0,
+  "evidence_by_type": {
+   "BOTTLENECK": 3,
+   "DRIVER": 1
+  },
+  "evidence_records": 4,
+  "external_api_calls": 0,
+  "facts_verified": 57,
+  "gemini_cache_hits": 0,
+  "gemini_calls_added": 0,
+  "human_review_by_priority": {
+   "HIGH": 5,
+   "LOW": 530,
+   "MEDIUM": 97
+  },
+  "human_review_pending": 632,
+  "independence_overall": {
+   "independent_document_count": 569,
+   "independent_source_count": 255,
+   "raw_document_count": 569,
+   "syndication_collapsed": 0
+  },
+  "interpretation_candidates": 4,
+  "level3_flagged_documents": 235,
+  "lineage_stopped_at_distribution": {
+   "CLAIM": 624,
+   "EVENT": 1,
+   "EVIDENCE_RECORD": 3
+  },
+  "primary_sources_resolved": 57,
+  "secondary_only_claims": 571,
+  "source_verified_claims": 0,
+  "structural_evidence_input_records": 0,
+  "structural_evidence_input_skip_stats": {
+   "active_structural_changes": 0,
+   "skipped_no_active_structural_change_match": 3,
+   "skipped_rejected_or_contradictory": 1
+  }
+ },
+ "public_site_impact": 0,
+ "reports_on_run": {
+  "arxiv_primary_documents": 52,
+  "case_number_pattern_hits_unmatched": 0,
+  "documents_examined": 569,
+  "doi_primary_documents": 5,
+  "identifier_candidates_reviewed": 3,
+  "matches": 0,
+  "no_match": 0,
+  "note": "case_number 패턴은 인식되지만 corpus에 Court/Law Primary 문서 자체가 없어 실제 매칭은 0건이다 — 이는 결함이 아니라 Collection 단계의 한계(SUBSTEP D가 먼저 해결해야 할 부분)이며, 억지로 채우지 않았다.",
+  "reports_on_relationships_created": 0,
+  "self_references": 3
+ },
+ "run_at": "2026-09-29T11:39:50.945271+00:00",
+ "shadow_mode": true,
+ "status": "SUCCESS"
+}
