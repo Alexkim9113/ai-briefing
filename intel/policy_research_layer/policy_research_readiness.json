@@ -1,0 +1,85 @@
+{
+ "supports_weekly_queries": [
+  "NEW_POLICY_QUESTIONS",
+  "NEW_POLICY_OPTIONS",
+  "NEW_TRADEOFFS",
+  "NEW_STAKEHOLDER_IMPACTS",
+  "NEW_POLICY_CONSTRAINTS",
+  "NEW_RESEARCH_QUESTIONS",
+  "NEW_RESEARCH_GAPS",
+  "NEW_EVIDENCE_NEEDS",
+  "EVIDENCE_GAPS_FILLED",
+  "NEW_MONITORING_INDICATORS",
+  "POLICY_QUESTIONS_CHANGED",
+  "RESEARCH_QUESTIONS_RESOLVED",
+  "DECISION_POINTS_TO_WATCH"
+ ],
+ "supports_ask_metaxis_queries": [
+  "이 변화가 어떤 정책 문제를 만드는가?",
+  "선택지는 무엇인가?",
+  "어떤 선택이 누구에게 어떤 영향을 주나?",
+  "Trade-off는 무엇인가?",
+  "왜 지금 결정해야 하나?",
+  "정책 개입을 안 하면 어떤 경로인가?",
+  "무엇을 아직 모르는가?",
+  "어떤 연구가 필요한가?",
+  "무슨 데이터를 모아야 하나?",
+  "어떤 지표를 계속 봐야 하나?",
+  "이 정책 판단을 바꿀 Evidence는?"
+ ],
+ "decision_memo_ready": [
+  "DECISION_QUESTION",
+  "WHY_NOW",
+  "STRUCTURAL_CHANGE",
+  "FUTURES_PATHS",
+  "OPTIONS",
+  "TRADEOFFS",
+  "STAKEHOLDERS",
+  "CONSTRAINTS",
+  "UNCERTAINTIES",
+  "WHAT_WE_KNOW",
+  "WHAT_WE_DONT_KNOW",
+  "RESEARCH_QUESTIONS",
+  "EVIDENCE_NEEDED",
+  "WHAT_TO_MONITOR",
+  "WHAT_WOULD_CHANGE_OUR_VIEW"
+ ],
+ "research_agenda_ready": [
+  "QUESTION",
+  "WHY_IT_MATTERS",
+  "CURRENT_EVIDENCE",
+  "COUNTER_EVIDENCE",
+  "GAP",
+  "METHOD_NEEDED",
+  "DATA_NEEDED",
+  "POPULATION",
+  "GEOGRAPHY",
+  "TIME",
+  "POLICY_RELEVANCE",
+  "FALSIFIER",
+  "MONITORING_INDICATOR"
+ ],
+ "human_judgment_required_for": [
+  "PREFERRED_OPTION",
+  "POLICY_RECOMMENDATION",
+  "NORMATIVE_PRIORITY",
+  "POLITICAL_JUDGMENT",
+  "PUBLIC_RECOMMENDATION",
+  "FINAL_RESEARCH_THESIS"
+ ],
+ "stage5_completion_readiness": {
+  "chain_complete": [
+   "STRUCTURAL_CHANGE",
+   "STRUCTURAL_ANALYSIS",
+   "EPISTEMIC_CHECK",
+   "FUTURES_INTELLIGENCE",
+   "POLICY_RESEARCH_INTELLIGENCE"
+  ],
+  "architecture_debt": [
+   "EVIDENCE_EXTRACTION_INTERPRETATION_PIPELINE_NOT_YET_CONNECTED"
+  ]
+ },
+ "policy_recommendation_generated": false,
+ "research_finding_auto_evaluated": false,
+ "composite_policy_score_generated": false
+}

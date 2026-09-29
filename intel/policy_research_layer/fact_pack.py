@@ -1,0 +1,25 @@
+# PHASE 5G — Policy Research Fact Pack(운영자 지시 68번). 빈 배열/null 허용, LLM 미사용.
+def build_policy_research_fact_pack(assessment):
+    return {
+        "policy_research_assessment_id": assessment["policy_research_assessment_id"],
+        "futures_assessment_ids": assessment.get("futures_assessment_ids", []),
+        "structural_change_ids": assessment.get("structural_change_ids", []),
+        "policy_questions": assessment.get("policy_question_ids", []),
+        "policy_options": assessment.get("policy_option_ids", []),
+        "tradeoffs": assessment.get("tradeoff_ids", []),
+        "stakeholder_impacts": assessment.get("stakeholder_impact_ids", []),
+        "constraints": assessment.get("constraint_ids", []),
+        "policy_uncertainties": assessment.get("policy_uncertainty_ids", []),
+        "research_questions": assessment.get("research_question_ids", []),
+        "research_gaps": assessment.get("research_gap_ids", []),
+        "evidence_needs": assessment.get("evidence_need_ids", []),
+        "monitoring_indicators": assessment.get("monitoring_indicator_ids", []),
+        "supporting_evidence": [], "counter_evidence": assessment.get("counter_evidence_ids", []),
+        "contradictions": [], "tensions": [],
+        "uncertainties": assessment.get("uncertainty_ids", []),
+        "assumptions": assessment.get("assumption_ids", []),
+        "falsifiers": assessment.get("falsifier_ids", []),
+        "epistemic_ceiling": assessment.get("epistemic_ceiling"),
+        "domains": assessment.get("domains", []), "jurisdictions": assessment.get("jurisdictions", []),
+        "time_range": {"first_seen": None, "last_seen": None}, "lineage": [], "unknowns": [],
+    }

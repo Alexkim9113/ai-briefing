@@ -1,0 +1,13 @@
+{
+  "policy_questions": {"human_confirmed": [], "human_rejected": []},
+  "policy_options": {"human_confirmed": [], "human_rejected": []},
+  "policy_tradeoffs": {"human_confirmed": [], "human_rejected": []},
+  "stakeholder_impacts": {"human_confirmed": [], "human_rejected": []},
+  "policy_constraints": {"human_confirmed": [], "human_rejected": []},
+  "policy_uncertainties": {"human_confirmed": [], "human_rejected": []},
+  "research_questions": {"human_confirmed": [], "human_rejected": []},
+  "research_gaps": {"human_confirmed": [], "human_rejected": []},
+  "evidence_needs": {"human_confirmed": [], "human_rejected": []},
+  "monitoring_indicators": {"human_confirmed": [], "human_rejected": []},
+  "policy_research_assessments": {"human_confirmed": [], "human_rejected": []}
+}

@@ -1,0 +1,21 @@
+{
+ "input_structural_changes_with_futures_assessment": 0,
+ "input_evidence_records": 0,
+ "policy_questions_total": 0,
+ "policy_options_total": 0,
+ "policy_tradeoffs_total": 0,
+ "stakeholder_impacts_total": 0,
+ "policy_constraints_total": 0,
+ "policy_uncertainties_total": 0,
+ "research_questions_total": 0,
+ "research_gaps_total": 0,
+ "evidence_needs_total": 0,
+ "monitoring_indicators_total": 0,
+ "policy_research_assessments_total": 0,
+ "policy_options_by_type": {},
+ "policy_tradeoffs_by_status": {},
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}
