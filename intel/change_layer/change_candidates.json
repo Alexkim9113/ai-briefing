@@ -1,0 +1,35 @@
+[
+ {
+  "object_term": "아모데",
+  "supporting_event_ids": [
+   "evtprod_2fa01e8819fd9906",
+   "evtprod_d3180795a4560ed3"
+  ],
+  "entities": [
+   "OpenAI",
+   "Trump"
+  ],
+  "entity_diversity": 2,
+  "event_count": 2,
+  "direction": "CONTRACTING",
+  "fingerprint": {
+   "subject": [
+    "OpenAI",
+    "Trump"
+   ],
+   "direction": "CONTRACTING",
+   "object": "아모데",
+   "mechanism": [
+    "동향",
+    "만찬",
+    "방향"
+   ]
+  },
+  "first_seen": "2026-09-28",
+  "last_seen": "2026-09-29",
+  "event_types": [
+   "MODEL_RELEASE",
+   "REGULATORY_ACTION"
+  ]
+ }
+]

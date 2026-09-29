@@ -1,0 +1,15 @@
+{
+ "input_confirmed_events": 28,
+ "raw_candidate_groups": 1,
+ "changes_created": 1,
+ "changes_by_status": {
+  "REJECTED": 1
+ },
+ "changes_by_direction": {
+  "CONTRACTING": 1
+ },
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

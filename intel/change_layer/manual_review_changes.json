@@ -1,0 +1,14 @@
+[
+  {
+    "object_term": "아모데",
+    "classification": "FALSE_CONNECTION",
+    "reason": "'아모데'는 '아모데이(Amodei, Anthropic CEO)'가 mx_keywords 토큰화 과정에서 조사처럼 잘못 잘린 조각으로, 실제 공유된 OBJECT/MECHANISM이 아니다. 두 Event(OpenAI 모델 출시철회, Trump 규제 회동)가 우연히 이 인명 조각을 공유했을 뿐 실제로 같은 방향의 변화를 보여주지 않는다.",
+    "action": "change_overrides.json에서 HUMAN_REJECTED 처리."
+  },
+  {
+    "object_term": "아모데 (필터 이전 1차 실행)",
+    "classification": "FALSE_CONNECTION",
+    "reason": "1차 실행에서는 '자사'(Meta·OpenAI), '개발'(KAIST·Trump), '판매'(Meta·Nvidia)까지 총 4개 후보가 생성됐으나 전부 mx_keywords가 걸러내지 못한 초일반 업무동사/명사(개발/자사/판매)였다. 실제 방향성 있는 OBJECT가 아니라 흔한 낱말의 우연한 겹침(TOPIC조차 아닌 어휘 겹침).",
+    "action": "_TOO_GENERIC_FOR_CHANGE_OBJECT 필터 추가로 3건 제거, 나머지 1건은 위에서 별도 기각."
+  }
+]
