@@ -82,6 +82,26 @@ def _epi(modname):
     return _isolated_import([EPI_DIR], modname)
 
 
+import re as _re
+
+
+def _diff_is_timestamp_only(path):
+    """git diff에서 실제 내용이 바뀐 줄이 하나라도 있으면 False. created_at/updated_at
+    같은 타임스탬프 필드만 바뀐 경우(=Production Evidence Validation의 실제 재실행으로
+    생긴 정상적인 변화, 섹션 25 Idempotency)만 True로 허용한다."""
+    out = subprocess.run(["git", "diff", "--", str(path)], cwd=str(REPO_ROOT),
+                          capture_output=True, text=True, check=True).stdout
+    for line in out.splitlines():
+        if not (line.startswith("+") or line.startswith("-")):
+            continue
+        if line.startswith("+++") or line.startswith("---"):
+            continue
+        if _re.search(r'"(created_at|updated_at|queued_at)"\s*:', line):
+            continue
+        return False
+    return True
+
+
 def _git_status_short(paths):
     """레포 루트 기준 git status --short -- <paths>. 결과가 빈 문자열이면 해당 경로들에
     변경/추적되지 않은 파일이 전혀 없다는 뜻(이번 세션이 손대지 않았다는 회귀 증거)."""
@@ -462,9 +482,23 @@ def test_54_5a_5g_unchanged():
 
 
 def test_55_evidence_pipeline_unchanged_unless_minimal_extension():
+    # Production Evidence Validation 단계(섹션 25 Idempotency)에서 pipeline.py를 실제
+    # Production 데이터로 재실행했다 — 이때 M(수정)으로 뜨는 evidence_pipeline 산출물
+    # JSON은 created_at/updated_at 타임스탬프만 바뀐 것이어야 하고, 코드 파일(.py)은
+    # 단 한 줄도 바뀌면 안 된다(진짜 회귀 금지는 여전히 유효).
     out = _git_status_short([EV_DIR])
-    changed = [ln for ln in out.splitlines() if "__pycache__" not in ln]
-    assert changed == [], f"이번 세션에서 Evidence Pipeline 파일이 변경됨(금지): {changed}"
+    bad = []
+    for ln in out.splitlines():
+        if "__pycache__" in ln:
+            continue
+        status, path = ln[:2].strip(), ln[3:].strip()
+        if path.endswith(".py"):
+            bad.append(ln)
+            continue
+        if status == "M" and _diff_is_timestamp_only(REPO_ROOT / path):
+            continue
+        bad.append(ln)
+    assert bad == [], f"이번 세션에서 Evidence Pipeline에 타임스탬프 이상의 변경이 발생함(금지): {bad}"
 
 
 def test_56_public_unchanged():
@@ -544,7 +578,10 @@ def test_66_production_validation_pending_state_preserved():
         if key == "all_verified":
             assert isinstance(value, bool)
             continue
-        assert value["status"] in ("VERIFIED", "PENDING"), f"{key} 상태가 VERIFIED/PENDING이 아님: {value}"
+        assert value["status"] in pvw.STATUS_VALUES, f"{key} 상태가 허용된 어휘가 아님: {value}"
+        # 이번 Production Evidence Validation에서 실제 데이터로 확인한 결과 5개 전부 여전히
+        # PENDING이어야 한다(억지로 VERIFIED로 만들지 않았다는 회귀 확인, 섹션 2).
+        assert value["status"] == "PENDING", f"{key}가 PENDING이 아님 — 근거 없이 승격되었을 위험: {value}"
 
 
 def test_67_idempotency():
@@ -560,14 +597,50 @@ def test_68_regression_zero():
     for ln in out.splitlines():
         if "__pycache__" in ln:
             continue
-        status, _, path = ln.partition(" ")
-        # 새 파일(untracked, '??')은 interpretive_contract 아래일 때만 허용. 그 외 모든
-        # 상태 코드(M/A/D/R 등 — 기존 파일 수정/삭제/이동)는 전부 회귀로 간주한다.
-        path = path.strip()
-        if status.strip() == "??" and "interpretive_contract" in path:
+        status, path = ln[:2].strip(), ln[3:].strip()
+        # 허용되는 것: (1) interpretive_contract 아래 새 파일('??') 또는 이번 세션이 계속
+        # 다듬는 그 모듈 자신의 수정('M') — 이 계약 작업 자체의 산출물이므로. (2)
+        # evidence_pipeline 산출물 JSON의 M은 타임스탬프만 바뀐 경우(섹션 25 Idempotency
+        # 재실행)만. 그 외 모든 상태 코드(A/D/R, 5A-5G나 Public 파일 수정 등)는 전부
+        # 회귀로 간주한다.
+        if "interpretive_contract" in path and status in ("??", "M"):
+            continue
+        if status == "M" and str(EV_DIR.relative_to(REPO_ROOT)) in path and path.endswith(".json") \
+                and _diff_is_timestamp_only(REPO_ROOT / path):
             continue
         bad_lines.append(ln)
     assert bad_lines == [], f"이번 세션 밖 변경/기존 파일 수정이 감지됨(회귀): {bad_lines}"
+
+
+# ==========================================================================
+# 69-71 — PRODUCTION EVIDENCE VALIDATION & ACCUMULATION v1.0 신규 테스트.
+# 이번 Phase에서 실제 Production 데이터로 확인한 root cause 두 가지(Collection 단계의
+# 공식 도메인 부재/Google News 리다이렉트, evidence_pipeline의 cron 미연결)를 "말로만"
+# 보고하지 않고, 나중에 누군가 실제로 고쳤을 때 이 테스트가 스스로 틀려짐으로써 상태
+# 변화를 알려주도록 살아있는 회귀 테스트로 남긴다.
+# ==========================================================================
+
+def test_69_status_vocabulary_includes_failed_and_not_applicable():
+    assert set(pvw.STATUS_VALUES) == {"VERIFIED", "PENDING", "FAILED", "NOT_APPLICABLE"}
+
+
+def test_70_policy_primary_pending_root_cause_documented():
+    watch = pvw.compute_validation_watch()
+    diag = watch["policy_law_court_primary"]["diagnosis"]
+    assert diag["documents_examined"] > 0
+    # 현재 실제 데이터의 root cause: 공식 도메인 0건 + news.google.com 리다이렉트 다수.
+    # 이 값이 바뀌면(예: 공식 도메인이 수집되기 시작하면) 이 테스트가 실패하며 상태
+    # 변화를 알려야 한다 — 그때는 watch 자체의 VERIFIED 조건을 재검토해야 한다.
+    assert diag["official_domain_documents"] == 0
+    assert diag["google_news_redirect_documents"] > 0
+
+
+def test_71_gemini_level3_cron_wiring_documented():
+    watch = pvw.compute_validation_watch()
+    g = watch["gemini_level3"]
+    assert g["evidence_pipeline_wired_into_daily_cron"] is False, \
+        "evidence_pipeline이 cron에 연결되면 이 테스트가 실패해야 한다(상태 변화 감지용)"
+    assert g["note"] is not None
 
 
 ALL_TESTS = [
