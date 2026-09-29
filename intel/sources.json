@@ -6,7 +6,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_2news_co_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_404_media": {
   "aliases": [],
@@ -15,7 +15,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_404_media",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_9to5google": {
   "aliases": [],
@@ -24,7 +24,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_9to5google",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_9to5mac": {
   "aliases": [],
@@ -33,7 +33,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_9to5mac",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_aei": {
   "aliases": [],
@@ -42,7 +42,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_aei",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ai_insider": {
   "aliases": [],
@@ -51,7 +51,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ai_insider",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_aithority": {
   "aliases": [],
@@ -60,7 +60,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_aithority",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_aitimes_com": {
   "aliases": [],
@@ -69,7 +69,7 @@
   "domain": "aitimes.com",
   "language": null,
   "source_id": "src_aitimes_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_aitimes_kr": {
   "aliases": [],
@@ -78,7 +78,7 @@
   "domain": "aitimes.kr",
   "language": null,
   "source_id": "src_aitimes_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_amazon_web_services_aws": {
   "aliases": [],
@@ -87,7 +87,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_amazon_web_services_aws",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_anadolu_ajans": {
   "aliases": [],
@@ -96,7 +96,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_anadolu_ajans",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_android_police": {
   "aliases": [],
@@ -105,7 +105,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_android_police",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arc_advisory_group": {
   "aliases": [],
@@ -114,7 +114,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arc_advisory_group",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arstechnica_com": {
   "aliases": [],
@@ -123,7 +123,7 @@
   "domain": "arstechnica.com",
   "language": null,
   "source_id": "src_arstechnica_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_arxiv_cs_ai_ai_일반": {
   "aliases": [],
@@ -132,7 +132,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_ai_ai_일반",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_cs_cl_언어_llm": {
   "aliases": [],
@@ -141,7 +141,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_cl_언어_llm",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_cs_cy_법_윤리_정책": {
   "aliases": [],
@@ -150,7 +150,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_cy_법_윤리_정책",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_cs_ma_에이전트": {
   "aliases": [],
@@ -159,7 +159,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_ma_에이전트",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_cs_ro_로봇_피지컬_ai": {
   "aliases": [],
@@ -168,7 +168,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_ro_로봇_피지컬_ai",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_cs_si_사회_미디어": {
   "aliases": [],
@@ -177,7 +177,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_cs_si_사회_미디어",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_econ_gn_경제": {
   "aliases": [],
@@ -186,7 +186,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_econ_gn_경제",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_eess_sy_에너지_환경": {
   "aliases": [],
@@ -195,7 +195,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_eess_sy_에너지_환경",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_physics_soc_ph_사회": {
   "aliases": [],
@@ -204,7 +204,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_physics_soc_ph_사회",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_arxiv_음악_미디어_hci_문화_예술": {
   "aliases": [],
@@ -213,7 +213,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_arxiv_음악_미디어_hci_문화_예술",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_asce_library": {
   "aliases": [],
@@ -222,7 +222,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_asce_library",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_asiatoday_co_kr": {
   "aliases": [],
@@ -231,7 +231,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_asiatoday_co_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_axios": {
   "aliases": [],
@@ -240,7 +240,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_axios",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_bbntimes_com": {
   "aliases": [],
@@ -249,7 +249,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_bbntimes_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_biz_heraldcorp_com": {
   "aliases": [],
@@ -258,7 +258,7 @@
   "domain": "biz.heraldcorp.com",
   "language": null,
   "source_id": "src_biz_heraldcorp_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_blog_adafruit_com": {
   "aliases": [],
@@ -267,7 +267,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_blog_adafruit_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_blog_google": {
   "aliases": [],
@@ -276,7 +276,7 @@
   "domain": "blog.google",
   "language": null,
   "source_id": "src_blog_google",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_bosa_co_kr": {
   "aliases": [],
@@ -285,7 +285,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_bosa_co_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cambridge_day": {
   "aliases": [],
@@ -294,7 +294,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cambridge_day",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_carroll_broadcasting_company": {
   "aliases": [],
@@ -303,7 +303,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_carroll_broadcasting_company",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cbs_news": {
   "aliases": [],
@@ -312,7 +312,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cbs_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cfo_dive": {
   "aliases": [],
@@ -321,7 +321,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cfo_dive",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_chosun_com": {
   "aliases": [],
@@ -330,7 +330,7 @@
   "domain": "chosun.com",
   "language": null,
   "source_id": "src_chosun_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_chosunbiz": {
   "aliases": [],
@@ -339,7 +339,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_chosunbiz",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cloudflare_blog": {
   "aliases": [],
@@ -348,7 +348,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cloudflare_blog",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cnbc": {
   "aliases": [],
@@ -357,7 +357,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cnbc",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cnb뉴스": {
   "aliases": [],
@@ -366,7 +366,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cnb뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cnn": {
   "aliases": [],
@@ -375,7 +375,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cnn",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ct_mirror": {
   "aliases": [],
@@ -384,7 +384,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ct_mirror",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_cupnews_kr": {
   "aliases": [],
@@ -393,7 +393,7 @@
   "domain": "cupnews.kr",
   "language": null,
   "source_id": "src_cupnews_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_cureus": {
   "aliases": [],
@@ -402,7 +402,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_cureus",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_dailian_co_kr": {
   "aliases": [],
@@ -411,7 +411,7 @@
   "domain": "dailian.co.kr",
   "language": null,
   "source_id": "src_dailian_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_daily_nous": {
   "aliases": [],
@@ -420,7 +420,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_daily_nous",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_dallas_news": {
   "aliases": [],
@@ -429,7 +429,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_dallas_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_deepmind_google": {
   "aliases": [],
@@ -438,7 +438,7 @@
   "domain": "deepmind.google",
   "language": null,
   "source_id": "src_deepmind_google",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_defensescoop": {
   "aliases": [],
@@ -447,7 +447,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_defensescoop",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_donga_science": {
   "aliases": [],
@@ -456,7 +456,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_donga_science",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_down_to_earth": {
   "aliases": [],
@@ -465,7 +465,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_down_to_earth",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_dvidshub_net": {
   "aliases": [],
@@ -474,7 +474,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_dvidshub_net",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ebi_ac_uk": {
   "aliases": [],
@@ -483,7 +483,7 @@
   "domain": "ebi.ac.uk",
   "language": null,
   "source_id": "src_ebi_ac_uk",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_edaily_co_kr": {
   "aliases": [],
@@ -492,7 +492,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_edaily_co_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_edtech_innovation_hub": {
   "aliases": [],
@@ -501,7 +501,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_edtech_innovation_hub",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_edtech_magazine": {
   "aliases": [],
@@ -510,7 +510,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_edtech_magazine",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ein_news": {
   "aliases": [],
@@ -519,7 +519,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ein_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ein_presswire": {
   "aliases": [],
@@ -528,7 +528,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ein_presswire",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_engadget_com": {
   "aliases": [],
@@ -537,7 +537,7 @@
   "domain": "engadget.com",
   "language": null,
   "source_id": "src_engadget_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_engineering_virginia_edu": {
   "aliases": [],
@@ -546,7 +546,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_engineering_virginia_edu",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_erp_today": {
   "aliases": [],
@@ -555,7 +555,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_erp_today",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ewtn_news": {
   "aliases": [],
@@ -564,7 +564,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ewtn_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_fast_company": {
   "aliases": [],
@@ -573,7 +573,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_fast_company",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_federal_news_network": {
   "aliases": [],
@@ -582,7 +582,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_federal_news_network",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_finance_biggo_com": {
   "aliases": [],
@@ -591,7 +591,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_finance_biggo_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_fnnews_com": {
   "aliases": [
@@ -602,7 +602,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_fnnews_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_forbes": {
   "aliases": [],
@@ -611,7 +611,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_forbes",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_fox_business": {
   "aliases": [],
@@ -620,7 +620,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_fox_business",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_gooddailynews_co_kr": {
   "aliases": [],
@@ -629,7 +629,7 @@
   "domain": "gooddailynews.co.kr",
   "language": null,
   "source_id": "src_gooddailynews_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_google_news_ai": {
   "aliases": [],
@@ -638,7 +638,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_google_news_ai",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_google_news_ai_regulation": {
   "aliases": [],
@@ -647,7 +647,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_google_news_ai_regulation",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_gukjenews_com": {
   "aliases": [],
@@ -656,7 +656,7 @@
   "domain": "gukjenews.com",
   "language": null,
   "source_id": "src_gukjenews_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_gurufocus": {
   "aliases": [],
@@ -665,7 +665,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_gurufocus",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_hai_stanford_edu": {
   "aliases": [],
@@ -674,7 +674,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_hai_stanford_edu",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_hani_co_kr": {
   "aliases": [],
@@ -683,7 +683,7 @@
   "domain": "hani.co.kr",
   "language": null,
   "source_id": "src_hani_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_hankookilbo_com": {
   "aliases": [],
@@ -692,7 +692,7 @@
   "domain": "hankookilbo.com",
   "language": null,
   "source_id": "src_hankookilbo_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_hankyung_com": {
   "aliases": [],
@@ -701,7 +701,7 @@
   "domain": "hankyung.com",
   "language": null,
   "source_id": "src_hankyung_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_hedgeweek": {
   "aliases": [],
@@ -710,7 +710,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_hedgeweek",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_houston_public_media": {
   "aliases": [],
@@ -719,7 +719,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_houston_public_media",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_huggingface_co_hugging_face_blog": {
   "aliases": [],
@@ -728,7 +728,7 @@
   "domain": "huggingface.co",
   "language": null,
   "source_id": "src_huggingface_co_hugging_face_blog",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_huggingface_co_hugging_face_오늘의_논문": {
   "aliases": [],
@@ -737,7 +737,7 @@
   "domain": "huggingface.co",
   "language": null,
   "source_id": "src_huggingface_co_hugging_face_오늘의_논문",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_hunt_scanlon_media": {
   "aliases": [],
@@ -746,7 +746,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_hunt_scanlon_media",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_ibulgyo_com": {
   "aliases": [],
@@ -755,7 +755,7 @@
   "domain": "ibulgyo.com",
   "language": null,
   "source_id": "src_ibulgyo_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_independent_co_uk": {
   "aliases": [],
@@ -764,7 +764,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_independent_co_uk",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_investing_com": {
   "aliases": [],
@@ -773,7 +773,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_investing_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_investing_com_한국어": {
   "aliases": [],
@@ -782,7 +782,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_investing_com_한국어",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_investor_s_business_daily": {
   "aliases": [],
@@ -791,7 +791,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_investor_s_business_daily",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_itbiznews_com": {
   "aliases": [],
@@ -800,7 +800,7 @@
   "domain": "itbiznews.com",
   "language": null,
   "source_id": "src_itbiznews_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_it조선": {
   "aliases": [],
@@ -809,7 +809,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_it조선",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_joongang_co_kr": {
   "aliases": [],
@@ -818,7 +818,7 @@
   "domain": "joongang.co.kr",
   "language": null,
   "source_id": "src_joongang_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_junews_com": {
   "aliases": [],
@@ -827,7 +827,7 @@
   "domain": "junews.com",
   "language": null,
   "source_id": "src_junews_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_kansan_com": {
   "aliases": [],
@@ -836,7 +836,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_kansan_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_kb_think": {
   "aliases": [],
@@ -845,7 +845,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_kb_think",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_khan_co_kr": {
   "aliases": [],
@@ -854,7 +854,7 @@
   "domain": "khan.co.kr",
   "language": null,
   "source_id": "src_khan_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_kmib_co_kr": {
   "aliases": [],
@@ -863,7 +863,7 @@
   "domain": "kmib.co.kr",
   "language": null,
   "source_id": "src_kmib_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_law_com": {
   "aliases": [],
@@ -872,7 +872,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_law_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_lawleader_co_kr": {
   "aliases": [],
@@ -881,7 +881,7 @@
   "domain": "lawleader.co.kr",
   "language": null,
   "source_id": "src_lawleader_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_lawsites": {
   "aliases": [],
@@ -890,7 +890,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_lawsites",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_lec_co_kr": {
   "aliases": [],
@@ -899,7 +899,7 @@
   "domain": "lec.co.kr",
   "language": null,
   "source_id": "src_lec_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_lynn_university": {
   "aliases": [],
@@ -908,7 +908,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_lynn_university",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mashable": {
   "aliases": [],
@@ -917,7 +917,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_mashable",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mcdermott_will_schulte": {
   "aliases": [],
@@ -926,7 +926,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_mcdermott_will_schulte",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mediapost": {
   "aliases": [],
@@ -935,7 +935,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_mediapost",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_middle_east_institute": {
   "aliases": [],
@@ -944,7 +944,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_middle_east_institute",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mit_news_mit_연구": {
   "aliases": [],
@@ -953,7 +953,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_mit_news_mit_연구",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mit_sloan": {
   "aliases": [],
@@ -962,7 +962,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_mit_sloan",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_mk_co_kr": {
   "aliases": [],
@@ -971,7 +971,7 @@
   "domain": "mk.co.kr",
   "language": null,
   "source_id": "src_mk_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_montclair_local_news": {
   "aliases": [],
@@ -980,7 +980,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_montclair_local_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_motherjones_com": {
   "aliases": [],
@@ -989,7 +989,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_motherjones_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_msit_go_kr": {
   "aliases": [],
@@ -998,7 +998,7 @@
   "domain": "msit.go.kr",
   "language": null,
   "source_id": "src_msit_go_kr",
-  "source_type": "rss"
+  "source_type": "GOVERNMENT"
  },
  "src_mt_co_kr": {
   "aliases": [],
@@ -1007,7 +1007,7 @@
   "domain": "mt.co.kr",
   "language": null,
   "source_id": "src_mt_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_munhwa_com": {
   "aliases": [],
@@ -1016,7 +1016,7 @@
   "domain": "munhwa.com",
   "language": null,
   "source_id": "src_munhwa_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_naewaynews_com": {
   "aliases": [],
@@ -1025,7 +1025,7 @@
   "domain": "naewaynews.com",
   "language": null,
   "source_id": "src_naewaynews_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_national_news_desk": {
   "aliases": [],
@@ -1034,7 +1034,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_national_news_desk",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_nature_com_nature_machine_intelligence": {
   "aliases": [],
@@ -1043,7 +1043,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_nature_machine_intelligence",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_com_nature_기후변화": {
   "aliases": [],
@@ -1052,7 +1052,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_nature_기후변화",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_com_nature_머신러닝": {
   "aliases": [],
@@ -1061,7 +1061,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_nature_머신러닝",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_com_nature_법": {
   "aliases": [],
@@ -1070,7 +1070,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_nature_법",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_com_nature_에너지": {
   "aliases": [],
@@ -1079,7 +1079,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_nature_에너지",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_com_npj_digital_medicine": {
   "aliases": [],
@@ -1088,7 +1088,7 @@
   "domain": "nature.com",
   "language": null,
   "source_id": "src_nature_com_npj_digital_medicine",
-  "source_type": "rss"
+  "source_type": "JOURNAL"
  },
  "src_nature_machine_intelligence_ai_일반": {
   "aliases": [],
@@ -1097,7 +1097,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_nature_machine_intelligence_ai_일반",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_nature_머신러닝_ai_일반": {
   "aliases": [],
@@ -1106,7 +1106,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_nature_머신러닝_ai_일반",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_nbn_시사경제": {
   "aliases": [],
@@ -1115,7 +1115,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_nbn_시사경제",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_new_university": {
   "aliases": [],
@@ -1124,7 +1124,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_new_university",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_new_york_university": {
   "aliases": [],
@@ -1133,7 +1133,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_new_york_university",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_news_bloomberglaw_com": {
   "aliases": [],
@@ -1142,7 +1142,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_news_bloomberglaw_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_news_kicpa_or_kr": {
   "aliases": [],
@@ -1151,7 +1151,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_news_kicpa_or_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_news_mit_edu": {
   "aliases": [],
@@ -1160,7 +1160,7 @@
   "domain": "news.mit.edu",
   "language": null,
   "source_id": "src_news_mit_edu",
-  "source_type": "rss"
+  "source_type": "ACADEMIC_INSTITUTION"
  },
  "src_news_northeastern_edu": {
   "aliases": [],
@@ -1169,7 +1169,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_news_northeastern_edu",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_newsis_com": {
   "aliases": [],
@@ -1178,7 +1178,7 @@
   "domain": "newsis.com",
   "language": null,
   "source_id": "src_newsis_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_newspim_com": {
   "aliases": [],
@@ -1187,7 +1187,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_newspim_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_npr": {
   "aliases": [],
@@ -1196,7 +1196,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_npr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_openai_com": {
   "aliases": [],
@@ -1205,7 +1205,7 @@
   "domain": "openai.com",
   "language": null,
   "source_id": "src_openai_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_osv_news": {
   "aliases": [],
@@ -1214,7 +1214,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_osv_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_pepperdine_graphic": {
   "aliases": [],
@@ -1223,7 +1223,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_pepperdine_graphic",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_pinpointnews_co_kr": {
   "aliases": [],
@@ -1232,7 +1232,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_pinpointnews_co_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_politico_com": {
   "aliases": [],
@@ -1241,7 +1241,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_politico_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_poynter": {
   "aliases": [],
@@ -1250,7 +1250,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_poynter",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_pr_newswire": {
   "aliases": [],
@@ -1259,7 +1259,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_pr_newswire",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_pressian_com": {
   "aliases": [],
@@ -1268,7 +1268,7 @@
   "domain": "pressian.com",
   "language": null,
   "source_id": "src_pressian_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_purdue_exponent": {
   "aliases": [],
@@ -1277,7 +1277,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_purdue_exponent",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_research_사회_경제_사회_경제": {
   "aliases": [],
@@ -1286,7 +1286,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_research_사회_경제_사회_경제",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_resultsense": {
   "aliases": [],
@@ -1295,7 +1295,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_resultsense",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_reuters": {
   "aliases": [],
@@ -1304,7 +1304,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_reuters",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_rhode_island_lawyers_weekly": {
   "aliases": [],
@@ -1313,7 +1313,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_rhode_island_lawyers_weekly",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_rss_arxiv_org_arxiv_cs_ai": {
   "aliases": [],
@@ -1322,7 +1322,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_ai",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_cs_cl": {
   "aliases": [],
@@ -1331,7 +1331,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_cl",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_cs_cy": {
   "aliases": [],
@@ -1340,7 +1340,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_cy",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_cs_ma": {
   "aliases": [],
@@ -1349,7 +1349,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_ma",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_cs_ro": {
   "aliases": [],
@@ -1358,7 +1358,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_ro",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_cs_si": {
   "aliases": [],
@@ -1367,7 +1367,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_cs_si",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_econ_gn": {
   "aliases": [],
@@ -1376,7 +1376,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_econ_gn",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_eess_sy": {
   "aliases": [],
@@ -1385,7 +1385,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_eess_sy",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_physics_soc_ph": {
   "aliases": [],
@@ -1394,7 +1394,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_physics_soc_ph",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_arxiv_org_arxiv_음악_미디어_hci": {
   "aliases": [],
@@ -1403,7 +1403,7 @@
   "domain": "rss.arxiv.org",
   "language": null,
   "source_id": "src_rss_arxiv_org_arxiv_음악_미디어_hci",
-  "source_type": "rss"
+  "source_type": "RESEARCH_REPOSITORY"
  },
  "src_rss_donga_com": {
   "aliases": [],
@@ -1412,7 +1412,7 @@
   "domain": "rss.donga.com",
   "language": null,
   "source_id": "src_rss_donga_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_rss_edaily_co_kr": {
   "aliases": [],
@@ -1421,7 +1421,7 @@
   "domain": "rss.edaily.co.kr",
   "language": null,
   "source_id": "src_rss_edaily_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_rss_ohmynews_com": {
   "aliases": [],
@@ -1430,7 +1430,7 @@
   "domain": "rss.ohmynews.com",
   "language": null,
   "source_id": "src_rss_ohmynews_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_rttnews": {
   "aliases": [],
@@ -1439,7 +1439,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_rttnews",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_san_francisco_state_university": {
   "aliases": [],
@@ -1448,7 +1448,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_san_francisco_state_university",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_sao5_org": {
   "aliases": [],
@@ -1457,7 +1457,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_sao5_org",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_seoul_co_kr": {
   "aliases": [],
@@ -1466,7 +1466,7 @@
   "domain": "seoul.co.kr",
   "language": null,
   "source_id": "src_seoul_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_siatoday_co_kr": {
   "aliases": [],
@@ -1475,7 +1475,7 @@
   "domain": "siatoday.co.kr",
   "language": null,
   "source_id": "src_siatoday_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_siliconangle": {
   "aliases": [],
@@ -1484,7 +1484,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_siliconangle",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_siliconangle_com": {
   "aliases": [],
@@ -1493,7 +1493,7 @@
   "domain": "siliconangle.com",
   "language": null,
   "source_id": "src_siliconangle_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_spectrum_news": {
   "aliases": [],
@@ -1502,7 +1502,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_spectrum_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_spencer_fane": {
   "aliases": [],
@@ -1511,7 +1511,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_spencer_fane",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_spyglass_org": {
   "aliases": [],
@@ -1520,7 +1520,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_spyglass_org",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_stamford_advocate": {
   "aliases": [],
@@ -1529,7 +1529,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_stamford_advocate",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_stratnewsglobal_com": {
   "aliases": [],
@@ -1538,7 +1538,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_stratnewsglobal_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_studlife_com": {
   "aliases": [],
@@ -1547,7 +1547,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_studlife_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_supple_kr": {
   "aliases": [],
@@ -1556,7 +1556,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_supple_kr",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_t_rkiye_today": {
   "aliases": [],
@@ -1565,7 +1565,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_t_rkiye_today",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_tech_policy_press": {
   "aliases": [],
@@ -1574,7 +1574,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_tech_policy_press",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_techcrunch": {
   "aliases": [],
@@ -1583,7 +1583,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_techcrunch",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_techcrunch_com": {
   "aliases": [],
@@ -1592,7 +1592,7 @@
   "domain": "techcrunch.com",
   "language": null,
   "source_id": "src_techcrunch_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_technical_ly": {
   "aliases": [],
@@ -1601,7 +1601,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_technical_ly",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_technologyreview_com": {
   "aliases": [],
@@ -1610,7 +1610,7 @@
   "domain": "technologyreview.com",
   "language": null,
   "source_id": "src_technologyreview_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_techxplore_com": {
   "aliases": [],
@@ -1619,7 +1619,7 @@
   "domain": "techxplore.com",
   "language": null,
   "source_id": "src_techxplore_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_tenant_news": {
   "aliases": [],
@@ -1628,7 +1628,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_tenant_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_tf_co_kr": {
   "aliases": [],
@@ -1637,7 +1637,7 @@
   "domain": "tf.co.kr",
   "language": null,
   "source_id": "src_tf_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_the_cool_down": {
   "aliases": [],
@@ -1646,7 +1646,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_cool_down",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_decoder_com": {
   "aliases": [],
@@ -1655,7 +1655,7 @@
   "domain": "the-decoder.com",
   "language": null,
   "source_id": "src_the_decoder_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_the_economist": {
   "aliases": [],
@@ -1664,7 +1664,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_economist",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_economy_korea": {
   "aliases": [],
@@ -1673,7 +1673,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_economy_korea",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_guardian": {
   "aliases": [],
@@ -1682,7 +1682,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_guardian",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_hill": {
   "aliases": [],
@@ -1691,7 +1691,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_hill",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_intercept": {
   "aliases": [],
@@ -1700,7 +1700,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_intercept",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_new_york_times": {
   "aliases": [],
@@ -1709,7 +1709,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_new_york_times",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_regulatory_review": {
   "aliases": [],
@@ -1718,7 +1718,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_regulatory_review",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_robot_report": {
   "aliases": [],
@@ -1727,7 +1727,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_robot_report",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_salt_lake_tribune": {
   "aliases": [],
@@ -1736,7 +1736,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_salt_lake_tribune",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_stanford_daily": {
   "aliases": [],
@@ -1745,7 +1745,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_stanford_daily",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_tech_buzz": {
   "aliases": [],
@@ -1754,7 +1754,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_tech_buzz",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_times_of_india": {
   "aliases": [],
@@ -1763,7 +1763,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_times_of_india",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_the_verge": {
   "aliases": [],
@@ -1772,7 +1772,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_the_verge",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_theverge_com": {
   "aliases": [],
@@ -1781,7 +1781,7 @@
   "domain": "theverge.com",
   "language": null,
   "source_id": "src_theverge_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_topic_사회_노동_사회_노동": {
   "aliases": [],
@@ -1790,7 +1790,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_topic_사회_노동_사회_노동",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_trendingtopics_eu": {
   "aliases": [],
@@ -1799,7 +1799,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_trendingtopics_eu",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_truckinginfo_com": {
   "aliases": [],
@@ -1808,7 +1808,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_truckinginfo_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_university_of_cincinnati": {
   "aliases": [],
@@ -1817,7 +1817,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_university_of_cincinnati",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_unmanned_airspace": {
   "aliases": [],
@@ -1826,7 +1826,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_unmanned_airspace",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_usa_today": {
   "aliases": [],
@@ -1835,7 +1835,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_usa_today",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_v_daum_net": {
   "aliases": [],
@@ -1844,7 +1844,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_v_daum_net",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_venturebeat_com": {
   "aliases": [],
@@ -1853,7 +1853,7 @@
   "domain": "venturebeat.com",
   "language": null,
   "source_id": "src_venturebeat_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_venturesquare_net": {
   "aliases": [],
@@ -1862,7 +1862,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_venturesquare_net",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_vietnam_vn": {
   "aliases": [],
@@ -1871,7 +1871,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_vietnam_vn",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_washington_examiner": {
   "aliases": [],
@@ -1880,7 +1880,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_washington_examiner",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_washingtonpost_com": {
   "aliases": [],
@@ -1889,7 +1889,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_washingtonpost_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wbtv": {
   "aliases": [],
@@ -1898,7 +1898,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wbtv",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wcuquad_com": {
   "aliases": [],
@@ -1907,7 +1907,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wcuquad_com",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wired_com": {
   "aliases": [],
@@ -1916,7 +1916,7 @@
   "domain": "wired.com",
   "language": null,
   "source_id": "src_wired_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_wolters_kluwer": {
   "aliases": [],
@@ -1925,7 +1925,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wolters_kluwer",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wosu_public_media": {
   "aliases": [],
@@ -1934,7 +1934,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wosu_public_media",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wrdw": {
   "aliases": [],
@@ -1943,7 +1943,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wrdw",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wsj": {
   "aliases": [],
@@ -1952,7 +1952,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wsj",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_wxxv_news_25": {
   "aliases": [],
@@ -1961,7 +1961,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_wxxv_news_25",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_yahoo_finance": {
   "aliases": [],
@@ -1970,7 +1970,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_yahoo_finance",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_yahoo_finance_canada": {
   "aliases": [],
@@ -1979,7 +1979,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_yahoo_finance_canada",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_yahoo_finance_uk": {
   "aliases": [],
@@ -1988,7 +1988,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_yahoo_finance_uk",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_yale_daily_news": {
   "aliases": [],
@@ -1997,7 +1997,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_yale_daily_news",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_yna_co_kr": {
   "aliases": [],
@@ -2006,7 +2006,7 @@
   "domain": "yna.co.kr",
   "language": null,
   "source_id": "src_yna_co_kr",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_youtube_com_a16z": {
   "aliases": [],
@@ -2015,7 +2015,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_a16z",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_big_think": {
   "aliases": [],
@@ -2024,7 +2024,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_big_think",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_dwarkesh_patel": {
   "aliases": [],
@@ -2033,7 +2033,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_dwarkesh_patel",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_eo_korea": {
   "aliases": [],
@@ -2042,7 +2042,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_eo_korea",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_lex_fridman": {
   "aliases": [],
@@ -2051,7 +2051,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_lex_fridman",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_sequoia_capital": {
   "aliases": [],
@@ -2060,7 +2060,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_sequoia_capital",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_stanford_gsb": {
   "aliases": [],
@@ -2069,7 +2069,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_stanford_gsb",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_ted": {
   "aliases": [],
@@ -2078,7 +2078,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_ted",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_ted_ed": {
   "aliases": [],
@@ -2087,7 +2087,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_ted_ed",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_tedx_talks": {
   "aliases": [],
@@ -2096,7 +2096,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_tedx_talks",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_world_economic_forum": {
   "aliases": [],
@@ -2105,7 +2105,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_world_economic_forum",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_y_combinator": {
   "aliases": [],
@@ -2114,7 +2114,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_y_combinator",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_youtube_com_스테이지5": {
   "aliases": [],
@@ -2123,7 +2123,7 @@
   "domain": "youtube.com",
   "language": null,
   "source_id": "src_youtube_com_스테이지5",
-  "source_type": "rss"
+  "source_type": "VIDEO_PLATFORM"
  },
  "src_ytn": {
   "aliases": [],
@@ -2132,7 +2132,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_ytn",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_zdnet_com": {
   "aliases": [],
@@ -2141,7 +2141,7 @@
   "domain": "zdnet.com",
   "language": null,
   "source_id": "src_zdnet_com",
-  "source_type": "rss"
+  "source_type": "NEWS_MEDIA"
  },
  "src_강원신문": {
   "aliases": [],
@@ -2150,7 +2150,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_강원신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_경기종합뉴스": {
   "aliases": [],
@@ -2159,7 +2159,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_경기종합뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_광역행정신문": {
   "aliases": [],
@@ -2168,7 +2168,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_광역행정신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_광흥타임즈": {
   "aliases": [],
@@ -2177,7 +2177,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_광흥타임즈",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_교수신문": {
   "aliases": [],
@@ -2186,7 +2186,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_교수신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_교육플러스": {
   "aliases": [],
@@ -2195,7 +2195,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_교육플러스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_구글뉴스_ai_정책": {
   "aliases": [],
@@ -2204,7 +2204,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_구글뉴스_ai_정책",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_국내_연구_국방_안보_국방_안보": {
   "aliases": [],
@@ -2213,7 +2213,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_국내_연구_국방_안보_국방_안보",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_글로벌경제신문": {
   "aliases": [],
@@ -2222,7 +2222,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_글로벌경제신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_금융소비자뉴스": {
   "aliases": [],
@@ -2231,7 +2231,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_금융소비자뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_기계신문": {
   "aliases": [],
@@ -2240,7 +2240,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_기계신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_뉴데일리_충청세종": {
   "aliases": [],
@@ -2249,7 +2249,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_뉴데일리_충청세종",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_뉴스1": {
   "aliases": [],
@@ -2258,7 +2258,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_뉴스1",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_뉴스더보이스헬스케어": {
   "aliases": [],
@@ -2267,7 +2267,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_뉴스더보이스헬스케어",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_대전mbc": {
   "aliases": [],
@@ -2276,7 +2276,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_대전mbc",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_더구루": {
   "aliases": [],
@@ -2285,7 +2285,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_더구루",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_더글로벌기빙뉴스": {
   "aliases": [],
@@ -2294,7 +2294,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_더글로벌기빙뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_디지털데일리": {
   "aliases": [],
@@ -2303,7 +2303,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_디지털데일리",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_디지털포용뉴스": {
   "aliases": [],
@@ -2312,7 +2312,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_디지털포용뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_마켓인": {
   "aliases": [],
@@ -2321,7 +2321,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_마켓인",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_매일신문": {
   "aliases": [],
@@ -2330,7 +2330,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_매일신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_매일일보": {
   "aliases": [],
@@ -2339,7 +2339,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_매일일보",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_메디칼업저버": {
   "aliases": [],
@@ -2348,7 +2348,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_메디칼업저버",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_메트로신문": {
   "aliases": [],
@@ -2357,7 +2357,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_메트로신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_바이오타임즈": {
   "aliases": [],
@@ -2366,7 +2366,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_바이오타임즈",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_베리타스알파": {
   "aliases": [],
@@ -2375,7 +2375,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_베리타스알파",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_부천신문": {
   "aliases": [],
@@ -2384,7 +2384,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_부천신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_브레이크뉴스": {
   "aliases": [],
@@ -2393,7 +2393,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_브레이크뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_산학뉴스": {
   "aliases": [],
@@ -2402,7 +2402,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_산학뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_서울경제tv": {
   "aliases": [],
@@ -2411,7 +2411,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_서울경제tv",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_시대일보": {
   "aliases": [],
@@ -2420,7 +2420,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_시대일보",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_아시아경제": {
   "aliases": [],
@@ -2429,7 +2429,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_아시아경제",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_에너지경제신문": {
   "aliases": [],
@@ -2438,7 +2438,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_에너지경제신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_의약뉴스": {
   "aliases": [],
@@ -2447,7 +2447,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_의약뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_이로운넷": {
   "aliases": [],
@@ -2456,7 +2456,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_이로운넷",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_이코노미스트": {
   "aliases": [],
@@ -2465,7 +2465,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_이코노미스트",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_일간투데이": {
   "aliases": [],
@@ -2474,7 +2474,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_일간투데이",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_임팩트온": {
   "aliases": [],
@@ -2483,7 +2483,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_임팩트온",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_전국도민일보": {
   "aliases": [],
@@ -2492,7 +2492,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_전국도민일보",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_전북중앙": {
   "aliases": [],
@@ -2501,7 +2501,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_전북중앙",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_전자신문": {
   "aliases": [],
@@ -2510,7 +2510,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_전자신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_중소기업투데이": {
   "aliases": [],
@@ -2519,7 +2519,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_중소기업투데이",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_지디넷코리아": {
   "aliases": [],
@@ -2528,7 +2528,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_지디넷코리아",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_천지일보": {
   "aliases": [],
@@ -2537,7 +2537,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_천지일보",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_타임뉴스": {
   "aliases": [],
@@ -2546,7 +2546,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_타임뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_톡톡뉴스": {
   "aliases": [],
@@ -2555,7 +2555,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_톡톡뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_파이낸스투데이": {
   "aliases": [],
@@ -2564,7 +2564,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_파이낸스투데이",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_프레스뉴스": {
   "aliases": [],
@@ -2573,7 +2573,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_프레스뉴스",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_한국언론연합": {
   "aliases": [],
@@ -2582,7 +2582,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_한국언론연합",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_한의신문": {
   "aliases": [],
@@ -2591,7 +2591,7 @@
   "domain": null,
   "language": null,
   "source_id": "src_한의신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  },
  "src_호남교육신문": {
   "aliases": [],
@@ -2600,6 +2600,6 @@
   "domain": null,
   "language": null,
   "source_id": "src_호남교육신문",
-  "source_type": "rss"
+  "source_type": "OTHER"
  }
 }

@@ -832,6 +832,68 @@ def is_blocked(title, link, desc=""):
     return bool(BLOCK_LINK.search(link) or BLOCK_WORDS.search(title) or BLOCK_WORDS.search((desc or "")[:400]))
 
 
+# ── NOISE ENGINE ──────────────────────────────────────────────────────────
+# is_blocked()와는 완전히 별개다: is_blocked는 "위험한 글"(스팸·도박·악성 링크)만 보고,
+# 여기는 "AI와는 관련 있지만 METAXIS가 다루려는 정보가 아닌 글"(증권가 시황, 홍보, 행사 공지, 채용)을 본다.
+# 확신도가 높은 4종(STOCK/PR/EVENT_PROMO/RECRUITMENT)만 실제로 DROP하고, 나머지(CRYPTO/SHOPPING/
+# CELEBRITY/SPORTS/SEO/AI_WASHING/GREENWASHING)는 후보만 표시할 뿐 이번 단계에서 DROP하지 않는다(운영자 지시).
+# "정책·규제·연구·산업구조" 같은 실질 정보 신호(구조적 예외)가 함께 있으면, 노이즈 낱말이 있어도 DROP하지 않고
+# 통과(CONTINUE)시킨다 — 단순히 "정책"이라는 낱말 하나로 봐주는 게 아니라, 노이즈 신호와 별개로 실질
+# 정보 신호가 있는지를 본다(운영자 지시: 단순 Keyword Rescue 아님).
+NOISE_RULES = {
+    "STOCK": re.compile(
+        r"\[美?특징주\]|\[개장전특징주\]|\[오늘의\s*종목\]|\[종목분석\]|\[증권\]|\[마켓\]|\[종목\s*NOW\]|"
+        r"관련주|테마주|수혜주|대장주|급등주|AI주\b|목표주가|목표가\s*[\d.%]*\s*(?:상향|하향|↑|↓)|투자의견\s*(?:매수|매도)|"
+        r"매수추천|매도추천|상한가|하한가|52주\s*신고가|거래량\s*급증|외국인\s*순매수|기관\s*순매수|"
+        r"증권사\s*(?:추천|분석)|애널리스트|자사주\s*매입|주주환원|개장전|장마감|\[뉴욕증시\]|\[美증시\]", re.I),
+    "PR": re.compile(r"세계\s*최고의|혁신적인?\s*AI\s*솔루션|업계\s*최초.*(?:출시|공개)를?\s*자랑|보도자료\s*배포", re.I),
+    "EVENT_PROMO": re.compile(
+        r"사전\s*등록|참가자\s*모집|수강생\s*모집|신청\s*마감|접수\s*중|공모전\s*개최|세미나\s*안내|"
+        r"컨퍼런스.*(?:등록|모집)|무료\s*참가|웨비나\s*신청", re.I),
+    # 발견한 문제(Pilot에서 잡힘): 단순히 "hiring"이라는 낱말만 보면 "AI 때문에 채용 방식이 바뀐다"는
+    # 산업구조 뉴스까지 채용 공고로 오판한다(false positive, 예: "Citadel broadens quant hiring from AI
+    # research labs"). 그래서 실제 채용 공고 문구(지원 방법·모집 요강 안내)로 좁혔다.
+    "RECRUITMENT": re.compile(r"채용\s*공고|신입\s*공채|경력\s*채용|인재\s*모집|지원자\s*모집|모집\s*요강|"
+                               r"we'?re\s+hiring|job\s+opening|apply\s+now|now\s+hiring\b", re.I),
+    # 아래는 관찰만(이번 단계에서 DROP 안 함) — 후보 탐지만 로그에 남긴다.
+    "CRYPTO": re.compile(r"비트코인|가상자산|암호화폐|코인\s*상장|\bcrypto\b|\bbitcoin\b|\bethereum\b", re.I),
+    "SHOPPING": re.compile(r"특가|쿠폰|할인\s*코드|최저가|무료배송|\bdiscount\s+code\b|\bcoupon\b", re.I),
+    "CELEBRITY": re.compile(r"열애설|结婚|이혼\s*소송|사생활|파파라치|\bdating\s+rumor\b", re.I),
+    "SPORTS": re.compile(r"프로야구|프로축구|경기\s*결과|승부예측|\bmatch\s+result\b|\bbox\s+score\b", re.I),
+    "SEO": re.compile(r"검색\s*상위\s*노출|백링크|키워드\s*최적화|\bSEO\s+ranking\b", re.I),
+    "AI_WASHING": re.compile(r"AI\s*(?:기반|탑재|적용)\s*(?:쿠션|화장품|생수|마사지기)", re.I),
+    "GREENWASHING": re.compile(r"친환경\s*AI|그린\s*AI|탄소절감\s*AI|\bgreen\s+AI\b|\bsustainable\s+AI\b", re.I),
+}
+NOISE_ACTIVE_DROP = {"STOCK", "PR", "EVENT_PROMO", "RECRUITMENT"}  # 이번 단계에서 실제로 DROP하는 종류만
+
+STRUCTURAL_SIGNALS = re.compile(
+    r"규제|법안|법원|판결|판례|입법|국회|헌법|소송|정책\s*(?:변경|발표|시행|수립)|가이드라인|"
+    r"연구\s*결과|논문|발견했|밝혀냈|신기술|산업\s*구조|일자리\s*(?:감소|증가|변화)|노동\s*(?:조건|환경)\s*변화|"
+    r"파업|인권|권리|환경\s*영향|기후\s*영향|탄소\s*배출량|문화적\s*변화|안전\s*(?:사고|기준|점검)|"
+    r"국제\s*(?:협정|합의|조약)|regulation|legislat|court\s+rul|lawsuit|policy\s+change|research\s+finding|"
+    r"new\s+technology|industry\s+structure|labor\s+(?:market|condition)|human\s+rights|environmental\s+impact|"
+    r"cultural\s+shift|safety\s+(?:incident|standard)|international\s+agreement", re.I)
+
+
+def classify_noise(title, desc=""):
+    """확실도 높은 낱말과 구조적 신호(정책·연구·산업 변화 등)를 함께 보고 DROP/CONTINUE를 정한다.
+    반환값은 디버그·Pilot 검증용이고, 기존 data/*.json에는 저장하지 않는다(운영자 지시 7번)."""
+    blob = f"{title}\n{(desc or '')[:400]}"
+    matched = {name: bool(rx.search(blob)) for name, rx in NOISE_RULES.items()}
+    hit_active = [n for n in NOISE_ACTIVE_DROP if matched[n]]
+    hit_observe = [n for n, v in matched.items() if v and n not in NOISE_ACTIVE_DROP]
+    structural = bool(STRUCTURAL_SIGNALS.search(blob))
+    if not hit_active:
+        decision = "CONTINUE"
+        noise_type, score = (hit_observe[0] if hit_observe else None), (0.3 if hit_observe else 0.0)
+    elif structural:
+        decision, noise_type, score = "CONTINUE", hit_active[0], 0.6  # 노이즈+구조 신호 동시 존재 → 재검토로 넘김
+    else:
+        decision, noise_type, score = "DROP", hit_active[0], 0.95
+    return {"noise_type": noise_type, "noise_score": score, "matched_rules": hit_active + hit_observe,
+            "structural_exception": structural, "decision": decision}
+
+
 def make_item(src, it, keywords, now):
     """피드 항목 하나를 브리핑 항목으로. 조건에 안 맞으면 None."""
     title = clean_text(it["title"])
@@ -852,6 +914,8 @@ def make_item(src, it, keywords, now):
         return None  # 분야 키워드(예: 법·교육·에너지)가 있는 글만
     if (src.get("filter") or src.get("require_ai")) and not is_ai_related(it, keywords, src.get("title_only"), strict=bool(src.get("require_ai"))):
         return None
+    if classify_noise(title, it.get("desc", ""))["decision"] == "DROP":
+        return None  # 확실한 증권가 시황·홍보·행사 공지·채용 공고: Gemini까지 보내기 전에 제거(비용 0, 품질 개선)
     if src.get("url", "").startswith("https://news.google.com"):
         it = {**it, "desc": ""}  # 구글 뉴스 소개글은 여러 언론사 제목을 이어 붙인 것이라 요약으로 쓰지 않는다
     summary = summarize(it["desc"], title)

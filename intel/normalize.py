@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 import briefing  # noqa: E402  (기존 코드, 함수만 재사용 — 이 스크립트에서 절대 수정하지 않음)
 
-from source_service import normalize_sources  # noqa: E402
+from source_service import normalize_sources, _domain_from_url  # noqa: E402
 from document_service import to_document  # noqa: E402
 from fact_service import make_fact_candidate  # noqa: E402
 from event_service import cluster_events  # noqa: E402
@@ -89,7 +89,13 @@ def run():
     doc_items = []  # (document_id, item) — event 단계에서 재사용
     for it in sample:
         sid = name_to_id.get(it.get("source"))
-        doc = to_document(it, sid, now_iso)
+        # document_type 추정은 실제 원문 링크의 도메인을 본다(구글 뉴스 경유는 news.google.com이라
+        # 신호가 약하지만, 직접 RSS 소스는 원문 도메인이 그대로 나와 arXiv/정부 도메인 판별에 쓸 수 있다).
+        try:
+            doc_domain = _domain_from_url(it.get("link", ""))
+        except Exception:
+            doc_domain = None
+        doc = to_document(it, sid, now_iso, domain=doc_domain)
         doc_store.upsert(doc["document_id"], doc)
         doc_items.append((doc["document_id"], it))
 

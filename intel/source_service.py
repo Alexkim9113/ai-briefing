@@ -62,8 +62,10 @@ def normalize_sources(item_source_names, sources_path=None):
             sid = f"src_{_slug(domain if domain else name)}"
             if multi_tenant:  # 도메인이 같아도 서로 다른 발행자이므로 이름까지 넣어 구분한다
                 sid = f"src_{_slug(domain)}_{_slug(name)}"
+            from document_service import _guess_source_type  # 순환 import 방지 위해 지역 import
             records[sid] = {"source_id": sid, "canonical_name": name, "aliases": [],
-                             "domain": domain, "source_type": "rss", "country": None, "language": None}
+                             "domain": domain, "source_type": _guess_source_type(sid, domain),
+                             "country": None, "language": None}
             if domain and not multi_tenant:
                 by_domain[domain] = sid
             by_name[_slug(name)] = sid
