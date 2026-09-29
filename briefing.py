@@ -2407,7 +2407,35 @@ _EVENTS = [
     ("교육", r"교육|학생|학교|역량|education|student|school|teach|learn", "교육·역량 강화",
      "AI 역량이 기본 소양으로 자리 잡는 흐름으로, 교육 격차를 줄이는 방안이 함께 논의될 필요가 있어요."),
 ]
+_EDU_BUCKET_RX = re.compile(next(rx for k, rx, p, v in _EVENTS if k == "교육"), re.I)
 _EVENTS = [(k, re.compile(rx, re.I), p, v) for k, rx, p, v in _EVENTS]
+
+# SOURCE INTELLIGENCE remediation (섹션 30/31/71 LAWLEADER REGRESSION): "교육" 이벤트
+# 버킷은 "교육|학생|학교|역량|education|student|school|teach|learn" 같은 범용 단어 하나가
+# 어디서든 스치기만 해도 발화됐다(예: 청년변호사포럼 기사에서 "역량"이라는 낱말 하나로
+# "AI 역량이 기본 소양으로 자리 잡는 흐름" 같은 근거 없는 문장이 나올 수 있었던 문제).
+# 원칙: NO EVIDENCE > GENERIC SENTENCE. AI와 교육이 실제로 결합된 문구가 있거나, 버킷
+# 단어가 서로 다른 자리에서 2회 이상 나올 때만 이 템플릿을 허용한다 - 정당한 AI 교육
+# 기사(예: "AI 역량 교육 도입", "학교에서 AI 수업 확대")는 계속 통과한다.
+_EDU_STRONG_RX = re.compile(
+    r"(?:AI|인공지능)\s?(?:교육|역량|학습|수업|교사|리터러시)|(?:교육|역량|학습|수업)\s?(?:AI|인공지능)",
+    re.I,
+)
+
+
+_AI_MARKER_RX = re.compile(r"\bAI\b|인공\s?지능", re.I)
+
+
+def _edu_bucket_grounded(text):
+    """섹션 71: '교육' 이벤트 템플릿을 내보내기 전 근거를 확인한다. AI 언급이 전혀 없는
+    글(예: 청년변호사단체 기사에 '역량강화'가 여러 번 나오는 경우)은 교육 버킷 단어가
+    몇 번 나오든 AI 교육 소식이 아니므로, AI 마커가 텍스트에 없으면 무조건 차단한다."""
+    text = text or ""
+    if not _AI_MARKER_RX.search(text):
+        return False
+    if _EDU_STRONG_RX.search(text):
+        return True
+    return len(_EDU_BUCKET_RX.findall(text)) >= 2
 
 
 def _ko_title(it):
@@ -2597,6 +2625,7 @@ def mx_note(it):
     kws = mx_keywords(it, 4)
     actors = mx_actors(it)
     ev = [e for e in _EVENTS if e[1].search(head_t)] or ([] if cat == "talks" else [e for e in _EVENTS if e[1].search(t)])
+    ev = [e for e in ev if e[0] != "교육" or _edu_bucket_grounded(t)]  # 섹션 71: 근거 없는 교육 프레이밍 차단
     ev = ev[:1]
     subj = "·".join(actors[:2]) or (kws[0] if kws else "관련 업계")
     tg = next((_disp(n) for n, i in tags if i is not None), None) or (kws[0] if kws else "AI")

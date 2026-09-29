@@ -215,3 +215,40 @@ def test_lawleader_regression_fixture_does_not_produce_ai_education_framing():
     for banned in ("교육", "역량", "기본 소양"):
         assert banned not in title
         assert banned not in summary
+
+
+def test_lawleader_regression_briefing_mx_note_also_does_not_fire_education_template():
+    # 섹션 71 확장: assess_ai_relevance는 판정만 할 뿐 실제로 site 콘텐츠를 만드는 건
+    # briefing.py의 mx_note()/_EVENTS 테이블이다. 이 테스트는 그 production 코드를 직접
+    # 실행해서, Lawleader류 fixture(및 "역량"이라는 범용 단어가 여러 번 등장하지만 AI와는
+    # 무관한 변형)가 "교육·역량 강화" 캔드 템플릿을 발화시키지 않는지 확인한다.
+    import importlib.util
+
+    repo_root = PKG_DIR.parent.parent  # intel/source_intelligence -> intel -> repo root
+    spec = importlib.util.spec_from_file_location(
+        "briefing_lawleader_check", repo_root / "briefing.py"
+    )
+    briefing = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(briefing)
+
+    base_item = {
+        "title": "청년변호사단체 새변, 미래헌법포럼 숙의토론 '참정권과 미래헌법'",
+        "title_ko": "",
+        "summary": "새변이 주최한 미래헌법포럼에서 참정권 확대와 미래 헌법 개정 방향을 논의했다.",
+        "summary_ko": "",
+        "category": "news",
+        "source": "새변",
+    }
+    summ, view, tags = briefing.mx_note(dict(base_item))
+    for banned in ("교육", "역량", "기본 소양", "교육 격차"):
+        assert banned not in summ
+        assert banned not in view
+
+    # 변형: "역량"이 여러 번 나오지만 AI와는 전혀 무관한 경우(원래 버그의 근본 원인 재현) -
+    # 버킷 단어 개수만으로 발화하던 예전 로직이면 여기서 걸렸을 것이다.
+    variant = dict(base_item)
+    variant["title"] = base_item["title"] + " - 청년 법조인 역량강화 세미나"
+    variant["summary"] = base_item["summary"] + " 법조인 역량 강화 방안도 함께 논의됐다."
+    summ2, view2, tags2 = briefing.mx_note(variant)
+    for banned in ("AI 역량이 기본 소양", "교육 격차를 줄이는"):
+        assert banned not in view2
