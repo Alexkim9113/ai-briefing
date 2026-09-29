@@ -1,0 +1,18 @@
+{
+ "input_documents": 500,
+ "unique_sources": 289,
+ "source_alias_merges": 1,
+ "documents_normalized": 500,
+ "fact_candidates": 500,
+ "source_verified_facts": 0,
+ "summary_derived_facts": 297,
+ "insufficient_source": 0,
+ "not_extracted": 203,
+ "event_candidates": 3,
+ "auto_merged_events_documents": 6,
+ "unresolved_documents": 494,
+ "duplicates_found_across_days": 0,
+ "processing_time_sec": 36.27,
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0
+}

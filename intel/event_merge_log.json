@@ -1,0 +1,38 @@
+[
+ {
+  "a": "a6a4027d9878143d",
+  "b": "e97fa667cee7e431",
+  "merge_method": "rule",
+  "merge_score": 0.3,
+  "merge_evidence": {
+   "entity_match": true,
+   "topic_match": true,
+   "date_distance_days": 0,
+   "title_similarity": 0.3
+  }
+ },
+ {
+  "a": "e5cf82c318ebff37",
+  "b": "95fdbc0adbb37fc8",
+  "merge_method": "rule",
+  "merge_score": 0.3,
+  "merge_evidence": {
+   "entity_match": true,
+   "topic_match": true,
+   "date_distance_days": 1,
+   "title_similarity": 0.3
+  }
+ },
+ {
+  "a": "5ec44a18ca5116c1",
+  "b": "b14f40615bcee62e",
+  "merge_method": "rule",
+  "merge_score": 0.32,
+  "merge_evidence": {
+   "entity_match": true,
+   "topic_match": true,
+   "date_distance_days": 1,
+   "title_similarity": 0.32
+  }
+ }
+]

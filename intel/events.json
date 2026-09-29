@@ -1,0 +1,45 @@
+{
+ "evt_5ec44a18ca5116c1": {
+  "document_ids": [
+   "5ec44a18ca5116c1",
+   "b14f40615bcee62e"
+  ],
+  "entities": [
+   "앤트로픽",
+   "트럼프"
+  ],
+  "event_id": "evt_5ec44a18ca5116c1",
+  "merge_evidence_count": 1,
+  "merge_method": "rule",
+  "status": "RESOLVED",
+  "topic": "법·정책"
+ },
+ "evt_a6a4027d9878143d": {
+  "document_ids": [
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "entities": [
+   "삼성"
+  ],
+  "event_id": "evt_a6a4027d9878143d",
+  "merge_evidence_count": 1,
+  "merge_method": "rule",
+  "status": "RESOLVED",
+  "topic": "반도체"
+ },
+ "evt_e5cf82c318ebff37": {
+  "document_ids": [
+   "e5cf82c318ebff37",
+   "95fdbc0adbb37fc8"
+  ],
+  "entities": [
+   "카이스트"
+  ],
+  "event_id": "evt_e5cf82c318ebff37",
+  "merge_evidence_count": 1,
+  "merge_method": "rule",
+  "status": "RESOLVED",
+  "topic": "반도체"
+ }
+}
