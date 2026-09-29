@@ -1,0 +1,19 @@
+{
+ "input_target_objects": 0,
+ "input_evidence_records": 0,
+ "trajectories_total": 0,
+ "outlooks_total": 0,
+ "alternative_paths_total": 0,
+ "scenarios_total": 0,
+ "second_order_effects_total": 0,
+ "third_order_effects_total": 0,
+ "forecasts_total": 0,
+ "forecast_observations_total": 0,
+ "forecast_revisions_total": 0,
+ "futures_assessments_total": 0,
+ "scenarios_by_type": {},
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

@@ -1,0 +1,10 @@
+{
+  "trajectories": {"human_confirmed": [], "human_rejected": []},
+  "outlooks": {"human_confirmed": [], "human_rejected": []},
+  "alternative_paths": {"human_confirmed": [], "human_rejected": []},
+  "scenarios": {"human_confirmed": [], "human_rejected": []},
+  "second_order_effects": {"human_confirmed": [], "human_rejected": []},
+  "third_order_effects": {"human_confirmed": [], "human_rejected": []},
+  "forecasts": {"human_confirmed": [], "human_rejected": []},
+  "futures_assessments": {"human_confirmed": [], "human_rejected": []}
+}

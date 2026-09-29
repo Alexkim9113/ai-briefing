@@ -1,0 +1,73 @@
+{
+ "supports_weekly_queries": [
+  "TRAJECTORIES_STRENGTHENING",
+  "TRAJECTORIES_WEAKENING",
+  "NEW_OUTLOOKS",
+  "NEW_ALTERNATIVE_PATHS",
+  "NEW_SCENARIOS",
+  "SCENARIOS_WEAKENED",
+  "NEW_SECOND_ORDER_EFFECTS",
+  "NEW_THIRD_ORDER_EFFECTS",
+  "NEW_FORECASTS",
+  "FORECASTS_SUPPORTED",
+  "FORECASTS_WEAKENED",
+  "FORECASTS_CONTRADICTED",
+  "FORECAST_REVISIONS",
+  "WHAT_CHANGED_OUR_VIEW",
+  "WHAT_WOULD_CHANGE_OUR_VIEW",
+  "NEXT_WEEK_WATCHLIST"
+ ],
+ "supports_ask_metaxis_queries": [
+  "이 변화는 어디로 향하고 있나?",
+  "현재 방향이 계속되면 어떻게 되나?",
+  "다른 경로는 무엇인가?",
+  "어떤 조건에서 방향이 바뀌나?",
+  "2차 효과는 무엇인가?",
+  "3차 효과는 무엇인가?",
+  "이 전망을 깨는 Evidence는?",
+  "우리가 과거에 무엇을 예상했나?",
+  "어떤 전망을 수정했나?",
+  "왜 수정했나?"
+ ],
+ "report_chain_ready": [
+  "OBSERVED",
+  "CHANGE",
+  "STRUCTURAL_CHANGE",
+  "TRAJECTORY",
+  "OUTLOOK",
+  "ALTERNATIVE_PATHS",
+  "SCENARIOS",
+  "2ND_3RD_ORDER_EFFECTS",
+  "COUNTER_EVIDENCE",
+  "CONFIDENCE",
+  "WHAT_TO_WATCH"
+ ],
+ "human_judgment_required_for": [
+  "SCENARIO_INTERPRETATION",
+  "FORECAST_WORDING",
+  "HIGH_STAKES_IMPLICATIONS",
+  "PUBLIC_PUBLICATION",
+  "POLICY_IMPLICATIONS"
+ ],
+ "5g_readiness": {
+  "policy_research_intelligence_must_receive": [
+   "trajectories",
+   "outlooks",
+   "alternative_paths",
+   "scenarios",
+   "second_order_effects",
+   "third_order_effects",
+   "forecasts",
+   "futures_assessments",
+   "counter_evidence",
+   "uncertainties",
+   "assumptions",
+   "falsifiers",
+   "epistemic_ceiling"
+  ],
+  "bypass_5f_forbidden": true
+ },
+ "policy_recommendation_generated": false,
+ "research_recommendation_generated": false,
+ "storytelling_generated": false
+}
