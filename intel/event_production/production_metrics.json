@@ -1,0 +1,34 @@
+{
+ "documents_considered": 502,
+ "confirmed_events": 28,
+ "documents_absorbed_into_events": 76,
+ "unresolved_documents": 426,
+ "avg_docs_per_event": 2.71,
+ "max_docs_per_event": 7,
+ "candidate_high_review": 190,
+ "candidate_low_confidence": 1484,
+ "candidate_total_before_reduction": 1674,
+ "ongoing_issue_groups": 2,
+ "human_rejected": 0,
+ "event_type_distribution": {
+  "OTHER": 15,
+  "REGULATORY_ACTION": 6,
+  "MODEL_RELEASE": 3,
+  "PRODUCT_RELEASE": 1,
+  "COMPANY_ACTION": 1,
+  "FUNDING": 1,
+  "PUBLIC_STATEMENT": 1
+ },
+ "source_diversity_distribution": {
+  "2": 14,
+  "3": 9,
+  "4": 1,
+  "1": 2,
+  "6": 1,
+  "5": 1
+ },
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

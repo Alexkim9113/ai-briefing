@@ -1,0 +1,1213 @@
+{
+ "evtprod_003dea2169532db9": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_003dea2169532db9",
+  "event_name": "Nvidia 동향 (최대)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "003dea2169532db9",
+  "primary_sources": [
+   "003dea2169532db9"
+  ],
+  "related_documents": [
+   "003dea2169532db9",
+   "57dbd0f7c4aa58cd"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "003dea2169532db9",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "57dbd0f7c4aa58cd",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "57dbd0f7c4aa58cd"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_0570e4ca485cbe49": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_0570e4ca485cbe49",
+  "event_name": "네이버-Meta 동향 (네이버지)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Meta",
+   "네이버"
+  ],
+  "key_numbers": [],
+  "primary_document": "0570e4ca485cbe49",
+  "primary_sources": [
+   "0570e4ca485cbe49"
+  ],
+  "related_documents": [
+   "0570e4ca485cbe49",
+   "626a1a31b56e8ec9"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "0570e4ca485cbe49",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "626a1a31b56e8ec9",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "626a1a31b56e8ec9"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_13b2ecb05be9b676": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_13b2ecb05be9b676",
+  "event_name": "Trump 동향 (담판)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "13b2ecb05be9b676",
+  "primary_sources": [
+   "13b2ecb05be9b676"
+  ],
+  "related_documents": [
+   "13b2ecb05be9b676",
+   "39318c552e3132ec",
+   "651ced999ded9424"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "13b2ecb05be9b676",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "39318c552e3132ec",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "651ced999ded9424",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "39318c552e3132ec",
+   "651ced999ded9424"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_1cf7a4f18314cfa2": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_1cf7a4f18314cfa2",
+  "event_name": "Nvidia 승인 (틱톡)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "787b62a3a5306ff0",
+  "primary_sources": [
+   "787b62a3a5306ff0"
+  ],
+  "related_documents": [
+   "1cf7a4f18314cfa2",
+   "787b62a3a5306ff0"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "1cf7a4f18314cfa2",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "787b62a3a5306ff0",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "1cf7a4f18314cfa2"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_1e258d51319b94bf": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_1e258d51319b94bf",
+  "event_name": "LG 동향 (수주)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "LG"
+  ],
+  "key_numbers": [],
+  "primary_document": "fbafabe17015a664",
+  "primary_sources": [
+   "fbafabe17015a664"
+  ],
+  "related_documents": [
+   "1e258d51319b94bf",
+   "4f20354442be35fe",
+   "af55192d35ffee3b",
+   "fbafabe17015a664"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "1e258d51319b94bf",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "4f20354442be35fe",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "af55192d35ffee3b",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "fbafabe17015a664",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "1e258d51319b94bf",
+   "4f20354442be35fe",
+   "af55192d35ffee3b"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_25428a889e4e17d3": {
+  "contradictions": [],
+  "event_date": "2026-09-27",
+  "event_id": "evtprod_25428a889e4e17d3",
+  "event_name": "OpenAI-Anthropic 조사 (호주)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Anthropic",
+   "OpenAI"
+  ],
+  "key_numbers": [],
+  "primary_document": "452cfc6087a1ac77",
+  "primary_sources": [
+   "452cfc6087a1ac77"
+  ],
+  "related_documents": [
+   "25428a889e4e17d3",
+   "452cfc6087a1ac77"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "25428a889e4e17d3",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "452cfc6087a1ac77",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "25428a889e4e17d3"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_29f9b767f0c23a89": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_29f9b767f0c23a89",
+  "event_name": "삼성 동향 (기대감)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "삼성"
+  ],
+  "key_numbers": [],
+  "primary_document": "29f9b767f0c23a89",
+  "primary_sources": [
+   "29f9b767f0c23a89"
+  ],
+  "related_documents": [
+   "29f9b767f0c23a89",
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "29f9b767f0c23a89",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "a6a4027d9878143d",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "e97fa667cee7e431",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_2fa01e8819fd9906": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_2fa01e8819fd9906",
+  "event_name": "OpenAI 출시 철회 (안전성)",
+  "event_type": "MODEL_RELEASE",
+  "key_entities": [
+   "OpenAI"
+  ],
+  "key_numbers": [],
+  "primary_document": "499b5712c021b4e7",
+  "primary_sources": [
+   "499b5712c021b4e7"
+  ],
+  "related_documents": [
+   "2fa01e8819fd9906",
+   "309d3a4f83f0a017",
+   "499b5712c021b4e7",
+   "6ba7417936458e58",
+   "8d36a93d57a1921a",
+   "905fba6e1f01d1ac",
+   "dcd4b5a345a64a9b"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "2fa01e8819fd9906",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "309d3a4f83f0a017",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "499b5712c021b4e7",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "6ba7417936458e58",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "8d36a93d57a1921a",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "905fba6e1f01d1ac",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "dcd4b5a345a64a9b",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "2fa01e8819fd9906",
+   "309d3a4f83f0a017",
+   "6ba7417936458e58",
+   "8d36a93d57a1921a",
+   "905fba6e1f01d1ac",
+   "dcd4b5a345a64a9b"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_2fb8820ccff50440": {
+  "contradictions": [],
+  "event_date": "2026-09-26",
+  "event_id": "evtprod_2fb8820ccff50440",
+  "event_name": "OpenAI 출시 (자사)",
+  "event_type": "MODEL_RELEASE",
+  "key_entities": [
+   "OpenAI"
+  ],
+  "key_numbers": [],
+  "primary_document": "4d987bc13622185d",
+  "primary_sources": [
+   "4d987bc13622185d"
+  ],
+  "related_documents": [
+   "2fb8820ccff50440",
+   "4d987bc13622185d"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "2fb8820ccff50440",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "4d987bc13622185d",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "2fb8820ccff50440"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_357fe251fe22eff2": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_357fe251fe22eff2",
+  "event_name": "Trump 동향 (음모론)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "55148847538c1fbd",
+  "primary_sources": [
+   "55148847538c1fbd"
+  ],
+  "related_documents": [
+   "357fe251fe22eff2",
+   "55148847538c1fbd",
+   "663a777ff2b4ac30"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "357fe251fe22eff2",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "55148847538c1fbd",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "663a777ff2b4ac30",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "357fe251fe22eff2",
+   "663a777ff2b4ac30"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_39143425e551ebb4": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_39143425e551ebb4",
+  "event_name": "카카오 동향 (검증)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "카카오"
+  ],
+  "key_numbers": [],
+  "primary_document": "39143425e551ebb4",
+  "primary_sources": [
+   "39143425e551ebb4"
+  ],
+  "related_documents": [
+   "39143425e551ebb4",
+   "7de6ff5c477db9ea"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "39143425e551ebb4",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "7de6ff5c477db9ea",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "7de6ff5c477db9ea"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_3b69094bd9c06432": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_3b69094bd9c06432",
+  "event_name": "xAI-Nvidia 동향 (마이크론)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Nvidia",
+   "xAI"
+  ],
+  "key_numbers": [],
+  "primary_document": "3b69094bd9c06432",
+  "primary_sources": [
+   "3b69094bd9c06432"
+  ],
+  "related_documents": [
+   "3b69094bd9c06432",
+   "e256f2e34277afd4"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "3b69094bd9c06432",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "e256f2e34277afd4",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "e256f2e34277afd4"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_4847d061d1f249e6": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_4847d061d1f249e6",
+  "event_name": "KAIST 동향 (움직임)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "KAIST"
+  ],
+  "key_numbers": [],
+  "primary_document": "4847d061d1f249e6",
+  "primary_sources": [
+   "4847d061d1f249e6"
+  ],
+  "related_documents": [
+   "4847d061d1f249e6",
+   "e5cf82c318ebff37"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "RESEARCH_FINDING",
+    "document_id": "4847d061d1f249e6",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "e5cf82c318ebff37",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "e5cf82c318ebff37"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_4b6ac88a841fbc54": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_4b6ac88a841fbc54",
+  "event_name": "Meta 동향 (마케팅)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Meta"
+  ],
+  "key_numbers": [],
+  "primary_document": "e67449d274f10817",
+  "primary_sources": [
+   "e67449d274f10817"
+  ],
+  "related_documents": [
+   "4b6ac88a841fbc54",
+   "e67449d274f10817"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "4b6ac88a841fbc54",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "e67449d274f10817",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "4b6ac88a841fbc54"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_567e3791d3b6fa27": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_567e3791d3b6fa27",
+  "event_name": "Nvidia 동향 (기반)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "567e3791d3b6fa27",
+  "primary_sources": [
+   "567e3791d3b6fa27"
+  ],
+  "related_documents": [
+   "567e3791d3b6fa27",
+   "8855c7bacd49d00c",
+   "d196604bbd70d39a"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "567e3791d3b6fa27",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "8855c7bacd49d00c",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "d196604bbd70d39a",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "8855c7bacd49d00c",
+   "d196604bbd70d39a"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_56f68bc91612360d": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_56f68bc91612360d",
+  "event_name": "Meta 동향 (전환하고자)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Meta"
+  ],
+  "key_numbers": [],
+  "primary_document": "56f68bc91612360d",
+  "primary_sources": [
+   "56f68bc91612360d"
+  ],
+  "related_documents": [
+   "56f68bc91612360d",
+   "b89a06590653f53d"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "56f68bc91612360d",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "b89a06590653f53d",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "b89a06590653f53d"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_58921084d65cf8e2": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_58921084d65cf8e2",
+  "event_name": "Trump 규제 (균형)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "58921084d65cf8e2",
+  "primary_sources": [
+   "58921084d65cf8e2"
+  ],
+  "related_documents": [
+   "58921084d65cf8e2",
+   "5ec44a18ca5116c1",
+   "719f0117204ff057"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "58921084d65cf8e2",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "5ec44a18ca5116c1",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "719f0117204ff057",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "5ec44a18ca5116c1",
+   "719f0117204ff057"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_59511be866c5c3b5": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_59511be866c5c3b5",
+  "event_name": "Nvidia 동향 (경쟁)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "89cac0c9522159fd",
+  "primary_sources": [
+   "89cac0c9522159fd"
+  ],
+  "related_documents": [
+   "59511be866c5c3b5",
+   "89cac0c9522159fd"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "59511be866c5c3b5",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "89cac0c9522159fd",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "59511be866c5c3b5"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_5d00ad984724aa40": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_5d00ad984724aa40",
+  "event_name": "Anthropic 출시 (번째)",
+  "event_type": "MODEL_RELEASE",
+  "key_entities": [
+   "Anthropic"
+  ],
+  "key_numbers": [],
+  "primary_document": "5d00ad984724aa40",
+  "primary_sources": [
+   "5d00ad984724aa40"
+  ],
+  "related_documents": [
+   "5d00ad984724aa40",
+   "865c5b591492119e",
+   "b48cf3b3b7844edd"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "5d00ad984724aa40",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "865c5b591492119e",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "b48cf3b3b7844edd",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "865c5b591492119e",
+   "b48cf3b3b7844edd"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_5dac0a21aadd247f": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_5dac0a21aadd247f",
+  "event_name": "Nvidia 규제 (반대)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "bed33a3df012443f",
+  "primary_sources": [
+   "bed33a3df012443f"
+  ],
+  "related_documents": [
+   "5dac0a21aadd247f",
+   "8c58e1ca7fc1bd2b",
+   "a6575ff74981de4c",
+   "a85dd0cf4a15d681",
+   "b51d0171ce50335b",
+   "bed33a3df012443f"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "5dac0a21aadd247f",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "8c58e1ca7fc1bd2b",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "a6575ff74981de4c",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "a85dd0cf4a15d681",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "b51d0171ce50335b",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "bed33a3df012443f",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "5dac0a21aadd247f",
+   "8c58e1ca7fc1bd2b",
+   "a6575ff74981de4c",
+   "a85dd0cf4a15d681",
+   "b51d0171ce50335b"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_641a71ff188a7303": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_641a71ff188a7303",
+  "event_name": "Nvidia 출시 (불능)",
+  "event_type": "PRODUCT_RELEASE",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "c347fc714f369737",
+  "primary_sources": [
+   "c347fc714f369737"
+  ],
+  "related_documents": [
+   "641a71ff188a7303",
+   "a35fc3ec93e92876",
+   "c347fc714f369737"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "641a71ff188a7303",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "a35fc3ec93e92876",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "c347fc714f369737",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "641a71ff188a7303",
+   "a35fc3ec93e92876"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_79a580960f1c16d9": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_79a580960f1c16d9",
+  "event_name": "Trump 규제 (개발)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "79a580960f1c16d9",
+  "primary_sources": [
+   "79a580960f1c16d9"
+  ],
+  "related_documents": [
+   "79a580960f1c16d9",
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "79a580960f1c16d9",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "b14f40615bcee62e",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "bfe97f12fbf84f80",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_7b218ecf09043a44": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_7b218ecf09043a44",
+  "event_name": "Google-OpenAI 회동 (임원들)",
+  "event_type": "COMPANY_ACTION",
+  "key_entities": [
+   "Anthropic",
+   "Google",
+   "Meta",
+   "OpenAI",
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "7b218ecf09043a44",
+  "primary_sources": [
+   "7b218ecf09043a44"
+  ],
+  "related_documents": [
+   "7b218ecf09043a44",
+   "f1e09f10ef95a3a5"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "7b218ecf09043a44",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "f1e09f10ef95a3a5",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "f1e09f10ef95a3a5"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_a118c3f0ef961232": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_a118c3f0ef961232",
+  "event_name": "Google 동향 (사용해)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Google"
+  ],
+  "key_numbers": [],
+  "primary_document": "a118c3f0ef961232",
+  "primary_sources": [
+   "a118c3f0ef961232"
+  ],
+  "related_documents": [
+   "a118c3f0ef961232",
+   "d12e0ed85befc587"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "a118c3f0ef961232",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "d12e0ed85befc587",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "d12e0ed85befc587"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_a98cfc6e0969e741": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_a98cfc6e0969e741",
+  "event_name": "Anthropic 투자 유치 (단독)",
+  "event_type": "FUNDING",
+  "key_entities": [
+   "Anthropic"
+  ],
+  "key_numbers": [],
+  "primary_document": "a98cfc6e0969e741",
+  "primary_sources": [
+   "a98cfc6e0969e741"
+  ],
+  "related_documents": [
+   "a98cfc6e0969e741",
+   "ad709c1aafc95bc2"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "a98cfc6e0969e741",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "ad709c1aafc95bc2",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "ad709c1aafc95bc2"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_a9d16c000a5074e0": {
+  "contradictions": [],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_a9d16c000a5074e0",
+  "event_name": "Nvidia 경고 (강점)",
+  "event_type": "PUBLIC_STATEMENT",
+  "key_entities": [
+   "Nvidia"
+  ],
+  "key_numbers": [],
+  "primary_document": "d6fa27c327baa571",
+  "primary_sources": [
+   "d6fa27c327baa571"
+  ],
+  "related_documents": [
+   "a9d16c000a5074e0",
+   "d6fa27c327baa571"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "a9d16c000a5074e0",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "d6fa27c327baa571",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "a9d16c000a5074e0"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_d3180795a4560ed3": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_d3180795a4560ed3",
+  "event_name": "Trump 규제 (집결)",
+  "event_type": "REGULATORY_ACTION",
+  "key_entities": [
+   "Trump"
+  ],
+  "key_numbers": [],
+  "primary_document": "e1da0f895405134f",
+  "primary_sources": [
+   "e1da0f895405134f"
+  ],
+  "related_documents": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": null,
+    "document_id": "d3180795a4560ed3",
+    "status": "NOT_EXTRACTED"
+   },
+   {
+    "claim_type": "GOVERNMENT_REPORTED",
+    "document_id": "e09f773c670497f3",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": null,
+    "document_id": "e1da0f895405134f",
+    "status": "NOT_EXTRACTED"
+   }
+  ],
+  "secondary_sources": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ },
+ "evtprod_faea70104a385ec2": {
+  "contradictions": [],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_faea70104a385ec2",
+  "event_name": "Meta 동향 (CJ)",
+  "event_type": "OTHER",
+  "key_entities": [
+   "Meta"
+  ],
+  "key_numbers": [],
+  "primary_document": "ffe4a9600d2b1e95",
+  "primary_sources": [
+   "ffe4a9600d2b1e95"
+  ],
+  "related_documents": [
+   "faea70104a385ec2",
+   "ffe4a9600d2b1e95"
+  ],
+  "related_policy": [],
+  "related_research": [],
+  "reported_claims": [
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "faea70104a385ec2",
+    "status": "SUMMARY_DERIVED"
+   },
+   {
+    "claim_type": "MEDIA_REPORTED",
+    "document_id": "ffe4a9600d2b1e95",
+    "status": "SUMMARY_DERIVED"
+   }
+  ],
+  "secondary_sources": [
+   "faea70104a385ec2"
+  ],
+  "uncertainties": [],
+  "verified_facts": []
+ }
+}

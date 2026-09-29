@@ -1,0 +1,35 @@
+[
+ {
+  "issue_fingerprint": {
+   "entities": [
+    "Trump"
+   ],
+   "action_family": "REGULATE"
+  },
+  "anchor_event_id": "evtprod_58921084d65cf8e2",
+  "overflow_document_ids": [
+   "79a580960f1c16d9",
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80",
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "reason": "RECURRING_STATEMENT_CAP_EXCEEDED"
+ },
+ {
+  "issue_fingerprint": {
+   "entities": [
+    "Trump"
+   ],
+   "action_family": "REGULATE"
+  },
+  "anchor_event_id": "evtprod_79a580960f1c16d9",
+  "overflow_document_ids": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "reason": "RECURRING_STATEMENT_CAP_EXCEEDED"
+ }
+]

@@ -1,0 +1,1061 @@
+{
+ "evtprod_003dea2169532db9": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "003dea2169532db9",
+   "57dbd0f7c4aa58cd"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_003dea2169532db9",
+  "event_importance": null,
+  "event_name": "Nvidia 동향 (최대)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "OTHER",
+   [
+    "규모",
+    "달러",
+    "사상"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "003dea2169532db9",
+  "related_document_ids": [
+   "003dea2169532db9",
+   "57dbd0f7c4aa58cd"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_0570e4ca485cbe49": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "0570e4ca485cbe49",
+   "626a1a31b56e8ec9"
+  ],
+  "entities": [
+   "Meta",
+   "네이버"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_0570e4ca485cbe49",
+  "event_importance": null,
+  "event_name": "네이버-Meta 동향 (네이버지)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Meta",
+    "네이버"
+   ],
+   "OTHER",
+   [
+    "글래스",
+    "네이버지",
+    "안내"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "0570e4ca485cbe49",
+  "related_document_ids": [
+   "0570e4ca485cbe49",
+   "626a1a31b56e8ec9"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_13b2ecb05be9b676": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "13b2ecb05be9b676",
+   "39318c552e3132ec",
+   "651ced999ded9424"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_13b2ecb05be9b676",
+  "event_importance": null,
+  "event_name": "Trump 동향 (담판)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Trump"
+   ],
+   "OTHER",
+   [
+    "담판",
+    "속도조절론",
+    "아모데이"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "13b2ecb05be9b676",
+  "related_document_ids": [
+   "13b2ecb05be9b676",
+   "39318c552e3132ec",
+   "651ced999ded9424"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_1cf7a4f18314cfa2": {
+  "action_family": "APPROVE",
+  "document_ids": [
+   "1cf7a4f18314cfa2",
+   "787b62a3a5306ff0"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_1cf7a4f18314cfa2",
+  "event_importance": null,
+  "event_name": "Nvidia 승인 (틱톡)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "APPROVE",
+   [
+    "가닥",
+    "구매",
+    "년만"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "787b62a3a5306ff0",
+  "related_document_ids": [
+   "1cf7a4f18314cfa2",
+   "787b62a3a5306ff0"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_1e258d51319b94bf": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "1e258d51319b94bf",
+   "4f20354442be35fe",
+   "af55192d35ffee3b",
+   "fbafabe17015a664"
+  ],
+  "entities": [
+   "LG"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_1e258d51319b94bf",
+  "event_importance": null,
+  "event_name": "LG 동향 (수주)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "LG"
+   ],
+   "OTHER",
+   [
+    "AI데이터센터",
+    "LG전자",
+    "공조"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "fbafabe17015a664",
+  "related_document_ids": [
+   "1e258d51319b94bf",
+   "4f20354442be35fe",
+   "af55192d35ffee3b",
+   "fbafabe17015a664"
+  ],
+  "source_count": 4,
+  "source_diversity": 4
+ },
+ "evtprod_25428a889e4e17d3": {
+  "action_family": "INVESTIGATE",
+  "document_ids": [
+   "25428a889e4e17d3",
+   "452cfc6087a1ac77"
+  ],
+  "entities": [
+   "Anthropic",
+   "OpenAI"
+  ],
+  "event_date": "2026-09-27",
+  "event_id": "evtprod_25428a889e4e17d3",
+  "event_importance": null,
+  "event_name": "OpenAI-Anthropic 조사 (호주)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Anthropic",
+    "OpenAI"
+   ],
+   "INVESTIGATE",
+   [
+    "상원",
+    "요청",
+    "위반"
+   ],
+   "2026-09-27"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "452cfc6087a1ac77",
+  "related_document_ids": [
+   "25428a889e4e17d3",
+   "452cfc6087a1ac77"
+  ],
+  "source_count": 2,
+  "source_diversity": 1
+ },
+ "evtprod_29f9b767f0c23a89": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "29f9b767f0c23a89",
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "entities": [
+   "삼성"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_29f9b767f0c23a89",
+  "event_importance": null,
+  "event_name": "삼성 동향 (기대감)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "삼성"
+   ],
+   "OTHER",
+   [
+    "기대감",
+    "내년",
+    "분기"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "29f9b767f0c23a89",
+  "related_document_ids": [
+   "29f9b767f0c23a89",
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_2fa01e8819fd9906": {
+  "action_family": "WITHDRAW",
+  "document_ids": [
+   "2fa01e8819fd9906",
+   "309d3a4f83f0a017",
+   "499b5712c021b4e7",
+   "6ba7417936458e58",
+   "8d36a93d57a1921a",
+   "905fba6e1f01d1ac",
+   "dcd4b5a345a64a9b"
+  ],
+  "entities": [
+   "OpenAI"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_2fa01e8819fd9906",
+  "event_importance": null,
+  "event_name": "OpenAI 출시 철회 (안전성)",
+  "event_status": "CONFIRMED",
+  "event_type": "MODEL_RELEASE",
+  "fingerprint": [
+   [
+    "OpenAI"
+   ],
+   "WITHDRAW",
+   [
+    "안전성",
+    "우려",
+    "조선비즈"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "499b5712c021b4e7",
+  "related_document_ids": [
+   "2fa01e8819fd9906",
+   "309d3a4f83f0a017",
+   "499b5712c021b4e7",
+   "6ba7417936458e58",
+   "8d36a93d57a1921a",
+   "905fba6e1f01d1ac",
+   "dcd4b5a345a64a9b"
+  ],
+  "source_count": 7,
+  "source_diversity": 6
+ },
+ "evtprod_2fb8820ccff50440": {
+  "action_family": "RELEASE",
+  "document_ids": [
+   "2fb8820ccff50440",
+   "4d987bc13622185d"
+  ],
+  "entities": [
+   "OpenAI"
+  ],
+  "event_date": "2026-09-26",
+  "event_id": "evtprod_2fb8820ccff50440",
+  "event_importance": null,
+  "event_name": "OpenAI 출시 (자사)",
+  "event_status": "CONFIRMED",
+  "event_type": "MODEL_RELEASE",
+  "fingerprint": [
+   [
+    "OpenAI"
+   ],
+   "RELEASE",
+   [
+    "웹사이트",
+    "자사",
+    "행동"
+   ],
+   "2026-09-26"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "4d987bc13622185d",
+  "related_document_ids": [
+   "2fb8820ccff50440",
+   "4d987bc13622185d"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_357fe251fe22eff2": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "357fe251fe22eff2",
+   "55148847538c1fbd",
+   "663a777ff2b4ac30"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_357fe251fe22eff2",
+  "event_importance": null,
+  "event_name": "Trump 동향 (음모론)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Trump"
+   ],
+   "OTHER",
+   [
+    "교황",
+    "반박",
+    "역겨운"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "55148847538c1fbd",
+  "related_document_ids": [
+   "357fe251fe22eff2",
+   "55148847538c1fbd",
+   "663a777ff2b4ac30"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_39143425e551ebb4": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "39143425e551ebb4",
+   "7de6ff5c477db9ea"
+  ],
+  "entities": [
+   "카카오"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_39143425e551ebb4",
+  "event_importance": null,
+  "event_name": "카카오 동향 (검증)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "카카오"
+   ],
+   "OTHER",
+   [
+    "검증",
+    "단계",
+    "안전성"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "39143425e551ebb4",
+  "related_document_ids": [
+   "39143425e551ebb4",
+   "7de6ff5c477db9ea"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_3b69094bd9c06432": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "3b69094bd9c06432",
+   "e256f2e34277afd4"
+  ],
+  "entities": [
+   "Nvidia",
+   "xAI"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_3b69094bd9c06432",
+  "event_importance": null,
+  "event_name": "xAI-Nvidia 동향 (마이크론)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Nvidia",
+    "xAI"
+   ],
+   "OTHER",
+   [
+    "개장전특징주",
+    "마이크론",
+    "매입"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "3b69094bd9c06432",
+  "related_document_ids": [
+   "3b69094bd9c06432",
+   "e256f2e34277afd4"
+  ],
+  "source_count": 2,
+  "source_diversity": 1
+ },
+ "evtprod_4847d061d1f249e6": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "4847d061d1f249e6",
+   "e5cf82c318ebff37"
+  ],
+  "entities": [
+   "KAIST"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_4847d061d1f249e6",
+  "event_importance": null,
+  "event_name": "KAIST 동향 (움직임)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "KAIST"
+   ],
+   "OTHER",
+   [
+    "개발",
+    "움직임",
+    "흐름"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "4847d061d1f249e6",
+  "related_document_ids": [
+   "4847d061d1f249e6",
+   "e5cf82c318ebff37"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_4b6ac88a841fbc54": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "4b6ac88a841fbc54",
+   "e67449d274f10817"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_4b6ac88a841fbc54",
+  "event_importance": null,
+  "event_name": "Meta 동향 (마케팅)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Meta"
+   ],
+   "OTHER",
+   [
+    "마케팅",
+    "안경"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "e67449d274f10817",
+  "related_document_ids": [
+   "4b6ac88a841fbc54",
+   "e67449d274f10817"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_567e3791d3b6fa27": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "567e3791d3b6fa27",
+   "8855c7bacd49d00c",
+   "d196604bbd70d39a"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_567e3791d3b6fa27",
+  "event_importance": null,
+  "event_name": "Nvidia 동향 (기반)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "OTHER",
+   [
+    "OpenShell",
+    "기능",
+    "기반"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "567e3791d3b6fa27",
+  "related_document_ids": [
+   "567e3791d3b6fa27",
+   "8855c7bacd49d00c",
+   "d196604bbd70d39a"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_56f68bc91612360d": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "56f68bc91612360d",
+   "b89a06590653f53d"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_56f68bc91612360d",
+  "event_importance": null,
+  "event_name": "Meta 동향 (전환하고자)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Meta"
+   ],
+   "OTHER",
+   [
+    "대상",
+    "뮤즈",
+    "수익원"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "56f68bc91612360d",
+  "related_document_ids": [
+   "56f68bc91612360d",
+   "b89a06590653f53d"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_58921084d65cf8e2": {
+  "action_family": "REGULATE",
+  "document_ids": [
+   "58921084d65cf8e2",
+   "5ec44a18ca5116c1",
+   "719f0117204ff057"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_58921084d65cf8e2",
+  "event_importance": null,
+  "event_name": "Trump 규제 (균형)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Trump"
+   ],
+   "REGULATE",
+   [
+    "개발",
+    "균형",
+    "의장"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "58921084d65cf8e2",
+  "related_document_ids": [
+   "58921084d65cf8e2",
+   "5ec44a18ca5116c1",
+   "719f0117204ff057"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_59511be866c5c3b5": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "59511be866c5c3b5",
+   "89cac0c9522159fd"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_59511be866c5c3b5",
+  "event_importance": null,
+  "event_name": "Nvidia 동향 (경쟁)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "OTHER",
+   [
+    "AI 증류",
+    "경쟁",
+    "도둑질"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "89cac0c9522159fd",
+  "related_document_ids": [
+   "59511be866c5c3b5",
+   "89cac0c9522159fd"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_5d00ad984724aa40": {
+  "action_family": "RELEASE",
+  "document_ids": [
+   "5d00ad984724aa40",
+   "865c5b591492119e",
+   "b48cf3b3b7844edd"
+  ],
+  "entities": [
+   "Anthropic"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_5d00ad984724aa40",
+  "event_importance": null,
+  "event_name": "Anthropic 출시 (번째)",
+  "event_status": "CONFIRMED",
+  "event_type": "MODEL_RELEASE",
+  "fingerprint": [
+   [
+    "Anthropic"
+   ],
+   "RELEASE",
+   [
+    "번째",
+    "속도 조절",
+    "촉구"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "5d00ad984724aa40",
+  "related_document_ids": [
+   "5d00ad984724aa40",
+   "865c5b591492119e",
+   "b48cf3b3b7844edd"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_5dac0a21aadd247f": {
+  "action_family": "REGULATE",
+  "document_ids": [
+   "5dac0a21aadd247f",
+   "8c58e1ca7fc1bd2b",
+   "a6575ff74981de4c",
+   "a85dd0cf4a15d681",
+   "b51d0171ce50335b",
+   "bed33a3df012443f"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_5dac0a21aadd247f",
+  "event_importance": null,
+  "event_name": "Nvidia 규제 (반대)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "REGULATE",
+   [
+    "교황",
+    "레오",
+    "반대"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "bed33a3df012443f",
+  "related_document_ids": [
+   "5dac0a21aadd247f",
+   "8c58e1ca7fc1bd2b",
+   "a6575ff74981de4c",
+   "a85dd0cf4a15d681",
+   "b51d0171ce50335b",
+   "bed33a3df012443f"
+  ],
+  "source_count": 6,
+  "source_diversity": 5
+ },
+ "evtprod_641a71ff188a7303": {
+  "action_family": "RELEASE",
+  "document_ids": [
+   "641a71ff188a7303",
+   "a35fc3ec93e92876",
+   "c347fc714f369737"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_641a71ff188a7303",
+  "event_importance": null,
+  "event_name": "Nvidia 출시 (불능)",
+  "event_status": "CONFIRMED",
+  "event_type": "PRODUCT_RELEASE",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "RELEASE",
+   [
+    "방지할",
+    "불능",
+    "상태"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "c347fc714f369737",
+  "related_document_ids": [
+   "641a71ff188a7303",
+   "a35fc3ec93e92876",
+   "c347fc714f369737"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_79a580960f1c16d9": {
+  "action_family": "REGULATE",
+  "document_ids": [
+   "79a580960f1c16d9",
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_79a580960f1c16d9",
+  "event_importance": null,
+  "event_name": "Trump 규제 (개발)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Trump"
+   ],
+   "REGULATE",
+   [
+    "개발",
+    "입장",
+    "재확인"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "79a580960f1c16d9",
+  "related_document_ids": [
+   "79a580960f1c16d9",
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_7b218ecf09043a44": {
+  "action_family": "MEET",
+  "document_ids": [
+   "7b218ecf09043a44",
+   "f1e09f10ef95a3a5"
+  ],
+  "entities": [
+   "Anthropic",
+   "Google",
+   "Meta",
+   "OpenAI",
+   "Trump"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_7b218ecf09043a44",
+  "event_importance": null,
+  "event_name": "Google-OpenAI 회동 (임원들)",
+  "event_status": "CONFIRMED",
+  "event_type": "COMPANY_ACTION",
+  "fingerprint": [
+   [
+    "Anthropic",
+    "Google",
+    "Meta",
+    "OpenAI",
+    "Trump"
+   ],
+   "MEET",
+   [
+    "임원들"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "7b218ecf09043a44",
+  "related_document_ids": [
+   "7b218ecf09043a44",
+   "f1e09f10ef95a3a5"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_a118c3f0ef961232": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "a118c3f0ef961232",
+   "d12e0ed85befc587"
+  ],
+  "entities": [
+   "Google"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_a118c3f0ef961232",
+  "event_importance": null,
+  "event_name": "Google 동향 (사용해)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Google"
+   ],
+   "OTHER",
+   [
+    "도구",
+    "동안",
+    "사용해"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "a118c3f0ef961232",
+  "related_document_ids": [
+   "a118c3f0ef961232",
+   "d12e0ed85befc587"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_a98cfc6e0969e741": {
+  "action_family": "INVEST",
+  "document_ids": [
+   "a98cfc6e0969e741",
+   "ad709c1aafc95bc2"
+  ],
+  "entities": [
+   "Anthropic"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_a98cfc6e0969e741",
+  "event_importance": null,
+  "event_name": "Anthropic 투자 유치 (단독)",
+  "event_status": "CONFIRMED",
+  "event_type": "FUNDING",
+  "fingerprint": [
+   [
+    "Anthropic"
+   ],
+   "INVEST",
+   [
+    "단독",
+    "드러나",
+    "비용"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "a98cfc6e0969e741",
+  "related_document_ids": [
+   "a98cfc6e0969e741",
+   "ad709c1aafc95bc2"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_a9d16c000a5074e0": {
+  "action_family": "WARN",
+  "document_ids": [
+   "a9d16c000a5074e0",
+   "d6fa27c327baa571"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_date": "2026-09-29",
+  "event_id": "evtprod_a9d16c000a5074e0",
+  "event_importance": null,
+  "event_name": "Nvidia 경고 (강점)",
+  "event_status": "CONFIRMED",
+  "event_type": "PUBLIC_STATEMENT",
+  "fingerprint": [
+   [
+    "Nvidia"
+   ],
+   "WARN",
+   [
+    "강점",
+    "너무",
+    "두려워할까"
+   ],
+   "2026-09-29"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "d6fa27c327baa571",
+  "related_document_ids": [
+   "a9d16c000a5074e0",
+   "d6fa27c327baa571"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ },
+ "evtprod_d3180795a4560ed3": {
+  "action_family": "REGULATE",
+  "document_ids": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_d3180795a4560ed3",
+  "event_importance": null,
+  "event_name": "Trump 규제 (집결)",
+  "event_status": "CONFIRMED",
+  "event_type": "REGULATORY_ACTION",
+  "fingerprint": [
+   [
+    "Trump"
+   ],
+   "REGULATE",
+   [
+    "거물들",
+    "속도냐 안전이냐",
+    "집결"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "e1da0f895405134f",
+  "related_document_ids": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "source_count": 3,
+  "source_diversity": 3
+ },
+ "evtprod_faea70104a385ec2": {
+  "action_family": "OTHER",
+  "document_ids": [
+   "faea70104a385ec2",
+   "ffe4a9600d2b1e95"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_date": "2026-09-28",
+  "event_id": "evtprod_faea70104a385ec2",
+  "event_importance": null,
+  "event_name": "Meta 동향 (CJ)",
+  "event_status": "CONFIRMED",
+  "event_type": "OTHER",
+  "fingerprint": [
+   [
+    "Meta"
+   ],
+   "OTHER",
+   [
+    "CJ",
+    "기업용",
+    "데사"
+   ],
+   "2026-09-28"
+  ],
+  "merge_confidence": 7.0,
+  "primary_document_id": "ffe4a9600d2b1e95",
+  "related_document_ids": [
+   "faea70104a385ec2",
+   "ffe4a9600d2b1e95"
+  ],
+  "source_count": 2,
+  "source_diversity": 2
+ }
+}

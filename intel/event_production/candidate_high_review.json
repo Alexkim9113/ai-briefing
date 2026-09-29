@@ -1,0 +1,2824 @@
+[
+ {
+  "a": "003dea2169532db9",
+  "b": "1cf7a4f18314cfa2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "499b5712c021b4e7",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "641a71ff188a7303",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "787b62a3a5306ff0",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "89cac0c9522159fd",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "a6575ff74981de4c",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "a85dd0cf4a15d681",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "b51d0171ce50335b",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "c347fc714f369737",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "d196604bbd70d39a",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "003dea2169532db9",
+  "b": "d6fa27c327baa571",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "011ef36b54ed2caf",
+  "b": "788d01ac3691ff08",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.303)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "011ef36b54ed2caf",
+  "b": "8d120e73d1ec23c7",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.323)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "4b6ac88a841fbc54",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "56f68bc91612360d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "5b3bd1a0b357ff1d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "b89a06590653f53d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "e67449d274f10817",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "0570e4ca485cbe49",
+  "b": "faea70104a385ec2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "06e93634a5683e16",
+  "b": "452cfc6087a1ac77",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "098bf8cf7059ebdf",
+  "b": "85e24b1ddd0fddb8",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(ACQUIRE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "58921084d65cf8e2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "5ec44a18ca5116c1",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "663a777ff2b4ac30",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "6932c746610094b9",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "79a580960f1c16d9",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "a47b03818169cd6e",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "b14f40615bcee62e",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "b1f9e5ce7b1385e0",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "bfe97f12fbf84f80",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "d3180795a4560ed3",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "e09f773c670497f3",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "e1da0f895405134f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "f1e09f10ef95a3a5",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13b2ecb05be9b676",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13eddd2d548f927d",
+  "b": "66b537ba2c5a288f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.358)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "13eddd2d548f927d",
+  "b": "e421d3f963f49792",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.372)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1543742ca214e323",
+  "b": "3b69094bd9c06432",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1543742ca214e323",
+  "b": "e256f2e34277afd4",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "161baeca232fce4b",
+  "b": "43a9c024e95cb8af",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "161baeca232fce4b",
+  "b": "955ff8e165125ebf",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "161baeca232fce4b",
+  "b": "a503f173e1a7cd6d",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1b1336bb7e5fa1da",
+  "b": "7b218ecf09043a44",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1b1336bb7e5fa1da",
+  "b": "dcd4b5a345a64a9b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1b1336bb7e5fa1da",
+  "b": "ddab416a8880e847",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1bdc1f260b416720",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "6568156e487803bb",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "663a777ff2b4ac30",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "79a580960f1c16d9",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "79b976d981ecb781",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "a681b1f3f24363d6",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1c867f4502962656",
+  "b": "e09f773c670497f3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "499b5712c021b4e7",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "ACTION_FAMILY_MISMATCH(APPROVE vs WITHDRAW)"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "89cac0c9522159fd",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "a6575ff74981de4c",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "a85dd0cf4a15d681",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "b51d0171ce50335b",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1cf7a4f18314cfa2",
+  "b": "d196604bbd70d39a",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1f81d9a6b7ab6af0",
+  "b": "39d67296f72562fd",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1f81d9a6b7ab6af0",
+  "b": "951237163b121a0b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "1f81d9a6b7ab6af0",
+  "b": "e148c5ca51df1a7b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "205d24fc4aa4460d",
+  "b": "e148c5ca51df1a7b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "227c6ab559343ea9",
+  "b": "85e24b1ddd0fddb8",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(ACQUIRE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2352697bb93a9ed0",
+  "b": "4133fd226b224128",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2352697bb93a9ed0",
+  "b": "bc8cb8c023f350b7",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2352697bb93a9ed0",
+  "b": "d2394bd4dea4b108",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2352697bb93a9ed0",
+  "b": "d5ab3d9f70677efa",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "25428a889e4e17d3",
+  "b": "fe88331025fecb70",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(2)",
+   "DATE_CLOSE(<=2d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2809059b0209e060",
+  "b": "3e71d6c6be22f764",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(ANNOUNCE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "29f9b767f0c23a89",
+  "b": "d5ab3d9f70677efa",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2b921d55000f83c9",
+  "b": "951237163b121a0b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2d116b4142889cd6",
+  "b": "49be8e2c8fc24273",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2e790be387745d18",
+  "b": "39143425e551ebb4",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "2ebbad3249d4bcd3",
+  "b": "66b537ba2c5a288f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.307)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "32712da4bf898a6e",
+  "b": "9631da5dae6e57c0",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "32712da4bf898a6e",
+  "b": "a118c3f0ef961232",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "32712da4bf898a6e",
+  "b": "d12e0ed85befc587",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "342c492ea49cacef",
+  "b": "567e3791d3b6fa27",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "357fe251fe22eff2",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "39d67296f72562fd",
+  "b": "951237163b121a0b",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "39d67296f72562fd",
+  "b": "f74745b2c6f47143",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "3f7969b6b8365164",
+  "b": "e5069c3c119cc29d",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4133fd226b224128",
+  "b": "bc8cb8c023f350b7",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4133fd226b224128",
+  "b": "d2394bd4dea4b108",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4133fd226b224128",
+  "b": "d5ab3d9f70677efa",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "43a9c024e95cb8af",
+  "b": "8cdc42a0090085b7",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "43a9c024e95cb8af",
+  "b": "955ff8e165125ebf",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4847d061d1f249e6",
+  "b": "49b59d900ec7166a",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4847d061d1f249e6",
+  "b": "95fdbc0adbb37fc8",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4847d061d1f249e6",
+  "b": "d6377ed8ecd7dc34",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.312)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4847d061d1f249e6",
+  "b": "f813795f882f1d79",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(3)",
+   "DATE_ADJACENT(<=1d)",
+   "TITLE_SIMILARITY(0.303)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "49b59d900ec7166a",
+  "b": "95fdbc0adbb37fc8",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "49b59d900ec7166a",
+  "b": "d6377ed8ecd7dc34",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4b6ac88a841fbc54",
+  "b": "56f68bc91612360d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4b6ac88a841fbc54",
+  "b": "5b3bd1a0b357ff1d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4b6ac88a841fbc54",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4b6ac88a841fbc54",
+  "b": "b89a06590653f53d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4b6ac88a841fbc54",
+  "b": "faea70104a385ec2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4e170ef4dc847489",
+  "b": "99a39e2815aabe32",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4e170ef4dc847489",
+  "b": "aa5e3e547eac71d3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "4e79040d2acbe57a",
+  "b": "641a71ff188a7303",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(RELEASE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "505f45831d507283",
+  "b": "ac62a839e4263e8d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "53ccfe4ee8a4c931",
+  "b": "655bd5362be42b9c",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(PARTNER)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "567e3791d3b6fa27",
+  "b": "59511be866c5c3b5",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "567e3791d3b6fa27",
+  "b": "5dac0a21aadd247f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "567e3791d3b6fa27",
+  "b": "8c58e1ca7fc1bd2b",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "567e3791d3b6fa27",
+  "b": "a35fc3ec93e92876",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "56f68bc91612360d",
+  "b": "5b3bd1a0b357ff1d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "56f68bc91612360d",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "56f68bc91612360d",
+  "b": "faea70104a385ec2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "58921084d65cf8e2",
+  "b": "6932c746610094b9",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "58921084d65cf8e2",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "58921084d65cf8e2",
+  "b": "e4828906e0c2a24c",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_CLOSE(<=2d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "58921084d65cf8e2",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59511be866c5c3b5",
+  "b": "5dac0a21aadd247f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59511be866c5c3b5",
+  "b": "8c58e1ca7fc1bd2b",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59511be866c5c3b5",
+  "b": "a35fc3ec93e92876",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59b0e24ab40ae762",
+  "b": "a9d16c000a5074e0",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59b0e24ab40ae762",
+  "b": "d6fa27c327baa571",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "59b0e24ab40ae762",
+  "b": "de73610bdcd632eb",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "5b3bd1a0b357ff1d",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "5b3bd1a0b357ff1d",
+  "b": "faea70104a385ec2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "5d00ad984724aa40",
+  "b": "6e61f7c39a884b91",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6157b03fcb4ba8c2",
+  "b": "c4f8d657a2124698",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(PARTNER)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "64518cad73d2f295",
+  "b": "89ccee2684b4572e",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "64518cad73d2f295",
+  "b": "a503f173e1a7cd6d",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6568156e487803bb",
+  "b": "79b976d981ecb781",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6568156e487803bb",
+  "b": "a681b1f3f24363d6",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6568156e487803bb",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6568156e487803bb",
+  "b": "e09f773c670497f3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "679e89ed0f11656e",
+  "b": "daef1e4c7c82ef2d",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "79a580960f1c16d9",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "a47b03818169cd6e",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "b14f40615bcee62e",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "b1f9e5ce7b1385e0",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "bfe97f12fbf84f80",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "d3180795a4560ed3",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "e09f773c670497f3",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "e1da0f895405134f",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "f1e09f10ef95a3a5",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6932c746610094b9",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6a277ac6abf1a973",
+  "b": "bc2b0801b29fc39e",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6a277ac6abf1a973",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6e61f7c39a884b91",
+  "b": "7b218ecf09043a44",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6e61f7c39a884b91",
+  "b": "a98cfc6e0969e741",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "6e61f7c39a884b91",
+  "b": "f74745b2c6f47143",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "7815a514e52c1293",
+  "b": "de3e71b484376fc0",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "79a580960f1c16d9",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "79a580960f1c16d9",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "79b976d981ecb781",
+  "b": "a681b1f3f24363d6",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "79b976d981ecb781",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "79b976d981ecb781",
+  "b": "e09f773c670497f3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "7b218ecf09043a44",
+  "b": "bc5d1547b9dcef3e",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "7b218ecf09043a44",
+  "b": "daef1e4c7c82ef2d",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "7b218ecf09043a44",
+  "b": "faea70104a385ec2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "7b218ecf09043a44",
+  "b": "fe88331025fecb70",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "8bbc61f2b406854c",
+  "b": "ad709c1aafc95bc2",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "8bbc61f2b406854c",
+  "b": "f74745b2c6f47143",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "95fdbc0adbb37fc8",
+  "b": "d6377ed8ecd7dc34",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "95fdbc0adbb37fc8",
+  "b": "f813795f882f1d79",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "9631da5dae6e57c0",
+  "b": "a118c3f0ef961232",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "9631da5dae6e57c0",
+  "b": "d12e0ed85befc587",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "99a39e2815aabe32",
+  "b": "aa5e3e547eac71d3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a47b03818169cd6e",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a47b03818169cd6e",
+  "b": "e18ca1f6c1da5525",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(RELEASE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a47b03818169cd6e",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a681b1f3f24363d6",
+  "b": "d4e9a3cb4ba2d832",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a681b1f3f24363d6",
+  "b": "e09f773c670497f3",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(REGULATE)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a6860a601e532fa2",
+  "b": "c4f8d657a2124698",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(PARTNER)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a98cfc6e0969e741",
+  "b": "f74745b2c6f47143",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "ACTION_FAMILY_MISMATCH(INVEST vs WARN)"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "a9d16c000a5074e0",
+  "b": "de73610bdcd632eb",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "aa5e3e547eac71d3",
+  "b": "fac437ef93d158a8",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "b1f9e5ce7b1385e0",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "b1f9e5ce7b1385e0",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "bc2b0801b29fc39e",
+  "b": "e148c5ca51df1a7b",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_CLOSE(<=2d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "bc2b0801b29fc39e",
+  "b": "f6508ca400c834f4",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(WARN)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "bc5d1547b9dcef3e",
+  "b": "fe88331025fecb70",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "bc8cb8c023f350b7",
+  "b": "d2394bd4dea4b108",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "bc8cb8c023f350b7",
+  "b": "d5ab3d9f70677efa",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "d2394bd4dea4b108",
+  "b": "d5ab3d9f70677efa",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)",
+   "ACTION_MATCH(INVEST)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "d3180795a4560ed3",
+  "b": "d9174ae236f11b26",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "d3180795a4560ed3",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "d9174ae236f11b26",
+  "b": "f98d2ac1c3cdd422",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "daef1e4c7c82ef2d",
+  "b": "fe88331025fecb70",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "CANONICAL_ENTITY_OVERLAP(1)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_DISTINCTIVE_TERM"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "e3670fdb1168e9de",
+  "b": "fcc6662fdc5f8cae",
+  "score": 6.5,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(3)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ },
+ {
+  "a": "f52ceebf9117e5b1",
+  "b": "fcc6662fdc5f8cae",
+  "score": 6.0,
+  "state": "CANDIDATE",
+  "positive_evidence": [
+   "DISTINCTIVE_TERM_OVERLAP(2)",
+   "DATE_ADJACENT(<=1d)"
+  ],
+  "negative_evidence": [
+   "NO_SHARED_ENTITY",
+   "PAPERS_WITHOUT_IDENTIFIER_CAPPED",
+   "NO_ENTITY_ANCHOR_CAPPED"
+  ],
+  "review_bucket": "HIGH_REVIEW"
+ }
+]
