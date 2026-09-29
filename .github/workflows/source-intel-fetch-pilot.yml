@@ -1,0 +1,37 @@
+name: Source Intelligence — Real Fetch Pilot
+
+# SOURCE INTELLIGENCE remediation (item 6). workflow_dispatch로만 수동 실행한다 - 정기
+# 스케줄이나 push 트리거는 붙이지 않는다(섹션 67: crawl 금지, 최소한의 pilot). 이
+# 워크플로는 REMEDIATION 세션에서 스캐폴딩만 됐고 실행/검증되지 않았다 - 이 세션
+# 환경은 GitHub Actions를 트리거하거나 실행 결과를 확인할 방법이 없다.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5  # 섹션 67: URL 최대 6개 * 15초 타임아웃 + 여유 - 전체 실행을 짧게 cap
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install trafilatura
+        run: pip install --disable-pip-version-check trafilatura
+
+      - name: Run fetch pilot
+        run: python3 intel/source_intelligence/scripts/fetch_pilot.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-intel-fetch-pilot-results
+          path: fetch_pilot_results.json
+          retention-days: 14
