@@ -1,0 +1,25 @@
+{
+ "all_verified": false,
+ "control": {
+  "active_count": 0,
+  "status": "PENDING"
+ },
+ "counter_evidence": {
+  "active_count": 0,
+  "status": "PENDING"
+ },
+ "dependency": {
+  "active_count": 0,
+  "status": "PENDING"
+ },
+ "gemini_level3": {
+  "gemini_calls_added_last_run": 0,
+  "level3_claim_count": 0,
+  "status": "PENDING"
+ },
+ "policy_law_court_primary": {
+  "matching_claim_count": 0,
+  "matching_claim_ids": [],
+  "status": "PENDING"
+ }
+}
