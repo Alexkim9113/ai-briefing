@@ -1,0 +1,13 @@
+{
+  "counter_evidence": {"human_confirmed": [], "human_rejected": []},
+  "contradictions": {"human_confirmed": [], "human_rejected": []},
+  "tensions": {"human_confirmed": [], "human_rejected": []},
+  "paradox_candidates": {"human_confirmed": [], "human_rejected": []},
+  "uncertainties": {"human_confirmed": [], "human_rejected": []},
+  "assumptions": {"human_confirmed": [], "human_rejected": []},
+  "falsifiers": {"human_confirmed": [], "human_rejected": []},
+  "evidence_gaps": {"human_confirmed": [], "human_rejected": []},
+  "alternative_explanations": {"human_confirmed": [], "human_rejected": []},
+  "view_revisions": {"human_confirmed": [], "human_rejected": []},
+  "epistemic_assessments": {"human_confirmed": [], "human_rejected": []}
+}

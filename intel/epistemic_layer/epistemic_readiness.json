@@ -1,0 +1,40 @@
+{
+ "supports_weekly_queries": [
+  "WHAT_CHANGED_OUR_VIEW",
+  "OPEN_CONTRADICTIONS",
+  "OPEN_TENSIONS",
+  "PARADOX_CANDIDATES",
+  "TOP_UNCERTAINTIES",
+  "UNRESOLVED_EVIDENCE_GAPS"
+ ],
+ "supports_ask_metaxis_queries": [
+  "이 판단의 반대 증거는?",
+  "무엇을 아직 모르는가?",
+  "이 판단에 숨어 있는 가정은?",
+  "이 판단이 틀렸다면 무엇이 관측되어야 하는가?",
+  "다른 설명 가능성은?",
+  "이 판단은 얼마나 많은 독립적 근거에 기반하는가?",
+  "이 결론과 모순되는 다른 결론이 있는가?",
+  "이것은 모순인가 긴장인가 역설인가?",
+  "이 판단은 언제 마지막으로 수정되었는가?"
+ ],
+ "5f_futures_readiness": {
+  "trajectory_outlook_scenario_must_receive": [
+   "counter_evidence",
+   "contradictions",
+   "tensions",
+   "uncertainties",
+   "assumptions",
+   "falsifiers",
+   "evidence_gaps",
+   "alternative_explanations",
+   "epistemic_ceiling"
+  ],
+  "bypass_5e_forbidden": true
+ },
+ "trajectory_generated": false,
+ "outlook_generated": false,
+ "scenario_generated": false,
+ "policy_recommendation_generated": false,
+ "research_recommendation_generated": false
+}

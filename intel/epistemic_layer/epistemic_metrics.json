@@ -1,0 +1,20 @@
+{
+ "input_target_objects": 0,
+ "input_evidence_records": 0,
+ "counter_evidence_total": 0,
+ "contradictions_total": 0,
+ "tensions_total": 0,
+ "paradox_candidates_total": 0,
+ "uncertainties_total": 0,
+ "assumptions_total": 0,
+ "falsifiers_total": 0,
+ "evidence_gaps_total": 0,
+ "alternative_explanations_total": 0,
+ "view_revisions_total": 0,
+ "epistemic_assessments_total": 0,
+ "contradictions_by_conflict_type": {},
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}
