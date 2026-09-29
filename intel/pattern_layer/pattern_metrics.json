@@ -1,0 +1,13 @@
+{
+ "input_active_changes": 0,
+ "input_active_signals": 0,
+ "pattern_candidates_generated": 0,
+ "patterns_created_or_updated": 0,
+ "patterns_total": 0,
+ "patterns_by_type": {},
+ "patterns_by_status": {},
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "embedding_calls": 0,
+ "external_api_calls": 0
+}

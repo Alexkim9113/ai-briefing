@@ -1,0 +1,12 @@
+{
+ "supports_weekly_queries": [
+  "NEW_PATTERNS",
+  "STRENGTHENING_PATTERNS",
+  "WEAKENING_PATTERNS",
+  "CROSS_DOMAIN_PATTERNS",
+  "PATTERNS_WITH_COUNTER_EVIDENCE"
+ ],
+ "supports_futures_chain": "PATTERN -> STRUCTURAL_CHANGE (not implemented this phase)",
+ "structural_change_generated": false,
+ "forecast_generated": false
+}
