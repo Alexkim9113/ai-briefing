@@ -1,0 +1,15 @@
+{
+ "total_documents": 569,
+ "rights_mode_distribution": {
+  "LINK_ONLY": 569
+ },
+ "summary_blocked_count": 569,
+ "metaxis_point_blocked_count": 569,
+ "external_image_blocked_count": 569,
+ "metaxis_original_count": 0,
+ "link_only_count": 569,
+ "information_density_note": "569건 중 569건(100.0%)이 Quick Brief(summary) 없이 제목+링크만 남게 됨",
+ "gemini_calls_added": 0,
+ "claude_calls_added": 0,
+ "external_api_calls": 0
+}

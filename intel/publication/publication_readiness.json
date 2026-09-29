@@ -1,0 +1,26 @@
+{
+ "news_global": {
+  "documents": 131,
+  "LINK_ONLY": 131,
+  "external_image_blocked": 131,
+  "summary_blocked": 131
+ },
+ "papers": {
+  "documents": 129,
+  "LINK_ONLY": 129,
+  "external_image_blocked": 129,
+  "summary_blocked": 129
+ },
+ "news_ko": {
+  "documents": 181,
+  "LINK_ONLY": 181,
+  "external_image_blocked": 181,
+  "summary_blocked": 181
+ },
+ "policy": {
+  "documents": 128,
+  "LINK_ONLY": 128,
+  "external_image_blocked": 128,
+  "summary_blocked": 128
+ }
+}
