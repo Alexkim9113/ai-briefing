@@ -1,0 +1,213 @@
+{
+ "evr_1": {
+  "_type_specific": {
+   "affected_system": "AI_INFRASTRUCTURE",
+   "controller_if_known": null,
+   "dependency_ids": [],
+   "resource_or_gate": "ELECTRICITY"
+  },
+  "claim_id": "22177298ebd0d964:c1",
+  "claim_type": "MEDIA_REPORTED",
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "22177298ebd0d964",
+  "domain_scope": [],
+  "domains": [
+   "PLANET"
+  ],
+  "entities": [],
+  "epistemic_status": "INSUFFICIENT_SOURCE",
+  "evidence_record_id": "evr_1",
+  "evidence_strength": "LOW",
+  "evidence_type": "BOTTLENECK",
+  "extraction_method": "LEVEL2_RULE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T23:24:00+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798125+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "RULE_MAPPING",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T23:24:00+09:00",
+  "object": "AI_INFRASTRUCTURE",
+  "population_scope": null,
+  "relation": "CONSTRAINS_EXPANSION_OF",
+  "resources": [
+   "ELECTRICITY"
+  ],
+  "source_id": "src_rss_donga_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "ELECTRICITY",
+  "support_type": "ASSOCIATED",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T09:12:00.205328+00:00",
+  "value": null
+ },
+ "evr_2": {
+  "_type_specific": {
+   "affected_system": "AI_INFRASTRUCTURE",
+   "controller_if_known": null,
+   "dependency_ids": [],
+   "resource_or_gate": "COMPUTE"
+  },
+  "claim_id": "3458780fabb08a16:c1",
+  "claim_type": "MEDIA_REPORTED",
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "3458780fabb08a16",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "INSUFFICIENT_SOURCE",
+  "evidence_record_id": "evr_2",
+  "evidence_strength": "LOW",
+  "evidence_type": "BOTTLENECK",
+  "extraction_method": "LEVEL2_RULE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T22:00:09+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798127+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "RULE_MAPPING",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T22:00:09+00:00",
+  "object": "AI_INFRASTRUCTURE",
+  "population_scope": null,
+  "relation": "CONSTRAINS_EXPANSION_OF",
+  "resources": [
+   "COMPUTE"
+  ],
+  "source_id": "src_hankyung_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "COMPUTE",
+  "support_type": "ASSOCIATED",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T09:12:00.205328+00:00",
+  "value": null
+ },
+ "evr_3": {
+  "_type_specific": {
+   "driver_type": "NEWS",
+   "name": "Anthropic",
+   "relation_type": "SLOWS"
+  },
+  "claim_id": "5d00ad984724aa40:c1",
+  "claim_type": "MEDIA_REPORTED",
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "5d00ad984724aa40",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [
+   "Anthropic"
+  ],
+  "epistemic_status": "SECONDARY_ONLY",
+  "evidence_record_id": "evr_3",
+  "evidence_strength": "LOW",
+  "evidence_type": "DRIVER",
+  "extraction_method": "LEVEL2_RULE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T18:00:06+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798128+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "HUMAN_REJECTED",
+  "institutions": [],
+  "interpretation_method": "RULE_MAPPING",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T18:00:06+00:00",
+  "object": null,
+  "population_scope": null,
+  "relation": "SLOWS",
+  "resources": [],
+  "source_id": "src_cnbc",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Anthropic",
+  "support_type": "ASSOCIATED",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T09:12:00.205328+00:00",
+  "value": null
+ },
+ "evr_4": {
+  "_type_specific": {
+   "affected_system": "AI_INFRASTRUCTURE",
+   "controller_if_known": null,
+   "dependency_ids": [],
+   "resource_or_gate": "ELECTRICITY"
+  },
+  "claim_id": "688c6d92f147a96b:c1",
+  "claim_type": "MEDIA_REPORTED",
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "688c6d92f147a96b",
+  "domain_scope": [],
+  "domains": [
+   "PLANET"
+  ],
+  "entities": [],
+  "epistemic_status": "INSUFFICIENT_SOURCE",
+  "evidence_record_id": "evr_4",
+  "evidence_strength": "LOW",
+  "evidence_type": "BOTTLENECK",
+  "extraction_method": "LEVEL2_RULE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T04:30:00+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798130+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "RULE_MAPPING",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T04:30:00+09:00",
+  "object": "AI_INFRASTRUCTURE",
+  "population_scope": null,
+  "relation": "CONSTRAINS_EXPANSION_OF",
+  "resources": [
+   "ELECTRICITY"
+  ],
+  "source_id": "src_rss_donga_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "ELECTRICITY",
+  "support_type": "ASSOCIATED",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T09:12:00.205328+00:00",
+  "value": null
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "claims": {"human_confirmed": [], "human_rejected": [], "human_edited": {}},
+ "evidence_records": {
+  "human_confirmed": [],
+  "human_rejected": ["evr_3"],
+  "human_edited": {},
+  "_review_notes": {
+   "evr_3": "Human Review Pilot(2026-09-29): 'Anthropic launches cheaper AI model, its second release since CEO's call for a slowdown' 문서에서 DRIVER(Anthropic, SLOWS)로 추출됨. 그러나 기사 본문의 실제 관측 행위는 출시(RELEASE, 가속)이고 'slowdown'은 과거 CEO 발언을 배경으로 언급한 것뿐이라 relation 방향이 실제 행위와 반대로 보임(RELATION_ERROR/OVERCLAIMED). 사람 검토로 반려 — 자동 재실행이 이 판단을 덮어쓰지 않음."
+  }
+ }
+}
