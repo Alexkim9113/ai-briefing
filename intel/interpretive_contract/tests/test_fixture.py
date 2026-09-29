@@ -605,6 +605,10 @@ def test_68_regression_zero():
         # 회귀로 간주한다.
         if "interpretive_contract" in path and status in ("??", "M"):
             continue
+        # PRODUCTION EVIDENCE SUPPLY v1.0(섹션 67-69): evidence_supply도 동일한 sidecar
+        # 원칙의 신규 모듈이므로 같은 예외를 적용한다 — 기존 파일 수정이 아니라 새 파일만.
+        if "evidence_supply" in path and status in ("??", "M"):
+            continue
         if status == "M" and str(EV_DIR.relative_to(REPO_ROOT)) in path and path.endswith(".json") \
                 and _diff_is_timestamp_only(REPO_ROOT / path):
             continue
