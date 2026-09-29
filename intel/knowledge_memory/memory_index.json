@@ -3,17 +3,24 @@
   "note_id": "note_05424f6f21d26404",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Manifold Projection and Iterative Autoencode",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Manifold Projection and Iterative Autoencoder Refinement for Masked Language Modeling",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_0737a543235622b5",
   "note_type": "EVENT",
   "title": "Nvidia 경고 (강점)",
+  "statement": "Nvidia 경고 (강점)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -22,13 +29,18 @@
   "domains": [
    "PUBLIC_STATEMENT"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_0785397bb49e9776",
   "note_type": "EVENT",
   "title": "xAI-Nvidia 동향 (마이크론)",
+  "statement": "xAI-Nvidia 동향 (마이크론)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia",
@@ -38,46 +50,66 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_0cb0e6c5486eb25d",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Auditing and Repairing LLM-as-Judge Failures",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Auditing and Repairing LLM-as-Judge Failures in a Production Text-to-SQL Pipeline",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_0d65f8c289f77c67",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Predicting Transmembrane Protein Topology fr",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Predicting Transmembrane Protein Topology from 3D Structure",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_0f07dc788cf7048a",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When a Few Misfits Trigger Digital Adoption ",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When a Few Misfits Trigger Digital Adoption Cascades: Network Reach, Threshold Heterogeneity, and Performance-Conditioned Complex Contagion in an Agent-Based Model of Firms",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_0f0e79cac99e15bc",
   "note_type": "EVENT",
   "title": "Nvidia 동향 (경쟁)",
+  "statement": "Nvidia 동향 (경쟁)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -86,46 +118,66 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_102563ec1402b2f9",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Subjects, Not Authors: The Authorship Hazard",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_11c9e67e69600192",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Minute-scale training for microrobot navigat",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Minute-scale training for microrobot navigation",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_12d774db127750dc",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Neural Parameter Estimation of RC Thermal Bu",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Neural Parameter Estimation of RC Thermal Building Models for Model Predictive Control",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_17c0994e60fee4d7",
   "note_type": "EVENT",
   "title": "Meta 동향 (마케팅)",
+  "statement": "Meta 동향 (마케팅)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Meta"
@@ -134,24 +186,34 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_198d58a324c287a1",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Regional climate risk assessment from climat",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Regional climate risk assessment from climate models using probabilistic machine learning",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_1eaf813468ad110f",
   "note_type": "EVENT",
   "title": "Trump 규제 (개발)",
+  "statement": "Trump 규제 (개발)",
+  "status": "ACTIVE",
   "concepts": [
    "REGULATION"
   ],
@@ -162,13 +224,18 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_1fda85f1c8d6ce7d",
   "note_type": "EVENT",
   "title": "OpenAI 출시 철회 (안전성)",
+  "statement": "OpenAI 출시 철회 (안전성)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "OpenAI"
@@ -177,68 +244,98 @@
   "domains": [
    "MODEL_RELEASE"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_2020a36342ff921c",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Small Is Enough: Per-User Style Rewriting of",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Small Is Enough: Per-User Style Rewriting of AI-Edited Text via LoRA Adapters",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_220423f5641040f7",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Towards Mitigating Fabricated Consensus: The",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Towards Mitigating Fabricated Consensus: The Active Provenance Gate for Multi-Agent Debate Synthesis",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_253de75fe4b2ba19",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collective impact of opinion formation on ag",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collective impact of opinion formation on agent-based epidemic dynamics",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_28fe88661a8e1ffc",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ADF-EA: A Unified Execution Assurance System",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ADF-EA: A Unified Execution Assurance System for Agent Device Foundation",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_2d9120a107f9259b",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BuildOcc: A Large Language Model Occupant Ag",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BuildOcc: A Large Language Model Occupant Agent Platform for Building Energy Research",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_2e918e18b898d62c",
   "note_type": "EVENT",
   "title": "Meta 동향 (CJ)",
+  "statement": "Meta 동향 (CJ)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Meta"
@@ -247,13 +344,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_2f39572140d3b2bf",
   "note_type": "EVENT",
   "title": "OpenAI-Anthropic 조사 (호주)",
+  "statement": "OpenAI-Anthropic 조사 (호주)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Anthropic",
@@ -263,70 +365,100 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_30ffe17d73320368",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Realizability Is Not Enough: Encoding, Liven",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_3618ae5d5c087ace",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Grid-Orch: An LLM-Powered Orchestrator for D",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Grid-Orch: An LLM-Powered Orchestrator for Distribution Grid Simulation and Analytics",
+  "status": "ACTIVE",
   "concepts": [
    "GRID_CAPACITY"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_39d0e35ef941914e",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): The Crowd in the Machine: A Crisis-Informati",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): The Crowd in the Machine: A Crisis-Informatics Reading of the 2026 Autonomous Agent Incidents",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_3aa5f57f7be01122",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ConTP reshapes transporter functional space ",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ConTP reshapes transporter functional space to resolve substrate specificity beyond evolutionary proximity",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_3db5e181f5235456",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): MM-ContextFold: Context Folding for Multimod",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): MM-ContextFold: Context Folding for Multimodal Agentic Retrieval",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_3e9ba32331abf147",
   "note_type": "EVENT",
   "title": "Anthropic 출시 (번째)",
+  "statement": "Anthropic 출시 (번째)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Anthropic"
@@ -335,35 +467,50 @@
   "domains": [
    "MODEL_RELEASE"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_40e55f56096e505a",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Pretrained ASR Pseudo-labeling for Noisy Pol",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Pretrained ASR Pseudo-labeling for Noisy Police Audio",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_43f7d6860c7cfa17",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ScopeBench: Do Agents Preserve Engagement Bo",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_450e86bb925a6a30",
   "note_type": "EVENT",
   "title": "카카오 동향 (검증)",
+  "statement": "카카오 동향 (검증)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "카카오"
@@ -372,68 +519,98 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_48cde1c6c3ad66f5",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Stealth Apart, Harm Together: Skill Cascadin",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_4af6050d0aa587b5",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Synthetic Ground-Truth Framework for the E",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_4eabfee01a264c25",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): mHolmes improves cross anatomical cadaveric ",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): mHolmes improves cross anatomical cadaveric microbiome forecasting for postmortem interval estimation",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_54826711e07d838b",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Unifying non-Markovian Dynamics and Agent He",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Unifying non-Markovian Dynamics and Agent Heterogeneity in Scalable Stochastic Networks",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_57af382deca0cc63",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Benchy: towards a universal language for tas",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Benchy: towards a universal language for task-oriented AI benchmarks",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_599e43780cfd89bb",
   "note_type": "EVENT",
   "title": "Google-OpenAI 회동 (임원들)",
+  "statement": "Google-OpenAI 회동 (임원들)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Anthropic",
@@ -446,24 +623,34 @@
   "domains": [
    "COMPANY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_5cd44060e2e8fff0",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Do LLMs Understand Context? A Knowledge Grap",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Do LLMs Understand Context? A Knowledge Graph-Based Evaluation Framework",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_6185b14d9f265aa4",
   "note_type": "EVENT",
   "title": "네이버-Meta 동향 (네이버지)",
+  "statement": "네이버-Meta 동향 (네이버지)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Meta",
@@ -473,13 +660,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_619a5192ec7c5ebe",
   "note_type": "EVENT",
   "title": "KAIST 동향 (움직임)",
+  "statement": "KAIST 동향 (움직임)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "KAIST"
@@ -488,48 +680,68 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_63fd9ee3426ab80e",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Not All Memories Are Equal: Hierarchical Col",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Not All Memories Are Equal: Hierarchical Collaborative Memory for Validity-Aware Retrieval in LLM Agents",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_65104eedd4c9a89f",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): WALT: Learning World-Model-Aligned Latent Tr",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): WALT: Learning World-Model-Aligned Latent Trajectories for Autonomous Driving",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_65e8e6a9aee3bd4f",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Cartograph: Federated Tool Discovery with Op",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Cartograph: Federated Tool Discovery with Operator-Attested Retrieval for AI Agents",
+  "status": "ACTIVE",
   "concepts": [
    "AI_AGENT"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_6a3fa4694700fac0",
   "note_type": "EVENT",
   "title": "Meta 동향 (전환하고자)",
+  "statement": "Meta 동향 (전환하고자)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Meta"
@@ -538,13 +750,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_6bbc66267f282285",
   "note_type": "EVENT",
   "title": "Trump 규제 (균형)",
+  "statement": "Trump 규제 (균형)",
+  "status": "ACTIVE",
   "concepts": [
    "REGULATION"
   ],
@@ -555,13 +772,18 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_6c6d89577406c7d6",
   "note_type": "EVENT",
   "title": "Trump 동향 (음모론)",
+  "statement": "Trump 동향 (음모론)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Trump"
@@ -570,57 +792,82 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_6d59529b38c14de2",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BioEVAL: A global, multi-institutional bench",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BioEVAL: A global, multi-institutional benchmark of large language and multimodal models for bioengineering",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_7297ccea91116530",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): POIL: Point-based One-Shot Imitation Learnin",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): POIL: Point-based One-Shot Imitation Learning with Stable Dynamical Systems",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_7a1955df085c9048",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bringing AI to Autonomous Systems -- From Co",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_7ff1343bd4d03239",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Mechanistic Study of AI-Text Detection Neu",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_826434b7b98a77bd",
   "note_type": "EVENT",
   "title": "Nvidia 규제 (반대)",
+  "statement": "Nvidia 규제 (반대)",
+  "status": "ACTIVE",
   "concepts": [
    "REGULATION"
   ],
@@ -631,68 +878,98 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_82f20b2cbb5d3eb8",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Actively Resolving Contextual Uncertainty fo",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Actively Resolving Contextual Uncertainty for Underspecified Tasks in Natural Language",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_8341641b0a4fc1ea",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Survey on Fake Review Detection: From Pre-",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Survey on Fake Review Detection: From Pre-trained Language Models to Large Language Models",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_8b79da46249584ff",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Spectral Feedback for Test-Time Alignment of",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Spectral Feedback for Test-Time Alignment of Protein Diffusion Models",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_8cf661d6ec42ddce",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Thinking Less to Simulate Better: Intuitive ",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Thinking Less to Simulate Better: Intuitive Prompting Improves LLM Agents Simulating Individual Social Media Reactions, Including Unfamiliar Content",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_8dbba0dc0ff4791d",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Hierarchical Semi-Markov Load Model for AI",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Hierarchical Semi-Markov Load Model for AI Data Centers Coupling Job Scheduling with Bulk-Synchronous-Parallel Power Dynamics",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_8e901b0038eb8b8e",
   "note_type": "EVENT",
   "title": "Trump 동향 (담판)",
+  "statement": "Trump 동향 (담판)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Trump"
@@ -701,13 +978,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_8f82604fe96030c4",
   "note_type": "EVENT",
   "title": "삼성 동향 (기대감)",
+  "statement": "삼성 동향 (기대감)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "삼성"
@@ -716,13 +998,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_91115f941b209728",
   "note_type": "EVENT",
   "title": "Anthropic 투자 유치 (단독)",
+  "statement": "Anthropic 투자 유치 (단독)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Anthropic"
@@ -731,13 +1018,18 @@
   "domains": [
    "FUNDING"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_9323b6ec59e072d5",
   "note_type": "EVENT",
   "title": "OpenAI 출시 (자사)",
+  "statement": "OpenAI 출시 (자사)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "OpenAI"
@@ -746,72 +1038,102 @@
   "domains": [
    "MODEL_RELEASE"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_9365bf7ff25502bb",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): TinyCVIO: A Constellation-Aided Visual-Inert",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_94ff20e1287a5910",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): VkVIO: Cross-platform GPU Acceleration for V",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): VkVIO: Cross-platform GPU Acceleration for Visual-Inertial Odometry with Vulkan",
+  "status": "ACTIVE",
   "concepts": [
    "COMPUTE"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_969d99c9c7bcbcb1",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Warned alike, AI agents avoid the less-crowd",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Warned alike, AI agents avoid the less-crowded road while people take it",
+  "status": "ACTIVE",
   "concepts": [
    "AI_AGENT"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_9ae4ec33c65767fc",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Job Class Thermal Intent Aware Liquid Coolin",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Job Class Thermal Intent Aware Liquid Cooling Allocation for AI Data Centers",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_9eb92e473c3e5749",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bridging LLM Agents and Data Spaces: An Arch",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_a5e7e6ffeea851c4",
   "note_type": "EVENT",
   "title": "Nvidia 동향 (기반)",
+  "statement": "Nvidia 동향 (기반)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -820,26 +1142,36 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_b20d3290268e1d30",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collision-free Movement on Grids and Beyond",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collision-free Movement on Grids and Beyond",
+  "status": "ACTIVE",
   "concepts": [
    "GRID_CAPACITY"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_b29080148dd8bc01",
   "note_type": "EVENT",
   "title": "LG 동향 (수주)",
+  "statement": "LG 동향 (수주)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "LG"
@@ -848,24 +1180,34 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_b6249d6f0409bfb5",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AI in Science: Early Insights",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AI in Science: Early Insights",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_b8e15346279d9a04",
   "note_type": "EVENT",
   "title": "Trump 규제 (집결)",
+  "statement": "Trump 규제 (집결)",
+  "status": "ACTIVE",
   "concepts": [
    "REGULATION"
   ],
@@ -876,59 +1218,84 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_b983e550500c1c33",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When Is a Multi-Agent Code Judge Actually Gr",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_bebc8b8b5c78c114",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Agentic Workflows for Resolving Conflict Ove",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Agentic Workflows for Resolving Conflict Over Shared Resources: A Power Grid Application",
+  "status": "ACTIVE",
   "concepts": [
    "GRID_CAPACITY"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_c5c34dc2a0cf6bda",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): How can AI accelerate the green transition?",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): How can AI accelerate the green transition?",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_c66aca5de1cb40ef",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AC Power Flow Contingency Analysis Using a S",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AC Power Flow Contingency Analysis Using a Single Deep Neural Network",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_c9129a33f87dca90",
   "note_type": "EVENT",
   "title": "Nvidia 승인 (틱톡)",
+  "statement": "Nvidia 승인 (틱톡)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -937,24 +1304,34 @@
   "domains": [
    "REGULATORY_ACTION"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_ccc03d8e634541af",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Flexible Training Workloads in Large-Scale A",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_cf63c6678e9fbac9",
   "note_type": "EVENT",
   "title": "Nvidia 동향 (최대)",
+  "statement": "Nvidia 동향 (최대)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -963,13 +1340,18 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_d7cae0ca57615eeb",
   "note_type": "EVENT",
   "title": "Nvidia 출시 (불능)",
+  "statement": "Nvidia 출시 (불능)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Nvidia"
@@ -978,59 +1360,84 @@
   "domains": [
    "PRODUCT_RELEASE"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_dd0e02ddba2a88f8",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): PriceBench: A Diagnostic Benchmark for Price",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_e06df1d6501d9e4e",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide Generation and Evaluation",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_e6ca9d34b295125a",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SignTrace: Describe a Sign, Find the Word",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SignTrace: Describe a Sign, Find the Word",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_e8dddee728cc9a23",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Information Aggregation with AI Agents",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Information Aggregation with AI Agents",
+  "status": "ACTIVE",
   "concepts": [
    "AI_AGENT"
   ],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_eb3c08a1ae497619",
   "note_type": "EVENT",
   "title": "Google 동향 (사용해)",
+  "statement": "Google 동향 (사용해)",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [
    "Google"
@@ -1039,40 +1446,58 @@
   "domains": [
    "OTHER"
   ],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:53:56.536439+00:00"
  },
  {
   "note_id": "note_edbff1992cd870c0",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AgentWorld: Benchmarking Long-Horizon Collab",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_f5fb6a7d429cf5a8",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Task-structured modularity emerges in artifi",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Task-structured modularity emerges in artificial networks and aligns with brain architecture",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  },
  {
   "note_id": "note_f6dd85798b0d8f85",
   "note_type": "FACT",
   "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Beyond the Last Truffula Tree: SustainAI - A",
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Beyond the Last Truffula Tree: SustainAI - A Water-Aware, Closed-Loop Framework for Environmentally Accountable AI",
+  "status": "ACTIVE",
   "concepts": [],
   "entities": [],
   "topics": [],
   "domains": [],
-  "status": "ACTIVE",
+  "first_seen": null,
+  "last_seen": null,
+  "jurisdiction": null,
+  "human_review_status": "AUTO_CANDIDATE",
   "updated_at": "2026-09-29T11:39:51.658310+00:00"
  }
 ]

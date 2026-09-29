@@ -24,6 +24,24 @@ _SURFACE_TO_CONCEPT = {
 }
 
 
+def report_concept_candidates(notes, path):
+    """섹션 43-44: CANDIDATE != CANONICAL. 실제 85 Note의 entities/domains 중 canonical
+    concept로 등록되지 않은, 반복 등장하는 표면형만 후보로 별도 파일에 적는다 — 이 함수는
+    CANONICAL_CONCEPTS를 절대 건드리지 않는다(자동 등록 없음, 사람이 검토해야 함)."""
+    from collections import Counter
+    import json as _json
+    counts = Counter()
+    for n in notes:
+        for d in (n.get("domains") or []):
+            counts[d] += 1
+    candidates = [{"candidate": k, "occurrences": v} for k, v in counts.items() if v >= 2]
+    candidates.sort(key=lambda c: -c["occurrences"])
+    with open(path, "w", encoding="utf-8") as f:
+        _json.dump(candidates, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    return candidates
+
+
 def concepts_in_text(text):
     """statement/title 안에 등록된 표면형이 있을 때만 그 Concept을 반환한다 — 새 Concept을
     즉석에서 만들지 않는다(CANONICAL_CONCEPTS에 없는 건 절대 반환하지 않는다)."""

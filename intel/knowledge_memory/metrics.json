@@ -9,14 +9,24 @@
   "facts_examined": 57,
   "skipped_no_statement": 0
  },
+ "broken_internal_link_examples": [],
+ "broken_internal_links": 0,
  "dedup_removed": 0,
  "graph": {
+  "evidence_relation_count": 0,
   "graph_quality_flag": "OK",
-  "notes": 85,
-  "orphan_notes": 85,
+  "keyword_only_relation_count": 0,
+  "lineage_relation_count": 0,
+  "max_relations_per_note": 0,
+  "median_relations_per_note": 0,
+  "orphan_note_count": 85,
+  "related_to_count": 0,
   "related_to_ratio": 0,
-  "relations": 0,
-  "relations_per_note": 0.0
+  "relations_per_note": 0.0,
+  "revision_relation_count": 0,
+  "semantic_relation_count": 0,
+  "total_notes": 85,
+  "total_relations": 0
  },
  "note_stats": {
   "created": 0,

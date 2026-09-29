@@ -1,0 +1,30 @@
+---
+id: note_1fda85f1c8d6ce7d
+type: EVENT
+status: ACTIVE
+version: 1
+human_review_status: AUTO_CANDIDATE
+created_at: 2026-09-29T11:53:56.536439+00:00
+updated_at: 2026-09-29T11:53:56.536439+00:00
+---
+
+# OpenAI 출시 철회 (안전성)
+
+OpenAI 출시 철회 (안전성)
+
+## Provenance
+- document_id: 2fa01e8819fd9906
+- document_id: 309d3a4f83f0a017
+- document_id: 499b5712c021b4e7
+- document_id: 6ba7417936458e58
+- document_id: 8d36a93d57a1921a
+- document_id: 905fba6e1f01d1ac
+- document_id: dcd4b5a345a64a9b
+- event_id: evtprod_2fa01e8819fd9906
+- source_url: https://news.google.com/rss/articles/CBMiggFBVV95cUxPbktmMmRJUFpuTUxCb25pR3pvV1luMUdGWmVHNkVXNlhzWUktOHZNanlsMEhOUUNhbVUzV2w2ZE1OZ1hPR1dYQmpIX0pnZWwtRDFiSGlfcVUyUUQ3R3V4WFI5TUZaQWJpUlBwRU1TbFgzLW9KQ183RHJsSlVKdTU1RGFR0gGWAUFVX3lxTFBCZ1JTSnRkWDB2YmdMbXlMVlpZWVdjLVhyS0ZMNVVnakRLNnRqMDE1VUM1dUJtUVVLb0RpdklWMFYyWE5RYm9iQ09TZ0dobnhRQzAxZ0NHNjYxZFdobTVuWk5sc0wyTW5RWHVpYkJEZU1ScFNvWFRTTFlESWlZMVktb2xaMTRkSGpjOERfX284ZGVVdGlzZw?oc=5
+- source_url: https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/
+- source_url: https://news.google.com/rss/articles/CBMijwJBVV95cUxQMEZtU3dMSnM1b2pVQUhMalJYM2p5UzRBWVg2alNLaDZLN3FYZjFna2x0cHFLeHMtMUJvaUp1RENZUTYwTG9hQ3lacU5mdGh1d05rOGdJMDVLZ2h5SGtFOUhhREV0ZlZraVZWcllvaVRoVlh1TmJYejAzdG01YndpSTh5cThMYVhRSmpZVk1TWkRqWmhLZTJqaGtzd3lWZERwaVI1RVBrRG5YOVJqcVBEMEdZSEg4QXVjZndWc2hEWkF2MzVoa0hxOXFfWGxvb1I4V2phUXgzMTF0ZjVkNnhEcDFYakQ4aXpPSnNxWTZPX2xEU2R6M28yUThfWVFmelVQcXEzLTZpYXJfc1UzbVZF?oc=5
+- source_url: https://news.google.com/rss/articles/CBMiekFVX3lxTE44UldTTk4wWS1oa3NoWXZ3RFdSZ3M1Q2lhMFFCa3A2QmMzTjRmYWk5bHp3cVBPUldmdzBDRjNmUVVfNnFycy05YVdTVjU4T1ljYUZxRkJZY2RINVNUV1lxMUdyX3BodGNja09adjlRNTYwelNZUEZWR093?oc=5
+- source_url: https://news.google.com/rss/articles/CBMisAFBVV95cUxON3J6Rk5EcVdTM1V5QmZWRVhSQW1DaDBmYU5YQ0JnM1hLMUxXbWVSVy1vdmZYWjA1T1N2WnRMNnB2N0NkVUwySjFlU05ISE5uRUFOdnIxYVVxVTkwaTlNcm5LdlduajAwZHFGcUExZ3Z5Rm5zZmNFcldST2pfN2pvWU5JRkY2US1TUVRZZ09jYjFLQUh3cnBsVHNCQmh4SHdKcC1mM0ZLRFNmV0o4R2tfUtIBtgFBVV95cUxQakpZOVlkQTEzOHdkWEI5ZmxXVUc1MFJCWkFLNkVxNld2NjA4WkRwUFV0TlM4ejJhWnZzc1JfcERhMFIwdUEtWU5pLU9tSzN6VnBLbFpKYkd3SEZqMnBJcFVJY3VLdjlqS2NWUDVKTVNXZ0otXy1RZE9XaGg4YVYydjJEM3BjSHlDXzZla2dleU9lOTZjem1oWDBqRWp1LXlyckFZcTNDd3lmazBVcGZJc0dUc0xGUQ?oc=5
+- source_url: https://news.google.com/rss/articles/CBMic0FVX3lxTE5kSkZEMnhkSFlPejluYVFjOVNMb2ZXUEZobGpWLTZhdWpNSjVoajcxVTk5cnFOZUxSLVlIUkNTaHRQY0RxOVBBX2todVNvZFIzY0JaaU51TEVBOUlnbW1fQjd3YTVyOVZiZnk4LUNkcDFsUFE?oc=5
+- source_url: https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/

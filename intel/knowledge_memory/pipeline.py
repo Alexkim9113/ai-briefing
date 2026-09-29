@@ -12,13 +12,18 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import atomizer
+import concept_registry
 import dedup as dedup_mod
+import exporter
 import history
 import indexer
 import memory
 import overrides as overrides_mod
 import readiness as readiness_mod
-from relation_service import build_structural_relations, graph_quality_metrics
+from relation_service import (build_lineage_relations, build_semantic_relations_from_upstream,
+                               dedup_relations, graph_quality_metrics)
+
+VAULT_DIR = HERE / "vault"
 
 
 def run(write_output=True):
@@ -28,16 +33,37 @@ def run(write_output=True):
     deduped = dedup_mod.dedup_notes(candidates)
     dedup_removed = len(candidates) - len(deduped)
 
+    # 섹션 7-9: Relation은 persist 전 후보(_upstream_change 등 원본 upstream 참조가 아직
+    # 붙어 있는 상태)에서 만든다 — memory.upsert_notes는 "_"로 시작하는 키를 벗겨내므로
+    # 그 이후에는 upstream 관계 필드에 접근할 수 없다.
+    fact_notes = [n for n in deduped if n["note_type"] == "FACT" and n.get("status") != "REJECTED"]
+    event_notes = [n for n in deduped if n["note_type"] == "EVENT" and n.get("status") != "REJECTED"]
+    change_notes = [n for n in deduped if n["note_type"] == "CHANGE" and n.get("status") != "REJECTED"]
+    event_notes_by_source_id = {}
+    for e in event_notes:
+        for sid in (e.get("source_object_ids") or []):
+            event_notes_by_source_id[sid] = e["note_id"]
+
+    lineage_relations = build_lineage_relations(fact_notes, event_notes, now_iso)
+    semantic_relations = build_semantic_relations_from_upstream(change_notes, event_notes_by_source_id, now_iso)
+    relations = dedup_relations(lineage_relations + semantic_relations)
+
     notes_by_id, note_stats = memory.upsert_notes(deduped, now_iso)
     notes_by_id = overrides_mod.apply_overrides(notes_by_id)
 
     active_notes = [n for n in notes_by_id.values() if n.get("status") != "REJECTED"]
-    relations = build_structural_relations(active_notes, now_iso)
     relations_by_id, relation_stats = memory.upsert_relations(relations, now_iso)
 
     index = indexer.build_index(notes_by_id)
     graph_metrics = graph_quality_metrics(active_notes, list(relations_by_id.values()))
     readiness = readiness_mod.assess(notes_by_id, relations_by_id, atomizer_metrics, graph_metrics)
+    stage7_verdict, stage7_blocking = readiness_mod.stage7_entry_verdict(readiness)
+
+    broken_links = []
+    if write_output:
+        concept_registry.report_concept_candidates(active_notes, HERE / "concept_candidates.json")
+        exporter.export_vault(notes_by_id, VAULT_DIR, relations_by_id)
+        broken_links = exporter.check_broken_internal_links(notes_by_id, VAULT_DIR)
 
     metrics = {
         "atomizer": atomizer_metrics,
@@ -50,7 +76,10 @@ def run(write_output=True):
         "total_notes": len(notes_by_id),
         "total_active_notes": len(active_notes),
         "total_relations": len(relations_by_id),
+        "broken_internal_links": len(broken_links),
+        "broken_internal_link_examples": broken_links[:5],
     }
+    readiness["_stage7_entry"] = {"verdict": stage7_verdict, "blocking_items": stage7_blocking}
 
     if write_output:
         (HERE / "memory_index.json").write_text(

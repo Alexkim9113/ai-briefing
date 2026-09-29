@@ -15,7 +15,7 @@ import readiness as readiness_mod  # noqa: E402
 from common import normalize_statement, stable_note_id  # noqa: E402
 from concept_registry import concepts_in_text  # noqa: E402
 from exporter import export_vault, note_to_markdown  # noqa: E402
-from relation_service import build_structural_relations, graph_quality_metrics  # noqa: E402
+from relation_service import build_lineage_relations, graph_quality_metrics  # noqa: E402
 from schema import (EVIDENCE_BACKED_TYPES, INTERPRETIVE_TYPES, NOTE_TYPES,  # noqa: E402
                      new_atomic_note_shell)
 
@@ -23,10 +23,14 @@ NOW = "2026-09-29T00:00:00+00:00"
 
 
 def _fresh_memory_files():
-    for name in ("notes.json", "relations.json"):
-        p = PKG_DIR / name
-        if p.exists():
-            p.unlink()
+    # 실제 production notes.json/relations.json은 절대 건드리지 않는다 - memory 모듈의
+    # 경로를 테스트 전용 임시 디렉터리로 바꿔치기한다(이전에는 실제 파일을 지웠는데, 이는
+    # 이 테스트 파일이 real pipeline.py 실행과 같은 세션에서 함께 돌 때 production
+    # notes.json을 통째로 삭제해버리는 실제 버그였다).
+    import tempfile
+    tmp_dir = Path(tempfile.mkdtemp(prefix="km_test_memory_"))
+    memory.NOTES_PATH = tmp_dir / "notes.json"
+    memory.RELATIONS_PATH = tmp_dir / "relations.json"
 
 
 # --- A/B/C: Fact -> Event -> Change atomization -----------------------------
@@ -144,18 +148,18 @@ def test_stable_note_id_deterministic_helper():
 
 # --- Graph explosion guard -----------------------------------------------------
 
-def test_relation_service_only_related_to_and_flags_dominance():
-    notes = [
-        new_atomic_note_shell("n1", "FACT", "t1", "s1", NOW),
-        new_atomic_note_shell("n2", "EVENT", "t2", "s2", NOW),
-    ]
-    notes[0]["document_ids"] = ["docX"]
-    notes[1]["document_ids"] = ["docX"]
-    rels = build_structural_relations(notes, NOW)
+def test_lineage_relation_from_shared_document():
+    fact = new_atomic_note_shell("n1", "FACT", "t1", "s1", NOW)
+    fact["document_ids"] = ["docX"]
+    event = new_atomic_note_shell("n2", "EVENT", "t2", "s2", NOW)
+    event["document_ids"] = ["docX"]
+    rels = build_lineage_relations([fact], [event], NOW)
     assert len(rels) == 1
-    assert rels[0]["relation_type"] == "RELATED_TO"
-    gm = graph_quality_metrics(notes, rels)
-    assert gm["graph_quality_flag"] == "RELATED_TO_DOMINATED"
+    assert rels[0]["relation_type"] == "PART_OF_EVENT"
+    assert rels[0]["relation_class"] == "LINEAGE"
+    gm = graph_quality_metrics([fact, event], rels)
+    assert gm["lineage_relation_count"] == 1
+    assert gm["keyword_only_relation_count"] == 0
 
 
 # --- Obsidian export -----------------------------------------------------------
@@ -185,8 +189,12 @@ def test_rejected_notes_excluded_from_index():
 
 # --- Readiness never fabricates READY for missing data -------------------------
 
-def test_readiness_question_hypothesis_not_ready_when_absent():
+def test_readiness_question_hypothesis_ready_for_natural_data_when_absent():
+    # PRODUCTIONIZATION v1.0 섹션 76: Production 0건은 더 이상 자동으로 NOT_READY가
+    # 아니다 - 구조가 synthetic으로 검증됐으면 READY_FOR_NATURAL_DATA, production_validated
+    # 는 별도로 false로 기록한다.
     r = readiness_mod.assess({}, {}, {"broken_provenance_count": 0}, {})
-    assert r["QUESTION_MEMORY_READY"] == "NOT_READY"
-    assert r["HYPOTHESIS_MEMORY_READY"] == "NOT_READY"
-    assert r["ATOMIC_MEMORY_READY"] == "NOT_READY"
+    assert r["QUESTION_MEMORY_READY"]["status"] == "READY_FOR_NATURAL_DATA"
+    assert r["QUESTION_MEMORY_READY"]["production_validated"] is False
+    assert r["HYPOTHESIS_MEMORY_READY"]["status"] == "READY_FOR_NATURAL_DATA"
+    assert r["ATOMIC_MEMORY_READY"]["status"] == "NOT_READY"  # 이건 진짜 데이터가 없으면 여전히 NOT_READY

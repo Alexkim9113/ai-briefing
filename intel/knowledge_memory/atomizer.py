@@ -55,6 +55,9 @@ def atomize_event(event, now_iso):
     note["domains"] = [event.get("event_type")] if event.get("event_type") else []
     note["concepts"] = concepts_in_text(title)
     note["interpretation_distance"] = 0
+    # 섹션 13-14: upstream에 실제로 있는 값만 옮긴다 — event_date != published_at 등을
+    # 섞지 않는다.
+    note["event_date"] = event.get("event_date")
     return note
 
 
@@ -78,6 +81,18 @@ def atomize_change(change, now_iso):
     note["confidence"] = change.get("change_confidence")
     note["concepts"] = concepts_in_text(statement)
     note["interpretation_distance"] = 1  # CHANGE는 여러 EVENT를 이미 해석한 결과(섹션 47: distance 1)
+    # 섹션 13: change_layer가 이미 계산해 둔 first_seen/last_seen/temporal_scope를 그대로
+    # 옮긴다 — Stage 6이 새로 추정하지 않는다.
+    note["first_seen"] = change.get("first_seen")
+    note["last_seen"] = change.get("last_seen")
+    if change.get("time_span_days") is not None:
+        note["temporal_scope"] = f"{change['time_span_days']}_DAYS"
+    # relation_service가 supporting_event_ids/contradicting_event_ids를 읽을 수 있도록
+    # 원본을 임시로 붙여 둔다 — memory.upsert_notes가 "_"로 시작하는 키는 영속화 전에 벗겨낸다.
+    note["_upstream_change"] = {
+        "supporting_event_ids": list(change.get("supporting_event_ids") or []),
+        "contradicting_event_ids": list(change.get("contradicting_event_ids") or []),
+    }
     return note
 
 

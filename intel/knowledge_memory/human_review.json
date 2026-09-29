@@ -1,0 +1,227 @@
+{
+ "summary": {
+  "sample_size": 25,
+  "sample_composition": {
+   "FACT": 15,
+   "EVENT": 10
+  },
+  "counts": {
+   "CORRECT": 17,
+   "PARTIAL": 8,
+   "WRONG": 0,
+   "DUPLICATE": 0,
+   "OVERCLAIMED": 0,
+   "BAD_RELATION": 0,
+   "SCOPE_ERROR": 0,
+   "TEMPORAL_ERROR": 0,
+   "PROVENANCE_ERROR": 0,
+   "TYPE_ERROR": 0
+  },
+  "reviewer": "CLAUDE_AI_ASSISTED_REVIEW",
+  "human_sign_off": "PENDING - Te의 실제 검토/승인 필요 (섹션 26: AI가 수행한 리뷰를 HUMAN으로 표기하지 않음)",
+  "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+  "key_finding": "FACT 15건 전부 CORRECT (claim ceiling 정확, provenance 추적 가능). EVENT 10건 중 6건 PARTIAL - 원인은 Stage 6이 아니라 Stage 4(event_production)의 event_name이 축약/절단된 형태로 생성된 것으로 보임(예: 'Anthropic 출시 (번째)'). Stage 6은 이 upstream 값을 그대로 보존했을 뿐 왜곡/과장하지 않음 - verbatim 보존 원칙은 지켜짐. 이 축약 명명 문제는 Stage 4/5 영역이며 이번 스펙 범위(Stage 6 Knowledge Memory) 밖이라 수정하지 않음."
+ },
+ "records": [
+  {
+   "note_id": "note_05424f6f21d26404",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "arXiv 논문 존재 확인 문구, '내용 미검증' 명시 - claim ceiling 정확, provenance 단일 document_id로 추적 가능",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_0f07dc788cf7048a",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴 - 존재 확인만, 결과 미검증 명시",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_198d58a324c287a1",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_28fe88661a8e1ffc",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_39d0e35ef941914e",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴 - 2026 사건 언급이나 사실 자체(논문 존재)만 주장",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_43f7d6860c7cfa17",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_4eabfee01a264c25",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_63fd9ee3426ab80e",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_7297ccea91116530",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_8341641b0a4fc1ea",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_9365bf7ff25502bb",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_9ae4ec33c65767fc",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_b983e550500c1c33",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_ccc03d8e634541af",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "동일 패턴",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_e8dddee728cc9a23",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "concepts=['AI_AGENT'] 정확 - 'AI Agent' surface form이 concept_registry에 등록된 표면형과 일치, 오탐 없음",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_0737a543235622b5",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "statement 'Nvidia 경고 (강점)'이 upstream event_name을 그대로 복사한 것으로 보이나 문구 자체가 지나치게 축약되어 사람이 읽기엔 불명확함 - 다만 이는 Stage 4(event_production)의 명명 방식 문제이지 Stage 6이 내용을 왜곡/과장한 것은 아님(verbatim 보존은 올바름). Stage 4/5 재작업 범위 - 이번 스펙에서 수정 금지 대상.",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_0f0e79cac99e15bc",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "동일 사유 - 'Nvidia 동향 (경쟁)', upstream 명명 축약 문제, Stage 6 왜곡 아님",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_1fda85f1c8d6ce7d",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'OpenAI 출시 철회 (안전성)' - document_ids 7개로 provenance 풍부, 다만 문구 축약은 동일 이슈",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_3e9ba32331abf147",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'Anthropic 출시 (번째)' - '번째'라는 단어가 잘린 것으로 보임(upstream event_name 자체의 결측/파싱 이슈로 추정). Stage 6이 만든 오류가 아니라 upstream에서 이미 이런 형태로 넘어옴 - provenance는 정상 추적됨",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_6185b14d9f265aa4",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'네이버-Meta 동향 (네이버지)' - 동일 축약/절단 이슈",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_6bbc66267f282285",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "'Trump 규제 (균형)' - concepts=['REGULATION'] 정확 매핑, entities=['Trump'] 정확",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_826434b7b98a77bd",
+   "review_status": "CORRECT",
+   "review_category": "CORRECT",
+   "review_comment": "'Nvidia 규제 (반대)' - concepts=['REGULATION'] 정확, document_ids 6개로 provenance 풍부",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_91115f941b209728",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'Anthropic 투자 유치 (단독)' - 문구 축약 이슈 동일",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_b29080148dd8bc01",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'LG 동향 (수주)' - 문구 축약 이슈 동일",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  },
+  {
+   "note_id": "note_cf63c6678e9fbac9",
+   "review_status": "PARTIAL",
+   "review_category": "PARTIAL",
+   "review_comment": "'Nvidia 동향 (최대)' - 문구 축약 이슈 동일",
+   "reviewed_at": "2026-09-29T12:40:57.610926+00:00",
+   "reviewer": "CLAUDE_AI_ASSISTED_REVIEW"
+  }
+ ]
+}
