@@ -57,7 +57,8 @@ def cluster_events(briefing, items, normalized_topic_of, normalized_entities_of)
                                                        "title_similarity": round(title_sim, 2)}})
         if len(cluster) > 1:
             eid = f"evt_{did_a}"
-            events[eid] = {"event_id": eid, "document_ids": [d for d, _ in cluster], "topic": topic_a,
+            events[eid] = {"event_id": eid, "event_name": (a.get("title_ko") or a["title"])[:80],
+                           "document_ids": [d for d, _ in cluster], "date": a.get("published"), "topic": topic_a,
                            "entities": sorted(ents_a), "status": "RESOLVED",
                            "merge_method": "rule", "merge_evidence_count": len(cluster) - 1}
             for d, _ in cluster:

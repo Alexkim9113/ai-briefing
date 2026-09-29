@@ -1,5 +1,6 @@
 {
  "evt_5ec44a18ca5116c1": {
+  "date": "2026-09-28T12:03:12+00:00",
   "document_ids": [
    "5ec44a18ca5116c1",
    "b14f40615bcee62e"
@@ -9,12 +10,14 @@
    "트럼프"
   ],
   "event_id": "evt_5ec44a18ca5116c1",
+  "event_name": "트럼프, 앤트로픽 CEO 다리오 아모데이 초청하며 AI 규제 논쟁 가열",
   "merge_evidence_count": 1,
   "merge_method": "rule",
   "status": "RESOLVED",
   "topic": "법·정책"
  },
  "evt_a6a4027d9878143d": {
+  "date": "2026-09-29T10:00:04+09:00",
   "document_ids": [
    "a6a4027d9878143d",
    "e97fa667cee7e431"
@@ -23,12 +26,14 @@
    "삼성"
   ],
   "event_id": "evt_a6a4027d9878143d",
+  "event_name": "삼성SDI, 'DCWA 2026'서 AI 데이터센터용 배터리솔루션 공개",
   "merge_evidence_count": 1,
   "merge_method": "rule",
   "status": "RESOLVED",
   "topic": "반도체"
  },
  "evt_e5cf82c318ebff37": {
+  "date": "2026-09-29T08:19:02+09:00",
   "document_ids": [
    "e5cf82c318ebff37",
    "95fdbc0adbb37fc8"
@@ -37,6 +42,7 @@
    "카이스트"
   ],
   "event_id": "evt_e5cf82c318ebff37",
+  "event_name": "“사람처럼 움직임 기억한다”…KAIST, ‘몸에 붙이는 AI 반도체’ 개발",
   "merge_evidence_count": 1,
   "merge_method": "rule",
   "status": "RESOLVED",
