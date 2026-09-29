@@ -35,12 +35,7 @@ def _domain(url):
         return None
 
 
-def load_reports_on_pairs():
-    """intel/relationships.json — evidence_supply.reports_on_runner.run()이 실제
-    corpus에 대해 계산해 쓰는 REPORTS_ON 결과 파일. 이 모듈은 그 계산 로직
-    (evidence_service.resolve_reports_on)을 다시 만들지 않고 그 출력만 읽는다. 파일이
-    없거나 비어 있으면(현재 corpus: 0건) 정직하게 빈 집합을 반환한다 - 추측 연결 금지."""
-    path = INTEL_DIR / "relationships.json"
+def _load_relationships_file(path):
     if not path.exists():
         return set()
     try:
@@ -56,6 +51,21 @@ def load_reports_on_pairs():
         b = row.get("to_document_id") or row.get("target_document_id") or row.get("reports_on_document_id")
         if a and b:
             pairs.add(frozenset((a, b)))
+    return pairs
+
+
+def load_reports_on_pairs():
+    """intel/relationships.json — evidence_supply.reports_on_runner.run()이 실제
+    corpus에 대해 계산해 쓰는 REPORTS_ON(DOI/arXiv) 결과 파일. 이 모듈은 그 계산 로직
+    (evidence_service.resolve_reports_on)을 다시 만들지 않고 그 출력만 읽는다. 파일이
+    없거나 비어 있으면(현재 corpus: 0건) 정직하게 빈 집합을 반환한다 - 추측 연결 금지.
+
+    SOURCE INTELLIGENCE remediation (item 5): DOI/arXiv 외에 REPORTS_ON을 확장한
+    intel/relationships_company_gov.json(reports_on_expansion.py)이 있으면 합쳐서
+    반환한다 - source_independence.py 자체의 어휘(INDEPENDENT/... 등)는 그대로 두고,
+    이 함수가 읽는 "REPORTS_ON pair 후보 집합"만 넓힌다."""
+    pairs = _load_relationships_file(INTEL_DIR / "relationships.json")
+    pairs |= _load_relationships_file(INTEL_DIR / "relationships_company_gov.json")
     return pairs
 
 
