@@ -72,6 +72,11 @@ def retrieve(intent, scope, note_type_filter=None, limit=20):
             "concepts": row["concepts"],
             "entities": row["entities"],
             "provenance": provenance_mod.reconstruct(note, documents),
+            # SOURCE INTELLIGENCE CORRECTION Phase I(섹션 34/35): note["confidence"]는
+            # Stage 6 atomizer.py가 이미 채워둔 claim_status(SOURCE_LOCATED/SUMMARY_DERIVED
+            # 등)다 — 지금까지 장식용으로만 존재했다. Ask METAXIS가 SNIPPET_ONLY/mx.b 기원
+            # 증거를 SOURCE_VERIFIED와 구별 없이 취급하지 않도록 그대로 통과시킨다.
+            "confidence": note.get("confidence"),
         })
 
     return {

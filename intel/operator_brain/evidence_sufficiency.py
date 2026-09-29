@@ -16,6 +16,32 @@ from schema import CLAIM_LADDER, EVIDENCE_SUFFICIENCY_STATES
 _MIN_SUPPORTING_FOR_DESCRIPTIVE = 1
 _MIN_SUPPORTING_FOR_HYPOTHESIS_TEST = 1  # + counter_evidence 존재 여부로 더 세분화
 
+# SOURCE INTELLIGENCE CORRECTION Phase I(섹션 34): evidence_pipeline/knowledge_memory가
+# 이미 매기는 claim_status를 여기서 재정의하지 않고 그대로 재사용해 STRONG/WEAK만
+# 구분한다 — mx.b/summary 기원(SUMMARY_DERIVED)이나 근거 부족(INSUFFICIENT_SOURCE,
+# NOT_EXTRACTED, None)은 WEAK로, 실제 문서 대조(SOURCE_LOCATED 이상)는 STRONG으로 본다.
+_STRONG_CLAIM_STATUS = {"SOURCE_LOCATED", "SOURCE_VERIFIED", "PRIMARY_UNREAD"}
+_WEAK_CLAIM_STATUS = {"SUMMARY_DERIVED", "SECONDARY_ONLY", "INSUFFICIENT_SOURCE",
+                      "NOT_EXTRACTED", "DISPUTED", "RETRACTED", "NOT_VERIFIED"}
+
+
+def _source_quality_from_confidence(retrieval_results):
+    # confidence 필드 자체가 없는(None) 결과는 "모른다"이지 "약하다"가 아니다 - 이 필드가
+    # 아직 없던 이전 note들을 소급으로 불리하게 만들지 않는다(섹션 53: historical
+    # provenance를 새 pipeline 기준으로 재작성하지 않는다와 같은 정신).
+    values = [r.get("confidence") for r in retrieval_results if r.get("confidence") is not None]
+    if not values:
+        return "UNKNOWN"
+    strong = any(v in _STRONG_CLAIM_STATUS for v in values)
+    weak = any(v in _WEAK_CLAIM_STATUS for v in values)
+    if strong and not weak:
+        return "STRONG"
+    if weak and not strong:
+        return "WEAK"
+    if strong and weak:
+        return "MIXED"
+    return "UNKNOWN"
+
 
 def assess(retrieval_results, intent, counter_evidence_results=None):
     counter_evidence_results = counter_evidence_results or []
@@ -30,8 +56,9 @@ def assess(retrieval_results, intent, counter_evidence_results=None):
     )
     evidence_family_count = independence["evidence_family_count"]
 
+    source_quality = _source_quality_from_confidence(retrieval_results)
     dimensions = {
-        "source_quality": "UNKNOWN",
+        "source_quality": source_quality,
         "primary_source_coverage": "UNKNOWN",
         "directness": "HIGH" if n > 0 else "NONE",
         "source_independence": independence["overall_status"],
@@ -69,6 +96,12 @@ def assess(retrieval_results, intent, counter_evidence_results=None):
         # (SHARED_ORIGIN - 같은 문서/같은 URL)에서 나왔다면, counter evidence가 있어도
         # "독립적으로 검증됐다"고 말할 수 없다 - HYPOTHESIS_TEST 격상을 보류한다.
         if state == "SUFFICIENT_FOR_HYPOTHESIS_TEST" and n >= 2 and independence["overall_status"] == "SHARED_ORIGIN":
+            state = "SUFFICIENT_FOR_LIMITED_INTERPRETATION"
+
+        # 섹션 34: source_quality도 metadata로만 두지 않는다 - 모든 supporting evidence가
+        # WEAK(mx.b/요약 기원, 원문 미대조)면 counter evidence가 있어도 HYPOTHESIS_TEST를
+        # 완전히 SUFFICIENT로 못 부른다.
+        if state == "SUFFICIENT_FOR_HYPOTHESIS_TEST" and source_quality == "WEAK":
             state = "SUFFICIENT_FOR_LIMITED_INTERPRETATION"
     elif n >= _MIN_SUPPORTING_FOR_DESCRIPTIVE:
         state = "SUFFICIENT_FOR_DESCRIPTIVE_ANALYSIS"

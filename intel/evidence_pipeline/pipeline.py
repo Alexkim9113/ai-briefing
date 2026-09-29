@@ -34,6 +34,27 @@ from memory import upsert_collection  # noqa: E402
 from metrics import count_by  # noqa: E402
 from event_matching.signals import canonical_entities  # noqa: E402
 
+# source_intelligence도 자체 "schema.py"를 갖고 있어 bare sys.path.insert로 가져오면
+# 위 evidence_pipeline의 schema 모듈과 이름이 충돌한다(문서화된 기존 이슈 —
+# operator_brain/adapter.py의 _load_km_module()과 동일한 원인) — importlib로 완전히
+# 격리해서 가져온다.
+import importlib.util as _ilu
+
+
+def _load_summary_firewall():
+    key = "_si_for_evidence_pipeline__summary_firewall"
+    if key in sys.modules:
+        return sys.modules[key]
+    path = ROOT / "intel" / "source_intelligence" / "summary_firewall.py"
+    spec = _ilu.spec_from_file_location(key, path)
+    mod = _ilu.module_from_spec(spec)
+    sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+gemini_eligible_text = _load_summary_firewall().gemini_eligible_text
+
 INTEL_DIR = ROOT / "intel"
 GEMINI_HARD_CAP_PER_RUN = 20  # 운영자 지시 섹션 23 비용 규칙의 실행 단위 안전판(문서당 1회와 별개)
 
@@ -177,18 +198,24 @@ def run(documents_override=None, raw_items_override=None, events_override=None,
         gemini_result = None
         if needs_l3:
             level3_flagged += 1
-            text = None
-            if raw_item:
-                text = raw_item.get("summary") or (raw_item.get("mx") or {}).get("b")
-            ckey_text = f"{doc.get('title')}|{text or ''}"
-            cached = cache.get(gemini_cache, ckey_text)
-            if cached is not None:
-                gemini_cache_hits += 1
-                gemini_result = cached
-            elif gemini_enabled and gemini_calls_made < gemini_call_budget and gemini_extract.is_available():
-                gemini_result = gemini_extract.call_gemini_candidate_extraction(doc.get("title"), text)
-                gemini_calls_made += 1
-                cache.put(gemini_cache, ckey_text, gemini_result)
+            # SOURCE INTELLIGENCE CORRECTION Phase H(섹션 33): mx.b(METAXIS 자신이 만든
+            # 생성 요약)를 Level 3 Gemini 입력으로 재사용하지 않는다 — 2차 생성물을 다시
+            # "원문"처럼 넣어 새 발견인 것처럼 claim을 뽑는 루프를 차단한다. 발행사 RSS
+            # summary가 없으면 이 문서는 애초에 Gemini 후보가 아니다(INSUFFICIENT_SOURCE와
+            # 동일한 정신 — 억지로 mx.b를 대신 넣지 않는다).
+            text = gemini_eligible_text(raw_item) if raw_item else None
+            if text is None:
+                gemini_result = None
+            else:
+                ckey_text = f"{doc.get('title')}|{text}"
+                cached = cache.get(gemini_cache, ckey_text)
+                if cached is not None:
+                    gemini_cache_hits += 1
+                    gemini_result = cached
+                elif gemini_enabled and gemini_calls_made < gemini_call_budget and gemini_extract.is_available():
+                    gemini_result = gemini_extract.call_gemini_candidate_extraction(doc.get("title"), text)
+                    gemini_calls_made += 1
+                    cache.put(gemini_cache, ckey_text, gemini_result)
             if gemini_result:
                 for i, gc in enumerate(gemini_result.get("claims", [])):
                     gc["_idx"] = i + 1
