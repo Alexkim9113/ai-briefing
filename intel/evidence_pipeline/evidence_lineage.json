@@ -691,7 +691,7 @@
   {
    "change_ids": [],
    "claim_id": "1b1cdfdd178b97a5:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "1b1cdfdd178b97a5",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1036,7 +1036,7 @@
   {
    "change_ids": [],
    "claim_id": "2013a723b92f689a:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "2013a723b92f689a",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1148,7 +1148,7 @@
   {
    "change_ids": [],
    "claim_id": "227c6ab559343ea9:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "227c6ab559343ea9",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1459,7 +1459,7 @@
   {
    "change_ids": [],
    "claim_id": "31a26a71a83b2b43:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "31a26a71a83b2b43",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3691,7 +3691,7 @@
   {
    "change_ids": [],
    "claim_id": "7c7b6ea24fb9b3a9:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "7c7b6ea24fb9b3a9",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4922,7 +4922,7 @@
   {
    "change_ids": [],
    "claim_id": "a9cf060b286b8ec8:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "a9cf060b286b8ec8",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4990,7 +4990,7 @@
   {
    "change_ids": [],
    "claim_id": "ab35ec286e01ba12:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "ab35ec286e01ba12",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -5095,7 +5095,7 @@
   {
    "change_ids": [],
    "claim_id": "b15a2ff30aed2814:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "b15a2ff30aed2814",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6495,7 +6495,7 @@
   {
    "change_ids": [],
    "claim_id": "e5c1758166db1712:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "e5c1758166db1712",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6976,7 +6976,7 @@
   {
    "change_ids": [],
    "claim_id": "faea70104a385ec2:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SUMMARY_DERIVED",
    "document_id": "faea70104a385ec2",
    "event_ids": [
     "evtprod_faea70104a385ec2"
