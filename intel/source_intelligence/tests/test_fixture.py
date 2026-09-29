@@ -199,6 +199,34 @@ def test_single_ai_mention_that_is_the_whole_point_stays_central():
     assert r["status"] == "CENTRAL"
 
 
+def test_ambiguous_when_summary_too_short_for_sentence_boundary():
+    # 소개글이 극히 짧아 문장 경계 자체가 불확실 - CENTRAL/PERIPHERAL을 강행하지 않는다.
+    r = assess_ai_relevance("행사 개최", "AI 소개", AI_KEYWORDS)
+    assert r["status"] == "AMBIGUOUS"
+    assert "문장 경계" in r["reason"]
+
+
+def test_ambiguous_when_remove_ai_test_lands_in_borderline_remainder():
+    # AI 문장을 제거한 나머지가 PERIPHERAL 문턱(10자) 바로 아래인 좁은 경계 구간(7~9자).
+    summary = "오늘 AI를 소개했다. 짧게나마 잘 열렸다."
+    r = assess_ai_relevance("행사", summary, AI_KEYWORDS)
+    assert r["status"] == "AMBIGUOUS"
+    assert "central event가 AI 없이도 성립하는지" in r["reason"]
+
+
+def test_not_ambiguous_when_clearly_central_or_peripheral():
+    # AMBIGUOUS를 억지로 만들지 않는다는 것을 함께 확인: 명백한 CENTRAL/PERIPHERAL은
+    # 여전히 그대로 나온다.
+    r_central = assess_ai_relevance("AI가 바꾼 산업", "설명", AI_KEYWORDS)
+    assert r_central["status"] == "CENTRAL"
+    r_peripheral = assess_ai_relevance(
+        "지역 투자 유치 설명회 열려",
+        "이번 행사는 지역 투자 유치를 위한 설명회였다. 일부 발표자는 AI 활용 사례도 소개했다.",
+        AI_KEYWORDS,
+    )
+    assert r_peripheral["status"] == "PERIPHERAL"
+
+
 def test_lawleader_regression_fixture_does_not_produce_ai_education_framing():
     # 섹션 30/71 LAWLEADER REGRESSION FIXTURE. 실제 RSS raw summary 원문은 archive에
     # 남아있지 않아(감사 보고서 F절 GAP) 대표성 있는 synthetic fixture로 재현한다:
