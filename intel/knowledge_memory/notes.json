@@ -1,0 +1,4319 @@
+{
+ "note_05424f6f21d26404": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "13eddd2d548f927d"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "13eddd2d548f927d:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_05424f6f21d26404",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "13eddd2d548f927d:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30288"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Manifold Projection and Iterative Autoencoder Refinement for Masked Language Modeling",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Manifold Projection and Iterative Autoencode",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_0737a543235622b5": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "a9d16c000a5074e0",
+   "d6fa27c327baa571"
+  ],
+  "domains": [
+   "PUBLIC_STATEMENT"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_a9d16c000a5074e0"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0737a543235622b5",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_a9d16c000a5074e0"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.edaily.co.kr/News/Read?newsId=03161926645585040",
+   "https://arstechnica.com/tech-policy/2026/09/nvidia-may-sell-more-chips-in-china-as-jensen-huangs-influence-over-trump-grows/"
+  ],
+  "statement": "Nvidia 경고 (강점)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 경고 (강점)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_0785397bb49e9776": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "3b69094bd9c06432",
+   "e256f2e34277afd4"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Nvidia",
+   "xAI"
+  ],
+  "event_ids": [
+   "evtprod_3b69094bd9c06432"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0785397bb49e9776",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_3b69094bd9c06432"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.edaily.co.kr/News/Read?newsId=04988886645584712",
+   "https://www.edaily.co.kr/News/Read?newsId=01640006645585040"
+  ],
+  "statement": "xAI-Nvidia 동향 (마이크론)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "xAI-Nvidia 동향 (마이크론)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_0cb0e6c5486eb25d": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "89cfa475c2cdfc02"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "89cfa475c2cdfc02:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0cb0e6c5486eb25d",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "89cfa475c2cdfc02:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30290"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Auditing and Repairing LLM-as-Judge Failures in a Production Text-to-SQL Pipeline",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Auditing and Repairing LLM-as-Judge Failures",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_0d65f8c289f77c67": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "1b71243b506cd89b"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "1b71243b506cd89b:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0d65f8c289f77c67",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "1b71243b506cd89b:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30446"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Predicting Transmembrane Protein Topology from 3D Structure",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Predicting Transmembrane Protein Topology fr",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_0f07dc788cf7048a": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "a1f7d5b570427037"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "a1f7d5b570427037:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0f07dc788cf7048a",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "a1f7d5b570427037:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30269"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When a Few Misfits Trigger Digital Adoption Cascades: Network Reach, Threshold Heterogeneity, and Performance-Conditioned Complex Contagion in an Agent-Based Model of Firms",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When a Few Misfits Trigger Digital Adoption ",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_0f0e79cac99e15bc": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "59511be866c5c3b5",
+   "89cac0c9522159fd"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_59511be866c5c3b5"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_0f0e79cac99e15bc",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_59511be866c5c3b5"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.fnnews.com/news/202609290252345480",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxOVENkNXh3YjN5YWZTLTdXX1pzYUVQSnFJcW05U2Q1Vlp0WE85VzA4VUxLMXFyUHVsTU5SNmt3bkFfUVpRZFVTOU5ianJhSGozRTVkaUdDMjlGTEJTZks4a0poeGJDTU9kcmRRMHRmekN3Q3RYRUU2Sm42bUtUbHhJbHllTFAwR0ZoX0cxWDJ2bS12LUhtM1pVTVN4elE2Zw?oc=5"
+  ],
+  "statement": "Nvidia 동향 (경쟁)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 동향 (경쟁)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_102563ec1402b2f9": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "bda73e7519619ec5"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "bda73e7519619ec5:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_102563ec1402b2f9",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "bda73e7519619ec5:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30614"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Subjects, Not Authors: The Authorship Hazard",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_11c9e67e69600192": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "d794466b088fd094"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "d794466b088fd094:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_11c9e67e69600192",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "d794466b088fd094:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://www.nature.com/articles/s42256-026-01305-w"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Minute-scale training for microrobot navigation",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Minute-scale training for microrobot navigat",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_12d774db127750dc": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "a541b3b3913208a4"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "a541b3b3913208a4:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_12d774db127750dc",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "a541b3b3913208a4:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2604.05904"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Neural Parameter Estimation of RC Thermal Building Models for Model Predictive Control",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Neural Parameter Estimation of RC Thermal Bu",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_17c0994e60fee4d7": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "4b6ac88a841fbc54",
+   "e67449d274f10817"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_ids": [
+   "evtprod_4b6ac88a841fbc54"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_17c0994e60fee4d7",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_4b6ac88a841fbc54"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQWI2ekwyUXI2bmhyMF9ZMUZ3WS04VXhObE5nUEtJVW5vNmlsVXpXT3J3czl4U28wVWNPUi1LVUE0c2tWUlo0bEE3SERvWGhKd2l5UzZyd19jN0pQZlNWTVV4VTJfMDV6d29aM1hoMm8wcmhpbnhSdEpMSmRPU1dLd1JHZm5nVW5rWXFlY2ZZSjhHWDA?oc=5",
+   "https://www.newsis.com/view/NISX20260928_0003805836"
+  ],
+  "statement": "Meta 동향 (마케팅)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Meta 동향 (마케팅)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_198d58a324c287a1": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "56d2dbd4f173ee13"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "56d2dbd4f173ee13:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_198d58a324c287a1",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "56d2dbd4f173ee13:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://www.nature.com/articles/s42256-026-01308-7"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Regional climate risk assessment from climate models using probabilistic machine learning",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Regional climate risk assessment from climat",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_1eaf813468ad110f": {
+  "change_ids": [],
+  "concepts": [
+   "REGULATION"
+  ],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "79a580960f1c16d9",
+   "b14f40615bcee62e",
+   "bfe97f12fbf84f80"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_79a580960f1c16d9"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_1eaf813468ad110f",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_79a580960f1c16d9"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTFA5X1lQTXhjVjN1RnFzVm5VOXQ0RDFqWVM4QUQzelM2RDZnVlczZExLamo2clp4WkxUVTEtU3RNOV96czI3bjl4UlZibTlsRXN4TXdKS0F4T2RNdkhvS2NMTmRNT1dtUTFJbFlNZXJOMmRiazVSNjdRRUVFQQ?oc=5",
+   "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jVFYwdFJ4NzB1UnExYTdIZDBVWkJ6SlktbnFSNjhuQzgtQldlQ0dzaGVRdmdzX2J3MXNTc3pSNUlVeWJVWXhBVUVadjcyM2d0djd0YVRaNWJoeE11RTZldW9Wa1pLZnNfU2R3YdIBbEFVX3lxTE9jVFYwdFJ4NzB1UnExYTdIZDBVWkJ6SlktbnFSNjhuQzgtQldlQ0dzaGVRdmdzX2J3MXNTc3pSNUlVeWJVWXhBVUVadjcyM2d0djd0YVRaNWJoeE11RTZldW9Wa1pLZnNfU2R3YQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HN0UyTzhzLWFOQnFnc0JXNXc2bTVNd3lRRU4zdlhNbnp1cDBJd3ltaTBjWmZKbzNyVDZaVHQyeTVzOVRUUkZkdGtWLUgzWDNTamxvbXVLQWRkYk0?oc=5"
+  ],
+  "statement": "Trump 규제 (개발)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Trump 규제 (개발)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_1fda85f1c8d6ce7d": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "2fa01e8819fd9906",
+   "309d3a4f83f0a017",
+   "499b5712c021b4e7",
+   "6ba7417936458e58",
+   "8d36a93d57a1921a",
+   "905fba6e1f01d1ac",
+   "dcd4b5a345a64a9b"
+  ],
+  "domains": [
+   "MODEL_RELEASE"
+  ],
+  "entities": [
+   "OpenAI"
+  ],
+  "event_ids": [
+   "evtprod_2fa01e8819fd9906"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_1fda85f1c8d6ce7d",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_2fa01e8819fd9906"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbktmMmRJUFpuTUxCb25pR3pvV1luMUdGWmVHNkVXNlhzWUktOHZNanlsMEhOUUNhbVUzV2w2ZE1OZ1hPR1dYQmpIX0pnZWwtRDFiSGlfcVUyUUQ3R3V4WFI5TUZaQWJpUlBwRU1TbFgzLW9KQ183RHJsSlVKdTU1RGFR0gGWAUFVX3lxTFBCZ1JTSnRkWDB2YmdMbXlMVlpZWVdjLVhyS0ZMNVVnakRLNnRqMDE1VUM1dUJtUVVLb0RpdklWMFYyWE5RYm9iQ09TZ0dobnhRQzAxZ0NHNjYxZFdobTVuWk5sc0wyTW5RWHVpYkJEZU1ScFNvWFRTTFlESWlZMVktb2xaMTRkSGpjOERfX284ZGVVdGlzZw?oc=5",
+   "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
+   "https://news.google.com/rss/articles/CBMijwJBVV95cUxQMEZtU3dMSnM1b2pVQUhMalJYM2p5UzRBWVg2alNLaDZLN3FYZjFna2x0cHFLeHMtMUJvaUp1RENZUTYwTG9hQ3lacU5mdGh1d05rOGdJMDVLZ2h5SGtFOUhhREV0ZlZraVZWcllvaVRoVlh1TmJYejAzdG01YndpSTh5cThMYVhRSmpZVk1TWkRqWmhLZTJqaGtzd3lWZERwaVI1RVBrRG5YOVJqcVBEMEdZSEg4QXVjZndWc2hEWkF2MzVoa0hxOXFfWGxvb1I4V2phUXgzMTF0ZjVkNnhEcDFYakQ4aXpPSnNxWTZPX2xEU2R6M28yUThfWVFmelVQcXEzLTZpYXJfc1UzbVZF?oc=5",
+   "https://news.google.com/rss/articles/CBMiekFVX3lxTE44UldTTk4wWS1oa3NoWXZ3RFdSZ3M1Q2lhMFFCa3A2QmMzTjRmYWk5bHp3cVBPUldmdzBDRjNmUVVfNnFycy05YVdTVjU4T1ljYUZxRkJZY2RINVNUV1lxMUdyX3BodGNja09adjlRNTYwelNZUEZWR093?oc=5",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxON3J6Rk5EcVdTM1V5QmZWRVhSQW1DaDBmYU5YQ0JnM1hLMUxXbWVSVy1vdmZYWjA1T1N2WnRMNnB2N0NkVUwySjFlU05ISE5uRUFOdnIxYVVxVTkwaTlNcm5LdlduajAwZHFGcUExZ3Z5Rm5zZmNFcldST2pfN2pvWU5JRkY2US1TUVRZZ09jYjFLQUh3cnBsVHNCQmh4SHdKcC1mM0ZLRFNmV0o4R2tfUtIBtgFBVV95cUxQakpZOVlkQTEzOHdkWEI5ZmxXVUc1MFJCWkFLNkVxNld2NjA4WkRwUFV0TlM4ejJhWnZzc1JfcERhMFIwdUEtWU5pLU9tSzN6VnBLbFpKYkd3SEZqMnBJcFVJY3VLdjlqS2NWUDVKTVNXZ0otXy1RZE9XaGg4YVYydjJEM3BjSHlDXzZla2dleU9lOTZjem1oWDBqRWp1LXlyckFZcTNDd3lmazBVcGZJc0dUc0xGUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMic0FVX3lxTE5kSkZEMnhkSFlPejluYVFjOVNMb2ZXUEZobGpWLTZhdWpNSjVoajcxVTk5cnFOZUxSLVlIUkNTaHRQY0RxOVBBX2todVNvZFIzY0JaaU51TEVBOUlnbW1fQjd3YTVyOVZiZnk4LUNkcDFsUFE?oc=5",
+   "https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/"
+  ],
+  "statement": "OpenAI 출시 철회 (안전성)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "OpenAI 출시 철회 (안전성)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_2020a36342ff921c": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "1bdda2b5527a0269"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "1bdda2b5527a0269:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_2020a36342ff921c",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "1bdda2b5527a0269:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2607.29238"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Small Is Enough: Per-User Style Rewriting of AI-Edited Text via LoRA Adapters",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Small Is Enough: Per-User Style Rewriting of",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_220423f5641040f7": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "6b962900432b0a4b"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "6b962900432b0a4b:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_220423f5641040f7",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "6b962900432b0a4b:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31422"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Towards Mitigating Fabricated Consensus: The Active Provenance Gate for Multi-Agent Debate Synthesis",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Towards Mitigating Fabricated Consensus: The",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_253de75fe4b2ba19": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "6913568609c5c92b"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "6913568609c5c92b:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_253de75fe4b2ba19",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "6913568609c5c92b:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31536"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collective impact of opinion formation on agent-based epidemic dynamics",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collective impact of opinion formation on ag",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_28fe88661a8e1ffc": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "8037ce5b679100a0"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "8037ce5b679100a0:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_28fe88661a8e1ffc",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "8037ce5b679100a0:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30691"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ADF-EA: A Unified Execution Assurance System for Agent Device Foundation",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ADF-EA: A Unified Execution Assurance System",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_2d9120a107f9259b": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "1e10ea1539c7c6e3"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "1e10ea1539c7c6e3:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_2d9120a107f9259b",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "1e10ea1539c7c6e3:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.02729"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BuildOcc: A Large Language Model Occupant Agent Platform for Building Energy Research",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BuildOcc: A Large Language Model Occupant Ag",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_2e918e18b898d62c": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "faea70104a385ec2",
+   "ffe4a9600d2b1e95"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_ids": [
+   "evtprod_faea70104a385ec2"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_2e918e18b898d62c",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_faea70104a385ec2"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://siliconangle.com/2026/09/28/meta-hires-mongodb-ceo-cj-desai-to-lead-new-enterprise-ai-business/",
+   "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/"
+  ],
+  "statement": "Meta 동향 (CJ)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Meta 동향 (CJ)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_2f39572140d3b2bf": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "25428a889e4e17d3",
+   "452cfc6087a1ac77"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Anthropic",
+   "OpenAI"
+  ],
+  "event_ids": [
+   "evtprod_25428a889e4e17d3"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_2f39572140d3b2bf",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_25428a889e4e17d3"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBZZGw3c1JvMHd4SWk0dzFwUW9jTFRSa1lLWWRDSXB4YnNQMS1ZQ2daSDE2a2xsNW9FMGkycENKSlQzY0tqR1lhOVg4SEd5NFZnTzdr?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZXRYME9NdzVsZWx4WXdURUJEWk5HVnVvRDE3VFBRcHM5Y2YxUW5RODRZMmlsc2YtUmQ2b1hsRWVNM0hpQ2N0TV9WQ1ZPU3N1RHBVMnhfTlV5WGppUk5OUjBQcXBReTNscTlOZ1pfTG9RODRxZEpKUEJVeGxHNW1HWHBSeGRSeE50?oc=5"
+  ],
+  "statement": "OpenAI-Anthropic 조사 (호주)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "OpenAI-Anthropic 조사 (호주)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_30ffe17d73320368": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "00d2cdb46baa4993"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "00d2cdb46baa4993:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_30ffe17d73320368",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "00d2cdb46baa4993:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30460"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Realizability Is Not Enough: Encoding, Liven",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_3618ae5d5c087ace": {
+  "change_ids": [],
+  "concepts": [
+   "GRID_CAPACITY"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "4362ab11e73c75fe"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "4362ab11e73c75fe:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_3618ae5d5c087ace",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "4362ab11e73c75fe:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2605.12728"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Grid-Orch: An LLM-Powered Orchestrator for Distribution Grid Simulation and Analytics",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Grid-Orch: An LLM-Powered Orchestrator for D",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_39d0e35ef941914e": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "857d4691a1df76e2"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "857d4691a1df76e2:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_39d0e35ef941914e",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "857d4691a1df76e2:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31060"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): The Crowd in the Machine: A Crisis-Informatics Reading of the 2026 Autonomous Agent Incidents",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): The Crowd in the Machine: A Crisis-Informati",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_3aa5f57f7be01122": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "68821b181460df0c"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "68821b181460df0c:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_3aa5f57f7be01122",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "68821b181460df0c:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://www.nature.com/articles/s42003-026-11044-8"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ConTP reshapes transporter functional space to resolve substrate specificity beyond evolutionary proximity",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ConTP reshapes transporter functional space ",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_3db5e181f5235456": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "7b365b59d25c5367"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "7b365b59d25c5367:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_3db5e181f5235456",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "7b365b59d25c5367:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.23121"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): MM-ContextFold: Context Folding for Multimodal Agentic Retrieval",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): MM-ContextFold: Context Folding for Multimod",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_3e9ba32331abf147": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "5d00ad984724aa40",
+   "865c5b591492119e",
+   "b48cf3b3b7844edd"
+  ],
+  "domains": [
+   "MODEL_RELEASE"
+  ],
+  "entities": [
+   "Anthropic"
+  ],
+  "event_ids": [
+   "evtprod_5d00ad984724aa40"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_3e9ba32331abf147",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_5d00ad984724aa40"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMickFVX3lxTE9qRGtiMER0c2RNRG5wOWl1ZWd4aEszaTJqWW5hWnI3cXpVaHBtTzlGYnQ2bTBsMnhXSkxONXdLVVpXQ0IxSG9RR2tXTnNiM2J0Qk5sbXJqVTVQRUFERXBSNEVPa2NmWHpYMDNOaktSNUNlUdIBd0FVX3lxTE9VUlRzOG8tVjJtWXpKb0hFNlduRU1QU1dlS2xPaHpBSzlxcWxzbFRBT19oMEJMdjgyd0c2elZXcV9vT1lGNU9VR0VqZGZxTThIRW5kLTlMTEUxdEhhUEs2NjJabER2UUdpaTVFdzZxWTVkX0JTeGU4?oc=5",
+   "https://siliconangle.com/2026/09/28/anthropic-debuts-claude-sonnet-5-5-running-30-faster-than-the-previous-generation-ai-model/",
+   "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"
+  ],
+  "statement": "Anthropic 출시 (번째)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Anthropic 출시 (번째)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_40e55f56096e505a": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "f906814c00dcda1f"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "f906814c00dcda1f:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_40e55f56096e505a",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "f906814c00dcda1f:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30469"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Pretrained ASR Pseudo-labeling for Noisy Police Audio",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Pretrained ASR Pseudo-labeling for Noisy Pol",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_43f7d6860c7cfa17": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "3b64b7e40e5ebfea"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "3b64b7e40e5ebfea:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_43f7d6860c7cfa17",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "3b64b7e40e5ebfea:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30325"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ScopeBench: Do Agents Preserve Engagement Bo",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_450e86bb925a6a30": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "39143425e551ebb4",
+   "7de6ff5c477db9ea"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "카카오"
+  ],
+  "event_ids": [
+   "evtprod_39143425e551ebb4"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_450e86bb925a6a30",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_39143425e551ebb4"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE55cVZ5ZVk4UW1nTmJXWUFNVklnck5mYjRkU2o2Z2NaeUZGWmtvOE1CV1FPU3BqZmNhUFBWR3hiUmFkWU43R2ZsWl9OZmlOWWJMd1UyRWpGT3dneFQ4TGJaTUdpN3BQbU1pa1pJLUk0bXI?oc=5",
+   "https://www.mk.co.kr/news/it/12163395"
+  ],
+  "statement": "카카오 동향 (검증)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "카카오 동향 (검증)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_48cde1c6c3ad66f5": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "378c7e6a655962f9"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "378c7e6a655962f9:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_48cde1c6c3ad66f5",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "378c7e6a655962f9:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30383"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Stealth Apart, Harm Together: Skill Cascadin",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_4af6050d0aa587b5": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "8ce8f265fed36edb"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "8ce8f265fed36edb:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_4af6050d0aa587b5",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "8ce8f265fed36edb:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30397"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Synthetic Ground-Truth Framework for the E",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_4eabfee01a264c25": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "40c546b01b8f0823"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "40c546b01b8f0823:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_4eabfee01a264c25",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "40c546b01b8f0823:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://www.nature.com/articles/s41467-026-77510-3"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): mHolmes improves cross anatomical cadaveric microbiome forecasting for postmortem interval estimation",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): mHolmes improves cross anatomical cadaveric ",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_54826711e07d838b": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "525569900b31c3eb"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "525569900b31c3eb:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_54826711e07d838b",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "525569900b31c3eb:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31125"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Unifying non-Markovian Dynamics and Agent Heterogeneity in Scalable Stochastic Networks",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Unifying non-Markovian Dynamics and Agent He",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_57af382deca0cc63": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "2ebbad3249d4bcd3"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "2ebbad3249d4bcd3:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_57af382deca0cc63",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "2ebbad3249d4bcd3:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30550"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Benchy: towards a universal language for task-oriented AI benchmarks",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Benchy: towards a universal language for tas",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_599e43780cfd89bb": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "7b218ecf09043a44",
+   "f1e09f10ef95a3a5"
+  ],
+  "domains": [
+   "COMPANY_ACTION"
+  ],
+  "entities": [
+   "Anthropic",
+   "Google",
+   "Meta",
+   "OpenAI",
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_7b218ecf09043a44"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_599e43780cfd89bb",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_7b218ecf09043a44"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxNV3JzOXF4ZDZuaTUyNjlsc01LcXl1X3d6WHp5M3dRTy1YV2hjeERNbUlNOXFoWHJEN3FJbF92WGhxVzdtNG5ySnROdkdvc1hyenlIX2pKeTBLdFp4c1dOT0JDMl9zVGJzWlprcWJLZ1FvSG9WcUZ5LUJtS3BmZFc1M09XU3pacFR1dGRiT25JY2cxNll0TDFqSjA5U0VOWDZwWHc?oc=5",
+   "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfbXBLOUJsU3dDTnVudGYtenU4TTdiZFhyODlEYjQtZTc4UGVEVlJBRnR0bm9JOHlEUk5oOVp6bmI3YXNFMWRERFozNkJuajRoWE50NFpwWFRwaGNKb3J5Sg?oc=5"
+  ],
+  "statement": "Google-OpenAI 회동 (임원들)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Google-OpenAI 회동 (임원들)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_5cd44060e2e8fff0": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "e3caf6a8ec30c10e"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "e3caf6a8ec30c10e:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_5cd44060e2e8fff0",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "e3caf6a8ec30c10e:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30484"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Do LLMs Understand Context? A Knowledge Graph-Based Evaluation Framework",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Do LLMs Understand Context? A Knowledge Grap",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_6185b14d9f265aa4": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "0570e4ca485cbe49",
+   "626a1a31b56e8ec9"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Meta",
+   "네이버"
+  ],
+  "event_ids": [
+   "evtprod_0570e4ca485cbe49"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_6185b14d9f265aa4",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_0570e4ca485cbe49"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWlFHajdxZXRPaG5GelJCOVpOTjlfSFpvV0JmZDdUUlAzNnFMcVBSclJmTnNBZ1U0QmNncEEzZE9JcEltX3FfQ3V6NllzVHdPNVlyaUxiNFBMaWIxZ0p6UUs1R1o2eXg3bGJ3ekU2N0xOZDVMQV9qVFg0NVZXZTY2TE1R0gGWAUFVX3lxTE5qVF95dHJDR2hxdWc4MERlellMTG9SMXNQY2g1M3NubEJwcDZBdWZJOXVLSFRlcDF2Nlo1VjBTVDRXbzdxVlI5QXo3Sk1wUVNwTHNyUVlwUnBIdFhNaFhhQUt3djU4bWl0ZXVMYWZtY19sTUQwWktsQWdiUG5xa0NCOVhXRDZfeDZKbXhhb2xmNXpNSE9Qdw?oc=5",
+   "https://www.mk.co.kr/news/it/12163492"
+  ],
+  "statement": "네이버-Meta 동향 (네이버지)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "네이버-Meta 동향 (네이버지)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_619a5192ec7c5ebe": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "4847d061d1f249e6",
+   "e5cf82c318ebff37"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "KAIST"
+  ],
+  "event_ids": [
+   "evtprod_4847d061d1f249e6"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_619a5192ec7c5ebe",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_4847d061d1f249e6"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbURsdXRhODQ5dC1hdjBYNUdPQnN4a3REZXgwUVFHQmtVcUVsWkNxb2VrUklUYVh3WWtkcDVhcm1maFJOdnR4VW9ZYm9DYkhOaVpJbl91OUFVdlU1ZGlLRm1jb0JNMjJNRFVDSGsyYVJaSWNUclk1Q1JLV1ZrQ1U0c29WZTM3MjhuZVFoWDM5WWdkV0xSWmxtWnlIQzN4VkZtZU52dkFJNDM0RGlnZXlCeVYxZ3JZT2dheUZSMVV1T1JhUUdPRFBCbzllV2w3Ni1MZ1dfQndwbFk?oc=5",
+   "https://biz.heraldcorp.com/article/10886937"
+  ],
+  "statement": "KAIST 동향 (움직임)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "KAIST 동향 (움직임)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_63fd9ee3426ab80e": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "a72f36c603737ac3"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "a72f36c603737ac3:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_63fd9ee3426ab80e",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "a72f36c603737ac3:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30289"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Not All Memories Are Equal: Hierarchical Collaborative Memory for Validity-Aware Retrieval in LLM Agents",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Not All Memories Are Equal: Hierarchical Col",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_65104eedd4c9a89f": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "3c7d8f12053d37d7"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "3c7d8f12053d37d7:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_65104eedd4c9a89f",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "3c7d8f12053d37d7:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30436"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): WALT: Learning World-Model-Aligned Latent Trajectories for Autonomous Driving",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): WALT: Learning World-Model-Aligned Latent Tr",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_65e8e6a9aee3bd4f": {
+  "change_ids": [],
+  "concepts": [
+   "AI_AGENT"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "aa9903feed237588"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "aa9903feed237588:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_65e8e6a9aee3bd4f",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "aa9903feed237588:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30293"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Cartograph: Federated Tool Discovery with Operator-Attested Retrieval for AI Agents",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Cartograph: Federated Tool Discovery with Op",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_6a3fa4694700fac0": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "56f68bc91612360d",
+   "b89a06590653f53d"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Meta"
+  ],
+  "event_ids": [
+   "evtprod_56f68bc91612360d"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_6a3fa4694700fac0",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_56f68bc91612360d"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/",
+   "https://www.aitimes.com/news/articleView.html?idxno=215702"
+  ],
+  "statement": "Meta 동향 (전환하고자)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Meta 동향 (전환하고자)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_6bbc66267f282285": {
+  "change_ids": [],
+  "concepts": [
+   "REGULATION"
+  ],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "58921084d65cf8e2",
+   "5ec44a18ca5116c1",
+   "719f0117204ff057"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_58921084d65cf8e2"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_6bbc66267f282285",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_58921084d65cf8e2"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBGSFRmYWktSS1yUWRCakd4NV9DWjAyN0U0ZG85WHRDcDFlaXpZcXhvOGRtMFllQUhyNW5XWkw5NGFMOUxZVjV2MGJMV1Y2b1NzZ1pwV3JvMV9mRHY4?oc=5",
+   "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00N3RxRXdZVmNzU0d0Z0tNTzZrY1FkZWZhbW5jUmcyTUdWMDd0SHVnVWNyT3BTaFZGNnF6WmlVaDJoNXotZ1M5ZWQyZDhmaHljZm9HcU9WSUlmVWs?oc=5",
+   "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeHM5UTJiZW1BOWtDbEZ1c1liT3JMNldSM2ZUc0t6aE9fVHZfaHhDUlo3by01elhjR1djU29xVUdaNk1fYlQtNWt1d1NHdXZ5YWk1TEF2bWxBNGQ0bHZpQl9hUWI1MEJ1UWZKZ19XdFJITjNxZDRqZnpTRlpPSXdNNk5lb1dsUktlZ2RzNnQ3Vl9yT3hoRlRxOWhMQTdlMXV0aU9Vc3Nzc1FGdjVvamJ0ZWtmLWtNbmxCdGdtZ29NZjRuYWVJbDJYMzMyZ0NLSFZSU3NwaVJFS05FYTVXRlY0cTdjU3JBWGct?oc=5"
+  ],
+  "statement": "Trump 규제 (균형)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Trump 규제 (균형)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_6c6d89577406c7d6": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "357fe251fe22eff2",
+   "55148847538c1fbd",
+   "663a777ff2b4ac30"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_357fe251fe22eff2"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_6c6d89577406c7d6",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_357fe251fe22eff2"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.hankyung.com/article/202609290939H",
+   "https://news.google.com/rss/articles/CBMirgFBVV95cUxNU3B0WUVwUFRjNUN2dHR1MlNtcmxWb3JPbWtLWlN2TnA5LVJTSk5TVnBucEl2NEhacUlXVGxvemk5ODkyZVg3ODgxUmxPazBaUVl4X3hrM29pcVlaYlpQMDlkZmxpajU1WmJHTUNWbFBfRXpDeGRNV3JWSWxmQWVBdFJZelQzM0tDd2FKa0hxTUpOVjlnQzVSaklGUVRnbXMxLTRPenpKcklSVDQzdVE?oc=5",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE1Yd3FUTUpHT1Juc1o2Nm9vS1dubnlvRWxOV2ZzWnJlRWhhVWc2OWZwZk1fbVlEN1Z5SkR5MFRkbjZ2bHgyUVVwc0lEbkxLX1B6S296dk9lMjN6ZE9hRnYyWWxDUEN2Tmt5M18zSDZ5d9IBb0FVX3lxTE1Yd3FUTUpHT1Juc1o2Nm9vS1dubnlvRWxOV2ZzWnJlRWhhVWc2OWZwZk1fbVlEN1Z5SkR5MFRkbjZ2bHgyUVVwc0lEbkxLX1B6S296dk9lMjN6ZE9hRnYyWWxDUEN2Tmt5M18zSDZ5dw?oc=5"
+  ],
+  "statement": "Trump 동향 (음모론)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Trump 동향 (음모론)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_6d59529b38c14de2": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "5047633d16750463"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "5047633d16750463:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_6d59529b38c14de2",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "5047633d16750463:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30489"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BioEVAL: A global, multi-institutional benchmark of large language and multimodal models for bioengineering",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BioEVAL: A global, multi-institutional bench",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_7297ccea91116530": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "6790127fafa1547e"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "6790127fafa1547e:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_7297ccea91116530",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "6790127fafa1547e:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30404"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): POIL: Point-based One-Shot Imitation Learning with Stable Dynamical Systems",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): POIL: Point-based One-Shot Imitation Learnin",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_7a1955df085c9048": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "9f727f4c6d89ac2e"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "9f727f4c6d89ac2e:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_7a1955df085c9048",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "9f727f4c6d89ac2e:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30291"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bringing AI to Autonomous Systems -- From Co",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_7ff1343bd4d03239": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "9b75262a4813d73c"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "9b75262a4813d73c:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_7ff1343bd4d03239",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "9b75262a4813d73c:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30287"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Mechanistic Study of AI-Text Detection Neu",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_826434b7b98a77bd": {
+  "change_ids": [],
+  "concepts": [
+   "REGULATION"
+  ],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "5dac0a21aadd247f",
+   "8c58e1ca7fc1bd2b",
+   "a6575ff74981de4c",
+   "a85dd0cf4a15d681",
+   "b51d0171ce50335b",
+   "bed33a3df012443f"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_5dac0a21aadd247f"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_826434b7b98a77bd",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_5dac0a21aadd247f"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5wbExvNWpuY2FnbWF5WVJxa0lsNnBBSXBiendNRkZtNU1Va3BHQVQtM3VDNGVkSlY2ZDhXY09PcENQdDBlOURMbG9QY0JuS3JPODcxQXJpSGlTUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQ09mRXMtTmMtRVlaTVktbDhhMEVZV0E3NS0tUEljdFNlMVBkUjkxVXZnRnFMTFZXTXVqbE12ODVzZVhicDl1bTFyV0V4bGFsYXVZTndrQ1FteUZpdFJNUlVqUDlGU09uazN1VzFMOFN0ZlRZV2hqT0dkTHJKVDhUSWtFNVAwc3FJZHBycVBkQ0N3NEZBekR2TUx4ZkN2UnJNWGdaWXdiR1o4dm1U?oc=5",
+   "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "https://www.khan.co.kr/article/202609291008001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "https://www.mk.co.kr/news/business/12163415",
+   "https://www.yna.co.kr/view/AKR20260929075800072"
+  ],
+  "statement": "Nvidia 규제 (반대)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 규제 (반대)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_82f20b2cbb5d3eb8": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "66b537ba2c5a288f"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "66b537ba2c5a288f:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_82f20b2cbb5d3eb8",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "66b537ba2c5a288f:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30428"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Actively Resolving Contextual Uncertainty for Underspecified Tasks in Natural Language",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Actively Resolving Contextual Uncertainty fo",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_8341641b0a4fc1ea": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "e421d3f963f49792"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "e421d3f963f49792:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8341641b0a4fc1ea",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "e421d3f963f49792:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30292"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Survey on Fake Review Detection: From Pre-trained Language Models to Large Language Models",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Survey on Fake Review Detection: From Pre-",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_8b79da46249584ff": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "bf61df88840874c2"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "bf61df88840874c2:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8b79da46249584ff",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "bf61df88840874c2:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30456"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Spectral Feedback for Test-Time Alignment of Protein Diffusion Models",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Spectral Feedback for Test-Time Alignment of",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_8cf661d6ec42ddce": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "6c41ae2bcdb38d72"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "6c41ae2bcdb38d72:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8cf661d6ec42ddce",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "6c41ae2bcdb38d72:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30563"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Thinking Less to Simulate Better: Intuitive Prompting Improves LLM Agents Simulating Individual Social Media Reactions, Including Unfamiliar Content",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Thinking Less to Simulate Better: Intuitive ",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_8dbba0dc0ff4791d": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "8d120e73d1ec23c7"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "8d120e73d1ec23c7:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8dbba0dc0ff4791d",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "8d120e73d1ec23c7:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2607.12222"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Hierarchical Semi-Markov Load Model for AI Data Centers Coupling Job Scheduling with Bulk-Synchronous-Parallel Power Dynamics",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Hierarchical Semi-Markov Load Model for AI",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_8e901b0038eb8b8e": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "13b2ecb05be9b676",
+   "39318c552e3132ec",
+   "651ced999ded9424"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_13b2ecb05be9b676"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8e901b0038eb8b8e",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_13b2ecb05be9b676"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBkYUtaR24tRFpXdnNwV0I5VnhmNnhaNUpDdFFJd05scFZ1aWlDMUM5cW8teGFiN2xVSERXbDk4b19ORmVwaFoxZFJTT3pNNDBCV2J3Y1lFVWpCRktIQ2ZMcTByaw?oc=5",
+   "https://www.fnnews.com/news/202609290517565531",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQmNRNTdyaGdENWhHUlEzVFpTVnRndmtXcDBfZlVmTVZpWWF2SEF6M1FwXzBtbFZRdWJWOGNKc2JfYll1aEZxamJYYTJwZ2pXMUZ0NW1wWjEyQXRObnRJa29BbzhrLWxXOTFmSVZlRlkyS1Z3endodzAyYm9Sc0NOYlE5REhwbnZQbERfdWc2Mi1LbWVyaGpiOGtjZ1dVWGQ2cTJib1FVM1ZJYkVZbmRJWA?oc=5"
+  ],
+  "statement": "Trump 동향 (담판)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Trump 동향 (담판)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_8f82604fe96030c4": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "29f9b767f0c23a89",
+   "a6a4027d9878143d",
+   "e97fa667cee7e431"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "삼성"
+  ],
+  "event_ids": [
+   "evtprod_29f9b767f0c23a89"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_8f82604fe96030c4",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_29f9b767f0c23a89"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.newsis.com/view/NISX20260928_0003805857",
+   "https://www.edaily.co.kr/News/Read?newsId=03129126645585040",
+   "https://www.khan.co.kr/article/202609291000001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news"
+  ],
+  "statement": "삼성 동향 (기대감)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "삼성 동향 (기대감)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_91115f941b209728": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "a98cfc6e0969e741",
+   "ad709c1aafc95bc2"
+  ],
+  "domains": [
+   "FUNDING"
+  ],
+  "entities": [
+   "Anthropic"
+  ],
+  "event_ids": [
+   "evtprod_a98cfc6e0969e741"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_91115f941b209728",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_a98cfc6e0969e741"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbVlPeVROc0FBWTl6a0ZCZXdPVF93WjdPT1BFV2xkQmlyRE9oYS1wRF9yWk0zV1EwSlJ5Vmt0UkpucHdQWUpSbGdzUmdVeC1EWm5sMzBkTUNQMkg3ekVYMkMtemVySUxhWnRCTWRNLTA1Vl8tZVZkRU80ZVk4TjdZbE5LdjJ5VzJXbUlmM1FvMnJqTFE4TkZVeEJFVndEMmpIbGN5WDRxclhHX0JZdHp6LWlad3JTakZr?oc=5",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd1dkb2w1RTRvTlN2dWc0NGRtb0NmM2h6VW55ZjdjRzU5a0xmcjhvQ21fWERxcC1ibThrUlFpNFcxUmYzRTZhWWxSc0xLQ25JYlc0QjVac0N4bU1PSHc3WGFYSVJ6eHpiRDRNcVpsX1RVckp0NnBQS0N4bFRsTmRkRjlQT0lKZ1hMRFhiSVhxYld6UmVoREtXS1FNTklsYzJuVDBlOThyekpNX1hyUmVNQg?oc=5"
+  ],
+  "statement": "Anthropic 투자 유치 (단독)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Anthropic 투자 유치 (단독)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_9323b6ec59e072d5": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "2fb8820ccff50440",
+   "4d987bc13622185d"
+  ],
+  "domains": [
+   "MODEL_RELEASE"
+  ],
+  "entities": [
+   "OpenAI"
+  ],
+  "event_ids": [
+   "evtprod_2fb8820ccff50440"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_9323b6ec59e072d5",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_2fb8820ccff50440"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMikgJBVV95cUxPWTd3VU9YTFRrdWxJUFBoUEhOaHpaTTE4OGIyUWlpakpFR1NPMjhfQUEyUC02WDlLVUloa0trdjhxOE05Y0JvQklmRzRxbWp0UlZLLV9xbTE2TWJIdHg3YjNUZmIwcDN0X0ZVZTVvcUtsc2NvMVhoS3N0aWtMS1FZT3Y4YVRDOVg0NnhndDNoN1ZlcEZLcWZHUXViWHU0dS1MMlNrVl9aa0w1a2dQM1ZNZ1hMREE4THhOcjRzS1dnc3N4UWc4UGpjSk5Sa0ZNcWlzVlJZMjNQdXphajVHcjdKM2JRd3duTXRLVEdTYmJHdThHRkRZNVpwNzdCLVNaRHlZM01OSVNKZUlZQl9BZGxxRXlR?oc=5",
+   "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/"
+  ],
+  "statement": "OpenAI 출시 (자사)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "OpenAI 출시 (자사)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_9365bf7ff25502bb": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "e2305056af9a026a"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "e2305056af9a026a:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_9365bf7ff25502bb",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "e2305056af9a026a:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30358"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): TinyCVIO: A Constellation-Aided Visual-Inert",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_94ff20e1287a5910": {
+  "change_ids": [],
+  "concepts": [
+   "COMPUTE"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "111cd9002abfd1e0"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "111cd9002abfd1e0:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_94ff20e1287a5910",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "111cd9002abfd1e0:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30459"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): VkVIO: Cross-platform GPU Acceleration for Visual-Inertial Odometry with Vulkan",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): VkVIO: Cross-platform GPU Acceleration for V",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_969d99c9c7bcbcb1": {
+  "change_ids": [],
+  "concepts": [
+   "AI_AGENT"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "8de1456a2539f9a3"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "8de1456a2539f9a3:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_969d99c9c7bcbcb1",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "8de1456a2539f9a3:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30883"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Warned alike, AI agents avoid the less-crowded road while people take it",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Warned alike, AI agents avoid the less-crowd",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_9ae4ec33c65767fc": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "4fddb8d043851dec"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "4fddb8d043851dec:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_9ae4ec33c65767fc",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "4fddb8d043851dec:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30785"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Job Class Thermal Intent Aware Liquid Cooling Allocation for AI Data Centers",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Job Class Thermal Intent Aware Liquid Coolin",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_9eb92e473c3e5749": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "b8fa13cceb3fef09"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "b8fa13cceb3fef09:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_9eb92e473c3e5749",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "b8fa13cceb3fef09:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30341"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bridging LLM Agents and Data Spaces: An Arch",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_a5e7e6ffeea851c4": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "567e3791d3b6fa27",
+   "8855c7bacd49d00c",
+   "d196604bbd70d39a"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_567e3791d3b6fa27"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_a5e7e6ffeea851c4",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_567e3791d3b6fa27"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxQazJ5WDk2ZHU0aF82RlhuMG51bVVERk1tLURXV1hENWFHdmRUa1dROEc3NHg1NkpQdWk3eWcteWdvODRtdlF1NWNTNlMyZTQtVlRMNE0zV1REWnhYU09jTVhCQ0FmSUJvbmtyaWl2VXlvT1VPUFBteS10N2tkZmQ0Sjl1N3hjZGRMUXJMQkM0R2VoSE0?oc=5",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcC1aeU94bDY1WnlHemxlek1USUhFeUlHRlE3S2x0UXVrSUdFTXJkOVBMbHltN3FMUXpsbk9fZEdUczZuWmQzeFlxOTdibFZhSlE4TVVJQVhkYTFvY19LXzliVUltYW1DLVQ1Ykc3Q0F4dE1fTm1wazhlRHkxcVFjZTZNbXVtWmt4QXRRR2NxeWFvTkhuX3NTLVNXWldtR1RK?oc=5",
+   "https://the-decoder.com/nvidia-wants-to-keep-ai-agents-on-a-short-leash-with-a-watchdog-built-into-its-chips/"
+  ],
+  "statement": "Nvidia 동향 (기반)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 동향 (기반)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_b20d3290268e1d30": {
+  "change_ids": [],
+  "concepts": [
+   "GRID_CAPACITY"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "9154f04d2070dbf3"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "9154f04d2070dbf3:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_b20d3290268e1d30",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "9154f04d2070dbf3:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31099"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collision-free Movement on Grids and Beyond",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collision-free Movement on Grids and Beyond",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_b29080148dd8bc01": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "1e258d51319b94bf",
+   "4f20354442be35fe",
+   "af55192d35ffee3b",
+   "fbafabe17015a664"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "LG"
+  ],
+  "event_ids": [
+   "evtprod_1e258d51319b94bf"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_b29080148dd8bc01",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_1e258d51319b94bf"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.fnnews.com/news/202609282036034256",
+   "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1kanBwUDFOcEs3a3V5aWtzTXBUYmNiMTVtcGxBMkh0dEhEMFY5M20tYmhMRGtpMlJ3WVE3cUZteEF3a2hCYmZpcmJuN3Uwb210WmlPSElvaw?oc=5",
+   "https://www.mk.co.kr/news/business/12163459",
+   "https://www.newsis.com/view/NISX20260929_0003806525"
+  ],
+  "statement": "LG 동향 (수주)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "LG 동향 (수주)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_b6249d6f0409bfb5": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "0796b0a2299ad115"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "0796b0a2299ad115:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_b6249d6f0409bfb5",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "0796b0a2299ad115:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.28504"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AI in Science: Early Insights",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AI in Science: Early Insights",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_b8e15346279d9a04": {
+  "change_ids": [],
+  "concepts": [
+   "REGULATION"
+  ],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "d3180795a4560ed3",
+   "e09f773c670497f3",
+   "e1da0f895405134f"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Trump"
+  ],
+  "event_ids": [
+   "evtprod_d3180795a4560ed3"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_b8e15346279d9a04",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_d3180795a4560ed3"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMibEFVX3lxTFByU0ZqX1R6bDJBaVRRS3d6aDhzQ2Q0RVNxTXBVLXh1Nm14UG1PZlgzUGlGOTVuSXYyR2FEYjdrSXQ3bHhXSnY3WXRUaWEwZkhseUZ5ZDN2akVqRmRzY20tWTZHR1hBSVQzbmtIag?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnl2MDdhdXhRX3l0c2NHTklpLWl4bkl4ZllwS1NUeGg4dXRVcXV6aW5kLUJ4bVpDeWRybndNYlc0YlVrRVl4ejZXUWlxVVplS3RUM3pqU244dWlBVTFna045SjZoakJuc0JiNDc3aER5LVMxaFJjS3NjbDN3czE5VTNxS3FJTmJM?oc=5",
+   "https://news.google.com/rss/articles/CBMic0FVX3lxTE5uNDNrMWctaUNuMXZmWWFxbU5kaVlZYXZWVkxSMnBEcWNYQnhRam5mOHk0WWl1NDlsbTBjckQ2ckpCdlVJR0s2SjFibVpUUXM0YWxVSzVWU0V1VXhsaFJEV1pZNm5QTUhFanpJb0o3VEI4Y2vSAXdBVV95cUxQWXNUTHpLWkEwZmdLNmVndUJfekNVNUk3cEFOWFE5V0tlei1sSUtnN0pFU2xKeE1wcW5PYjFPTWtTWTh6N2VuaVo0Sm5GMnJBbVA0UUJZRHQ4Rjc4RjNQRUgtMnFXYnZIMi1qaTF1aEU4NTFvUHl1bw?oc=5"
+  ],
+  "statement": "Trump 규제 (집결)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Trump 규제 (집결)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_b983e550500c1c33": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "3e75f2a25891f6ef"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "3e75f2a25891f6ef:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_b983e550500c1c33",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "3e75f2a25891f6ef:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30328"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When Is a Multi-Agent Code Judge Actually Gr",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_bebc8b8b5c78c114": {
+  "change_ids": [],
+  "concepts": [
+   "GRID_CAPACITY"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "6bb04d3a16411126"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "6bb04d3a16411126:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_bebc8b8b5c78c114",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "6bb04d3a16411126:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2604.09823"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Agentic Workflows for Resolving Conflict Over Shared Resources: A Power Grid Application",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Agentic Workflows for Resolving Conflict Ove",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_c5c34dc2a0cf6bda": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "5d646df0760783f2"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "5d646df0760783f2:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_c5c34dc2a0cf6bda",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "5d646df0760783f2:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31188"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): How can AI accelerate the green transition?",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): How can AI accelerate the green transition?",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_c66aca5de1cb40ef": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "788d01ac3691ff08"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "788d01ac3691ff08:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_c66aca5de1cb40ef",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "788d01ac3691ff08:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30859"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AC Power Flow Contingency Analysis Using a Single Deep Neural Network",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AC Power Flow Contingency Analysis Using a S",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_c9129a33f87dca90": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "1cf7a4f18314cfa2",
+   "787b62a3a5306ff0"
+  ],
+  "domains": [
+   "REGULATORY_ACTION"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_1cf7a4f18314cfa2"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_c9129a33f87dca90",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_1cf7a4f18314cfa2"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://www.donga.com/news/Economy/article/all/20260929/134748258/2",
+   "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBJYzNfWEJnYWJjb0kxc1VSckVBa3V5T0NYT3ctcEhsOF82OEVFM3ZmazlvUEhPemNybl85SElWUmVZQUNIOFd0em43NGNwOU0?oc=5"
+  ],
+  "statement": "Nvidia 승인 (틱톡)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 승인 (틱톡)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_ccc03d8e634541af": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "011ef36b54ed2caf"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "011ef36b54ed2caf:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_ccc03d8e634541af",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "011ef36b54ed2caf:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2608.30901"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Flexible Training Workloads in Large-Scale A",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_cf63c6678e9fbac9": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "003dea2169532db9",
+   "57dbd0f7c4aa58cd"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_003dea2169532db9"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_cf63c6678e9fbac9",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_003dea2169532db9"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTE9iclhOaUhUeDFGRDNBZWJzNWFOWUVtaVBwck91TFE4Um5rUDJ5Z1RsRXJSN2VWTUR3X2lmV0x5cDRqZEM5aDRwLVp5OWpzOHNtV2phY2hVNTF5NWo5M0JpYW1rcEhqTHFSTmZqZl9KSTdNZkt0QWhrZQ?oc=5",
+   "https://www.edaily.co.kr/News/Read?newsId=03407926645585040"
+  ],
+  "statement": "Nvidia 동향 (최대)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 동향 (최대)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_d7cae0ca57615eeb": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "641a71ff188a7303",
+   "a35fc3ec93e92876",
+   "c347fc714f369737"
+  ],
+  "domains": [
+   "PRODUCT_RELEASE"
+  ],
+  "entities": [
+   "Nvidia"
+  ],
+  "event_ids": [
+   "evtprod_641a71ff188a7303"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_d7cae0ca57615eeb",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_641a71ff188a7303"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxOLTVMVzBocmRINk1yNmRPX3RrRUFUeUd5N2s1ejYwam83ZFV5WXpfaFVFUGtNLVRKM1J5eFg5T3RBZzFOVTlFZ3BYRElXRFpRank0N2VlcFN5clpxUG02ZzFLWG1MTTBLcXBCU3I0a3FFNEFtWXVxUkJPZ1RVWkc4dDJHMlNCTHZfUHRJb09sWnpqVFNsdHpqRHVibFk3cG1jUXkxQW9TTjdxcFRk?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0xlS0hZLW9rRWw5THJla3dpOFBBY0VwNUo2VXZfWkhKN0FiVk93VTNoNFZkQm00eFlRTGxrWFRiVjhGTUVudGZqNEUyWVB6OVhPYXEwanVISEZ3VjQ5bXkyVV9jNVVWNGlUcUdaeWtRc0xvb0s4TW9UQlp1OWM5eVJ0TjVEbHZUXzFLUzNQMkhVQi1zdU13cmVQZHVKdw?oc=5",
+   "https://www.yna.co.kr/view/AKR20260929003600091"
+  ],
+  "statement": "Nvidia 출시 (불능)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Nvidia 출시 (불능)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_dd0e02ddba2a88f8": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "daa9ede7bf7e3ced"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "daa9ede7bf7e3ced:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_dd0e02ddba2a88f8",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "daa9ede7bf7e3ced:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31468"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): PriceBench: A Diagnostic Benchmark for Price",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_e06df1d6501d9e4e": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "b394df1ecc069ffe"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "b394df1ecc069ffe:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_e06df1d6501d9e4e",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "b394df1ecc069ffe:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30294"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide Generation and Evaluation",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_e6ca9d34b295125a": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "9cb34f07f4f3c23a"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "9cb34f07f4f3c23a:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_e6ca9d34b295125a",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "9cb34f07f4f3c23a:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30295"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SignTrace: Describe a Sign, Find the Word",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SignTrace: Describe a Sign, Find the Word",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_e8dddee728cc9a23": {
+  "change_ids": [],
+  "concepts": [
+   "AI_AGENT"
+  ],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "574d71d286dad78c"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "574d71d286dad78c:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_e8dddee728cc9a23",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "574d71d286dad78c:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2604.20050"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Information Aggregation with AI Agents",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Information Aggregation with AI Agents",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_eb3c08a1ae497619": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": null,
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:53:56.536439+00:00",
+  "document_ids": [
+   "a118c3f0ef961232",
+   "d12e0ed85befc587"
+  ],
+  "domains": [
+   "OTHER"
+  ],
+  "entities": [
+   "Google"
+  ],
+  "event_ids": [
+   "evtprod_a118c3f0ef961232"
+  ],
+  "fact_ids": [],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_eb3c08a1ae497619",
+  "note_type": "EVENT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "evtprod_a118c3f0ef961232"
+  ],
+  "source_object_type": "EVENT",
+  "source_urls": [
+   "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb1JjMmhJZk02cFpGLXNENnlvZEFLY0dxaFV6d0RxcXhEOUxhZmxMUElOR0tDd0RpdzFMd25KSWhlai12bVZfWjlDYUlwUjBaYUY0SUJzcmZJeG4wM256V0hqTGh0U1o0Q0Y2elh6MWFtVHNxcTk1SXVmeG0tbkw2MmRRMXhTLTVFYVd3RTM3MFRqVnV2UUFDLWFLQXpSaWVtQUVCMW1iTGFFV2VIVjJBOWNoZEZCVWp6Rzln?oc=5",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTFBUQzdtaTRfbGV5RVJ2ZlZGOHB4emEyRHZGanktV3pVd3NwYlpmb0VsUERMVUZTTU5hQWluNTNyTVlzd1BjMmJaOXdCODlpY2dWODhPMElieHBSQnBOMmlFc3FBaVlDSHhqeHR5V2N0LVVsTzEx?oc=5"
+  ],
+  "statement": "Google 동향 (사용해)",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "Google 동향 (사용해)",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:53:56.536439+00:00",
+  "version": 1
+ },
+ "note_edbff1992cd870c0": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "b917c819c6d2b7c1"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "b917c819c6d2b7c1:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_edbff1992cd870c0",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "b917c819c6d2b7c1:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.31590"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AgentWorld: Benchmarking Long-Horizon Collab",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_f5fb6a7d429cf5a8": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "4d4cdc5a20c81fa2"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "4d4cdc5a20c81fa2:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_f5fb6a7d429cf5a8",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "4d4cdc5a20c81fa2:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://www.nature.com/articles/s42256-026-01306-9"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Task-structured modularity emerges in artificial networks and aligns with brain architecture",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Task-structured modularity emerges in artifi",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ },
+ "note_f6dd85798b0d8f85": {
+  "change_ids": [],
+  "concepts": [],
+  "confidence": "SOURCE_LOCATED",
+  "counter_evidence_ids": [],
+  "created_at": "2026-09-29T11:39:51.658310+00:00",
+  "document_ids": [
+   "e4c37e0d9bb9dcc7"
+  ],
+  "domains": [],
+  "entities": [],
+  "event_ids": [],
+  "fact_ids": [
+   "e4c37e0d9bb9dcc7:c1:fact"
+  ],
+  "generated_by": "CODE_DETERMINISTIC",
+  "history": [
+   {
+    "action": "CREATED",
+    "at": "2026-09-29T11:53:56.536406+00:00"
+   }
+  ],
+  "human_review_status": "AUTO_CANDIDATE",
+  "interpretation_distance": 0,
+  "note_id": "note_f6dd85798b0d8f85",
+  "note_type": "FACT",
+  "pattern_ids": [],
+  "relations": [],
+  "signal_ids": [],
+  "source_object_ids": [
+   "e4c37e0d9bb9dcc7:c1:fact"
+  ],
+  "source_object_type": "FACT",
+  "source_urls": [
+   "https://arxiv.org/abs/2609.30747"
+  ],
+  "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Beyond the Last Truffula Tree: SustainAI - A Water-Aware, Closed-Loop Framework for Environmentally Accountable AI",
+  "status": "ACTIVE",
+  "structural_change_ids": [],
+  "superseded_by": null,
+  "supersedes": null,
+  "supporting_evidence_ids": [],
+  "title": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Beyond the Last Truffula Tree: SustainAI - A",
+  "topics": [],
+  "uncertainties": [],
+  "updated_at": "2026-09-29T11:39:51.658310+00:00",
+  "version": 1
+ }
+}

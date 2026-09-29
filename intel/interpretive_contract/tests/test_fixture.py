@@ -619,6 +619,9 @@ def test_68_regression_zero():
         # 않음 — 새 job 추가만).
         if path == ".github/workflows/daily.yml" and status == "M":
             continue
+        # STAGE 6 KNOWLEDGE MEMORY v1.0(Te 2026-09-29): 새 sidecar 모듈, 기존 파일 수정 없음.
+        if "knowledge_memory" in path and status in ("??", "M"):
+            continue
         if status == "M" and str(EV_DIR.relative_to(REPO_ROOT)) in path and path.endswith(".json") \
                 and _diff_is_timestamp_only(REPO_ROOT / path):
             continue

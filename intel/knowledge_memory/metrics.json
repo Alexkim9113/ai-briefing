@@ -1,0 +1,37 @@
+{
+ "atomizer": {
+  "broken_provenance_count": 0,
+  "broken_provenance_examples": [],
+  "candidates_before_dedup": 85,
+  "changes_examined_active": 0,
+  "changes_skipped_human_rejected": 1,
+  "events_examined": 28,
+  "facts_examined": 57,
+  "skipped_no_statement": 0
+ },
+ "dedup_removed": 0,
+ "graph": {
+  "graph_quality_flag": "OK",
+  "notes": 85,
+  "orphan_notes": 85,
+  "related_to_ratio": 0,
+  "relations": 0,
+  "relations_per_note": 0.0
+ },
+ "note_stats": {
+  "created": 0,
+  "unchanged_human_locked": 0,
+  "updated": 0
+ },
+ "relation_stats": {
+  "created": 0,
+  "unchanged": 0
+ },
+ "revised_notes_count": 0,
+ "status_breakdown": {
+  "ACTIVE": 85
+ },
+ "total_active_notes": 85,
+ "total_notes": 85,
+ "total_relations": 0
+}
