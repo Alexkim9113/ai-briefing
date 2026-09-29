@@ -636,7 +636,7 @@
   {
    "change_ids": [],
    "claim_id": "1797278454f972a0:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "1797278454f972a0",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -691,7 +691,7 @@
   {
    "change_ids": [],
    "claim_id": "1b1cdfdd178b97a5:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "1b1cdfdd178b97a5",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1025,7 +1025,7 @@
   {
    "change_ids": [],
    "claim_id": "1f9e4faa2884391a:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "1f9e4faa2884391a",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1398,7 +1398,7 @@
   {
    "change_ids": [],
    "claim_id": "2faf19c00cd6aed6:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "2faf19c00cd6aed6",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1446,7 +1446,7 @@
     "chg_7f1ae8e6b9e33860"
    ],
    "claim_id": "309d3a4f83f0a017:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "309d3a4f83f0a017",
    "event_ids": [
     "evtprod_2fa01e8819fd9906"
@@ -1459,7 +1459,7 @@
   {
    "change_ids": [],
    "claim_id": "31a26a71a83b2b43:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "31a26a71a83b2b43",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1527,7 +1527,7 @@
   {
    "change_ids": [],
    "claim_id": "34e92abdf3b4ee2d:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "34e92abdf3b4ee2d",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1538,7 +1538,7 @@
   {
    "change_ids": [],
    "claim_id": "357fe251fe22eff2:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "357fe251fe22eff2",
    "event_ids": [
     "evtprod_357fe251fe22eff2"
@@ -1898,7 +1898,7 @@
   {
    "change_ids": [],
    "claim_id": "430ed3a5ad4fe1e3:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "430ed3a5ad4fe1e3",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2284,7 +2284,7 @@
   {
    "change_ids": [],
    "claim_id": "4e79040d2acbe57a:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "4e79040d2acbe57a",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2565,7 +2565,7 @@
   {
    "change_ids": [],
    "claim_id": "56f68bc91612360d:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "56f68bc91612360d",
    "event_ids": [
     "evtprod_56f68bc91612360d"
@@ -2716,7 +2716,7 @@
   {
    "change_ids": [],
    "claim_id": "5bc21962d8baa159:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "5bc21962d8baa159",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2834,7 +2834,7 @@
   {
    "change_ids": [],
    "claim_id": "618c37c2e0a204f4:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "618c37c2e0a204f4",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2950,7 +2950,7 @@
   {
    "change_ids": [],
    "claim_id": "65e0f9c45ab357a7:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "65e0f9c45ab357a7",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2996,7 +2996,7 @@
   {
    "change_ids": [],
    "claim_id": "6764d3abfb174d0e:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "6764d3abfb174d0e",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3554,7 +3554,7 @@
   {
    "change_ids": [],
    "claim_id": "7815a514e52c1293:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "7815a514e52c1293",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3714,7 +3714,7 @@
   {
    "change_ids": [],
    "claim_id": "7de6ff5c477db9ea:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "7de6ff5c477db9ea",
    "event_ids": [
     "evtprod_39143425e551ebb4"
@@ -4306,7 +4306,7 @@
   {
    "change_ids": [],
    "claim_id": "908149d0ee3f8694:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "908149d0ee3f8694",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4405,7 +4405,7 @@
   {
    "change_ids": [],
    "claim_id": "9631da5dae6e57c0:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "9631da5dae6e57c0",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4923,7 +4923,7 @@
   {
    "change_ids": [],
    "claim_id": "a9cf060b286b8ec8:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "a9cf060b286b8ec8",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4980,7 +4980,7 @@
   {
    "change_ids": [],
    "claim_id": "aa9903feed237588:c2",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "aa9903feed237588",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4991,7 +4991,7 @@
   {
    "change_ids": [],
    "claim_id": "ab35ec286e01ba12:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "ab35ec286e01ba12",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -5254,7 +5254,7 @@
   {
    "change_ids": [],
    "claim_id": "b89a06590653f53d:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "b89a06590653f53d",
    "event_ids": [
     "evtprod_56f68bc91612360d"
@@ -5423,7 +5423,7 @@
   {
    "change_ids": [],
    "claim_id": "bf1a06cfff6e0af4:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "bf1a06cfff6e0af4",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -5781,7 +5781,7 @@
   {
    "change_ids": [],
    "claim_id": "d196604bbd70d39a:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "d196604bbd70d39a",
    "event_ids": [
     "evtprod_567e3791d3b6fa27"
@@ -6031,7 +6031,7 @@
   {
    "change_ids": [],
    "claim_id": "daef1e4c7c82ef2d:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "daef1e4c7c82ef2d",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6066,7 +6066,7 @@
     "chg_7f1ae8e6b9e33860"
    ],
    "claim_id": "dcd4b5a345a64a9b:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "dcd4b5a345a64a9b",
    "event_ids": [
     "evtprod_2fa01e8819fd9906"
@@ -6193,7 +6193,7 @@
   {
    "change_ids": [],
    "claim_id": "e1a8e43d7757ce5b:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e1a8e43d7757ce5b",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6320,7 +6320,7 @@
   {
    "change_ids": [],
    "claim_id": "e37a416ff32aef42:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e37a416ff32aef42",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6364,7 +6364,7 @@
   {
    "change_ids": [],
    "claim_id": "e421d3f963f49792:c2",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e421d3f963f49792",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6496,7 +6496,7 @@
   {
    "change_ids": [],
    "claim_id": "e5c1758166db1712:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e5c1758166db1712",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6507,7 +6507,7 @@
   {
    "change_ids": [],
    "claim_id": "e5cf82c318ebff37:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e5cf82c318ebff37",
    "event_ids": [
     "evtprod_4847d061d1f249e6"
@@ -6520,7 +6520,7 @@
   {
    "change_ids": [],
    "claim_id": "e67449d274f10817:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e67449d274f10817",
    "event_ids": [
     "evtprod_4b6ac88a841fbc54"
@@ -6566,7 +6566,7 @@
   {
    "change_ids": [],
    "claim_id": "e70f95ed5a22acd7:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e70f95ed5a22acd7",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6823,7 +6823,7 @@
   {
    "change_ids": [],
    "claim_id": "f57f3c87d7aee0f4:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "f57f3c87d7aee0f4",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6933,7 +6933,7 @@
   {
    "change_ids": [],
    "claim_id": "f98a2b96f2b5a52f:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "f98a2b96f2b5a52f",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6955,7 +6955,7 @@
   {
    "change_ids": [],
    "claim_id": "fa61fc48ebd70563:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "fa61fc48ebd70563",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7058,7 +7058,7 @@
   {
    "change_ids": [],
    "claim_id": "fe88331025fecb70:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "fe88331025fecb70",
    "event_ids": [],
    "evidence_record_ids": [],
