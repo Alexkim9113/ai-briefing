@@ -1413,6 +1413,7 @@ section.cat>h2{font-size:24px;font-weight:700;margin:34px 0 16px;color:var(--hea
 .row{padding:14px 0 12px;border-bottom:1px solid var(--line)}.row h3{margin:0 0 4px;font-size:16px}.row p{-webkit-line-clamp:2;margin-bottom:6px}
 .empty{color:var(--muted);font-size:14px}
 footer{margin-top:56px;line-height:1.7;padding-top:30px;padding-bottom:44px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.opdot{color:inherit;text-decoration:none;padding:0 10px;margin:0 -10px;opacity:.55}
 footer.wrap{margin-top:64px}
 .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}.fbrand p{margin:0}.fbrand .copy{font-size:12px;opacity:.85}
 .flogo{display:inline-flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.14em;color:var(--text);font-size:16px}.flogo svg{width:24px;height:24px}.flogo rect{stroke:var(--accent)}.flogo path{fill:var(--accent)}
@@ -1925,7 +1926,7 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
 {head}<style>{CSS}</style>{ld}</head><body>
 <header class="bar"><div class="wrap"><a class="logo serif" href="{base}index.html" title="처음 화면" aria-label="{esc(sc["name"])} 홈"><span>{esc(sc["name"])}</span></a><nav aria-label="주요 메뉴">{nav}</nav>{box}<button class="theme site-share" type="button" aria-label="사이트 공유하기" title="사이트 공유하기" data-url="{sc["url"]}/?v={og_ver()}" data-title="{esc(sc["name"])}">{ICON_SHARE}</button><button class="theme" type="button" aria-label="밝은 화면·어두운 화면 전환">{ICON_THEME}</button></div></header>
 <main class="wrap">{AI_NOTICE}{body}</main>
-<footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다.</p></div>
+<footer class="wrap foot"><div class="fbrand"><p class="copy">© {datetime.now(KST).year} {esc(sc["name"])}. 기사·논문·영상 등 이 사이트에 소개된 모든 정보의 저작권은 원작자에게 있습니다. <a class="opdot" href="{base}editor/write.html" aria-hidden="true" tabindex="-1">·</a></p></div>
 <div class="connect"><h4>CONNECT</h4>{connect_links(sc, base)}</div></footer>
 <script>{JS}{script}{"" if "write" in path else LIVE_JS.replace("BASE", base).replace("VER", BUILD_VER)}</script></body></html>"""
 
