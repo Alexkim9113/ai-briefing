@@ -691,7 +691,7 @@
   {
    "change_ids": [],
    "claim_id": "1b1cdfdd178b97a5:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "1b1cdfdd178b97a5",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1117,7 +1117,7 @@
    "document_id": "22177298ebd0d964",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_1"
+    "evr_3"
    ],
    "source_url": "https://www.donga.com/news/Opinion/article/all/20260928/134747915/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -1518,7 +1518,7 @@
    "document_id": "3458780fabb08a16",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_2"
+    "evr_4"
    ],
    "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wQi1KWm8yQ3dZcnhQdHhpSVN1Vl8tQ243OVlhZGFod2NieEZBeXV6bVJaMVdTM2MzRVB5T3pXaG5NUkF2VXRRVEVqcWIweFhJVlhXOVNRNXJHdw?oc=5",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -3075,8 +3075,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_3",
-    "evr_4"
+    "evr_5"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -6495,7 +6494,7 @@
   {
    "change_ids": [],
    "claim_id": "e5c1758166db1712:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "e5c1758166db1712",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7088,10 +7087,43 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 625,
+  "CLAIM": 628,
   "EVIDENCE_RECORD": 3
  }
 }

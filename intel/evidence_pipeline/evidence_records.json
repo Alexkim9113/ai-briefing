@@ -1,5 +1,95 @@
 {
  "evr_1": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "2075b886be535ebc",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_1",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T21:20:01-04:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798125+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T21:20:01-04:00",
+  "object": "the future of imaging",
+  "population_scope": null,
+  "relation": "are shaping",
+  "resources": [],
+  "source_id": "src_techxplore_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "AI and physics",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "value": null
+ },
+ "evr_2": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "2075b886be535ebc",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_2",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T21:20:01-04:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798127+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T21:20:01-04:00",
+  "object": "tools for capturing what the human eye can see",
+  "population_scope": null,
+  "relation": "have long been regarded as",
+  "resources": [],
+  "source_id": "src_techxplore_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Cameras",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "value": null
+ },
+ "evr_3": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -18,7 +108,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_1",
+  "evidence_record_id": "evr_3",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -27,11 +117,11 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798125+00:00",
+    "at": "2026-09-29T09:10:55.798128+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
-  "human_review_status": "PENDING",
+  "human_review_status": "HUMAN_REJECTED",
   "institutions": [],
   "interpretation_method": "RULE_MAPPING",
   "interpretation_status": "CANDIDATE",
@@ -50,10 +140,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T19:39:50.742495+00:00",
+  "updated_at": "2026-09-29T23:14:32.377619+00:00",
   "value": null
  },
- "evr_2": {
+ "evr_4": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -70,7 +160,7 @@
   "domains": [],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_2",
+  "evidence_record_id": "evr_4",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -79,7 +169,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798127+00:00",
+    "at": "2026-09-29T09:10:55.798130+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -102,10 +192,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T19:39:50.742495+00:00",
+  "updated_at": "2026-09-29T23:14:32.377619+00:00",
   "value": null
  },
- "evr_3": {
+ "evr_5": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -115,7 +205,7 @@
   "claim_id": "688c6d92f147a96b:c1",
   "claim_type": "MEDIA_REPORTED",
   "contradicts_ids": [],
-  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "created_at": "2026-09-29T23:14:32.377619+00:00",
   "direction": null,
   "document_id": "688c6d92f147a96b",
   "domain_scope": [],
@@ -124,7 +214,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_3",
+  "evidence_record_id": "evr_5",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -133,61 +223,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798128+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "HUMAN_REJECTED",
-  "institutions": [],
-  "interpretation_method": "RULE_MAPPING",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T04:30:00+09:00",
-  "object": "AI_INFRASTRUCTURE",
-  "population_scope": null,
-  "relation": "CONSTRAINS_EXPANSION_OF",
-  "resources": [
-   "ELECTRICITY"
-  ],
-  "source_id": "src_rss_donga_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "ELECTRICITY",
-  "support_type": "ASSOCIATED",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-09-29T19:39:50.742495+00:00",
-  "value": null
- },
- "evr_4": {
-  "_type_specific": {
-   "affected_system": "AI_INFRASTRUCTURE",
-   "controller_if_known": null,
-   "dependency_ids": [],
-   "resource_or_gate": "ELECTRICITY"
-  },
-  "claim_id": "688c6d92f147a96b:c1",
-  "claim_type": "MEDIA_REPORTED",
-  "contradicts_ids": [],
-  "created_at": "2026-09-29T09:10:55.689432+00:00",
-  "direction": null,
-  "document_id": "688c6d92f147a96b",
-  "domain_scope": [],
-  "domains": [
-   "PLANET"
-  ],
-  "entities": [],
-  "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_4",
-  "evidence_strength": "LOW",
-  "evidence_type": "BOTTLENECK",
-  "extraction_method": "LEVEL2_RULE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T04:30:00+09:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-09-29T09:10:55.798130+00:00",
+    "at": "2026-09-29T23:14:41.180526+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -210,7 +246,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T11:47:19.751726+00:00",
+  "updated_at": "2026-09-29T23:14:32.377619+00:00",
   "value": null
  }
 }
