@@ -240,3 +240,75 @@ def test_default_query_path_never_triggers_ask_metaxis_or_claude_adapter():
     assert "ask_metaxis" not in src
     assert "claude_adapter" not in src
     assert "import ask" not in src
+
+
+# ---------------------------------------------------------------------------
+# STAGE 7 PHASE M — Foresight Engine endpoint tests.
+# ---------------------------------------------------------------------------
+def test_coverage_endpoint_returns_real_counts():
+    result = service.coverage()
+    assert result["documents_total"] > 0
+    assert result["by_geography"] == {"UNKNOWN": result["documents_total"]}
+
+
+def test_knowledge_gaps_endpoint_always_reports_geographic_gap():
+    result = service.knowledge_gaps()
+    assert result["count"] == len(result["gaps"])
+    assert any(g["dimension"] == "GEOGRAPHIC" for g in result["gaps"])
+
+
+def test_cross_domain_connections_endpoint_never_uses_causal_language():
+    result = service.cross_domain_connections()
+    assert isinstance(result["count"], int)
+    for conn in result["connections"]:
+        assert conn["relation_type"] in (
+            "ASSOCIATED_WITH", "PRECEDES", "POSSIBLE_DRIVER", "CONTRIBUTING_FACTOR")
+        assert "CAUSES" not in conn["relation_type"]
+
+
+def test_historical_analogies_endpoint_requires_topic():
+    threw = False
+    try:
+        service.historical_analogies()
+    except ApiError as e:
+        threw = True
+        assert e.code == "INVALID_QUERY"
+    assert threw
+
+
+def test_historical_analogies_endpoint_reports_real_gap_for_this_corpus():
+    # This real corpus (as of Phase M) has no document old enough to ground a historical
+    # analogy - the endpoint must say so honestly, not fabricate a comparison.
+    result = service.historical_analogies(topic="AI regulation")
+    assert result["status"] in ("HISTORICAL_EVIDENCE_GAP", "CANDIDATE", "ANALOGY_REJECTED_INCOMPLETE")
+
+
+def test_intelligence_package_endpoint_requires_topic():
+    threw = False
+    try:
+        service.intelligence_package()
+    except ApiError as e:
+        threw = True
+        assert e.code == "INVALID_QUERY"
+    assert threw
+
+
+def test_intelligence_package_endpoint_honest_structure_for_real_topic():
+    result = service.intelligence_package(topic="Nvidia")
+    assert result["topic"] == "Nvidia"
+    assert isinstance(result["documents"]["count"], int)
+    assert isinstance(result["notes"]["count"], int)
+    assert set(result["layers"].keys()) == {
+        "signals", "patterns", "structural_changes", "structural_analyses",
+        "contradictions", "view_revisions", "scenarios", "policy_questions"}
+    for layer_result in result["layers"].values():
+        assert layer_result["count"] == 0  # honest: every layer is empty in the real corpus
+    assert result["evidence_sufficiency"] in (
+        "NO_EVIDENCE", "DOCUMENTS_ONLY", "NOTES_BUILT")
+
+
+def test_intelligence_package_endpoint_honest_zero_for_nonsense_topic():
+    result = service.intelligence_package(topic="zzz_definitely_not_in_corpus_zzz")
+    assert result["documents"]["count"] == 0
+    assert result["notes"]["count"] == 0
+    assert result["evidence_sufficiency"] == "NO_EVIDENCE"

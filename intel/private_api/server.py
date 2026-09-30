@@ -44,6 +44,14 @@ _ROUTES_GET = [
     (re.compile(r"^/contradictions$"), lambda m, qs: service.contradictions()),
     (re.compile(r"^/view-revisions$"), lambda m, qs: service.view_revisions(
         status=_first(qs, "status"))),
+    # STAGE 7 PHASE M additions.
+    (re.compile(r"^/coverage$"), lambda m, qs: service.coverage()),
+    (re.compile(r"^/knowledge-gaps$"), lambda m, qs: service.knowledge_gaps()),
+    (re.compile(r"^/cross-domain-connections$"), lambda m, qs: service.cross_domain_connections()),
+    (re.compile(r"^/historical-analogies$"), lambda m, qs: service.historical_analogies(
+        topic=_first(qs, "topic"))),
+    (re.compile(r"^/intelligence-package$"), lambda m, qs: service.intelligence_package(
+        topic=_first(qs, "topic"))),
 ]
 
 _ROUTES_POST = [

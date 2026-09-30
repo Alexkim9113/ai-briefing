@@ -18,7 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from errors import ApiError
-from loader import load_km_adapter, load_km_exporter, load_km_memory, load_operator_brain
+from loader import (load_foresight, load_km_adapter, load_km_exporter, load_km_memory,
+                     load_operator_brain)
 
 API_VERSION = "private-v1"
 
@@ -452,3 +453,60 @@ def view_revisions(status=None):
     view_revision = load_operator_brain("view_revision")
     candidates = view_revision.list_candidates(status=status)
     return {"count": len(candidates), "status_filter": status, "candidates": candidates}
+
+
+# ---------------------------------------------------------------------------
+# 13. STAGE 7 PHASE M — Cross-Domain Intelligence & Foresight Engine additions. Every function
+# below is a read/deterministic-compute path over intel/foresight_engine/ (new this phase) -
+# no LLM, no write to any canonical Stage 1-6 store. Only added because the underlying
+# capability was actually built this phase (Te spec section 80: no endpoints for symmetry).
+# ---------------------------------------------------------------------------
+def coverage():
+    """Domain/field/source/temporal/geographic coverage matrix + per-category knowledge gaps
+    (Te spec section 39-43). Reads real documents.json/notes.json only; 0/UNKNOWN buckets are
+    reported honestly, never backfilled."""
+    coverage_mod = load_foresight("coverage")
+    matrix = coverage_mod.build_coverage_matrix()
+    return matrix
+
+
+def knowledge_gaps():
+    """Open knowledge gaps: categories with real documents but zero notes ever built from
+    them, plus the always-honest GEOGRAPHIC gap (the corpus carries no geography field at
+    all - see intel/foresight_engine/coverage.py)."""
+    coverage_mod = load_foresight("coverage")
+    gaps = coverage_mod.detect_knowledge_gaps()
+    return {"count": len(gaps), "gaps": gaps}
+
+
+def cross_domain_connections():
+    """Cross-domain connections actually demonstrated by shared entities across notes tagged
+    with different `domains` values (Te spec section 7/23/60). Relation type is always one of
+    ASSOCIATED_WITH/PRECEDES/POSSIBLE_DRIVER/CONTRIBUTING_FACTOR - never CAUSES."""
+    cross_domain_mod = load_foresight("cross_domain")
+    connections = cross_domain_mod.find_cross_domain_connections()
+    return {"count": len(connections), "connections": connections}
+
+
+def historical_analogies(topic=None):
+    """Historical analogy readiness (Te spec section 19-22). This module builds no analogy
+    content itself (that requires a human-supplied historical_case, per the no-fabrication
+    rule) - it only runs the corpus audit and reports HISTORICAL_EVIDENCE_GAP honestly when,
+    as in this corpus today, no document is old enough to ground a real comparison."""
+    if not topic:
+        raise ApiError("INVALID_QUERY", "historical_analogies requires ?topic=")
+    historical_analogy_mod = load_foresight("historical_analogy")
+    result = historical_analogy_mod.build_historical_analogy(topic)
+    return result
+
+
+def intelligence_package(topic=None):
+    """The Phase M flagship deliverable (Te spec section 44-45): assembles every real, current
+    piece of intelligence this pipeline holds about `topic` - documents, notes, every
+    signal/pattern/structural-change/structural-analysis/epistemic/futures/policy-research
+    layer's own output file, cross-domain connections and historical-analogy readiness - into
+    one structured, non-prose package. Zero counts are reported plainly."""
+    if not topic:
+        raise ApiError("INVALID_QUERY", "intelligence_package requires ?topic=")
+    intelligence_package_mod = load_foresight("intelligence_package")
+    return intelligence_package_mod.assemble_intelligence_package(topic)

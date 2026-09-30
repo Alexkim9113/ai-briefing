@@ -22,6 +22,7 @@ HERE = Path(__file__).resolve().parent
 INTEL_DIR = HERE.parent
 OPERATOR_BRAIN_DIR = INTEL_DIR / "operator_brain"
 KNOWLEDGE_MEMORY_DIR = INTEL_DIR / "knowledge_memory"
+FORESIGHT_ENGINE_DIR = INTEL_DIR / "foresight_engine"
 
 
 def _ensure_on_path(path):
@@ -62,6 +63,17 @@ def load_km_memory():
     relations.json (the durable knowledge-note store). We only ever call the load_* readers
     from this module - never upsert_notes/upsert_relations (Phase L is read-only)."""
     return _load_isolated(KNOWLEDGE_MEMORY_DIR / "memory.py", "km_memory")
+
+
+def load_foresight(name):
+    """Bare-name module inside intel/foresight_engine/ (Phase M), e.g. 'coverage',
+    'cross_domain', 'historical_analogy', 'intelligence_package', 'operator_view'. Its shared
+    schema module is named 'foresight_schema.py' (not 'schema.py') specifically so it never
+    collides with the schema.py every other intel/*_layer package ships - safe to keep on
+    sys.path permanently alongside operator_brain, unlike knowledge_memory (see module
+    docstring above)."""
+    _ensure_on_path(FORESIGHT_ENGINE_DIR)
+    return importlib.import_module(name)
 
 
 def load_km_exporter():
