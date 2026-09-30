@@ -50,6 +50,24 @@
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
+ "db0be1a0cfc1d481": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:50:47.701507+00:00",
+  "document_id": "db0be1a0cfc1d481",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T11:50:35.663427+00:00",
+  "source_organization": [
+   "Commerce Department",
+   "National Technical Information Service"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "dbc88da07e499796": {
   "admission_status": "ADMITTED",
   "admitted_at": "2026-09-30T11:45:29.888782+00:00",
@@ -65,6 +83,41 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "dfeca8bdbe271f85": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:50:47.701507+00:00",
+  "document_id": "dfeca8bdbe271f85",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T11:50:35.663427+00:00",
+  "source_organization": [
+   "Federal Communications Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "e45955d26ea76a4b": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:50:47.701507+00:00",
+  "document_id": "e45955d26ea76a4b",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T11:50:35.663427+00:00",
+  "source_organization": [
+   "Transportation Department",
+   "National Highway Traffic Safety Administration"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
