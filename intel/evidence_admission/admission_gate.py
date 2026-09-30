@@ -62,6 +62,16 @@ TRUSTED_SOURCES = {
         "country": "US",
         "jurisdiction": "US_FEDERAL",
     },
+    # PHASE M.5D -- Crossref REST API (intel/historical_acquisition/fetch_crossref.py). A new
+    # trusted-source row, not a fork of the gate logic: validate_candidate/decide_admission/
+    # admit_shadow_result below are unchanged and reused as-is for this source too.
+    "src_crossref": {
+        "source_tier": "TIER_1",
+        "source_type": "RESEARCH_REPOSITORY",
+        "url_host_suffix": "doi.org",
+        "country": None,
+        "jurisdiction": None,
+    },
 }
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -165,13 +175,22 @@ def build_canonical_record(doc, now_iso):
     title = doc.get("title") or ""
     document_id = canonical_document_id(link, title)
     trusted = TRUSTED_SOURCES.get(doc.get("source_id"), {})
+    # Per spec: document_type/category are properties of the REAL candidate's own
+    # document_type (as its connector's canonicalize_document() set it -- POLICY for Federal
+    # Register, RESEARCH for Crossref, etc.), never hardcoded to one source's shape. Falls back
+    # to the trusted-source's own document_type only when the candidate omits it, and to
+    # "OTHER"/"other" (an existing, valid value -- see VALID_DOCUMENT_TYPES) only if truly
+    # unresolvable, never silently defaulted to POLICY for a non-policy source.
+    candidate_document_type = doc.get("document_type")
+    if candidate_document_type not in VALID_DOCUMENT_TYPES:
+        candidate_document_type = "OTHER"
     record = {
         "document_id": document_id,
         "source_id": doc.get("source_id"),
         "canonical_url": link,
         "title": title,
-        "category": "policy",
-        "document_type": "POLICY",
+        "category": candidate_document_type.lower(),
+        "document_type": candidate_document_type,
         "field": None,
         "published": doc.get("published"),
         "content_hash": doc.get("content_hash"),
@@ -185,9 +204,13 @@ def build_canonical_record(doc, now_iso):
         "country": trusted.get("country"),
         "jurisdiction": trusted.get("jurisdiction"),
         "abstract_excerpt": doc.get("abstract_excerpt"),
-        # Per spec item 6: publication_date is NOT effective_date. The Federal Register
-        # connector's canonicalize_document() never populates an effective-date field, so this
-        # stays intentionally absent/UNKNOWN rather than copying `published` into it.
+        # Academic-specific fields (Crossref) -- additive, absent/None for non-academic sources.
+        "authors": doc.get("authors"),
+        "doi": doc.get("doi"),
+        "journal_or_venue": doc.get("journal_or_venue"),
+        # Per spec item 6: publication_date is NOT effective_date. Neither connector populates
+        # an effective-date field, so this stays intentionally absent/UNKNOWN rather than
+        # copying `published` into it.
         "effective_date": None,
     }
     return record
