@@ -57,7 +57,11 @@ def test_normal_https_url_passes_validation():
     assert u.hostname == "example.com"
 
 
-def test_run_never_exceeds_six_urls():
+def test_run_never_exceeds_max_urls():
+    # CONDITIONAL-PASS CLOSURE item 1: MAX_URLS는 6->12로 늘었다(개별 문서 URL 매트릭스
+    # 확장, 12개 카테고리 커버리지 요구사항). 이 테스트는 여전히 "cap이 실제로 걸리는지"만
+    # 검증한다 - 하드코드된 6 대신 fp.MAX_URLS를 그대로 참조해 cap 값이 바뀌어도
+    # 테스트 자체의 의도(무한정 crawl 금지)는 그대로 유지한다.
     calls = []
 
     def fake_fetcher(url):
@@ -66,10 +70,10 @@ def test_run_never_exceeds_six_urls():
                 "content_type": "text/html", "status_code": 200, "byte_size": 1000,
                 "resolved_url": url}
 
-    matrix = [{"discovery_url": f"https://example.com/{i}", "source_type": "TEST"} for i in range(20)]
+    matrix = [{"discovery_url": f"https://example.com/{i}", "source_type": "TEST"} for i in range(30)]
     results = fp.run(source_matrix=matrix, fetcher=fake_fetcher)
-    assert len(results) <= 6
-    assert len(calls) <= 6
+    assert len(results) <= fp.MAX_URLS
+    assert len(calls) <= fp.MAX_URLS
 
 
 def test_full_field_set_present_on_success():
@@ -109,6 +113,49 @@ def test_http_status_and_title_captured_on_success():
     assert row["http_status"] == 200
     assert row["resolved_url"] == "https://example.com/article?resolved"
     assert row["title"] == "테스트 기사 제목입니다"
+
+
+def test_nav_heavy_fake_page_flagged_low_quality():
+    # 합성 fixture: nav/footer/cookie-banner 스타일의 짧은 줄이 대부분인 가짜 페이지.
+    # trafilatura가 뭔가를 뽑아내더라도(길이만으로는 FULL_TEXT 임계값을 넘을 수 있음)
+    # title이 없거나 짧은 줄 비율이 높으면 LOW_QUALITY_EXTRACTION으로 플래그돼야 한다.
+    nav_text = "\n".join(["Home"] * 60 + ["About"] * 60 + ["Cookie Policy"] * 60 + ["Contact"] * 60)
+    assert fp.assess_full_text_quality(nav_text, None) == "LOW_QUALITY_EXTRACTION"
+    assert fp.assess_full_text_quality(nav_text, "Some Title") == "LOW_QUALITY_EXTRACTION"
+
+
+def test_clean_article_like_page_is_ok_quality():
+    # 합성 fixture: 문장 단위의 긴 줄로 구성된 "진짜 기사 같은" 본문 + title 존재.
+    sentence = "This is a full sentence that reads like real article body content about a topic."
+    clean_text = "\n".join([sentence] * 20)
+    assert fp.assess_full_text_quality(clean_text, "A Real Article Title") == "OK"
+
+
+def test_quality_flag_and_new_fields_present_on_full_text_row():
+    body = "".join(
+        f"<p>This is paragraph number {i} of real article body content, discussing point {i} at some length.</p>"
+        for i in range(15)
+    )
+    fake_html = (
+        "<html><head><title>Real Article Title</title></head><body>"
+        f"<article><h1>Real Article Title</h1>{body}"
+        '<p>See also <a href="https://arxiv.org/abs/1234.56789">a paper</a> for details.</p>'
+        "</article></body></html>"
+    )
+
+    def fake_fetcher(url):
+        return {"html": fake_html, "content_type": "text/html", "status_code": 200,
+                "byte_size": len(fake_html), "resolved_url": url}
+
+    results = fp.run(source_matrix=[{"discovery_url": "https://example.com/article", "source_type": "TEST"}],
+                      fetcher=fake_fetcher)
+    row = results[0]
+    assert row["fetch_result"] == "OK"
+    assert row["quality_flag"] == "OK"
+    assert row["outbound_link_count"] >= 1
+    assert row["primary_candidate_link_count"] >= 1  # arxiv.org is on the allowlist
+    for field in ("author", "publication_date", "language", "redirect_chain"):
+        assert field in row
 
 
 def test_http_status_captured_on_failure():

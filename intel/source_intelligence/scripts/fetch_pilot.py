@@ -33,23 +33,63 @@ PKG_DIR = HERE.parent
 sys.path.insert(0, str(PKG_DIR))
 
 import content_acquisition  # noqa: E402
+import link_provenance  # noqa: E402 - REUSE BEFORE BUILD: allowlist/링크 추출 로직 재사용
 
 USER_AGENT = "Mozilla/5.0 (compatible; METAXIS-SourceIntel-FetchPilot/1.0; +https://github.com)"
 
-# 섹션 67 REAL FETCH PILOT: ~6개, 실제 존재하는 안정적인 공개 URL. 카테고리를 섞는다
-# (뉴스/정부/학술/공식 규제 페이지/법률/기업 뉴스룸). 이 세션에서 실제로 접속해
-# 확인한 것은 아니다(sandbox 네트워크 제한) - GitHub Actions 실행 시 결과가 실제로
-# 이 목록과 맞는지(리디렉션·구조 변경 등) 확인이 필요할 수 있다.
+# CONDITIONAL-PASS CLOSURE item 1: 실제 개별 문서/기사 URL 매트릭스로 교체(홈페이지
+# root URL 금지). 각 URL은 "왜 안정적인 개별 식별자인지"를 주석으로 남긴다 - 이
+# 세션은 네트워크가 없어 실접속 검증을 할 수 없다(반복 확인됨); 실패(403/404/paywall)는
+# 데이터이지 결함이 아니다(Te 지시). 카테고리 커버리지: NEWS>=3, RESEARCH>=2,
+# GOVERNMENT>=2, POLICY>=2, LAW-COURT>=1, COMPANY-PRIMARY>=2.
 SOURCE_MATRIX = [
-    {"discovery_url": "https://www.yna.co.kr/", "source_type": "NEWS_KO"},
-    {"discovery_url": "https://arxiv.org/abs/2401.00001", "source_type": "ACADEMIC_ARXIV"},
-    {"discovery_url": "https://www.data.go.kr/", "source_type": "GOVERNMENT_KR"},
-    {"discovery_url": "https://artificialintelligenceact.eu/", "source_type": "GOVERNMENT_EU_OFFICIAL"},
-    {"discovery_url": "https://www.law.go.kr/", "source_type": "LEGAL_KR"},
-    {"discovery_url": "https://openai.com/news/", "source_type": "COMPANY_NEWSROOM"},
+    # RESEARCH(arXiv) — arXiv ID는 논문마다 영구 고유 식별자(deposit 시 고정, 철회돼도
+    # abs 페이지 자체는 남음). 1706.03762 "Attention Is All You Need"(Transformer 원논문),
+    # 2005.14165 "Language Models are Few-Shot Learners"(GPT-3 원논문) — 둘 다 널리
+    # 인용되는 실존 랜드마크 논문으로 ID를 신뢰할 수 있다.
+    {"discovery_url": "https://arxiv.org/abs/1706.03762", "source_type": "ACADEMIC_ARXIV",
+     "identifier_type": "arXiv ID (permanent)"},
+    {"discovery_url": "https://arxiv.org/abs/2005.14165", "source_type": "ACADEMIC_ARXIV",
+     "identifier_type": "arXiv ID (permanent)"},
+    # POLICY/LAW(EU AI Act) — artificialintelligenceact.eu는 조문(article) 단위 영구
+    # slug 구조를 공개적으로 쓴다(article/6/, article/9/). eur-lex의 CELEX 번호
+    # 32024R1689는 EU AI Act 규정 본문의 실제 공식 영구 식별자(EUR-Lex 표준 CELEX 체계).
+    {"discovery_url": "https://artificialintelligenceact.eu/article/6/", "source_type": "POLICY_EU_OFFICIAL",
+     "identifier_type": "article-numbered permanent slug"},
+    {"discovery_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+     "source_type": "LAW_EU_OFFICIAL", "identifier_type": "CELEX number (permanent legal identifier)"},
+    # GOVERNMENT(KR) — law.go.kr/data.go.kr 개별 문서 딥링크는 세션이 실제 문서번호를
+    # 확인할 수 없어(네트워크 없음) best-effort로 도메인 자체를 유지하되, 최소한
+    # 홈페이지가 아닌 열람 경로를 사용한다. 실패는 정직한 데이터로 취급한다.
+    {"discovery_url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
+     "source_type": "LAW_KR", "identifier_type": "law-name path (best-effort, not homepage)"},
+    {"discovery_url": "https://www.data.go.kr/tcs/dss/selectDataSetList.do", "source_type": "GOVERNMENT_KR",
+     "identifier_type": "dataset listing path (best-effort, not homepage)"},
+    # LAW-COURT — Wikipedia 문서를 "안정적 문서 프록시"로 사용(정부/법원 원문 개별
+    # slug를 이 세션에서 확신할 수 없을 때의 명시적 fallback, Te 지시대로 최후 수단).
+    {"discovery_url": "https://en.wikipedia.org/wiki/EU_Artificial_Intelligence_Act",
+     "source_type": "LAW_COURT_PROXY", "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
+    # NEWS — 개별 기사 slug는 세션이 실접속으로 확인할 수 없으므로, 뉴스 카테고리는
+    # arXiv/EU 조문처럼 "영구 식별자"가 없는 특성상 best-effort 실제 언론사 기사
+    # 패턴을 쓰되 실패를 정상 데이터로 받아들인다. Reuters/AP 스타일 CELEX 없음 —
+    # 그래서 뉴스는 연합뉴스 AI 섹션의 특정 기사가 아닌, 실패해도 해석 가능한
+    # 카테고리 열람 경로를 쓴다(홈페이지보다는 한 단계 더 구체적).
+    {"discovery_url": "https://www.yna.co.kr/entertainment/all", "source_type": "NEWS_KO",
+     "identifier_type": "section listing path (best-effort, not homepage)"},
+    {"discovery_url": "https://en.wikipedia.org/wiki/GPT-3", "source_type": "NEWS_PROXY",
+     "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
+    {"discovery_url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+     "source_type": "NEWS_PROXY", "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
+    # COMPANY-PRIMARY — openai.com/index/ 는 공식 블로그 포스트의 실제 슬러그 패턴
+    # (뉴스룸 아카이브가 이 경로 구조를 쓰는 것으로 알려져 있음). 슬러그 자체는
+    # 확신할 수 없어 best-effort로 표시.
+    {"discovery_url": "https://openai.com/index/gpt-4/", "source_type": "COMPANY_PRIMARY",
+     "identifier_type": "blog post slug (best-effort, not newsroom root)"},
+    {"discovery_url": "https://deepmind.google/discover/blog/", "source_type": "COMPANY_PRIMARY",
+     "identifier_type": "blog listing path (best-effort, not homepage)"},
 ]
 
-MAX_URLS = 6
+MAX_URLS = 12
 PER_URL_TIMEOUT_SECONDS = 15
 MAX_REDIRECTS = content_acquisition.MAX_REDIRECTS
 MAX_BYTES = content_acquisition.MAX_HTML_BYTES
@@ -101,9 +141,11 @@ def real_fetcher(url):
     class _RedirectGuard(urllib.request.HTTPRedirectHandler):
         def __init__(self):
             self.hops = 0
+            self.chain = []
 
         def redirect_request(self, req, fp, code, msg, headers, newurl):
             self.hops += 1
+            self.chain.append(newurl)
             if self.hops > MAX_REDIRECTS:
                 raise _BlockedURLError("too many redirects")
             _validate_url(newurl)
@@ -117,17 +159,18 @@ def real_fetcher(url):
             status_code = resp.getcode()
             resolved_url = resp.geturl()
             content_type = (resp.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+            redirect_chain = list(guard.chain)
             if content_type and content_type != "text/html":
                 return {"html": None, "content_type": content_type, "status_code": status_code,
-                        "byte_size": 0, "resolved_url": resolved_url}
+                        "byte_size": 0, "resolved_url": resolved_url, "redirect_chain": redirect_chain}
             raw = resp.read(MAX_BYTES + 1)
             byte_size = len(raw)
             if byte_size > MAX_BYTES:
                 return {"html": None, "content_type": content_type, "status_code": status_code,
-                        "byte_size": byte_size, "resolved_url": resolved_url}
+                        "byte_size": byte_size, "resolved_url": resolved_url, "redirect_chain": redirect_chain}
             html = raw.decode("utf-8", errors="replace")
             return {"html": html, "content_type": content_type, "status_code": status_code,
-                    "byte_size": byte_size, "resolved_url": resolved_url}
+                    "byte_size": byte_size, "resolved_url": resolved_url, "redirect_chain": redirect_chain}
     except urllib.error.HTTPError as e:
         return {"html": None, "content_type": None, "status_code": e.code, "byte_size": 0,
                 "resolved_url": url}
@@ -142,29 +185,62 @@ def _sha256(text):
     return hashlib.sha256((text or "").encode("utf-8")).hexdigest()
 
 
-def _extract_title(html):
-    """content_acquisition.acquire_content()는 status/text만 반환하고 메타데이터
-    (title 등)는 버린다 - 계약을 바꾸지 않기 위해 fetch_pilot 쪽에서 별도로
-    trafilatura의 메타데이터 추출을 호출한다. trafilatura 2.x는
-    extract(..., with_metadata=True, output_format="json")로 metadata를 함께 내준다."""
+def _extract_metadata(html):
+    """content_acquisition.acquire_content()는 status/text만 반환하고 메타데이터는
+    버린다 - 계약을 바꾸지 않기 위해 fetch_pilot 쪽에서 별도로 trafilatura의 메타데이터
+    추출을 호출한다. trafilatura 2.x는 extract(..., with_metadata=True,
+    output_format="json")로 metadata를 함께 내준다. 실패하면 전부 None(추측 금지)."""
+    empty = {"title": None, "author": None, "publication_date": None,
+              "language": None, "canonical_url": None}
     if not html:
-        return None
+        return dict(empty)
     try:
         import trafilatura
     except ImportError:
-        return None
+        return dict(empty)
     try:
         raw = trafilatura.extract(html, with_metadata=True, output_format="json",
                                    include_comments=False, include_tables=False)
         if not raw:
-            return None
+            return dict(empty)
         meta = json.loads(raw)
-        title = meta.get("title")
-        return title or None
+        return {
+            "title": meta.get("title") or None,
+            "author": meta.get("author") or None,
+            "publication_date": meta.get("date") or None,
+            "language": meta.get("language") or None,
+            "canonical_url": meta.get("url") or None,
+        }
     except Exception:
         # 메타데이터 추출 실패는 본문 추출 실패와 무관하게 조용히 None으로 처리한다
         # (섹션 47: fetched content는 신뢰하지 않는 데이터).
-        return None
+        return dict(empty)
+
+
+def _nav_contamination_ratio(text):
+    """CONDITIONAL-PASS CLOSURE item 1: nav/footer/cookie-banner 오염 휴리스틱.
+    추출된 텍스트를 줄 단위로 나눠, 4단어 미만인 짧은 줄의 비율을 본다. 실제 기사
+    본문은 대부분 문장 단위 줄이 길고, nav/메뉴/쿠키배너는 짧은 라벨성 줄이 몰린다.
+    완벽한 판정은 아니다(휴리스틱) - 그래서 FULL_TEXT를 아예 막지 않고 별도
+    LOW_QUALITY_EXTRACTION 플래그만 얹는다(기존 FETCH_FAILED 승격/강등 로직은
+    건드리지 않는다 - content_acquisition.py의 acquire_content() 계약은 그대로 둔다)."""
+    lines = [ln.strip() for ln in (text or "").splitlines() if ln.strip()]
+    if not lines:
+        return 0.0
+    short = sum(1 for ln in lines if len(ln.split()) < 4)
+    return short / len(lines)
+
+
+def assess_full_text_quality(text, title):
+    """(a) title 존재 여부, (b) nav/footer 오염 비율을 확인해 "진짜 본문을 확보했는가"를
+    text_length 하나만으로 판정하지 않는다. 반환: "OK" 또는 "LOW_QUALITY_EXTRACTION".
+    이 함수는 content_status를 바꾸지 않는다(FULL_TEXT 승격/강등은 하지 않음) - 별도
+    진단 필드(quality_flag)로만 보고한다. 기존 acquire_content() 반환 계약은 그대로."""
+    if not title:
+        return "LOW_QUALITY_EXTRACTION"
+    if _nav_contamination_ratio(text) > 0.4:
+        return "LOW_QUALITY_EXTRACTION"
+    return "OK"
 
 
 def run(source_matrix=None, fetcher=real_fetcher):
@@ -187,6 +263,13 @@ def run(source_matrix=None, fetcher=real_fetcher):
             "extractor": None,
             "extractor_version": None,
             "content_hash": None,
+            "author": None,
+            "publication_date": None,
+            "language": None,
+            "outbound_link_count": None,
+            "primary_candidate_link_count": None,
+            "redirect_chain": None,
+            "quality_flag": None,
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
         # acquire_content()의 반환 계약(status/text/extractor만)은 바꾸지 않는다 - 대신
@@ -204,16 +287,40 @@ def run(source_matrix=None, fetcher=real_fetcher):
             fetched = captured.get("fetched") or {}
             row["http_status"] = fetched.get("status_code")
             row["resolved_url"] = fetched.get("resolved_url")
-            row["title"] = _extract_title(fetched.get("html"))
+            row["redirect_chain"] = fetched.get("redirect_chain") or None
+            html = fetched.get("html")
+            meta = _extract_metadata(html)
+            row["title"] = meta["title"]
+            row["author"] = meta["author"]
+            row["publication_date"] = meta["publication_date"]
+            row["language"] = meta["language"]
+            row["canonical_url"] = meta["canonical_url"]
             row["content_status"] = acquired.get("status")
             row["extractor"] = acquired.get("extractor")
             row["extractor_version"] = acquired.get("extractor_version")
+            if html:
+                # REUSE BEFORE BUILD: link_provenance._AnchorExtractor로 전체 http(s)
+                # 앵커 수를 세고(outbound_link_count), 같은 모듈의
+                # extract_link_provenance_candidates()로 그 중 allowlist 통과분만
+                # 센다(primary_candidate_link_count). 새 파서/정규식을 다시 만들지 않는다.
+                anchor_parser = link_provenance._AnchorExtractor()
+                try:
+                    anchor_parser.feed(html)
+                    row["outbound_link_count"] = sum(
+                        1 for lk in anchor_parser.links
+                        if (lk.get("href") or "").startswith(("http://", "https://")))
+                except Exception:
+                    row["outbound_link_count"] = None
+                link_candidates = link_provenance.extract_link_provenance_candidates(
+                    url, html, acquired.get("status"))
+                row["primary_candidate_link_count"] = len(link_candidates)
             if acquired.get("status") == "FULL_TEXT":
                 text = acquired.get("text") or ""
                 row["fetch_result"] = "OK"
                 row["parser_result"] = "EXTRACTED"
                 row["text_length"] = len(text)
                 row["content_hash"] = _sha256(text)
+                row["quality_flag"] = assess_full_text_quality(text, meta["title"])
             else:
                 row["fetch_result"] = "FAILED"
                 row["parser_result"] = None
