@@ -10,9 +10,11 @@
 import json
 from pathlib import Path
 
-from coverage import build_coverage_matrix, detect_knowledge_gaps
-from cross_domain import find_cross_domain_connections
+from coverage import build_coverage_matrix, detect_knowledge_gaps, detect_historical_knowledge_gaps
+from cross_domain import find_cross_domain_connections, find_historical_cross_domain_connections
 from historical_analogy import audit_historical_evidence
+from historical_evidence import load_historical_evidence
+from historical_source_independence import independent_evidence_count
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -20,6 +22,8 @@ INTEL = ROOT / "intel"
 
 DOCUMENTS_PATH = INTEL / "documents.json"
 NOTES_PATH = INTEL / "knowledge_memory" / "notes.json"
+
+HISTORICAL_ANALOGIES_PATH = HERE / "historical_analogies.json"
 
 _LAYER_FILES = {
     "signals": INTEL / "signal_layer" / "signals.json",
@@ -85,6 +89,78 @@ def _matching_layer_records(query, records):
     return out
 
 
+def assemble_historical_context(topic, evidence_registry=None, analogies=None):
+    """Phase M.2 step 7 — structured-only historical_context section (no generated prose).
+    Every list below is populated from real HistoricalEvidence/analogy records that actually
+    mention `topic`, or is honestly empty - never backfilled. `analogies` defaults to whatever
+    is on disk in historical_analogies.json (the pilot round's own output), or [] if none."""
+    evidence_registry = evidence_registry if evidence_registry is not None else load_historical_evidence()
+    analogies = analogies if analogies is not None else _load_json(HISTORICAL_ANALOGIES_PATH)
+    if isinstance(analogies, dict):
+        analogies = list(analogies.values())
+
+    q = topic.lower()
+
+    def _mentions(rec_text_fields):
+        return any(q in str(f).lower() for f in rec_text_fields if f)
+
+    relevant_evidence_ids = [
+        eid for eid, rec in evidence_registry.items()
+        if _mentions([rec.get("event_or_process"), rec.get("documented_outcome"),
+                      rec.get("technology"), rec.get("mechanism")])
+    ]
+    relevant_analogies = [
+        a for a in analogies
+        if _mentions([a.get("current_phenomenon"), a.get("historical_process")])
+    ]
+    counteranalogies = [a for a in relevant_analogies if a.get("counteranalogy")]
+    mechanisms = sorted({rec.get("mechanism") for eid in relevant_evidence_ids
+                          for rec in [evidence_registry[eid]] if rec.get("mechanism")})
+    disagreements = [
+        {"evidence_id": eid, "claim_kind": evidence_registry[eid].get("claim_kind")}
+        for eid in relevant_evidence_ids
+        if evidence_registry[eid].get("claim_kind") == "SCHOLARLY_INTERPRETATION"
+    ]
+    independent_counts = {
+        eid: independent_evidence_count([eid], evidence_registry)
+        for eid in relevant_evidence_ids
+    }
+    knowledge_gaps = detect_historical_knowledge_gaps(
+        {eid: evidence_registry[eid] for eid in relevant_evidence_ids},
+        independent_counts, relevant_analogies,
+    )
+    connections = [
+        c for c in find_historical_cross_domain_connections(evidence_registry)
+        if c.get("evidence_historical_ids", [None])[0] in relevant_evidence_ids
+    ]
+
+    return {
+        "topic": topic,
+        # Structural sections below reuse structural_analysis_layer's own vocabulary/objects
+        # for scarcity/value/power/institutional/labor change when a caller supplies real
+        # structural_analysis_layer records - this module holds no historical scarcity/value/
+        # power data of its own (none exists yet in this pilot), so these stay honestly empty
+        # rather than duplicating that layer's schema.
+        "processes": sorted({evidence_registry[eid].get("event_or_process")
+                              for eid in relevant_evidence_ids
+                              if evidence_registry[eid].get("event_or_process")}),
+        "analogies": relevant_analogies,
+        "counteranalogies": counteranalogies,
+        "mechanisms": mechanisms,
+        "scarcity_shifts": [],
+        "value_shifts": [],
+        "power_shifts": [],
+        "institutional_changes": [],
+        "labor_changes": [],
+        "cultural_changes": [],
+        "disagreements": disagreements,
+        "limitations": sorted({lim for a in relevant_analogies for lim in a.get("limitations", [])}),
+        "evidence_ids": relevant_evidence_ids,
+        "knowledge_gaps": knowledge_gaps,
+        "cross_domain_connections": connections,
+    }
+
+
 def assemble_intelligence_package(topic, documents=None, notes=None):
     """The single Phase-M deliverable Te calls out as most important (section 45): given a
     topic/query string, pulls together everything the real pipeline currently holds about it
@@ -120,6 +196,7 @@ def assemble_intelligence_package(topic, documents=None, notes=None):
         "knowledge_gaps_relevant": [g for g in gaps
                                     if g["key"] == "ALL"
                                     or topic.lower() in str(g["key"]).lower()],
+        "historical_context": assemble_historical_context(topic),
         "evidence_sufficiency": (
             "NO_EVIDENCE" if not matching_document_ids and not matching_note_ids
             else "DOCUMENTS_ONLY" if matching_document_ids and not matching_note_ids

@@ -471,14 +471,53 @@ def test_53_can_it_work_test_supported():
     assert "CAN_IT_ACTUALLY_WORK" in ic.THREE_TEST_GATES
 
 
+def _load_approved_baseline_changes():
+    """M.1 GAP B 종결(섹션: Phase M.2 PART 1) — 5A-5G freeze 테스트가 '이미 승인된 baseline
+    변경'과 '승인되지 않은 회귀'를 구분할 수 있도록 하는 최소한의 governance 원장.
+    이 파일이 존재하지 않거나 비어 있으면 승인된 변경이 하나도 없는 것으로 취급한다(즉,
+    이 함수가 실패해도 테스트를 무력화하지 않고 원래의 엄격한 동작으로 되돌아간다)."""
+    path = IC_DIR / "approved_baseline_changes.json"
+    if not path.exists():
+        return []
+    data = _load_json(path)
+    return data.get("approved_changes", [])
+
+
 def test_54_5a_5g_unchanged():
     layer_dirs = ["signal_layer", "pattern_layer", "structural_change_layer",
                   "structural_analysis_layer", "epistemic_layer", "futures_layer",
                   "policy_research_layer"]
     paths = [INTEL_DIR / d for d in layer_dirs]
+
+    # (1) 원래 검사: working tree에 커밋되지 않은 변경(uncommitted diff)이 있으면 그대로
+    # 회귀로 간주한다 — 이 부분은 승인 여부와 무관하게 절대 약화하지 않는다. 승인은 오직
+    # "이미 커밋된 상태"에 대해서만 성립할 수 있다(우발적인 미승인 수정이 우연히 승인된
+    # 내용과 바이트 단위로 똑같을 가능성은 사실상 0이므로, 이 구분 자체가 안전하다).
     out = _git_status_short(paths)
     changed = [ln for ln in out.splitlines() if "__pycache__" not in ln]
-    assert changed == [], f"5A-5G 디렉터리에 변경이 감지됨(금지): {changed}"
+    assert changed == [], f"5A-5G 디렉터리에 커밋되지 않은 변경이 감지됨(금지): {changed}"
+
+    # (2) 신규 검사: "커밋은 됐지만 그 이후 다시 손댄" 회귀를 잡기 위해, approved_baseline_
+    # changes.json에 등록된 파일마다 '승인된 커밋 시점의 blob'과 '현재 HEAD 시점의 파일
+    # 내용'이 바이트 단위로 같은지 확인한다. 다르면 승인된 변경 이후 또 다른(미승인) 커밋이
+    # 그 파일을 건드렸다는 뜻이므로 회귀로 간주한다. 이 검사는 원래 테스트가 전혀 잡지 못
+    # 하던 구멍(uncommitted가 아니라 committed-after-approval 회귀)을 메우는 것이지, 기존
+    # 검사를 대체하거나 느슨하게 만드는 것이 아니다.
+    approved = _load_approved_baseline_changes()
+    mismatches = []
+    for rec in approved:
+        rel_path = rec["layer_path"]
+        commit = rec["commit"]
+        approved_blob = subprocess.run(
+            ["git", "show", f"{commit}:{rel_path}"], cwd=str(REPO_ROOT),
+            capture_output=True, text=True, check=True,
+        ).stdout
+        current_content = (REPO_ROOT / rel_path).read_text(encoding="utf-8")
+        if approved_blob != current_content:
+            mismatches.append(rel_path)
+    assert mismatches == [], (
+        f"승인된 baseline 변경 이후 추가로 손댄(미승인) 변경이 감지됨(회귀): {mismatches}"
+    )
 
 
 def test_55_evidence_pipeline_unchanged_unless_minimal_extension():

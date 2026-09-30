@@ -8,7 +8,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from foresight_schema import new_cross_domain_connection_shell
+from foresight_schema import new_cross_domain_connection_shell, HISTORY_DOMAINS
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -58,4 +58,33 @@ def find_cross_domain_connections(notes=None):
                     "ASSOCIATED_WITH", shared_entities=[entity],
                     evidence_note_ids=note_ids, evidence_document_ids=doc_ids,
                 ))
+    return connections
+
+
+# =============================================================================
+# PHASE M.2 step 5 — historical cross-domain linking. Reuses this module's own relation
+# vocabulary (CROSS_DOMAIN_RELATION_TYPES, never CAUSES) and connection shell rather than
+# building a second linker. Links a HISTORY_OF_* domain to a present-day domain ONLY when a
+# real HistoricalEvidence record's own `current_domain_link` field ties it there - never a
+# keyword-coincidence guess.
+# =============================================================================
+
+
+def find_historical_cross_domain_connections(evidence_registry, relation_type="ASSOCIATED_WITH"):
+    """For each HistoricalEvidence record that explicitly names a current_domain_link, emits
+    one CANDIDATE connection between its history_domain and that current domain, evidenced by
+    the evidence record itself. A record with current_domain_link=None yields no connection -
+    never padded, never guessed from event_or_process text."""
+    connections = []
+    for eid, rec in (evidence_registry or {}).items():
+        history_domain = rec.get("history_domain")
+        current_domain = rec.get("current_domain_link")
+        if not current_domain or history_domain not in HISTORY_DOMAINS:
+            continue
+        connections.append(new_cross_domain_connection_shell(
+            _connection_id(history_domain, current_domain, eid), history_domain, current_domain,
+            relation_type, shared_entities=[rec.get("event_or_process") or eid],
+            evidence_note_ids=[], evidence_document_ids=[],
+        ))
+        connections[-1]["evidence_historical_ids"] = [eid]
     return connections

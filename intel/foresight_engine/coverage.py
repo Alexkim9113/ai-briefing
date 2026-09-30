@@ -89,3 +89,65 @@ def detect_knowledge_gaps(documents=None, notes=None):
                   "unresolved, not inferred",
     })
     return gaps
+
+
+# =============================================================================
+# PHASE M.2 step 6 — historical-specific knowledge gap classes. Extends this module (does not
+# build a second coverage system). Only assigns a class the code can actually justify from real
+# HistoricalEvidence/analogy data - never force-fills a 0-coverage gap with an invented source.
+# =============================================================================
+
+HISTORICAL_GAP_CLASSES = (
+    "NO_SOURCE", "LOW_SOURCE_QUALITY", "SINGLE_SOURCE_ONLY", "GEOGRAPHY_GAP", "TIME_GAP",
+    "DOMAIN_GAP", "MECHANISM_GAP", "COUNTEREXAMPLE_GAP", "PRIMARY_SOURCE_NOT_VERIFIED",
+    "UNKNOWN_GAP",
+)
+
+
+def _classify_evidence_record_gap(rec, independent_count):
+    """Best-effort, honest classification of the single most salient gap on one
+    HistoricalEvidence record. Returns None when the record has no demonstrable gap (real
+    source, tier 1-2, non-UNKNOWN geography, independent_count >= 2)."""
+    if rec.get("evidence_status") != "VERIFIED_STRUCTURED":
+        return "NO_SOURCE"
+    if rec.get("source_tier") in ("TIER_3", "TIER_4", None):
+        return "LOW_SOURCE_QUALITY"
+    if independent_count <= 1:
+        return "SINGLE_SOURCE_ONLY"
+    if rec.get("geography") == "UNKNOWN":
+        return "GEOGRAPHY_GAP"
+    if rec.get("temporal_precision") == "UNKNOWN":
+        return "TIME_GAP"
+    if not rec.get("mechanism"):
+        return "MECHANISM_GAP"
+    if rec.get("source_tier") == "TIER_1" and rec.get("claim_kind") == "HISTORICAL_FACT" \
+            and not rec.get("canonical_url"):
+        return "PRIMARY_SOURCE_NOT_VERIFIED"
+    return None
+
+
+def detect_historical_knowledge_gaps(evidence_registry, independent_counts_by_id, analogies=None):
+    """evidence_registry: {evidence_id: HistoricalEvidence record}. independent_counts_by_id:
+    {evidence_id: int} as computed by historical_source_independence.py for that record's own
+    source family (caller-supplied so this module never re-implements source independence).
+    analogies: optional list of analogy dicts - any analogy with an empty counteranalogy field
+    contributes a COUNTEREXAMPLE_GAP entry (a real, demonstrable absence, not an invented one).
+    Every gap here is justified by real data on the record itself; an unclassifiable record
+    (should not normally happen) honestly gets UNKNOWN_GAP rather than silently being skipped."""
+    gaps = []
+    for eid, rec in (evidence_registry or {}).items():
+        gap_class = _classify_evidence_record_gap(rec, independent_counts_by_id.get(eid, 0))
+        if gap_class is None:
+            continue
+        gaps.append({
+            "dimension": "HISTORICAL_EVIDENCE", "evidence_id": eid,
+            "gap_class": gap_class, "status": "OPEN",
+        })
+    for analogy in (analogies or []):
+        if not analogy.get("counteranalogy"):
+            gaps.append({
+                "dimension": "ANALOGY", "evidence_id": analogy.get("analogy_id"),
+                "gap_class": "COUNTEREXAMPLE_GAP", "status": "OPEN",
+                "reason": "no counteranalogy supplied - not fabricated to fill this slot",
+            })
+    return gaps

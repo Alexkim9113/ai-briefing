@@ -1,0 +1,12 @@
+{
+  "_purpose": "governance ledger for test_54_5a_5g_unchanged: records baseline changes to the frozen 5A-5G layer directories that were explicitly reviewed and approved as part of a numbered phase, so the freeze test can distinguish an approved baseline change from an unapproved regression instead of either (a) failing forever on an already-approved change or (b) being weakened/deleted to stop failing.",
+  "approved_changes": [
+    {
+      "layer_path": "intel/pattern_layer/run_pilot.py",
+      "commit": "82eba95a8fb98e81f0b7ae7cdb5275b04bc8e57f",
+      "reason": "M.1 GAP B: pattern_layer source independence gate (adds source_independence_gate.py filter after MIN_INDEPENDENT_CHANGES; never lowers the threshold, never promotes a candidate, never treats UNKNOWN provenance as independent).",
+      "approved_date": "2026-09-30",
+      "approved_by": "operator (Phase M.1 close-out)"
+    }
+  ]
+}

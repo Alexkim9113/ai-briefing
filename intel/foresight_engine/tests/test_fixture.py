@@ -13,7 +13,17 @@ import cross_domain  # noqa: E402
 import historical_analogy  # noqa: E402
 import intelligence_package  # noqa: E402
 import operator_view  # noqa: E402
-from foresight_schema import validate_analogy, new_historical_analogy_shell  # noqa: E402
+import historical_evidence as hev_mod  # noqa: E402
+import historical_source_independence as hsi  # noqa: E402
+from foresight_schema import (  # noqa: E402
+    validate_analogy, new_historical_analogy_shell, new_historical_evidence_shell,
+    new_historical_analogy_shell_v2, PRESENT_RELEVANCE_VALUES, TEMPORAL_PRECISION,
+    GEOGRAPHY_VALUES, HISTORY_DOMAINS, CROSS_DOMAIN_RELATION_TYPES,
+)
+from historical_analogy import (  # noqa: E402
+    build_analogy_v2, evidence_sufficiency as analogy_evidence_sufficiency,
+    analogy_status,
+)
 
 
 FIXTURE_DOCS = {
@@ -165,6 +175,203 @@ def test_zero_llm_calls_anywhere_in_foresight_engine_source():
         text = path.read_text(encoding="utf-8")
         for token in forbidden:
             assert token not in text, f"found forbidden LLM-call symbol {token!r} in {path}"
+
+
+# =============================================================================
+# PHASE M.2 — Historical Context & Analogy Infrastructure tests.
+# =============================================================================
+
+_HEV_A = new_historical_evidence_shell(
+    "hev_a", "press cost decline", "HISTORY_OF_MEDIA", current_domain_link="TECHNOLOGY_INFRASTRUCTURE",
+    geography="EUROPE", start_period="1450", end_period="1500", temporal_precision="PERIOD",
+    mechanism="COST_DECLINE", documented_outcome="cheaper reproduction",
+    claim_kind="SCHOLARLY_INTERPRETATION", source_type="PEER_REVIEWED_SCHOLARSHIP",
+    source_tier="TIER_1", source_title="Book A", source_organization="Org A",
+    canonical_url="https://example.org/book-a", confidence="MEDIUM",
+)
+_HEV_B_SAME_SOURCE = new_historical_evidence_shell(
+    "hev_b", "press scribe decline", "HISTORY_OF_LABOR_SOCIETY", current_domain_link="ECONOMY_INDUSTRY_LABOR",
+    geography="EUROPE", start_period="1450", end_period="1550", temporal_precision="PERIOD",
+    mechanism="SKILL_DEVALUATION", documented_outcome="fewer scribes",
+    claim_kind="SCHOLARLY_INTERPRETATION", source_type="PEER_REVIEWED_SCHOLARSHIP",
+    source_tier="TIER_1", source_title="Book A", source_organization="Org A",
+    canonical_url="https://example.org/book-a", confidence="LOW",  # SAME url as hev_a
+)
+_HEV_C_NO_SOURCE = new_historical_evidence_shell(
+    "hev_c", "unsourced claim", "HISTORY_OF_IDEAS", mechanism="POWER_SHIFT",
+    documented_outcome="unverifiable", claim_kind="HISTORICAL_FACT",
+)  # no source_id/canonical_url/source_title at all
+
+
+def test_analogy_similarity_without_difference_rejected_incomplete():
+    shell = new_historical_analogy_shell("aa1", "topic", historical_case="case",
+                                          similarities=["sim1"], differences=[])
+    result = validate_analogy(shell)
+    assert result["status"] == "ANALOGY_REJECTED_INCOMPLETE"
+
+
+def test_analogy_with_no_source_rejected_no_source():
+    registry = {"hev_c": _HEV_C_NO_SOURCE}
+    result = build_analogy_v2(
+        "aa2", "current thing", "historical thing", "power shift happened",
+        {"power": "POWER_SHIFT"}, ["similar in some way"], ["a real difference"],
+        evidence_registry=registry,
+    )
+    # matched evidence exists (mechanism POWER_SHIFT) but it has NO real source -> excluded
+    # from sourced_count entirely, so this must fail on sourcing, never be silently accepted.
+    assert result["status"] == "ANALOGY_REJECTED_NO_SOURCE"
+    assert result["evidence_sufficiency"]["sourced_count"] == 0
+
+
+def test_unknown_provenance_never_counted_as_independent():
+    registry = {"hev_c": _HEV_C_NO_SOURCE}
+    count = hsi.independent_evidence_count(["hev_c"], registry)
+    # a single record is trivially its own family of 1 - the real test is that UNKNOWN
+    # provenance can never be unioned into someone else's family, checked below with 2 records.
+    assert count == 1
+    registry2 = {"hev_c": _HEV_C_NO_SOURCE,
+                 "hev_c2": {**_HEV_C_NO_SOURCE, "historical_evidence_id": "hev_c2"}}
+    count2 = hsi.independent_evidence_count(["hev_c", "hev_c2"], registry2)
+    assert count2 == 2, "two UNKNOWN-provenance records must never collapse into one family"
+
+
+def test_same_source_family_not_counted_as_independent_confirmations():
+    registry = {"hev_a": _HEV_A, "hev_b": _HEV_B_SAME_SOURCE}
+    count = hsi.independent_evidence_count(["hev_a", "hev_b"], registry)
+    assert count == 1, "same canonical_url (same underlying book) must collapse to one family"
+    sufficiency = analogy_evidence_sufficiency(["hev_a", "hev_b"], registry)
+    assert sufficiency["raw_count"] == 2
+    assert sufficiency["independent_count"] == 1
+
+
+def test_analogy_never_outputs_a_bare_prediction_field():
+    shell = new_historical_analogy_shell_v2(
+        "aa3", "current", "historical", similarities=["s"], differences=["d"],
+        present_relevance="WEAK_SUPPORT",
+    )
+    assert set(shell.keys()).isdisjoint({"prediction", "predicts", "forecast", "future_outcome"})
+    assert shell["present_relevance"] in PRESENT_RELEVANCE_VALUES
+    for bad in ("PREDICTS", "WILL_CAUSE", "GUARANTEES"):
+        assert bad not in PRESENT_RELEVANCE_VALUES
+
+
+def test_present_relevance_vocabulary_is_closed_and_weak():
+    assert set(PRESENT_RELEVANCE_VALUES) == {
+        "SUPPORTING_CONTEXT", "WEAK_SUPPORT", "CONDITIONAL_SUPPORT",
+        "COUNTEREVIDENCE", "INSUFFICIENT_COMPARABILITY",
+    }
+
+
+def test_historical_fact_vs_scholarly_vs_metaxis_interpretation_distinguishable():
+    fact = new_historical_evidence_shell("h1", "e", "HISTORY_OF_SCIENCE", claim_kind="HISTORICAL_FACT")
+    scholarly = new_historical_evidence_shell("h2", "e", "HISTORY_OF_SCIENCE", claim_kind="SCHOLARLY_INTERPRETATION")
+    metaxis = new_historical_evidence_shell("h3", "e", "HISTORY_OF_SCIENCE", claim_kind="METAXIS_INTERPRETATION")
+    assert len({fact["claim_kind"], scholarly["claim_kind"], metaxis["claim_kind"]}) == 3
+
+
+def test_counteranalogy_optional_not_required():
+    without = new_historical_analogy_shell_v2("aa4", "c", "h", similarities=["s"], differences=["d"])
+    assert without["counteranalogy"] is None
+    with_one = new_historical_analogy_shell_v2("aa5", "c", "h", similarities=["s"], differences=["d"],
+                                                counteranalogy="a real counter-example")
+    assert with_one["counteranalogy"] == "a real counter-example"
+
+
+def test_temporal_precision_round_trips_without_forcing_exact_date():
+    for precision in TEMPORAL_PRECISION:
+        rec = new_historical_evidence_shell("h_t", "e", "HISTORY_OF_IDEAS",
+                                             temporal_precision=precision)
+        assert rec["temporal_precision"] == precision
+    assert "UNKNOWN" in TEMPORAL_PRECISION and "APPROXIMATE" in TEMPORAL_PRECISION
+
+
+def test_geography_unknown_preserved_never_guessed():
+    rec = new_historical_evidence_shell("h_g", "e", "HISTORY_OF_IDEAS")
+    assert rec["geography"] == "UNKNOWN"
+    assert "UNKNOWN" in GEOGRAPHY_VALUES
+
+
+def test_coverage_gap_classification_honest_or_unknown():
+    registry = {"hev_a": _HEV_A, "hev_c": _HEV_C_NO_SOURCE}
+    counts = {"hev_a": 1, "hev_c": 1}
+    gaps = coverage.detect_historical_knowledge_gaps(registry, counts)
+    classes = {g["gap_class"] for g in gaps}
+    assert classes.issubset(set(coverage.HISTORICAL_GAP_CLASSES))
+    assert any(g["evidence_id"] == "hev_c" and g["gap_class"] == "NO_SOURCE" for g in gaps)
+
+
+def test_evidence_to_source_trace_end_to_end():
+    registry = {"hev_a": _HEV_A}
+    trace = hev_mod.trace_evidence_to_source("hev_a", registry=registry)
+    assert trace is not None
+    assert trace["canonical_url"] == "https://example.org/book-a"
+    assert trace["source_title"] == "Book A"
+    no_source_trace = hev_mod.trace_evidence_to_source(
+        "hev_c", registry={"hev_c": _HEV_C_NO_SOURCE})
+    assert no_source_trace is None, "an unsourced record must never produce a fabricated trace"
+
+
+def test_no_public_export_path_includes_raw_source_text():
+    registry = {"hev_a": {**_HEV_A, "notes": "short factual note only"}}
+    exported = hev_mod.build_historical_evidence_registry_export(registry=registry)
+    for rec in exported.values():
+        assert "body" not in rec and "full_text" not in rec and "raw_text" not in rec
+        assert "source_id" not in rec  # internal id, never published
+        if rec.get("notes_summary"):
+            assert len(rec["notes_summary"]) <= hev_mod.MAX_NOTES_CHARS
+
+
+def test_historical_evidence_never_stores_full_source_text():
+    too_long = "x" * (hev_mod.MAX_NOTES_CHARS + 1)
+    try:
+        hev_mod.create_historical_evidence("h_long", event_or_process="e",
+                                            history_domain="HISTORY_OF_IDEAS", notes=too_long)
+        raised = False
+    except ValueError:
+        raised = True
+    assert raised, "notes exceeding the short-factual-note cap must be rejected, not silently stored"
+
+
+def test_all_eight_history_domains_representable():
+    assert len(HISTORY_DOMAINS) == 8
+    for domain in HISTORY_DOMAINS:
+        rec = new_historical_evidence_shell("h_dom", "e", domain)
+        assert rec["history_domain"] == domain
+
+
+def test_historical_cross_domain_link_requires_real_evidence():
+    registry = {"hev_a": _HEV_A}  # has current_domain_link set
+    no_link_registry = {"hev_c": _HEV_C_NO_SOURCE}  # current_domain_link is None
+    linked = cross_domain.find_historical_cross_domain_connections(registry)
+    unlinked = cross_domain.find_historical_cross_domain_connections(no_link_registry)
+    assert len(linked) == 1
+    assert linked[0]["relation_type"] in CROSS_DOMAIN_RELATION_TYPES
+    assert unlinked == []
+
+
+def test_intelligence_package_historical_context_shape_present():
+    pkg = intelligence_package.assemble_intelligence_package("nvidia", FIXTURE_DOCS, FIXTURE_NOTES)
+    hc = pkg["historical_context"]
+    for key in ("processes", "analogies", "counteranalogies", "mechanisms", "scarcity_shifts",
+                "value_shifts", "power_shifts", "institutional_changes", "labor_changes",
+                "cultural_changes", "disagreements", "limitations", "evidence_ids",
+                "knowledge_gaps"):
+        assert key in hc
+
+
+def test_observable_implications_and_candidate_indicators_structure_only():
+    shell = new_historical_analogy_shell_v2("aa6", "c", "h", similarities=["s"], differences=["d"])
+    assert shell["observable_implications"] == []
+    assert shell["candidate_indicators"] == []
+
+
+def test_analogy_status_boundary_condition_gate():
+    # real similarity + difference + sufficient sourced/independent evidence, but NO boundary
+    # conditions supplied -> never SUPPORTED (keyword/mechanism match alone is not "strong").
+    sufficiency = {"sufficient": True, "sourced_count": 1, "independent_count": 1}
+    assert analogy_status(["sim"], ["diff"], [], sufficiency) == "INSUFFICIENT_EVIDENCE"
+    assert analogy_status(["sim"], ["diff"], ["boundary"], sufficiency) == "SUPPORTED"
+    assert analogy_status(["sim"], [], ["boundary"], sufficiency) == "ANALOGY_REJECTED_INCOMPLETE"
 
 
 if __name__ == "__main__":
