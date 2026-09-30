@@ -398,3 +398,143 @@ def test_reality_coverage_matrix_never_collapses_missing_to_zero_count_field():
     matrix = coverage.build_reality_coverage_matrix(indicators, {})
     assert matrix["by_domain"]["LABOR"] == 1
     assert matrix["indicators_with_zero_observations"] == ["i1"]
+
+
+# ---------------------------------------------------------------------------
+# Real-response parsing (Phase M.3 completion step). SYNTHETIC-SCHEMA-VERIFIED: these fixtures
+# are hand-built to match each API's own well-documented, stable real response shape - they are
+# NOT captured from a live call (the sandbox cannot reach these hosts), so these tests prove the
+# parser is correct against the documented contract, not that the exact live response of any
+# particular day parses. A live-network-verified confirmation is a separate, later claim (a real
+# GitHub Actions run of fetch_reality_indicators.py), never conflated with this one.
+# ---------------------------------------------------------------------------
+
+WORLDBANK_FIXTURE_NORMAL = [
+    {"page": 1, "pages": 1, "per_page": 5, "total": 2, "sourceid": "2", "lastupdated": "2026-07-01"},
+    [
+        {"indicator": {"id": "NY.GDP.MKTP.CD", "value": "GDP (current US$)"},
+         "country": {"id": "KR", "value": "Korea, Rep."}, "countryiso3code": "KOR",
+         "date": "2025", "value": 1870000000000.0, "unit": "", "obs_status": "", "decimal": 0},
+        {"indicator": {"id": "NY.GDP.MKTP.CD", "value": "GDP (current US$)"},
+         "country": {"id": "KR", "value": "Korea, Rep."}, "countryiso3code": "KOR",
+         "date": "2024", "value": 1712000000000.0, "unit": "", "obs_status": "", "decimal": 0},
+    ],
+]
+
+WORLDBANK_FIXTURE_NULL_VALUE = [
+    {"page": 1, "pages": 1, "per_page": 5, "total": 1, "sourceid": "2", "lastupdated": "2026-07-01"},
+    [
+        {"indicator": {"id": "NY.GDP.MKTP.CD", "value": "GDP (current US$)"},
+         "country": {"id": "KR", "value": "Korea, Rep."}, "countryiso3code": "KOR",
+         "date": "2026", "value": None, "unit": "", "obs_status": "", "decimal": 0},
+    ],
+]
+
+
+def test_worldbank_parse_normal_response_creates_correct_observation():
+    obs, reason = ri.parse_worldbank_observation(
+        WORLDBANK_FIXTURE_NORMAL, indicator_id="ind_worldbank_kr_gdp_current_usd", unit="USD",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov1",
+    )
+    assert reason == "OK"
+    assert obs["value"] == 1870000000000.0
+    assert obs["unit"] == "USD"
+    assert obs["period"] == "2025"
+    assert obs["status"] == "OFFICIAL_REPORTED"
+    assert obs["source_release_date"] == "2026-07-01"
+    assert obs["provenance_id"] == "prov1"
+
+
+def test_worldbank_null_value_becomes_missing_never_zero():
+    obs, reason = ri.parse_worldbank_observation(
+        WORLDBANK_FIXTURE_NULL_VALUE, indicator_id="ind_x", unit="USD",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov1",
+    )
+    assert reason == "OK"
+    assert obs["value"] is ri.MISSING
+    assert obs["value"] != 0
+
+
+def test_worldbank_malformed_shape_fails_closed_never_crashes():
+    for bad in [{}, [], [{}], [{}, {}], "not json at all", [{}, "not a list"], None]:
+        obs, reason = ri.parse_worldbank_observation(
+            bad, indicator_id="ind_x", unit="USD",
+            retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov1",
+        )
+        assert obs is None
+        assert reason in ("SCHEMA_CHANGED", "PARSE_FAILED", "NO_DATA_ROWS")
+
+
+def test_worldbank_empty_data_array_is_no_data_rows_not_crash():
+    obs, reason = ri.parse_worldbank_observation(
+        [{"lastupdated": "2026-01-01"}, []], indicator_id="ind_x", unit="USD",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov1",
+    )
+    assert obs is None
+    assert reason == "NO_DATA_ROWS"
+
+
+ECOS_FIXTURE_NORMAL = {
+    "StatisticSearch": {
+        "list_total_count": 1,
+        "row": [
+            {"STAT_CODE": "722Y001", "STAT_NAME": "Base Rate", "ITEM_CODE1": "0101000",
+             "ITEM_NAME1": "Base Rate", "UNIT_NAME": "%", "TIME": "20260801",
+             "DATA_VALUE": "3.25"},
+        ],
+    },
+}
+
+ECOS_FIXTURE_MISSING_VALUE = {
+    "StatisticSearch": {
+        "list_total_count": 1,
+        "row": [
+            {"STAT_CODE": "722Y001", "STAT_NAME": "Base Rate", "ITEM_CODE1": "0101000",
+             "ITEM_NAME1": "Base Rate", "UNIT_NAME": "%", "TIME": "20260801",
+             "DATA_VALUE": ""},
+        ],
+    },
+}
+
+
+def test_ecos_parse_normal_response_creates_correct_observation():
+    obs, reason, precision = ri.parse_ecos_observation(
+        ECOS_FIXTURE_NORMAL, indicator_id="ind_ecos_kr_base_rate",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov2",
+    )
+    assert reason == "OK"
+    assert obs["value"] == 3.25
+    assert obs["unit"] == "%"
+    assert obs["period"] == "20260801"
+    assert precision == "DAY"
+    assert obs["status"] == "OFFICIAL_REPORTED"
+    assert obs["provenance_id"] == "prov2"
+
+
+def test_ecos_missing_data_value_becomes_missing_never_zero():
+    obs, reason, precision = ri.parse_ecos_observation(
+        ECOS_FIXTURE_MISSING_VALUE, indicator_id="ind_x",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov2",
+    )
+    assert reason == "OK"
+    assert obs["value"] is ri.MISSING
+    assert obs["value"] != 0
+
+
+def test_ecos_malformed_shape_fails_closed_never_crashes():
+    for bad in [{}, {"StatisticSearch": {}}, {"StatisticSearch": {"row": "not a list"}},
+                {"StatisticSearch": {"row": []}}, None, "not json", 42]:
+        obs, reason, precision = ri.parse_ecos_observation(
+            bad, indicator_id="ind_x", retrieved_at="2026-09-30T00:00:00+00:00",
+            provenance_id="prov2",
+        )
+        assert obs is None
+        assert reason in ("SCHEMA_CHANGED", "PARSE_FAILED", "NO_DATA_ROWS")
+
+
+def test_ecos_temporal_precision_inferred_honestly():
+    assert ri._infer_ecos_temporal_precision("20260801") == "DAY"
+    assert ri._infer_ecos_temporal_precision("202608") == "MONTH"
+    assert ri._infer_ecos_temporal_precision("2026") == "YEAR"
+    assert ri._infer_ecos_temporal_precision("abcxyz12") == "UNKNOWN"
+    assert ri._infer_ecos_temporal_precision(None) == "UNKNOWN"

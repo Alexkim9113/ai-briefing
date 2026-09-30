@@ -22,6 +22,7 @@
 import hashlib
 import ipaddress
 import json
+import os
 import socket
 import sys
 import urllib.error
@@ -34,7 +35,10 @@ HERE = Path(__file__).resolve().parent
 FORESIGHT_DIR = HERE.parent
 sys.path.insert(0, str(FORESIGHT_DIR))
 
-from reality_indicator import new_indicator, new_observation, ObservationRejected  # noqa: E402
+from reality_indicator import (  # noqa: E402
+    new_indicator, new_observation, ObservationRejected,
+    parse_worldbank_observation, parse_ecos_observation,
+)
 
 USER_AGENT = "Mozilla/5.0 (compatible; METAXIS-RealityIndicatorPilot/1.0; +https://github.com)"
 MAX_BYTES = 2_000_000
@@ -165,6 +169,15 @@ SOURCES = [
 ]
 
 
+def _detect_execution_environment():
+    """Reports the actual environment this run executed in and, honestly, whether real network
+    reached the sources this run - never a stale claim carried over from a different run/
+    environment. GITHUB_ACTIONS is GitHub's own env var, set by their runner, not assumed."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        return f"GITHUB_ACTIONS (run_id={os.environ.get('GITHUB_RUN_ID', 'UNKNOWN')})"
+    return "LOCAL_OR_SANDBOX (network reachability not assumed - see sources_succeeded below)"
+
+
 def run_pilot():
     retrieved_at = datetime.now(timezone.utc).isoformat()
     results = []
@@ -187,11 +200,36 @@ def run_pilot():
         entry["fetch_succeeded"] = bool(fetch_result.get("ok"))
 
         if fetch_result.get("ok"):
-            # Real parsing would go here (deterministic, source-specific schema mapping) - not
-            # fabricated in this report since the sandbox never actually reached this branch.
-            entry["observation_created"] = "PARSING_NOT_YET_EXERCISED_LIVE"
+            # Real, deterministic, source-specific schema parsing - HTTP 200 alone is never
+            # treated as success (spec section 4): success requires a real parsed Observation.
+            provenance_id = f"prov_{src['source_id']}_{retrieved_at}"
+            if src["source_id"] == "worldbank_gdp_kr":
+                observation, reason = parse_worldbank_observation(
+                    fetch_result.get("data"), indicator_id=src["indicator_id"],
+                    unit=src["unit"], retrieved_at=retrieved_at, provenance_id=provenance_id,
+                    geography=src["geography"],
+                )
+                entry["parse_reason"] = reason
+            elif src["source_id"] == "ecos_bok_sample":
+                observation, reason, precision = parse_ecos_observation(
+                    fetch_result.get("data"), indicator_id=src["indicator_id"],
+                    retrieved_at=retrieved_at, provenance_id=provenance_id,
+                    geography=src["geography"],
+                )
+                entry["parse_reason"] = reason
+                entry["temporal_precision_inferred"] = precision
+            else:
+                observation, reason = None, "PARSE_FAILED"
+                entry["parse_reason"] = reason
+
+            if observation is not None:
+                entry["observation"] = observation
+                entry["observation_created"] = observation["observation_id"]
+            else:
+                entry["observation_created"] = None
         else:
             entry["observation_created"] = None
+            entry["parse_reason"] = None
             try:
                 new_observation("obs_never_created", src["indicator_id"], "N/A", None,
                                  src["unit"], "OFFICIAL_REPORTED", retrieved_at)
@@ -201,10 +239,16 @@ def run_pilot():
 
     summary = {
         "attempted_at": retrieved_at,
-        "sandbox_network_status": "BLOCKED - confirmed by direct HTTPS attempt in this session "
-                                   "(all sources returned proxy tunnel 403 before reaching host)",
+        # Honest field name reflecting the actual execution environment/outcome, replacing the
+        # stale "sandbox_network_status: BLOCKED" claim that predated any real network run of
+        # this script (this script's own network reality depends on WHERE it executes - a
+        # sandbox run and a GitHub Actions run are different environments and can have
+        # genuinely different outcomes; this field records the run that actually produced this
+        # file, not an assumption carried over from a different environment).
+        "execution_environment": _detect_execution_environment(),
         "sources_attempted": len(results),
         "sources_succeeded": sum(1 for r in results if r["fetch_succeeded"]),
+        "observations_created": sum(1 for r in results if r.get("observation_created")),
         "results": results,
         "next_real_verification": "GitHub Actions cron run of reality_shadow job in "
                                    ".github/workflows/daily.yml (real network, no sandbox proxy)",

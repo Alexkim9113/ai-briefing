@@ -439,6 +439,142 @@ def make_derived_observation(observation_id, indicator_id, period, calc_result, 
 
 
 # ---------------------------------------------------------------------------
+# Real-response parsing (Phase M.3 completion step). Deterministic, zero LLM, schema-anchored
+# to each source's own well-documented, stable public response shape. Never crashes uncaught on
+# an unexpected shape - fails closed with a named reason code instead (spec section 4: "HTTP
+# 200 alone is never treated as success" - success requires a real parsed Observation).
+# ---------------------------------------------------------------------------
+FETCH_PARSE_REASON_CODES = (
+    "OK",                 # a real Observation was constructed from the real response body
+    "PARSE_FAILED",       # response was JSON but did not contain the expected fields/types
+    "SCHEMA_CHANGED",     # response's top-level shape does not match the documented contract
+    "NO_DATA_ROWS",       # response parsed fine but contained zero data rows to build from
+)
+
+
+def parse_worldbank_observation(raw_json, *, indicator_id, unit, retrieved_at, provenance_id,
+                                 geography="COUNTRY"):
+    """Parses the World Bank Indicator API's documented, stable response shape:
+    a 2-element JSON array [metadata_object, data_array]. Takes the most recent entry in
+    data_array whose `value` is not null; if every entry's value is null, the most recent entry
+    is still used with value=MISSING (never fabricated, never coerced to 0). Returns
+    (observation_dict_or_None, reason_code). Never raises on a malformed real response - failure
+    is reported via the reason code, not an uncaught exception."""
+    try:
+        if not isinstance(raw_json, list) or len(raw_json) != 2:
+            return None, "SCHEMA_CHANGED"
+        metadata, data = raw_json[0], raw_json[1]
+        if not isinstance(metadata, dict) or not isinstance(data, list):
+            return None, "SCHEMA_CHANGED"
+        if not data:
+            return None, "NO_DATA_ROWS"
+        # Prefer the first (most recent, per World Bank's default newest-first ordering) entry
+        # with a non-null value; fall back to the first entry overall (MISSING value) if none.
+        chosen = None
+        for row in data:
+            if not isinstance(row, dict) or "date" not in row or "value" not in row:
+                return None, "PARSE_FAILED"
+            if row.get("value") is not None and chosen is None:
+                chosen = row
+        if chosen is None:
+            chosen = data[0]
+        raw_value = chosen.get("value")
+        if raw_value is None:
+            value = MISSING
+        else:
+            try:
+                value = float(raw_value)
+            except (TypeError, ValueError):
+                return None, "PARSE_FAILED"
+        period = chosen.get("date")
+        if not period:
+            return None, "PARSE_FAILED"
+        source_release_date = metadata.get("lastupdated")
+        observation = new_observation(
+            observation_id=f"obs_{indicator_id}_{period}",
+            indicator_id=indicator_id,
+            period=str(period),
+            value=value,
+            unit=unit,
+            status="OFFICIAL_REPORTED",
+            retrieved_at=retrieved_at,
+            source_release_date=source_release_date,
+            provenance_id=provenance_id,
+        )
+        return observation, "OK"
+    except ObservationRejected:
+        raise
+    except Exception:
+        return None, "PARSE_FAILED"
+
+
+def _infer_ecos_temporal_precision(time_str):
+    """Infers a period's precision honestly from the TIME string's length/format rather than
+    guessing. Returns one of 'DAY', 'MONTH', 'YEAR', or 'UNKNOWN' when the format can't be
+    determined with confidence - never asserts a precision it isn't sure of."""
+    if not time_str or not isinstance(time_str, str) or not time_str.isdigit():
+        return "UNKNOWN"
+    if len(time_str) == 8:
+        return "DAY"       # YYYYMMDD
+    if len(time_str) == 6:
+        return "MONTH"     # YYYYMM
+    if len(time_str) == 4:
+        return "YEAR"      # YYYY
+    return "UNKNOWN"
+
+
+def parse_ecos_observation(raw_json, *, indicator_id, retrieved_at, provenance_id,
+                            geography="COUNTRY"):
+    """Parses the Bank of Korea ECOS StatisticSearch documented, stable response shape:
+    {"StatisticSearch": {"list_total_count": N, "row": [ {...}, ... ]}}. Uses the first row.
+    unit is taken from the row's own UNIT_NAME field (never assumed/fabricated). DATA_VALUE is
+    parsed as a string->float conversion only; missing/empty/unparseable -> MISSING, never 0.
+    Returns (observation_dict_or_None, reason_code, temporal_precision)."""
+    try:
+        if not isinstance(raw_json, dict) or "StatisticSearch" not in raw_json:
+            return None, "SCHEMA_CHANGED", "UNKNOWN"
+        block = raw_json["StatisticSearch"]
+        if not isinstance(block, dict) or "row" not in block:
+            return None, "SCHEMA_CHANGED", "UNKNOWN"
+        rows = block["row"]
+        if not isinstance(rows, list):
+            return None, "SCHEMA_CHANGED", "UNKNOWN"
+        if not rows:
+            return None, "NO_DATA_ROWS", "UNKNOWN"
+        row = rows[0]
+        if not isinstance(row, dict):
+            return None, "PARSE_FAILED", "UNKNOWN"
+        time_str = row.get("TIME")
+        if not time_str:
+            return None, "PARSE_FAILED", "UNKNOWN"
+        precision = _infer_ecos_temporal_precision(time_str)
+        unit = row.get("UNIT_NAME") or "UNKNOWN"
+        raw_value = row.get("DATA_VALUE")
+        if raw_value in (None, ""):
+            value = MISSING
+        else:
+            try:
+                value = float(raw_value)
+            except (TypeError, ValueError):
+                value = MISSING
+        observation = new_observation(
+            observation_id=f"obs_{indicator_id}_{time_str}",
+            indicator_id=indicator_id,
+            period=str(time_str),
+            value=value,
+            unit=unit,
+            status="OFFICIAL_REPORTED",
+            retrieved_at=retrieved_at,
+            provenance_id=provenance_id,
+        )
+        return observation, "OK", precision
+    except ObservationRejected:
+        raise
+    except Exception:
+        return None, "PARSE_FAILED", "UNKNOWN"
+
+
+# ---------------------------------------------------------------------------
 # Public export firewall (mirrors historical_evidence.py's PUBLICATION FIREWALL pattern)
 # ---------------------------------------------------------------------------
 PUBLIC_INDICATOR_FIELDS = (
