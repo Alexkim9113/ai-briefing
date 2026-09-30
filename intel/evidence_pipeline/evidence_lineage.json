@@ -2076,7 +2076,7 @@
   {
    "change_ids": [],
    "claim_id": "468982c9c2f3ffef:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "468982c9c2f3ffef",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3145,7 +3145,7 @@
   {
    "change_ids": [],
    "claim_id": "68821b181460df0c:c2",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "68821b181460df0c",
    "event_ids": [],
    "evidence_record_ids": [],

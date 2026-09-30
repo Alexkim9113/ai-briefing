@@ -1,7 +1,7 @@
 {
  "claims_by_status": {
-  "INSUFFICIENT_SOURCE": 349,
-  "SECONDARY_ONLY": 172,
+  "INSUFFICIENT_SOURCE": 347,
+  "SECONDARY_ONLY": 174,
   "SOURCE_LOCATED": 57,
   "SUMMARY_DERIVED": 57
  },
@@ -40,7 +40,7 @@
   "syndication_collapsed": 0
  },
  "interpretation_candidates": 6,
- "level3_flagged_documents": 146,
+ "level3_flagged_documents": 147,
  "lineage_stopped_at_distribution": {
   "CLAIM": 632,
   "EVIDENCE_RECORD": 3
