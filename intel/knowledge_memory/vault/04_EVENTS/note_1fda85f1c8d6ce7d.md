@@ -2,15 +2,20 @@
 id: note_1fda85f1c8d6ce7d
 type: EVENT
 status: ACTIVE
-version: 1
+version: 2
 human_review_status: AUTO_CANDIDATE
 created_at: 2026-09-29T11:53:56.536439+00:00
-updated_at: 2026-09-29T11:53:56.536439+00:00
+updated_at: 2026-09-30T05:46:06.639605+00:00
+event_date: 2026-09-29
 ---
 
 # OpenAI 출시 철회 (안전성)
 
 OpenAI 출시 철회 (안전성)
+
+## Revision History
+- vNone: None
+- vNone: None
 
 ## Provenance
 - document_id: 2fa01e8819fd9906

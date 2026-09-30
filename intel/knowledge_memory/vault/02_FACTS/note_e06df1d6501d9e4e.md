@@ -2,15 +2,19 @@
 id: note_e06df1d6501d9e4e
 type: FACT
 status: ACTIVE
-version: 1
+version: 2
 human_review_status: AUTO_CANDIDATE
 created_at: 2026-09-29T11:39:51.658310+00:00
-updated_at: 2026-09-29T11:39:51.658310+00:00
+updated_at: 2026-09-30T05:46:06.639605+00:00
 ---
 
 # 식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide
 
 식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide Generation and Evaluation
+
+## Revision History
+- vNone: None
+- vNone: None
 
 ## Provenance
 - document_id: b394df1ecc069ffe

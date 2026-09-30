@@ -59,7 +59,20 @@ def upsert_notes(candidate_notes, now_iso):
             stats["unchanged_human_locked"] += 1
             continue
 
-        if prior.get("statement") == note.get("statement") and prior.get("status") == note.get("status"):
+        # PHASE M.4 FORENSIC FIX: 원래는 statement+status만 같으면 prior를 그대로 두고
+        # 나머지 upstream 필드(event_date 등)를 통째로 무시했다 — 이는 atomizer.py가 나중에
+        # event_date 등 새 필드를 채우도록 고쳐져도, 이미 존재하는 note의 statement/status가
+        # 그대로면 그 새 필드가 영영 notes.json에 반영되지 않는 실재하는 버그였다(실제 corpus:
+        # 85개 note 전원이 event_date=None으로 멈춰 있었는데, production_events.json에는
+        # 28건 전부 실제 event_date가 있었고 atomizer.run()을 다시 돌리면 지금 코드는 이미
+        # 올바르게 채운다 — 이 upsert 단계의 no-op 지름길만이 그것을 막고 있었다). 비교 범위를
+        # history/version/생성시각류를 제외한 전체 필드로 넓혀서, 사람이 잠그지 않은 note는
+        # upstream이 실제로 새로 아는 것을 놓치지 않게 한다. 문턱/자격 요건은 전혀 건드리지
+        # 않는다 — 이미 존재하는 note를 최신 upstream 사실로 갱신할 뿐이다.
+        _IGNORE_ON_COMPARE = {"history", "version", "created_at", "updated_at"}
+        prior_comparable = {k: v for k, v in prior.items() if k not in _IGNORE_ON_COMPARE}
+        note_comparable = {k: v for k, v in note.items() if k not in _IGNORE_ON_COMPARE}
+        if prior_comparable == note_comparable:
             # 내용이 실제로 동일하면 created_at/history를 다시 건드리지 않는다(불필요한
             # git churn 방지 — Production Evidence Supply 때와 동일한 원칙).
             merged[nid] = prior
