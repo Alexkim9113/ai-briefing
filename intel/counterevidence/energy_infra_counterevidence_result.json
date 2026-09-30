@@ -1,0 +1,62 @@
+{
+  "topic_name": "AI_ENERGY_INFRA",
+  "target_chain_node": "COUNTEREVIDENCE",
+  "corpus_size": 597,
+  "directions": {
+    "EFFICIENCY_IMPROVEMENTS": {
+      "keywords_searched": [
+        "PUE improvement",
+        "more efficient chips",
+        "efficiency gains",
+        "efficiency gain",
+        "power usage effectiveness"
+      ],
+      "status": "COUNTEREVIDENCE_GAP",
+      "matches": [],
+      "rejected_near_misses": []
+    },
+    "WORKLOAD_SHIFTING": {
+      "keywords_searched": [
+        "off-peak",
+        "off peak",
+        "demand response",
+        "load shifting",
+        "load shift"
+      ],
+      "status": "COUNTEREVIDENCE_GAP",
+      "matches": [],
+      "rejected_near_misses": []
+    },
+    "RENEWABLE_PROCUREMENT": {
+      "keywords_searched": [
+        "renewable energy purchase",
+        "solar power purchase agreement",
+        "solar ppa",
+        "wind power",
+        "clean energy procurement",
+        "power purchase agreement"
+      ],
+      "status": "COUNTEREVIDENCE_GAP",
+      "matches": [],
+      "rejected_near_misses": []
+    },
+    "DEMAND_OVERESTIMATION": {
+      "keywords_searched": [
+        "overestimate",
+        "demand forecast revised down",
+        "energy demand projections too high",
+        "projections too high",
+        "forecast revised down"
+      ],
+      "status": "COUNTEREVIDENCE_GAP",
+      "matches": [],
+      "rejected_near_misses": []
+    }
+  },
+  "summary": {
+    "directions_with_real_evidence": 0,
+    "directions_with_gap": 4,
+    "overall_counterevidence_status": "COUNTEREVIDENCE_GAP"
+  },
+  "honest_conclusion": "None of the 4 counterevidence directions (efficiency improvements, workload shifting, renewable procurement, demand-overestimation) have a real, topically-relevant match in the 597-document corpus. This corpus is dominated by Google News-derived NEWS documents about AI generally, with essentially no energy-operations reporting of this specificity; COUNTEREVIDENCE remains a real, honestly-reported COUNTEREVIDENCE_GAP for all 4 directions."
+}
