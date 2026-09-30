@@ -39,6 +39,13 @@ DETAIL_CHARS = 300         # '주요 내용' 창: 언론사가 피드로 공개�
 DEFAULT_LIMIT = 8          # 소스별 최대 항목 수
 FRESH_HOURS = 36           # 이 시간 안에 발행된 글만 오늘 브리핑에 포함
 MAX_PER_CAT = 60          # 분야별 하루 최대 항목 수
+# FINAL PRODUCTION WIRING & CLOSURE: 하루 daily.yml 사이클(30분마다)마다 실제로 원문
+# HTML을 fetch하는 항목 수의 상한. MAX_PER_CAT(60)의 6분의 1 수준으로 낮게 잡는다 -
+# RSS title+desc 수집과 달리 이건 원문 사이트에 실제 HTTP GET을 보내는 것이라(예의·비용
+# 문제, Te 지시) "이번 KEEP된 새 글 전체"가 아니라 극소수만 시도한다. 나머지는 그냥
+# SNIPPET_ONLY로 남는다(기존과 동일 - 퇴보 아님).
+PROVENANCE_FETCH_CAP = 10
+MAX_PROVENANCE_DEPTH = 1  # article → 1차 출처까지만(1차 출처의 링크는 다시 fetch하지 않음)
 CAT_CAP = {"talks": 5,    # 영상·강연은 하루 최신 5개만(AI 명사 인터뷰·강연)
            "news_ko": 160, "news_global": 120, "papers": 100}  # 언론사·주제가 많아 하루치가 잘리지 않게
 TOPIC_CAP = 6             # 주제별 구글 뉴스 검색(사회·환경·윤리 등)은 주제마다 하루 최대 6개: 한 주제가 목록을 다 차지하지 않게
@@ -346,6 +353,193 @@ def shadow_log_ai_relevance(item, keywords, existing_ai_result, strict=False):
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
     except Exception:
         pass  # 그림자 로깅은 절대 production 흐름을 막지 않는다
+
+
+# FINAL PRODUCTION WIRING & CLOSURE — content_acquisition → article_provenance_pipeline을
+# 실제 daily 수집 경로(collect())에 연결한다. 지금까지는 두 모듈 다 synthetic fixture와
+# fetch_pilot.py(별도 검증 스크립트, daily.yml이 부르지 않음)에서만 실행됐다 - 이 절이
+# 진짜 오늘 수집된 KEEP 항목에 대해 처음으로 그 경로를 연다.
+#
+# 격리 원칙(REMEDIATION 상수 전제와 동일): 이 절 전체가 실패해도 브리핑 생성 자체는
+# 절대 막히지 않는다(try/except로 항상 둘러싼다). content_status는 절대 승격되지 않고,
+# 생성 요약(mx.b)은 이 파이프라인의 입력으로 절대 들어가지 않는다 - acquire_content()가
+# 실제로 fetch한 text만 쓴다.
+PROVENANCE_CACHE_PATH = DATA_DIR / "meta" / "provenance_fetch_cache.json"
+_RELATIONSHIPS_COMPANY_GOV_PATH = ROOT / "intel" / "relationships_company_gov.json"
+
+
+def _load_source_intel_module(modname, subdir=None):
+    """intel/source_intelligence/*.py를 importlib 격리 패턴으로 로드한다(그 패키지에
+    schema.py가 있어 evidence_pipeline/schema.py와 이름이 충돌하므로 bare sys.path
+    insert 순서에 기대지 않는다 - _load_ai_relevance_module()과 동일한 패턴)."""
+    key = f"_si_for_briefing__{modname}"
+    if key in sys.modules:
+        return sys.modules[key]
+    si_dir = ROOT / "intel" / "source_intelligence"
+    # article_provenance_pipeline.py/fetch_pilot.py는 내부에서 bare `import link_provenance`
+    # 등을 쓰므로, 그 파일들이 있는 디렉터리를 sys.path에 둬야 한다(schema.py만 이름이
+    # 충돌하고, link_provenance/content_acquisition/article_provenance_pipeline은 충돌하지
+    # 않는다 - 위에서 확인됨).
+    for p in (str(si_dir), str(si_dir / "scripts")):
+        if p not in sys.path:
+            sys.path.insert(0, p)
+    path = (si_dir / "scripts" / f"{modname}.py") if subdir == "scripts" else (si_dir / f"{modname}.py")
+    spec = _si_ilu.spec_from_file_location(key, path)
+    mod = _si_ilu.module_from_spec(spec)
+    sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _load_provenance_cache():
+    try:
+        return json.loads(PROVENANCE_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_provenance_cache(cache):
+    try:
+        PROVENANCE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        PROVENANCE_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception as e:
+        print(f"[provenance] 캐시 저장 실패(무시, production에 영향 없음): {e}", file=sys.stderr)
+
+
+def _known_documents_for_provenance():
+    """REPORTS_ON exact-match 후보 corpus. intel/documents.json(기존 REMEDIATION 라운드가
+    이미 채워둔 문서 인덱스)을 그대로 읽는다 - 새 corpus를 만들지 않는다(REUSE BEFORE BUILD)."""
+    try:
+        path = ROOT / "intel" / "documents.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        docs = data if isinstance(data, list) else list(data.values())
+        return {d["document_id"]: {"canonical_url": d.get("canonical_url"), "title": d.get("title")}
+                for d in docs if d.get("document_id")}
+    except Exception:
+        return {}
+
+
+def _append_reports_on_records(records):
+    """intel/relationships_company_gov.json은 source_independence.load_reports_on_pairs()가
+    이미 읽는 파일(reports_on_expansion.py가 쓰는 것과 동일 경로) - 그 파일에 병합해서 쓴다.
+    reports_on_expansion.run_on_real_corpus()가 나중에 다시 실행돼도 기존 키는 relationship_id로
+    안정적이라 충돌 없이 합쳐진다."""
+    if not records:
+        return
+    try:
+        existing = json.loads(_RELATIONSHIPS_COMPANY_GOV_PATH.read_text(encoding="utf-8")) \
+            if _RELATIONSHIPS_COMPANY_GOV_PATH.exists() else {}
+    except Exception:
+        existing = {}
+    for rec in records:
+        existing[rec["relationship_id"]] = rec
+    try:
+        _RELATIONSHIPS_COMPANY_GOV_PATH.write_text(
+            json.dumps(existing, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    except Exception as e:
+        print(f"[provenance] REPORTS_ON 저장 실패(무시, production에 영향 없음): {e}", file=sys.stderr)
+
+
+def run_article_provenance_pilot(new_items, fixtures=None, cap=PROVENANCE_FETCH_CAP):
+    """오늘 새로 KEEP된 항목(하드드롭·중복제거·caps를 모두 통과한 것들) 중 극소수(cap)만
+    골라 원문을 실제로 fetch하고 content_acquisition → article_provenance_pipeline으로
+    흘려보낸다. 항목 하나가 실패해도 나머지 처리와 브리핑 생성 자체는 절대 멈추지 않는다
+    (전체를 try/except로 감싸고, 루프 안에서도 항목별로 격리한다). 원문 전체 텍스트는 여기서
+    참조 추출에만 쓰이고 어디에도 새로 저장되지 않는다(MINIMAL STORAGE, 기존 관례 그대로).
+    반환하는 counters는 daily.yml 로그에서 그대로 확인할 수 있게 stdout에도 출력한다."""
+    counters = {"eligible": 0, "cache_hit": 0, "fetch_attempted": 0, "fetch_full_text": 0,
+                "fetch_failed": 0, "quality_ok": 0, "quality_rejected": 0,
+                "references_extracted": 0, "primary_candidates": 0, "reports_on_created": 0,
+                "llm_calls": 0, "elapsed_seconds": 0.0}
+    t0 = time.time()
+    if fixtures is not None:
+        print("[provenance] fixtures 모드 - 실제 네트워크 fetch를 건너뜀(테스트 안전)")
+        return counters
+    try:
+        fetch_pilot = _load_source_intel_module("fetch_pilot", subdir="scripts")
+        content_acquisition = fetch_pilot.content_acquisition
+        article_provenance_pipeline = _load_source_intel_module("article_provenance_pipeline")
+    except Exception as e:
+        print(f"[provenance] 모듈 로드 실패 - 이번 실행은 원문 fetch를 건너뜀(브리핑에는 영향 없음): "
+              f"{type(e).__name__}: {e}", file=sys.stderr)
+        counters["elapsed_seconds"] = round(time.time() - t0, 2)
+        return counters
+
+    # MAX_PROVENANCE_DEPTH=1: article_provenance_pipeline.process_acquired_article()은
+    # content_acquisition.acquire_content()를 내부에서 다시 호출하지 않는다(그 모듈 소스에
+    # acquire_content 호출이 없음 - 1차 출처의 링크를 또 fetch하지 않는다는 뜻). 여기서
+    # 명시적으로 강제한다.
+    assert MAX_PROVENANCE_DEPTH == 1
+
+    known_documents = _known_documents_for_provenance()
+    cache = _load_provenance_cache()
+    eligible_items = [it for it in new_items if str(it.get("link", "")).startswith(("http://", "https://"))]
+    fetched = 0
+    for it in eligible_items:
+        if fetched >= cap:
+            break
+        counters["eligible"] += 1
+        url = it["link"]
+        cache_key = hashlib.sha256(url.encode("utf-8")).hexdigest()
+        if cache_key in cache:
+            counters["cache_hit"] += 1
+            continue
+        fetched += 1
+        counters["fetch_attempted"] += 1
+        try:
+            captured = {}
+
+            def _capturing_fetcher(u, _sink=captured):
+                r = fetch_pilot.real_fetcher(u)
+                _sink["html"] = r.get("html")
+                return r
+
+            # mx.b(생성 요약)는 여기 어디에도 등장하지 않는다 - acquire_content()가 실제로
+            # fetch한 원문만 이 파이프라인의 입력이다.
+            acquired = content_acquisition.acquire_content(url, fetcher=_capturing_fetcher)
+            status = acquired.get("status")
+            cache[cache_key] = {"url": url, "status": status,
+                                 "ts": datetime.now(timezone.utc).isoformat()}
+            if status not in ("FULL_TEXT", "PARTIAL_TEXT"):
+                counters["fetch_failed"] += 1
+                continue
+            counters["fetch_full_text"] += 1
+            text = acquired.get("text") or ""
+            html_body = captured.get("html")
+            quality = fetch_pilot.assess_full_text_quality(text, it.get("title"))
+            if quality != "OK":
+                # LOW_QUALITY_EXTRACTION은 깨끗한 FULL_TEXT처럼 provenance pipeline에 넣지
+                # 않는다 - 신뢰도 낮은 텍스트에서 REPORTS_ON을 만들지 않기 위한 안전장치.
+                counters["quality_rejected"] += 1
+                continue
+            counters["quality_ok"] += 1
+            result = article_provenance_pipeline.process_acquired_article(
+                source_document_id=it["id"], acquired=acquired, html=html_body,
+                source_url=url, known_documents_by_id=known_documents)
+            counters["references_extracted"] += len(result["link_candidates"])
+            counters["primary_candidates"] += sum(
+                1 for c in result["link_candidates"] if c.get("is_primary_candidate"))
+            if result["reports_on_records"]:
+                _append_reports_on_records(result["reports_on_records"])
+                counters["reports_on_created"] += len(result["reports_on_records"])
+        except Exception as e:  # 항목 하나의 실패가 나머지 항목·브리핑 생성을 절대 막지 않는다
+            print(f"[provenance] {url} 처리 실패(격리됨, 다음 항목 계속): {type(e).__name__}: {e}",
+                  file=sys.stderr)
+            continue
+        finally:
+            text = None  # MINIMAL STORAGE: 원문 전체는 참조 추출 직후 폐기, 새 저장 경로 없음
+            html_body = None
+    _save_provenance_cache(cache)
+    counters["elapsed_seconds"] = round(time.time() - t0, 2)
+    print(f"[provenance] discovered={len(new_items)} eligible={counters['eligible']} "
+          f"cache_hit={counters['cache_hit']} fetch_attempted={counters['fetch_attempted']} "
+          f"full_text={counters['fetch_full_text']} failed={counters['fetch_failed']} "
+          f"quality_ok={counters['quality_ok']} quality_rejected={counters['quality_rejected']} "
+          f"references_extracted={counters['references_extracted']} "
+          f"primary_candidates={counters['primary_candidates']} "
+          f"reports_on_created={counters['reports_on_created']} llm_calls={counters['llm_calls']} "
+          f"elapsed_seconds={counters['elapsed_seconds']}")
+    return counters
 
 
 def norm_link(link):
@@ -1152,6 +1346,17 @@ def collect(fixtures=None, now=None):
     gone = load_removed()
     uniq = [i for i in uniq if i["id"] not in gone]  # 운영자가 삭제한 기사는 다시 모으지 않는다
     uniq = drop_same_story(uniq, recent_items(today))  # 언론사가 달라도 같은 내용이면 먼저 나온 기사 하나만
+    # FINAL PRODUCTION WIRING & CLOSURE: 여기가 통합 지점이다 - 하드드롭(classify_noise)·
+    # AI 키워드 필터(is_ai_related)·중복제거(Deduper/drop_same_story)·분야별 하루 상한
+    # (CAT_CAP/MAX_PER_CAT)을 전부 통과해 오늘 새로 나온 KEEP 항목만 골라(new_ids), 그 중
+    # 극소수(PROVENANCE_FETCH_CAP)만 실제 원문을 fetch해 provenance pipeline에 흘려보낸다.
+    # 실패해도 이 함수 자체가 죽지 않도록 한 번 더 감싼다(방어적 이중화 - 함수 내부에도
+    # 이미 try/except가 있지만, 이 호출 지점 자체가 브리핑 생성을 막는 일은 절대 없어야 한다).
+    try:
+        new_ids = {i["id"] for i in new}
+        run_article_provenance_pilot([i for i in uniq if i["id"] in new_ids], fixtures=fixtures)
+    except Exception as e:
+        print(f"[provenance] 통합 지점 자체 실패(무시, 브리핑 생성 계속): {type(e).__name__}: {e}", file=sys.stderr)
     if not fixtures:  # METAXIS 브리핑(AI)은 무료 한도 안에서 실시간 페이지(오늘 홈)에 보이는 글만
         ai_briefs(uniq, 8)
     data = {"date": today.isoformat(), "generated_at": now.astimezone(KST).isoformat(timespec="minutes"),
