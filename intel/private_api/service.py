@@ -510,3 +510,35 @@ def intelligence_package(topic=None):
         raise ApiError("INVALID_QUERY", "intelligence_package requires ?topic=")
     intelligence_package_mod = load_foresight("intelligence_package")
     return intelligence_package_mod.assemble_intelligence_package(topic)
+
+
+def reality_context(topic=None):
+    """Phase M.3 — the reality_context section standalone (same content intelligence_package()
+    embeds), for a caller that only wants indicator/observation intelligence without pulling
+    every other layer. Real, structured data only - no prose."""
+    if not topic:
+        raise ApiError("INVALID_QUERY", "reality_context requires ?topic=")
+    intelligence_package_mod = load_foresight("intelligence_package")
+    return intelligence_package_mod.assemble_reality_context(topic)
+
+
+def indicators():
+    """All Indicator metadata currently registered (Phase M.3). Never includes observation
+    values - Indicator objects hold no `value` field by construction."""
+    reality_mod = load_foresight("reality_indicator")
+    regs = reality_mod.load_indicators()
+    return {"count": len(regs), "indicators": regs}
+
+
+def data_gaps():
+    """Reality coverage matrix + gap classification (Phase M.3 spec section 37/39-43). Every
+    class returned is justified from real Indicator/Observation data - never a fabricated gap,
+    and a gap here never implies the underlying real-world phenomenon doesn't exist."""
+    reality_mod = load_foresight("reality_indicator")
+    coverage_mod = load_foresight("coverage")
+    indicators_reg = reality_mod.load_indicators()
+    observations_reg = reality_mod.load_observations()
+    return {
+        "coverage": coverage_mod.build_reality_coverage_matrix(indicators_reg, observations_reg),
+        "gaps": coverage_mod.detect_reality_knowledge_gaps(indicators_reg, observations_reg),
+    }

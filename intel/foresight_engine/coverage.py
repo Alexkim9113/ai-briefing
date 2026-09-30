@@ -151,3 +151,88 @@ def detect_historical_knowledge_gaps(evidence_registry, independent_counts_by_id
                 "reason": "no counteranalogy supplied - not fabricated to fill this slot",
             })
     return gaps
+
+
+# =============================================================================
+# PHASE M.3 — reality coverage matrix (DOMAIN x GEOGRAPHY x TIME x SOURCE_TIER) + reality-
+# specific gap classes (spec section 37). Extends this module - does not build a second
+# coverage system. Only assigns a class the code can justify from real Indicator data.
+# =============================================================================
+
+REALITY_GAP_CLASSES = (
+    "NOT_COLLECTED", "NOT_PUBLISHED", "NOT_DISCOVERED", "ACCESS_RESTRICTED", "TOO_NEW",
+    "DEFINITION_GAP", "GEOGRAPHY_GAP", "TIME_GAP", "UNKNOWN",
+)
+
+
+def build_reality_coverage_matrix(indicators=None, observations=None):
+    """indicators/observations: {id: record} dicts (foresight_engine/reality_indicator.py
+    shape). Returns real counts per DOMAIN x GEOGRAPHY x SOURCE_TIER, and a TIME bucket keyed
+    by latest_period's year (or UNKNOWN when unset) - never inferred from outside data."""
+    indicators = indicators or {}
+    observations = observations or {}
+    by_domain = Counter()
+    by_geography = Counter()
+    by_source_tier = Counter()
+    by_time = Counter()
+    for ind in indicators.values():
+        by_domain[ind.get("domain") or "UNKNOWN"] += 1
+        by_geography[ind.get("geography") or "UNKNOWN"] += 1
+        by_source_tier[ind.get("source_tier") or "UNKNOWN"] += 1
+        latest = ind.get("latest_period") or ""
+        by_time[latest[:4] if len(latest) >= 4 else "UNKNOWN"] += 1
+
+    indicators_with_observations = {obs.get("indicator_id") for obs in observations.values()}
+    return {
+        "indicators_total": len(indicators),
+        "observations_total": len(observations),
+        "by_domain": dict(by_domain),
+        "by_geography": dict(by_geography),
+        "by_source_tier": dict(by_source_tier),
+        "by_time": dict(by_time),
+        "indicators_with_zero_observations": [
+            iid for iid in indicators if iid not in indicators_with_observations
+        ],
+    }
+
+
+def detect_reality_knowledge_gaps(indicators=None, observations=None, known_domains=()):
+    """Assigns a REALITY_GAP_CLASSES class only where the code can actually justify it from
+    real data:
+      - a known reality domain with zero indicators at all -> NOT_DISCOVERED (this pilot has not
+        yet looked for a source in that domain - never implies the phenomenon doesn't exist)
+      - an indicator with zero real observations -> NOT_COLLECTED (fetch was attempted/planned
+        but no data landed - e.g. this pilot's sandbox network block)
+      - an indicator whose geography/definition/first_period is UNKNOWN -> GEOGRAPHY_GAP /
+        DEFINITION_GAP / TIME_GAP respectively.
+    Never asserts a gap implies the real-world phenomenon does not exist (tested)."""
+    indicators = indicators or {}
+    observations = observations or {}
+    gaps = []
+    covered_domains = {ind.get("domain") for ind in indicators.values()}
+    for domain in known_domains:
+        if domain not in covered_domains:
+            gaps.append({
+                "dimension": "DOMAIN", "key": domain, "gap_class": "NOT_DISCOVERED",
+                "status": "OPEN",
+                "reason": "no indicator registered yet for this domain in this pilot - this "
+                          "does NOT imply the underlying phenomenon does not exist, only that "
+                          "no source has been connected for it yet",
+            })
+    obs_by_indicator = Counter(obs.get("indicator_id") for obs in observations.values())
+    for iid, ind in indicators.items():
+        if obs_by_indicator.get(iid, 0) == 0:
+            gaps.append({"dimension": "INDICATOR", "key": iid, "gap_class": "NOT_COLLECTED",
+                         "status": "OPEN",
+                         "reason": "indicator registered but no real observation has been "
+                                   "fetched/verified yet"})
+        if ind.get("geography") in (None, "UNKNOWN"):
+            gaps.append({"dimension": "INDICATOR", "key": iid, "gap_class": "GEOGRAPHY_GAP",
+                         "status": "OPEN"})
+        if not ind.get("definition"):
+            gaps.append({"dimension": "INDICATOR", "key": iid, "gap_class": "DEFINITION_GAP",
+                         "status": "OPEN"})
+        if not ind.get("first_period"):
+            gaps.append({"dimension": "INDICATOR", "key": iid, "gap_class": "TIME_GAP",
+                         "status": "OPEN"})
+    return gaps

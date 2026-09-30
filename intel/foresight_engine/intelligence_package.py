@@ -10,11 +10,15 @@
 import json
 from pathlib import Path
 
-from coverage import build_coverage_matrix, detect_knowledge_gaps, detect_historical_knowledge_gaps
+from coverage import (
+    build_coverage_matrix, detect_knowledge_gaps, detect_historical_knowledge_gaps,
+    build_reality_coverage_matrix, detect_reality_knowledge_gaps,
+)
 from cross_domain import find_cross_domain_connections, find_historical_cross_domain_connections
 from historical_analogy import audit_historical_evidence
 from historical_evidence import load_historical_evidence
 from historical_source_independence import independent_evidence_count
+from reality_indicator import load_indicators, load_observations, build_citation
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -161,6 +165,60 @@ def assemble_historical_context(topic, evidence_registry=None, analogies=None):
     }
 
 
+def assemble_reality_context(topic, indicators=None, observations=None):
+    """Phase M.3 step 10 — structured-only reality_context section (no generated prose),
+    mirroring assemble_historical_context()'s shape/honesty rules. Every list is populated from
+    real Indicator/Observation records that mention `topic`, or is honestly empty."""
+    indicators = indicators if indicators is not None else load_indicators()
+    observations = observations if observations is not None else load_observations()
+    q = topic.lower()
+
+    def _mentions(fields):
+        return any(q in str(f).lower() for f in fields if f)
+
+    relevant_indicator_ids = [
+        iid for iid, ind in indicators.items()
+        if _mentions([ind.get("canonical_name"), ind.get("display_name"), ind.get("domain"),
+                      ind.get("subdomain"), ind.get("concept")])
+    ]
+    relevant_observation_ids = [
+        oid for oid, obs in observations.items() if obs.get("indicator_id") in relevant_indicator_ids
+    ]
+    citations = {oid: build_citation(oid, observations, indicators) for oid in relevant_observation_ids}
+    relevant_indicators = {iid: indicators[iid] for iid in relevant_indicator_ids}
+    relevant_observations_by_indicator = {}
+    for oid in relevant_observation_ids:
+        iid = observations[oid]["indicator_id"]
+        relevant_observations_by_indicator.setdefault(iid, []).append(oid)
+
+    coverage = build_reality_coverage_matrix(relevant_indicators,
+                                              {oid: observations[oid] for oid in relevant_observation_ids})
+    gaps = detect_reality_knowledge_gaps(relevant_indicators,
+                                          {oid: observations[oid] for oid in relevant_observation_ids})
+
+    return {
+        "topic": topic,
+        "indicators": relevant_indicator_ids,
+        "observations": relevant_observation_ids,
+        "trends": [],           # populated by a future caller once real time series exist
+        "comparisons": [],      # comparability_gate results go here once cross-indicator work runs
+        "supporting_indicators": [],
+        "counter_indicators": [],
+        "ambiguous_indicators": [],
+        "baseline_indicators": [],
+        "alternative_explanations": [],
+        "source_quality": {iid: indicators[iid].get("source_tier") for iid in relevant_indicator_ids},
+        "comparability": [],
+        "series_breaks": [],
+        "coverage_gaps": gaps,
+        "data_conflicts": [],
+        "evidence_ids": relevant_observation_ids,
+        "citations": citations,
+        "coverage_summary": coverage,
+        "generated_by": "CODE_DETERMINISTIC",
+    }
+
+
 def assemble_intelligence_package(topic, documents=None, notes=None):
     """The single Phase-M deliverable Te calls out as most important (section 45): given a
     topic/query string, pulls together everything the real pipeline currently holds about it
@@ -197,6 +255,7 @@ def assemble_intelligence_package(topic, documents=None, notes=None):
                                     if g["key"] == "ALL"
                                     or topic.lower() in str(g["key"]).lower()],
         "historical_context": assemble_historical_context(topic),
+        "reality_context": assemble_reality_context(topic),
         "evidence_sufficiency": (
             "NO_EVIDENCE" if not matching_document_ids and not matching_note_ids
             else "DOCUMENTS_ONLY" if matching_document_ids and not matching_note_ids

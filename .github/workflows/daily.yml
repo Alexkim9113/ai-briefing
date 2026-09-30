@@ -143,3 +143,39 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.3 — Reality & Indicator Intelligence Layer pilot. Same isolation pattern as
+  # evidence_shadow above: own concurrency group, continue-on-error, needs build, if: always(),
+  # commits only its own new output file (reality_pilot_result.json) under
+  # intel/foresight_engine/ - never touches Public Site/data/site or any other intel/ dir. This
+  # job's real result (live reachability of World Bank / ECOS from GitHub Actions' real
+  # network) is only observable once this actually runs on a real cron tick - it was not
+  # fabricated in the authoring session, which confirmed the sandbox itself blocks all four
+  # tested official-source hosts (World Bank, KOSIS, ECOS, OECD SDMX) at the outbound proxy.
+  reality_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: reality-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reality Indicator Pilot 실행 (World Bank / ECOS 실제 연결 시도)
+        continue-on-error: true
+        run: python3 intel/foresight_engine/scripts/fetch_reality_indicators.py
+      - name: Reality Pilot 결과 저장 (foresight_engine/reality_pilot_result.json 만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/foresight_engine/reality_pilot_result.json
+          git diff --cached --quiet || git commit -m "Reality Indicator Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done

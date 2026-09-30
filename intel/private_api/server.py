@@ -52,6 +52,11 @@ _ROUTES_GET = [
         topic=_first(qs, "topic"))),
     (re.compile(r"^/intelligence-package$"), lambda m, qs: service.intelligence_package(
         topic=_first(qs, "topic"))),
+    # PHASE M.3 additions.
+    (re.compile(r"^/reality-context$"), lambda m, qs: service.reality_context(
+        topic=_first(qs, "topic"))),
+    (re.compile(r"^/indicators$"), lambda m, qs: service.indicators()),
+    (re.compile(r"^/data-gaps$"), lambda m, qs: service.data_gaps()),
 ]
 
 _ROUTES_POST = [
