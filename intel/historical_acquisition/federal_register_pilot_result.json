@@ -27,9 +27,7 @@
           "abstract_excerpt": "The Board of Governors of the Federal Reserve System (Board) proposes to issue regulations to implement the Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act) with respect to Board-supervised permitted payment stablecoin issuers (PPSIs) and certain other entities that are subject to the Board's jurisdiction. In addition, the Board proposes to issue regulations to implement the prohibition on tying in section 4(a)(8) of the GENIUS Act, which is applicable generally",
           "document_kind": "Proposed Rule",
           "citation": "91 FR 61580",
-          "agencies": [
-            "Federal Reserve System"
-          ],
+          "agencies": ["Federal Reserve System"],
           "published": "2026-09-29",
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
           "rights_mode": "LINK_ONLY",
@@ -49,10 +47,7 @@
           "abstract_excerpt": "The Department of Labor, as part of its continuing effort to reduce paperwork and respondent burden, conducts a pre-clearance consultation program to provide the general public and Federal agencies with an opportunity to comment on proposed and/or continuing collections of information in accordance with the Paperwork Reduction Act of 1995. This program helps to ensure that requested data can be provided in the desired format, reporting burden (time and financial resources) is minimized, collecti",
           "document_kind": "Notice",
           "citation": "91 FR 61458",
-          "agencies": [
-            "Labor Department",
-            "Labor Statistics Bureau"
-          ],
+          "agencies": ["Labor Department", "Labor Statistics Bureau"],
           "published": "2026-09-29",
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
           "rights_mode": "LINK_ONLY",
@@ -72,10 +67,7 @@
           "abstract_excerpt": "This request for information (RFI) solicits input from interested parties for purposes of establishing standards for reasonable and relevant pharmacy contract terms and conditions under the Medicare prescription drug benefit. Section 6223(a) of the Consolidated Appropriations Act, 2026 (CAA, 2026) amends section 1860D- 4(b)(1)(A) of the Social Security Act (the Act) to require Part D plan sponsors to permit any pharmacy that meets standard contract terms and conditions under the plan to particip",
           "document_kind": "Proposed Rule",
           "citation": "91 FR 60568",
-          "agencies": [
-            "Health and Human Services Department",
-            "Centers for Medicare & Medicaid Services"
-          ],
+          "agencies": ["Health and Human Services Department", "Centers for Medicare & Medicaid Services"],
           "published": "2026-09-24",
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
           "rights_mode": "LINK_ONLY",
@@ -95,9 +87,7 @@
           "abstract_excerpt": "This policy articulates the core principles of the Department of Housing and Urban Development's evaluation and research activities. This notice updates the Department's Evaluation Policy and reaffirms HUD's commitment to conducting rigorous, relevant evaluations, adhering to the tenets of Executive Order 14303, \"Restoring Gold Standard Science,\" and using evidence from evaluations to inform policy and practice.",
           "document_kind": "Notice",
           "citation": "91 FR 60638",
-          "agencies": [
-            "Housing and Urban Development Department"
-          ],
+          "agencies": ["Housing and Urban Development Department"],
           "published": "2026-09-24",
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
           "rights_mode": "LINK_ONLY",
@@ -114,18 +104,16 @@
           "source_tier": "TIER_1",
           "source_type": "GOVERNMENT",
           "title": "Order Granting Temporary Conditional Exemptive Relief, Pursuant to Section 36(a)(1) of the Securities Exchange Act of 1934, From the Definition of “Exchange” in Section 3(a)(1) of the Exchange Act for the Use of Certain Distributed Ledger Trading Venues for Tokenized NMS Stocks and From the Definition of “Dealer” in Section 3(a)(5) of the Exchange Act for Certain Liquidity Providers for Tokenized NMS Stocks, and Request for Comment",
-          "abstract_excerpt": null,
           "document_kind": "Notice",
           "citation": "91 FR 60168",
-          "agencies": [
-            "Securities and Exchange Commission"
-          ],
+          "agencies": ["Securities and Exchange Commission"],
           "published": "2026-09-22",
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
           "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
-          "provenance_id": "prov_fedreg_2026-19388_2026-09-30T09:56:01.049744+00:00"
+          "provenance_id": "prov_fedreg_2026-19388_2026-09-30T09:56:01.049744+00:00",
+          "abstract_excerpt": null
         }
       ],
       "overall_status": "SUCCESS",

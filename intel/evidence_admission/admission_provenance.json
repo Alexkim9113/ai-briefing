@@ -1,35 +1,88 @@
 {
- "2dc0fb80fcc52650": {
+ "63433bc3b020cb2f": {
   "admission_status": "ADMITTED",
-  "admitted_at": "2026-09-30T11:41:11.471494+00:00",
-  "document_id": "2dc0fb80fcc52650",
+  "admitted_at": "2026-09-30T11:45:29.888782+00:00",
+  "document_id": "63433bc3b020cb2f",
   "fetch_status": "FETCH_OK",
   "history": [],
   "parse_status": "PARSE_OK",
-  "retrieved_at": "2026-09-30T11:40:55.061460+00:00",
+  "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
   "source_organization": [
-   "National Institute of Standards and Technology"
+   "Federal Reserve System"
   ],
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
-  "source_url": "https://www.federalregister.gov/documents/2026/09/12/2026-19432/request-for-comments-on-artificial-intelligence-risk-management-framework",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
- "941862a838846097": {
+ "d6b794adf7b93b53": {
   "admission_status": "ADMITTED",
-  "admitted_at": "2026-09-30T11:41:11.471494+00:00",
-  "document_id": "941862a838846097",
+  "admitted_at": "2026-09-30T11:45:29.888782+00:00",
+  "document_id": "d6b794adf7b93b53",
   "fetch_status": "FETCH_OK",
   "history": [],
   "parse_status": "PARSE_OK",
-  "retrieved_at": "2026-09-30T11:40:55.061460+00:00",
+  "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
   "source_organization": [
-   "Department of Labor"
+   "Housing and Urban Development Department"
   ],
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
-  "source_url": "https://www.federalregister.gov/documents/2026/08/04/2026-17021/automated-employment-decision-tools",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "dab93b32009a0922": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:45:29.888782+00:00",
+  "document_id": "dab93b32009a0922",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+  "source_organization": [
+   "Securities and Exchange Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "dbc88da07e499796": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:45:29.888782+00:00",
+  "document_id": "dbc88da07e499796",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+  "source_organization": [
+   "Health and Human Services Department",
+   "Centers for Medicare & Medicaid Services"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "fd4246f43aa9e33a": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:45:29.888782+00:00",
+  "document_id": "fd4246f43aa9e33a",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+  "source_organization": [
+   "Labor Department",
+   "Labor Statistics Bureau"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  }
