@@ -1,0 +1,274 @@
+{
+  "documents_examined": 577,
+  "documents_with_nonzero_score": 127,
+  "top_n_requested": 20,
+  "candidates_returned": 20,
+  "candidates": [
+    {
+      "document_id": "597975da49400eea",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['unveils'] (+2)",
+        "LARGE_INVESTMENT: title matches ['investment'] (+3)"
+      ],
+      "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
+      "document_type": "NEWS",
+      "source_id": "src_techcrunch_com",
+      "canonical_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+      "published": "2026-09-29T00:30:00+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "6ba7417936458e58",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['release'] (+2)",
+        "HIGH_SOCIAL_IMPACT: title matches ['safety'] (+3)"
+      ],
+      "title": "OpenAI Says It Will Not Release Newest Astra A.I. Model Over Safety Concerns",
+      "document_type": "NEWS",
+      "source_id": "src_the_new_york_times",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44UldTTk4wWS1oa3NoWXZ3RFdSZ3M1Q2lhMFFCa3A2QmMzTjRmYWk5bHp3cVBPUldmdzBDRjNmUVVfNnFycy05YVdTVjU4T1ljYUZxRkJZY2RINVNUV1lxMUdyX3BodGNja09adjlRNTYwelNZUEZWR093?oc=5",
+      "published": "2026-09-29T00:19:42+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "8d36a93d57a1921a",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['release'] (+2)",
+        "HIGH_SOCIAL_IMPACT: title matches ['safety'] (+3)"
+      ],
+      "title": "OpenAI abandons plan to release upcoming model as safety concerns escalate",
+      "document_type": "NEWS",
+      "source_id": "src_cnbc",
+      "canonical_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxON3J6Rk5EcVdTM1V5QmZWRVhSQW1DaDBmYU5YQ0JnM1hLMUxXbWVSVy1vdmZYWjA1T1N2WnRMNnB2N0NkVUwySjFlU05ISE5uRUFOdnIxYVVxVTkwaTlNcm5LdlduajAwZHFGcUExZ3Z5Rm5zZmNFcldST2pfN2pvWU5JRkY2US1TUVRZZ09jYjFLQUh3cnBsVHNCQmh4SHdKcC1mM0ZLRFNmV0o4R2tfUtIBtgFBVV95cUxQakpZOVlkQTEzOHdkWEI5ZmxXVUc1MFJCWkFLNkVxNld2NjA4WkRwUFV0TlM4ejJhWnZzc1JfcERhMFIwdUEtWU5pLU9tSzN6VnBLbFpKYkd3SEZqMnBJcFVJY3VLdjlqS2NWUDVKTVNXZ0otXy1RZE9XaGg4YVYydjJEM3BjSHlDXzZla2dleU9lOTZjem1oWDBqRWp1LXlyckFZcTNDd3lmazBVcGZJc0dUc0xGUQ?oc=5",
+      "published": "2026-09-28T22:27:58+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "a35fc3ec93e92876",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['launches'] (+2)",
+        "HIGH_SOCIAL_IMPACT: title matches ['regulation', 'safety'] (+3)"
+      ],
+      "title": "Nvidia launches new safety program after AI regulation uproar",
+      "document_type": "NEWS",
+      "source_id": "src_washington_examiner",
+      "canonical_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0xlS0hZLW9rRWw5THJla3dpOFBBY0VwNUo2VXZfWkhKN0FiVk93VTNoNFZkQm00eFlRTGxrWFRiVjhGTUVudGZqNEUyWVB6OVhPYXEwanVISEZ3VjQ5bXkyVV9jNVVWNGlUcUdaeWtRc0xvb0s4TW9UQlp1OWM5eVJ0TjVEbHZUXzFLUzNQMkhVQi1zdU13cmVQZHVKdw?oc=5",
+      "published": "2026-09-28T15:55:00+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "a47b03818169cd6e",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['공개'] (+2)",
+        "HIGH_SOCIAL_IMPACT: title matches ['규제'] (+3)"
+      ],
+      "title": "트럼프, 앤스로픽 CEO와 비공개 만찬 예정…AI 규제 갈등 '해빙' 신호",
+      "document_type": "NEWS",
+      "source_id": "src_구글뉴스_ai_정책",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE95UVMyM0swejd6bXlzN3B2cUk4cEpDZ2lMdENqSHdpam5XVVZxX2Z6TVBaZGVGcHpkMWw5bHlOeXZOZlhkSC0xdnk2LUEwcWFGN3hqQ01BYVNoNzhN?oc=5",
+      "published": "2026-09-27T21:02:00+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "fbafabe17015a664",
+      "score": 5,
+      "reasons": [
+        "TECH_RELEASE: title matches ['공개'] (+2)",
+        "LARGE_INVESTMENT: title matches ['투자'] (+3)"
+      ],
+      "title": "\"AI DC 구축기간·투자부담 줄인다\"…LG전자, 모듈형 냉각 기술력 공개",
+      "document_type": "NEWS",
+      "source_id": "src_newsis_com",
+      "canonical_url": "https://www.newsis.com/view/NISX20260929_0003806525",
+      "published": "2026-09-29T10:00:00+09:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "63433bc3b020cb2f",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+      "published": "2026-09-29",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "d6b794adf7b93b53",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "HUD Evaluation Policy",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
+      "published": "2026-09-24",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "dab93b32009a0922",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Order Granting Temporary Conditional Exemptive Relief, Pursuant to Section 36(a)(1) of the Securities Exchange Act of 1934, From the Definition of “Exchange” in Section 3(a)(1) of the Exchange Act for the Use of Certain Distributed Ledger Trading Venues for Tokenized NMS Stocks and From the Definition of “Dealer” in Section 3(a)(5) of the Exchange Act for Certain Liquidity Providers for Tokenized NMS Stocks, and Request for Comment",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
+      "published": "2026-09-22",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "db0be1a0cfc1d481",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Request for Information (RFI) Regarding the Digitization and Modernization of the National Technical Reports Library (NTRL) and the Leveraging of Scientific, Technical and Engineering Information (STEI) Stored in the NTRL",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
+      "published": "2026-09-30",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "dbc88da07e499796",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Request for Information; Medicare Part D Reasonable and Relevant Pharmacy Contracting Standards",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
+      "published": "2026-09-24",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "dfeca8bdbe271f85",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Renewal of the Consumer Protection and Accessibility Advisory Committee",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
+      "published": "2026-09-30",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "e45955d26ea76a4b",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "The Safer Affordable Fuel-Efficient (SAFE) Vehicles Rule III for Model Years 2022 to 2031 Passenger Cars and Light Trucks",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
+      "published": "2026-09-30",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "fd4246f43aa9e33a",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Proposed Revision of Information Collection; National Longitudinal Survey of Youth 1979",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
+      "published": "2026-09-29",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "003ca48c1f2e48ca",
+      "score": 3,
+      "reasons": [
+        "LABOR_MARKET_SHIFT: ['jobs', 'field=사회·노동'] (+3)"
+      ],
+      "title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
+      "document_type": "NEWS",
+      "source_id": "src_aei",
+      "canonical_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWDl4NENoM09oSWx0SHBSRGRad0d3T1lPNTlDREtvMTVjTVRSQnk4RWF6cmw1SUVlLWhaVklaOEUxQnVESGRVYU9VXzB3cW13XzQ0S0hVTlhGRC0taFRNM2Z1TnNvMlNSU0NJSi1FZFlqQTVVVVRoWUdQTEFkRzZNaFNxU2QwNi1ManZiTTZZQQ?oc=5",
+      "published": "2026-09-28T19:12:20+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "003dea2169532db9",
+      "score": 3,
+      "reasons": [
+        "LARGE_INVESTMENT: title matches ['billion', 'buyback'] (+3)"
+      ],
+      "title": "Nvidia Adds $150 Billion to Massive Stock Buyback, the Largest Ever",
+      "document_type": "NEWS",
+      "source_id": "src_the_new_york_times",
+      "canonical_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9iclhOaUhUeDFGRDNBZWJzNWFOWUVtaVBwck91TFE4Um5rUDJ5Z1RsRXJSN2VWTUR3X2lmV0x5cDRqZEM5aDRwLVp5OWpzOHNtV2phY2hVNTF5NWo5M0JpYW1rcEhqTHFSTmZqZl9KSTdNZkt0QWhrZQ?oc=5",
+      "published": "2026-09-28T13:49:59+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "038a0e5dc7babbdd",
+      "score": 3,
+      "reasons": [
+        "HIGH_SOCIAL_IMPACT: title matches ['regulation'] (+3)"
+      ],
+      "title": "WashU professors discuss the uses of AI and the need for regulation",
+      "document_type": "NEWS",
+      "source_id": "src_studlife_com",
+      "canonical_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNOXlXbzhEd2gxakxRajkxem15WC1GenhRTjZVX0V2ZHZjOHlPWV9pdzJrd1AwXzg4N3VoTkJyTGRYNUJfeXFFMy1wWmUxSlkwSV9FTEE0UWY1bWVjTmdKRy1QcGRhMVBxNUJrX055eWpvVVNVdXlXZFh2WUFoZk5jbHhrRnEwZS13aXlXWXN0TG5nc0FlZzJvSUZwZXA2dW9tQnJwZWtLX2NKSktp?oc=5",
+      "published": "2026-09-28T23:07:47+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "046bd80008b09729",
+      "score": 3,
+      "reasons": [
+        "HIGH_SOCIAL_IMPACT: title matches ['규제'] (+3)"
+      ],
+      "title": "제이엘케이 \"日 의료AI 규제 훈풍…독주 체제 준비\"",
+      "document_type": "NEWS",
+      "source_id": "src_구글뉴스_ai_정책",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9IMkladFdWa0FZX2lNaDNUX3JFYl9pUE1oN3gyN0pmM0xoT1NidlU5ZDBhTU0zR1VORnZKQ0haVWpPenUtSnRkWk9hMHNNQ3pJenNSZ3dQSm05RXljWG5sNNIBeEFVX3lxTE1pYjBfTmJxbXloSjFNSzd4SWhXTXZkcWMxYVBFeFJjWjRhNkJhUlpUcW4taGFYYVQ0eUlmWGRGdDNmOGpWU0V3ckJsNWsweVNkLTdkR0Y4b2dGSG51X3g0dGtUV1V4dGR1ZFVGdXRySnYwVTRWWmk0MQ?oc=5",
+      "published": "2026-09-28T02:28:16+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "06e93634a5683e16",
+      "score": 3,
+      "reasons": [
+        "HIGH_SOCIAL_IMPACT: title matches ['regulation'] (+3)"
+      ],
+      "title": "Guide to TGA regulation of AI medical devices in Australia",
+      "document_type": "NEWS",
+      "source_id": "src_google_news_ai_regulation",
+      "canonical_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRW9uV0FjWFlxQUhVd0VrQ0lOUHZHMklzYV9JcmFhR1U1RHNhTmIybWRpZlVMWDNXczlQWXpPakJBcGtwUEl5SnhUeU9fekVzZHdjLUl5dGhxZDNLODlDZEdGNFNfZ01ySkxsZjhLZHEtWXBlYWRZczVQcGJiTi13c3lTZkJZOEU3TDVMMGxCb05McVU2VDR5MXFpb084WkRjb2dta0NHY3A4RWcwMDBBeTR0blBjTDlQOHRyeTdn?oc=5",
+      "published": "2026-09-27T14:14:10+00:00",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "080c262bbf5cfa04",
+      "score": 3,
+      "reasons": [
+        "LABOR_MARKET_SHIFT: ['field=사회·노동'] (+3)"
+      ],
+      "title": "PCN, 인구감소 정책 AI 시뮬레이션…“지역 사회문제 대응 지원”",
+      "document_type": "NEWS",
+      "source_id": "src_디지털데일리",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yaGFwalY0aEJjbkNIU2p5RUJENEZyX01fMDM4STRMb2hkU1htZ2oxRWpkcFI5b3A4Zkx1QVZCX1FVYloxOVFzMVFEbF93Zjl2LVRNNENYRk5pMXo0UFpTXzdoWGE?oc=5",
+      "published": "2026-09-29T00:50:10+00:00",
+      "cluster_size": 1
+    }
+  ]
+}

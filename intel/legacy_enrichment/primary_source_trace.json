@@ -1,0 +1,54 @@
+{
+  "candidates_traced": 5,
+  "status_breakdown": {
+    "NEWS_ONLY": 1,
+    "INSUFFICIENT_EVIDENCE": 4
+  },
+  "traces": {
+    "597975da49400eea": {
+      "document_id": "597975da49400eea",
+      "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
+      "source_id": "src_techcrunch_com",
+      "canonical_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+      "priority_score": 5,
+      "status": "NEWS_ONLY",
+      "reason": "canonical_url is a direct, identifiable news-outlet domain ('techcrunch.com') with no primary-source or corroborating-official-record linkage findable in this corpus's existing metadata"
+    },
+    "6ba7417936458e58": {
+      "document_id": "6ba7417936458e58",
+      "title": "OpenAI Says It Will Not Release Newest Astra A.I. Model Over Safety Concerns",
+      "source_id": "src_the_new_york_times",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44UldTTk4wWS1oa3NoWXZ3RFdSZ3M1Q2lhMFFCa3A2QmMzTjRmYWk5bHp3cVBPUldmdzBDRjNmUVVfNnFycy05YVdTVjU4T1ljYUZxRkJZY2RINVNUV1lxMUdyX3BodGNja09adjlRNTYwelNZUEZWR093?oc=5",
+      "priority_score": 5,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "reason": "canonical_url resolves to opaque redirect host 'news.google.com' (news.google.com/rss/articles/...); the real destination publisher domain cannot be determined from stored metadata alone, and no live fetch is available in this sandbox to resolve it"
+    },
+    "8d36a93d57a1921a": {
+      "document_id": "8d36a93d57a1921a",
+      "title": "OpenAI abandons plan to release upcoming model as safety concerns escalate",
+      "source_id": "src_cnbc",
+      "canonical_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxON3J6Rk5EcVdTM1V5QmZWRVhSQW1DaDBmYU5YQ0JnM1hLMUxXbWVSVy1vdmZYWjA1T1N2WnRMNnB2N0NkVUwySjFlU05ISE5uRUFOdnIxYVVxVTkwaTlNcm5LdlduajAwZHFGcUExZ3Z5Rm5zZmNFcldST2pfN2pvWU5JRkY2US1TUVRZZ09jYjFLQUh3cnBsVHNCQmh4SHdKcC1mM0ZLRFNmV0o4R2tfUtIBtgFBVV95cUxQakpZOVlkQTEzOHdkWEI5ZmxXVUc1MFJCWkFLNkVxNld2NjA4WkRwUFV0TlM4ejJhWnZzc1JfcERhMFIwdUEtWU5pLU9tSzN6VnBLbFpKYkd3SEZqMnBJcFVJY3VLdjlqS2NWUDVKTVNXZ0otXy1RZE9XaGg4YVYydjJEM3BjSHlDXzZla2dleU9lOTZjem1oWDBqRWp1LXlyckFZcTNDd3lmazBVcGZJc0dUc0xGUQ?oc=5",
+      "priority_score": 5,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "reason": "canonical_url resolves to opaque redirect host 'news.google.com' (news.google.com/rss/articles/...); the real destination publisher domain cannot be determined from stored metadata alone, and no live fetch is available in this sandbox to resolve it"
+    },
+    "a35fc3ec93e92876": {
+      "document_id": "a35fc3ec93e92876",
+      "title": "Nvidia launches new safety program after AI regulation uproar",
+      "source_id": "src_washington_examiner",
+      "canonical_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0xlS0hZLW9rRWw5THJla3dpOFBBY0VwNUo2VXZfWkhKN0FiVk93VTNoNFZkQm00eFlRTGxrWFRiVjhGTUVudGZqNEUyWVB6OVhPYXEwanVISEZ3VjQ5bXkyVV9jNVVWNGlUcUdaeWtRc0xvb0s4TW9UQlp1OWM5eVJ0TjVEbHZUXzFLUzNQMkhVQi1zdU13cmVQZHVKdw?oc=5",
+      "priority_score": 5,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "reason": "canonical_url resolves to opaque redirect host 'news.google.com' (news.google.com/rss/articles/...); the real destination publisher domain cannot be determined from stored metadata alone, and no live fetch is available in this sandbox to resolve it"
+    },
+    "a47b03818169cd6e": {
+      "document_id": "a47b03818169cd6e",
+      "title": "트럼프, 앤스로픽 CEO와 비공개 만찬 예정…AI 규제 갈등 '해빙' 신호",
+      "source_id": "src_구글뉴스_ai_정책",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE95UVMyM0swejd6bXlzN3B2cUk4cEpDZ2lMdENqSHdpam5XVVZxX2Z6TVBaZGVGcHpkMWw5bHlOeXZOZlhkSC0xdnk2LUEwcWFGN3hqQ01BYVNoNzhN?oc=5",
+      "priority_score": 5,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "reason": "canonical_url resolves to opaque redirect host 'news.google.com' (news.google.com/rss/articles/...); the real destination publisher domain cannot be determined from stored metadata alone, and no live fetch is available in this sandbox to resolve it"
+    }
+  }
+}
