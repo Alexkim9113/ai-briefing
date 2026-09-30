@@ -1,0 +1,307 @@
+{
+  "attempted_at": "2026-09-30T15:13:45.645689+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36734663217)",
+  "sources_attempted": 1,
+  "sources_reaching_success": 1,
+  "total_documents_canonicalized": 12,
+  "results": [
+    {
+      "source_name": "US Federal Register API",
+      "source_tier": "TIER_1",
+      "gap_type": "TRANSITION_GAP",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence+data+center+electricity+power+grid&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-09-01&per_page=20&order=oldest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
+      "attempted_at": "2026-09-30T15:13:45.645689+00:00",
+      "fetch_status": "FETCH_OK",
+      "fetch_status_code": 200,
+      "fetch_error": null,
+      "documents_canonicalized": [
+        {
+          "document_id": "fedreg_2026-00121",
+          "content_hash": "dbd8ea2877e96586",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Reissuance and Modification of Nationwide Permits",
+          "abstract_excerpt": "Nationwide Permits (NWPs) authorize activities under Section 404 of the Clean Water Act and Section 10 of the Rivers and Harbors Act of 1899 that have no more than minimal individual and cumulative adverse environmental effects. The NWPs help protect the aquatic environment and the public interest by providing incentives to reduce impacts to jurisdictional waters. In this final action, the U.S. Army Corps of Engineers (Corps) is reissuing 56 existing nationwide permits (NWPs), general conditions",
+          "document_kind": "Rule",
+          "citation": "91 FR 768",
+          "agencies": [
+            "Defense Department",
+            "Engineers Corps"
+          ],
+          "published": "2026-01-08",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/01/08/2026-00121/reissuance-and-modification-of-nationwide-permits",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-00121_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-00677",
+          "content_hash": "f559e5a847952be5",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "New Source Performance Standards Review for Stationary Combustion Turbines and Stationary Gas Turbines",
+          "abstract_excerpt": "The U.S. Environmental Protection Agency (EPA, or Agency) is finalizing amendments to the new source performance standards (NSPS) for stationary combustion turbines and stationary gas turbines pursuant to a review required by the Clean Air Act (CAA). As a result of this review, the EPA is establishing subcategories for new, modified, or reconstructed stationary combustion turbines based on size, rates of utilization, design efficiency, and fuel type. The EPA determined that combustion controls a",
+          "document_kind": "Rule",
+          "citation": "91 FR 1910",
+          "agencies": [
+            "Environmental Protection Agency"
+          ],
+          "published": "2026-01-15",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/01/15/2026-00677/new-source-performance-standards-review-for-stationary-combustion-turbines-and-stationary-gas",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-00677_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-01413",
+          "content_hash": "2ef8d28e8481c3e3",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Air Plan Disapproval; Colorado; Regional Haze Plan for the Second Implementation Period",
+          "abstract_excerpt": "The Environmental Protection Agency (EPA) is disapproving a regional haze state implementation plan (SIP) revision submitted in 2022 by the State of Colorado under the Clean Air Act (CAA or Act) and the EPA's Regional Haze Rule (RHR) for the program's second implementation period. Colorado's 2022 regional haze SIP revision addresses the requirement that states revise their long-term strategies every implementation period to make reasonable progress towards the national goal of preventing any fut",
+          "document_kind": "Rule",
+          "citation": "91 FR 3048",
+          "agencies": [
+            "Environmental Protection Agency"
+          ],
+          "published": "2026-01-26",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/01/26/2026-01413/air-plan-disapproval-colorado-regional-haze-plan-for-the-second-implementation-period",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-01413_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-03638",
+          "content_hash": "c72ec239c7452499",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal",
+          "abstract_excerpt": "The U.S. Environmental Protection Agency (EPA) is finalizing the repeal of specific amendments to the National Emission Standards for Hazardous Air Pollutants (NESHAP) for Coal- and Oil-Fired Electric Utility Steam Generating Units (EGUs), commonly referred to as the Mercury and Air Toxics Standards (MATS), that were promulgated on May 7, 2024. Specifically, the EPA is repealing the revised filterable particulate matter (fPM) emission standard, which serves as a surrogate for non-mercury hazardo",
+          "document_kind": "Rule",
+          "citation": "91 FR 9088",
+          "agencies": [
+            "Environmental Protection Agency"
+          ],
+          "published": "2026-02-24",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/02/24/2026-03638/national-emission-standards-for-hazardous-air-pollutants-coal--and-oil-fired-electric-utility-steam",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-03638_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-04458",
+          "content_hash": "d6c5cde9c768e41b",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Agency Information Collection Proposed Extension",
+          "abstract_excerpt": "EIA invites public comment on the proposed extension of the collection of information for the EIA-860S: State Level Generator Air Permit Inventory Report, as required under the Paperwork Reduction Act of 1995. The original collection was approved by the Office of Management and Budget on February 12, 2026, under the emergency approval provisions of the Paperwork Reduction Act.",
+          "document_kind": "Notice",
+          "citation": "91 FR 11069",
+          "agencies": [
+            "Energy Department",
+            "Energy Information Administration"
+          ],
+          "published": "2026-03-06",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/03/06/2026-04458/agency-information-collection-proposed-extension",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-04458_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-04645",
+          "content_hash": "2439eb5e50275a45",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Ratepayer Protection Pledge",
+          "abstract_excerpt": null,
+          "document_kind": "Presidential Document",
+          "citation": "91 FR 11439",
+          "agencies": [
+            "Executive Office of the President"
+          ],
+          "published": "2026-03-09",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/03/09/2026-04645/ratepayer-protection-pledge",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-04645_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-06048",
+          "content_hash": "fea38a3b4ca9207d",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Risk-Informed, Technology-Inclusive Regulatory Framework for Advanced Reactors",
+          "abstract_excerpt": "The U.S. Nuclear Regulatory Commission (NRC) is amending its regulations by adding a risk-informed, performance-based, and technology-inclusive regulatory framework for commercial nuclear plants in response to the Nuclear Energy Innovation and Modernization Act (NEIMA). The current application and licensing requirements were primarily developed to address license requests concerning light water- cooled reactors and operational requirements for those types of reactors. This final rule responds to",
+          "document_kind": "Rule",
+          "citation": "91 FR 15696",
+          "agencies": [
+            "Nuclear Regulatory Commission"
+          ],
+          "published": "2026-03-30",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06048/risk-informed-technology-inclusive-regulatory-framework-for-advanced-reactors",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-06048_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-09895",
+          "content_hash": "ee2be755c8c7f7c9",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Effluent Limitations Guidelines and Standards for the Steam Electric Power Generating Point Source Category-Unmanaged Combustion Residual Leachate",
+          "abstract_excerpt": "The U.S. Environmental Protection Agency (EPA or Agency) is proposing a Clean Water Act (CWA) regulation to revise the technology- based effluent limitations guidelines and standards (ELGs) promulgated in the 2024 \"Supplemental Effluent Limitations Guidelines and Standards for the Steam Electric Power Generating Point Source Category\" (2024 ELG). This proposed regulation for the steam electric power generating point source category applies to unmanaged combustion residual leachate (CRL) at exist",
+          "document_kind": "Proposed Rule",
+          "citation": "91 FR 28487",
+          "agencies": [
+            "Environmental Protection Agency"
+          ],
+          "published": "2026-05-18",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/05/18/2026-09895/effluent-limitations-guidelines-and-standards-for-the-steam-electric-power-generating-point-source",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-09895_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-11436",
+          "content_hash": "6f13252bb9d90593",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Approval and Promulgation of Air Quality Implementation Plans; Wyoming; Regional Haze Federal Implementation Plan",
+          "abstract_excerpt": "The U.S. Environmental Protection Agency (EPA) is proposing revisions to the Federal Implementation Plan (FIP) addressing regional haze in the State of Wyoming. The EPA is proposing revisions to the FIP's nitrogen oxides (NO<INF>X</INF>) best available retrofit technology (BART) requirements for the PacifiCorp Dave Johnston Power Plant Unit 3. In response to PacifiCorp's letter no longer consenting to closure of Dave Johnston Unit 3, the EPA is proposing to withdraw the NO<INF>X</INF> BART deter",
+          "document_kind": "Proposed Rule",
+          "citation": "91 FR 34589",
+          "agencies": [
+            "Environmental Protection Agency"
+          ],
+          "published": "2026-06-08",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/06/08/2026-11436/approval-and-promulgation-of-air-quality-implementation-plans-wyoming-regional-haze-federal",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-11436_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-14660",
+          "content_hash": "21d27ee26bdbe437",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Agency Information Collection Extension",
+          "abstract_excerpt": "EIA submitted an information collection request for extension as required by the Paperwork Reduction Act of 1995. The information collection requests a three-year extension with changes of its EIA- 860S: State Level Generator Air Permit Inventory Report, OMB Control Number 1905-0215. The voluntary collection will ensure the EIA-860 sampling frame comprehensively covers the power generator population. This request is critically important for enhancing the completeness and accuracy of the EIA-860 ",
+          "document_kind": "Notice",
+          "citation": "91 FR 45801",
+          "agencies": [
+            "Energy Department",
+            "Energy Information Administration"
+          ],
+          "published": "2026-07-21",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14660/agency-information-collection-extension",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-14660_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-16603",
+          "content_hash": "f6aab1b58d3d379a",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Introduction to the Unified Agenda of Federal Regulatory and Deregulatory Actions-2026",
+          "abstract_excerpt": "Publication of the 2026 Unified Agenda of Federal Regulatory and Deregulatory Actions represents a key component of the regulatory planning mechanism prescribed in Executive Order (\"E.O.\") 12866, \"Regulatory Planning and Review,\" (58 FR 51735, as amended) and reaffirmed in E.O. 13563, \"Improving Regulation and Regulatory Review,\" (76 FR 3821) and E.O. 14192, \"Unleashing Prosperity Through Deregulation.\" The Regulatory Flexibility Act requires that agencies publish semiannual regulatory agendas i",
+          "document_kind": "Notice",
+          "citation": "91 FR 52792",
+          "agencies": [
+            "Regulatory Information Service Center"
+          ],
+          "published": "2026-08-14",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/08/14/2026-16603/introduction-to-the-unified-agenda-of-federal-regulatory-and-deregulatory-actions-2026",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-16603_2026-09-30T15:13:45.645689+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-17843",
+          "content_hash": "8eaaaf39b9a36715",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Declaring a National Emergency To Secure the United States Bulk-Power System",
+          "abstract_excerpt": null,
+          "document_kind": "Presidential Document",
+          "citation": "91 FR 55995",
+          "agencies": [
+            "Executive Office of the President"
+          ],
+          "published": "2026-08-31",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "TRANSITION_GAP",
+          "retrieved_at": "2026-09-30T15:13:45.645689+00:00",
+          "provenance_id": "prov_fedreg_2026-17843_2026-09-30T15:13:45.645689+00:00"
+        }
+      ],
+      "overall_status": "SUCCESS",
+      "schema_status": "VALIDATION_OK",
+      "schema_reason": null,
+      "documents_attempted": 12,
+      "documents_parsed_ok": 12,
+      "parse_failures": 0,
+      "target_topic": "AI_ENERGY_INFRA"
+    }
+  ],
+  "gap_type": "TRANSITION_GAP",
+  "target_topic": "AI_ENERGY_INFRA",
+  "query_window": {
+    "start": "2026-01-01",
+    "end": "2026-09-01",
+    "terms": [
+      "artificial intelligence",
+      "data center",
+      "electricity",
+      "power grid"
+    ]
+  }
+}
