@@ -6213,6 +6213,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "db0be1a0cfc1d481:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "db0be1a0cfc1d481",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "db72ace2d407e627:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "db72ace2d407e627",
@@ -6320,6 +6331,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9kdGdJSHFGOTZ6SENadHpTZDhlaTNDNW5NWkFka3hlRTR3Tk5HbWhBcnZTeHA3TjRWd3JhR044TWw3cTlqSTZPZV9ESEdTd2pCV1NxSV8tcUhyS3FkV1E?oc=5",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "dfeca8bdbe271f85:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "dfeca8bdbe271f85",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -6546,6 +6568,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://arxiv.org/abs/2609.30292",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "e45955d26ea76a4b:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "e45955d26ea76a4b",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -7275,39 +7308,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "db0be1a0cfc1d481:c1",
-   "claim_status": "SOURCE_LOCATED",
-   "document_id": "db0be1a0cfc1d481",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "dfeca8bdbe271f85:c1",
-   "claim_status": "SOURCE_LOCATED",
-   "document_id": "dfeca8bdbe271f85",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "e45955d26ea76a4b:c1",
-   "claim_status": "SOURCE_LOCATED",
-   "document_id": "e45955d26ea76a4b",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
