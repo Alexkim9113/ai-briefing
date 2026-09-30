@@ -1593,6 +1593,32 @@
   "title": "S&P 500 Forecast: SPX higher as oil & yields fall, AI stocks rise",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
  },
+ "25e927286cfe88c7": {
+  "abstract_excerpt": null,
+  "agencies": [],
+  "authors": [
+   "R. Perlack"
+  ],
+  "canonical_url": "https://doi.org/10.2172/7260748",
+  "category": "research",
+  "citation": null,
+  "content_hash": "e90fb174554caf04",
+  "country": null,
+  "created_at": "2026-09-30T15:53:00.747059+00:00",
+  "document_id": "25e927286cfe88c7",
+  "document_type": "RESEARCH",
+  "doi": "10.2172/7260748",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": null,
+  "journal_or_venue": null,
+  "jurisdiction": null,
+  "published": "1990-02-22",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_crossref",
+  "title": "(Rural electrification: Grid extension, decentralization, and financing)",
+  "updated_at": "2026-09-30T15:53:00.747059+00:00"
+ },
  "2645ed6e1a470408": {
   "canonical_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMVYtY1ptTXpnX0sxX2JuLWpibmhQcGtNSHdJRWFxUWVvSnl4Sk9YWDg5dmJHd2J6djMxclA3MzNFTENlNU0waFI2Wi1ndXBRaklnRkNJV1VEd3pvM291bEJuVUphTVA0VGFXa1NHOHJuUkg5RlRJSWY5S1FfSDVUMElRVWJjV3I3YVBiOG85TXNVaFRYNVFzd0NSaWVGODZu?oc=5",
   "category": "news_global",
@@ -1780,6 +1806,32 @@
   "source_id": "src_ewtn_news",
   "title": "Church officials urge ‘care for workers’ amid AI race",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
+ },
+ "2ca1dd1b0b2bf398": {
+  "abstract_excerpt": null,
+  "agencies": [],
+  "authors": [
+   "Ltd. NRECA International"
+  ],
+  "canonical_url": "https://doi.org/10.1596/20326",
+  "category": "research",
+  "citation": null,
+  "content_hash": "f9251acb4e1dc1f7",
+  "country": null,
+  "created_at": "2026-09-30T15:53:00.747174+00:00",
+  "document_id": "2ca1dd1b0b2bf398",
+  "document_type": "RESEARCH",
+  "doi": "10.1596/20326",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": null,
+  "journal_or_venue": null,
+  "jurisdiction": null,
+  "published": "2000-02-01",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_crossref",
+  "title": "Reducing the Cost of Grid Extension for Rural Electrification",
+  "updated_at": "2026-09-30T15:53:00.747174+00:00"
  },
  "2d116b4142889cd6": {
   "_identifiers": [],
@@ -4434,6 +4486,33 @@
   "title": "과기정통부, 서울대에 ‘AI반도체 혁신연구소’ ...NPU 연구 필수화",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
  },
+ "739cdbb231435820": {
+  "abstract_excerpt": null,
+  "agencies": [],
+  "authors": [
+   "Debajit Palit",
+   "Akanksha Chaurey"
+  ],
+  "canonical_url": "https://doi.org/10.1007/978-1-4471-4673-5_4",
+  "category": "research",
+  "citation": null,
+  "content_hash": "0283a08d04bbab79",
+  "country": null,
+  "created_at": "2026-09-30T15:53:00.747118+00:00",
+  "document_id": "739cdbb231435820",
+  "document_type": "RESEARCH",
+  "doi": "10.1007/978-1-4471-4673-5_4",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": null,
+  "journal_or_venue": "Green Energy and Technology",
+  "jurisdiction": null,
+  "published": "2012-11-07",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_crossref",
+  "title": "Off-Grid Rural Electrification Experiences from South Asia",
+  "updated_at": "2026-09-30T15:53:00.747118+00:00"
+ },
  "73bfd23ebd577794": {
   "_identifiers": [],
   "canonical_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9yVXp2enF5V002RC12YmlBXzR1Q1ZKMERrUm1ITVdtZUo4T0FESmY5NkFrZWdwLWItRGx2TVlNOHljR3FNdkRJOHZBNlBBXy1nLW1MZndmd0NBWFVtQVU3ZGx4SWs3ZUI1c3c?oc=5",
@@ -6681,6 +6760,32 @@
   "source_id": "src_산학뉴스",
   "title": "AI가 만든 연구결과, 책임은 연구자에게…국가 R&D 윤리 가이드 확정",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
+ },
+ "ba5556e7140f0be2": {
+  "abstract_excerpt": "Abstract\n                  \n                    <jats:bold>T</jats:bold>\n                    his paper presents dynamic performance analysis of a PV-biogas-biodiesel-grid based hybrid power system designed for rural electrification. The linear small signal model of the system using power balance equations is developed and small step change in solar incident power and active and reactive load demand of the system are applied. The objective of this work is to control the system voltage (magnitude ",
+  "agencies": [],
+  "authors": [
+   "D. K. Yadav"
+  ],
+  "canonical_url": "https://doi.org/10.1515/ijeeps-2018-0026",
+  "category": "research",
+  "citation": null,
+  "content_hash": "3aa263d925d92aed",
+  "country": null,
+  "created_at": "2026-09-30T15:53:00.747150+00:00",
+  "document_id": "ba5556e7140f0be2",
+  "document_type": "RESEARCH",
+  "doi": "10.1515/ijeeps-2018-0026",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": null,
+  "journal_or_venue": "International Journal of Emerging Electric Power Systems",
+  "jurisdiction": null,
+  "published": "2018-08-17",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_crossref",
+  "title": "A Unique Concept of Limited Grid Capacity and Voltage-Frequency Control of an RES Based Rural Electrification System",
+  "updated_at": "2026-09-30T15:53:00.747150+00:00"
  },
  "bb3a99b70d953517": {
   "_identifiers": [],

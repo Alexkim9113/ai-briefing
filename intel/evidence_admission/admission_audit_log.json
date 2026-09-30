@@ -2353,5 +2353,37 @@
   "reason": "document_id and content_hash already present in documents.json -- no change",
   "source": "src_federal_register",
   "timestamp": "2026-09-30T15:52:35.425926+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.2172_7260748",
+  "decision": "ADMITTED",
+  "document_id": "25e927286cfe88c7",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:53:00.746986+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1007_978-1-4471-4673-5_4",
+  "decision": "ADMITTED",
+  "document_id": "739cdbb231435820",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:53:00.746986+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1515_ijeeps-2018-0026",
+  "decision": "ADMITTED",
+  "document_id": "ba5556e7140f0be2",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:53:00.746986+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1596_20326",
+  "decision": "ADMITTED",
+  "document_id": "2ca1dd1b0b2bf398",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:53:00.746986+00:00"
  }
 ]

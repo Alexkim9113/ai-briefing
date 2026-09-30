@@ -113,6 +113,21 @@
   "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
+ "25e927286cfe88c7": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T15:53:00.746986+00:00",
+  "document_id": "25e927286cfe88c7",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T15:52:59.035710+00:00",
+  "source_organization": null,
+  "source_tier": "TIER_1",
+  "source_type": "RESEARCH_REPOSITORY",
+  "source_url": "https://doi.org/10.2172/7260748",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "276454588940c9c0": {
   "admission_status": "ADMITTED",
   "admitted_at": "2026-09-30T13:13:45.768929+00:00",
@@ -128,6 +143,21 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2025/09/05/2025-17086/united-states-of-america-et-al-v-realpage-inc-et-al-proposed-final-judgment-and-competitive-impact",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "2ca1dd1b0b2bf398": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T15:53:00.746986+00:00",
+  "document_id": "2ca1dd1b0b2bf398",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T15:52:59.035710+00:00",
+  "source_organization": null,
+  "source_tier": "TIER_1",
+  "source_type": "RESEARCH_REPOSITORY",
+  "source_url": "https://doi.org/10.1596/20326",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
@@ -234,6 +264,21 @@
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
+ "739cdbb231435820": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T15:53:00.746986+00:00",
+  "document_id": "739cdbb231435820",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T15:52:59.035710+00:00",
+  "source_organization": null,
+  "source_tier": "TIER_1",
+  "source_type": "RESEARCH_REPOSITORY",
+  "source_url": "https://doi.org/10.1007/978-1-4471-4673-5_4",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "760ebae26d64c740": {
   "admission_status": "ADMITTED",
   "admitted_at": "2026-09-30T13:13:45.768929+00:00",
@@ -322,6 +367,21 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2025/09/16/2025-17893/additions-and-revisions-to-the-entity-list",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "ba5556e7140f0be2": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T15:53:00.746986+00:00",
+  "document_id": "ba5556e7140f0be2",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T15:52:59.035710+00:00",
+  "source_organization": null,
+  "source_tier": "TIER_1",
+  "source_type": "RESEARCH_REPOSITORY",
+  "source_url": "https://doi.org/10.1515/ijeeps-2018-0026",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
