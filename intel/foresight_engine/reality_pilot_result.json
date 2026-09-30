@@ -1,14 +1,15 @@
 {
-  "attempted_at": "2026-09-30T04:56:28.348824+00:00",
-  "sandbox_network_status": "BLOCKED - confirmed by direct HTTPS attempt in this session (all sources returned proxy tunnel 403 before reaching host)",
+  "attempted_at": "2026-09-30T05:29:43.383228+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36673422139)",
   "sources_attempted": 2,
   "sources_succeeded": 2,
+  "observations_created": 1,
   "results": [
     {
       "source_id": "worldbank_gdp_kr",
       "organization": "World Bank",
       "url": "https://api.worldbank.org/v2/country/kr/indicator/NY.GDP.MKTP.CD?format=json&per_page=5",
-      "attempted_at": "2026-09-30T04:56:28.348824+00:00",
+      "attempted_at": "2026-09-30T05:29:43.383228+00:00",
       "indicator": {
         "indicator_id": "ind_worldbank_kr_gdp_current_usd",
         "canonical_name": "KR_GDP_CURRENT_USD",
@@ -39,7 +40,7 @@
         "price_basis": "UNKNOWN",
         "revision_status": "UNKNOWN",
         "update_frequency": null,
-        "retrieved_at": "2026-09-30T04:56:28.348824+00:00",
+        "retrieved_at": "2026-09-30T05:29:43.383228+00:00",
         "verification_status": "UNKNOWN",
         "notes": null,
         "value_type": "OTHER",
@@ -52,13 +53,33 @@
         "resolved_url": "https://api.worldbank.org/v2/country/kr/indicator/NY.GDP.MKTP.CD?format=json&per_page=5"
       },
       "fetch_succeeded": true,
-      "observation_created": "PARSING_NOT_YET_EXERCISED_LIVE"
+      "parse_reason": "OK",
+      "observation": {
+        "observation_id": "obs_ind_worldbank_kr_gdp_current_usd_2025",
+        "indicator_id": "ind_worldbank_kr_gdp_current_usd",
+        "period": "2025",
+        "value": 1872374961553.15,
+        "unit": "USD",
+        "status": "OFFICIAL_REPORTED",
+        "revision_status": "UNKNOWN",
+        "source_release_date": "2026-07-13",
+        "retrieved_at": "2026-09-30T05:29:43.383228+00:00",
+        "provenance_id": "prov_worldbank_gdp_kr_2026-09-30T05:29:43.383228+00:00",
+        "lower_bound": null,
+        "upper_bound": null,
+        "standard_error": null,
+        "sample_size": null,
+        "formula": null,
+        "input_observation_ids": null,
+        "calculation_version": null
+      },
+      "observation_created": "obs_ind_worldbank_kr_gdp_current_usd_2025"
     },
     {
       "source_id": "ecos_bok_sample",
       "organization": "Bank of Korea (ECOS)",
       "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/5/722Y001",
-      "attempted_at": "2026-09-30T04:56:28.348824+00:00",
+      "attempted_at": "2026-09-30T05:29:43.383228+00:00",
       "indicator": {
         "indicator_id": "ind_ecos_kr_base_rate",
         "canonical_name": "KR_BOK_BASE_RATE",
@@ -89,7 +110,7 @@
         "price_basis": "UNKNOWN",
         "revision_status": "UNKNOWN",
         "update_frequency": null,
-        "retrieved_at": "2026-09-30T04:56:28.348824+00:00",
+        "retrieved_at": "2026-09-30T05:29:43.383228+00:00",
         "verification_status": "UNKNOWN",
         "notes": null,
         "value_type": "OTHER",
@@ -102,7 +123,9 @@
         "resolved_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/5/722Y001"
       },
       "fetch_succeeded": true,
-      "observation_created": "PARSING_NOT_YET_EXERCISED_LIVE"
+      "parse_reason": "SCHEMA_CHANGED",
+      "temporal_precision_inferred": "UNKNOWN",
+      "observation_created": null
     }
   ],
   "next_real_verification": "GitHub Actions cron run of reality_shadow job in .github/workflows/daily.yml (real network, no sandbox proxy)"
