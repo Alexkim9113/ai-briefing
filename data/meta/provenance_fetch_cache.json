@@ -1268,5 +1268,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-09-30T15:16:47.770986+00:00"
+ },
+ "2500e5610be5b7cbd6e2cf3209bbccde55b5a1a1afb5cefe31f4de19816b436f": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226749",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:24:18.877785+00:00"
+ },
+ "ecc7364dcc630638c09002198bfd54a615132a7b240348c242bca152e995b378": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226753",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:24:21.175485+00:00"
+ },
+ "149db94aca1cd02d281205fbbd1348d256d61ca87900a0bf833b41bcbfa512e6": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226758",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:24:22.689151+00:00"
+ },
+ "56632d685d773ed06b10c4bda3425d4a679f7ff16d63ad4f4df550d4ccd70567": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226755",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:24:24.290856+00:00"
+ },
+ "7b91bf8ad3e0fe8f6a6b0fd83a2aa420c44ea5194b210e0b928b65cec942c973": {
+  "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90blJWOGxZbTlqNC1wTUFFZjRFanhGOERfNjVieFQtVXVVd0hmRHdSRGFGRzRUcDY3eVV4YjItUlN0VXJWbTU2Qks3aXljYVlqYi1ueFd3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:24:24.624063+00:00"
+ },
+ "3a068fbcd076020d7eea4a36d16bd888907bf3e7abbff081ecb845954e7606f6": {
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1US0hZc0o4WnRneXBILUFzYXNyLVJsbDk0MzBLTEJLaWVJMUdXSkl4Ml91OWlsY2tiWkRibW5zWEFmSnhMdjljZDk3WlhXelcza21kS25XVEdEcm5xR1huYkoyREdiWEtDbjZZ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:24:24.836758+00:00"
+ },
+ "afb663304c68452de0e31d98ec09c1211af7f4ba00442954e754f6565cb0928d": {
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE84SEYyMHZTejJvNkxRdnZZTkF0MU9GeV9zOGhmamhfWTVQcEZMbWs5RTRBekRZR2licVBwa1dYRElWeHVwRzU0NGdFNmpuTWl6aDEwcGpDT3lING9tS2JBZkdjOFZjTUNzQ0x6dlZFc1MzY19jNVE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:24:25.105609+00:00"
+ },
+ "6b62fb3914f4771c7f47167397f5d3ce28b961769ad2c8a7603e0af410cd9fb8": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215803",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:24:26.912599+00:00"
+ },
+ "4a8f50e51ea3d683390a2e6df4251fd55de16e461cf629213863352500bb21f1": {
+  "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9BTlloVkNSR0NfYjlUR2NHalhBdHNoUjQ2a3BLMjVWeGhWNXplOGoyZENldkhOcm9aZE1zUWpGWDBsMlJRcVVJRVRKSFlLRmlwWGJtV09DdWJJS0tYeV9ldHRRdmw5ZVp6dW5LRU83MTNqZ0U2dFJVSE1oeTRmZw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:24:27.147742+00:00"
+ },
+ "5fc9d09abd5347fed4c9ef271ac96145ad33b27487cbb6016c9c3be6bbfffc43": {
+  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1hY1c5ZlhQdzgxbFVsT2VnVVk5RlBIaTBmSlJjR2k3S0JYSzl5RThnOGZQZzlNM3docTFwQm53aFR1N2EwM3BkN2ZocVBTYy1RSk43NDMwLXlBV0ZJMVMzb3pXRkR6X0tkTDlvdi1n0gFzQVVfeXFMT3dnZVNsaXN5MG5DcmtaYWFDVmtmR042N3JoVmtJSjdhR05PWWU1ZUNJNTlsMUFka2FELUNuZnZydkRKTng4Z0Zoa1E3aU9kSUV4RWc3bWJBMENINUY0UkY2ZXpicWUyUFpuMUFXZ01QNlJlWQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:24:27.350734+00:00"
  }
 }
