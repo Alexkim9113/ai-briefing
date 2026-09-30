@@ -22,5 +22,53 @@
     "EVIDENCE_FOUND": false,
     "REJECTION_REASON": "N/A -- no live data acquisition was attempted (no network access, no API key in this environment), so there is nothing to accept or reject; also note no data-center-specific federal statistical series was identified as publicly queryable via a stable API during this slice, only aggregate electricity-demand proxies.",
     "REMAINING_GAP": "AI_ENERGY_INFRA still has zero statistical-source documents and its STATISTICAL_CONTEXT evidence-chain node remains a gap. Real closure requires (a) a live, authenticated EIA API v2 query the supervising session runs with a real api_key, and (b) admitting a canonicalized statistical-source record through admission_gate.py (which currently has no TRUSTED_SOURCES row for a statistical/indicator source type -- adding one is also required and was not done in this slice, to avoid overreaching scope)."
+  },
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_HISTORY_001",
+    "GAP_TYPE": "HISTORY_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "deep_pilot.py's HISTORICAL_CONTEXT node for AI_ENERGY_INFRA is a gap; without a historical analogy the present AI-energy-demand narrative cannot be checked against precedent.",
+    "TARGET_SOURCE_TYPE": "ACADEMIC/HISTORICAL REFERENCE (general domain knowledge) + real corpus search",
+    "ACQUISITION_ATTEMPT": "Wrote intel/historical_evidence/energy_infra_analogies.py: 6 general-historical-knowledge analogies (electrification, telephone, broadcast, mainframe, dot-com buildout, industrial automation), each in HISTORICAL CONDITION->MECHANISM->OBSERVED CONSEQUENCE->DIFFERENCE FROM PRESENT->BOUNDARY CONDITION->PRESENT RELEVANCE form, explicitly tagged GENERAL_HISTORICAL_KNOWLEDGE (not corpus-backed). Separately ran a real keyword+relevance-guarded search of the 597-document corpus for any document making a genuine historical comparison.",
+    "RESULT": "GENERAL_HISTORICAL_KNOWLEDGE_WRITTEN; CORPUS_SEARCH_NOT_FOUND",
+    "EVIDENCE_FOUND": false,
+    "REJECTION_REASON": "One near-miss (db0be1a0cfc1d481, an NTRL digitization RFI) matched the bare word 'historically' but was correctly rejected as topically irrelevant (no AI/energy content).",
+    "REMAINING_GAP": "HISTORICAL_CONTEXT node for AI_ENERGY_INFRA still has no real corpus-backed document; only general-knowledge analogies exist, kept explicitly separate from corpus evidence."
+  },
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_COUNTEREVIDENCE_001",
+    "GAP_TYPE": "COUNTEREVIDENCE_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "deep_pilot.py's COUNTEREVIDENCE node for AI_ENERGY_INFRA is a gap; without any evidence against the growth narrative (efficiency gains, demand-shifting, renewable procurement, or forecast overestimation), the evidence chain is one-sided.",
+    "TARGET_SOURCE_TYPE": "NEWS/TRADE PRESS/CORPORATE (within the existing 597-document corpus)",
+    "ACQUISITION_ATTEMPT": "Wrote intel/counterevidence/energy_infra_counterevidence.py: real keyword search of the corpus across 4 directions (efficiency improvements, workload shifting, renewable procurement, demand overestimation), reusing existing matching machinery, verified correct via fixture tests with planted matches.",
+    "RESULT": "CORPUS_SEARCH_NOT_FOUND (0/4 directions)",
+    "EVIDENCE_FOUND": false,
+    "REJECTION_REASON": "One near-miss on EFFICIENCY_IMPROVEMENTS (547ece542cfa8787, 'How physical AI improves energy efficiency') was rejected as being about physical/robotic AI generally, not data-center/energy-infra efficiency specifically.",
+    "REMAINING_GAP": "COUNTEREVIDENCE node for AI_ENERGY_INFRA remains fully unfilled across all 4 directions; this corpus (61% Google News-derived) has no energy-operations reporting at this specificity."
+  },
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_GEOGRAPHIC_KOREA_001",
+    "GAP_TYPE": "GEOGRAPHIC_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "source_diversity/audit.py found 95.3% of the corpus has UNKNOWN geography; M.5E-3 requires at least 2 real geographic contexts and an explicit Korea-specific strategy given Korea is the operator's home market and a named priority.",
+    "TARGET_SOURCE_TYPE": "GOVERNMENT/STATISTICAL (KOSIS, BOK ECOS, MOTIE, Korean courts, National Assembly, DART) + corpus-internal re-classification",
+    "ACQUISITION_ATTEMPT": "Wrote intel/geographic_evidence/geography_inference.py (TLD + source_id-registry re-classification of the existing corpus, no new documents) and intel/geographic_evidence/korea_source_strategy.py (real Korea source registry with confidence-rated endpoints) plus a real corpus search for any Korean primary government/statistical source already admitted.",
+    "RESULT": "GEOGRAPHY_RECLASSIFICATION_PARTIAL_SUCCESS (205/597 newly classified, 2 real geographic contexts established: US and KR); KOREA_PRIMARY_SOURCE_NOT_FOUND",
+    "EVIDENCE_FOUND": true,
+    "REJECTION_REASON": "N/A for the reclassification (real signals, not a rejection). For the Korea primary-source search: no Korean government/statistical source_id exists in admission_gate.py's TRUSTED_SOURCES today, and no live network is available in this sandbox to acquire one.",
+    "REMAINING_GAP": "KOREA_EVIDENCE_GAP: zero primary Korean government/statistical documents in the corpus. 11 real Korean NEWS-outlet documents on AI_ENERGY_INFRA's subject matter exist but are secondary journalism, not primary sources, and do not close this gap. Corpus remains 61% UNKNOWN geography even after reclassification."
+  },
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_ALTERNATIVE_EXPLANATIONS_001",
+    "GAP_TYPE": "RESEARCH_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "Attributing rising electricity demand to AI alone without checking alternative drivers would overstate the topic's causal claims; M.5E-3 requires preserving alternative explanations (manufacturing, EVs, climate, population growth, cloud growth, industrial policy).",
+    "TARGET_SOURCE_TYPE": "GENERAL DOMAIN KNOWLEDGE + real corpus search",
+    "ACQUISITION_ATTEMPT": "Wrote intel/alternative_explanations/energy_demand_alternatives.py listing 6 real, well-known alternative drivers, each checked against the real corpus via keyword search.",
+    "RESULT": "CORPUS_SEARCH_NOT_FOUND (0/6 alternatives found in corpus)",
+    "EVIDENCE_FOUND": false,
+    "REJECTION_REASON": "N/A -- no corpus document currently discusses any of the 6 alternative drivers in a way that matched search criteria; all 6 are recorded as GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE rather than given a graded effect-strength label, since a title/abstract-only keyword hit cannot verify claim strength.",
+    "REMAINING_GAP": "None of the 6 alternative explanations has corpus backing yet; the topic's growth narrative in this corpus is still effectively AI-attributed by omission of alternatives, not by demonstrated exclusion of them."
   }
 ]

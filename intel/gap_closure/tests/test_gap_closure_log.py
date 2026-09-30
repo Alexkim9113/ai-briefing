@@ -28,13 +28,19 @@ def test_every_record_has_exact_required_schema():
         assert set(r.keys()) == set(REQUIRED_FIELDS), r.get("GAP_ID")
 
 
-def test_evidence_found_is_boolean_and_honestly_false():
-    # Neither gap attempt in this slice actually acquired live evidence, so both must report
-    # EVIDENCE_FOUND == False -- a True here without real evidence would be fabrication.
+def test_evidence_found_is_boolean_and_matches_result_honesty():
+    # EVIDENCE_FOUND must be a real boolean. Most attempts in this log found nothing (network
+    # was never live, or the corpus search came back empty) and must report False -- a True
+    # without real evidence would be fabrication. The one exception is the geographic
+    # reclassification record, which performed a real, verifiable re-classification of existing
+    # corpus documents (no live acquisition needed) and legitimately found real evidence.
     records = _load()
     for r in records:
         assert isinstance(r["EVIDENCE_FOUND"], bool)
-        assert r["EVIDENCE_FOUND"] is False
+        if r["GAP_ID"] == "GAP_AI_ENERGY_INFRA_GEOGRAPHIC_KOREA_001":
+            assert r["EVIDENCE_FOUND"] is True
+        else:
+            assert r["EVIDENCE_FOUND"] is False
 
 
 def test_no_record_claims_gap_closed():
