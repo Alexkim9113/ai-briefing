@@ -1688,5 +1688,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-09-30T16:03:46.098768+00:00"
+ },
+ "cbbcab5557be883cb04ecea6d29de59409d5f000c4e133dd2a41c9bab41b4ef1": {
+  "url": "https://arstechnica.com/google/2026/09/google-is-paying-100-websites-for-contributions-to-ai-overviews-but-the-amounts-are-tiny/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:16:02.990334+00:00"
+ },
+ "327db03645a02377c7b3575cad6aec58c38e11a653da0226b0886d3d9f35c337": {
+  "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ENm1zbXI1ZGlMVWdmWEZiQTJwM2piT0NuWjJoYkpDZlVIOFdfNGJSUEFsT1h2ZEJIU2gwSUJDOTNlMHdxcjJVUGVWNHhabEF1cktFV1FucHQ5blhjTThtSGh3dDJBVWhP?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:03.385901+00:00"
+ },
+ "73bfb73be41a76b772a3ef766fc3d8e6b04c0efd66c257aabc2a46a05be82b18": {
+  "url": "https://techcrunch.com/2026/09/30/destro-ais-secret-sauce-is-getting-robots-and-humans-on-the-same-page/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:16:03.488045+00:00"
+ },
+ "7621bcb830cc51e9bccaa5054219829eb3bfd6314e7ab66e2420a0dfe0a0965a": {
+  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQQ2VOaEhjOWFnMWxfVXNtdnJMR0JXYl9KS0RDRkpneWdQVWkxTlFSSUc5YkQxcnpQLUw3OElDUk1FM3hIc1ZrWEdnQUsybGk4QW9nc2pmcktXSDZEQUMyN1ZBWmRHbnhKNlJCZmMxdVVKVlZmbFhwTTI1VVNTY3lVUnUyQ3pGalVBMmZTcURmT3BpcEV1MlFzT1BIWGVSbWRfUWVIODNBalFNbzF0OG52bHpXWXNhYmlKTmJNQ3UzTmlYZFR2c21oeWV6a2ZjaFlpM2Zna0JySGg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:03.853974+00:00"
+ },
+ "d9ba22beb754ab73979893e9d646402c5b4c2ae650656e0a60c502c732f32a2c": {
+  "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWTktWWNhMml0OTFuamVSTVg4eFBXR2t6bDViTGhpMVNudURhOXBYcnJfZWU5R2U5MW9iU2pzZER6UG82SUpMUEtMUF8zX0tYQWFlN3ZPMktlNXM1MHNoVXd4RWtDd0hMY1RSVjVYbHJqY0Vpd3ROampyY3Q3MHI3WTd3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:04.213269+00:00"
+ },
+ "dfceb30a19bfe15dc07995266ccb74df048e9a45f198d549173fb96692c177a4": {
+  "url": "https://www.fnnews.com/news/202609301412179447",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:16:04.742488+00:00"
+ },
+ "2c3a6137c5aa649afbb91ce2ac593004cf69d25bf54e188039570495781d4471": {
+  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jc2VoWHg5dGcxOTVUZDZjMkpvWVp1Nm5sNWdMRmFEOUd5aElTbDl5OGZia3hFS2pMX3kyRDJRZG1HZEt3cGxjNHJNUHRLeEx0QVdUMXFFbWV6QnNYQmI2QXBjR1YwLWlsVWx1bzFB?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:05.043599+00:00"
+ },
+ "4edab80bfc8c9fdd26856b77310344d3b22e987b14c9ed1b104b7be17a60cb94": {
+  "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMDRXOFlaZW9XNkVncTBaYnl2Z0x1NU1JSGUwMnNRUXdheE9ZMUNwZEFmNGJmR2hHaThWWU5uVngycDJMZjJfZ25wSjFFR2JJUm1wRG04NFU0MjhtYWd4MVZaWTNrS0ZaX3FqNzV5U3IwaUJ1b1VLNmtMTDYtd0hBUEQtTXhwVm5TRXFfekpNemd5MVVGWjhNS0g2ZkxIOTNxZXUydUs0S0lQV3J2MDhiOUJUQk5wd0dLUjdfMWpzRXhDRnNpOXJZQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:05.348339+00:00"
+ },
+ "5d4bb28cab9c03b94d7c64ccec466d9e6a797f6b647156a1afa2314022936d03": {
+  "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1wM0JiUEhkMHBSZ0dxRkp4bWZ0UFp5NlpEaHhKTmNfRW1QN2xpTVVUbl84LXJSeFdVemNmNDI2ZW5hWTgzUkJBZV80ZFBQNnlHT2RRZUF1SjAwelZLS2loWENMNXZESDZnb053RUg5clctaEdLSGs2RtIBfkFVX3lxTFByNFVVbWpHVm9hZkhwU2p3UWUyYUZTRV9GNGN0dTFSREhmMXpVbUFFVkZselJuX2dBanBUZ0hBaEVjclNhX2hmOEJxaUlSQUhoSFk1YWlpRXZhd0RycVhnNHR4MDdpaHlVbm1mQnlnOFhRN2ZWelkxamJaYVRNQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:05.677955+00:00"
+ },
+ "937cfb580dbda9e158edf83ba5da4e0ca1e0b03303b3288497723fa0ee934675": {
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdFdFMnJ4SUVoM2dyUHllZjQ2UC1SWC1Qd3RYODJ2OWtVZ3pZaGMyRDNaQW5ZenduQWRNVzdRRXM0VnRNWGlCWklja0MxX3YyLUFZUHp2LVpJMzBvV192UHhIaWdhTDRNX3AtMVZXUzJSRlhGYWF0SzRVY2VhUGprUGozVTZUYnJEMDIzc3dVUWgxQ04tMlUxeURSMA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:16:05.983428+00:00"
  }
 }
