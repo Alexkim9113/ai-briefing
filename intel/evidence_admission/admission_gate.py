@@ -76,6 +76,26 @@ TRUSTED_SOURCES = {
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
+# PHASE M.5D fix -- real Crossref responses were observed (2026-09-30 GitHub Actions runs) to
+# carry syntactically-valid but implausible "published" dates (e.g. 2121-04-30, 2114-12-10) --
+# real dirty publisher metadata on api.crossref.org, not a parsing bug. A regex match alone let
+# 5 such documents through into documents.json. MIN_PLAUSIBLE_YEAR stays low enough to admit
+# genuine historical documents (per the gap-driven historical-acquisition mandate); the upper
+# bound rejects only dates further in the future than a pre-print embargo could plausibly reach.
+MIN_PLAUSIBLE_YEAR = 1500
+MAX_FUTURE_YEAR_SLACK = 1
+
+
+def _plausible_publication_date(value):
+    if not value or not _DATE_RE.match(str(value)):
+        return False
+    try:
+        year = int(str(value)[:4])
+    except ValueError:
+        return False
+    current_year = datetime.now(timezone.utc).year
+    return MIN_PLAUSIBLE_YEAR <= year <= current_year + MAX_FUTURE_YEAR_SLACK
+
 
 def norm_link(link):
     """Byte-for-byte copy of briefing.py's norm_link() -- see module docstring."""
@@ -120,7 +140,7 @@ def validate_candidate(doc):
     checks["CANONICAL_URL_VALID"] = _valid_url(
         doc.get("canonical_url"), trusted["url_host_suffix"] if trusted else None
     )
-    checks["PUBLICATION_DATE_VALID"] = bool(doc.get("published")) and bool(_DATE_RE.match(str(doc.get("published"))))
+    checks["PUBLICATION_DATE_VALID"] = _plausible_publication_date(doc.get("published"))
     checks["PROVENANCE_PRESENT"] = bool(doc.get("provenance_id")) and bool(doc.get("retrieved_at"))
     checks["IDENTITY_RESOLVED"] = bool((doc.get("canonical_url") or doc.get("title")))
     checks["COPYRIGHT_POLICY_RESOLVED"] = (

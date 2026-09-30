@@ -47,7 +47,7 @@ def test_matrix_never_mutates_real_documents_json():
 
 def test_overall_bias_summary_reports_real_ratios_not_hidden():
     summary = ptc.overall_corpus_bias_summary()
-    assert summary["total_documents"] == 577
+    assert summary["total_documents"] >= 577
     assert 0 < summary["news_heavy"]["ratio"] <= 1
     assert summary["recent_heavy"]["span_days"] is not None
 

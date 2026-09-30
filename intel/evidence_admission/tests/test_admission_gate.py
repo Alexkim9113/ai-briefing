@@ -117,6 +117,21 @@ def test_entry_level_fetch_failure_never_admitted():
     assert result["admission_status"] == "REJECTED_INVALID_SOURCE", result
 
 
+def test_implausible_future_published_date_rejected():
+    # Real Crossref responses (2026-09-30 GitHub Actions run) carried syntactically-valid
+    # but implausible dates like 2121-04-30 -- dirty publisher metadata on the real API,
+    # not a parsing bug. A regex-only check let these through; this proves the fix holds.
+    doc = _valid_candidate(published="2121-04-30")
+    result = ag.decide_admission(doc, {})
+    assert result["admission_status"] == "REJECTED_INVALID_SCHEMA", result
+
+
+def test_genuinely_old_historical_published_date_still_accepted():
+    doc = _valid_candidate(published="1948-12-10")
+    result = ag.decide_admission(doc, {})
+    assert result["admission_status"] == "ELIGIBLE_FOR_ADMISSION", result
+
+
 def test_document_identity_matches_existing_scheme():
     link = "https://www.federalregister.gov/documents/2026/09/12/2026-19432/request-for-comments"
     expected = ag.canonical_document_id(link, "some title")

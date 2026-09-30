@@ -1,32 +1,46 @@
 {
  "0b57067446995074": {
-  "admission_status": "ADMITTED",
+  "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
   "document_id": "0b57067446995074",
   "fetch_status": "FETCH_OK",
-  "history": [],
+  "history": [
+   {
+    "at": "2026-09-30T12:48:12.166476+00:00",
+    "from_status": "ADMITTED",
+    "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+    "to_status": "REMOVED_INVALID_PUBLICATION_DATE"
+   }
+  ],
   "parse_status": "PARSE_OK",
   "retrieved_at": "2026-09-30T12:35:31.555378+00:00",
   "source_organization": null,
   "source_tier": "TIER_1",
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.3384/ecp1392a41",
-  "update_kind": "NEW_DOCUMENT",
+  "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
  "168f0b33ecd2b448": {
-  "admission_status": "ADMITTED",
+  "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
   "document_id": "168f0b33ecd2b448",
   "fetch_status": "FETCH_OK",
-  "history": [],
+  "history": [
+   {
+    "at": "2026-09-30T12:48:12.166476+00:00",
+    "from_status": "ADMITTED",
+    "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+    "to_status": "REMOVED_INVALID_PUBLICATION_DATE"
+   }
+  ],
   "parse_status": "PARSE_OK",
   "retrieved_at": "2026-09-30T12:35:31.555378+00:00",
   "source_organization": null,
   "source_tier": "TIER_1",
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.47363/jeast/2021/vid/1006",
-  "update_kind": "NEW_DOCUMENT",
+  "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
  "63433bc3b020cb2f": {
@@ -47,33 +61,47 @@
   "validation_status": "VALIDATION_OK"
  },
  "927a2870ad2f63bf": {
-  "admission_status": "ADMITTED",
+  "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
   "document_id": "927a2870ad2f63bf",
   "fetch_status": "FETCH_OK",
-  "history": [],
+  "history": [
+   {
+    "at": "2026-09-30T12:48:12.166476+00:00",
+    "from_status": "ADMITTED",
+    "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+    "to_status": "REMOVED_INVALID_PUBLICATION_DATE"
+   }
+  ],
   "parse_status": "PARSE_OK",
   "retrieved_at": "2026-09-30T12:35:31.555378+00:00",
   "source_organization": null,
   "source_tier": "TIER_1",
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.15556/ijiim.01.02.003",
-  "update_kind": "NEW_DOCUMENT",
+  "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
  "c6d77cae9d29896d": {
-  "admission_status": "ADMITTED",
+  "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
   "document_id": "c6d77cae9d29896d",
   "fetch_status": "FETCH_OK",
-  "history": [],
+  "history": [
+   {
+    "at": "2026-09-30T12:48:12.166476+00:00",
+    "from_status": "ADMITTED",
+    "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+    "to_status": "REMOVED_INVALID_PUBLICATION_DATE"
+   }
+  ],
   "parse_status": "PARSE_OK",
   "retrieved_at": "2026-09-30T12:35:31.555378+00:00",
   "source_organization": null,
   "source_tier": "TIER_1",
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.5304/jafscd.2013.041.001",
-  "update_kind": "NEW_DOCUMENT",
+  "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
  "d6b794adf7b93b53": {
@@ -182,18 +210,25 @@
   "validation_status": "VALIDATION_OK"
  },
  "f39654f26f4f26a0": {
-  "admission_status": "ADMITTED",
+  "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
   "document_id": "f39654f26f4f26a0",
   "fetch_status": "FETCH_OK",
-  "history": [],
+  "history": [
+   {
+    "at": "2026-09-30T12:48:12.166476+00:00",
+    "from_status": "ADMITTED",
+    "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+    "to_status": "REMOVED_INVALID_PUBLICATION_DATE"
+   }
+  ],
   "parse_status": "PARSE_OK",
   "retrieved_at": "2026-09-30T12:35:31.555378+00:00",
   "source_organization": null,
   "source_tier": "TIER_1",
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.5040/9781718219342.ch-014",
-  "update_kind": "NEW_DOCUMENT",
+  "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
  "fd4246f43aa9e33a": {

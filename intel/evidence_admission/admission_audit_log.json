@@ -318,5 +318,40 @@
   "reason": "document_id and content_hash already present in documents.json -- no change",
   "source": "src_crossref",
   "timestamp": "2026-09-30T12:38:15.222148+00:00"
+ },
+ {
+  "document_id": "0b57067446995074",
+  "decision": "REMOVED_INVALID_PUBLICATION_DATE",
+  "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+  "timestamp": "2026-09-30T12:48:12.166476+00:00",
+  "source": "manual_corrective_removal_m5d"
+ },
+ {
+  "document_id": "168f0b33ecd2b448",
+  "decision": "REMOVED_INVALID_PUBLICATION_DATE",
+  "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+  "timestamp": "2026-09-30T12:48:12.166476+00:00",
+  "source": "manual_corrective_removal_m5d"
+ },
+ {
+  "document_id": "927a2870ad2f63bf",
+  "decision": "REMOVED_INVALID_PUBLICATION_DATE",
+  "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+  "timestamp": "2026-09-30T12:48:12.166476+00:00",
+  "source": "manual_corrective_removal_m5d"
+ },
+ {
+  "document_id": "c6d77cae9d29896d",
+  "decision": "REMOVED_INVALID_PUBLICATION_DATE",
+  "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+  "timestamp": "2026-09-30T12:48:12.166476+00:00",
+  "source": "manual_corrective_removal_m5d"
+ },
+ {
+  "document_id": "f39654f26f4f26a0",
+  "decision": "REMOVED_INVALID_PUBLICATION_DATE",
+  "reason": "REMOVED_INVALID_PUBLICATION_DATE: admitted before the M.5D publication-date plausibility fix (PUBLICATION_DATE_VALID accepted syntactically valid but implausible future dates from real Crossref metadata, e.g. 2121-04-30); the admission gate now rejects these at the source, this removes the 5 documents that slipped through before the fix landed.",
+  "timestamp": "2026-09-30T12:48:12.166476+00:00",
+  "source": "manual_corrective_removal_m5d"
  }
 ]
