@@ -1058,5 +1058,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T13:12:31.615241+00:00"
+ },
+ "f4832dcd1c04169cde97166e725a2a6586e67dfc6d767492802f5955a1251c0d": {
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOblpTU3BnMkxvQXZhSFdDd2dEN2N4YWpkWlRBS0FsQWhacjlpVHE5S0ZkZWpZZ20zd3ZQQzRyaW1zdVFBVy1tb3FrZWdRNUN6UmxZenFSMXFQM3h1dGtabTFvYUFTTkl1SFFCbFZGSEVxc2tVVmtOU280Zk5hMnk4dVRPam96MWg5MUcxTnJPY0tZNnV3c193MExIYUJZRUo3MFljWg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:43.301255+00:00"
+ },
+ "7eebc42fb30cfe36679f2700e6c489f88fc2044a4822544e6fafe75440e9dae7": {
+  "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9UQy1kVGZCRURHSlJOV0F5NlExUEVCdzlUSnY5YnpHa3JnUVE3dVM1UEQ4M19BX1h5eEZqMTJFbTdIeFYycHc4VlZjY3RoUFA5VWpqUjhiOXRtRlVLaVdtTmdaaXp5aWxzcENiVjl6cw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:43.488096+00:00"
+ },
+ "2967db261ae4c9925438eb14a437a20029e2de0a113ca7f8b7742120f0817bae": {
+  "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBSVnEtX2xUV3VfaDRUanAyY2Y0Q2o1WEZRM2hTVEFIRDg0SGIxYUtGR1lNbkpRaFgwS0NHSGdvOXNfaUpkMmxCTDZ0dEhuaWRjZkwxejNjTkU4LW9tMlpEUl9rUFF3MmFYZnRJY244UkFzNkZzZmtVcDZpY0JEQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:43.655793+00:00"
+ },
+ "00521fe0b8a575645038625a3fb32ba612d40710b59c6566975842203615df28": {
+  "url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:14:43.869186+00:00"
+ },
+ "ac40eed78f940506dc5ff14faca37b77d3f95ef3383cc6d023bab2c09a8982eb": {
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNd0NHOWl3NnpOd2JnYkZaSnFjX3BKOHJ6R0FkUXByMTcxcXE5bWRBdWk2QUNvM1prSGNmMHlwUWdsOWJwaEdQWlZOYVBCOVRjcUw1T2p0YkdZSVg2Q2xzNkJKY3hQQXVZcy13Ync0Zjh3VnZUcTZLZHlpa044UmlYMURPTlJHTzRJS0xFcHdwdlVBeEt0TDJLYXRxZU44YUhvU2kzOQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:44.063745+00:00"
+ },
+ "2630beaaee346c9ea4dc536c95ae25dd09958cc0abfcf1386a6453e8757434ae": {
+  "url": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:14:45.120217+00:00"
+ },
+ "47a5ab2b3aadab47ef08c042050e9aa83d3539a4c8744d14f181f5f434d4b1c6": {
+  "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5SVXliUWZzM3JMYTdJLTlNUTlvUUlmR05MUUp1T1VwT0ZFT3hBNnZ6cjhpaUNQdk9PLUgzUElhM2RNMVhJM1BwNnhQanBLTjFmQjBvNWd2TmNLV1ZlQ29CN3Zha0tiTnpKdl93WlhtOGxvak5qUkhkVNIBfkFVX3lxTE5BZzFFN3hDUk1uUUZTbmJjUFg3c016Njd3MjBQX0ZKNVUzdVZrOVlnOHpZa09ad3JHZjNTdkV5SHZnT3E2N1N4QURwWHgxTF8xY0RaN25lbk1JYldObHRkVE9RaG1lWE5wZi1PM3dCc3UxamlQNVRCc0o5Sm5ZQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:45.302362+00:00"
+ },
+ "7499af864c00f8fb7992f486f690b48a8acd9346c6b7079e4d6baac5d88693c7": {
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbWZiNUVsSEFCbnJkbWI4QVdnSXRuOTRrUWpGQ19TLWZTTWRjWXN6TGt6RzB4azUzZktWZ2g4Q2xibGRIY3B0dE1kZzh5eHVVYXh0OHFVcFd6LXI2M3VBWF8tYlNQT0daem1LX09wdTBRUFp2ZjhvMmh3Q3A0aDBrbElYeFQ1dVl4OWR6WWdDaVJyQ05kbmUwMHFtNHhGaUY2X0JCdkFJT0d2MXlkbkQ1MFBYU3R6c0lKa2JLVkp4X1otYlFQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:45.537110+00:00"
+ },
+ "bbff4a2a36d99b5bffaa29155d157f6fe22d4678f4360a2935919b70642e583d": {
+  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaHZHRVlLb0JqMkxLc3ZtaVRKdFFPa0pNbTlXdlVuXy01YWN4SEp0UUxuZF9HS2ZaS1lha2R0UVoxdmhJLWgweTZlMWY4VDJlUGNrZVNxNFJZbkxyb1FERllXajdsYnpEM1NKT3p4ZVRfOWJvXzVxV0hoVHVkdm5LbDdFeU16TEJ4dUJkODgwWDhDdWFwQmg2eDhNaVd3TnItcU5ON0lxRmVfQ1dJX2FPUzJ2U0lwdw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:14:45.836043+00:00"
+ },
+ "3fcb2d324ec855ff63a09c4905f9f5a0c411e77c0bb1445d0e9ade20193fe43d": {
+  "url": "https://www.engadget.com/2272978/the-us-governments-new-ai-chatbot-gives-minecrafts-end-poem-a-bureaucratic-twist/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:14:45.986356+00:00"
  }
 }

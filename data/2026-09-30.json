@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated_at": "2026-09-30T22:11+09:00",
+ "generated_at": "2026-09-30T22:14+09:00",
  "items": [
   {
    "id": "31fcaa3d2d3be719",
@@ -2988,6 +2988,31 @@
      "과기정통부",
      "인공지능",
      "인재양성"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "caffd59b51b05d58",
+   "title": "Innodata opens motion-capture lab to help humanoids move more like people",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOblpTU3BnMkxvQXZhSFdDd2dEN2N4YWpkWlRBS0FsQWhacjlpVHE5S0ZkZWpZZ20zd3ZQQzRyaW1zdVFBVy1tb3FrZWdRNUN6UmxZenFSMXFQM3h1dGtabTFvYUFTTkl1SFFCbFZGSEVxc2tVVmtOU280Zk5hMnk4dVRPam96MWg5MUcxTnJPY0tZNnV3c193MExIYUJZRUo3MFljWg?oc=5",
+   "source": "The Robot Report",
+   "field": "로봇",
+   "category": "news_global",
+   "published": "2026-09-30T13:06:21+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "이노데이터, 휴머노이드의 인간 같은 움직임을 돕기 위해 모션 캡처 연구소 개설",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "이노데이터가 휴머노이드 로봇의 자연스러운 인체 모방 움직임을 구현하기 위해 모션 캡처 실험실을 신설했다.",
+    "p": "로봇의 하드웨어 제어 기술을 넘어 인간의 신체 동작 데이터를 대규모로 학습하려는 산업적 움직임이 가속화되고 있다.",
+    "t": [
+     "이노데이터",
+     "휴머노이드",
+     "모션캡처",
+     "로봇공학"
     ],
     "v": 1
    }
@@ -8507,6 +8532,28 @@
    }
   },
   {
+   "id": "32913916444ff247",
+   "title": "AI’s mental health test",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPY19rUmpzMVdldmwxclJod2NuYktLQzlwMFZfUGo2aUt5YXNtTERCTnJ6cV9VcThDbzA2ZVFNZGdIXy10Zi1GV0txQVZBb1BxTHFOYi1YN08tRks2S2JQaTlkQl9LUzdmZ2dKTHVQZXlnU1RoNE5sRFp1cUlJRDBFT3hBenlnRk9ZS1FqUm85Rks5UC04aWRKWThaRGM1Wmh1NGc?oc=5",
+   "source": "Politico",
+   "field": "청소년·정신건강",
+   "category": "papers",
+   "published": "2026-09-29T20:00:09+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 시스템의 정신 건강 관련 성능을 평가하고 진단하는 새로운 테스트 방법론이 논의되고 있다.",
+    "p": "AI 모델이 인간의 심리적, 감정적 영역을 다루는 빈도가 늘어남에 따라 안전성과 신뢰성을 검증할 표준화된 평가 체계의 필요성이 커지고 있다.",
+    "t": [
+     "AI평가",
+     "정신건강",
+     "인공지능안안전",
+     "연구"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "59c179bcd76a5d66",
    "title": "서울AI재단, ‘서울 AI 윤리·거버넌스 포럼’ 개최",
    "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1uM1hGelo0Y3pCbzgtTVJkTjdBZ0Y4WWRZVDhIN1JkVkxxX29CaVNvSVZiazQ2cUVLcEk3bm0xR2RLekRMYmFpdGtvVGo?oc=5",
@@ -8798,6 +8845,33 @@
      "AI자율규제",
      "기술정책",
      "빅테크"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "a14f5de56cfe88fa",
+   "title": "LLMjacking can run up your business’ AI bill fast – how to stop it",
+   "link": "https://www.zdnet.com/innovation/llmjacking-business-ai-bill-cost-how-to-stop/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-29T19:09:53+00:00",
+   "summary": "Google analysts warn that stolen AI credentials are being sold underground, and businesses are footing the bill.",
+   "thumb": "",
+   "title_ko": "LLMjacking은 기업의 AI 비용을 급격히 증가시킬 수 있습니다 – 이를 막는 방법",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "구글 분석가들은 도난당한 AI 인증 정보가 암시장에서 거래되고 있으며, 그 대가를 기업들이 치르고 있다고 경고했다.",
+   "detail_ko": "구글 분석가들은 도난당한 AI 인증 정보가 암시장에서 거래되고 있으며, 그 대가를 기업들이 치르고 있다고 경고했다.",
+   "mx": {
+    "b": "구글 분석가들은 탈취된 AI 인증 정보가 지하 시장에서 거래되며 기업에 막대한 클라우드 비용을 청구하는 LLMjacking 위협이 확산되고 있다고 경고했다.",
+    "p": "생성형 AI 도입이 급증하는 상황에서 API 키와 자격 증명 관리가 기업 보안의 핵심 리스크로 부상하고 있다.",
+    "t": [
+     "LLMjacking",
+     "구글",
+     "AI보안",
+     "클라우드비용"
     ],
     "v": 1
    }
@@ -9283,27 +9357,6 @@
    }
   },
   {
-   "id": "df18ba7ce9ee024a",
-   "title": "AI 시대 원자력 정책, 핵연료·SMR 경제성·법 제도 정비 과제",
-   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE4zOV84MXpHNTd6NGE0dUJ0Um9uSVdHSU5YMmZVakY5VkFELUliN3lvaWtTdmd5Y1hvTHptaV9iWWVLNm1s?oc=5",
-   "source": "산업일보",
-   "field": "",
-   "category": "policy",
-   "published": "2026-09-29T09:54:36+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "인공지능 시대의 전력 수요 급증에 대응해 원자력 정책과 핵연료, 소형모듈원자로(SMR)의 경제성 및 법 제도 정비 과제가 제기됐다.",
-    "p": "AI 데이터센터 등으로 폭증하는 전력 수요를 충족하기 위해 차세대 원전 인프라와 규제 체계를 유기적으로 결합하는 전략적 접근이 요구된다.",
-    "t": [
-     "원자력",
-     "SMR",
-     "에너지정책"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "f02322046539952d",
    "title": "Towngas contributes to the flagship APEC Urban Energy Report, exploring urban energy resilience and low-carbon transition under “AI + energy”",
    "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQUVdvS2c1NXFaUFNkTHFXWXo3RER6SnUxR0NobzVUUkhlVkFfamtqS2VidFhYNWhscEdiaFEwMGNacE5LSERqQkpYUVFIVncyVXBTelVxRFhXTDRCbWk3eUlULXdOTHhQQVhTZVlpOFVKaUhRdlF0ZGRjeU5pdE5mZVQyVmF1UXMtRzU3dl9CeG5Ia0l6bmVnR1pRMHhVVzl5eHo2RV9RX1Jaa3pYUnNrSi1MSktxanU4UWdZRUtkTzBvRkIyUGFUbm9Tb2N2TXVtcFpaNHd0Um40Wm5ZMXJFd2xINmxvS3Vzc0ZrUkRqaWtOYUpBTVZhT3lmU1VPbHZlWm00ODZZa21Ib21kXzlreWtaTjI5b3JHaGVrT3ZlZDk?oc=5",
@@ -9666,31 +9719,6 @@
    }
   },
   {
-   "id": "ec0fc17af1bf01cc",
-   "title": "LLM Judge Validation Under Sparse Overlap: From Inference to Design",
-   "link": "https://arxiv.org/abs/2609.31857",
-   "source": "arXiv cs.AI · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-29T00:00:00-04:00",
-   "summary": "Validating an LLM-as-a-judge requires estimating its agreement with humans, yet annotation budgets rarely allow every item to be multiply labeled.",
-   "thumb": "",
-   "summary_ko": "LLM을 판사로 활용하는 것을 검증하려면 인간과의 일치도를 추정해야 하지만, 주석 작업 예산상 모든 항목에 여러 라벨을 부여하는 것은 거의 불가능합니다.",
-   "tr": "deepl",
-   "trv": 2,
-   "detail_ko": "LLM을 판사로 활용하는 것을 검증하려면 인간과의 일치도를 추정해야 하지만, 주석 작업 예산이 충분하지 않아 모든 항목에 여러 개의 라벨을 붙이는 것은 거의 불가능하다.",
-   "mx": {
-    "b": "제한된 어노테이션 예산 환경에서 인간과 LLM 심사위원 간의 일치도를 정확히 추정하기 위한 검증 방법론을 다뤘다.",
-    "p": "평가 비용이 희소한 상황에서 LLM 평가자의 신뢰성을 확보하고 효율적으로 설계하는 기준을 제시한다.",
-    "t": [
-     "LLM심사위원",
-     "모델평가",
-     "데이터검증"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "2e54198af04d4a26",
    "title": "Why Would AI Companies Want to Slow Down?",
    "link": "https://www.youtube.com/watch?v=GzEtpAKYRvE",
@@ -9782,13 +9810,13 @@
    "name": "Google DeepMind",
    "ok": true,
    "count": 0,
-   "fetched": 100
+   "fetched": 0
   },
   {
    "name": "Google News Top: Technology",
    "ok": true,
    "count": 1,
-   "fetched": 65
+   "fetched": 66
   },
   {
    "name": "Google News: AI",
@@ -9884,13 +9912,13 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -9908,7 +9936,7 @@
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "Sequoia Capital",
@@ -9980,7 +10008,7 @@
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -10004,7 +10032,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 88
+   "fetched": 87
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -10016,31 +10044,31 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 49
+   "fetched": 48
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 69
+   "fetched": 65
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 56
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -10164,9 +10192,9 @@
   },
   {
    "name": "과학기술정보통신부 보도자료",
-   "ok": true,
-   "count": 8,
-   "fetched": 50
+   "ok": false,
+   "count": 0,
+   "error": "URLError: <urlopen error timed out>"
   },
   {
    "name": "구글뉴스 주요 뉴스: IT",
@@ -10202,7 +10230,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 74
+   "fetched": 73
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -10220,7 +10248,7 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 68
+   "fetched": 70
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
@@ -10232,13 +10260,13 @@
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "국민일보",
@@ -10400,13 +10428,13 @@
    "name": "주제: AI 철학 · AI 철학",
    "ok": true,
    "count": 3,
-   "fetched": 62
+   "fetched": 60
   },
   {
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 34
+   "fetched": 35
   },
   {
    "name": "주제: 경제 · 경제",
@@ -10418,7 +10446,7 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 39
+   "fetched": 41
   },
   {
    "name": "주제: 동물 · 동물",
@@ -10436,13 +10464,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 55
+   "fetched": 53
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 55
+   "fetched": 54
   },
   {
    "name": "주제: 법률 · 법률",
@@ -10478,19 +10506,19 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 39
+   "fetched": 38
   },
   {
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 30
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 48
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
@@ -10502,7 +10530,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "주제: 피지컬 AI · 피지컬 AI",
@@ -10520,13 +10548,13 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 505
+   "fetched": 502
   },
   {
    "name": "프레시안",
    "ok": true,
    "count": 5,
-   "fetched": 51
+   "fetched": 55
   },
   {
    "name": "한겨레",
