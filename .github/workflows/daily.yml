@@ -479,3 +479,42 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.5E-4 -- real-source Historical Evidence connector (CrossRef, gated admission).
+  # Unlike the TRANSITION pilot above, acquire+gate+admit all happen inside one script
+  # (fetch_real_historical_analogy_evidence.py's main()/run_and_maybe_admit()), since the
+  # admission gate here is a single deterministic keyword check rather than a 9-category
+  # classifier -- there is no separate raw-shadow-result artifact to hand to a second job.
+  # Every candidate's verdict (admitted or one of 3 rejection reason codes) is logged,
+  # append-only, to real_historical_evidence_gate_log.json regardless of outcome. Depends on
+  # every other admission job (including the TRANSITION one) so no two jobs ever write
+  # documents.json concurrently in the same run. Retry loop uses 8 iterations per the
+  # infrastructure fix already applied to reality_shadow (M.5E-4): under heavy commit
+  # contention right after build, 3 attempts can exhaust without ever landing a push.
+  evidence_admission_real_historical:
+    needs: [build, evidence_admission, evidence_admission_crossref, evidence_admission_fedreg_historical, evidence_admission_transition_energy]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-admission-real-historical
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 실제 소스 Historical Evidence Pilot + Admission Gate 실행 (CrossRef → documents.json)
+        continue-on-error: true
+        run: python3 intel/historical_evidence/fetch_real_historical_analogy_evidence.py
+      - name: Admission 결과 저장 (documents.json + evidence_admission/historical_evidence 산출물만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json intel/historical_evidence/real_historical_evidence_gate_log.json
+          git diff --cached --quiet || git commit -m "실제 소스 Historical Evidence Admission Gate 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3 4 5 6 7 8; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
