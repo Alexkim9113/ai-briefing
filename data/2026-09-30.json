@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated_at": "2026-09-30T21:33+09:00",
+ "generated_at": "2026-09-30T21:36+09:00",
  "items": [
   {
    "id": "629607de725570a3",
@@ -13,7 +13,7 @@
    "summary": "(안산=국제뉴스) 윤은중 기자 = 안산시는 30일 한양대학교 에리카 프라임컨퍼런스홀에서 경기경제자유구역청, 한양대학교, 에이로봇과 함께 경기경제자유구역 안산사이언스밸리(ASV)지구에 대한 투자협약을 맺었다고 밝혔다.",
    "detail": "(안산=국제뉴스) 윤은중 기자 = 안산시는 30일 한양대학교 에리카 프라임컨퍼런스홀에서 경기경제자유구역청, 한양대학교, 에이로봇과 함께 경기경제자유구역 안산사이언스밸리(ASV)지구에 대한 투자협약을 맺었다고 밝혔다.\n이번 협약은 안산사이언스밸리지구가 경제자유구역으로 지정된 이후 첫 대규모 기업 투자가 이뤄지는 사례로, 기업 유치와 실질적인 투자가 본격적으로 시작되는 전환점이 됐다.\n행사에는 안산시장, 경기경제자유구역청장, 한양대학교 총장, 에이로봇 대표 등이 참석했다.",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "d633381528fb1b01",
@@ -3079,7 +3079,17 @@
    "title_ko": "OpenAI의 ‘Dots’ 이분법",
    "tr": "deepl",
    "trv": 2,
-   "mx_try": 1
+   "mx": {
+    "b": "OpenAI의 신규 AI 에이전트 제품인 'Dots'를 둘러싼 양면적 특성과 시장 영향에 대한 분석이 제기되었다.",
+    "p": "에이전트 기술이 본격적으로 고도화되면서 제품 구조와 시장 경쟁 구도에서 복합적인 평가와 과제가 동시에 부각되고 있다.",
+    "t": [
+     "OpenAI",
+     "Dots",
+     "AI에이전트",
+     "인공지능"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "a90abf0a4eb92eb2",
@@ -3212,6 +3222,31 @@
      "앤스로픽",
      "AI인프라",
      "대규모투자"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "e3aeccaa021dacc0",
+   "title": "Artificial intelligence (AI) capable of identifying uncommon gastrointestinal pathologies despite no targeted disease training",
+   "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRnc0RmhkR1ZkSGlEa0tRNmMyY0xhMUZzTGNZUWRHQjRGWGR4c2g1bFBTNVdCSmNnVGNrNkloMTZhSmswdEhfY3hMSWU5WThfeXdZaGIydHJDbTNZa2J0aWZqRi1QenFSbUhQZEx6cHBidnYya05pcDVOT1VTYm9VLVVzc3Z3aG9POFBLd2NVbXhaRkxabnMyN0ZyNl82V0VqSk4yUjBKYUxKRlBIS3AtaEo2OFJUcFphRWRyc0I2QU5oTDJEd012dEpVUGlPVUZWYVhYb05ZbVRJYWhpUF9xamNjUjlTZVlYaFZXY1pSUjJCd1JUS3VjeUVMNkJoZVE?oc=5",
+   "source": "2 Minute Medicine",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T12:01:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "특정 질환에 대한 훈련을 받지 않았음에도 드문 위장관 병리를 식별할 수 있는 인공 지능(AI)",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "인공지능 모델이 특정 질환에 대한 사전 학습 없이도 드문 위장관 병리를 식별해낼 수 있는 역량을 보여주었다.",
+    "p": "표적 학습 없이도 미지의 의료 데이터를 분석해내는 AI의 잠재력이 확인됨에 따라, 임상 진단 보조 분야의 확장 가능성이 한층 높아졌다.",
+    "t": [
+     "인공지능",
+     "의료AI",
+     "질단",
+     "헬스케어"
     ],
     "v": 1
    }
@@ -3381,27 +3416,6 @@
      "정부",
      "인공지능",
      "프런티어AI"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "475af801c7896ee0",
-   "title": "하드웨어 제작 부담 덜어낸 엔젤로보틱스, R&D용 웨어러블 로봇 내놔",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBXWlZJd3JMWUhXYzVqSWpYR0tfSEU2YlJTeWRtRmJIZWtjd19lX3BDRVhNaWkzajNuekFyRHhsQU05VFlxWGVZTDJFcklrWmp4UHY2V1B2RkhnenMwWXZr?oc=5",
-   "source": "헬로티",
-   "field": "로봇",
-   "category": "news_ko",
-   "published": "2026-09-30T11:48:55+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "엔젤로보틱스가 하드웨어 제작 부담을 덜어낸 연구개발용 웨어러블 로봇을 출시했다.",
-    "p": "웨어러블 로봇 개발 진입 장벽을 낮추어 연구 현장의 하드웨어 제작 부담을 줄이고 기술 검증과 응용 연구를 촉진하고 있다.",
-    "t": [
-     "엔젤로보틱스",
-     "웨어러블로봇",
-     "로봇"
     ],
     "v": 1
    }
@@ -3662,6 +3676,31 @@
    }
   },
   {
+   "id": "caac110d5e257741",
+   "title": "Caltech Roboticist Says Safety Should Be Top Concern with Humanoid Robots",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNd0NHOWl3NnpOd2JnYkZaSnFjX3BKOHJ6R0FkUXByMTcxcXE5bWRBdWk2QUNvM1prSGNmMHlwUWdsOWJwaEdQWlZOYVBCOVRjcUw1T2p0YkdZSVg2Q2xzNkJKY3hQQXVZcy13Ync0Zjh3VnZUcTZLZHlpa044UmlYMURPTlJHTzRJS0xFcHdwdlVBeEt0TDJLYXRxZU44YUhvU2kzOQ?oc=5",
+   "source": "Pasadena Now",
+   "field": "피지컬 AI",
+   "category": "news_global",
+   "published": "2026-09-30T10:27:02+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "캘텍 로봇공학자, 휴머노이드 로봇의 경우 안전이 최우선 고려사항이어야 한다고 강조",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "캘리포니아 공과대학교(Caltech)의 로봇공학자가 휴머노이드 로봇 개발에서 안전성이 최우선 과제가 되어야 한다고 강조했다.",
+    "p": "휴머노이드 로봇의 상용화가 가속화되는 시점에서 물리적 안전 확보와 리스크 관리가 기술 완성도만큼이나 중요한 화두로 자리 잡고 있다.",
+    "t": [
+     "Caltech",
+     "휴머노이드",
+     "로봇안전",
+     "로봇공학"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "befc6fc26e788de5",
    "title": "Google is paying almost no publishers almost nothing for content used in AI answers",
    "link": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/",
@@ -3758,6 +3797,33 @@
      "디지털시대",
      "가톨릭",
      "디지털전환"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "ddbf208c35fc0529",
+   "title": "The US government's new AI chatbot gives Minecraft's end poem a bureaucratic twist",
+   "link": "https://www.engadget.com/2272978/the-us-governments-new-ai-chatbot-gives-minecrafts-end-poem-a-bureaucratic-twist/",
+   "source": "Engadget",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T09:48:35+00:00",
+   "summary": "The new America.gov chatbot will write you a remixed version of Minecraft's end poem, then deny ever doing it.",
+   "thumb": "",
+   "title_ko": "미국 정부의 새로운 AI 챗봇이 ‘마인크래프트’의 엔딩 시에 관료적인 색채를 더했다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "새로운 America.gov 챗봇은 마인크래프트의 엔딩 시를 개작한 버전을 작성해 줄 것이지만, 그런 적이 없다고 부인할 것입니다.",
+   "detail_ko": "새로운 America.gov 챗봇은 마인크래프트의 ‘끝’ 시를 재구성해 보여줄 것이지만, 그런 일을 한 적이 없다고 부인할 것입니다.",
+   "mx": {
+    "b": "미국 정부의 새로운 AI 챗봇(America.gov)이 마인크래프트의 엔딩 시를 관료적인 어조로 각색하는 기능을 선보였다.",
+    "p": "공공 부문 AI 챗봇이 대중문화 콘텐츠를 학습하고 재생산하는 과정에서 행정적 특유의 화법이 결합된 독특한 사례를 보여준다.",
+    "t": [
+     "미국정부",
+     "AI챗봇",
+     "America.gov",
+     "인공지능"
     ],
     "v": 1
    }
@@ -5212,6 +5278,35 @@
      "RegDAO",
      "정책검증",
      "규제혁신"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "0d5fc586f5910cab",
+   "title": "OpenAI DevDay 2026: The biggest news and announcements",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements",
+   "source": "The Verge AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T03:46:30-04:00",
+   "summary": "It’s OpenAI’s turn in the fall tech events calendar.",
+   "detail": "It’s OpenAI’s turn in the fall tech events calendar.\nThe company is hosting its annual DevDay on September 29th in San Francisco, and during a live keynote featuring CEO Sam Altman, it revealed several notable updates, including Dots, its AI agent product that rivals Meta’s recently-launched Muse.",
+   "thumb": "",
+   "title_ko": "OpenAI DevDay 2026: 가장 주목할 만한 소식과 발표 내용",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "가을 기술 행사 일정에 OpenAI가 차례를 맞이했습니다.",
+   "detail_ko": "가을 기술 행사 일정에 OpenAI가 차례를 맞이했습니다.\n이 회사는 9월 29일 샌프란시스코에서 연례 DevDay 행사를 개최하며, 샘 알트만 CEO가 참여한 라이브 기조 연설에서 메타가 최근 출시한 ‘뮤즈(Muse)’와 경쟁하는 자사의 AI 에이전트 제품인 ‘도츠(Dots)’를 비롯한 몇 가지 주목할 만한 업데이트를 공개했다.",
+   "mx": {
+    "b": "OpenAI는 DevDay 2026 기조연설에서 샘 알트먼 CEO가 직접 나서 메타의 Muse에 대항하는 신규 AI 에이전트 'Dots' 등 주요 업데이트를 공개했다.",
+    "p": "빅테크 기업들이 에이전트 시장 선점을 위해 실사용자 중심의 제품군을 빠르게 확장하며 경쟁을 심화시키고 있다.",
+    "t": [
+     "OpenAI",
+     "DevDay",
+     "샘알트먼",
+     "Dots",
+     "AI에이전트"
     ],
     "v": 1
    }
@@ -8761,86 +8856,6 @@
    }
   },
   {
-   "id": "27e06d6135bf97db",
-   "title": "4 insights from Dell’s AI Leadership Symposium: Cost and control reshape enterprise AI deployment strategy",
-   "link": "https://siliconangle.com/2026/09/29/enterprise-ai-deployment-strategy-shaped-cost-control-dellaileadershipsymposium/",
-   "source": "SiliconANGLE AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T18:47:10+00:00",
-   "summary": "Getting artificial intelligence into production has become the real test for enterprises.",
-   "detail": "Getting artificial intelligence into production has become the real test for enterprises.\nThe next phase […] The post 4 insights from Dell’s AI Leadership Symposium: Cost and control reshape enterprise AI deployment strategy appeared first on SiliconANGLE .",
-   "thumb": "",
-   "title_ko": "델 AI 리더십 심포지엄에서 얻은 4가지 통찰: 비용과 통제가 기업 AI 도입 전략을 재편하고 있다",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "인공지능을 실제 운영 환경에 도입하는 것이 기업들에게 진정한 시험대가 되고 있다.",
-   "detail_ko": "인공지능을 실제 운영 환경에 도입하는 것이 기업들에게 진정한 시험대가 되고 있다.\n다음 단계 […] “델 AI 리더십 심포지엄에서 얻은 4가지 통찰: 비용과 통제가 기업 AI 도입 전략을 재편한다”라는 제목의 이 기사는 SiliconANGLE에 처음 게재되었습니다.",
-   "mx": {
-    "b": "델의 AI 리더십 심포지엄에서 비용 통제와 제어권 확보가 기업의 인공지능 도입 전략을 재편하는 핵심 요소로 지목됐다.",
-    "p": "AI 도입 초기 단계의 기대감을 넘어 실제 운영 과정에서 경제성과 인프라 통제력을 확보하려는 기업들의 실용적 태도 변화를 드러낸다.",
-    "t": [
-     "델",
-     "기업AI",
-     "비용관리",
-     "인프라"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "221757046db4b914",
-   "title": "Why AI hasn’t triggered mass layoffs — yet",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOX3lEZmgtanplLUpyc3JVT0E4V1hLS0J0X3B6U3lVb1dfM2ZVSHlQVkh2YkgyUU1ON1A5bXJWTm9OVkw4S21hbk5NaGp4N1MtaVd0NXJ4YWpQdzVFNXRXeW9ZMElqZmhFZ2ZaSmZfdEhuY1d3eThfdnhrYW5LVkFIdnJIZGltN2NMeFpOQUZ5NEE?oc=5",
-   "source": "Harvard Gazette",
-   "field": "사회·노동",
-   "category": "news_global",
-   "published": "2026-09-29T18:45:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "왜 AI가 아직 대규모 해고를 촉발하지 않았을까?",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "인공지능 기술의 급격한 발전에도 불구하고 아직까지 대규모 대량 해고 사태는 발생하지 않았다.",
-    "p": "노동 시장에서 AI가 전면적인 일자리를 대체하기보다 업무 보조 수단으로 안착하면서 고용 구조 변화가 완만하게 진행되고 있음을 시사한다.",
-    "t": [
-     "고용시장",
-     "노동",
-     "AI영향",
-     "일자리"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "553543f8ae09be61",
-   "title": "There's now an official US government AI chatbot",
-   "link": "https://www.engadget.com/2272424/america-gov-is-us-government-ai-chatbot/",
-   "source": "Engadget",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T18:43:58+00:00",
-   "summary": "The administration wants America.gov to be the main portal for federal services.",
-   "thumb": "",
-   "title_ko": "이제 미국 정부의 공식 AI 챗봇이 등장했다",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "행정부는 America.gov를 연방 정부 서비스의 주요 포털로 만들고자 한다.",
-   "detail_ko": "행정부는 America.gov를 연방 정부 서비스의 주요 포털로 만들고자 한다.",
-   "mx": {
-    "b": "미국 정부가 연방 서비스 통합 포털인 America.gov의 공식 AI 챗봇을 선보였다.",
-    "p": "행정 서비스의 디지털 전환을 가속화하고 대국민 소통 창구를 자동화하려는 공공 부문의 AI 도입 사례이다.",
-    "t": [
-     "정부챗봇",
-     "공공서비스",
-     "미국정부",
-     "행정"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "260be65e1951ac8f",
    "title": "Lawmakers weigh in as AI regulation debate heats up",
    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdWZqaUhPR1hWbmlIbDlpTjctYVJUSHBZVFMxZ2c5bU5vTUZsaFhyTVVPdVdtZmtSbmR6S0FrdE82a3B4QzU2ZmU5MXFQNnEwNFVLNlA2QWRIa1cwZVhycC04WjJFR2xramlPeDNFVXV0Z2pJdGYzT0RjUlZXOV9OR3BCckF1VnJJa3lZMUc4czAtdWtYNGpIMjZn?oc=5",
@@ -9759,7 +9774,7 @@
    "name": "Google News Top: Technology",
    "ok": true,
    "count": 1,
-   "fetched": 64
+   "fetched": 63
   },
   {
    "name": "Google News: AI",
@@ -9818,8 +9833,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 3,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -9830,8 +9845,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -9951,7 +9966,7 @@
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -9975,7 +9990,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 91
+   "fetched": 90
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -10011,7 +10026,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -10124,8 +10139,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 2,
+   "fetched": 8
   },
   {
    "name": "경향신문",
@@ -10220,7 +10235,7 @@
   {
    "name": "국제뉴스",
    "ok": true,
-   "count": 5,
+   "count": 4,
    "fetched": 50
   },
   {
@@ -10443,7 +10458,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 32
+   "fetched": 33
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -10491,7 +10506,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 554
+   "fetched": 549
   },
   {
    "name": "프레시안",
