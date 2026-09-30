@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "total-results": 2,
+    "items": [
+      {
+        "title": ["Autonomous AI Agents in Multi-Step Task Execution: A Survey"],
+        "author": [
+          {"given": "Jane", "family": "Kim"},
+          {"given": "Alex", "family": "Ruiz"}
+        ],
+        "DOI": "10.1000/example.agents.2026.001",
+        "abstract": "<jats:p>We survey recent progress in autonomous AI agents capable of multi-step task execution, tool use, and long-horizon planning.</jats:p>",
+        "published": {"date-parts": [[2026, 6, 15]]},
+        "container-title": ["Journal of Artificial Intelligence Research"],
+        "URL": "https://doi.org/10.1000/example.agents.2026.001",
+        "type": "journal-article"
+      },
+      {
+        "title": ["Labor Market Effects of Generative AI Adoption: Early Evidence"],
+        "author": [
+          {"given": "Priya", "family": "Nair"}
+        ],
+        "DOI": "10.1000/example.labor.2026.002",
+        "published": {"date-parts": [[2026, 3]]},
+        "container-title": ["Labor Economics Quarterly"],
+        "URL": "https://doi.org/10.1000/example.labor.2026.002",
+        "type": "journal-article"
+      }
+    ]
+  }
+}
