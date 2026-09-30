@@ -1,7 +1,7 @@
 {
  "claims_by_status": {
-  "INSUFFICIENT_SOURCE": 352,
-  "SECONDARY_ONLY": 178,
+  "INSUFFICIENT_SOURCE": 354,
+  "SECONDARY_ONLY": 180,
   "SOURCE_LOCATED": 85,
   "SUMMARY_DERIVED": 59
  },
@@ -10,14 +10,14 @@
   "COURT_FINDING": 1,
   "GOVERNMENT_REPORTED": 28,
   "MEASURED": 10,
-  "MEDIA_REPORTED": 534,
+  "MEDIA_REPORTED": 538,
   "OTHER": 13,
   "RESEARCH_FINDING": 57
  },
- "claims_extracted": 674,
+ "claims_extracted": 678,
  "claude_calls_added": 0,
  "counter_evidence_pairs": 0,
- "documents_examined": 597,
+ "documents_examined": 601,
  "embedding_calls": 0,
  "evidence_by_type": {
   "BOTTLENECK": 3,
@@ -30,24 +30,24 @@
  "gemini_calls_added": 15,
  "human_review_by_priority": {
   "HIGH": 52,
-  "LOW": 544,
+  "LOW": 548,
   "MEDIUM": 88
  },
- "human_review_pending": 684,
+ "human_review_pending": 688,
  "independence_overall": {
-  "independent_document_count": 597,
-  "independent_source_count": 256,
-  "raw_document_count": 597,
+  "independent_document_count": 601,
+  "independent_source_count": 257,
+  "raw_document_count": 601,
   "syndication_collapsed": 0
  },
  "interpretation_candidates": 10,
- "level3_flagged_documents": 148,
+ "level3_flagged_documents": 149,
  "lineage_stopped_at_distribution": {
-  "CLAIM": 671,
+  "CLAIM": 675,
   "EVIDENCE_RECORD": 3
  },
  "primary_sources_resolved": 85,
- "secondary_only_claims": 589,
+ "secondary_only_claims": 593,
  "source_verified_claims": 0,
  "structural_evidence_input_records": 0,
  "structural_evidence_input_skip_stats": {

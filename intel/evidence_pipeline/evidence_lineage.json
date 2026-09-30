@@ -3330,7 +3330,7 @@
   {
    "change_ids": [],
    "claim_id": "68821b181460df0c:c2",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "68821b181460df0c",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7119,7 +7119,7 @@
   {
    "change_ids": [],
    "claim_id": "ebb851930de734e4:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "ebb851930de734e4",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7585,10 +7585,54 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "25e927286cfe88c7:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "25e927286cfe88c7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.2172/7260748",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2ca1dd1b0b2bf398:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "2ca1dd1b0b2bf398",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1596/20326",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "739cdbb231435820:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "739cdbb231435820",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1007/978-1-4471-4673-5_4",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "ba5556e7140f0be2:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "ba5556e7140f0be2",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1515/ijeeps-2018-0026",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 671,
+  "CLAIM": 675,
   "EVIDENCE_RECORD": 3
  }
 }
