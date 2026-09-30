@@ -1036,7 +1036,7 @@
   {
    "change_ids": [],
    "claim_id": "2013a723b92f689a:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "2013a723b92f689a",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1059,6 +1059,39 @@
    "change_ids": [],
    "claim_id": "2075b886be535ebc:c1",
    "claim_status": "SUMMARY_DERIVED",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "2075b886be535ebc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2075b886be535ebc:g3",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "2075b886be535ebc",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1148,7 +1181,7 @@
   {
    "change_ids": [],
    "claim_id": "227c6ab559343ea9:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "227c6ab559343ea9",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -1459,7 +1492,7 @@
   {
    "change_ids": [],
    "claim_id": "31a26a71a83b2b43:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "31a26a71a83b2b43",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3075,7 +3108,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_5"
+    "evr_6"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -3690,7 +3723,7 @@
   {
    "change_ids": [],
    "claim_id": "7c7b6ea24fb9b3a9:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "7c7b6ea24fb9b3a9",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4921,7 +4954,7 @@
   {
    "change_ids": [],
    "claim_id": "a9cf060b286b8ec8:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "a9cf060b286b8ec8",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -4989,7 +5022,7 @@
   {
    "change_ids": [],
    "claim_id": "ab35ec286e01ba12:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "ab35ec286e01ba12",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -5094,7 +5127,7 @@
   {
    "change_ids": [],
    "claim_id": "b15a2ff30aed2814:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "b15a2ff30aed2814",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -6975,7 +7008,7 @@
   {
    "change_ids": [],
    "claim_id": "faea70104a385ec2:c1",
-   "claim_status": "SUMMARY_DERIVED",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "faea70104a385ec2",
    "event_ids": [
     "evtprod_faea70104a385ec2"
@@ -7090,40 +7123,59 @@
   },
   {
    "change_ids": [],
-   "claim_id": "2075b886be535ebc:g1",
+   "claim_id": "626a1a31b56e8ec9:g1",
    "claim_status": "SECONDARY_ONLY",
-   "document_id": "2075b886be535ebc",
-   "event_ids": [],
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
    "evidence_record_ids": [],
-   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
   {
    "change_ids": [],
-   "claim_id": "2075b886be535ebc:g2",
+   "claim_id": "626a1a31b56e8ec9:g2",
    "claim_status": "SECONDARY_ONLY",
-   "document_id": "2075b886be535ebc",
-   "event_ids": [],
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
    "evidence_record_ids": [],
-   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
   {
    "change_ids": [],
-   "claim_id": "2075b886be535ebc:g3",
+   "claim_id": "626a1a31b56e8ec9:g3",
    "claim_status": "SECONDARY_ONLY",
-   "document_id": "2075b886be535ebc",
-   "event_ids": [],
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
    "evidence_record_ids": [],
-   "source_url": "https://techxplore.com/news/2026-09-unseen-anime-ai-physics-future.html",
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "626a1a31b56e8ec9:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 628,
+  "CLAIM": 632,
   "EVIDENCE_RECORD": 3
  }
 }

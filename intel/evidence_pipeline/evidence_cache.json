@@ -1,4 +1,5 @@
 {
+ "33574c3c96a0076e": null,
  "370dd11921d63487": null,
  "4559fb34e8fd1018": null,
  "491ec7bec9434ea3": null,
@@ -99,6 +100,84 @@
  "d54eb592a6eb20ad": null,
  "ef388b3207c53003": null,
  "f4e46bc1a978def5": null,
- "f4e862b183458e9a": null,
+ "f4e862b183458e9a": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "메타 AI안경으로 네이버 길찾기 된다",
+    "claim_type": "headline",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "네이버 길찾기",
+    "predicate": "지원하다",
+    "subject": "메타 AI안경",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "네이버지도와 ‘레이밴·오클리 메타’ 협력",
+    "claim_type": "fact",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "레이밴·오클리 메타",
+    "predicate": "협력하다",
+    "subject": "네이버지도",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 3,
+    "claim_text": "진입로·계단 여부부터 정보 제공까지 스마트폰 화면 안 봐도 소리로 길 알려줘",
+    "claim_type": "feature",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "진입로·계단 여부부터 정보 제공까지",
+    "predicate": "길을 알려주다",
+    "subject": "소리",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 4,
+    "claim_text": "올해 안에 메타의 인공지능(AI) 안경으로 네이버지도 길찾기가..",
+    "claim_type": "plan",
+    "confidence": "MEDIUM",
+    "evidence_locator": "요약",
+    "object": "올해 안",
+    "predicate": "예정되다",
+    "subject": "메타의 인공지능(AI) 안경으로 네이버지도 길찾기",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "textual",
+    "object": "메타 AI안경",
+    "reason": "요약문에 네이버지도와 레이밴·오클리 메타 협력 및 올해 안에 메타 AI안경으로 길찾기가 지원된다고 명시됨",
+    "relation": "협력",
+    "source_claim_ids": [
+     0,
+     1,
+     3
+    ],
+    "subject": "네이버지도",
+    "support_type": "direct"
+   }
+  ],
+  "relations": [
+   {
+    "object": "레이밴·오클리 메타",
+    "relation": "협력",
+    "subject": "네이버지도"
+   }
+  ],
+  "uncertainties": [
+   "요약문 마지막 문장이 '길찾기가..'로 끝나 서비스 적용 완료 여부 및 세부 계획 문장이 온전히 종결되지 않음"
+  ]
+ },
  "fee412ff779a78fe": null
 }

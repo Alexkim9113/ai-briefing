@@ -41,7 +41,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
   "value": null
  },
  "evr_2": {
@@ -86,7 +86,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
   "value": null
  },
  "evr_3": {
@@ -140,7 +140,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
   "value": null
  },
  "evr_4": {
@@ -192,10 +192,58 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
   "value": null
  },
  "evr_5": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T23:14:32.377619+00:00",
+  "direction": null,
+  "document_id": "626a1a31b56e8ec9",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [
+   "Meta",
+   "네이버"
+  ],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_5",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T11:01:24+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T23:14:41.180526+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T11:01:24+09:00",
+  "object": "메타 AI안경",
+  "population_scope": null,
+  "relation": "협력",
+  "resources": [],
+  "source_id": "src_mk_co_kr",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "네이버지도",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
+  "value": null
+ },
+ "evr_6": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -205,7 +253,7 @@
   "claim_id": "688c6d92f147a96b:c1",
   "claim_type": "MEDIA_REPORTED",
   "contradicts_ids": [],
-  "created_at": "2026-09-29T23:14:32.377619+00:00",
+  "created_at": "2026-09-30T01:50:44.594430+00:00",
   "direction": null,
   "document_id": "688c6d92f147a96b",
   "domain_scope": [],
@@ -214,7 +262,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_5",
+  "evidence_record_id": "evr_6",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -223,7 +271,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T23:14:41.180526+00:00",
+    "at": "2026-09-30T01:51:04.884521+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -246,7 +294,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-29T23:14:32.377619+00:00",
+  "updated_at": "2026-09-30T01:50:44.594430+00:00",
   "value": null
  }
 }

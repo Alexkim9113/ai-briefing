@@ -4,53 +4,53 @@
  "gemini_enabled": true,
  "pipeline_metrics": {
   "claims_by_status": {
-   "INSUFFICIENT_SOURCE": 342,
-   "SECONDARY_ONLY": 168,
+   "INSUFFICIENT_SOURCE": 350,
+   "SECONDARY_ONLY": 171,
    "SOURCE_LOCATED": 57,
-   "SUMMARY_DERIVED": 64
+   "SUMMARY_DERIVED": 57
   },
   "claims_by_type": {
-   "COMPANY_REPORTED": 32,
+   "COMPANY_REPORTED": 31,
    "COURT_FINDING": 1,
    "MEASURED": 10,
-   "MEDIA_REPORTED": 528,
-   "OTHER": 3,
+   "MEDIA_REPORTED": 529,
+   "OTHER": 7,
    "RESEARCH_FINDING": 57
   },
-  "claims_extracted": 631,
+  "claims_extracted": 635,
   "claude_calls_added": 0,
   "counter_evidence_pairs": 0,
   "documents_examined": 569,
   "embedding_calls": 0,
   "evidence_by_type": {
    "BOTTLENECK": 3,
-   "OTHER": 2
+   "OTHER": 3
   },
-  "evidence_records": 5,
+  "evidence_records": 6,
   "external_api_calls": 15,
   "facts_verified": 57,
-  "gemini_cache_hits": 0,
+  "gemini_cache_hits": 1,
   "gemini_calls_added": 15,
   "human_review_by_priority": {
-   "HIGH": 9,
-   "LOW": 538,
-   "MEDIUM": 89
+   "HIGH": 14,
+   "LOW": 539,
+   "MEDIUM": 88
   },
-  "human_review_pending": 636,
+  "human_review_pending": 641,
   "independence_overall": {
    "independent_document_count": 569,
    "independent_source_count": 255,
    "raw_document_count": 569,
    "syndication_collapsed": 0
   },
-  "interpretation_candidates": 5,
-  "level3_flagged_documents": 152,
+  "interpretation_candidates": 6,
+  "level3_flagged_documents": 145,
   "lineage_stopped_at_distribution": {
-   "CLAIM": 628,
+   "CLAIM": 632,
    "EVIDENCE_RECORD": 3
   },
   "primary_sources_resolved": 57,
-  "secondary_only_claims": 574,
+  "secondary_only_claims": 578,
   "source_verified_claims": 0,
   "structural_evidence_input_records": 0,
   "structural_evidence_input_skip_stats": {
@@ -72,7 +72,7 @@
   "reports_on_relationships_created": 0,
   "self_references": 3
  },
- "run_at": "2026-09-29T23:14:32.119368+00:00",
+ "run_at": "2026-09-30T01:50:44.316260+00:00",
  "shadow_mode": true,
  "status": "SUCCESS"
 }
