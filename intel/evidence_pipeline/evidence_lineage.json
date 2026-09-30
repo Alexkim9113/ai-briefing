@@ -3037,6 +3037,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "63433bc3b020cb2f:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "63433bc3b020cb2f",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "641a71ff188a7303:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "641a71ff188a7303",
@@ -6068,6 +6079,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "d6b794adf7b93b53:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "d6b794adf7b93b53",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "d6fa27c327baa571:c1",
    "claim_status": "SUMMARY_DERIVED",
    "document_id": "d6fa27c327baa571",
@@ -6169,6 +6191,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "dab93b32009a0922:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "dab93b32009a0922",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "daef1e4c7c82ef2d:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "daef1e4c7c82ef2d",
@@ -6186,6 +6219,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://www.itbiznews.com/news/articleView.html?idxno=226427",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "dbc88da07e499796:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "dbc88da07e499796",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -7179,6 +7223,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "fd4246f43aa9e33a:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "fd4246f43aa9e33a",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "fd62032abae488e2:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "fd62032abae488e2",
@@ -7225,62 +7280,40 @@
   },
   {
    "change_ids": [],
-   "claim_id": "63433bc3b020cb2f:c1",
+   "claim_id": "db0be1a0cfc1d481:c1",
    "claim_status": "SOURCE_LOCATED",
-   "document_id": "63433bc3b020cb2f",
+   "document_id": "db0be1a0cfc1d481",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
   {
    "change_ids": [],
-   "claim_id": "d6b794adf7b93b53:c1",
+   "claim_id": "dfeca8bdbe271f85:c1",
    "claim_status": "SOURCE_LOCATED",
-   "document_id": "d6b794adf7b93b53",
+   "document_id": "dfeca8bdbe271f85",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
   {
    "change_ids": [],
-   "claim_id": "dab93b32009a0922:c1",
+   "claim_id": "e45955d26ea76a4b:c1",
    "claim_status": "SOURCE_LOCATED",
-   "document_id": "dab93b32009a0922",
+   "document_id": "e45955d26ea76a4b",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "dbc88da07e499796:c1",
-   "claim_status": "SOURCE_LOCATED",
-   "document_id": "dbc88da07e499796",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "fd4246f43aa9e33a:c1",
-   "claim_status": "SOURCE_LOCATED",
-   "document_id": "fd4246f43aa9e33a",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
+   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 643,
+  "CLAIM": 646,
   "EVIDENCE_RECORD": 3
  }
 }
