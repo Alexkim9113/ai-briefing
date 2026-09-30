@@ -1,0 +1,144 @@
+{
+  "documents_examined": 597,
+  "primary_government_source_matches": [],
+  "primary_government_source_match_count": 0,
+  "korea_evidence_gap": true,
+  "korea_evidence_gap_note": "KOREA_EVIDENCE_GAP: this real 597-document corpus contains zero documents admitted from a Korean primary government/statistical source (KOSIS, BOK ECOS, MOTIE, Korean courts, 국회, DART) -- none of these are in admission_gate.py's TRUSTED_SOURCES today, and no live network is available in this sandbox to attempt acquiring one. This is an honest gap, not a fabricated placeholder.",
+  "korean_news_coverage_of_ai_energy_infra": [
+    {
+      "document_id": "09a8d4cb9c105e40",
+      "source_id": "src_asiatoday_co_kr",
+      "field": null,
+      "title": "LS전선, AI 데이터센터 전력망서 서버랙까지…신제품으로 사업영역 확대",
+      "canonical_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE84SXhIdmpXcmtDTjVFejJZdXdPazVVOTZhRG5UM052WWRSNUU4c05ReEdud05GVlVPdTVnb0s2Uk9INHJxX1M2b1JqMHFoU3hNb1FCTHpMOTBUQXNwVWVPZ2l3aWhQU2o4bE1oS0NB?oc=5"
+    },
+    {
+      "document_id": "0eaf81e07771f4f8",
+      "source_id": "src_mt_co_kr",
+      "field": null,
+      "title": "데이터센터부터 전력망까지…삼성 美 AI 인프라기업에 1.3조대 투자",
+      "canonical_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE42Ul9aclNzblFVRG96TzJsTzA4eWc2TXA4MVJOa0JWS1YzUmVzb2lMdC1OYmNmQjQzS0ctYV9DdHQwWUFQX0JfRG52cTJzbUpuWktGQnkwdWVWZkJQV1dNTXFjMFY2VVI2czJodQ?oc=5"
+    },
+    {
+      "document_id": "226e58772222cf19",
+      "source_id": "src_매일일보",
+      "field": "국내 연구",
+      "title": "전남광주 AI·울산 제조업 잇는다… 자동차·에너지 ‘초광역 동맹’",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5XMFd4U1ZQQXVlWktuRV8wa25WMlB5ZHdsbDFSS0VEZmZ0dmJFeUZURFk3WWh0eXJqUm02eEJYa1RNMHFMeFlOZ2RDYkRfbmx2aUlfTEdQTmlhNnNxcWtLX2g1Z9IBaEFVX3lxTE1qRGQ1djJHdlNmcFU1ZGoxSmR1OUlITk1uN2poVDlLc21RaEZPamRiRWRyR19nUTZOaTJWLVFPV19SNkRKNks1S2V3UG54ODVmLWlIZnduX2JYMUNyLU5wbDU2eTNfTmhm?oc=5"
+    },
+    {
+      "document_id": "4acccc39c6d4489d",
+      "source_id": "src_yna_co_kr",
+      "field": null,
+      "title": "전북도 민선 9기 조직개편안 나왔다…AI홍보국·에너지국 신설",
+      "canonical_url": "https://www.yna.co.kr/view/AKR20260929074800055"
+    },
+    {
+      "document_id": "4f20354442be35fe",
+      "source_id": "src_dailian_co_kr",
+      "field": null,
+      "title": "LG전자, 데이터센터 냉각 넘어 '설계·구축·운영'까지…AI 인프라 파트너로",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1kanBwUDFOcEs3a3V5aWtzTXBUYmNiMTVtcGxBMkh0dEhEMFY5M20tYmhMRGtpMlJ3WVE3cUZteEF3a2hCYmZpcmJuN3Uwb210WmlPSElvaw?oc=5"
+    },
+    {
+      "document_id": "7d2e55f008d039d7",
+      "source_id": "src_브레이크뉴스",
+      "field": "국내 연구",
+      "title": "대한민국 대표 자동차도시 전남광주·울산, ‘산업 AI·미래에너지’로 손잡았다",
+      "canonical_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tOW1yZjJUY0VKcWdSQzhtZENYSkhsSUt0cnh0Yzk5WHRBY0FDWkZPSS11d29ha0NiWGVwemZHSERoY0RPYXoxbw?oc=5"
+    },
+    {
+      "document_id": "a6a4027d9878143d",
+      "source_id": "src_rss_edaily_co_kr",
+      "field": null,
+      "title": "삼성SDI, 'DCWA 2026'서 AI 데이터센터용 배터리솔루션 공개",
+      "canonical_url": "https://www.edaily.co.kr/News/Read?newsId=03129126645585040"
+    },
+    {
+      "document_id": "af55192d35ffee3b",
+      "source_id": "src_mk_co_kr",
+      "field": null,
+      "title": "“AI 데이터센터 냉각도 레고처럼 뚝딱”…LG전자, 냉각설비 ‘모듈형’ 승부수",
+      "canonical_url": "https://www.mk.co.kr/news/business/12163459"
+    },
+    {
+      "document_id": "c4f8d657a2124698",
+      "source_id": "src_글로벌경제신문",
+      "field": "환경·에너지·동물",
+      "title": "전남광주특별시-울산시, AI·자율주행·에너지 초광역 협력 나선다",
+      "canonical_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Gb1hUM2VFWUxjYzVybmlsWkJNNEFPTUZuSzlnSWo4enNlZmRtZzAyek8tZTh2UGsxSTJ6NDhReThiM2lwTDduSm13ai1CZGJ4SExMSDctbGhPRDhqZzNqSzBZOFVGeEVRSUszNEM5SWTSAXBBVV95cUxNRm9YVDNlRVlMY2M1cm5pbFpCTTRBT01Gbks5Z0lqOHpzZWZkbWcwMnpPLWU4dlBrMUkyejQ4UXk4YjNpcEw3bkptd2otQmRieEhMTEg3LWxoT0Q4amczakswWThVRnhFUUlLMzRDOUlk?oc=5"
+    },
+    {
+      "document_id": "c542cd70bc1b6c8a",
+      "source_id": "src_호남교육신문",
+      "field": "국내 연구",
+      "title": "전남대, 서남권 반도체·에너지·AI 인재 2만3천명 양성",
+      "canonical_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UQXdTUXFmeUo4RkltM3dBRGxuMGpfd0V1YjNONGJScHpDcWE5cHNrOEFVSl8tUFNnOUpUWElhSTJUMVE0RmVaQ1VCQ3pHTHNrb2EyUjFiOG15clBMbzJvVmVzRmhfTkw0S2Z1UQ?oc=5"
+    },
+    {
+      "document_id": "e97fa667cee7e431",
+      "source_id": "src_khan_co_kr",
+      "field": null,
+      "title": "삼성SDI, 싱가포르 DCWA서 AI 데이터센터 정조준…‘원통형 LFP’ 첫선",
+      "canonical_url": "https://www.khan.co.kr/article/202609291000001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news"
+    }
+  ],
+  "korean_news_coverage_count": 11,
+  "korean_news_coverage_note": "11 real Korean NEWS-outlet documents already in this corpus discuss AI_ENERGY_INFRA's actual subject matter (power grids/data centers/energy demand); these are secondary journalistic sources, not primary statistical or government sources, so they do NOT close the KOREA_EVIDENCE_GAP above -- both facts are reported side by side rather than one being used to paper over the other.",
+  "registry_schema_check": {
+    "ok": true,
+    "problems": [],
+    "entry_count": 6
+  },
+  "registry": {
+    "KOSIS": {
+      "full_name": "Korean Statistical Information Service (국가통계포털, KOSIS)",
+      "operator": "Statistics Korea (통계청)",
+      "site_url": "https://kosis.kr",
+      "open_api_reference_url": "https://kosis.kr/openapi/",
+      "endpoint_confidence": "MEDIUM -- KOSIS publishes a real, documented Open API at kosis.kr/openapi/ (parameterized by apiKey/orgId/tblId), but this module does not fabricate a concrete resolved endpoint URL (which requires a registered API key and a chosen table id) without confirming it live; the reference page above is the authoritative starting point for any future live connector.",
+      "relevance": "General Korean government statistics (economy, industry, energy consumption)."
+    },
+    "BOK_ECOS": {
+      "full_name": "Bank of Korea Economic Statistics System (경제통계시스템, ECOS)",
+      "operator": "Bank of Korea (한국은행)",
+      "site_url": "https://ecos.bok.or.kr",
+      "open_api_reference_url": "https://ecos.bok.or.kr/api/#/",
+      "endpoint_confidence": "MEDIUM -- ECOS publishes a real, documented Open API (ecos.bok.or.kr/api/), keyed by a registered API key and statistic-table code; this module lists only the human-facing/reference URLs, not a guessed resolved request URL.",
+      "relevance": "Korean macroeconomic and financial statistics."
+    },
+    "MOTIE": {
+      "full_name": "Ministry of Trade, Industry and Energy (산업통상자원부, MOTIE)",
+      "operator": "Government of the Republic of Korea",
+      "site_url": "https://www.motie.go.kr",
+      "open_api_reference_url": null,
+      "endpoint_confidence": "LOW -- no specific open-data API endpoint is asserted here; MOTIE publishes press releases and policy documents on its own site (motie.go.kr) and via Korea's public open-data portal (data.go.kr), which is the more likely real integration point for a future connector, but this module does not claim a specific data.go.kr dataset id without confirming it live.",
+      "relevance": "The ministry directly responsible for AI_ENERGY_INFRA's subject matter in Korea (industrial and energy policy, including power-grid/data-center energy demand)."
+    },
+    "KOREA_COURTS": {
+      "full_name": "Korean court system case search (대한민국 법원, 사건검색/종합법률정보)",
+      "operator": "Court Administration / Supreme Court of Korea",
+      "site_url": "https://www.scourt.go.kr",
+      "open_api_reference_url": null,
+      "endpoint_confidence": "LOW -- no public open API is asserted; scourt.go.kr is the real, human-facing entry point only.",
+      "relevance": "Legal/policy topics requiring Korean court records."
+    },
+    "NATIONAL_ASSEMBLY": {
+      "full_name": "National Assembly of the Republic of Korea (대한민국 국회)",
+      "operator": "National Assembly",
+      "site_url": "https://www.assembly.go.kr",
+      "open_api_reference_url": "https://open.assembly.go.kr",
+      "endpoint_confidence": "MEDIUM -- the National Assembly operates a real open-data portal at open.assembly.go.kr with a documented Open API (bill status, proceedings), keyed by a registered service key; this module lists only the reference/site URLs.",
+      "relevance": "Legislative/policy topics (e.g. AI or energy legislation debated in 국회)."
+    },
+    "KOREAN_ACADEMIC_CORPORATE": {
+      "full_name": "Korean academic institutions and corporate filings (generic category)",
+      "operator": "Various (e.g. KAIST, Seoul National University; DART for corporate filings)",
+      "site_url": "https://dart.fss.or.kr",
+      "open_api_reference_url": "https://opendart.fss.or.kr/",
+      "endpoint_confidence": "MEDIUM -- DART (Korea's electronic corporate disclosure system, operated by the Financial Supervisory Service) has a real, documented Open API at opendart.fss.or.kr, keyed by a registered API key; listed here as the site/reference URL only.",
+      "relevance": "Corporate filings from Korean AI/energy/semiconductor companies (e.g. capex disclosures relevant to AI_ENERGY_INFRA)."
+    }
+  },
+  "connector_status": "NOT_RUN_LIVE"
+}

@@ -1,9 +1,51 @@
 {
-  "documents_examined": 577,
-  "documents_with_nonzero_score": 127,
+  "documents_examined": 597,
+  "documents_with_nonzero_score": 147,
   "top_n_requested": 20,
   "candidates_returned": 20,
   "candidates": [
+    {
+      "document_id": "0af865929333ce85",
+      "score": 7,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)",
+        "HIGH_SOCIAL_IMPACT: title matches ['privacy'] (+3)"
+      ],
+      "title": "Information Security and Privacy Advisory Board",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18229/information-security-and-privacy-advisory-board",
+      "published": "2025-09-19",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "4d9011aeb75ceea8",
+      "score": 7,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)",
+        "LABOR_MARKET_SHIFT: ['workforce'] (+3)"
+      ],
+      "title": "Proposed Priority and Definitions-Secretary's Supplemental Priority and Definitions on Career Pathways and Workforce Readiness",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/25/2025-18639/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-career",
+      "published": "2025-09-25",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "760ebae26d64c740",
+      "score": 7,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)",
+        "HIGH_SOCIAL_IMPACT: title matches ['privacy'] (+3)"
+      ],
+      "title": "Privacy Act of 1974; System of Records",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/15/2025-17710/privacy-act-of-1974-system-of-records",
+      "published": "2025-09-15",
+      "cluster_size": 1
+    },
     {
       "document_id": "597975da49400eea",
       "score": 5,
@@ -89,6 +131,84 @@
       "cluster_size": 1
     },
     {
+      "document_id": "04414f2c8ea844a3",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Ocean Research Advisory Panel (ORAP)",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18191/ocean-research-advisory-panel-orap",
+      "published": "2025-09-19",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "07a9ef96dd7bd930",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Proposed Priority and Definitions-Secretary's Supplemental Priority and Definitions on Promoting Patriotic Education",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/17/2025-17960/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-promoting",
+      "published": "2025-09-17",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "13e59b13604b7ad4",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Advisory Committee on the Medical Uses of Isotopes: Meeting Notice",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/26/2025-18695/advisory-committee-on-the-medical-uses-of-isotopes-meeting-notice",
+      "published": "2025-09-26",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "276454588940c9c0",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "United States of America et al. v. RealPage, Inc. et al. Proposed Final Judgment and Competitive Impact Statement",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/05/2025-17086/united-states-of-america-et-al-v-realpage-inc-et-al-proposed-final-judgment-and-competitive-impact",
+      "published": "2025-09-05",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "300addd098d03404",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Regulatory Flexibility Agenda",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/22/2025-18321/regulatory-flexibility-agenda",
+      "published": "2025-09-22",
+      "cluster_size": 1
+    },
+    {
+      "document_id": "472603c56de86f75",
+      "score": 4,
+      "reasons": [
+        "POLICY_REGULATORY: document_type == POLICY (+4)"
+      ],
+      "title": "Digital Health Advisory Committee; Notice of Meeting; Establishment of a Public Docket; Request for Comments-Generative Artificial Intelligence-Enabled Digital Mental Health Medical Devices",
+      "document_type": "POLICY",
+      "source_id": "src_federal_register",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/12/2025-17651/digital-health-advisory-committee-notice-of-meeting-establishment-of-a-public-docket-request-for",
+      "published": "2025-09-12",
+      "cluster_size": 1
+    },
+    {
       "document_id": "63433bc3b020cb2f",
       "score": 4,
       "reasons": [
@@ -102,172 +222,55 @@
       "cluster_size": 1
     },
     {
-      "document_id": "d6b794adf7b93b53",
+      "document_id": "6904b4bcb1eaa371",
       "score": 4,
       "reasons": [
         "POLICY_REGULATORY: document_type == POLICY (+4)"
       ],
-      "title": "HUD Evaluation Policy",
+      "title": "2025 Community Development Revolving Loan Fund",
       "document_type": "POLICY",
       "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
-      "published": "2026-09-24",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
+      "published": "2025-10-01",
       "cluster_size": 1
     },
     {
-      "document_id": "dab93b32009a0922",
+      "document_id": "6aa7474c11881e04",
       "score": 4,
       "reasons": [
         "POLICY_REGULATORY: document_type == POLICY (+4)"
       ],
-      "title": "Order Granting Temporary Conditional Exemptive Relief, Pursuant to Section 36(a)(1) of the Securities Exchange Act of 1934, From the Definition of “Exchange” in Section 3(a)(1) of the Exchange Act for the Use of Certain Distributed Ledger Trading Venues for Tokenized NMS Stocks and From the Definition of “Dealer” in Section 3(a)(5) of the Exchange Act for Certain Liquidity Providers for Tokenized NMS Stocks, and Request for Comment",
+      "title": "Notice of Public Meetings of the Illinois Advisory Committee to the U.S. Commission on Civil Rights",
       "document_type": "POLICY",
       "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
-      "published": "2026-09-22",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/11/2025-17532/notice-of-public-meetings-of-the-illinois-advisory-committee-to-the-us-commission-on-civil-rights",
+      "published": "2025-09-11",
       "cluster_size": 1
     },
     {
-      "document_id": "db0be1a0cfc1d481",
+      "document_id": "769e742bf21a4dc6",
       "score": 4,
       "reasons": [
         "POLICY_REGULATORY: document_type == POLICY (+4)"
       ],
-      "title": "Request for Information (RFI) Regarding the Digitization and Modernization of the National Technical Reports Library (NTRL) and the Leveraging of Scientific, Technical and Engineering Information (STEI) Stored in the NTRL",
+      "title": "Final Priorities and Definitions-Secretary's Supplemental Priorities and Definitions on Evidence-Based Literacy, Education Choice, and Returning Education to the States",
       "document_type": "POLICY",
       "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
-      "published": "2026-09-30",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/09/2025-17310/final-priorities-and-definitions-secretarys-supplemental-priorities-and-definitions-on",
+      "published": "2025-09-09",
       "cluster_size": 1
     },
     {
-      "document_id": "dbc88da07e499796",
+      "document_id": "b8a4c2850d58bbd8",
       "score": 4,
       "reasons": [
         "POLICY_REGULATORY: document_type == POLICY (+4)"
       ],
-      "title": "Request for Information; Medicare Part D Reasonable and Relevant Pharmacy Contracting Standards",
+      "title": "Accelerating Speed to Power/Winning the Artificial Intelligence Race: Federal Action To Rapidly Expand Grid Capacity and Enable Electricity Demand Growth",
       "document_type": "POLICY",
       "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
-      "published": "2026-09-24",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "dfeca8bdbe271f85",
-      "score": 4,
-      "reasons": [
-        "POLICY_REGULATORY: document_type == POLICY (+4)"
-      ],
-      "title": "Renewal of the Consumer Protection and Accessibility Advisory Committee",
-      "document_type": "POLICY",
-      "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
-      "published": "2026-09-30",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "e45955d26ea76a4b",
-      "score": 4,
-      "reasons": [
-        "POLICY_REGULATORY: document_type == POLICY (+4)"
-      ],
-      "title": "The Safer Affordable Fuel-Efficient (SAFE) Vehicles Rule III for Model Years 2022 to 2031 Passenger Cars and Light Trucks",
-      "document_type": "POLICY",
-      "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
-      "published": "2026-09-30",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "fd4246f43aa9e33a",
-      "score": 4,
-      "reasons": [
-        "POLICY_REGULATORY: document_type == POLICY (+4)"
-      ],
-      "title": "Proposed Revision of Information Collection; National Longitudinal Survey of Youth 1979",
-      "document_type": "POLICY",
-      "source_id": "src_federal_register",
-      "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
-      "published": "2026-09-29",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "003ca48c1f2e48ca",
-      "score": 3,
-      "reasons": [
-        "LABOR_MARKET_SHIFT: ['jobs', 'field=사회·노동'] (+3)"
-      ],
-      "title": "What Robot Trucks Tells About the Future of AI and Jobs - American Enterprise Institute",
-      "document_type": "NEWS",
-      "source_id": "src_aei",
-      "canonical_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWDl4NENoM09oSWx0SHBSRGRad0d3T1lPNTlDREtvMTVjTVRSQnk4RWF6cmw1SUVlLWhaVklaOEUxQnVESGRVYU9VXzB3cW13XzQ0S0hVTlhGRC0taFRNM2Z1TnNvMlNSU0NJSi1FZFlqQTVVVVRoWUdQTEFkRzZNaFNxU2QwNi1ManZiTTZZQQ?oc=5",
-      "published": "2026-09-28T19:12:20+00:00",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "003dea2169532db9",
-      "score": 3,
-      "reasons": [
-        "LARGE_INVESTMENT: title matches ['billion', 'buyback'] (+3)"
-      ],
-      "title": "Nvidia Adds $150 Billion to Massive Stock Buyback, the Largest Ever",
-      "document_type": "NEWS",
-      "source_id": "src_the_new_york_times",
-      "canonical_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9iclhOaUhUeDFGRDNBZWJzNWFOWUVtaVBwck91TFE4Um5rUDJ5Z1RsRXJSN2VWTUR3X2lmV0x5cDRqZEM5aDRwLVp5OWpzOHNtV2phY2hVNTF5NWo5M0JpYW1rcEhqTHFSTmZqZl9KSTdNZkt0QWhrZQ?oc=5",
-      "published": "2026-09-28T13:49:59+00:00",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "038a0e5dc7babbdd",
-      "score": 3,
-      "reasons": [
-        "HIGH_SOCIAL_IMPACT: title matches ['regulation'] (+3)"
-      ],
-      "title": "WashU professors discuss the uses of AI and the need for regulation",
-      "document_type": "NEWS",
-      "source_id": "src_studlife_com",
-      "canonical_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNOXlXbzhEd2gxakxRajkxem15WC1GenhRTjZVX0V2ZHZjOHlPWV9pdzJrd1AwXzg4N3VoTkJyTGRYNUJfeXFFMy1wWmUxSlkwSV9FTEE0UWY1bWVjTmdKRy1QcGRhMVBxNUJrX055eWpvVVNVdXlXZFh2WUFoZk5jbHhrRnEwZS13aXlXWXN0TG5nc0FlZzJvSUZwZXA2dW9tQnJwZWtLX2NKSktp?oc=5",
-      "published": "2026-09-28T23:07:47+00:00",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "046bd80008b09729",
-      "score": 3,
-      "reasons": [
-        "HIGH_SOCIAL_IMPACT: title matches ['규제'] (+3)"
-      ],
-      "title": "제이엘케이 \"日 의료AI 규제 훈풍…독주 체제 준비\"",
-      "document_type": "NEWS",
-      "source_id": "src_구글뉴스_ai_정책",
-      "canonical_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9IMkladFdWa0FZX2lNaDNUX3JFYl9pUE1oN3gyN0pmM0xoT1NidlU5ZDBhTU0zR1VORnZKQ0haVWpPenUtSnRkWk9hMHNNQ3pJenNSZ3dQSm05RXljWG5sNNIBeEFVX3lxTE1pYjBfTmJxbXloSjFNSzd4SWhXTXZkcWMxYVBFeFJjWjRhNkJhUlpUcW4taGFYYVQ0eUlmWGRGdDNmOGpWU0V3ckJsNWsweVNkLTdkR0Y4b2dGSG51X3g0dGtUV1V4dGR1ZFVGdXRySnYwVTRWWmk0MQ?oc=5",
-      "published": "2026-09-28T02:28:16+00:00",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "06e93634a5683e16",
-      "score": 3,
-      "reasons": [
-        "HIGH_SOCIAL_IMPACT: title matches ['regulation'] (+3)"
-      ],
-      "title": "Guide to TGA regulation of AI medical devices in Australia",
-      "document_type": "NEWS",
-      "source_id": "src_google_news_ai_regulation",
-      "canonical_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRW9uV0FjWFlxQUhVd0VrQ0lOUHZHMklzYV9JcmFhR1U1RHNhTmIybWRpZlVMWDNXczlQWXpPakJBcGtwUEl5SnhUeU9fekVzZHdjLUl5dGhxZDNLODlDZEdGNFNfZ01ySkxsZjhLZHEtWXBlYWRZczVQcGJiTi13c3lTZkJZOEU3TDVMMGxCb05McVU2VDR5MXFpb084WkRjb2dta0NHY3A4RWcwMDBBeTR0blBjTDlQOHRyeTdn?oc=5",
-      "published": "2026-09-27T14:14:10+00:00",
-      "cluster_size": 1
-    },
-    {
-      "document_id": "080c262bbf5cfa04",
-      "score": 3,
-      "reasons": [
-        "LABOR_MARKET_SHIFT: ['field=사회·노동'] (+3)"
-      ],
-      "title": "PCN, 인구감소 정책 AI 시뮬레이션…“지역 사회문제 대응 지원”",
-      "document_type": "NEWS",
-      "source_id": "src_디지털데일리",
-      "canonical_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yaGFwalY0aEJjbkNIU2p5RUJENEZyX01fMDM4STRMb2hkU1htZ2oxRWpkcFI5b3A4Zkx1QVZCX1FVYloxOVFzMVFEbF93Zjl2LVRNNENYRk5pMXo0UFpTXzdoWGE?oc=5",
-      "published": "2026-09-29T00:50:10+00:00",
+      "canonical_url": "https://www.federalregister.gov/documents/2025/09/18/2025-18058/accelerating-speed-to-powerwinning-the-artificial-intelligence-race-federal-action-to-rapidly-expand",
+      "published": "2025-09-18",
       "cluster_size": 1
     }
   ]
