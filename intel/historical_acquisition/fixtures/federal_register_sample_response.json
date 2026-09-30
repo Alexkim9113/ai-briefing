@@ -1,0 +1,34 @@
+{
+  "count": 2,
+  "description": "Documents matching AI regulatory search terms",
+  "total_pages": 1,
+  "next_page_url": null,
+  "results": [
+    {
+      "title": "Request for Comments on Artificial Intelligence Risk Management Framework",
+      "type": "Notice",
+      "abstract": "NIST requests comments on updates to the AI Risk Management Framework to reflect emerging generative AI risks.",
+      "document_number": "2026-19432",
+      "html_url": "https://www.federalregister.gov/documents/2026/09/12/2026-19432/request-for-comments-on-artificial-intelligence-risk-management-framework",
+      "pdf_url": "https://www.federalregister.gov/documents/full_text/pdf/2026-19432.pdf",
+      "publication_date": "2026-09-12",
+      "agencies": [
+        {"name": "National Institute of Standards and Technology", "id": 236}
+      ],
+      "citation": "91 FR 61234"
+    },
+    {
+      "title": "Automated Employment Decision Tools; Notice of Proposed Rulemaking",
+      "type": "Proposed Rule",
+      "abstract": "The Department proposes disclosure requirements for employers using automated decision tools in hiring.",
+      "document_number": "2026-17021",
+      "html_url": "https://www.federalregister.gov/documents/2026/08/04/2026-17021/automated-employment-decision-tools",
+      "pdf_url": "https://www.federalregister.gov/documents/full_text/pdf/2026-17021.pdf",
+      "publication_date": "2026-08-04",
+      "agencies": [
+        {"name": "Department of Labor", "id": 155}
+      ],
+      "citation": "91 FR 54321"
+    }
+  ]
+}

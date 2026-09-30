@@ -179,3 +179,42 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.5B — Historical Acquisition pilot #1: US Federal Register API (real, free,
+  # no-key official source; targets the MISSING_REGULATORY_HISTORY gap type from
+  # intel/historical_acquisition/gap_source_map.py). Same isolation pattern as evidence_shadow
+  # / reality_shadow above: own concurrency group, continue-on-error, needs build, if:
+  # always(), commits only its own new output file
+  # (intel/historical_acquisition/federal_register_pilot_result.json) -- never touches
+  # intel/documents.json or any file the core collection pipeline owns. This job's real
+  # result (live reachability of federalregister.gov from GitHub Actions' network) is only
+  # observable once this actually runs on a real cron tick -- the authoring sandbox confirmed
+  # this exact host is blocked at its own outbound proxy (403), and that fact is not
+  # fabricated as a GitHub Actions result here.
+  federal_register_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: federal-register-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Federal Register Historical Acquisition Pilot 실행 (실제 연결 시도)
+        continue-on-error: true
+        run: python3 intel/historical_acquisition/fetch_federal_register.py
+      - name: Federal Register Pilot 결과 저장 (historical_acquisition/federal_register_pilot_result.json 만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/historical_acquisition/federal_register_pilot_result.json
+          git diff --cached --quiet || git commit -m "Federal Register Historical Acquisition Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
