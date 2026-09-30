@@ -1,7 +1,7 @@
 {
  "claims_by_status": {
-  "INSUFFICIENT_SOURCE": 350,
-  "SECONDARY_ONLY": 171,
+  "INSUFFICIENT_SOURCE": 349,
+  "SECONDARY_ONLY": 172,
   "SOURCE_LOCATED": 57,
   "SUMMARY_DERIVED": 57
  },
@@ -25,7 +25,7 @@
  "evidence_records": 6,
  "external_api_calls": 15,
  "facts_verified": 57,
- "gemini_cache_hits": 1,
+ "gemini_cache_hits": 2,
  "gemini_calls_added": 15,
  "human_review_by_priority": {
   "HIGH": 14,
@@ -40,7 +40,7 @@
   "syndication_collapsed": 0
  },
  "interpretation_candidates": 6,
- "level3_flagged_documents": 145,
+ "level3_flagged_documents": 146,
  "lineage_stopped_at_distribution": {
   "CLAIM": 632,
   "EVIDENCE_RECORD": 3

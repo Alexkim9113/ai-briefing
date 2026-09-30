@@ -2921,6 +2921,58 @@
   },
   {
    "change_ids": [],
+   "claim_id": "626a1a31b56e8ec9:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "626a1a31b56e8ec9:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "626a1a31b56e8ec9:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "626a1a31b56e8ec9:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "626a1a31b56e8ec9",
+   "event_ids": [
+    "evtprod_0570e4ca485cbe49"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.mk.co.kr/news/it/12163492",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "641a71ff188a7303:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "641a71ff188a7303",
@@ -3912,7 +3964,7 @@
   {
    "change_ids": [],
    "claim_id": "82835bb5b0825df4:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "82835bb5b0825df4",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7118,58 +7170,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "626a1a31b56e8ec9:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "626a1a31b56e8ec9",
-   "event_ids": [
-    "evtprod_0570e4ca485cbe49"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.mk.co.kr/news/it/12163492",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "626a1a31b56e8ec9:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "626a1a31b56e8ec9",
-   "event_ids": [
-    "evtprod_0570e4ca485cbe49"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.mk.co.kr/news/it/12163492",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "626a1a31b56e8ec9:g3",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "626a1a31b56e8ec9",
-   "event_ids": [
-    "evtprod_0570e4ca485cbe49"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.mk.co.kr/news/it/12163492",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "626a1a31b56e8ec9:g4",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "626a1a31b56e8ec9",
-   "event_ids": [
-    "evtprod_0570e4ca485cbe49"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.mk.co.kr/news/it/12163492",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
