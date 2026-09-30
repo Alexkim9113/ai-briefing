@@ -2,3 +2,4 @@ site/
 __pycache__/
 tests/fixtures/
 .editor/
+intel/operator_brain/operator_history.json
