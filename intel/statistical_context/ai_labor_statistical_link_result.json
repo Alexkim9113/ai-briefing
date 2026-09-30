@@ -1,0 +1,6 @@
+{
+  "hypothesis_id": "hyp_ai_labor_kr_unemployment_effect",
+  "observable_implication": "AI-driven automation/job displacement in Korea should be reflected in a detectable shift in the national unemployment rate",
+  "outcome": "NOT_TESTABLE",
+  "reason": "no real observation found for source_id='worldbank_unemployment_rate_kr' in the reality pilot result -- nothing fabricated"
+}
