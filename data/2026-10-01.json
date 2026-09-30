@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated_at": "2026-10-01T00:50+09:00",
+ "generated_at": "2026-10-01T00:53+09:00",
  "items": [
   {
    "id": "0ef1c3d80bfd2916",
@@ -590,6 +590,28 @@
    }
   },
   {
+   "id": "1e914694488f31d3",
+   "title": "[미국 특징주] HPE 9% 급등...벌처서 12억달러 AMD AI 랙 수주",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XLTc2YS1xSXRTQUJEMTNUdWVHMUJ1QlZLQVhOaml3OFctVU5DeXNTNWtHQ0RpY2VHNjVJNnRHU2xjcExzTkZ6bHdFNzdqTjNkdG9jeVROeWl2ZUlk?oc=5",
+   "source": "뉴스핌",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T15:50:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "휴렛팩커드 엔터프라이즈(HPE)가 벌처서로부터 12억 달러 규모의 AMD 기반 인공지능 랙 공급 계약을 체결하면서 주가가 9% 올랐다.",
+    "p": "고성능 인공지능 인프라 시장에서 AMD 칩을 탑재한 서버 시스템 수요가 대규모 상용화 단계로 진입하고 있음을 보여준다.",
+    "t": [
+     "HPE",
+     "AMD",
+     "AI인프라",
+     "주식"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "d2ed5e3bf04fe7cd",
    "title": "AI by any other name? White House directs federal agencies to enter the era of 'super intelligence'",
    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQWkxfa21MYWpPQWhLZXUwWjhVcVR2ZWMxY2hlMDJuU2lKTzdLYUhGdXJIZXBHc1IwRXZmMW9KR3FJQ2pNRWlCYXd2Ml9UYVF5R2J2UlNqd2RhV0hSbWJOY3MyNUJBY2puSER0blp1U1B3UXNLTGNnQmI1XzBqQTNQRmUtYVZYVVlibmppeDRCa1BBSmpaTHhyalhRV21fV2lId05Lc285WXlrTjVpQUlXZGdjb1JhRFJmT1RzNQ?oc=5",
@@ -613,6 +635,23 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "4f6ccedeaaa15b68",
+   "title": "The Journey of Becoming India's First AI Artist | Harshit Agrawal | TEDxGWH School Bannerghatta",
+   "link": "https://www.youtube.com/watch?v=b7EiS8H5Ef8",
+   "source": "TEDx Talks",
+   "field": "",
+   "category": "talks",
+   "published": "2026-09-30T15:45:48+00:00",
+   "summary": "In this talk artist Harshit Agrawal describes his journey of becoming India's first AI Artist.",
+   "detail": "In this talk artist Harshit Agrawal describes his journey of becoming India's first AI Artist.\nHe is Google Arts and Culture's first artist resident in India and has held residencies globally, alongside contributing to Adobe's Gen AI charter and authoring various publications and patents.",
+   "thumb": "",
+   "title_ko": "인도 최초의 AI 아티스트가 되기까지의 여정 | 하르시트 아그라왈 | TEDxGWH School Bannerghatta",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "이 강연에서 예술가 하르싯 아그라왈은 인도 최초의 AI 아티스트가 되기까지의 여정을 설명합니다.",
+   "detail_ko": "이 강연에서 예술가 하르싯 아그라왈은 인도 최초의 AI 아티스트가 되기까지의 여정을 설명합니다.\n그는 구글 아트 앤 컬처(Google Arts and Culture)의 인도 최초 상주 예술가이며, 전 세계적으로 레지던시 활동을 해왔을 뿐만 아니라, 어도비(Adobe)의 생성형 AI 헌장 수립에 기여하고 다양한 출판물과 특허를 저술하기도 했다."
   },
   {
    "id": "a596ac5a3413c17c",
@@ -654,6 +693,28 @@
    "trv": 2,
    "summary_ko": "어른들이 성과 동의에 대해 이야기하지 않을 때, 청소년들은 답을 찾는 것을 멈추지 않습니다. 그들은 다른 곳에서, 종종 최악의 장소에서 그 답을 찾게 됩니다.",
    "detail_ko": "어른들이 성과 동의에 대해 이야기하지 않을 때, 청소년들은 답을 찾는 것을 멈추지 않습니다. 그들은 다른 곳에서, 종종 최악의 장소에서 그 답을 찾게 됩니다."
+  },
+  {
+   "id": "1265f2c462966080",
+   "title": "인간과 흡사? 휴머노이드 로봇, ‘직업’에 따라 외모 천차만별",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB1RUREcG13SnFPdmFHaUp4ajZkOTJkMVE5UVNkdDVNMWxKX0FNWEVFeFRRR00yc1NWclpETTNNUDZHUjcyQi1qeW1CUm5KR3M?oc=5",
+   "source": "v.daum.net",
+   "field": "피지컬 AI",
+   "category": "news_ko",
+   "published": "2026-09-30T15:38:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "휴머노이드 로봇이 수행하는 직무와 역할에 따라 외형과 디자인이 서로 다른 형태로 설계되고 있다.",
+    "p": "범용 로봇의 형태가 작업 환경의 효율성과 인간과의 상호작용 편의성을 높이는 방향으로 세분화되고 있다.",
+    "t": [
+     "휴머노이드",
+     "로봇공학",
+     "디자인",
+     "자동화"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "a720835a83879358",
@@ -763,6 +824,31 @@
      "반도체",
      "생산성",
      "노동"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "28d5772512c4fd0b",
+   "title": "From Training to Production, NVIDIA and CoreWeave Close the Loop on Agentic AI",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PX3hWVnRiNjdFdVFOWXVGM3R6RXJPOEd4ektLc3lqczcwc3Y0N3VfeVhMejhySC1tV3N0dE1Fa25OM2dJa0ZBbFZJYWhna3FIbUpLa1NEcUM3WktfTXl6RTgzaWdPSWl0QmdZY0pFNA?oc=5",
+   "source": "NVIDIA Blog",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:13:12+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "훈련부터 실전 적용까지, NVIDIA와 CoreWeave가 에이전트 기반 AI의 전체 사이클을 완성하다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "엔비디아와 코어위브가 인공지능 에이전트의 학습부터 실제 서비스 운영까지 전 과정을 연결하는 인프라 협력을 강화했다.",
+    "p": "복잡한 에이전트 워크로드를 안정적으로 실서비스에 배포하기 위한 클라우드와 하드웨어 간 연동이 필수가 되고 있다.",
+    "t": [
+     "엔비디아",
+     "코어위브",
+     "에이전트AI",
+     "클라우드"
     ],
     "v": 1
    }
@@ -5422,29 +5508,6 @@
    }
   },
   {
-   "id": "9ba4bbd1d739feb5",
-   "title": "자율주행·AI 에이전트 혁신 이끈다… '국가 AI 대상' 10개 기업·1인 선정",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1BS1pweWt1Y0Q4Um55WnBfTF9NcnZZYkFaYmNaeVhKMS1Cekl3blJlX3VwYWVEVGEtdEZVTDJ3cG55eUkwQlpQTkR5eGo5UTJ3bzlaT2NR?oc=5",
-   "source": "지디넷코리아",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T05:19:49+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 7,
-   "mx": {
-    "b": "자율주행과 AI 에이전트 분야에서 혁신을 이끈 10개의 기업과 1인이 '국가 AI 대상'으로 선정됐다.",
-    "p": "국내 AI 및 자율주행 생태계에서 실질적인 기술 성과와 시장 혁신을 주도하는 주역들을 발굴하고 격려하는 장이다.",
-    "t": [
-     "국가AI대상",
-     "자율주행",
-     "AI에이전트",
-     "수상기업"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "31c5a75df9b7c346",
    "title": "박세웅 ETRI 원장 AI시대 연구체계 바꾼다…임무형 R&D 90%로",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9IcVJJWDZxUllQYi02Q1Bnd3pnT1hoMXVSdHNSMUxPVi1TVms2c2xudHpleW4xVkxuR0FpWEVBMGF1Y2NLR3NOUVdRbElUNFRGQndXUDBDeEbSAVhBVV95cUxPSHFSSVg2cVJZUGItNkNQZ3d6Z09YaDF1UnRzUjFMT1YtU1ZrNnNsbnR6ZXluMVZMbkdBaVhFQTBhdWNjS0dzTlFXUWxJVDRURkJ3V1AwQ3hG?oc=5",
@@ -6455,6 +6518,56 @@
      "인공지능",
      "워터마크",
      "바이오"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "581ab3112c302ffe",
+   "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+   "link": "https://huggingface.co/blog/open-tts-leaderboard",
+   "source": "Hugging Face Blog",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T00:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Open TTS 리더보드: 다국어 텍스트-투-스피치 및 음성 복제를 위한 확장 가능한 평가",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "다국어 텍스트 음성 변환과 음성 복제 기술의 성능을 체계적으로 비교하고 평가할 수 있는 오픈 TTS 리더보드가 공개되었다.",
+    "p": "오디오 생성 모델의 품질과 다국어 지원 범위를 객관적으로 검증할 수 있는 표준화된 평가 기반이 마련되었다.",
+    "t": [
+     "TTS",
+     "음성복제",
+     "오픈소스",
+     "리더보드"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "57c495282ccc9acb",
+   "title": "Work with AI, don’t fear it",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PS0FCNmtsaHhFNVdIN05TY2dyNlQ5Umw0NDNfTUdfVEtDQlhKUERpTk40Q2Z3OTY4V0R2ZGlkMk1rYkhuMDU2WHNER2EwWEZRUHRSTnNITjVHYXZLcnZJUFE0VmliNGxHNW1tb0dMU20xQ1Q3eW0zag?oc=5",
+   "source": "University of Miami News",
+   "field": "AI 철학",
+   "category": "news_global",
+   "published": "2026-09-29T20:03:31+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI를 두려워하지 말고 함께 일하세요",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "마이애미 대학교 연구에서 인공지능을 일자리 위협으로 보기보다 협업 도구로 활용해야 한다는 분석이 제기되었다.",
+    "p": "노동 시장에서 인공지능 도입에 따른 거부감을 줄이고 생산성 향상을 위한 실질적인 수용 전략이 강조되고 있다.",
+    "t": [
+     "인공지능",
+     "노동",
+     "생산성",
+     "마이애미대학교"
     ],
     "v": 1
    }
@@ -7902,7 +8015,17 @@
    "tr": "deepl",
    "trv": 2,
    "detail_ko": "본 논문에서는 향상된 LongCat 모델과 다중 에이전트 워크플로우를 결합하여 포괄적이고 근거에 기반한 보고서를 생성하는 딥 리서치 시스템인 LongCat-DeepResearch를 소개한다.",
-   "mx_try": 2
+   "mx": {
+    "b": "향상된 롱캣 모델과 멀티 에이전트 워크플로우를 결합하여 근거 기반의 심층 보고서를 생성하는 롱캣 딥리서치 시스템이 공개되었다.",
+    "p": "대형 언어 모델이 단순 응답을 넘어 방대한 정보를 스스로 탐색하고 검증된 보고서를 도출하는 연구 역량이 고도화되고 있다.",
+    "t": [
+     "롱캣",
+     "딥리서치",
+     "멀티에이전트",
+     "논문"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "624b79430c6c4c90",
@@ -8374,8 +8497,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 2,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -8411,7 +8534,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -8429,13 +8552,13 @@
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 53
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "Sequoia Capital",
@@ -8459,7 +8582,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "TED",
@@ -8476,7 +8599,7 @@
   {
    "name": "TEDx Talks",
    "ok": true,
-   "count": 1,
+   "count": 2,
    "fetched": 15
   },
   {
@@ -8500,14 +8623,14 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 6,
+   "count": 3,
    "fetched": 10
   },
   {
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 63
+   "fetched": 62
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -8543,25 +8666,25 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 57
+   "fetched": 55
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 50
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 77
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
@@ -8729,7 +8852,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 75
+   "fetched": 72
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -8741,7 +8864,7 @@
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 44
+   "fetched": 45
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
@@ -8753,13 +8876,13 @@
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 28
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 44
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
@@ -9005,7 +9128,7 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 38
   },
   {
    "name": "주제: 정신건강 · 정신건강",
@@ -9047,7 +9170,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 381
+   "fetched": 378
   },
   {
    "name": "프레시안",

@@ -1548,5 +1548,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T15:51:04.181748+00:00"
+ },
+ "40433ccf86416395972bf4a1deac4dc74772a9ce1de0a07e9f681deb35f38d81": {
+  "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XLTc2YS1xSXRTQUJEMTNUdWVHMUJ1QlZLQVhOaml3OFctVU5DeXNTNWtHQ0RpY2VHNjVJNnRHU2xjcExzTkZ6bHdFNzdqTjNkdG9jeVROeWl2ZUlk?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:54.566521+00:00"
+ },
+ "25afc3b0fb64185404dc659f224e35ef98cd2cb0a764c13bf8f040ed59608209": {
+  "url": "https://www.youtube.com/watch?v=b7EiS8H5Ef8",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:55.288064+00:00"
+ },
+ "cc9d644784c09e50321d1511b8a7187cb05963aba51929ff20edcfdc198ac60d": {
+  "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB1RUREcG13SnFPdmFHaUp4ajZkOTJkMVE5UVNkdDVNMWxKX0FNWEVFeFRRR00yc1NWclpETTNNUDZHUjcyQi1qeW1CUm5KR3M?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:55.625514+00:00"
+ },
+ "647e0b91f91dfcde96649cea3282fe970872f47e53aa046c7fd8e25da2210434": {
+  "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PX3hWVnRiNjdFdVFOWXVGM3R6RXJPOEd4ektLc3lqczcwc3Y0N3VfeVhMejhySC1tV3N0dE1Fa25OM2dJa0ZBbFZJYWhna3FIbUpLa1NEcUM3WktfTXl6RTgzaWdPSWl0QmdZY0pFNA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:55.959246+00:00"
+ },
+ "bdb08491ccae57eabd7dba45feff003ab6685e198a8d35145abddd9f058fb63e": {
+  "url": "https://techcrunch.com/2026/09/30/3-days-left-to-exhibit-at-techcrunch-disrupt-2026-2/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:53:56.057439+00:00"
+ },
+ "69b2b144888a56a7485c78a23be1b6fbd7787041f3e44eb7572b9a0766732c9c": {
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOOUZHUHk0dmozbHVUVkxfU2xGMDhwTzFOX1BIVHpUdnd5WFBjYTdidEVhNG5MRnRFNEFGQTZFejcyTllkZmc2aXRtUWF0Z0o5QkdPSDM0LU9SWGNrM2M0YnZkd2pxaG5BZ2lEamlCd3hybnRaTVlDQlFUVEF2VEhURVZrUEl3anJFWVJqRVR1T0RRVGVydVNCdVJ2RUJCaHJvM3AxNk8yN2xQZ01Hd1NLbGo3RjBIMTlSMjQ4T2hvaUhFVnd3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:56.365035+00:00"
+ },
+ "73516962944f296e3c52a18bf6aa367e00c439e21742b677357c8b01cd96a05f": {
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOY1ctSWNxWWJHa1pZbm1KRnZ1NTVCbTBEbjh2MllkOWM1ZU5LZmV3NllQQlNWYnZzenhOcTdpSlFlM1d4U2l5YU9zUVhtM0RvdXplXzlyTVBjYXFLcFpSelc1S2JSYkw5TGhIYXlnSzFRN2doTEJBR2hrM3k5SllUanR3WQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:56.690199+00:00"
+ },
+ "3faf50a10a6dbe56686a5fce5ae8efbc210cba13820aeb2ae83d8c12e602befb": {
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUnk0dFNfeFVrQXRJbGI2YW9sc0hfR1Njc2RzYl8tRXhMREE4WGhlSlV0S2RxNTdJSU5FVHBabUJXTlUydGNEd3JEX1d4aHhvWTRPRllITE0tZEFGd2M5NlVQUG5aTTFIRHB5akRLeWhKSEVjUVVaWDRLWWF5cVh3SVJDVmdkMDU1UEJKcWU4bDlnMEhyVThOWldCMlZ6Rjl5WTNmdmtaTlRjMERLNGlj?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:56.990063+00:00"
+ },
+ "7379c86d0bcc5eca31c566a026d7dceac886b02697af4f70ac9e733693b2b229": {
+  "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNOGpsNklkTFRoM0dxVzRKMWRQVXdkQ3R3VEpLWUNJb0ZvNFJzY1ZzMXBCS290aU1ELUhyMU4zaVJScTNyNDBiNXFOWnl2SEpoQWx5V0R4dlo2UHFVMEh5RDdiSEdhSmcxaTN3T1Btaml2STk4Y19zWUpnNWRTemZSMFkwRlNrTVc0dElRUndfZF93TFRD?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:57.302511+00:00"
+ },
+ "50f70483f8ea86835fd2e7796aaae1dab79d44ca46889fede6abd54f065dbe1b": {
+  "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tcmFSRGxZV2dWSjNyNktoelJjaWE4YkpvYy05R2ZueWNCUGVXRkFfc3MxaTg4LUNCZnR6cTRTRTYwSmVQdWFneHB6X0R1bjZaVmdvd3F3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:53:57.598499+00:00"
  }
 }
