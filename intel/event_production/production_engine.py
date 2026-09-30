@@ -4,6 +4,7 @@
 # 않고 별도 산출물로 만든다(안전한 통합). Public에는 연결하지 않는다.
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -37,6 +38,15 @@ def load_all_raw_items():
         for it in d.get("items", []):
             by_id[it["id"]] = it
     return by_id
+
+
+def _load_existing_json(path, default):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return default
 
 
 def load_facts_by_document():
@@ -128,12 +138,38 @@ def run():
     overrides = load_overrides()
     confirmed_events, human_rejected = apply_overrides(confirmed_events, overrides)
 
-    fact_packs = {}
+    # PHASE M.5A — CORPUS MEMORY-LOSS FIX: production_events.json is the durable canonical
+    # Production Event store, downstream of stable intel/documents.json. Before this fix, `run()`
+    # rebuilt confirmed_events purely from load_all_raw_items() (data/2026-*.json globs) and
+    # OVERWROTE production_events.json with only that — so an event whose documents' raw file(s)
+    # had rotated out of data/ silently vanished on the next run, even though intel/documents.json
+    # (the stable store) never lost the underlying document. Now we start from what is already on
+    # disk and only overwrite/add events this run can actually recompute; a prior event is removed
+    # only by an explicit human override (REASON=HUMAN_REJECTED), never by raw-file rotation alone.
+    events_path = OUT_DIR.joinpath("production_events.json")
+    prior_events = _load_existing_json(events_path, {})
+    merged_events = dict(prior_events)
+    merged_events.update(confirmed_events)
+    removal_log_path = OUT_DIR.joinpath("production_events_removed.json")
+    removal_log = _load_existing_json(removal_log_path, [])
+    now_iso = datetime.now(timezone.utc).isoformat()
+    for eid in human_rejected:
+        if eid in merged_events:
+            del merged_events[eid]
+            removal_log.append({"event_id": eid, "reason": "HUMAN_REJECTED", "removed_at": now_iso})
+    confirmed_events = merged_events
+
+    prior_fact_packs = _load_existing_json(OUT_DIR.joinpath("event_fact_packs.json"), {})
+    fact_packs = dict(prior_fact_packs)
     for eid, ev in confirmed_events.items():
         fact_packs[eid] = build_fact_pack(
             eid, ev["event_name"], ev["event_type"], ev["event_date"], ev["primary_document_id"],
             ev["related_document_ids"], ev["entities"], facts_by_doc)
+    for entry in removal_log:
+        fact_packs.pop(entry["event_id"], None)
 
+    OUT_DIR.joinpath("production_events_removed.json").write_text(
+        json.dumps(removal_log, ensure_ascii=False, indent=1), encoding="utf-8")
     OUT_DIR.joinpath("production_events.json").write_text(
         json.dumps(confirmed_events, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     OUT_DIR.joinpath("ongoing_issues.json").write_text(

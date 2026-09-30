@@ -37,6 +37,15 @@ def load_raw_items():
     return by_id
 
 
+def _load_existing_json(path, default):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return default
+
+
 def _change_id(object_term, entities):
     key = object_term + "|" + "|".join(sorted(entities))
     return "chg_" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
@@ -60,9 +69,17 @@ def run():
     documents_by_id = load_documents()
 
     existing = load_existing_changes()
-    changes = {}
-    change_evidence = {}
-    fact_packs = {}
+    # PHASE M.5A — CORPUS MEMORY-LOSS FIX: changes.json is the durable, canonical Change
+    # store. Start from what is already known and only overwrite entries this run actually
+    # recomputes. Before this fix, `changes = {}` meant any change whose object/mechanism
+    # terms could no longer be recovered this run (e.g. a daily raw file the anchor document's
+    # text lived in had rotated out of data/2026-*.json) silently vanished from changes.json on
+    # the very next write, with no reason recorded — the exact "아모데" failure mode observed
+    # between M.4 and M.5. A change is now only ever removed by an explicit human override
+    # (REASON=HUMAN_REJECTED, applied in place by apply_overrides below), never by rotation.
+    changes = dict(existing)
+    change_evidence = _load_existing_json(HERE / "change_evidence.json", {})
+    fact_packs = _load_existing_json(HERE / "change_fact_packs.json", {})
     independence_rejections = []
     for cand in candidates:
         cid = _change_id(cand["object_term"], cand["entities"])
@@ -125,6 +142,7 @@ def run():
         "input_confirmed_events": len(events),
         "raw_candidate_groups": len(candidates),
         "changes_created": len(changes),
+        "changes_preserved_from_prior_run": max(0, len(changes) - len(candidates)),
         "changes_by_status": _count_by(changes, "status"),
         "changes_by_direction": _count_by(changes, "direction"),
         "independence_gate_rejections": len(independence_rejections),
