@@ -1338,5 +1338,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T15:24:27.350734+00:00"
+ },
+ "81cbfc399d1e03d6e43e0e81966e1c4b3b11f6a0b677c949058851fdb6182f0c": {
+  "url": "https://www.donga.com/news/Economy/article/all/20260930/134763028/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:32:40.525858+00:00"
+ },
+ "517f1cf55c9be12aa43079e9a90247de95059f3549d6bde852ab061cb5bb9d53": {
+  "url": "https://www.donga.com/news/Economy/article/all/20260930/134762974/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:32:42.487746+00:00"
+ },
+ "5805bc13e3dcedc4d639fc8746150b70345863dbc82cc9428dbecf32ee707fc2": {
+  "url": "https://www.donga.com/news/Economy/article/all/20260930/134763000/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:32:44.758339+00:00"
+ },
+ "e4769c6b40350e85c12048eb3a4372be5504b0ef97e3178861b5c4622ed19576": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226763",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:32:46.661020+00:00"
+ },
+ "88635b0c10871cfb745d5af80a680ac9b2da829ce42c2ebdaa443ba0a3027f9f": {
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZGI3OE0tREFvTHdLdWtnb1JSX3VYN3NXNDhUTmZfMnlORGgyZTRFTGpzQmI0LXYxOXpRQ0d4SE9UUjU5TXdPM24yWmVJWms3QTc2dXBhd0gzVFpZUXVXVmtlcHVjVGI1RHh3RVV4MmJMSmVzZFZFZW9NRDRkX2FnZzBIejd6d9IBbEFVX3lxTE05VWsxUlR6bE5ZRS1oTVFsa2ZWOEw2M0g4WDRKU3FXTFFoNVdLRUdfVVhFZTlxOUlJbVVBeDE1QmVtUWh3eU1iWFFoTFNwVnUwbTZUcktoSTBTd2FzbEkzNGxzMGpvVkhhZWFMXw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:46.904516+00:00"
+ },
+ "7ad7513604fd9642f13ee924426c44118a36507cdb9f3578f51c79e3947f0df8": {
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQWZsb0lWVElkQTR3NlJmcVdqQ3UxWXkxNXVHZ3Nnc0laQVBLM0c4ZTBlOHBPc1pFNEZvYU84V21KVkN1WmhpY0dNU1UxUEdnb0lpWWt6RDhxN21TR01zQkRqcEtLSnJlNzlWYzk5Z1MwN2otNVpzV2JuVmJJak9xSXJDZDdKVV9ZWVNlR1pyN0NtdjhaUG9sNUxhNjBTUQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:47.191369+00:00"
+ },
+ "5be70370e2bbfbb48e625b866439e7ec16d9ab23249e9104c876eef6d207d455": {
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSXV3OVlGcnRrS1h2cVJoTXJ2NWtFbTNNajBKemhTUFcyOU9sMEJrSFhtejlIZExZY2gxZ0VuTE14c1lTQzVlbURuTXI3UmpnSHZfSjdZdFhwdUR5QVhvcVR1X2FaVWFYbk0tNTJ5LXdUT1FZRnJYMTBtdktsNEgxbm1QbG5kUQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:47.355621+00:00"
+ },
+ "95da28799e4d5bf22ff5650bb72d47659b6fac53affb41f791b0a76a1363f5ba": {
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTENuX0Q1WnJlSXAzRWFhbXZmb0E0R0ZTWUN1UXYwQ0txMGgyTWktQmJqbkRvbVB1U2xHVy1sLXZ3bVBVVm5UVDdVbEZxWHBTT0QwQWxuVlZiTEJoZkcwU0w4dWg2MkNCQlBtM3RlUWRjS2hVaTgzYThlZkFybHY3M25xcGJpa3ZUTEkxRi1nU0tUWG1TZ01JV1ZPazctY3JIazlFQg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:47.604560+00:00"
+ },
+ "36225d48d662dfa727a04451084a76edf78462221c0331683961d3cc380ea899": {
+  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMFJRUFd5SzRiTmU0TWRNMmRPbGNLT1JwUExsLTgwRm04bTRmTnB3SVRWTmFxcDFjQUk1U1ZHbUVQT19wVjBJQUxXdmFlcWpFdnlLZ1oyNHBuQnVIcVNnYkNpeGtkeHlwZ1dqbXhCV0RjZF82ZWFlb0syWndYcHRyTWt1OUprdFQzNVZIS0gtRGFEZ1NHdWhJTS1Yd2lVeUwwNU9UaUZzRFZLb3VIRFByVFBPUExXRUpt?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:47.819927+00:00"
+ },
+ "83c540f8e0e6881d7a6b2c2a2d1101f072ccc487a7b72850dc66e301a97e4be1": {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9CUVI2dHNHdy1PVzcyb0FkTEt6M1MwR2wyUU1WQjREbVFtVzBuYkFpUkNURjBqbkpyUms2UHZKRUpyanVQUkw4aFdPaXBJcnlTWWJlTmF2c2Y5VVVhd2oyTkllbDhwbDJ1ZE5jX25qUVBKZw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:32:48.193152+00:00"
  }
 }
