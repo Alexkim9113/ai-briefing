@@ -1,4 +1,57 @@
 {
+ "04414f2c8ea844a3": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "04414f2c8ea844a3",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Commerce Department",
+   "National Oceanic and Atmospheric Administration"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18191/ocean-research-advisory-panel-orap",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "07a9ef96dd7bd930": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "07a9ef96dd7bd930",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Education Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/17/2025-17960/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-promoting",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "0af865929333ce85": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "0af865929333ce85",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Commerce Department",
+   "National Institute of Standards and Technology"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18229/information-security-and-privacy-advisory-board",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "0b57067446995074": {
   "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
@@ -19,6 +72,23 @@
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.3384/ecp1392a41",
   "update_kind": "REMOVAL",
+  "validation_status": "VALIDATION_OK"
+ },
+ "13e59b13604b7ad4": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "13e59b13604b7ad4",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Nuclear Regulatory Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/26/2025-18695/advisory-committee-on-the-medical-uses-of-isotopes-meeting-notice",
+  "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
  "168f0b33ecd2b448": {
@@ -43,6 +113,76 @@
   "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
+ "276454588940c9c0": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "276454588940c9c0",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Justice Department",
+   "Antitrust Division"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/05/2025-17086/united-states-of-america-et-al-v-realpage-inc-et-al-proposed-final-judgment-and-competitive-impact",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "300addd098d03404": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "300addd098d03404",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Securities and Exchange Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/22/2025-18321/regulatory-flexibility-agenda",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "472603c56de86f75": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "472603c56de86f75",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Health and Human Services Department",
+   "Food and Drug Administration"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/12/2025-17651/digital-health-advisory-committee-notice-of-meeting-establishment-of-a-public-docket-request-for",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "4d9011aeb75ceea8": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "4d9011aeb75ceea8",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Education Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/25/2025-18639/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-career",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "63433bc3b020cb2f": {
   "admission_status": "ADMITTED",
   "admitted_at": "2026-09-30T11:45:29.888782+00:00",
@@ -57,6 +197,74 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "6904b4bcb1eaa371": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "6904b4bcb1eaa371",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "National Credit Union Administration"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "6aa7474c11881e04": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "6aa7474c11881e04",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Civil Rights Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/11/2025-17532/notice-of-public-meetings-of-the-illinois-advisory-committee-to-the-us-commission-on-civil-rights",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "760ebae26d64c740": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "760ebae26d64c740",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Veterans Affairs Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/15/2025-17710/privacy-act-of-1974-system-of-records",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "769e742bf21a4dc6": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "769e742bf21a4dc6",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Education Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/09/2025-17310/final-priorities-and-definitions-secretarys-supplemental-priorities-and-definitions-on",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
@@ -82,6 +290,75 @@
   "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
+ "b8a4c2850d58bbd8": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "b8a4c2850d58bbd8",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Energy Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/18/2025-18058/accelerating-speed-to-powerwinning-the-artificial-intelligence-race-federal-action-to-rapidly-expand",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "b9132706b192018f": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "b9132706b192018f",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Commerce Department",
+   "Industry and Security Bureau"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/16/2025-17893/additions-and-revisions-to-the-entity-list",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "c19fc06aa089528b": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "c19fc06aa089528b",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Environmental Protection Agency"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/10/02/2025-19268/effluent-limitations-guidelines-and-standards-for-the-steam-electric-power-generating-point-source",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "c44ad1c92b9bfb01": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "c44ad1c92b9bfb01",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Federal Communications Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/22/2025-18318/unified-agenda-of-federal-regulatory-and-deregulatory-actions-spring-2025",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "c6d77cae9d29896d": {
   "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
@@ -102,6 +379,23 @@
   "source_type": "RESEARCH_REPOSITORY",
   "source_url": "https://doi.org/10.5304/jafscd.2013.041.001",
   "update_kind": "REMOVAL",
+  "validation_status": "VALIDATION_OK"
+ },
+ "ca3f9803426c7e7e": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "ca3f9803426c7e7e",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Science and Technology Policy Office"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18121/notice-of-request-for-information-technology-roadmap-to-increase-wildfire-firefighting-capabilities",
+  "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
  "d6b794adf7b93b53": {
@@ -206,6 +500,58 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "e8f2a35d653481e0": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "e8f2a35d653481e0",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Education Department"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/25/2025-18640/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-meaningful",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "ef0eefee23ced086": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "ef0eefee23ced086",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Homeland Security Department",
+   "Coast Guard"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/10/2025-17361/cooperative-research-and-development-agreement-voicebrain",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "f0cedcefd9da5ba7": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T13:13:45.768929+00:00",
+  "document_id": "f0cedcefd9da5ba7",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T13:13:12.642560+00:00",
+  "source_organization": [
+   "Science and Technology Policy Office"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2025/09/26/2025-18737/notice-of-request-for-information-regulatory-reform-on-artificial-intelligence",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },

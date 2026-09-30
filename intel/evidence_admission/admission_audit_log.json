@@ -513,5 +513,165 @@
   "reason": "failed check PUBLICATION_DATE_VALID",
   "source": "src_crossref",
   "timestamp": "2026-09-30T13:13:36.660335+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17086",
+  "decision": "ADMITTED",
+  "document_id": "276454588940c9c0",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17310",
+  "decision": "ADMITTED",
+  "document_id": "769e742bf21a4dc6",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17361",
+  "decision": "ADMITTED",
+  "document_id": "ef0eefee23ced086",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17532",
+  "decision": "ADMITTED",
+  "document_id": "6aa7474c11881e04",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17651",
+  "decision": "ADMITTED",
+  "document_id": "472603c56de86f75",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17710",
+  "decision": "ADMITTED",
+  "document_id": "760ebae26d64c740",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17893",
+  "decision": "ADMITTED",
+  "document_id": "b9132706b192018f",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17960",
+  "decision": "ADMITTED",
+  "document_id": "07a9ef96dd7bd930",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18058",
+  "decision": "ADMITTED",
+  "document_id": "b8a4c2850d58bbd8",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18121",
+  "decision": "ADMITTED",
+  "document_id": "ca3f9803426c7e7e",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18191",
+  "decision": "ADMITTED",
+  "document_id": "04414f2c8ea844a3",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18229",
+  "decision": "ADMITTED",
+  "document_id": "0af865929333ce85",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18318",
+  "decision": "ADMITTED",
+  "document_id": "c44ad1c92b9bfb01",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18321",
+  "decision": "ADMITTED",
+  "document_id": "300addd098d03404",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18639",
+  "decision": "ADMITTED",
+  "document_id": "4d9011aeb75ceea8",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18640",
+  "decision": "ADMITTED",
+  "document_id": "e8f2a35d653481e0",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18695",
+  "decision": "ADMITTED",
+  "document_id": "13e59b13604b7ad4",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18737",
+  "decision": "ADMITTED",
+  "document_id": "f0cedcefd9da5ba7",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-19091",
+  "decision": "ADMITTED",
+  "document_id": "6904b4bcb1eaa371",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-19268",
+  "decision": "ADMITTED",
+  "document_id": "c19fc06aa089528b",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-09-30T13:13:45.768929+00:00"
  }
 ]
