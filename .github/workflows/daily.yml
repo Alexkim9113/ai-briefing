@@ -180,6 +180,48 @@ jobs:
             git fetch origin main && git rebase -X theirs origin/main
           done
 
+  # PHASE M.5C — Verified Evidence Admission Gate. Runs AFTER federal_register_shadow commits
+  # its shadow result, and is the ONLY job (and admission_gate.admit_shadow_result() the ONLY
+  # function) allowed to write intel/documents.json for acquired evidence. Reads
+  # intel/historical_acquisition/federal_register_pilot_result.json (never the raw fetcher
+  # output directly) and re-validates every canonicalized candidate against the 10 admission
+  # checks (FETCH_OK/PARSE_OK/VALIDATION_OK/CANONICAL_URL_VALID/SOURCE_IDENTIFIED/
+  # SOURCE_TYPE_IDENTIFIED/PUBLICATION_DATE_VALID/PROVENANCE_PRESENT/IDENTITY_RESOLVED/
+  # COPYRIGHT_POLICY_RESOLVED) before admitting anything. Idempotent by construction: a
+  # document already in documents.json with an unchanged content_hash is DUPLICATE_EXISTING,
+  # never re-admitted or duplicated -- this is what the operator will verify by triggering this
+  # workflow twice in a row. Own concurrency group + continue-on-error on the admission step +
+  # if: always(), same isolation discipline as every other shadow/acquisition job above; this
+  # job commits documents.json plus its own intel/evidence_admission/*.json provenance/audit
+  # sidecars, and nothing else.
+  evidence_admission:
+    needs: [build, federal_register_shadow]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-admission
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verified Evidence Admission Gate 실행 (federal_register_pilot_result.json → documents.json)
+        continue-on-error: true
+        run: python3 intel/evidence_admission/run_admission.py
+      - name: Admission 결과 저장 (documents.json + evidence_admission 산출물만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
+          git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
+
   # PHASE M.5B — Historical Acquisition pilot #1: US Federal Register API (real, free,
   # no-key official source; targets the MISSING_REGULATORY_HISTORY gap type from
   # intel/historical_acquisition/gap_source_map.py). Same isolation pattern as evidence_shadow

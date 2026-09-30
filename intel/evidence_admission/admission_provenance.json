@@ -1,0 +1,36 @@
+{
+ "2dc0fb80fcc52650": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:41:11.471494+00:00",
+  "document_id": "2dc0fb80fcc52650",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T11:40:55.061460+00:00",
+  "source_organization": [
+   "National Institute of Standards and Technology"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/12/2026-19432/request-for-comments-on-artificial-intelligence-risk-management-framework",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "941862a838846097": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-09-30T11:41:11.471494+00:00",
+  "document_id": "941862a838846097",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-09-30T11:40:55.061460+00:00",
+  "source_organization": [
+   "Department of Labor"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/08/04/2026-17021/automated-employment-decision-tools",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ }
+}

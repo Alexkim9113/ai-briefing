@@ -1663,6 +1663,29 @@
   "title": "전북교육청 직원 17명 'AI 챔피언' 인증…교육행정 AI 전환 가속도",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
  },
+ "2dc0fb80fcc52650": {
+  "abstract_excerpt": "NIST requests comments on updates to the AI Risk Management Framework to reflect emerging generative AI risks.",
+  "agencies": [
+   "National Institute of Standards and Technology"
+  ],
+  "canonical_url": "https://www.federalregister.gov/documents/2026/09/12/2026-19432/request-for-comments-on-artificial-intelligence-risk-management-framework",
+  "category": "policy",
+  "citation": "91 FR 61234",
+  "content_hash": "290b0be8978d4915",
+  "country": "US",
+  "created_at": "2026-09-30T11:41:11.471648+00:00",
+  "document_id": "2dc0fb80fcc52650",
+  "document_type": "POLICY",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": "Notice",
+  "jurisdiction": "US_FEDERAL",
+  "published": "2026-09-12",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_federal_register",
+  "title": "Request for Comments on Artificial Intelligence Risk Management Framework",
+  "updated_at": "2026-09-30T11:41:11.471648+00:00"
+ },
  "2e790be387745d18": {
   "_identifiers": [],
   "canonical_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1HdENSQkxtVTZzUlVOU1h0b3UzenRDVUxvajVaMUpjak9TY2V3dGc3T2FxS0U2NVZITjlXblVGN1YwR1VuUUdaZ3R2cGJUb2s?oc=5",
@@ -5185,6 +5208,29 @@
   "source_id": "src_프레스뉴스",
   "title": "울산광역시-전남광주통합특별시 미래동반성장 위해 산업 인공지능전환(AX)‘맞손’",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
+ },
+ "941862a838846097": {
+  "abstract_excerpt": "The Department proposes disclosure requirements for employers using automated decision tools in hiring.",
+  "agencies": [
+   "Department of Labor"
+  ],
+  "canonical_url": "https://www.federalregister.gov/documents/2026/08/04/2026-17021/automated-employment-decision-tools",
+  "category": "policy",
+  "citation": "91 FR 54321",
+  "content_hash": "b8fe105e571469ad",
+  "country": "US",
+  "created_at": "2026-09-30T11:41:11.471692+00:00",
+  "document_id": "941862a838846097",
+  "document_type": "POLICY",
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": "Proposed Rule",
+  "jurisdiction": "US_FEDERAL",
+  "published": "2026-08-04",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_federal_register",
+  "title": "Automated Employment Decision Tools; Notice of Proposed Rulemaking",
+  "updated_at": "2026-09-30T11:41:11.471692+00:00"
  },
  "951237163b121a0b": {
   "_identifiers": [],
