@@ -166,6 +166,49 @@ SOURCES = [
         "canonical_url": "https://ecos.bok.or.kr/",
         "license": "KOGL-1",
     },
+    # PHASE M.5D — two additional REAL World Bank series (same proven no-auth World Bank
+    # Indicators API path as worldbank_gdp_kr above, different indicator codes, never a
+    # re-fetch of the M.3 GDP series), chosen to match the AI-infrastructure/energy and
+    # AI+labor pilot topics selected for this phase (see corpus field distribution:
+    # "에너지·환경" / Energy-Environment, 11 real docs; "사회·노동" / Society-Labor, 11 real docs).
+    {
+        "source_id": "worldbank_electric_power_consumption_kr",
+        "organization": "World Bank",
+        "country": "KOR",
+        # World Bank's own documented no-auth endpoint: electric power consumption (kWh per
+        # capita) -- a real, relevant proxy for AI-infrastructure/data-center energy demand.
+        "url": "https://api.worldbank.org/v2/country/kr/indicator/EG.USE.ELEC.KH.PC?format=json&per_page=5",
+        "indicator_id": "ind_worldbank_kr_electric_power_consumption_pc",
+        "canonical_name": "KR_ELECTRIC_POWER_CONSUMPTION_KWH_PC",
+        "display_name": "Korea Electric Power Consumption (kWh per capita)",
+        "domain": "ENERGY",
+        "unit": "KWH_PER_CAPITA",
+        "frequency": "ANNUAL",
+        "geography": "COUNTRY",
+        "source_tier": "TIER_1",
+        "dataset_name": "World Development Indicators: EG.USE.ELEC.KH.PC",
+        "canonical_url": "https://data.worldbank.org/indicator/EG.USE.ELEC.KH.PC?locations=KR",
+        "license": "CC-BY-4.0",
+    },
+    {
+        "source_id": "worldbank_rd_expenditure_gdp_kr",
+        "organization": "World Bank",
+        "country": "KOR",
+        # World Bank's own documented no-auth endpoint: R&D expenditure (% of GDP) -- a real,
+        # relevant proxy for AI-agents/AI-research investment intensity.
+        "url": "https://api.worldbank.org/v2/country/kr/indicator/GB.XPD.RSDV.GD.ZS?format=json&per_page=5",
+        "indicator_id": "ind_worldbank_kr_rd_expenditure_gdp_pct",
+        "canonical_name": "KR_RD_EXPENDITURE_PCT_GDP",
+        "display_name": "Korea R&D Expenditure (% of GDP)",
+        "domain": "SCIENCE",
+        "unit": "PERCENT_OF_GDP",
+        "frequency": "ANNUAL",
+        "geography": "COUNTRY",
+        "source_tier": "TIER_1",
+        "dataset_name": "World Development Indicators: GB.XPD.RSDV.GD.ZS",
+        "canonical_url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS?locations=KR",
+        "license": "CC-BY-4.0",
+    },
 ]
 
 
@@ -203,7 +246,7 @@ def run_pilot():
             # Real, deterministic, source-specific schema parsing - HTTP 200 alone is never
             # treated as success (spec section 4): success requires a real parsed Observation.
             provenance_id = f"prov_{src['source_id']}_{retrieved_at}"
-            if src["source_id"] == "worldbank_gdp_kr":
+            if src["source_id"].startswith("worldbank_"):
                 observation, reason = parse_worldbank_observation(
                     fetch_result.get("data"), indicator_id=src["indicator_id"],
                     unit=src["unit"], retrieved_at=retrieved_at, provenance_id=provenance_id,
