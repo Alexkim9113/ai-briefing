@@ -2724,6 +2724,50 @@
   },
   {
    "change_ids": [],
+   "claim_id": "597975da49400eea:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "59b0e24ab40ae762:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "59b0e24ab40ae762",
@@ -7176,50 +7220,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "597975da49400eea:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "597975da49400eea",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "597975da49400eea:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "597975da49400eea",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "597975da49400eea:g3",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "597975da49400eea",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "597975da49400eea:g4",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "597975da49400eea",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
