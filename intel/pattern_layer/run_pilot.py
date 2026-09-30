@@ -19,6 +19,8 @@ from evidence import find_contradicting_changes, change_quality_record  # noqa: 
 from fact_pack import build_pattern_fact_pack  # noqa: E402
 from overrides import load_overrides, apply_overrides  # noqa: E402
 from memory import load_existing_patterns, upsert_pattern  # noqa: E402
+from schema import MIN_INDEPENDENT_CHANGES  # noqa: E402
+import source_independence_gate as sig  # noqa: E402 — PHASE M.1 GAP B: source-independence gate
 
 CHANGE_DIR = ROOT / "intel" / "change_layer"
 SIGNAL_DIR = ROOT / "intel" / "signal_layer"
@@ -76,18 +78,38 @@ def _span_days(first, last):
 
 
 def run(changes_override=None, signals_override=None, out_dir=None,
-        previous_snapshot_path=None, overrides_path=None):
+        previous_snapshot_path=None, overrides_path=None,
+        documents_by_id_override=None, events_by_id_override=None, reports_on_pairs_override=None):
     """*_override/out_dir/*_path는 synthetic fixture 테스트 전용 격리 경로. 기본값은 실제 운영 경로."""
     out_dir = Path(out_dir) if out_dir else HERE
     active_changes = changes_override if changes_override is not None else load_active_changes()
     active_signals = signals_override if signals_override is not None else load_active_signals()
+
+    # PHASE M.1 — GAP B remediation: source-independence gate. Loaded once per run, real
+    # corpus by default (documents.json + production_events.json), fixture-overridable for
+    # synthetic tests. This ONLY ever removes candidates that clear MIN_INDEPENDENT_CHANGES on
+    # raw change_id count but do not clear it once derivative/same-source changes are
+    # collapsed into one evidence family - it never lowers MIN_INDEPENDENT_CHANGES itself and
+    # never promotes a candidate the existing logic would otherwise reject.
+    if documents_by_id_override is not None or events_by_id_override is not None:
+        documents_by_id = documents_by_id_override or {}
+        events_by_id = events_by_id_override or {}
+    else:
+        documents_by_id, events_by_id = sig.load_real_corpus_trail_inputs()
 
     change_fact_packs = {}
     cfp_path = CHANGE_DIR / "change_fact_packs.json"
     if changes_override is None and cfp_path.exists():
         change_fact_packs = json.loads(cfp_path.read_text(encoding="utf-8"))
 
-    candidates = generate_pattern_candidates(active_changes, active_signals)
+    candidates_before_independence_gate = generate_pattern_candidates(active_changes, active_signals)
+    candidates = [
+        cand for cand in candidates_before_independence_gate
+        if sig.passes_independence_gate(cand["change_ids"], active_changes, documents_by_id,
+                                         events_by_id, MIN_INDEPENDENT_CHANGES,
+                                         reports_on_pairs=reports_on_pairs_override)
+    ]
+    candidates_rejected_by_independence_gate = len(candidates_before_independence_gate) - len(candidates)
 
     existing = load_existing_patterns(Path(previous_snapshot_path) if previous_snapshot_path
                                        else out_dir / "patterns.json")
@@ -159,6 +181,7 @@ def run(changes_override=None, signals_override=None, out_dir=None,
         "input_active_changes": len(active_changes),
         "input_active_signals": len(active_signals),
         "pattern_candidates_generated": len(candidates),
+        "pattern_candidates_rejected_by_source_independence_gate": candidates_rejected_by_independence_gate,
         "patterns_created_or_updated": len(patterns),
         "patterns_total": len(merged),
         "patterns_by_type": _count_by(merged, "pattern_type"),
