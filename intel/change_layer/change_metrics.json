@@ -1,9 +1,16 @@
 {
  "input_confirmed_events": 28,
  "raw_candidate_groups": 0,
- "changes_created": 0,
- "changes_by_status": {},
- "changes_by_direction": {},
+ "changes_created": 1,
+ "changes_preserved_from_prior_run": 1,
+ "changes_by_status": {
+  "REJECTED": 1
+ },
+ "changes_by_direction": {
+  "CONTRACTING": 1
+ },
+ "independence_gate_rejections": 0,
+ "independence_gate_rejection_details": [],
  "gemini_calls_added": 0,
  "claude_calls_added": 0,
  "embedding_calls": 0,

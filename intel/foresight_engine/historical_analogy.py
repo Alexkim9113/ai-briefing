@@ -34,9 +34,17 @@ def _load_documents(documents=None):
 
 def _parse_date(s):
     try:
-        return datetime.fromisoformat(s.replace("Z", "+00:00"))
+        parsed = datetime.fromisoformat(s.replace("Z", "+00:00"))
     except Exception:
         return None
+    # This corpus mixes naive (date-only, no offset) and timezone-aware `published` strings
+    # across sources. Comparing them with max()/min() raises TypeError. Normalizing a naive
+    # value to UTC is a safe, conservative assumption here -- it only affects this module's own
+    # age-spread audit (never the stored document data), and misclassifying a date's timezone by
+    # a few hours cannot flip whether a document clears the 365-day HISTORICAL_AGE_DAYS threshold.
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed
 
 
 def audit_historical_evidence(documents=None):

@@ -14,9 +14,11 @@ import diagnostics as d  # noqa: E402
 
 # --- REAL CORPUS VERIFIED -----------------------------------------------------------------
 
-def test_real_corpus_documents_total_is_569():
+def test_real_corpus_documents_total_is_601():
+    # Corpus grew 569 -> 601 across M.5E-3/M.5E-4's real evidence acquisitions; this pins the
+    # current real count rather than a stale snapshot (Section 36 known-regression audit, M.5F).
     docs = d.load_documents()
-    assert len(docs) == 569
+    assert len(docs) == 601
 
 
 def test_real_corpus_ai_copyright_document_is_insufficient_evidence():
@@ -57,7 +59,7 @@ def test_real_corpus_unknown_document_id_is_pipeline_not_executed():
 
 def test_real_corpus_audit_summary_is_internally_consistent():
     summary = d.pipeline_audit_summary()
-    assert summary["documents_total"] == 569
+    assert summary["documents_total"] == 601
     assert summary["documents_with_notes"] <= summary["documents_total"]
     assert summary["documents_with_notes"] + summary["documents_without_notes"] == summary["documents_total"]
     assert summary["changes_total"] >= summary["change_candidates_active"]

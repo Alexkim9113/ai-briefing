@@ -1,1 +1,20 @@
-{}
+{
+ "chg_7f1ae8e6b9e33860": [
+  {
+   "event_id": "evtprod_2fa01e8819fd9906",
+   "event_quality": "MEDIUM",
+   "merge_confidence": 7.0,
+   "source_count": 7,
+   "source_diversity": 6,
+   "primary_document_id": "499b5712c021b4e7"
+  },
+  {
+   "event_id": "evtprod_d3180795a4560ed3",
+   "event_quality": "MEDIUM",
+   "merge_confidence": 7.0,
+   "source_count": 3,
+   "source_diversity": 3,
+   "primary_document_id": "e1da0f895405134f"
+  }
+ ]
+}

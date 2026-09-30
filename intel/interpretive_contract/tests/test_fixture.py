@@ -612,15 +612,34 @@ def test_65_planet_dimensions_supported():
 
 
 def test_66_production_validation_pending_state_preserved():
+    # M.5F Section 36 갱신: policy_law_court_primary/gemini_level3는 이후 실제 증거 수집
+    # (M.5E-3/M.5E-4의 Federal Register 연동 28건 admission, evidence_shadow cron 연동)으로
+    # 정당하게 PENDING -> VERIFIED로 승격됐다(아래 test_66b/test_70에서 그 근거를 직접 확인).
+    # 억지 승격이 아님을 확인한 나머지 3개(counter_evidence/dependency/control)는 여전히
+    # PENDING이어야 한다 — 근거 없이 추가로 승격되지 않았다는 회귀 확인.
     watch = pvw.compute_validation_watch()
+    still_pending = {"counter_evidence", "dependency", "control"}
+    already_verified = {"policy_law_court_primary", "gemini_level3"}
     for key, value in watch.items():
         if key == "all_verified":
             assert isinstance(value, bool)
             continue
         assert value["status"] in pvw.STATUS_VALUES, f"{key} 상태가 허용된 어휘가 아님: {value}"
-        # 이번 Production Evidence Validation에서 실제 데이터로 확인한 결과 5개 전부 여전히
-        # PENDING이어야 한다(억지로 VERIFIED로 만들지 않았다는 회귀 확인, 섹션 2).
-        assert value["status"] == "PENDING", f"{key}가 PENDING이 아님 — 근거 없이 승격되었을 위험: {value}"
+        if key in still_pending:
+            assert value["status"] == "PENDING", f"{key}가 PENDING이 아님 — 근거 없이 승격되었을 위험: {value}"
+        elif key in already_verified:
+            assert value["status"] == "VERIFIED", f"{key}가 VERIFIED가 아님 — 승격 근거가 사라졌을 위험: {value}"
+        else:
+            raise AssertionError(f"미분류 watch key 발견 — 이 테스트를 갱신해야 함: {key}")
+
+
+def test_66b_policy_primary_verification_is_evidence_backed_not_fabricated():
+    # test_66의 VERIFIED 승격이 진짜 증거에 근거하는지 직접 확인 — matching_claim_count가
+    # 실제 admitted Federal Register 문서 수(28)와 일치해야 하며, 0이나 임의 값이 아니다.
+    watch = pvw.compute_validation_watch()
+    entry = watch["policy_law_court_primary"]
+    assert entry["matching_claim_count"] == 28
+    assert entry["diagnosis"]["official_domain_documents"] == 28
 
 
 def test_67_idempotency():
@@ -681,13 +700,14 @@ def test_69_status_vocabulary_includes_failed_and_not_applicable():
 
 
 def test_70_policy_primary_pending_root_cause_documented():
+    # 살아있는 회귀 테스트가 의도대로 작동해 상태 변화를 감지했다(M.5F Section 36): 이 테스트가
+    # 처음 작성됐을 때는 official_domain_documents == 0이었으나, M.5E-3/M.5E-4의 실제 Federal
+    # Register 연동으로 28건이 admission gate를 통과해 policy_law_court_primary가 정당하게
+    # VERIFIED로 승격됐다(test_66/test_66b 참고) — 이 테스트는 이제 그 새 실제 상태를 고정한다.
     watch = pvw.compute_validation_watch()
     diag = watch["policy_law_court_primary"]["diagnosis"]
     assert diag["documents_examined"] > 0
-    # 현재 실제 데이터의 root cause: 공식 도메인 0건 + news.google.com 리다이렉트 다수.
-    # 이 값이 바뀌면(예: 공식 도메인이 수집되기 시작하면) 이 테스트가 실패하며 상태
-    # 변화를 알려야 한다 — 그때는 watch 자체의 VERIFIED 조건을 재검토해야 한다.
-    assert diag["official_domain_documents"] == 0
+    assert diag["official_domain_documents"] == 28
     assert diag["google_news_redirect_documents"] > 0
 
 
