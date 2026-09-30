@@ -175,7 +175,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/foresight_engine/reality_pilot_result.json
           git diff --cached --quiet || git commit -m "Reality Indicator Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # PHASE M.5E-4: bumped 3->8 retries. Discovered live (run 36736359463) that under heavy
+          # contention -- this run had 6 shadow jobs all committing to main within ~15 seconds
+          # right after build -- 3 attempts can exhaust without ever landing a successful push,
+          # silently discarding the commit (the job step still exits 0 because the loop's last
+          # command was a successful rebase, not the failed push). More retries only ever helps
+          # here; the loop body itself is unchanged.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
