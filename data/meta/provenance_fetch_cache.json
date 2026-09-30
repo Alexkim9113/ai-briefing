@@ -1478,5 +1478,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-09-30T15:37:02.988198+00:00"
+ },
+ "b768eec87410b7bba64d3cdf6865e607002d5c31efb5cfa63462d48703e0a74a": {
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQWkxfa21MYWpPQWhLZXUwWjhVcVR2ZWMxY2hlMDJuU2lKTzdLYUhGdXJIZXBHc1IwRXZmMW9KR3FJQ2pNRWlCYXd2Ml9UYVF5R2J2UlNqd2RhV0hSbWJOY3MyNUJBY2puSER0blp1U1B3UXNLTGNnQmI1XzBqQTNQRmUtYVZYVVlibmppeDRCa1BBSmpaTHhyalhRV21fV2lId05Lc285WXlrTjVpQUlXZGdjb1JhRFJmT1RzNQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:01.400114+00:00"
+ },
+ "d0fa9855e2846b9b59018989770dc006f3f99b523a0426f397fe2198959aa187": {
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbVUtZ2dzby05LVAzekYxSzZRSXBDbXFMcllkRWJMblJyOEkyVW1YZklhNUNaRjFUWWlsVUo3V1E5ODhFeEFoQkRlRWVFZ1R5am11Xy11SVpSdFlYVzV1cDA5QUJnQ2s1UmtUUy0wOUpYOC13dUFHSU55OUZTdzBuM0hHdlEyUXdWZW54WFR2dmZJbFNHSU5OOWhib3dlN00?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:01.577592+00:00"
+ },
+ "edd68238a6d8f59825bdc6a12cd56339664586075d9afe9536dd61b3be22a746": {
+  "url": "https://www.youtube.com/watch?v=Ks-FZrgTVAo",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:02.329659+00:00"
+ },
+ "adc66433978a4a03f3510177673930715078318f0a5e93c1f42de5674d1647a5": {
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONUM2QTBONGlfTjAyMnJiaHl3QTl5ZkN6blNxUGw0amd2X1F2bVJDbjFNNV9SUk5mdVFfeFJ1X194a09SMUxKY19CdGZpQlkzQjhsTTI0UDViSE0xNFdldWxXaXVuN0o1clJvWWp5dDd4WThfUUJrODlJTlF6bUZuYzAyejN5djZRUjh1SFhB0gFsQVVfeXFMTm5ZLWFlSlU2bVBxZ2ljdFpjWWdCR21JQmlEbkFnZkZtU0Y4TVBBVFVJLTFHOHhuSzN2OUxRbU94cHZYdHBIbVE1VVplT0M3dW1BTVRGa1NlYUl6emNValZ4R2tYMDVEVFlRRl9U?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:02.568367+00:00"
+ },
+ "571151bc025b2fa98d26a718bea87e61ba20a30c408b70690e04e140b1108972": {
+  "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JWlFBY1ZXUDRuU3NSVkxMWW8xUUJQWURJbDJab09wMjBkbFZSNXAxYTJVaFlfV0dHZmQtNlVGTVIxVFcwc1BRQ2d6N2h2dldHaThVSW9R?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:02.887769+00:00"
+ },
+ "32de5b12bdde4fb92a61676cf6ada23ebc86e4af6b8197a4b305ac62375172a6": {
+  "url": "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:51:02.947222+00:00"
+ },
+ "8d273a1484e711c0b42a560d99b3f8c87ef4ed6565c0456b309e5a2a19dc1e43": {
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMEZINzZLZ01oVlpzQ2xmalN6UTE3NjdELXR5aDJhU0V5TGVydnJrcDZzc2JpNFl2NUU5SjlJZTh6UlRCdlV2Y1VaZnVVT2cweUxLZC1yTFZ5NVpUT25BU095RnpKSU9sci1FaDY0RUczMGVzaFk5eW01SWthUUItQ2VkQ0VPSDd0WGVsOU4wMHZtZVE5djhqdWNYWWc5S1AxRUhENlk4Q2JUbEdoNlZ0ME5zR29nYng3S09Z?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:03.343159+00:00"
+ },
+ "794855e02fb20ae460cd1ac5157dccca7059522450bb3aa778410ea92f729fa4": {
+  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMUhCZDhCelpId0dyT3Mycl93M25uVnV0eDZ0M1o5N1A3Q2lrUjlhaTg1SHAzOEplVEFlZTdMWTlJWEI0VGRabWJMU0x4TE94T2pGczhTTjhPU0lRamh3ZlVtb21VYV9ta3NWQXhVRXBxT1RPRkJDbElkVS1xbWtnNGpKdlVXRS00SnVXYjNxZTgyWTJVVjRMUHVDZURLNjdaSlJMdUtwV0t0Yy11WGFHZG41TUlZZw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:03.528859+00:00"
+ },
+ "7e0ef622ab3a8b5266345d94ac8df6afae795aae3592996582b2133d0d781b74": {
+  "url": "https://www.fnnews.com/news/202609301411141531",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T15:51:03.993485+00:00"
+ },
+ "045c0274f5c46ddf8fefc476587ba1f1ecc000aa303222b9db35a16f3a1f500b": {
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbmNKOExkd0NDZjJsUmxob1U0S0VOc2tPbG1qUHZraFI4ZzUtUVRaeEZxU0xyREgwdHVpZFVRYmlrTV9uejN2bklhemdOaEdBeTBxMS1Jd1h4em5ybXVISlhMaEhnRlpHSWpXXzZFQ0Y1NVdVNTg4SVgzV010ejkwZVZadHg2SVpXQUxhNGpvWGROTFlydDhkTHk0Rmd6UmRpSkFZN3ZlelpnTERCcTRoVFdR?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T15:51:04.181748+00:00"
  }
 }

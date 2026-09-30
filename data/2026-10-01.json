@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated_at": "2026-10-01T00:36+09:00",
+ "generated_at": "2026-10-01T00:50+09:00",
  "items": [
   {
    "id": "0ef1c3d80bfd2916",
@@ -590,6 +590,72 @@
    }
   },
   {
+   "id": "d2ed5e3bf04fe7cd",
+   "title": "AI by any other name? White House directs federal agencies to enter the era of 'super intelligence'",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQWkxfa21MYWpPQWhLZXUwWjhVcVR2ZWMxY2hlMDJuU2lKTzdLYUhGdXJIZXBHc1IwRXZmMW9KR3FJQ2pNRWlCYXd2Ml9UYVF5R2J2UlNqd2RhV0hSbWJOY3MyNUJBY2puSER0blp1U1B3UXNLTGNnQmI1XzBqQTNQRmUtYVZYVVlibmppeDRCa1BBSmpaTHhyalhRV21fV2lId05Lc285WXlrTjVpQUlXZGdjb1JhRFJmT1RzNQ?oc=5",
+   "source": "IAPP",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:48:25+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI, 이름이 달라진다고 해서 달라질까? 백악관, 연방 기관들에 ‘초지능’ 시대 진입 지시",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "백악관이 연방 기관들에 '초지능(Super Intelligence)' 시대 진입을 지시했다.",
+    "p": "미국 연방 정부가 AI 정책의 기조를 고도화된 지능 체계 도입으로 공식 전환하는 신호탄이다.",
+    "t": [
+     "백악관",
+     "초지능",
+     "연방정부",
+     "AI정책"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "a596ac5a3413c17c",
+   "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbVUtZ2dzby05LVAzekYxSzZRSXBDbXFMcllkRWJMblJyOEkyVW1YZklhNUNaRjFUWWlsVUo3V1E5ODhFeEFoQkRlRWVFZ1R5am11Xy11SVpSdFlYVzV1cDA5QUJnQ2s1UmtUUy0wOUpYOC13dUFHSU55OUZTdzBuM0hHdlEyUXdWZW54WFR2dmZJbFNHSU5OOWhib3dlN00?oc=5",
+   "source": "AI News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:45:12+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "비나소이, AWS AI 도입으로 품절률 20% 감소",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "비나소이가 AWS AI를 도입해 품절률을 20% 줄였다.",
+    "p": "클라우드 기반 인공지능이 전통 제조 및 유통 공급망의 재고 관리 효율성을 실질적으로 개선함을 보여준다.",
+    "t": [
+     "AWS",
+     "비나소이",
+     "공급망",
+     "인공지능"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "9bd2a03f6d689079",
+   "title": "Cosa non diciamo ai ragazzi sulla sessualità e il consenso | Elena Mozzo | TEDxJesolo",
+   "link": "https://www.youtube.com/watch?v=Ks-FZrgTVAo",
+   "source": "TEDx Talks",
+   "field": "",
+   "category": "talks",
+   "published": "2026-09-30T15:42:11+00:00",
+   "summary": "Quando gli adulti non parlano di sesso e di consenso, i ragazzi non smettono di cercare risposte: le trovano altrove, spesso nel posto peggiore.",
+   "thumb": "",
+   "title_ko": "청소년들에게 성과 동의에 대해 우리가 말하지 않는 것들 | 엘레나 모조 | TEDxJesolo",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "어른들이 성과 동의에 대해 이야기하지 않을 때, 청소년들은 답을 찾는 것을 멈추지 않습니다. 그들은 다른 곳에서, 종종 최악의 장소에서 그 답을 찾게 됩니다.",
+   "detail_ko": "어른들이 성과 동의에 대해 이야기하지 않을 때, 청소년들은 답을 찾는 것을 멈추지 않습니다. 그들은 다른 곳에서, 종종 최악의 장소에서 그 답을 찾게 됩니다."
+  },
+  {
    "id": "a720835a83879358",
    "title": "S2W, 온톨로지 기반 기술 고도화…’엔터프라이즈 AX’ 공략 가속",
    "link": "https://www.aitimes.com/news/articleView.html?idxno=215806",
@@ -653,6 +719,28 @@
      "인공지능",
      "사회",
      "규제"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "17de648ae3014f87",
+   "title": "목표 던져주면 알아서 24시간 척척… 오픈AI, ‘닷츠’ 공개",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONUM2QTBONGlfTjAyMnJiaHl3QTl5ZkN6blNxUGw0amd2X1F2bVJDbjFNNV9SUk5mdVFfeFJ1X194a09SMUxKY19CdGZpQlkzQjhsTTI0UDViSE0xNFdldWxXaXVuN0o1clJvWWp5dDd4WThfUUJrODlJTlF6bUZuYzAyejN5djZRUjh1SFhB0gFsQVVfeXFMTm5ZLWFlSlU2bVBxZ2ljdFpjWWdCR21JQmlEbkFnZkZtU0Y4TVBBVFVJLTFHOHhuSzN2OUxRbU94cHZYdHBIbVE1VVplT0M3dW1BTVRGa1NlYUl6emNValZ4R2tYMDVEVFlRRl9U?oc=5",
+   "source": "국민일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T15:18:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "오픈아이가 목표를 제시하면 24시간 자율 수행하는 AI 비서 '닷츠'를 공개했다.",
+    "p": "단순 질의응답을 넘어 장시간 자율 업무 수행이 가능한 에이전트 형태의 AI 경쟁이 본격화되고 있다.",
+    "t": [
+     "오픈아이",
+     "닷츠",
+     "AI비서",
+     "에이전트"
     ],
     "v": 1
    }
@@ -765,6 +853,28 @@
      "마이크로소프트",
      "아파치오시",
      "데이터표준"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "6610d3bc67b4bda7",
+   "title": "뮤즈 신드롬에 마침표? 닷츠도 가세한 ‘AI비서 전쟁’",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JWlFBY1ZXUDRuU3NSVkxMWW8xUUJQWURJbDJab09wMjBkbFZSNXAxYTJVaFlfV0dHZmQtNlVGTVIxVFcwc1BRQ2d6N2h2dldHaThVSW9R?oc=5",
+   "source": "중앙일보",
+   "field": "국방·전쟁",
+   "category": "news_ko",
+   "published": "2026-09-30T15:02:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "오픈아이의 '닷츠'가 가세하면서 AI 비서 시장의 경쟁이 더욱 치열해지고 있다.",
+    "p": "다양한 빅테크 기업들이 자율형 에이전트 서비스를 잇따라 선보이며 주도권 다툼이 가속화되는 양상이다.",
+    "t": [
+     "오픈아이",
+     "닷츠",
+     "AI비서",
+     "인공지능"
     ],
     "v": 1
    }
@@ -1294,6 +1404,29 @@
      "AI 정책",
      "자율규제",
      "미국 정부"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "e284c61b631987f9",
+   "title": "中 저가공세에 밀린 日로봇업체들, 美투자 확대",
+   "link": "https://www.fnnews.com/news/202609301411141531",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T14:19:04+09:00",
+   "summary": "【파이낸셜뉴스 도쿄=서혜진 특파원】일본 산업용 로봇업체들이 미국 투자를 늘리고 있다. 중국에서는 현지 업체의 저가 공세로 입지가 흔들리는 반면 미국에서는 공장 인력 부족으로 자동화 수요가 커지고 있기 때문이다. 미 기술기업의 인공지능(AI)을 로봇에 접목해 새로운 시장을 확보하려는 움직임도 활발하다.",
+   "detail": "【파이낸셜뉴스 도쿄=서혜진 특파원】일본 산업용 로봇업체들이 미국 투자를 늘리고 있다.\n30일 닛케이아시아에 따르면 일본 대표 산업용 로봇업체 화낙은 미 미시간주 폰티액의 옛 제너럴모터스(GM) 공장 부지에 9000만달러(약 1219억원)를 투자해 공장과 물류센터를 건설하고 있다.\n화낙은 자동차 공장 등에서 용접·도장·조립·운반 작업을 하는 로봇과 공작기계를 제어하는 장치를 만드는 기업이다.\n일본 업체들이 미국 사업을 확대하는 배경에는 중국 시장의 경쟁 심화가 있다.",
+   "thumb": "",
+   "mx": {
+    "b": "중국 기업의 저가 공세로 경쟁력을 위협받는 일본 로봇 기업들이 미국 투자 확대를 추진하고 있다. 화낙은 미시간주 옛 GM 공장 부지에 9000만달러를 들여 생산 시설을 짓고 있다.",
+    "p": "아시아 시장의 가격 경쟁 심화가 일본 로봇 산업의 공급망 재편과 북미 시장 중심 투자를 견인하고 있다.",
+    "t": [
+     "화낙",
+     "산업용로봇",
+     "미국투자",
+     "공급망"
     ],
     "v": 1
    }
@@ -3447,6 +3580,33 @@
    }
   },
   {
+   "id": "b5e5e43443d214df",
+   "title": "Helping small businesses put AI to work",
+   "link": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+   "source": "OpenAI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T10:00:00+00:00",
+   "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+   "thumb": "",
+   "title_ko": "중소기업이 AI를 효과적으로 활용할 수 있도록 돕기",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "OpenAI는 미국의 SBDC와 제휴하여 중소기업을 위한 실습 중심의 AI 교육 및 지역별 지원을 확대하는 한편, 소규모 팀이 AI를 어떻게 활용하고 있는지에 대한 새로운 보고서를 발표했습니다.",
+   "detail_ko": "OpenAI는 미국의 SBDC와 제휴하여 중소기업을 위한 실습 중심의 AI 교육 및 지역별 지원을 확대하는 한편, 소규모 팀이 AI를 어떻게 활용하고 있는지에 대한 새로운 보고서를 발표했습니다.",
+   "mx": {
+    "b": "오픈아이가 미국 소상공인개발센터(SBDC)와 협력하여 소상공인 대상 현장 AI 교육 및 지원을 확대한다.",
+    "p": "AI 기술의 파급력이 대기업을 넘어 지역 소상공인과 소규모 조직의 실무 영역으로 빠르게 확산되고 있다.",
+    "t": [
+     "오픈아이",
+     "소상공인",
+     "AI교육",
+     "SBDC"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "6afaf76c50729828",
    "title": "화성시여성가족청소년재단, 우정청소년문화의집, 삼괴중학교에서‘다재다능한 AI 활용교육’ 운영",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBOU1oycF9UZlJFTlB0Wm5tbTI5QkVBMjlmbjF5X2lsaUt6UUo4ZXpXVW9MOTdUcWtXUzVXeFkxRjJITnBlWEc0MTN0ZFVjX0hlU3NWdmhiM2dCTnZNZ3BxUGJqS1B3WVNVd3BEQURn0gFyQVVfeXFMTVdidHZtQmNzdmZ3czZaRHU1cFdwc2thejlqLS1zTzR4d2dqTnB4SHFBcHhYSlVQMDByVUFvSWJkSlA5WUtRSnFxUE5OcFI1U2VkOTFfczN0RlZJcFQ3YzhpNnVsa0ZjRWxTMFY3TnZ5STNB?oc=5",
@@ -3555,6 +3715,28 @@
      "AI마케팅",
      "소비자행동",
      "디지털전략"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "37b7809c758982c3",
+   "title": "삼성전자 ‘AI 포럼 2026’ 개최…“에이전틱 AI, 일하는 방식 바꾼다”",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WNnFHUWg5Z0JZM0Zic0pmZV9aYzBSaG4wX3NtYjItYUpENzRJeFhWYzZLYjRZMmxkd2c3cnFtNmM3V1B1SnNMSFI2Z0FBSG43U0E?oc=5",
+   "source": "더나은미래",
+   "field": "에이전트",
+   "category": "news_ko",
+   "published": "2026-09-30T09:43:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "삼성전자가 'AI 포럼 2026'을 열어 에이전틱 AI가 가져올 업무 방식의 변화를 조명했다.",
+    "p": "제조 및 IT 대기업이 단순 도구 활용을 넘어 자율형 에이전트 중심의 업무 혁신 전략에 집중하고 있다.",
+    "t": [
+     "삼성전자",
+     "AI포럼",
+     "에이전틱AI",
+     "업무혁신"
     ],
     "v": 1
    }
@@ -4866,6 +5048,28 @@
    }
   },
   {
+   "id": "972283b8b6706cfd",
+   "title": "다이슨, 499달러 AI 칫솔 결함 인정…“내부 누수가 원인”",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KbjJkT3ZtRXBtMkxmZ0xVaHRxSXJkekxQbUtyZm10blNaWFNyTGw3RFNWVHlGMzBDQ1ItX0J1empKZlppajBEeDBDdVpMNWJDWlk0Vm5KMUx1WXMxTFFQMThnVTJLdW5VS3dRWWlDTWjSAXRBVV95cUxNdmNqeWVVQUJOR2Q5ZHNJaE11WTFNT1ozTUhHYXNfU01EQzVGb0ktdXVscFRCdkRPNWsyVDI0X252RDRyTHBLOGJoVWZyRVd4ZFJhZW1TWTVsUGZ0ZzFkU1g4Q0pMQndmSl94blM1NXEyMC0zVw?oc=5",
+   "source": "IT조선",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T06:47:45+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "다이슨이 499달러짜리 AI 칫솔의 결함 원인이 내부 누수라고 인정했다.",
+    "p": "고단가 스마트 하드웨어 제품에서 발생하는 하드웨어 결함이 브랜드 신뢰도에 타격을 줄 수 있음을 보여준다.",
+    "t": [
+     "다이슨",
+     "AI칫솔",
+     "제품결함",
+     "하드웨어"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "d2090b5900ccb10d",
    "title": "배경훈 부총리 프론티어 AI 모델 도전합니다...2027 예산·자원 AI에 총동원",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLMHBnSm5UTmxySDZaWmUzSVFUTnJ4VDhZZVd0TlE5S3B1bU1VX0VFbWpRLXgxcVFaT2FaUm9KUlpTS2VTTXJKYjBJX212dkhEZ3VxcWFJdGpGd9IBWEFVX3lxTFBuS3dmYmlXcFE3WkZiSF9CWDU5U0JvNGFweEZtbF9Na0JMbkVNOEs2ZHBPNVhFaE4xVnhZaDk5SGV0bm5QY1N5Tk81bkMzc0tscE43c1lCQlg?oc=5",
@@ -5227,7 +5431,7 @@
    "published": "2026-09-30T05:19:49+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 8,
+   "hot": 7,
    "mx": {
     "b": "자율주행과 AI 에이전트 분야에서 혁신을 이끈 10개의 기업과 1인이 '국가 AI 대상'으로 선정됐다.",
     "p": "국내 AI 및 자율주행 생태계에서 실질적인 기술 성과와 시장 혁신을 주도하는 주역들을 발굴하고 격려하는 장이다.",
@@ -5236,72 +5440,6 @@
      "자율주행",
      "AI에이전트",
      "수상기업"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "7f91ac55939b6ef9",
-   "title": "[헬로컬처] 패션 특화 AI 플랫폼 ‘빔스튜디오’ 브랜드 운영 전 과정 AI 전환을 그리다",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HTnU4VkN3dHVZc3NaajZuQkFyakREUWhCbDVwM3V1UWdXcVZpb0k3aWY0NXdNLVBZbkFzcy1qZ29lMDRPczN5WFBQQzhmUGM5X3dQMFphT3JXSTVKRl9B?oc=5",
-   "source": "헬로티",
-   "field": "AI 철학",
-   "category": "news_ko",
-   "published": "2026-09-30T05:19:10+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "패션 특화 AI 플랫폼 빔스튜디오가 브랜드 운영 프로세스 전반의 인공지능 전환을 추진한다.",
-    "p": "기획부터 유통까지 수작업 의존도가 높았던 패션 산업에서 AI가 실무 공정을 내재화하는 실질적 사례를 보여준다.",
-    "t": [
-     "빔스튜디오",
-     "패션AI",
-     "DX",
-     "AI플랫폼"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "76526ae4d2e8e617",
-   "title": "비씨카드, AI 기반 준법업무 플랫폼 구축…A2D2와 협력",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Vd3FDUndkbURjRXRoak9ndUpmak1oTmYwRHYtQ3VwcW5lYTM0QllWUDdGRkl0QzE0YldTYUVjVV9yZmpTMzZfUG1LM3pxenJ2Tm1zQ1pFWnNjd9IBVEFVX3lxTE1FY0NhS2lKeGduYTZLV1RYRGJISFhlQ1R6WEQzS1ByWkhTbmtyQkNqTzkxZVR6VDRCdXljVFlNMktGRmZGRDhfbWhaMC1aUGZrSGtGdQ?oc=5",
-   "source": "news.tf.co.kr",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T05:14:58+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "비씨카드가 A2D2와의 협력을 통해 인공지능 기반의 준법업무 플랫폼을 구축했다. 규제 대응과 법무 검토 과정의 효율성이 높아질 것으로 기대된다.",
-    "p": "금융권의 리스크 관리와 컴플라이언스 업무에 리걸테크 기반 AI 도입이 필수 인프라로 자리 잡고 있다.",
-    "t": [
-     "비씨카드",
-     "A2D2",
-     "준법업무",
-     "리걸테크"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "30dee5ec4bdc7091",
-   "title": "BC카드, 리걸테크와 손잡고 준법업무에 AI 적용한다",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5uQjItUklvbDF5ODJVbjAxaUNHcXNMbl9ZUXJGZFZjcE9kN2dySlYxSWJMdi1iVU1fb3RZZGEwLXFpeWJPUmRnX2lDN1Q1clR6?oc=5",
-   "source": "문화일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T05:11:42+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "BC카드가 리걸테크 기업과 손잡고 준법감시 업무에 인공지능을 적용해 내부 통제 프로세스를 강화한다.",
-    "p": "복잡한 금융 규제와 방대한 사내 규정 검토에 AI를 결합하여 법적 리스크를 선제적으로 차단하려는 시도이다.",
-    "t": [
-     "BC카드",
-     "리걸테크",
-     "준법경영",
-     "AI적용"
     ],
     "v": 1
    }
@@ -5407,7 +5545,17 @@
    "title_ko": "‘슈퍼 인텔리전스’: 트럼프 대통령의 기술 정상회담에서 얻은 세 가지 교훈",
    "tr": "deepl",
    "trv": 2,
-   "mx_try": 2
+   "mx": {
+    "b": "트럼프의 기술 서밋에서 '초지능'과 관련된 세 가지 주요 시사점이 도출되었다.",
+    "p": "정치 지도자와 기술 업계 간의 논의가 국가 차원의 차세대 AI 패권 전략과 맞물려 진행되고 있다.",
+    "t": [
+     "초지능",
+     "기술서밋",
+     "미국정책",
+     "인공지능"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "185281409d975e5c",
@@ -7411,7 +7559,17 @@
    "title_ko": "퓨처 비전 XPRIZE의 우승작 트레일러, 《The Gifted》를 감상하세요",
    "tr": "deepl",
    "trv": 2,
-   "mx_try": 1
+   "mx": {
+    "b": "퓨처 비전 XPRIZE에서 우승한 트레일러 영상 '더 기프티드'가 공개되었다.",
+    "p": "인공지능 기술이 미디어 콘텐츠 제작 및 스토리텔링 분야에서 새로운 예술적 성과를 창출하고 있다.",
+    "t": [
+     "구글",
+     "XPRIZE",
+     "AI영상",
+     "콘텐츠"
+    ],
+    "v": 1
+   }
   },
   {
    "id": "c7cbfbe8bc0dab8f",
@@ -7744,7 +7902,7 @@
    "tr": "deepl",
    "trv": 2,
    "detail_ko": "본 논문에서는 향상된 LongCat 모델과 다중 에이전트 워크플로우를 결합하여 포괄적이고 근거에 기반한 보고서를 생성하는 딥 리서치 시스템인 LongCat-DeepResearch를 소개한다.",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "624b79430c6c4c90",
@@ -8156,7 +8314,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "fetched": 70
   },
   {
@@ -8246,8 +8404,8 @@
   {
    "name": "OpenAI",
    "ok": true,
-   "count": 3,
-   "fetched": 1238
+   "count": 4,
+   "fetched": 1239
   },
   {
    "name": "Research: 문화·미디어 · 문화·미디어",
@@ -8265,19 +8423,19 @@
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 64
+   "fetched": 63
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 55
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 48
+   "fetched": 46
   },
   {
    "name": "Sequoia Capital",
@@ -8318,7 +8476,7 @@
   {
    "name": "TEDx Talks",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "fetched": 15
   },
   {
@@ -8373,7 +8531,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 89
+   "fetched": 86
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -8385,19 +8543,19 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 57
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 72
+   "fetched": 74
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -8409,7 +8567,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -8571,19 +8729,19 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 74
+   "fetched": 75
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
    "ok": true,
    "count": 3,
-   "fetched": 34
+   "fetched": 35
   },
   {
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 44
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
@@ -8595,7 +8753,7 @@
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 28
+   "fetched": 29
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
@@ -8817,7 +8975,7 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
@@ -8847,19 +9005,19 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 37
   },
   {
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 28
+   "fetched": 29
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 47
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
@@ -8871,7 +9029,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 42
+   "fetched": 43
   },
   {
    "name": "주제: 피지컬 AI · 피지컬 AI",
@@ -8889,7 +9047,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 387
+   "fetched": 381
   },
   {
    "name": "프레시안",
@@ -8906,7 +9064,7 @@
   {
    "name": "한국경제",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "fetched": 50
   },
   {
