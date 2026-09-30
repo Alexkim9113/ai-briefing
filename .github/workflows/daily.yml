@@ -330,3 +330,73 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.5E -- Federal Register HISTORICAL date-range pilot (targets INSUFFICIENT_TIME_DEPTH,
+  # the corpus's most severe proven gap: 577 documents span only 8 days). Reuses
+  # fetch_federal_register.py's hardened fetch/validate/canonicalize pipeline unchanged; only the
+  # query differs (explicit older date window, order=oldest). Same isolation pattern as the other
+  # shadow jobs: own concurrency group, continue-on-error, needs build, if: always(), commits only
+  # its own new output file -- never touches documents.json. Live reachability/behavior of the
+  # date-range query is only observable once this actually runs; not fabricated here.
+  federal_register_historical_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: federal-register-historical-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Federal Register Historical Window Pilot 실행 (실제 연결 시도, INSUFFICIENT_TIME_DEPTH)
+        continue-on-error: true
+        run: python3 intel/historical_acquisition/fetch_federal_register_historical.py
+      - name: Historical Pilot 결과 저장 (historical_acquisition/federal_register_historical_pilot_result.json 만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/historical_acquisition/federal_register_historical_pilot_result.json
+          git diff --cached --quiet || git commit -m "Federal Register Historical Window Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
+
+  # PHASE M.5E -- Verified Evidence Admission Gate for the Federal Register historical window.
+  # Mirrors evidence_admission_crossref exactly (same admission_gate.admit_shadow_result(), same
+  # 10 checks, same idempotency guarantee, same PUBLICATION_DATE_VALID plausibility bound from the
+  # M.5D corrective fix) but reads federal_register_historical_pilot_result.json. Depends on BOTH
+  # other admission jobs (not just its own shadow job) so no two admission jobs ever write
+  # documents.json concurrently in the same run -- same race-avoidance reasoning as
+  # evidence_admission_crossref's needs list.
+  evidence_admission_fedreg_historical:
+    needs: [build, federal_register_historical_shadow, evidence_admission, evidence_admission_crossref]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-admission-fedreg-historical
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verified Evidence Admission Gate 실행 (federal_register_historical_pilot_result.json → documents.json)
+        continue-on-error: true
+        run: python3 intel/evidence_admission/run_admission_fedreg_historical.py
+      - name: Admission 결과 저장 (documents.json + evidence_admission 산출물만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
+          git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate (FedReg Historical) 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
