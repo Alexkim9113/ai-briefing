@@ -212,6 +212,24 @@ SOURCES = [
 ]
 
 
+def _summarize_shape(raw, max_depth=2, max_keys=15):
+    """A bounded, safe debug summary of an unexpected response shape -- top-level keys and one
+    level of nesting, never the full raw body (keeps committed output small and avoids
+    accidentally storing anything sensitive from a public API response). Used only when a
+    parser reports SCHEMA_CHANGED, so a supervising session can see the REAL shape before
+    deciding how to fix the parser -- never guessing from documentation alone."""
+    if isinstance(raw, str):
+        return raw[:120]
+    if max_depth <= 0:
+        return "..."
+    if isinstance(raw, dict):
+        keys = list(raw.keys())[:max_keys]
+        return {k: _summarize_shape(raw[k], max_depth - 1, max_keys) for k in keys}
+    if isinstance(raw, list):
+        return [f"list[{len(raw)}]"] + ([_summarize_shape(raw[0], max_depth - 1, max_keys)] if raw else [])
+    return raw
+
+
 def _detect_execution_environment():
     """Reports the actual environment this run executed in and, honestly, whether real network
     reached the sources this run - never a stale claim carried over from a different run/
@@ -261,6 +279,13 @@ def run_pilot():
                 )
                 entry["parse_reason"] = reason
                 entry["temporal_precision_inferred"] = precision
+                if reason == "SCHEMA_CHANGED":
+                    # M.5E-4 section 7: only fix the parser once a REAL live response shape is
+                    # captured -- never guess from documentation alone. This is a small, bounded,
+                    # public-API debug summary (top-level keys + one level of nesting), not the
+                    # full raw body, so it stays cheap to commit and safe to read.
+                    raw = fetch_result.get("data")
+                    entry["schema_debug"] = _summarize_shape(raw)
             else:
                 observation, reason = None, "PARSE_FAILED"
                 entry["parse_reason"] = reason
