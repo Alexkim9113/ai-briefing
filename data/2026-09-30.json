@@ -1,7 +1,51 @@
 {
  "date": "2026-09-30",
- "generated_at": "2026-09-30T21:49+09:00",
+ "generated_at": "2026-09-30T22:11+09:00",
  "items": [
+  {
+   "id": "31fcaa3d2d3be719",
+   "title": "“저위험 단계는 자율규제, 최첨단 모델은 외부 평가·최소 안전기준 의무화 필요”",
+   "link": "https://www.khan.co.kr/article/202609302134015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T21:34:01+09:00",
+   "summary": "최재필 미국 미시간주립대 석좌교수 서면 인터뷰기업들 ‘AI 위험 커진다’면서도시장 경쟁 탓 개발·출시 못 멈춰미·중 ‘좁은 협력’서 출발 현실적한국, 혁신 추진하며 위험 관리를인공지능(AI)을 현재 수준까지 끌어올린 것도, 인류를 멸망시킬 수 있다며 속도 조절에 나서자고 하는 것도 모두 AI 기업들이다.",
+   "thumb": "",
+   "mx": {
+    "b": "최재필 미시간주립대 교수는 저위험 AI에는 자율규제를 적용하고 최첨단 모델에는 외부 평가와 최소 안전기준을 의무화해야 한다고 제언했다.",
+    "p": "시장 경쟁으로 인해 개발 속도를 늦추지 못하는 기업의 한계를 보완하기 위해, 위험 수준에 따른 차등화된 제도적 안전망 구축이 시급함을 보여준다.",
+    "t": [
+     "AI안전",
+     "자율규제",
+     "미시간주립대",
+     "인공지능"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "ddf19bc4f94b4a12",
+   "title": "[AI 포모와 포비아 사이]무서운 발전 속도, 안전장치가 못 따라가…‘고삐’는 인간의 몫",
+   "link": "https://www.khan.co.kr/article/202609302134005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "source": "경향신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T21:34:00+09:00",
+   "summary": "(하)한국 연구자들이 본 ‘인류멸망론’인간 앞에 ‘AI’ 인간의 모습을 한 피규어가 지난 2월 프랑스 파리에서 열린 한 포토세션 중 앤트로픽의 로고를 응시하고 있다.",
+   "thumb": "",
+   "mx": {
+    "b": "급격한 인공지능 발전 속도에 비해 제도적·윤리적 안전장치가 따라가지 못하면서, AI 통제권과 위험 관리를 인간이 어떻게 주도할 것인가에 대한 논의가 이어지고 있다.",
+    "p": "기술적 고도화에 따른 사회적 불안감을 해소하기 위해 개발 속도 조절과 책임성 확보를 위한 인간 중심의 거버넌스가 요구된다.",
+    "t": [
+     "AI윤리",
+     "인류멸망론",
+     "안전장치",
+     "사회"
+    ],
+    "v": 1
+   }
+  },
   {
    "id": "629607de725570a3",
    "title": "안산시·한양대·에이로봇, ASV지구 투자협약 체결",
@@ -478,6 +522,28 @@
      "규제",
      "정책",
      "AI원칙"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "a2df2ca9ba5746f8",
+   "title": "글로벌 AI 허브 어디에?…내달 14일 입지 선정 공청회",
+   "link": "https://www.yna.co.kr/view/AKR20260930180200017",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T18:25:04+09:00",
+   "summary": "(서울=연합뉴스) 권하영 기자 = 국내 글로벌 인공지능(AI) 허브의 입지를 결정하는 공청회가 다음 달 열린다.",
+   "thumb": "",
+   "mx": {
+    "b": "국내 글로벌 인공지능 허브 구축을 위한 입지를 확정하기 위해 다음 달 14일 공청회가 개최된다.",
+    "p": "국내 AI 생태계의 거점을 선정하는 과정으로, 향후 지역 균형 발전과 국가 연구·산업 인프라 집적에 직접적인 영향을 미칠 전망이다.",
+    "t": [
+     "AI허브",
+     "공청회",
+     "인프라",
+     "정부정책"
     ],
     "v": 1
    }
@@ -2996,6 +3062,78 @@
    }
   },
   {
+   "id": "1e34a2faae0162f2",
+   "title": "방미통위 '미디어 기본사회' 비전…\"AI 투명성 제고·통합미디어법 추진\"",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YcE5DaTJhVGI1Y0FyekE1V2FsdGN5OVpabnl0VVFCX0xxSDhCZVJ5RjBONGN3TnBKb2k4THFLQlNaV2c4ZHJMWEZfal9VUGs?oc=5",
+   "source": "v.daum.net",
+   "field": "미디어",
+   "category": "news_ko",
+   "published": "2026-09-30T12:54:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "방송통신위원회는 미디어 기본사회 비전을 통해 AI 투명성 제고와 통합미디어법 추진 계획을 밝혔다.",
+    "p": "미디어 환경 변화와 인공지능 확산에 대응하여 알고리즘 투명성을 높이고 새로운 규제 체계를 정비하려는 의도가 담겨 있다.",
+    "t": [
+     "방통위",
+     "미디어",
+     "AI투명성",
+     "통합미디어법"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "452b87a5c7bb6b6f",
+   "title": "Young adults using AI for health questions may screen positive for anxiety and depression - News-Medical",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPd1NsWXc2U1BVYS1BX1p2TXFxZktnZW8yTDhERmxhdTBlYWFXUklyb093TlJvT0Z6U184X3A5SDZuYTdhNHJwTXVQcndqQnBUYkJYSU1nV2kwb0h4Q0ZnVzZWcW5Ldld0ekN4WnFicmR6NE1Lakg3c21VOFF5Z2ZTdjFXVUhjUW9yRE9vaG9FY1ZUOTNzME9UV2FKZFBReXBnSXpqWmJkdGtZa255U0w2bXZRVjA3NERyTlBrc2V2cU5qWHNtTUxzTkdzZjZwWGdSMldF?oc=5",
+   "source": "Topic: 청소년·가족 · 청소년·가족",
+   "field": "청소년·가족",
+   "category": "news_global",
+   "published": "2026-09-30T12:52:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "건강 관련 질문을 위해 AI를 이용하는 젊은 성인들, 불안 및 우울증 양성 반응 보일 수 있어 - News-Medical",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "건강 관련 질문을 위해 인공지능을 활용하는 젊은 성인층이 불안 및 우울증 선별검사에서 양성 반응을 보일 가능성이 높다는 연구 결과가 나왔다.",
+    "p": "정신 건강 상담 대체재로 AI를 찾는 청년층의 심리적 취약성을 보여주며, 기술 의존이 정신 건강에 미치는 부작용에 대한 우려를 제기한다.",
+    "t": [
+     "정신건강",
+     "우울증",
+     "불안",
+     "디지털헬스"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "4da95e06d9e49dc6",
+   "title": "PG&E CEO Patti Poppe on AI energy crunch",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcXdXMWhmVXRKOGhnMzAzM2t5TGtaREgzenNid1otRkFNUk5IY2xaM1IzT2tPb29aQkczWmlqNjdMbGlkZWs4VkNsWGMtQUIzRHVVeWJEeGsxQzdocGhWSktwU2RQdThxVTFhY0NYQTFSWmJSaXF4aFlIQm1JYWdqR21rUWlKS3JpMVE?oc=5",
+   "source": "CNBC",
+   "field": "에너지·환경",
+   "category": "news_global",
+   "published": "2026-09-30T12:40:32+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "PG&E CEO 패티 포프, AI로 인한 에너지 부족 사태에 대해",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "퍼시픽가스앤드에전시(PG&E)의 패티 포페 CEO가 인공지능 확산에 따른 전력 수요 급증과 에너지 부족 문제를 언급했다.",
+    "p": "AI 데이터센터의 급격한 팽창이 전력망에 큰 부담을 주고 있으며, 향후 에너지 인프라 수급이 AI 산업 성장의 핵심 병목 현상으로 작용함을 시사한다.",
+    "t": [
+     "PG&E",
+     "AI에너지",
+     "전력수요",
+     "데이터센터"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "111cd755106d04e6",
    "title": "아서 헤이즈 “탈중앙화 화폐가 AI 에이전트 선택 받을 것\"",
    "link": "https://www.edaily.co.kr/News/Read?newsId=03821206645585368",
@@ -3065,6 +3203,31 @@
      "Dots",
      "AI에이전트",
      "인공지능"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "65afcc60e9ebb3c6",
+   "title": "Blog | From Expert Systems to Generative AI: The Evolution of AI in the Legal Industry",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzJlNUdQSmY5ZGJ5SFE0WEswN1p0TjVCOEdtWXZlVU9iUGdDTUhpMUtVNjBSb1FSZnd5c0F4T3U0emh4MVpFQW5SbGRYXzVodkN1OHRzRkZ5UGpMNzJ6T0twNlQtRjFfUDUzcEx0M012VWl4NnN0bE50M2ZsbEZlekF1VHJ0ZGtMTnBtUjBtbEIwTVRPTU9QakZOXzByWjVsOXNSdVdRN0lsTnRn?oc=5",
+   "source": "Consilio",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-09-30T12:27:31+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "블로그 | 전문가 시스템에서 생성형 AI까지: 법률 업계의 AI 진화",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "법률 산업에서 과거의 전문가 시스템부터 현재의 생성형 AI에 이르기까지 기술 진화 과정과 적용 범위의 변화를 조명했다.",
+    "p": "단순 자동화를 넘어 법률 문서 분석과 자문 등 지식 노동 영역으로 인공지능의 활용도가 깊숙이 침투하고 있음을 보여준다.",
+    "t": [
+     "법률AI",
+     "생성형AI",
+     "전문가시스템",
+     "법조계"
     ],
     "v": 1
    }
@@ -3256,6 +3419,31 @@
    }
   },
   {
+   "id": "72fa5c2e6bc8bbe1",
+   "title": "Emotionally Intelligent People Use a Simple 3-Word Phrase to Guide Their Approach to A.I.",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVHB6RlFReldSTGQ3c0w3QVE5OXJXOEF2WHRTdUctejJwcFZHNVotYjU2MVltdTV0SlY3S1JyeGU5eFl0ME5pcXY0a2w3Q05iR2xRQTVFaG83SXp1dUVEbUJZdUIyeEtwZTN2ZzM5SzBURkVCczZxTzROUUllUnpFYlpHajNseHhPUWJNbktDakZPeFE1TVMxWTlPQUFGNTVZVElGWDc3WFNsUGlpTk5FaDFyTDJ1RnJaNjZz?oc=5",
+   "source": "inc.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T12:07:04+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "감성 지능이 높은 사람들은 AI에 접근할 때 간단한 3단어 문구를 활용한다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "감성 지능이 높은 사람들이 인공지능을 대할 때 간단한 세 단어의 표현을 활용해 접근 방식을 유도한다는 내용의 지침이 소개됐다.",
+    "p": "기술과의 상호작용에서 인간의 심리적 태도와 소통 방식이 AI 활용 효율성을 좌우하는 중요한 요소임을 강조한다.",
+    "t": [
+     "감성지능",
+     "AI활용",
+     "업무생산성",
+     "인간관계"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "e3aeccaa021dacc0",
    "title": "Artificial intelligence (AI) capable of identifying uncommon gastrointestinal pathologies despite no targeted disease training",
    "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRnc0RmhkR1ZkSGlEa0tRNmMyY0xhMUZzTGNZUWRHQjRGWGR4c2g1bFBTNVdCSmNnVGNrNkloMTZhSmswdEhfY3hMSWU5WThfeXdZaGIydHJDbTNZa2J0aWZqRi1QenFSbUhQZEx6cHBidnYya05pcDVOT1VTYm9VLVVzc3Z3aG9POFBLd2NVbXhaRkxabnMyN0ZyNl82V0VqSk4yUjBKYUxKRlBIS3AtaEo2OFJUcFphRWRyc0I2QU5oTDJEd012dEpVUGlPVUZWYVhYb05ZbVRJYWhpUF9xamNjUjlTZVlYaFZXY1pSUjJCd1JUS3VjeUVMNkJoZVE?oc=5",
@@ -3407,6 +3595,31 @@
    }
   },
   {
+   "id": "e9541e21b1e847d1",
+   "title": "Trump's AI \"constitution\" crowns day of accelerating ambition",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1WVEw1LXdkaDN0LUN1cTRXSm1jdk00R0djOXRjQWQ2WXRKb2lHVmMyZzJubmN5RjUyZEZONnhRdVI2OElzc2xzY3B5cVhUUS1BU01YNzVFNGVuWElMVFRtSlY4VTg0cnB2Wms0MW1tRm54RTBn?oc=5",
+   "source": "Axios",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-30T11:59:06+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "트럼프의 AI ‘헌법’, 야망이 가속화되는 하루를 장식하다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "도널드 트럼프 행정부가 AI 관련 규범 체계를 정비하는 이른바 'AI 헌법'을 발표하며 인공지능 정책 추진에 속도를 내고 있다.",
+    "p": "미국 정부가 AI 기술 패권 경쟁 속에서 산업 육성과 통제를 아우르는 일관된 국가적 기준을 세우려는 행보로 해석된다.",
+    "t": [
+     "미국",
+     "AI",
+     "규제",
+     "정책"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "d39c79e4af2ec339",
    "title": "AI '자율규제' 띄운 트럼프…기업들에 맡긴다",
    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5wNUVKYWZWY0JDOTl3QzloS1J1ZVZOZmlwTFcyQkJXNThPaWwzMGNiMklLVE1RS3lDNmt4Zm84NVQteXRBVFZDYzVOZWRSMnJHaldQRVNIMEs2Q0ZQY2h2N1hoQ0FhRXk4SUFfV0liSEw2RU0x?oc=5",
@@ -3424,27 +3637,6 @@
      "AI규제",
      "자율규제",
      "트럼프"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "25e8b5cd01bfa47e",
-   "title": "정부, ‘GPT-6 아스트라’ 수준 프런티어 AI모델 개발 나선다",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5QbEIwb20taVpqejNpMmJ0M2N4ZzJVNHlIbHRabHZSc3lFWkRQSmtRRXZMODJjRnc5R3gtb0l0bnlPVXZKdmxfTEJfWVVKRXIxc21YeDVvM1NNMXUzUVlOSw?oc=5",
-   "source": "한겨레",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T11:57:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "정부가 'GPT-6 아스트라' 수준의 프런티어 인공지능 모델 개발에 착수한다.",
-    "p": "글로벌 빅테크 중심의 초거대 AI 경쟁 속에서 국가 차원의 독자적 프런티어 모델 확보를 통해 기술 주권을 강화하려는 시도이다.",
-    "t": [
-     "정부",
-     "인공지능",
-     "프런티어AI"
     ],
     "v": 1
    }
@@ -8315,31 +8507,6 @@
    }
   },
   {
-   "id": "32913916444ff247",
-   "title": "AI’s mental health test",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPY19rUmpzMVdldmwxclJod2NuYktLQzlwMFZfUGo2aUt5YXNtTERCTnJ6cV9VcThDbzA2ZVFNZGdIXy10Zi1GV0txQVZBb1BxTHFOYi1YN08tRks2S2JQaTlkQl9LUzdmZ2dKTHVQZXlnU1RoNE5sRFp1cUlJRDBFT3hBenlnRk9ZS1FqUm85Rks5UC04aWRKWThaRGM1Wmh1NGc?oc=5",
-   "source": "Politico",
-   "field": "청소년·가족",
-   "category": "news_global",
-   "published": "2026-09-29T20:00:09+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "AI의 정신 건강 검사",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "인공지능을 활용한 정신 건강 진단과 테스트의 타당성을 다룬 논의가 제기되었다.",
-    "p": "정신 건강 영역에 인공지능이 깊숙이 개입하면서 기술의 신뢰성과 윤리적 검증 기준 마련이 시급해지고 있다.",
-    "t": [
-     "정신건강",
-     "AI진단",
-     "의료AI",
-     "윤리"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "59c179bcd76a5d66",
    "title": "서울AI재단, ‘서울 AI 윤리·거버넌스 포럼’ 개최",
    "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1uM1hGelo0Y3pCbzgtTVJkTjdBZ0Y4WWRZVDhIN1JkVkxxX29CaVNvSVZiazQ2cUVLcEk3bm0xR2RLekRMYmFpdGtvVGo?oc=5",
@@ -8357,6 +8524,28 @@
      "AI윤리",
      "거버넌스",
      "포럼"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "d06aa295eda50d0a",
+   "title": "California and the EU Move to Rein In the Environmental Cost of AI",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTkROM3c4STNzaHRwd3dub29MRS02bk1yZVEtVHdQbHVlUnRSbUJsNmV0aTR6UVd4Y1FPX2NDS2R0MVhidndZNGVHRHBZeHE3emd6X09wdmpyRjA1ZTJKMnZfZnlBNndqT2JFSTBZRjgyOTlja3lqSFVDbU55RXdmdkxVYld5eEtHVXpyNkVNWXdXSHNwSVAyZXZKenZfdjBDZ05BaW82MHlGTkVqNEZMZkJtTngxbktxTmfSAboBQVVfeXFMTk5ETjN3OEkzc2h0cHd3bm9vTEUtNm5NcmVRLVR3UGx1ZVJ0Um1CbDZldGk0elFXeGNRT19jQ0tkdDFYYnZ3WTRlR0RwWXhxN3pnel9PcHZqckYwNWUySjJ2X2Z5QTZ3ak9iRUkwWUY4Mjk5Y2t5akhVQ21OeUV3ZnZMVWJXeXhLR1V6cjZFTVl3V0hzcElQMmV2Snp2X3YwQ2dOQWlvNjB5Rk5FajRGTGZCbU54MW5LcU5n?oc=5",
+   "source": "Crude Oil Prices Today | OilPrice.com",
+   "field": "환경·동물",
+   "category": "papers",
+   "published": "2026-09-29T20:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "캘리포니아주와 유럽연합이 인공지능 기술이 유발하는 환경적 비용과 탄소 배출을 억제하기 위한 규제 조치에 착수했다.",
+    "p": "AI 연산 과정에서 소모되는 막대한 전력과 자원으로 인한 환경 파괴를 막기 위해 규제 기관들이 법적 통제 카드를 꺼내 들었다는 점에서 의미가 크다.",
+    "t": [
+     "환경규제",
+     "캘리포니아",
+     "유럽연합",
+     "AI탄소배출"
     ],
     "v": 1
    }
@@ -8614,61 +8803,6 @@
    }
   },
   {
-   "id": "a14f5de56cfe88fa",
-   "title": "LLMjacking can run up your business’ AI bill fast – how to stop it",
-   "link": "https://www.zdnet.com/innovation/llmjacking-business-ai-bill-cost-how-to-stop/",
-   "source": "ZDNET AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T19:09:53+00:00",
-   "summary": "Google analysts warn that stolen AI credentials are being sold underground, and businesses are footing the bill.",
-   "thumb": "",
-   "title_ko": "LLMjacking은 기업의 AI 비용을 급격히 증가시킬 수 있습니다 – 이를 막는 방법",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "구글 분석가들은 도난당한 AI 인증 정보가 암시장에서 거래되고 있으며, 그 대가를 기업들이 치르고 있다고 경고합니다.",
-   "detail_ko": "구글 분석가들은 도난당한 AI 인증 정보가 암시장에서 거래되고 있으며, 그 대가를 기업들이 치르고 있다고 경고했다.",
-   "mx": {
-    "b": "구글 보안 분석가들은 도난당한 AI 인증 정보가 지하 시장에서 거래되면서 기업들이 막대한 API 사용료 청구서 피해를 입고 있다고 경고하며 이에 대한 대응을 촉구했다.",
-    "p": "LLM 활용이 보편화됨에 따라 AI 자격 증명 탈취가 새로운 기업형 범죄 수단으로 부상하며 강력한 계정 보안 체계 구축이 시급해졌다.",
-    "t": [
-     "LLMjacking",
-     "구글",
-     "AI보안",
-     "인증정보"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "5f585f3f8fef5771",
-   "title": "HPE Labs connects AI sovereignty with quantum security",
-   "link": "https://siliconangle.com/2026/09/29/data-sovereignty-hpe-andrew-wheeler-ai-thecube-hpesovereignai/",
-   "source": "SiliconANGLE AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T19:09:12+00:00",
-   "summary": "As director of HPE Labs, Andrew Wheeler (pictured) is uniquely positioned to observe rapid advancements in artificial intelligence and new developments for the emerging field of…",
-   "detail": "As director of HPE Labs, Andrew Wheeler (pictured) is uniquely positioned to observe rapid advancements in artificial intelligence and new developments for the emerging field of quantum computing.",
-   "thumb": "",
-   "title_ko": "HPE Labs, AI 주권과 양자 보안을 연결하다",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "HPE Labs의 소장인 앤드류 휠러(사진)는 인공지능 분야의 급속한 발전과 신흥 분야인…의 새로운 동향을 관찰하기에 유리한 입장에 있습니다.",
-   "detail_ko": "HPE 랩스(HPE Labs)의 책임자인 앤드류 휠러(사진)는 인공지능 분야의 급속한 발전과 신흥 분야인 양자 컴퓨팅의 새로운 동향을 관찰하기에 유리한 입지를 차지하고 있다.",
-   "mx": {
-    "b": "HPE 랩스의 앤드루 휠러 디렉터가 인공지능 주권과 양자 보안의 융합 필요성을 강조하며 급변하는 기술 환경에 대응하고 있다.",
-    "p": "국가별 AI 주권 확보 움직임이 차세대 양자 컴퓨팅 보안 기술과의 결합을 통해 인프라 보호 중심으로 진화하고 있다.",
-    "t": [
-     "HPE랩스",
-     "AI주권",
-     "양자보안",
-     "인프라"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "b71bcbfe3ff17b05",
    "title": "AMD Makes $8.2 Billion Bet on AI's Next Big Market",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmpUMVBRRWVmT2RVZS1ERHBIM29tRFlHOWxWSFctZHpnb1BkYjU2NEdjSWxzcTlQVnBnd2lLVjJ3ZHpRQUtqYVB5ckRkOWR1dTM1ZUU4Mzl1NjBabWgxNHpVQlB5bGJkazlQXzhfcmR0cURFLThLVUxXQ0NNbkhxYVl0dUE5ZERZQjExN1B5MUxYVzNLYUNMakFZME5HNFplWEVfLTZ6YUtTRUZZSWc?oc=5",
@@ -8708,31 +8842,6 @@
      "인공지능",
      "노동",
      "경력"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "9241e62356dd165e",
-   "title": "Robotics Competition Winners Advance Military Exploration of Humanoid Capabilities",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQjN3U05LMkpVQjVTU0lyWTgwRDRjbUg3MWhDcmdWRlotVXlKdW5YLTFCMmhKc250dHhBQ0VCTFM2bHlmTktmVlgxd3VfVWVfQXpnTXd4Z2REREhXVXRFaTdIU3N3anU2eFBkTDlzTGNadk1kc21kX1V6bGxHS20xN2hVX3FhOHM1WUozbUFQVGpFTVV4Vnc2am15Q2tzYXF5WG45R3NpYkpiVWFBWEZxeVVyUHdUQU1zenlCOVR0M3c3R3F5MzI5VlBJQkJvYXVaM2FkaWVJdzVYQQ?oc=5",
-   "source": "U.S. Department of War (.gov)",
-   "field": "피지컬 AI",
-   "category": "news_global",
-   "published": "2026-09-29T19:02:16+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "로보틱스 대회 우승팀, 휴머노이드 기능에 대한 군사적 탐구 가속화",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "미국 전쟁부가 주관한 로보틱스 경진대회 우승자들이 선정되면서 군사 분야에서의 휴머노이드 로봇 역량 탐색이 본격화되고 있다.",
-    "p": "국방 분야의 무인화 및 자동화 수요가 휴머노이드 로봇의 실전 투입 가능성을 검증하는 기술 실증 단계로 빠르게 이어지고 있다.",
-    "t": [
-     "미국전쟁부",
-     "로보틱스",
-     "휴머노이드",
-     "국방기술"
     ],
     "v": 1
    }
@@ -9259,28 +9368,6 @@
    }
   },
   {
-   "id": "7f1b2dba2264c727",
-   "title": "\"AI 경쟁력 출발점은 데이터센터…투자·활용 기반 갖춰야\"",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBYNzRWaHhuNjM5SlBFbEpYN2FrblVhRjRTOFMtV3hQTDgxMlp1SkpKWWprUmhncWo5Vm9IVkJmTVJfV2lxclBTb0JHYUtwZWoxdTZkckNGaXZVYzlHck43OdIBYEFVX3lxTFBYNzRWaHhuNjM5SlBFbEpYN2FrblVhRjRTOFMtV3hQTDgxMlp1SkpKWWprUmhncWo5Vm9IVkJmTVJfV2lxclBTb0JHYUtwZWoxdTZkckNGaXZVYzlHck43OQ?oc=5",
-   "source": "yna.co.kr",
-   "field": "",
-   "category": "policy",
-   "published": "2026-09-29T05:00:02+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "AI 경쟁력 확보를 위해 데이터센터 인프라 투자와 활용 기반을 선제적으로 구축해야 한다는 주장이 제기됐다.",
-    "p": "대규모 연산 자원이 필수적인 AI 산업에서 데이터센터는 국가 경쟁력을 좌우하는 핵심 인프라로 자리 잡고 있다.",
-    "t": [
-     "데이터센터",
-     "인프라",
-     "AI정책",
-     "투자"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "80faa34d143d0967",
    "title": "8주 걸리던 임상 시험 파트너 찾기, AI로 '10일' 만에 끝낸다",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONVdFb1M4OHRTUWlJa2hFLV9LYzk4clE1ZmdYOTc0eDRNem1HRzlfSDBHamtSd1ZXRjE1dS1VMnl5RXRlQVNqN1hna21adDJFc1BWdFFoZlRKUGhBNmVvVDZGVng5OXByQWxSajZ3ckdCeGhIMldwZjlsb2dRS0U3cA?oc=5",
@@ -9604,32 +9691,6 @@
    }
   },
   {
-   "id": "83ba4c4d76ccab9e",
-   "title": "Metro-WM: Long-Horizon Latent Planning with Realisable Sub-Goals",
-   "link": "https://arxiv.org/abs/2609.31868",
-   "source": "arXiv cs.AI · AI 일반",
-   "field": "AI 일반",
-   "category": "papers",
-   "published": "2026-09-29T00:00:00-04:00",
-   "summary": "Model-predictive control with Joint-Embedding Predictive Architectures (JEPAs) provides a strong zero-shot goal-reaching planner, but it is only effective over short planning…",
-   "detail": "Model-predictive control with Joint-Embedding Predictive Architectures (JEPAs) provides a strong zero-shot goal-reaching planner, but it is only effective over short planning horizons.",
-   "thumb": "",
-   "summary_ko": "JEPAs(Joint-Embedding Predictive Architectures)를 활용한 모델 예측 제어는 강력한 제로샷 목표 달성 플래너를 제공하지만, 이는 짧은 계획 범위에서만 효과적입니다…",
-   "tr": "deepl",
-   "trv": 2,
-   "detail_ko": "JEPAs(Joint-Embedding Predictive Architectures)를 활용한 모델 예측 제어(Model-predictive control)는 강력한 제로샷 목표 달성 플래너를 제공하지만, 짧은 계획 기간에서만 효과적이다.",
-   "mx": {
-    "b": "공동 임베딩 예측 구조 기반의 모델 예측 제어를 활용해, 기존의 짧은 계획 지평 한계를 극복하고 실현 가능한 하위 목표를 통해 장기 잠재 계획을 수행하는 Metro-WM이 제안됐다.",
-    "p": "세계 모델 기반 제어 기술이 단기 반응형 계획을 넘어 장기적이고 복잡한 목표 지향적 태스크로 확장될 수 있음을 보여준다.",
-    "t": [
-     "세계모델",
-     "장기계획",
-     "JEPA"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "2e54198af04d4a26",
    "title": "Why Would AI Companies Want to Slow Down?",
    "link": "https://www.youtube.com/watch?v=GzEtpAKYRvE",
@@ -9660,17 +9721,6 @@
    "tr": "g",
    "summary_ko": "a16z 일반 파트너 Jennifer Li가 fal 공동 창립자 Gorkem Yurtseven 및 엔지니어링 책임자 Batuhan Taskaya와 함께 생성 비디오가 빨라지면 어떤 변화가 있는지 논의합니다.",
    "detail_ko": "a16z 총괄 파트너 Jennifer Li가 fal 공동 창업자인 Gorkem Yurtseven 및 엔지니어링 책임자 Batuhan Taskaya와 함께 생성 비디오가 실시간으로 실행될 수 있을 만큼 빨라지면 어떤 변화가 있을지 논의합니다."
-  },
-  {
-   "id": "a8d33c12678a4584",
-   "title": "글로벌 AI 허브 입지 선정 공청회 개최",
-   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187827",
-   "source": "과학기술정보통신부 보도자료",
-   "field": "",
-   "category": "policy",
-   "published": null,
-   "summary": "",
-   "thumb": ""
   }
  ],
  "status": [
@@ -9713,7 +9763,7 @@
   {
    "name": "Engadget",
    "ok": true,
-   "count": 5,
+   "count": 3,
    "fetched": 20
   },
   {
@@ -9738,7 +9788,7 @@
    "name": "Google News Top: Technology",
    "ok": true,
    "count": 1,
-   "fetched": 63
+   "fetched": 65
   },
   {
    "name": "Google News: AI",
@@ -9804,7 +9854,7 @@
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -9834,7 +9884,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 50
+   "fetched": 51
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -9846,19 +9896,19 @@
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 64
+   "fetched": 63
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 53
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 44
+   "fetched": 46
   },
   {
    "name": "Sequoia Capital",
@@ -9954,7 +10004,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 92
+   "fetched": 88
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -9966,7 +10016,7 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 61
+   "fetched": 59
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
@@ -9984,13 +10034,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 57
+   "fetched": 58
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -10103,8 +10153,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 2,
-   "fetched": 8
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "경향신문",
@@ -10152,7 +10202,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 75
+   "fetched": 74
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -10182,13 +10232,13 @@
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 46
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 54
+   "fetched": 53
   },
   {
    "name": "국민일보",
@@ -10229,7 +10279,7 @@
   {
    "name": "뉴시스",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "fetched": 100
   },
   {
@@ -10259,7 +10309,7 @@
   {
    "name": "매일경제",
    "ok": true,
-   "count": 4,
+   "count": 5,
    "fetched": 50
   },
   {
@@ -10272,7 +10322,7 @@
    "name": "문화일보",
    "ok": true,
    "count": 5,
-   "fetched": 74
+   "fetched": 77
   },
   {
    "name": "법률저널",
@@ -10356,7 +10406,7 @@
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 34
   },
   {
    "name": "주제: 경제 · 경제",
@@ -10374,7 +10424,7 @@
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 34
   },
   {
    "name": "주제: 로봇 · 로봇",
@@ -10386,13 +10436,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 55
   },
   {
    "name": "주제: 법률 · 법률",
@@ -10422,7 +10472,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 34
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -10440,13 +10490,13 @@
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 20
+   "fetched": 22
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -10470,13 +10520,13 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 536
+   "fetched": 505
   },
   {
    "name": "프레시안",
    "ok": true,
    "count": 5,
-   "fetched": 53
+   "fetched": 51
   },
   {
    "name": "한겨레",

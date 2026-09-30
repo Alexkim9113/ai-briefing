@@ -988,5 +988,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T12:50:32.347719+00:00"
+ },
+ "eed6f1aa555cb89f1dddcebde822b47d304a0e03673f35261414b8cfe7c3b93a": {
+  "url": "https://www.khan.co.kr/article/202609302134015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:12:27.477382+00:00"
+ },
+ "8b2ac47c0fec54c0b14ae0197ad03b1aecb1b697e8b92e3866264fdb2f2459a5": {
+  "url": "https://www.khan.co.kr/article/202609302134005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:12:28.800523+00:00"
+ },
+ "60841de90f26353e16684762b41b71da48b1f140e0dec7c7f89dd0e454c96828": {
+  "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YcE5DaTJhVGI1Y0FyekE1V2FsdGN5OVpabnl0VVFCX0xxSDhCZVJ5RjBONGN3TnBKb2k4THFLQlNaV2c4ZHJMWEZfal9VUGs?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:29.120935+00:00"
+ },
+ "ddc8f0ad9186b80d3989f27d1ea171e589132d42d4adcf9823bb94b01ba2dc67": {
+  "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPd1NsWXc2U1BVYS1BX1p2TXFxZktnZW8yTDhERmxhdTBlYWFXUklyb093TlJvT0Z6U184X3A5SDZuYTdhNHJwTXVQcndqQnBUYkJYSU1nV2kwb0h4Q0ZnVzZWcW5Ldld0ekN4WnFicmR6NE1Lakg3c21VOFF5Z2ZTdjFXVUhjUW9yRE9vaG9FY1ZUOTNzME9UV2FKZFBReXBnSXpqWmJkdGtZa255U0w2bXZRVjA3NERyTlBrc2V2cU5qWHNtTUxzTkdzZjZwWGdSMldF?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:29.356615+00:00"
+ },
+ "0e7fecbeec04b458f2bcf305455558b8c12b84e48013c79b50be2d3004b83d7d": {
+  "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcXdXMWhmVXRKOGhnMzAzM2t5TGtaREgzenNid1otRkFNUk5IY2xaM1IzT2tPb29aQkczWmlqNjdMbGlkZWs4VkNsWGMtQUIzRHVVeWJEeGsxQzdocGhWSktwU2RQdThxVTFhY0NYQTFSWmJSaXF4aFlIQm1JYWdqR21rUWlKS3JpMVE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:29.705895+00:00"
+ },
+ "f6650039aff2f7a08e8a284c45cfef7f2c0c0a4868b611f791e6d3aaa76b7115": {
+  "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzJlNUdQSmY5ZGJ5SFE0WEswN1p0TjVCOEdtWXZlVU9iUGdDTUhpMUtVNjBSb1FSZnd5c0F4T3U0emh4MVpFQW5SbGRYXzVodkN1OHRzRkZ5UGpMNzJ6T0twNlQtRjFfUDUzcEx0M012VWl4NnN0bE50M2ZsbEZlekF1VHJ0ZGtMTnBtUjBtbEIwTVRPTU9QakZOXzByWjVsOXNSdVdRN0lsTnRn?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:29.865430+00:00"
+ },
+ "0b7d4fe719e0bb0f62f9be0908c85c83b3934120450751062cad3d9bfa4f8514": {
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVHB6RlFReldSTGQ3c0w3QVE5OXJXOEF2WHRTdUctejJwcFZHNVotYjU2MVltdTV0SlY3S1JyeGU5eFl0ME5pcXY0a2w3Q05iR2xRQTVFaG83SXp1dUVEbUJZdUIyeEtwZTN2ZzM5SzBURkVCczZxTzROUUllUnpFYlpHajNseHhPUWJNbktDakZPeFE1TVMxWTlPQUFGNTVZVElGWDc3WFNsUGlpTk5FaDFyTDJ1RnJaNjZz?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:30.111304+00:00"
+ },
+ "b78f97a6fd1e335de84f1bbb731da12631497c9f0fdbaebaeacb3a96d04b1d81": {
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1WVEw1LXdkaDN0LUN1cTRXSm1jdk00R0djOXRjQWQ2WXRKb2lHVmMyZzJubmN5RjUyZEZONnhRdVI2OElzc2xzY3B5cVhUUS1BU01YNzVFNGVuWElMVFRtSlY4VTg0cnB2Wms0MW1tRm54RTBn?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:30.386513+00:00"
+ },
+ "867d6237cbe830d53ed4a7578fa46c6695dab4f97081c3c25795dc937cc2b951": {
+  "url": "https://the-decoder.com/anthropic-says-zhipus-open-weight-glm-5-3-nearly-matches-claude-mythos-preview-at-building-exploits/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T13:12:31.243147+00:00"
+ },
+ "c76a5011c81edf38ae5982508c54b791f2875779fbe6e63eecf720bf60d6e888": {
+  "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRV9adnZMTS04V3l1bTJWWkpLTFFPdEkxYUFRdVJYQ0M4TVE0LVV5a2JRNFpoTVZ1Wjg1M1lNNUNfNnB4R3RHWWtSSXN5cHFBNUYzTTc4NjcyMzlGLW9iU0RGVE5fM1hSM3M1b21vYXAybFFiV2xvV3FtVlZDQ0dvbFpaVjVrUXRja3ZmQk9xMVBZdXFfcF9TdENBbFB1c0FseG00d3R5TTJSTWU5VnlOdXNGd2p0Rmg2emZvZXRGNEdPaEpjSU9SNVR1ZUo?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T13:12:31.615241+00:00"
  }
 }
