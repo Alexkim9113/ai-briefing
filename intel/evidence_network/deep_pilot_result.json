@@ -1,0 +1,97 @@
+{
+  "topic_name": "AI_ENERGY_INFRA",
+  "topic_field_value": "에너지·환경",
+  "topic_selection_reason": "only pilot topic (of AI_AGENTS/AI_LABOR/AI_ENERGY_INFRA) with a real, title-matched Federal Register POLICY document predating its field-tagged cluster by ~1 year",
+  "total_topic_documents": 12,
+  "bucket_counts": {
+    "BASELINE": 1,
+    "TRANSITION": 0,
+    "CURRENT": 11,
+    "UNASSIGNED_GAP": 0
+  },
+  "bucket_document_ids": {
+    "BASELINE": [
+      "b8a4c2850d58bbd8"
+    ],
+    "TRANSITION": [],
+    "CURRENT": [
+      "011ef36b54ed2caf",
+      "1ecc5bbf614279ab",
+      "4362ab11e73c75fe",
+      "4fddb8d043851dec",
+      "6bb04d3a16411126",
+      "788d01ac3691ff08",
+      "816c50b1f41abd48",
+      "8d120e73d1ec23c7",
+      "a541b3b3913208a4",
+      "acaec4a2ea38d98d",
+      "e97feb962e9bc35b"
+    ],
+    "UNASSIGNED_GAP": []
+  },
+  "evidence_chain": {
+    "CURRENT_EVENT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "acaec4a2ea38d98d",
+      "title": "뉴욕 기후주간 뒤덮은 호르무즈·AI",
+      "published": "2026-09-29T01:11:28+00:00",
+      "reason": "most recent real NEWS document tagged field==에너지·환경, published in the CURRENT bucket (>= 2026-09-01)"
+    },
+    "PRIMARY_EVIDENCE": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "011ef36b54ed2caf",
+      "title": "Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems",
+      "published": "2026-09-28T00:00:00-04:00",
+      "reason": "no government/official primary source falls in the CURRENT bucket for this topic; the most recent real RESEARCH (arXiv) document is reported instead, explicitly labeled as such, not upgraded to an official-primary-source claim"
+    },
+    "PREVIOUS_STATE": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "b8a4c2850d58bbd8",
+      "title": "Accelerating Speed to Power/Winning the Artificial Intelligence Race: Federal Action To Rapidly Expand Grid Capacity and Enable Electricity Demand Growth",
+      "published": "2025-09-18",
+      "reason": "the only real POLICY (Federal Register) document that both title-matches this topic's energy/grid keywords and references AI, published well before the CURRENT cluster"
+    },
+    "CONFIRMED_CHANGE": {
+      "status": "TEMPORAL_GAP",
+      "document_id": null,
+      "reason": "no real document bridges the ~1-year gap between the 2025-09/10 BASELINE POLICY document and the 2026-09-28/29 CURRENT cluster -- this is a genuine, honestly reported gap in the corpus's real temporal coverage, not an oversight"
+    },
+    "STATISTICAL_CONTEXT": {
+      "status": "STATISTICAL_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)"
+    },
+    "RESEARCH_CONTEXT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "4362ab11e73c75fe",
+      "title": "Grid-Orch: An LLM-Powered Orchestrator for Distribution Grid Simulation and Analytics",
+      "published": "2026-09-28T00:00:00-04:00",
+      "reason": "a real, distinct arXiv RESEARCH document from this topic's corpus, offering additional technical context beyond PRIMARY_EVIDENCE"
+    },
+    "HISTORICAL_CONTEXT": {
+      "status": "HISTORY_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: intel/foresight_engine has zero registered historical_evidence records for any pilot topic today (see pilot_topic_coverage.py historical_evidence_count == 0)"
+    },
+    "CROSS_DOMAIN_EFFECT": {
+      "status": "SOURCE_GAP",
+      "document_id": null,
+      "reason": "no document in the AI_AGENTS or AI_LABOR pilot topics title-matches this topic's energy/grid keywords in the real corpus"
+    },
+    "COUNTEREVIDENCE": {
+      "status": "COUNTEREVIDENCE_GAP",
+      "document_id": null,
+      "reason": "no counterevidence-flagging pipeline has been run for this topic; pilot_topic_coverage.py's own matrix already reports counterevidence_flagged as UNKNOWN"
+    },
+    "UNCERTAINTY": {
+      "status": "NOTED",
+      "document_id": null,
+      "reason": "this topic's field-tagged NEWS/RESEARCH documents were all published within a single 2-day window (2026-09-28/29), and the sole BASELINE POLICY document is the only pre-2026 evidence found -- the chain's temporal depth rests on exactly one document each for BASELINE and CURRENT-cluster selection, not on a broad sample"
+    }
+  },
+  "chain_summary": {
+    "total_nodes": 10,
+    "real_evidence_or_noted_nodes": 5,
+    "gap_nodes": 5
+  }
+}
