@@ -535,6 +535,15 @@ def run_article_provenance_pilot(new_items, fixtures=None, cap=PROVENANCE_FETCH_
         fetch_pilot = _load_source_intel_module("fetch_pilot", subdir="scripts")
         content_acquisition = fetch_pilot.content_acquisition
         article_provenance_pipeline = _load_source_intel_module("article_provenance_pipeline")
+        # CLOSURE ROUND C item 5/6 - extraction 실패 원인 진단의 첫 단계: extractor 자체가
+        # 이 실행 환경에 설치돼 있는지부터 확인한다(라이브러리가 없으면 모든 fetch가 항상
+        # EXTRACTION_TOO_SHORT로 귀결되므로, 페이지별 구조 문제와 구별해야 한다). 테스트의
+        # fake 모듈에는 이 속성이 없을 수 있으므로 getattr로 방어(진단 실패가 실제 provenance
+        # 처리를 절대 막지 않는다).
+        _is_avail = getattr(content_acquisition, "is_extractor_available", None)
+        if _is_avail is not None:
+            print(f"[provenance-diag] trafilatura_available={_is_avail()} "
+                  f"version={getattr(content_acquisition, 'EXTRACTOR_VERSION', None)}", file=sys.stderr)
     except Exception as e:
         print(f"[provenance] 모듈 로드 실패 - 이번 실행은 원문 fetch를 건너뜀(브리핑에는 영향 없음): "
               f"{type(e).__name__}: {e}", file=sys.stderr)

@@ -78,6 +78,11 @@ jobs:
           MS_TRANSLATOR_REGION: ${{ secrets.MS_TRANSLATOR_REGION }}
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
         run: |
+          # CLOSURE ROUND C 근본원인: 이 step이 trafilatura를 설치한 적이 없어
+          # content_acquisition._TRAFILATURA_AVAILABLE가 항상 False였다 - source-intel-fetch-pilot.yml은
+          # 이미 설치하고 있었고(그래서 그 워크플로에서는 real fetch가 정상 성공했다), 이 daily 경로만
+          # 빠져 있었다. 페이지 내용과 무관하게 모든 fetch가 EXTRACTION_TOO_SHORT로 귀결된 원인.
+          pip install -q trafilatura
           if [ -n "$SINCE" ]; then python briefing.py backfill --since "$SINCE" ${UNTIL:+--until "$UNTIL"} ${ONLY:+--only "$ONLY"} ${LIMIT:+--limit "$LIMIT"} && python briefing.py build; else python briefing.py; fi
       - name: 수집 데이터 저장(카테고리 아카이브 보관용)
         run: |
