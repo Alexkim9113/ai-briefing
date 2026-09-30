@@ -142,6 +142,31 @@ def _sha256(text):
     return hashlib.sha256((text or "").encode("utf-8")).hexdigest()
 
 
+def _extract_title(html):
+    """content_acquisition.acquire_content()는 status/text만 반환하고 메타데이터
+    (title 등)는 버린다 - 계약을 바꾸지 않기 위해 fetch_pilot 쪽에서 별도로
+    trafilatura의 메타데이터 추출을 호출한다. trafilatura 2.x는
+    extract(..., with_metadata=True, output_format="json")로 metadata를 함께 내준다."""
+    if not html:
+        return None
+    try:
+        import trafilatura
+    except ImportError:
+        return None
+    try:
+        raw = trafilatura.extract(html, with_metadata=True, output_format="json",
+                                   include_comments=False, include_tables=False)
+        if not raw:
+            return None
+        meta = json.loads(raw)
+        title = meta.get("title")
+        return title or None
+    except Exception:
+        # 메타데이터 추출 실패는 본문 추출 실패와 무관하게 조용히 None으로 처리한다
+        # (섹션 47: fetched content는 신뢰하지 않는 데이터).
+        return None
+
+
 def run(source_matrix=None, fetcher=real_fetcher):
     source_matrix = (source_matrix or SOURCE_MATRIX)[:MAX_URLS]  # 섹션 67: 최대 6개, crawl 금지
     results = []
@@ -164,8 +189,22 @@ def run(source_matrix=None, fetcher=real_fetcher):
             "content_hash": None,
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
+        # acquire_content()의 반환 계약(status/text/extractor만)은 바꾸지 않는다 - 대신
+        # 주입하는 fetcher를 얇게 감싸서 fetcher가 실제로 반환한 raw dict(status_code,
+        # resolved_url, html)를 옆에서 그대로 캡처해 둔다. 네트워크 호출은 여전히 1회뿐이다.
+        captured = {}
+
+        def _capturing_fetcher(u, _fetcher=fetcher, _sink=captured):
+            result = _fetcher(u)
+            _sink["fetched"] = result
+            return result
+
         try:
-            acquired = content_acquisition.acquire_content(url, fetcher=fetcher)
+            acquired = content_acquisition.acquire_content(url, fetcher=_capturing_fetcher)
+            fetched = captured.get("fetched") or {}
+            row["http_status"] = fetched.get("status_code")
+            row["resolved_url"] = fetched.get("resolved_url")
+            row["title"] = _extract_title(fetched.get("html"))
             row["content_status"] = acquired.get("status")
             row["extractor"] = acquired.get("extractor")
             row["extractor_version"] = acquired.get("extractor_version")

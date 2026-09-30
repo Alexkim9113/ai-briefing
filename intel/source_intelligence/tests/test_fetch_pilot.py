@@ -87,3 +87,39 @@ def test_full_field_set_present_on_success():
         assert field in row
     assert row["fetch_result"] == "OK"
     assert row["content_hash"]  # sha256 present
+
+
+def test_http_status_and_title_captured_on_success():
+    # 버그 재현/수정 검증: real_fetcher가 반환하는 status_code/resolved_url과
+    # trafilatura 메타데이터의 title이 최종 row에 전파되어야 한다(과거엔 항상 null).
+    fake_html = (
+        "<html><head><title>테스트 기사 제목입니다</title></head><body>"
+        "<article><h1>테스트 기사 제목입니다</h1><p>" + ("실제 기사 본문 내용. " * 40) +
+        "</p></article></body></html>"
+    )
+
+    def fake_fetcher(url):
+        return {"html": fake_html, "content_type": "text/html", "status_code": 200,
+                "byte_size": len(fake_html), "resolved_url": url + "?resolved"}
+
+    results = fp.run(source_matrix=[{"discovery_url": "https://example.com/article", "source_type": "TEST"}],
+                      fetcher=fake_fetcher)
+    row = results[0]
+    assert row["fetch_result"] == "OK"
+    assert row["http_status"] == 200
+    assert row["resolved_url"] == "https://example.com/article?resolved"
+    assert row["title"] == "테스트 기사 제목입니다"
+
+
+def test_http_status_captured_on_failure():
+    # BLOCKED/FETCH_FAILED 경로에서도 http_status는 여전히 채워져야 한다(title은 없어도 된다).
+    def fake_fetcher(url):
+        return {"html": None, "content_type": None, "status_code": 403, "byte_size": 0,
+                "resolved_url": url}
+
+    results = fp.run(source_matrix=[{"discovery_url": "https://example.com/blocked", "source_type": "TEST"}],
+                      fetcher=fake_fetcher)
+    row = results[0]
+    assert row["content_status"] == "BLOCKED"
+    assert row["http_status"] == 403
+    assert row["title"] is None
