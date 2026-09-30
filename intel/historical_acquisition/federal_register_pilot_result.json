@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-09-30T09:53:17.869298+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36698641780)",
+  "attempted_at": "2026-09-30T09:56:01.049744+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36698649273)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 5,
@@ -10,7 +10,7 @@
       "source_tier": "TIER_1",
       "gap_type": "MISSING_REGULATORY_HISTORY",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&per_page=5&order=newest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-09-30T09:53:17.869298+00:00",
+      "attempted_at": "2026-09-30T09:56:01.049744+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
@@ -34,8 +34,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-09-30T09:53:17.869298+00:00",
-          "provenance_id": "prov_fedreg_2026-19860_2026-09-30T09:53:17.869298+00:00"
+          "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+          "provenance_id": "prov_fedreg_2026-19860_2026-09-30T09:56:01.049744+00:00"
         },
         {
           "document_id": "fedreg_2026-19835",
@@ -57,8 +57,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-09-30T09:53:17.869298+00:00",
-          "provenance_id": "prov_fedreg_2026-19835_2026-09-30T09:53:17.869298+00:00"
+          "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+          "provenance_id": "prov_fedreg_2026-19835_2026-09-30T09:56:01.049744+00:00"
         },
         {
           "document_id": "fedreg_2026-19535",
@@ -80,8 +80,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19535/request-for-information-medicare-part-d-reasonable-and-relevant-pharmacy-contracting-standards",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-09-30T09:53:17.869298+00:00",
-          "provenance_id": "prov_fedreg_2026-19535_2026-09-30T09:53:17.869298+00:00"
+          "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+          "provenance_id": "prov_fedreg_2026-19535_2026-09-30T09:56:01.049744+00:00"
         },
         {
           "document_id": "fedreg_2026-19528",
@@ -102,8 +102,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-09-30T09:53:17.869298+00:00",
-          "provenance_id": "prov_fedreg_2026-19528_2026-09-30T09:53:17.869298+00:00"
+          "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+          "provenance_id": "prov_fedreg_2026-19528_2026-09-30T09:56:01.049744+00:00"
         },
         {
           "document_id": "fedreg_2026-19388",
@@ -124,8 +124,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/22/2026-19388/order-granting-temporary-conditional-exemptive-relief-pursuant-to-section-36a1-of-the-securities",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-09-30T09:53:17.869298+00:00",
-          "provenance_id": "prov_fedreg_2026-19388_2026-09-30T09:53:17.869298+00:00"
+          "retrieved_at": "2026-09-30T09:56:01.049744+00:00",
+          "provenance_id": "prov_fedreg_2026-19388_2026-09-30T09:56:01.049744+00:00"
         }
       ],
       "overall_status": "SUCCESS",
