@@ -98,5 +98,55 @@
   "url": "https://www.khan.co.kr/article/202609301017001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
   "status": "FETCH_FAILED",
   "ts": "2026-09-30T01:52:05.142615+00:00"
+ },
+ "eeb490e83b4c126c7ffdd0f910cacf26092b8303a63936dc8b92fe9ecd724e38": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808631",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:21:48.538284+00:00"
+ },
+ "eedc63c96bc2e746a24a3cd21aa0cfc059b00fce14eff2fe96ec49bfeb72818e": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808432",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:21:48.973414+00:00"
+ },
+ "7fa38d1dad321455830e655b8372ac8cde703c47fe7efd569e3820334d5f6a9c": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808610",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:21:49.431385+00:00"
+ },
+ "790574871ff35d78ced23e41194c489387c727f9a45638d5f11f4cc174362b18": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215791",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:21:50.718960+00:00"
+ },
+ "fbc04cc9e350b5100761088013db5ec07efb7021a3702fb6300794be17b83abe": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=03516166645585368",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:06.311048+00:00"
+ },
+ "d5be83934f05b33d1b8f543f32da2b6b39454ab5e50cb192bb002d9a08535c84": {
+  "url": "https://www.yna.co.kr/view/AKR20260930080900017",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:07.460052+00:00"
+ },
+ "19aa2f6cef7f6bb6920e9ad75d18ad846eba91273314e978007a068c89d7c447": {
+  "url": "https://www.yna.co.kr/view/AKR20260930038900004",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:08.594157+00:00"
+ },
+ "9de9f529a38adc81bccad51bebcc34c82fb9769dd7a8edb593df872ecdfd2c7d": {
+  "url": "https://www.yna.co.kr/view/AKR20260930060000004",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:09.999005+00:00"
+ },
+ "4ff029a42ed522e76e503eff5ba7d4339ef288c2852279c14d4c05224939bd55": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808493",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:10.647894+00:00"
+ },
+ "03b0d0ad30521cd12a8e7befbb500bfe07d621e384e7417f259ce0a8147cc822": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808598",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T02:22:11.127001+00:00"
  }
 }
