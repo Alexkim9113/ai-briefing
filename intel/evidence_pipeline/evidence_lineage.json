@@ -347,6 +347,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "0b57067446995074:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "0b57067446995074",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": null,
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "0b80e8337f170c48:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "0b80e8337f170c48",
@@ -608,6 +619,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "168f0b33ecd2b448:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "168f0b33ecd2b448",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": null,
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -4490,6 +4512,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "927a2870ad2f63bf:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "927a2870ad2f63bf",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": null,
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "92e717684db9a1da:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "92e717684db9a1da",
@@ -5694,6 +5727,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UQXdTUXFmeUo4RkltM3dBRGxuMGpfd0V1YjNONGJScHpDcWE5cHNrOEFVSl8tUFNnOUpUWElhSTJUMVE0RmVaQ1VCQ3pHTHNrb2EyUjFiOG15clBMbzJvVmVzRmhfTkw0S2Z1UQ?oc=5",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "c6d77cae9d29896d:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "c6d77cae9d29896d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": null,
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -6988,6 +7032,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "f39654f26f4f26a0:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "f39654f26f4f26a0",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": null,
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "f40435708adabe08:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "f40435708adabe08",
@@ -7308,61 +7363,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "0b57067446995074:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "0b57067446995074",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.3384/ecp1392a41",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "168f0b33ecd2b448:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "168f0b33ecd2b448",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.47363/jeast/2021/vid/1006",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "927a2870ad2f63bf:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "927a2870ad2f63bf",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.15556/ijiim.01.02.003",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "c6d77cae9d29896d:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "c6d77cae9d29896d",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.5304/jafscd.2013.041.001",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "f39654f26f4f26a0:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "f39654f26f4f26a0",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.5040/9781718219342.ch-014",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }

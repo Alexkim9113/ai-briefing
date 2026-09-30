@@ -17,7 +17,7 @@
  "claims_extracted": 654,
  "claude_calls_added": 0,
  "counter_evidence_pairs": 0,
- "documents_examined": 582,
+ "documents_examined": 577,
  "embedding_calls": 0,
  "evidence_by_type": {
   "BOTTLENECK": 3,
@@ -35,9 +35,9 @@
  },
  "human_review_pending": 664,
  "independence_overall": {
-  "independent_document_count": 582,
-  "independent_source_count": 257,
-  "raw_document_count": 582,
+  "independent_document_count": 577,
+  "independent_source_count": 256,
+  "raw_document_count": 577,
   "syndication_collapsed": 0
  },
  "interpretation_candidates": 10,
