@@ -1618,5 +1618,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T15:53:57.598499+00:00"
+ },
+ "92c627208580142e65e49c73f6abf1f818da1107b155be67c630cf698cdbb5bf": {
+  "url": "https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:03:42.651822+00:00"
+ },
+ "8f7327ee80b1efed001b75ab9922b77dc056a6f0c094467dc7ef9f988e109dfa": {
+  "url": "https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:03:42.758184+00:00"
+ },
+ "ee68f291510af19dd9f01d15868798128ee626fa191990b1a1f35a0af1241add": {
+  "url": "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:03:43.304030+00:00"
+ },
+ "99b13bb4cc4884ae0240a74f2e408120919da96c0ba3a879d6a6ff58039cd384": {
+  "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUDY1bWJHTFc4REktRWs1Sno5S1FtZGQ0by16WXNoMy1GZDc5OVdhUVR6dkxYb0x1ZEkxSVo2T2cxNDdsaGxZLUpvOE1CcUxzMUt5UVVuZkJyNUd6Q1JiU3NhcTBGWHdVY2RCWFpNaE1rVWJfZ2dNb2NqOWRFaTVHU1oteldjb1ZGaTgwSFNWMVlER0MtYndqMVB3SGNvOWs2UWF5RUdrSjU4UUlqekZseklpV1J2aUstSWo5Vy1BSkU?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:03:43.639077+00:00"
+ },
+ "8d85370cee7027d740497956f79b1ef1e261f17b89349b8f6ec13b367f5c54d4": {
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaHV5TDVmT2tDX2Z3a19vSGZiZ2FYSG5MbEd5V0ZUejRLM21TaEY1ck1uQlNGNXZiUW4teWhONEt4dEk3bmJTQXJGQUtZdWs1OUlvVGVKRTVHMkNQTU45QXBFRTZGbnVOZG52aEFyaEcxSU1IVHU2Ry1Bd09oa1BNeXN0SWlhVjE2ZnBkWXQ3WG5HSGNTTEJLZ19Zd1FTTnJFTGtCM2U5bHBKSWVIQklKM1drTDlTZzhjYkNkUV9ob0RpRmV1TEM5M3Q0SnpfRmRVTVo0Yg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:03:43.949573+00:00"
+ },
+ "e7e172e437964e6d83d9c07d02353ed82f8ceeaaf16c4c43df2245ba38881425": {
+  "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xZ01YSmIzdnpWeV9qT3VsYmxMQktaMXpIbnVRelpybnVhdWhnNWhjNDNnUmhDcGl0UzNOMDBsR1htbUR1RGt4bE92X05VeFU5TzJ1ZEdETGtvOXBZazZoTlJQWnhrQnFh?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:03:44.303361+00:00"
+ },
+ "e719ba1fc8c6d9857ea98690c5b19dbdf8247a0afcddd35f41255f5b622d1db7": {
+  "url": "https://www.fnnews.com/news/202609301422415789",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:03:44.938579+00:00"
+ },
+ "ddfc14a96b48357c411eb68f6b4c737a66e911750be8752e9f5d84fe3cef0ff3": {
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOb0UxRGMyQ3VLZ1hCY2U3dVVzZnYyX1FZSGJ6OElGOFZ3amc1NnY2Z3Fhb2NIcUp4UFNQNTBQZ3RPa2RiaGEtYWROcHpadFpCV244Nng2VDZuOTBMZDNwdHR3ajl4RXhSSEFjSUZQMVlFd25GSXNZWHZxaVpJYXN0VFJSYUtwcWpOc1huZENJSTRjTlJtTUN3RXh4WFgxRkhOZnBLNVFwSHc?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:03:45.269535+00:00"
+ },
+ "8bd1de0126a8ca417f7dea568230de66396121dfe0271b5c0a9f13a5f3c1b60d": {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9MLUdyWmtPcHJzbEdkejFVN2NYNTlHR1U1ZlpOMXFFd19uRXc2WHdnSDBUcVpxLWZ5elVvUkNLanpqS2pIRDluT25YTXJ6NkxjNFdNaUM3VXlnMW5NU2hOLU02LTRMcnVuS2c?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:03:45.605220+00:00"
+ },
+ "dc3b8828f5404368d1464738248673200a405d03169d1d662c90b75d00ee0c93": {
+  "url": "https://www.fnnews.com/news/202609301329454064",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:03:46.098768+00:00"
  }
 }

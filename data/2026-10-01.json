@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated_at": "2026-10-01T00:53+09:00",
+ "generated_at": "2026-10-01T01:03+09:00",
  "items": [
   {
    "id": "0ef1c3d80bfd2916",
@@ -590,6 +590,84 @@
    }
   },
   {
+   "id": "a993d027af6ab3cc",
+   "title": "DoorDash launches an AI agent you can text to order food",
+   "link": "https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T16:00:24+00:00",
+   "summary": "By launching an AI agent for food ordering, DoorDash is looking to gain an edge over rivals Uber Eats and Grubhub.",
+   "thumb": "",
+   "title_ko": "DoorDash, 문자 메시지로 음식 주문이 가능한 AI 에이전트 출시",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "DoorDash는 음식 주문용 AI 에이전트를 출시함으로써 경쟁사인 Uber Eats와 Grubhub에 비해 우위를 점하고자 한다.",
+   "detail_ko": "DoorDash는 음식 주문용 AI 에이전트를 출시함으로써 경쟁사인 Uber Eats와 Grubhub에 비해 우위를 점하고자 한다.",
+   "mx": {
+    "b": "도어대시가 문자 메시지로 음식 주문을 처리할 수 있는 AI 에이전트를 출시했다. 우버이츠 및 그럽허브와의 경쟁에서 우위를 점하기 위한 전략이다.",
+    "p": "음식 배달 플랫폼이 대화형 AI 에이전트를 도입해 단순 주문 중개를 넘어 개인화된 상호작용 중심의 사용자 경험으로 전환하고 있다.",
+    "t": [
+     "DoorDash",
+     "AI에이전트",
+     "푸드테크"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "c85f3b83480500fe",
+   "title": "Instinct’s new product recommendations are giving some users the ick",
+   "link": "https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:56:28+00:00",
+   "summary": "Instinct is rolling out human-curated product and travel recommendations, but some users aren’t happy about getting suggestions they never asked for.",
+   "thumb": "",
+   "title_ko": "Instinct의 새로운 제품 추천 기능이 일부 사용자에게 불쾌감을 주고 있다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Instinct가 사람이 직접 선별한 상품 및 여행 추천 서비스를 출시하고 있지만, 일부 사용자들은 요청한 적도 없는 추천을 받는 것에 불만을 표하고 있습니다.",
+   "detail_ko": "Instinct가 전문가가 선별한 상품 및 여행 추천 서비스를 출시하고 있지만, 일부 사용자들은 요청한 적도 없는 추천을 받는 것에 불만을 표하고 있다.",
+   "mx": {
+    "b": "인스틱스가 인간이 직접 선별한 상품 및 여행 추천 기능을 도입했으나, 일부 사용자는 원하지 않는 제안을 받는 것에 불만을 표출하고 있다.",
+    "p": "플랫폼의 큐레이션 서비스가 사용자 의도와 다르게 작동할 경우 오히려 피로감을 유발하며 개인화 추천의 수용성에 한계를 드러낸다.",
+    "t": [
+     "추천시스템",
+     "UX",
+     "플랫폼"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "7abd4d2d77e4231c",
+   "title": "Google figures out how to watermark AI-designed proteins",
+   "link": "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/",
+   "source": "Ars Technica AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:54:52+00:00",
+   "summary": "Intended to help with biosecurity, it works with a popular AI protein design tool.",
+   "thumb": "",
+   "title_ko": "구글, AI가 설계한 단백질에 워터마크를 삽입하는 방법 개발",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "생물보안 강화에 기여하기 위해 개발된 이 도구는 널리 사용되는 AI 단백질 설계 도구와 연동됩니다.",
+   "detail_ko": "생물보안을 지원하기 위해 개발된 이 도구는 널리 사용되는 AI 단백질 설계 도구와 연동됩니다.",
+   "mx": {
+    "b": "구글이 생물 보안 강화를 위해 인공지능 기반 단백질 디자인 도구에 적용할 수 있는 워터마크 기술을 개발했다.",
+    "p": "AI가 생성한 바이오 데이터의 출처를 추적하고 악용을 방지하기 위한 기술적 안전장치 마련이 본격화되고 있다.",
+    "t": [
+     "구글",
+     "바이오시큐리티",
+     "인공지능"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "1e914694488f31d3",
    "title": "[미국 특징주] HPE 9% 급등...벌처서 12억달러 AMD AI 랙 수주",
    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XLTc2YS1xSXRTQUJEMTNUdWVHMUJ1QlZLQVhOaml3OFctVU5DeXNTNWtHQ0RpY2VHNjVJNnRHU2xjcExzTkZ6bHdFNzdqTjNkdG9jeVROeWl2ZUlk?oc=5",
@@ -759,6 +837,54 @@
      "오픈AI",
      "구글딥마인드",
      "앤트로픽"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "8996dd7edc3c2c13",
+   "title": "Ex-Genentech, Meta, AWS AI leaders launch health AI lab with $500M backing",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUDY1bWJHTFc4REktRWs1Sno5S1FtZGQ0by16WXNoMy1GZDc5OVdhUVR6dkxYb0x1ZEkxSVo2T2cxNDdsaGxZLUpvOE1CcUxzMUt5UVVuZkJyNUd6Q1JiU3NhcTBGWHdVY2RCWFpNaE1rVWJfZ2dNb2NqOWRFaTVHU1oteldjb1ZGaTgwSFNWMVlER0MtYndqMVB3SGNvOWs2UWF5RUdrSjU4UUlqekZseklpV1J2aUstSWo5Vy1BSkU?oc=5",
+   "source": "Fierce Healthcare",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:30:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "제넨텍, 메타, AWS 출신 AI 리더들, 5억 달러 투자 유치하며 헬스케어 AI 연구소 설립",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "제넨텍, 메타, 아마존웹서비스 출신의 AI 리더들이 5억 달러의 자금을 확보해 헬스케어 AI 전문 연구소를 설립했다.",
+    "p": "빅테크 출신의 핵심 인재들이 대규모 자본을 바탕으로 의료 분야에 특화된 AI 연구 개발에 직접 뛰어들고 있다.",
+    "t": [
+     "헬스케어",
+     "AI연구소",
+     "스타트업"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "39fdfc1cb8c37645",
+   "title": "Nvidia CEO Jensen Huang was everywhere in Q3. The AI giant's stock proves it.",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaHV5TDVmT2tDX2Z3a19vSGZiZ2FYSG5MbEd5V0ZUejRLM21TaEY1ck1uQlNGNXZiUW4teWhONEt4dEk3bmJTQXJGQUtZdWs1OUlvVGVKRTVHMkNQTU45QXBFRTZGbnVOZG52aEFyaEcxSU1IVHU2Ry1Bd09oa1BNeXN0SWlhVjE2ZnBkWXQ3WG5HSGNTTEJLZ19Zd1FTTnJFTGtCM2U5bHBKSWVIQklKM1drTDlTZzhjYkNkUV9ob0RpRmV1TEM5M3Q0SnpfRmRVTVo0Yg?oc=5",
+   "source": "Yahoo Finance",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T15:20:47+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "3분기 내내 엔비디아(Nvidia)의 젠슨 황 CEO는 어디서나 눈에 띄었다. 이 AI 거대 기업의 주가가 이를 증명한다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "엔비디아의 젠슨 황 최고경영자가 3분기 동안 다양한 활동을 선보인 가운데, 회사의 주가가 이를 증명하듯 높은 성과를 기록했다.",
+    "p": "AI 인프라 시장에서 독점적인 지위를 차지한 기업의 행보가 최고경영자의 대외 활동과 함께 주가 상승을 견인하고 있다.",
+    "t": [
+     "엔비디아",
+     "젠슨황",
+     "반도체"
     ],
     "v": 1
    }
@@ -1033,6 +1159,27 @@
      "뉴멕시코",
      "AI인프라",
      "지역경제"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "3bacb4b0939fc6b6",
+   "title": "“마케터 대신 AI가 도구 골라 쓴다” AI 에이전트가 마테크 시장을 바꾼다",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xZ01YSmIzdnpWeV9qT3VsYmxMQktaMXpIbnVRelpybnVhdWhnNWhjNDNnUmhDcGl0UzNOMDBsR1htbUR1RGt4bE92X05VeFU5TzJ1ZEdETGtvOXBZazZoTlJQWnhrQnFh?oc=5",
+   "source": "매드타임스",
+   "field": "에이전트",
+   "category": "news_ko",
+   "published": "2026-09-30T15:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "AI 에이전트가 마케터 대신 직접 마테크 도구를 선택하고 실행하는 방식으로 시장 변화를 주도하고 있다.",
+    "p": "마케팅 영역에서 인간의 단순 도구 조작을 넘어 AI 에이전트가 의사결정과 실행을 주도하는 자동화 단계로 진입하고 있다.",
+    "t": [
+     "AI에이전트",
+     "마테크",
+     "마케팅자동화"
     ],
     "v": 1
    }
@@ -1420,6 +1567,19 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "3476dc60a59506fa",
+   "title": "日, 방산 스타트업에 돈 풀고 수출길 연다…전담기구 설립 추진",
+   "link": "https://www.fnnews.com/news/202609301422415789",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T14:28:16+09:00",
+   "summary": "【파이낸셜뉴스 도쿄=서혜진 특파원】일본 정부가 방산 스타트업 투자부터 장비 수출까지 지원하는 전담기구 설립을 추진한다. 자금 확보에 어려움을 겪는 드론·인공지능(AI) 기업에 정부가 먼저 투자하고 해외 판로도 뒷받침해 방위산업의 생산 기반을 키운다는 구상이다.",
+   "detail": "【파이낸셜뉴스 도쿄=서혜진 특파원】일본 정부가 방산 스타트업 투자부터 장비 수출까지 지원하는 전담기구 설립을 추진한다.\n자금 확보에 어려움을 겪는 드론·인공지능(AI) 기업에 정부가 먼저 투자하고 해외 판로도 뒷받침해 방위산업의 생산 기반을 키운다는 구상이다.\n29일 니혼게이자이신문(닛케이)에 따르면 일본 정부는 이르면 2027회계연도 벤처캐피털(VC)을 통한 방산 스타트업 출자 제도를 마련한다.\n설립되는 기구는 방위성과 경제산업성이 공동 운영한다.\n핵심 사업은 방산 스타트업에 투자하는 전용 펀드 신설이다.",
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "3b382bc8ae7f7b67",
@@ -5464,50 +5624,6 @@
    }
   },
   {
-   "id": "2f05f9e774d7a8d9",
-   "title": "북경, 학생 AI사용 규제! 소학교단계 단독사용 권장 안해--국내뉴스",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iMS16OHhpVEoxc0RWcHdyMGM2U05UNnNzMVhGOWRCUm4tVUpHdzh4TC1zQmlsRW91d0twSGdhSDU2OG9PVE1BenBlcm81cmFCR0s0Vzg3VmxwbjM2NTFTYXNmTHNfN3dxTk9UTzl3?oc=5",
-   "source": "인민넷",
-   "field": "청소년",
-   "category": "news_ko",
-   "published": "2026-09-30T05:47:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "베이징시가 학생들의 인공지능 사용 규제에 나서며 소학교 단계 학생들의 단독 AI 사용을 권장하지 않기로 했다.",
-    "p": "기기 보급 확산에 따라 공교육 현장에서 아동의 인지 발달과 비판적 사고 보호를 위한 제도적 통제가 시작되었음을 시사한다.",
-    "t": [
-     "베이징",
-     "AI규제",
-     "교육정책",
-     "소학교"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "726708e9de8aa757",
-   "title": "삼성전자, 2026 KCSI 평가서 25년 연속 최다 부문 1위",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1lZnVzSFZGRjNaLTF3dUU5a3Nyc3hYNmN5UVVsM2g0b3d4akYxdGUydGl3NlM2TkdBZFVTekZCc0FfOENrd1JZa2VuLUpWSjNCUlhhaXVFVnZvdndWbkhaTUotRDNENnlFeUJReVI1NF9nampYMVlR0gF3QVVfeXFMTWVmdXNIVkZGM1otMXd1RTlrc3JzeFg2Y3lRVWwzaDRvd3hqRjF0ZTJ0aXc2UzZOR0FkVVN6RkJzQV84Q2t3UllrZW4tSlZKM0JSWGFpdUVWdm92d1ZuSFpNSi1EM0Q2eUV5QlF5UjU0X2dqalgxWVE?oc=5",
-   "source": "굿데일리",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T05:32:12+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "삼성전자가 2026년 한국산업의 고객만족도(KCSI) 조사에서 25년 연속 최다 부문 1위를 차지했다.",
-    "p": "장기간 축적된 품질 관리와 고객 서비스 경쟁력이 가전 및 IT 시장에서 지속적인 신뢰 자산으로 작용하고 있다.",
-    "t": [
-     "삼성전자",
-     "KCSI",
-     "고객만족도",
-     "브랜드가치"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "31c5a75df9b7c346",
    "title": "박세웅 ETRI 원장 AI시대 연구체계 바꾼다…임무형 R&D 90%로",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9IcVJJWDZxUllQYi02Q1Bnd3pnT1hoMXVSdHNSMUxPVi1TVms2c2xudHpleW4xVkxuR0FpWEVBMGF1Y2NLR3NOUVdRbElUNFRGQndXUDBDeEbSAVhBVV95cUxPSHFSSVg2cVJZUGItNkNQZ3d6Z09YaDF1UnRzUjFMT1YtU1ZrNnNsbnR6ZXluMVZMbkdBaVhFQTBhdWNjS0dzTlFXUWxJVDRURkJ3V1AwQ3hG?oc=5",
@@ -5616,6 +5732,30 @@
      "기술서밋",
      "미국정책",
      "인공지능"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "97e29ccbb12f41d1",
+   "title": "What AI means for investors, advice, and policy",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSDN1a1hXbzRaN01yS0NPNXNHcGpCYkpUcXRoN2htUUd2T3pCbWkzdTlreW8zM3VYLXZtXzliRTZkOUpkTEZzZGxIYUxlY2ZhamtxeV9mOTBWb1BhelNFZk1mbnlGVDFzbmM0NGZWS2N5V2dRbUJhQmRKWjNNLTBUcTJQSjJjU2lURmRMb3p4bDF3NVVTb1hsRHBldVhZMUxqbGV6SFRMRlN1Sm0xNnhRNW9GcjM0UQ?oc=5",
+   "source": "Vanguard Corporate",
+   "field": "",
+   "category": "policy",
+   "published": "2026-09-30T04:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "투자자, 조언, 정책 측면에서 AI가 갖는 의미",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "뱅가드가 투자자, 자문 서비스, 정책 측면에서 인공지능이 갖는 의미를 분석했다.",
+    "p": "금융 자산 운용 및 자문 영역에서 인공지능 도입에 따른 구조적 변화와 규제 방향성이 주요 화두로 부상하고 있다.",
+    "t": [
+     "Vanguard",
+     "금융AI",
+     "투자전략"
     ],
     "v": 1
    }
@@ -8210,7 +8350,10 @@
    "category": "papers",
    "published": "2026-09-22T15:00:00-04:00",
    "summary": "Patricia and James Poitras ’63 provide fellowships for graduate students and postdocs who will shape the future of mental health research.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "Patricia와 James Poitras '63은 정신 건강 연구의 미래를 형성할 대학원생과 박사후 연구원에게 펠로우십을 제공합니다.",
+   "tr": "g",
+   "detail_ko": "Patricia와 James Poitras '63은 정신 건강 연구의 미래를 형성할 대학원생과 박사후 연구원에게 펠로우십을 제공합니다."
   },
   {
    "id": "0cf2be2f0ba1cd97",
@@ -8221,7 +8364,10 @@
    "category": "papers",
    "published": "2026-09-18T12:30:00-04:00",
    "summary": "A new focus on fiction and memoir aims to help the MIT community celebrate the power of storytelling and strengthen social connection.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "소설과 회고록에 대한 새로운 초점은 MIT 커뮤니티가 스토리텔링의 힘을 기념하고 사회적 연결을 강화하도록 돕는 것을 목표로 합니다.",
+   "tr": "g",
+   "detail_ko": "소설과 회고록에 대한 새로운 초점은 MIT 커뮤니티가 스토리텔링의 힘을 기념하고 사회적 연결을 강화하도록 돕는 것을 목표로 합니다."
   },
   {
    "id": "def40215de88ddae",
@@ -8233,7 +8379,11 @@
    "published": "2026-09-17T15:58:24+00:00",
    "summary": "New episode with Noam Brown. We talk about multi-agent, Navier-Stokes, and what the current explosion of maths progress tells us about what happens once you automate AI research.",
    "detail": "We talk about multi-agent, Navier-Stokes, and what the current explosion of maths progress tells us about what happens once you automate AI research.\nTry Grok Bot for yourself at https://x.ai/bot * Antithesis gives you the confidence of a giant test suite without actually having to write one.",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "에이전트 떼 및 재귀적 자기 개선에 관한 OpenAI 연구원",
+   "tr": "g",
+   "summary_ko": "Noam Brown과 함께하는 새로운 에피소드. 우리는 다중 에이전트, Navier-Stokes에 대해 이야기하고 현재 수학 발전의 폭발적인 증가가 AI 연구를 자동화하면 어떤 일이 발생하는지 알려줍니다.",
+   "detail_ko": "우리는 다중 에이전트, Navier-Stokes에 대해 이야기하고 현재 수학 발전의 폭발적인 증가가 AI 연구를 자동화하면 어떤 일이 발생하는지 알려줍니다.\nhttps://x.ai/bot에서 직접 Grok Bot을 사용해 보세요. * Antithese는 실제로 작성하지 않고도 거대한 테스트 모음에 대한 자신감을 제공합니다."
   },
   {
    "id": "3a5713cd1d2196f2",
@@ -8244,7 +8394,10 @@
    "category": "papers",
    "published": "2026-09-16T11:00:00-04:00",
    "summary": "This patient-specific method, called xvr, helps doctors use X-rays for surgical navigation in fields such as orthopedics and neurosurgery.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "xvr이라고 하는 이 환자별 방법은 의사가 정형외과 및 신경외과와 같은 분야의 수술 탐색에 X선을 사용하는 데 도움이 됩니다.",
+   "tr": "g",
+   "detail_ko": "xvr이라고 하는 이 환자별 방법은 의사가 정형외과 및 신경외과와 같은 분야의 수술 탐색에 X선을 사용하는 데 도움이 됩니다."
   },
   {
    "id": "fce5c946628f0281",
@@ -8255,7 +8408,10 @@
    "category": "papers",
    "published": "2026-09-16T00:00:00-04:00",
    "summary": "Naoki Egami has become a standout in political methodology, helping refine tools that give scholars durable results.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "에가미 나오키(Naoki Egami)는 정치 방법론 분야에서 두각을 나타내며 학자들에게 지속적인 결과를 제공하는 도구를 개선하는 데 도움을 주었습니다.",
+   "tr": "g",
+   "detail_ko": "에가미 나오키(Naoki Egami)는 정치 방법론 분야에서 두각을 나타내며 학자들에게 지속적인 결과를 제공하는 도구를 개선하는 데 도움을 주었습니다."
   },
   {
    "id": "88b329b04a4ab20d",
@@ -8279,7 +8435,10 @@
    "published": "2026-09-14T00:00:00+00:00",
    "summary": "Nature Machine Intelligence, Published online: 14 September 2026; doi:10.1038/s42256-026-01314-9 Publisher Correction: Quantum neural operators with implicit quadratic frame and…",
    "detail": "Nature Machine Intelligence, Published online: 14 September 2026; doi:10.1038/s42256-026-01314-9 Publisher Correction: Quantum neural operators with implicit quadratic frame and expressivity advantages",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 14일; doi:10.1038/s42256-026-01314-9 게시자 수정: 암시적 2차 프레임과 양자 신경 연산자…",
+   "tr": "g",
+   "detail_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 14일; doi:10.1038/s42256-026-01314-9 게시자 수정: 암시적 2차 프레임 및 표현 이점을 갖춘 양자 신경 연산자"
   },
   {
    "id": "af7b37c806a4d65a",
@@ -8291,7 +8450,10 @@
    "published": "2026-09-10T00:00:00+00:00",
    "summary": "Nature Machine Intelligence, Published online: 10 September 2026; doi:10.1038/s42256-026-01298-6 Shi et al.",
    "detail": "Nature Machine Intelligence, Published online: 10 September 2026; doi:10.1038/s42256-026-01298-6 Shi et al.\ndemonstrate a dual architecture approach for materials research, integrating two lightweight large language models for collaborative reasoning and scientific tool execution.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 10일; doi:10.1038/s42256-026-01298-6 Shi et al.",
+   "tr": "g",
+   "detail_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 10일; doi:10.1038/s42256-026-01298-6 Shi et al.\n공동 추론 및 과학 도구 실행을 위해 두 개의 경량 대형 언어 모델을 통합하여 재료 연구를 위한 이중 아키텍처 접근 방식을 보여줍니다."
   },
   {
    "id": "efc98770f5c26215",
@@ -8303,7 +8465,10 @@
    "published": "2026-07-28T00:00:00+00:00",
    "summary": "Background and aims Artificial intelligence (AI)-assisted endoscopy represents a promising approach for lesion detection, yet frequent false-positive detections impair clinical…",
    "detail": "Background and aims Artificial intelligence (AI)-assisted endoscopy represents a promising approach for lesion detection, yet frequent false-positive detections impair clinical utility by disrupting examinations and diminishing physician confidence.",
-   "thumb": ""
+   "thumb": "",
+   "summary_ko": "배경 및 목표 인공지능(AI) 보조 내시경은 병변 탐지를 위한 유망한 접근 방식을 나타내지만, 빈번한 위양성 탐지는 임상적 손상을 초래합니다.",
+   "tr": "g",
+   "detail_ko": "배경 및 목표 인공지능(AI) 보조 내시경은 병변 탐지를 위한 유망한 접근 방식이지만 빈번한 위양성 탐지는 검사를 방해하고 의사의 신뢰도를 떨어뜨려 임상적 유용성을 손상시킵니다."
   },
   {
    "id": "9f1fbb057d1b90b9",
@@ -8389,7 +8554,7 @@
   {
    "name": "Ars Technica AI",
    "ok": true,
-   "count": 3,
+   "count": 4,
    "fetched": 20
   },
   {
@@ -8437,7 +8602,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "fetched": 70
   },
   {
@@ -8497,8 +8662,8 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 2,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
@@ -8534,7 +8699,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 58
+   "fetched": 59
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -8552,7 +8717,7 @@
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
@@ -8623,14 +8788,14 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 3,
+   "count": 4,
    "fetched": 10
   },
   {
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 62
+   "fetched": 63
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -8654,7 +8819,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 86
+   "fetched": 87
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -8672,7 +8837,7 @@
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 50
+   "fetched": 52
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -8684,13 +8849,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 60
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 54
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -8822,7 +8987,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 62
+   "fetched": 63
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -8852,7 +9017,7 @@
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 72
+   "fetched": 71
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -8870,19 +9035,19 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 63
+   "fetched": 62
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 28
+   "fetched": 29
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 44
+   "fetched": 45
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
@@ -9074,7 +9239,7 @@
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 34
+   "fetched": 35
   },
   {
    "name": "주제: 로봇 · 로봇",
@@ -9086,13 +9251,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 53
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "주제: 법률 · 법률",
@@ -9128,7 +9293,7 @@
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 37
   },
   {
    "name": "주제: 정신건강 · 정신건강",
@@ -9146,7 +9311,7 @@
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 22
+   "fetched": 23
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -9170,7 +9335,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 378
+   "fetched": 374
   },
   {
    "name": "프레시안",
