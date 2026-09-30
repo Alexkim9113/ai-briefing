@@ -1,0 +1,118 @@
+{
+  "audit_scope_note": "Descriptive only -- no pass/fail thresholds. Surfaces concentration for the next phase's acquisition-priority decision, per Te's M.5E-4 section 14.",
+  "base_corpus_balance": {
+    "total_documents": 601,
+    "source_type_distribution": {
+      "NEWS": 447,
+      "RESEARCH": 56,
+      "POLICY": 28,
+      "OTHER": 70
+    },
+    "source_tier_distribution": {
+      "TIER_2_SECONDARY": 447,
+      "TIER_1_ACADEMIC": 56,
+      "TIER_1_OFFICIAL": 28,
+      "TIER_UNKNOWN": 70
+    },
+    "domain_distribution": {
+      "by_category": {
+        "news_global": 131,
+        "papers": 129,
+        "news_ko": 181,
+        "policy": 156,
+        "research": 4
+      },
+      "by_field_top": {
+        "UNKNOWN": 391,
+        "AI 일반": 17,
+        "국내 연구": 14,
+        "에이전트": 12,
+        "사회·노동": 11,
+        "에너지·환경": 11,
+        "문화·미디어": 11,
+        "사회·경제": 10,
+        "언어·LLM": 8,
+        "피지컬 AI": 8,
+        "경제": 7,
+        "스탠퍼드 연구": 7,
+        "로봇·피지컬 AI": 6,
+        "법률": 6,
+        "윤리·철학·법": 6
+      },
+      "field_unknown_count": 391
+    },
+    "temporal_bucket_distribution": {
+      "CURRENT": 576,
+      "SHORT_TERM": 1,
+      "MEDIUM_TERM": 2,
+      "LONG_TERM": 18,
+      "HISTORICAL": 4,
+      "UNKNOWN": 0
+    },
+    "independent_source_family": {
+      "evidence_family_count": 22,
+      "documents_considered": 150,
+      "sampled": true,
+      "overall_status": "DERIVED_FROM_SAME_SOURCE"
+    }
+  },
+  "primary_vs_secondary_distribution": {
+    "SECONDARY_JOURNALISTIC": 312,
+    "PRIMARY_ACADEMIC": 133,
+    "PRIMARY_GOVERNMENT": 156
+  },
+  "topic_field_distribution": {
+    "total_distinct_field_values": 41,
+    "documents_with_no_field_value": 391,
+    "top_field_values": {
+      "null": 391,
+      "AI 일반": 17,
+      "국내 연구": 14,
+      "에이전트": 12,
+      "사회·노동": 11,
+      "에너지·환경": 11,
+      "문화·미디어": 11,
+      "사회·경제": 10,
+      "언어·LLM": 8,
+      "피지컬 AI": 8,
+      "경제": 7,
+      "스탠퍼드 연구": 7,
+      "로봇·피지컬 AI": 6,
+      "법률": 6,
+      "윤리·철학·법": 6,
+      "국방·안보": 6,
+      "청소년·정신건강": 5,
+      "문화·예술": 5,
+      "철학·윤리·예술": 5,
+      "로봇": 4
+    }
+  },
+  "geography_distribution": {
+    "scope": "PUBLISHER_GEOGRAPHY_ONLY -- not event/jurisdiction geography (structurally unseparated as of this phase; see M.5E-4 report)",
+    "distribution": {
+      "US": 83,
+      "UNKNOWN": 368,
+      "KR": 150
+    },
+    "unknown_count": 368,
+    "unknown_fraction": 0.6123
+  },
+  "evidence_family_summary": {
+    "HISTORICAL_GENERAL_KNOWLEDGE": {
+      "status": "OK",
+      "count": 6
+    },
+    "HISTORICAL_REAL_SOURCE_GATE_LOG": {
+      "status": "OK",
+      "count": 8
+    },
+    "COUNTEREVIDENCE_REAL_SOURCE_GATE_LOG": {
+      "status": "OK",
+      "count": 0
+    },
+    "TRANSITION_REAL_SOURCE_GATE_LOG": {
+      "status": "OK",
+      "count": 0
+    }
+  }
+}
