@@ -1,0 +1,108 @@
+{
+  "topic_name": "AI_AGENTS",
+  "topic_field_value": "에이전트",
+  "topic_selection_reason": "keyword set chosen to describe autonomous/tool-using AI systems as a subject; not swapped in place of a spec default -- AI_AGENTS is itself one of the two spec-named additional topics",
+  "policy_keywords_used": [
+    "ai agent",
+    "autonomous agent",
+    "agentic",
+    "ai agents"
+  ],
+  "cross_domain_phrases_used": [
+    "ai agent",
+    "autonomous agent",
+    "agentic workflow",
+    "ai agents"
+  ],
+  "total_topic_documents": 12,
+  "bucket_counts": {
+    "BASELINE": 0,
+    "TRANSITION": 0,
+    "CURRENT": 12,
+    "UNASSIGNED_GAP": 0
+  },
+  "bucket_document_ids": {
+    "BASELINE": [],
+    "TRANSITION": [],
+    "CURRENT": [
+      "1b226736fb66c350",
+      "2142eb5040ffb026",
+      "2352697bb93a9ed0",
+      "4b0bc5a0dbd05b45",
+      "6b962900432b0a4b",
+      "7e130d746d795b4b",
+      "8037ce5b679100a0",
+      "9154f04d2070dbf3",
+      "b917c819c6d2b7c1",
+      "bda73e7519619ec5",
+      "c0c6184dd0e7e792",
+      "e1d900cc677a1485"
+    ],
+    "UNASSIGNED_GAP": []
+  },
+  "evidence_chain": {
+    "CURRENT_EVENT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "e1d900cc677a1485",
+      "title": "[하우머니] AI 에이전트 시대 성큼…빅테크의 다음 승부처는",
+      "published": "2026-09-29T01:16:16+00:00",
+      "reason": "most recent real NEWS document tagged field==에이전트, published in the CURRENT bucket (>= 2026-09-01)"
+    },
+    "PRIMARY_EVIDENCE": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "6b962900432b0a4b",
+      "title": "Towards Mitigating Fabricated Consensus: The Active Provenance Gate for Multi-Agent Debate Synthesis",
+      "published": "2026-09-28T00:00:00-04:00",
+      "reason": "no government/official primary source falls in the CURRENT bucket for this topic; the most recent real RESEARCH (arXiv) document is reported instead, explicitly labeled as such, not upgraded to an official-primary-source claim"
+    },
+    "PREVIOUS_STATE": {
+      "status": "TEMPORAL_GAP",
+      "document_id": null,
+      "reason": "no real BASELINE document found"
+    },
+    "CONFIRMED_CHANGE": {
+      "status": "TEMPORAL_GAP",
+      "document_id": null,
+      "reason": "no real document in this topic's corpus bridges the BASELINE and CURRENT windows -- an honestly reported gap, not an oversight"
+    },
+    "STATISTICAL_CONTEXT": {
+      "status": "STATISTICAL_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)"
+    },
+    "RESEARCH_CONTEXT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "8037ce5b679100a0",
+      "title": "ADF-EA: A Unified Execution Assurance System for Agent Device Foundation",
+      "published": "2026-09-28T00:00:00-04:00",
+      "reason": "a real, distinct arXiv RESEARCH document from this topic's corpus, offering additional technical context beyond PRIMARY_EVIDENCE"
+    },
+    "HISTORICAL_CONTEXT": {
+      "status": "HISTORY_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: intel/foresight_engine has zero registered historical_evidence records for any pilot topic today (see pilot_topic_coverage.py historical_evidence_count == 0)"
+    },
+    "CROSS_DOMAIN_EFFECT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "6bb04d3a16411126",
+      "title": "Agentic Workflows for Resolving Conflict Over Shared Resources: A Power Grid Application",
+      "published": "2026-09-28T00:00:00-04:00",
+      "reason": "a real document tagged with a DIFFERENT pilot topic's field value that also title-matches this topic's cross-domain phrase list"
+    },
+    "COUNTEREVIDENCE": {
+      "status": "COUNTEREVIDENCE_GAP",
+      "document_id": null,
+      "reason": "no counterevidence-flagging pipeline has been run for this topic; pilot_topic_coverage.py's own matrix already reports counterevidence_flagged as UNKNOWN"
+    },
+    "UNCERTAINTY": {
+      "status": "NOTED",
+      "document_id": null,
+      "reason": "this topic's real corpus has 12 total documents across all buckets (BASELINE=0, TRANSITION=0, CURRENT=12, UNASSIGNED_GAP=0) -- any REAL_EVIDENCE node above rests on this small, real sample, not a broad one"
+    }
+  },
+  "chain_summary": {
+    "total_nodes": 10,
+    "real_evidence_or_noted_nodes": 5,
+    "gap_nodes": 5
+  }
+}

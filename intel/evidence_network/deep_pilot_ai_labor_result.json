@@ -1,0 +1,102 @@
+{
+  "topic_name": "AI_LABOR",
+  "topic_field_value": "사회·노동",
+  "topic_selection_reason": "keyword set chosen to describe AI's effect on jobs/the labor market; AI_LABOR is one of the two spec-named additional topics, not a substitute",
+  "policy_keywords_used": [
+    "ai jobs",
+    "labor market",
+    "workforce",
+    "automation jobs",
+    "job displacement"
+  ],
+  "cross_domain_phrases_used": [
+    "labor market",
+    "job displacement",
+    "workforce automation",
+    "job losses"
+  ],
+  "total_topic_documents": 11,
+  "bucket_counts": {
+    "BASELINE": 0,
+    "TRANSITION": 0,
+    "CURRENT": 11,
+    "UNASSIGNED_GAP": 0
+  },
+  "bucket_document_ids": {
+    "BASELINE": [],
+    "TRANSITION": [],
+    "CURRENT": [
+      "003ca48c1f2e48ca",
+      "080c262bbf5cfa04",
+      "2b921d55000f83c9",
+      "40d7ecedf5e75bb1",
+      "4fdf7655276adfec",
+      "b01fc027a9011cc3",
+      "c870309fc98a2e94",
+      "cf6f3352254b1d03",
+      "dc332ad03d778177",
+      "e56b56dcd1e0ba39",
+      "efeeadbd91aa198d"
+    ],
+    "UNASSIGNED_GAP": []
+  },
+  "evidence_chain": {
+    "CURRENT_EVENT": {
+      "status": "REAL_EVIDENCE",
+      "document_id": "cf6f3352254b1d03",
+      "title": "제천복지재단, AI 시대 사회복지 인권교육…“기술보다 이용자 권리 우선”",
+      "published": "2026-09-29T01:42:00+00:00",
+      "reason": "most recent real NEWS document tagged field==사회·노동, published in the CURRENT bucket (>= 2026-09-01)"
+    },
+    "PRIMARY_EVIDENCE": {
+      "status": "SOURCE_GAP",
+      "document_id": null,
+      "reason": "no RESEARCH or official document in the CURRENT bucket"
+    },
+    "PREVIOUS_STATE": {
+      "status": "TEMPORAL_GAP",
+      "document_id": null,
+      "reason": "no real BASELINE document found"
+    },
+    "CONFIRMED_CHANGE": {
+      "status": "TEMPORAL_GAP",
+      "document_id": null,
+      "reason": "no real document in this topic's corpus bridges the BASELINE and CURRENT windows -- an honestly reported gap, not an oversight"
+    },
+    "STATISTICAL_CONTEXT": {
+      "status": "STATISTICAL_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)"
+    },
+    "RESEARCH_CONTEXT": {
+      "status": "RESEARCH_GAP",
+      "document_id": null,
+      "reason": "no additional distinct RESEARCH document in this topic's corpus"
+    },
+    "HISTORICAL_CONTEXT": {
+      "status": "HISTORY_GAP",
+      "document_id": null,
+      "reason": "corpus-wide: intel/foresight_engine has zero registered historical_evidence records for any pilot topic today (see pilot_topic_coverage.py historical_evidence_count == 0)"
+    },
+    "CROSS_DOMAIN_EFFECT": {
+      "status": "SOURCE_GAP",
+      "document_id": null,
+      "reason": "no document in the other pilot topics' fields title-matches this topic's cross-domain phrase list in the real corpus"
+    },
+    "COUNTEREVIDENCE": {
+      "status": "COUNTEREVIDENCE_GAP",
+      "document_id": null,
+      "reason": "no counterevidence-flagging pipeline has been run for this topic; pilot_topic_coverage.py's own matrix already reports counterevidence_flagged as UNKNOWN"
+    },
+    "UNCERTAINTY": {
+      "status": "NOTED",
+      "document_id": null,
+      "reason": "this topic's real corpus has 11 total documents across all buckets (BASELINE=0, TRANSITION=0, CURRENT=11, UNASSIGNED_GAP=0) -- any REAL_EVIDENCE node above rests on this small, real sample, not a broad one"
+    }
+  },
+  "chain_summary": {
+    "total_nodes": 10,
+    "real_evidence_or_noted_nodes": 2,
+    "gap_nodes": 8
+  }
+}
