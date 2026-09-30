@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "generated_at": "2026-09-30T21:36+09:00",
+ "generated_at": "2026-09-30T21:49+09:00",
  "items": [
   {
    "id": "629607de725570a3",
@@ -13,7 +13,7 @@
    "summary": "(안산=국제뉴스) 윤은중 기자 = 안산시는 30일 한양대학교 에리카 프라임컨퍼런스홀에서 경기경제자유구역청, 한양대학교, 에이로봇과 함께 경기경제자유구역 안산사이언스밸리(ASV)지구에 대한 투자협약을 맺었다고 밝혔다.",
    "detail": "(안산=국제뉴스) 윤은중 기자 = 안산시는 30일 한양대학교 에리카 프라임컨퍼런스홀에서 경기경제자유구역청, 한양대학교, 에이로봇과 함께 경기경제자유구역 안산사이언스밸리(ASV)지구에 대한 투자협약을 맺었다고 밝혔다.\n이번 협약은 안산사이언스밸리지구가 경제자유구역으로 지정된 이후 첫 대규모 기업 투자가 이뤄지는 사례로, 기업 유치와 실질적인 투자가 본격적으로 시작되는 전환점이 됐다.\n행사에는 안산시장, 경기경제자유구역청장, 한양대학교 총장, 에이로봇 대표 등이 참석했다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "d633381528fb1b01",
@@ -478,28 +478,6 @@
      "규제",
      "정책",
      "AI원칙"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "a2df2ca9ba5746f8",
-   "title": "글로벌 AI 허브 어디에?…내달 14일 입지 선정 공청회",
-   "link": "https://www.yna.co.kr/view/AKR20260930180200017",
-   "source": "연합뉴스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-09-30T18:25:04+09:00",
-   "summary": "(서울=연합뉴스) 권하영 기자 = 국내 글로벌 인공지능(AI) 허브의 입지를 결정하는 공청회가 다음 달 열린다.",
-   "thumb": "",
-   "mx": {
-    "b": "국내 글로벌 인공지능 허브의 최종 입지를 결정하기 위한 공식 공청회가 다음 달 14일에 개최된다.",
-    "p": "국내 AI 생태계의 거점이 될 핵심 인프라 구축 부지 선정이 본격적인 의견 수렴 단계에 접어들었다.",
-    "t": [
-     "AI허브",
-     "입지선정",
-     "공청회",
-     "인프라"
     ],
     "v": 1
    }
@@ -3092,6 +3070,57 @@
    }
   },
   {
+   "id": "62d365722b9a3c01",
+   "title": "Pearson’s Workera deal targets a big workplace problem: No time to AI upskill",
+   "link": "https://www.zdnet.com/innovation/pearson-workera-acquisition-ai-upskilling/",
+   "source": "ZDNET AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T12:25:48+00:00",
+   "summary": "Pearson has agreed to acquire Workera to help businesses assess employees’ AI skills and target training where it’s needed most.",
+   "thumb": "",
+   "title_ko": "피어슨의 Workera 인수, 직장 내 큰 문제 해결 목표: AI 역량 강화할 시간이 없다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "피어슨은 기업들이 직원의 AI 역량을 평가하고 가장 필요한 분야에 집중적으로 교육을 실시할 수 있도록 지원하기 위해 워크에라(Workera)를 인수하기로 합의했다.",
+   "detail_ko": "피어슨은 기업들이 직원의 AI 역량을 평가하고 가장 필요한 분야에 집중적으로 교육을 실시할 수 있도록 지원하기 위해 Workera를 인수하기로 합의했다.",
+   "mx": {
+    "b": "피어슨이 기업의 임직원 인공지능 역량 진단과 맞춤형 교육을 지원하기 위해 워커라를 인수하기로 합의했다.",
+    "p": "기업 교육 시장에서 임직원의 인공지능 전환 역량을 진단하고 실무 격차를 해소하려는 수요가 본격적인 기업 간 거래 서비스로 구체화되고 있다.",
+    "t": [
+     "피어슨",
+     "워커라",
+     "인공지능",
+     "기업교육"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "9750cbfcf2c001b7",
+   "title": "Notre Dame Hosts AI Ethics Summit",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5tdDlMM3F6dGc4OThDNUNSYTg5SXItenpLTGhLZWIwQW5jUU50aW1jSnY2ekw0OXY1QVh6SGtCRTdVOU5ROGdDZFdsU2JrT0tXdHhIZzFCX0QwTnVtdUswcUY4TnY2cV9tWUJKZ3poay1TR0E?oc=5",
+   "source": "irishrover.net",
+   "field": "철학·윤리·예술",
+   "category": "news_global",
+   "published": "2026-09-30T12:21:01+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "노트르담 대학교, AI 윤리 정상회의 개최",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "노터데임대학교가 인공지능 윤리를 주제로 한 서밋을 개최했다.",
+    "p": "인공지능 기술의 급격한 확산에 따라 학계와 연구 기관을 중심으로 기술 윤리 검증과 사회적 책임에 대한 논의가 지속해서 이어지고 있다.",
+    "t": [
+     "노터데임대학교",
+     "인공지능윤리",
+     "학술행사"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "a90abf0a4eb92eb2",
    "title": "‘AI로 인류 종말’…구글·MS 떠난 소아레스 “허깅 해킹은 마지막 경고”",
    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1QTHRzdGxmZHI4bVNkM2xJNFY5dDdabmJIUUVUMTV2ekk3dHBlcmstQTFsQmE2anVzaDVKX1o5T3FqWk5rckZNUVdCRlFfRE1TSFBlanF3aTZSY3RRTDZmRVhIRU1ub1ljdzJ3aV9sWQ?oc=5",
@@ -3101,7 +3130,7 @@
    "published": "2026-09-30T12:20:00+00:00",
    "summary": "",
    "thumb": "",
-   "hot": 3,
+   "hot": 2,
    "mx": {
     "b": "구글과 마이크로소프트를 떠난 연구원 레오폴드 소아레스가 AI의 인류 위협 가능성을 경고하며 '허깅 해킹'을 마지막 경고로 언급했다. AI 발전 속도가 통제 범위를 벗어날 수 있음을 지적했다.",
     "p": "빅테크 출신 핵심 연구원들의 연이은 이탈과 경고는 급격한 AI 고도화 과정에서 안전 장치 부재에 대한 내부자들의 불안감이 임계점에 달했음을 시사한다.",
@@ -8759,56 +8788,6 @@
    }
   },
   {
-   "id": "36b4220c975e1c21",
-   "title": "US appeals court upholds Thomson Reuters' landmark win in AI training lawsuit",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTlB4SnZManZlNUNvZ0trQ2FkY3N3enRaNEpjc2lYTWZxTldqWHlGSXMyeE9FMl9VbXZrc0NNQlB0LWtkYmtyZnJ4bldFOGZ4MG9WTzRncmc0MkV4bWtyMGNKU0c1TmpUdmE4MmpZWXJYX1dDcC1LM0ZqQzAxZkU0QnJud1M1enNudVhibDBIZzBnZVNIekluR2lhclpXQVk3UmlpQ2diZ1FfcENXd0FSeXZiYU9aMWhBREFhNWJRZlVWR19TLUFid3p4bHg?oc=5",
-   "source": "Reuters",
-   "field": "저작권·미디어",
-   "category": "news_global",
-   "published": "2026-09-29T18:53:25+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "미국 항소법원, AI 학습 관련 소송에서 톰슨 로이터의 획기적인 승소 판결을 확정",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "미국 항소법원이 AI 학습용 데이터 무단 사용과 관련해 톰슨 로이터의 손을 들어준 원심 판결을 확정했다.",
-    "p": "콘텐츠 저작권자와 AI 개발사 간의 법적 공방에서 저작권 보호의 정당성을 재확인한 판례로, 향후 대규모언어모델의 학습 데이터 수집 관행에 제동을 걸 가능성이 높다.",
-    "t": [
-     "법적소송",
-     "저작권",
-     "톰슨로이터",
-     "AI학습"
-    ],
-    "v": 1
-   }
-  },
-  {
-   "id": "50141d35634acf39",
-   "title": "OpenAI kicks off Developer Day in San Francisco",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM0Fjd2F2Q2ZuMUs2N21hQzAxV2JFbkRXY3djaG9RUkhSVFo3Y1lWaU1EVFM5aVp5OUpQUU5aTmN4b3dQNW8za0VwR3c1V21DWVpmYmFrYnJuYThwZ091LUYydEpPZFNzazNpZGhJa1BGVEU4dWZGeF9BX1hfYjYtVzJXVms4NHlE0gGQAUFVX3lxTE9lMmxXTk1yMWdqbFpqcHlpMmJwbWg0TFQ2eFpaNnRFWVpyMV9aTXI1RWgyaV9aUllSLWljcTd2RmMwS3pLUlh2SmdIelMxR2ZnWVc0UFk0X015ajB2T2Z5Z1VQWmNMNGZEUzBEZ2JFN1J3TWdBRmpGY3JhOUROTnJscnFLVkhqR3VWTHhPdUl2OQ?oc=5",
-   "source": "NBC Bay Area",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T18:53:15+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "OpenAI, 샌프란시스코에서 ‘개발자 데이’ 개최",
-   "tr": "deepl",
-   "trv": 2,
-   "mx": {
-    "b": "오픈AI가 샌프란시스코에서 연례 개발자 행사인 데브데이(Developer Day)를 개최했다.",
-    "p": "개발자 생태계 확장을 위한 새로운 API 기능과 도구가 공개되는 자리로, 오픈AI의 플랫폼 전략 변화를 가늠할 수 있는 행보이다.",
-    "t": [
-     "오픈AI",
-     "개발자행사",
-     "데브데이",
-     "API"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "0af5de6a365965e9",
    "title": "Illinois ARCS Receives S$10 Million Grant To Develop AI-Powered Agricultural Digital Twins",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMERPbDBvN1RWdmZtSnJzMXQzaUpQcldzNWdPc3MzTHRhV2tycnhUajk1VmdxY2NtNEQ3RlJnTGJVM2hveG9NT2dQdHVPWEktQjlyVW5FLUdGMTZSb2FoTWx5eWd1TU9BTlJJbmdhRVBRVEwzMkVmRWNLdzZUV2paRXYxcU9sdVh5bU91SVFXQ3Q3SVVrQVRzUTVKUGVXanVOS1VXN1lLeVNqbzgydUHSAbMBQVVfeXFMTWJGZzU1ZlZxUUJFR01xWHdaMS0tUE5UQW9jWkp0TDZYSVFPMFd1bFpBVlJxQjQ4cFl6WW1QY0hpbG1EdTE3cjdUSTNZeE9vSWFRNFJKRnlIQ05ILWZ1Q3JJWHBGY1RWaE1iNU43V3phaHhhZkhTa2s1di0xQUp5b2w3aDM0cGJfUGIzVEx6TWtiVGdXQ2g4Y2lNbGthdzRDbUxNQmJHWUlnLUVJdW1hYmtaZms?oc=5",
@@ -9651,32 +9630,6 @@
    }
   },
   {
-   "id": "533f21e14188f2fe",
-   "title": "Blind spots in AI-assisted healthcare evidence search: multiplatform evaluation of clinical retrieval gaps and risk-of-bias",
-   "link": "https://www.nature.com/articles/s41746-026-03277-y",
-   "source": "npj Digital Medicine · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-09-29T00:00:00+00:00",
-   "summary": "npj Digital Medicine, Published online: 29 September 2026; doi:10.1038/s41746-026-03277-y Blind spots in AI-assisted healthcare evidence search: multiplatform evaluation of…",
-   "detail": "npj Digital Medicine, Published online: 29 September 2026; doi:10.1038/s41746-026-03277-y Blind spots in AI-assisted healthcare evidence search: multiplatform evaluation of clinical retrieval gaps and risk-of-bias",
-   "thumb": "",
-   "summary_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 29일; doi:10.1038/s41746-026-03277-y AI 기반 의료 증거 검색의 사각지대: …에 대한 다중 플랫폼 평가",
-   "tr": "deepl",
-   "trv": 2,
-   "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 29일; doi:10.1038/s41746-026-03277-y AI 기반 의료 증거 검색의 사각지대: 임상 정보 검색 격차 및 비뚤림 위험에 대한 다중 플랫폼 평가",
-   "mx": {
-    "b": "임상 증거 탐색에서 인공지능 활용 시 발생하는 사각지대와 편향 위험성이 다중 플랫폼 평가를 통해 분석되었다. 의료 AI 검색 도구의 정보 검색 격차가 지적되었다.",
-    "p": "의료 현장에서 AI 기반 검색 시스템의 신뢰성을 높이기 위해서는 플랫폼별 정보 격차와 편향성을 검증하는 표준화된 평가 체계가 필수적이다.",
-    "t": [
-     "디지털헬스케어",
-     "의료AI",
-     "임상연구"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "2e54198af04d4a26",
    "title": "Why Would AI Companies Want to Slow Down?",
    "link": "https://www.youtube.com/watch?v=GzEtpAKYRvE",
@@ -9707,6 +9660,17 @@
    "tr": "g",
    "summary_ko": "a16z 일반 파트너 Jennifer Li가 fal 공동 창립자 Gorkem Yurtseven 및 엔지니어링 책임자 Batuhan Taskaya와 함께 생성 비디오가 빨라지면 어떤 변화가 있는지 논의합니다.",
    "detail_ko": "a16z 총괄 파트너 Jennifer Li가 fal 공동 창업자인 Gorkem Yurtseven 및 엔지니어링 책임자 Batuhan Taskaya와 함께 생성 비디오가 실시간으로 실행될 수 있을 만큼 빨라지면 어떤 변화가 있을지 논의합니다."
+  },
+  {
+   "id": "a8d33c12678a4584",
+   "title": "글로벌 AI 허브 입지 선정 공청회 개최",
+   "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187827",
+   "source": "과학기술정보통신부 보도자료",
+   "field": "",
+   "category": "policy",
+   "published": null,
+   "summary": "",
+   "thumb": ""
   }
  ],
  "status": [
@@ -9833,14 +9797,14 @@
   {
    "name": "Nature Machine Intelligence · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 30
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
@@ -9870,25 +9834,25 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 53
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 63
+   "fetched": 64
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 56
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
@@ -9918,7 +9882,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 47
+   "fetched": 49
   },
   {
    "name": "TED",
@@ -9966,7 +9930,7 @@
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -9990,7 +9954,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 90
+   "fetched": 92
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -10002,31 +9966,31 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 62
+   "fetched": 61
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 48
+   "fetched": 49
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 70
+   "fetched": 69
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 57
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 56
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -10158,7 +10122,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 58
+   "fetched": 59
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -10200,7 +10164,7 @@
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 42
+   "fetched": 43
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
@@ -10224,7 +10188,7 @@
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "국민일보",
@@ -10235,7 +10199,7 @@
   {
    "name": "국제뉴스",
    "ok": true,
-   "count": 4,
+   "count": 3,
    "fetched": 50
   },
   {
@@ -10260,7 +10224,7 @@
    "name": "뉴스핌",
    "ok": true,
    "count": 5,
-   "fetched": 100
+   "fetched": 99
   },
   {
    "name": "뉴시스",
@@ -10283,7 +10247,7 @@
   {
    "name": "동아일보",
    "ok": true,
-   "count": 5,
+   "count": 4,
    "fetched": 50
   },
   {
@@ -10338,7 +10302,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 58
+   "fetched": 59
   },
   {
    "name": "아주경제",
@@ -10349,7 +10313,7 @@
   {
    "name": "연합뉴스",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "fetched": 120
   },
   {
@@ -10361,7 +10325,7 @@
   {
    "name": "이데일리",
    "ok": true,
-   "count": 2,
+   "count": 0,
    "fetched": 50
   },
   {
@@ -10386,7 +10350,7 @@
    "name": "주제: AI 철학 · AI 철학",
    "ok": true,
    "count": 3,
-   "fetched": 61
+   "fetched": 62
   },
   {
    "name": "주제: 가족·출산 · 가족·출산",
@@ -10404,7 +10368,7 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 40
+   "fetched": 39
   },
   {
    "name": "주제: 동물 · 동물",
@@ -10422,13 +10386,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 54
+   "fetched": 56
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 54
+   "fetched": 51
   },
   {
    "name": "주제: 법률 · 법률",
@@ -10458,7 +10422,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 33
+   "fetched": 31
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -10470,19 +10434,19 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 28
+   "fetched": 29
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 48
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 22
+   "fetched": 20
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -10506,13 +10470,13 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 549
+   "fetched": 536
   },
   {
    "name": "프레시안",
    "ok": true,
    "count": 5,
-   "fetched": 55
+   "fetched": 53
   },
   {
    "name": "한겨레",
@@ -10523,7 +10487,7 @@
   {
    "name": "한국경제",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "fetched": 50
   },
   {

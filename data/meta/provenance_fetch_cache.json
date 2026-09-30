@@ -918,5 +918,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T12:37:00.098212+00:00"
+ },
+ "d0fd44bdfaf5a1d04875bc72bff32b6b70f3a4d4d5a8f90d7a559226cfc37efd": {
+  "url": "https://www.zdnet.com/innovation/pearson-workera-acquisition-ai-upskilling/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T12:50:30.368691+00:00"
+ },
+ "5b7f5b5557d650b47e56ad4a32af6d7feadacdd5404cd62dcc5da4d73cd8233e": {
+  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5tdDlMM3F6dGc4OThDNUNSYTg5SXItenpLTGhLZWIwQW5jUU50aW1jSnY2ekw0OXY1QVh6SGtCRTdVOU5ROGdDZFdsU2JrT0tXdHhIZzFCX0QwTnVtdUswcUY4TnY2cV9tWUJKZ3poay1TR0E?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:30.694267+00:00"
+ },
+ "3aaa5e82d425178f1a9b3134f693ca39bacbaab3888a24fccabeeb52f070eefa": {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vYlZHODJ4UlVJbExJRDFzTUxQMkR5Y3YwN3YtUmRWcFFYTlhlUVBhSjhwdm1tZnVYX1VDd244b0p6ekREZXNhSHllYUxJRjhUVVJmeGptcFl0N0s3X3F6NzhRQTFjYVR4ZWdFcA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:30.881785+00:00"
+ },
+ "608ec80842d2f32c6d5002dbe4154286d936c7edc8f136876d686b8c32359e6c": {
+  "url": "https://siliconangle.com/2026/09/30/startup-ascerta-collects-18m-in-funding-to-help-enterprises-understand-the-value-ai-provides/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T12:50:31.245210+00:00"
+ },
+ "cda9681d58f6df8e066928ba07b3f97143133ac9f25dfbf12f92202f240dcd87": {
+  "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEttVk44QURLOUhOTHY5bU8wa3NReFE0TmtMbmFndGdrUmZrbXljWkJmU2QyWXRRMUNVeWFyUlVzMHFjOFFLdFVjSHB6eUZLVm9UVWRYZEd1RC1WV21uLWR4ZW1JM0ZHLVlSalpGYWN1V3JGMzQzbkRyR0pOcmpTWDN6VGY0R0RKVkROT1RudlZLVlNIby1HYjBQTGdxeDdjaUHSAacBQVVfeXFMUE1tN2VudWpTdmU5MU9kbGtMSS1WQVJtTU9Ea2VNNV9QbHdEM3pMOG1KR0lrcjRONXRkVVdwRWNoVUNCSThKMndoaWJlX2lPNndId2toUmo5RmlwNTYxYlFacXpGWjcwVVJwcUpUYjdlRTFCQlFlMmt5Ti1Ddk43MjctdFItcGp3QUhidVpnU3J3ek5fSjRyVjdHUzAxSmdnRmdPdDh4OW8?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:31.461565+00:00"
+ },
+ "26ce368aa0f6ddaa09d63bcd52204457790dfdfe28728a0fd04c0bea2ada9026": {
+  "url": "https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T12:50:31.549891+00:00"
+ },
+ "bb6c3d59a5dbdc184a5f8894fbd3fad037751f930cd6d5cbb2f8a74f8d3aae88": {
+  "url": "https://www.engadget.com/2272794/airbnb-is-adding-a-personalized-map-and-other-discovery-tools/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T12:50:31.759818+00:00"
+ },
+ "75bdd517179fedbff970d4f7ccef6e99f8b1e63b0a3d57534f45439b40d1611a": {
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5wNUVKYWZWY0JDOTl3QzloS1J1ZVZOZmlwTFcyQkJXNThPaWwzMGNiMklLVE1RS3lDNmt4Zm84NVQteXRBVFZDYzVOZWRSMnJHaldQRVNIMEs2Q0ZQY2h2N1hoQ0FhRXk4SUFfV0liSEw2RU0x?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:31.970088+00:00"
+ },
+ "232eaa03015943905ac7c392d40518bc042662b393a599f4f5da53c0c9de4034": {
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNExmejEybzlOMnZFSE82Y0tjcHY2aHZUOUt6eFdyUTZodGwzT3dqN0NTRjZ3NWIzOEdZWEpnOGlOR0VUdVJnMU1tZmhtTzVHRVpIalE3VlQ1UHB2NU5Ibm9fdE1icnFINmVPN1JpRXRMZzBSZlBCLTlkdW9LdUhRMVJrOU02ODJBUkdXTTByY0puS3h6Y2lycGdGdm9OQ0F1MF9QR2hZQ1JFdXlaZTNr?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:32.164291+00:00"
+ },
+ "d5d5046357da664c78a43baa1816fdf4f8c39cae61de7be9bd9d02b31743d057": {
+  "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeDZYM0oyNmRIeXRRNnhIT3kxRHlxT1ZsTEJLeEdKenk2ZHhEMlYzdFJXQ2Zsd3JkYWFKdV80cE5HR21pNXBzUFFqajM2a3pvZzYtU2dGRTdoMHh2dmRqdXh1RDJlX29RZ3p5NDlDWVhtWGNYWU9kYlgxUUtaVUFkanMyNHVTWk5ONDkwUGhEbWlxQjRpQUtfaHM4eEdjVVhnOGlpX2xuMHA3WmgtTnVkM1kzT3JSMWxMekJ4QTRMY1hENGp5OFE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T12:50:32.347719+00:00"
  }
 }
