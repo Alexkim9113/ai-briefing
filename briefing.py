@@ -406,6 +406,74 @@ def _save_provenance_cache(cache):
         print(f"[provenance] 캐시 저장 실패(무시, production에 영향 없음): {e}", file=sys.stderr)
 
 
+def _domain_of(url):
+    try:
+        return (urllib.parse.urlsplit(url).hostname or "").lower()
+    except Exception:
+        return ""
+
+
+def _classify_fetch_diagnostic(status, reason, raw):
+    """CLOSURE ROUND B: failed=1개 counter만으로는 network/http/redirect/security/
+    extraction 실패를 구분할 수 없었다(Te 지시 - observe before fix). fetch 로직 자체는
+    바꾸지 않고(acquire_content()/real_fetcher() 반환값 그대로), 이미 거기서 나온 정보
+    (status_code/error/reason)만으로 사후 분류한다 - 새 fetch 시도나 재시도를 하지 않는다.
+    반환: (stage, code) - stage는 집계용 상위 분류, code는 상세 사유.
+    raw: _capturing_fetcher가 real_fetcher()의 원본 반환값에서 모은 dict(또는 예외 시
+    exception_type/exception만 담긴 dict)."""
+    if status in ("FULL_TEXT", "PARTIAL_TEXT", "STRUCTURED_PRIMARY_DATA"):
+        return "success", None
+    if status == "UNKNOWN":
+        return "other", "FETCHER_NOT_INJECTED"
+    if status == "PAYWALLED":
+        return "http", "HTTP_402"
+    if status == "BLOCKED":
+        http_status = raw.get("status_code")
+        if http_status == 403:
+            return "http", "HTTP_403"
+        return "security", "SECURITY_OR_ACCESS_BLOCKED"
+    if status == "FETCH_FAILED":
+        if reason == "OVERSIZED":
+            return "response", "RESPONSE_TOO_LARGE"
+        if reason == "EXTRACTION_TOO_SHORT":
+            return "extraction", "EXTRACTION_TOO_SHORT"
+        exc_type = raw.get("exception_type")
+        if exc_type == "_BlockedURLError":
+            return "security", "SSRF_OR_REDIRECT_BLOCKED"
+        http_status = raw.get("status_code")
+        if http_status is not None:
+            if http_status == 401:
+                return "http", "HTTP_401"
+            if http_status == 404:
+                return "http", "HTTP_404"
+            if http_status == 410:
+                return "http", "HTTP_410"
+            if http_status == 429:
+                return "http", "HTTP_429"
+            if 500 <= http_status < 600:
+                return "http", "HTTP_5XX"
+            if http_status >= 400:
+                return "http", "HTTP_OTHER"
+        error = (raw.get("error") or raw.get("exception") or "").lower()
+        if error:
+            if "timeout" in error or "timed out" in error:
+                return "network", "TIMEOUT"
+            if "getaddrinfo" in error or "name or service not known" in error or "dns" in error:
+                return "network", "DNS_ERROR"
+            if "certificate" in error or "ssl" in error:
+                return "network", "TLS_ERROR"
+            if "connection" in error or "reset" in error:
+                return "network", "CONNECTION_ERROR"
+            return "network", "UNKNOWN_NETWORK_ERROR"
+        content_type = raw.get("content_type")
+        if content_type and content_type != "text/html":
+            return "response", "CONTENT_TYPE_REJECTED"
+        if raw.get("html") is None and http_status is None and not error:
+            return "extraction", "EXTRACTION_EMPTY"
+        return "other", "UNKNOWN_ERROR"
+    return "other", "UNKNOWN_ERROR"
+
+
 def _known_documents_for_provenance():
     """REPORTS_ON exact-match 후보 corpus. intel/documents.json(기존 REMEDIATION 라운드가
     이미 채워둔 문서 인덱스)을 그대로 읽는다 - 새 corpus를 만들지 않는다(REUSE BEFORE BUILD)."""
@@ -450,7 +518,15 @@ def run_article_provenance_pilot(new_items, fixtures=None, cap=PROVENANCE_FETCH_
     counters = {"eligible": 0, "cache_hit": 0, "fetch_attempted": 0, "fetch_full_text": 0,
                 "fetch_failed": 0, "quality_ok": 0, "quality_rejected": 0,
                 "references_extracted": 0, "primary_candidates": 0, "reports_on_created": 0,
-                "llm_calls": 0, "elapsed_seconds": 0.0}
+                "llm_calls": 0, "elapsed_seconds": 0.0,
+                # CLOSURE ROUND B: failed=1개 counter를 network/http/redirect/security/
+                # extraction 원인별로 분해(section 5/6). fetch 로직은 바꾸지 않는다.
+                "network_success": 0, "network_failed": 0,
+                "http_401": 0, "http_403": 0, "http_404": 0, "http_410": 0,
+                "http_429": 0, "http_5xx": 0, "http_other": 0,
+                "security_blocked": 0, "response_rejected": 0,
+                "extraction_empty": 0, "extraction_too_short": 0,
+                "domain_failures": {}}
     t0 = time.time()
     if fixtures is not None:
         print("[provenance] fixtures 모드 - 실제 네트워크 fetch를 건너뜀(테스트 안전)")
@@ -490,19 +566,75 @@ def run_article_provenance_pilot(new_items, fixtures=None, cap=PROVENANCE_FETCH_
             captured = {}
 
             def _capturing_fetcher(u, _sink=captured):
-                r = fetch_pilot.real_fetcher(u)
+                # 진단용 - real_fetcher()가 이미 돌려주는 정보(status_code/content_type/
+                # error/redirect_chain)를 더 담아둘 뿐, fetch 자체의 재시도·동작은 바꾸지
+                # 않는다(Round B-1: OBSERVE BEFORE FIX).
+                try:
+                    r = fetch_pilot.real_fetcher(u)
+                except Exception as e:
+                    _sink["exception_type"] = type(e).__name__
+                    _sink["exception"] = repr(e)
+                    raise
                 _sink["html"] = r.get("html")
+                _sink["status_code"] = r.get("status_code")
+                _sink["content_type"] = r.get("content_type")
+                _sink["byte_size"] = r.get("byte_size")
+                _sink["redirect_chain"] = r.get("redirect_chain")
+                _sink["error"] = r.get("error")
                 return r
 
             # mx.b(생성 요약)는 여기 어디에도 등장하지 않는다 - acquire_content()가 실제로
             # fetch한 원문만 이 파이프라인의 입력이다.
+            t_item = time.time()
             acquired = content_acquisition.acquire_content(url, fetcher=_capturing_fetcher)
             status = acquired.get("status")
+            reason = acquired.get("reason")
+            stage, code = _classify_fetch_diagnostic(status, reason, captured)
+            domain = _domain_of(url)
+            elapsed_ms = round((time.time() - t_item) * 1000, 1)
             cache[cache_key] = {"url": url, "status": status,
+                                 "diagnostic_stage": stage, "diagnostic_code": code,
                                  "ts": datetime.now(timezone.utc).isoformat()}
+            # LOG SAFETY(section 8): 전체 URL/쿼리스트링/토큰이 아니라 domain+분류 코드만
+            # 남긴다. article 본문은 여기 어디에도 출력하지 않는다.
+            print(f"[provenance-item] domain={domain} status={status} stage={stage} "
+                  f"code={code} http={captured.get('status_code')} elapsed_ms={elapsed_ms}",
+                  file=sys.stderr)
             if status not in ("FULL_TEXT", "PARTIAL_TEXT"):
                 counters["fetch_failed"] += 1
+                if stage == "success":
+                    pass
+                elif stage in ("network", "security", "response"):
+                    counters["network_failed"] += 1
+                    if code == "HTTP_401":
+                        counters["http_401"] += 1
+                    elif code in ("HTTP_403",):
+                        counters["http_403"] += 1
+                    elif code == "HTTP_404":
+                        counters["http_404"] += 1
+                    elif code == "HTTP_410":
+                        counters["http_410"] += 1
+                    elif code == "HTTP_429":
+                        counters["http_429"] += 1
+                    elif code == "HTTP_5XX":
+                        counters["http_5xx"] += 1
+                    elif stage == "security":
+                        counters["security_blocked"] += 1
+                    elif stage == "response":
+                        counters["response_rejected"] += 1
+                    else:
+                        counters["http_other"] += 1
+                elif stage == "extraction":
+                    counters["network_success"] += 1
+                    if code == "EXTRACTION_TOO_SHORT":
+                        counters["extraction_too_short"] += 1
+                    else:
+                        counters["extraction_empty"] += 1
+                else:
+                    counters["network_failed"] += 1
+                counters["domain_failures"][domain] = counters["domain_failures"].get(domain, 0) + 1
                 continue
+            counters["network_success"] += 1
             counters["fetch_full_text"] += 1
             text = acquired.get("text") or ""
             html_body = captured.get("html")
@@ -539,6 +671,20 @@ def run_article_provenance_pilot(new_items, fixtures=None, cap=PROVENANCE_FETCH_
           f"primary_candidates={counters['primary_candidates']} "
           f"reports_on_created={counters['reports_on_created']} llm_calls={counters['llm_calls']} "
           f"elapsed_seconds={counters['elapsed_seconds']}")
+    # CLOSURE ROUND B section 9/10 - 원인별 집계 + domain별 실패 집계(본문은 저장/출력하지
+    # 않는다). 기존 [provenance] 줄은 그대로 두고(하위호환) 새 줄을 추가만 한다.
+    domain_summary = ",".join(f"{d}:{n}" for d, n in
+                               sorted(counters["domain_failures"].items(), key=lambda kv: -kv[1])[:10])
+    print(f"[provenance-diagnostics] network_success={counters['network_success']} "
+          f"network_failed={counters['network_failed']} "
+          f"http_401={counters['http_401']} http_403={counters['http_403']} "
+          f"http_404={counters['http_404']} http_410={counters['http_410']} "
+          f"http_429={counters['http_429']} http_5xx={counters['http_5xx']} "
+          f"http_other={counters['http_other']} security_blocked={counters['security_blocked']} "
+          f"response_rejected={counters['response_rejected']} "
+          f"extraction_empty={counters['extraction_empty']} "
+          f"extraction_too_short={counters['extraction_too_short']} "
+          f"failing_domains=[{domain_summary}]")
     return counters
 
 
