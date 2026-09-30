@@ -1,0 +1,26 @@
+[
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_TRANSITION_001",
+    "GAP_TYPE": "TRANSITION_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "deep_pilot.py's evidence chain for AI_ENERGY_INFRA has bucket_counts {BASELINE:1, TRANSITION:0, CURRENT:11, UNASSIGNED_GAP:0} -- the TRANSITION bucket (2026-01-01 to 2026-09-01) is empty, so the CONFIRMED_CHANGE node cannot be built from real evidence bridging the 2025-09/10 BASELINE POLICY document and the 2026-09-28/29 CURRENT cluster.",
+    "TARGET_SOURCE_TYPE": "GOVERNMENT (Federal Register)",
+    "ACQUISITION_ATTEMPT": "Wrote intel/gap_closure/fetch_transition_evidence_energy.py, an explicit reuse of fetch_federal_register.py's hardened fetch/validate/canonicalize pipeline (same pattern as fetch_federal_register_historical.py), querying the real Federal Register API with conditions[publication_date][gte]=2026-01-01 / [lte]=2026-09-01 and conditions[term] combining 'artificial intelligence', 'data center', 'electricity', 'power grid'. Code was written and unit-tested against a mocked fetcher and the existing sample-response fixture only. Live network acquisition against federalregister.gov was NOT performed -- outbound HTTPS to federalregister.gov is blocked in this authoring sandbox. Live acquisition is pending a real GitHub Actions run, which this sandbox cannot perform and which this session was explicitly instructed not to trigger.",
+    "RESULT": "CODE_WRITTEN_UNIT_TESTED_NOT_RUN_LIVE",
+    "EVIDENCE_FOUND": false,
+    "REJECTION_REASON": "N/A -- no live acquisition attempt has occurred yet, so nothing has been rejected. This is not a rejection, it is a not-yet-attempted-live-acquisition status.",
+    "REMAINING_GAP": "The AI_ENERGY_INFRA TRANSITION bucket remains empty (0 documents). Whether the query above actually returns any real TRANSITION-window document is unknown until it runs on GitHub Actions' real network; this record makes no claim that the gap is closed."
+  },
+  {
+    "GAP_ID": "GAP_AI_ENERGY_INFRA_STATISTICAL_001",
+    "GAP_TYPE": "STATISTICAL_GAP",
+    "TOPIC": "AI_ENERGY_INFRA",
+    "WHY_IT_MATTERS": "source_diversity/audit.py found 0% of the 597-document corpus carries any statistical source, and deep_pilot.py's STATISTICAL_CONTEXT evidence-chain node for AI_ENERGY_INFRA is currently an unfilled gap, not a real node -- there is no quantitative indicator (e.g. electricity/data-center demand data) corroborating or contradicting the topic's qualitative claims.",
+    "TARGET_SOURCE_TYPE": "STATISTICAL (U.S. Energy Information Administration, API v2)",
+    "ACQUISITION_ATTEMPT": "Wrote intel/statistical_context/energy_indicators.py, defining a fixed registry (INDICATOR_SOURCE_REGISTRY) of real, publicly documented EIA API v2 endpoints (electricity retail sales; electric power operations) with correct query shapes per EIA's own published API documentation, plus a deterministic classify_statistical_relationship() function mapping a numeric trend comparison to the existing shared hypothesis-testing vocabulary (CONSISTENT_WITH / INCONSISTENT_WITH / MIXED / NO_CLEAR_SIGNAL / INSUFFICIENT_DATA / NOT_TESTABLE). No live call to api.eia.gov was made or attempted from this sandbox (outbound HTTPS is blocked here, and a real EIA api_key was never available). The classification function was unit-tested only against synthetic boundary-case series, never against fabricated 'real' AI_ENERGY_INFRA data.",
+    "RESULT": "SOURCE_REGISTRY_AND_CLASSIFIER_WRITTEN_UNIT_TESTED_NO_LIVE_DATA_ACQUIRED",
+    "EVIDENCE_FOUND": false,
+    "REJECTION_REASON": "N/A -- no live data acquisition was attempted (no network access, no API key in this environment), so there is nothing to accept or reject; also note no data-center-specific federal statistical series was identified as publicly queryable via a stable API during this slice, only aggregate electricity-demand proxies.",
+    "REMAINING_GAP": "AI_ENERGY_INFRA still has zero statistical-source documents and its STATISTICAL_CONTEXT evidence-chain node remains a gap. Real closure requires (a) a live, authenticated EIA API v2 query the supervising session runs with a real api_key, and (b) admitting a canonicalized statistical-source record through admission_gate.py (which currently has no TRUSTED_SOURCES row for a statistical/indicator source type -- adding one is also required and was not done in this slice, to avoid overreaching scope)."
+  }
+]
