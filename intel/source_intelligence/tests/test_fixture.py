@@ -245,6 +245,18 @@ def test_lawleader_regression_fixture_does_not_produce_ai_education_framing():
         assert banned not in summary
 
 
+def test_legit_ai_education_article_is_not_over_blocked_by_education_bucket_guard():
+    # Phase H 요청: education bucket guard가 과교정되어, 실제로 AI를 다루는 정당한
+    # AI-교육 기사까지 NONE으로 눌러버리는 false negative가 없는지 확인한다. 이 기사는
+    # "교육/역량" 단어를 포함하지만 AI가 명백히 central topic이므로 NONE이 되면 안 된다.
+    title = "교육부, 전국 초중고에 AI 디지털교과서 전면 도입 확정"
+    summary = "교육부는 내년부터 전국 초중고교에 AI 디지털교과서를 전면 도입하고 교사 AI 활용 역량 강화 연수를 의무화한다고 밝혔다."
+    r = assess_ai_relevance(title, summary, AI_KEYWORDS)
+    # guard는 "AI가 제목에 없고 교육/역량 버즈워드만 있는" 케이스를 눌러야지, AI가
+    # 제목에 명시적으로 등장하는 이 케이스까지 NONE으로 만들면 안 된다(과교정 = 회귀).
+    assert r["status"] != "NONE"
+
+
 def test_lawleader_regression_briefing_mx_note_also_does_not_fire_education_template():
     # 섹션 71 확장: assess_ai_relevance는 판정만 할 뿐 실제로 site 콘텐츠를 만드는 건
     # briefing.py의 mx_note()/_EVENTS 테이블이다. 이 테스트는 그 production 코드를 직접
