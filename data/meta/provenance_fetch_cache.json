@@ -638,5 +638,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-09-30T09:55:00.186293+00:00"
+ },
+ "38d64baaa66d87b8b0f1212a6c65f86e76f173e73adc9a6d252ad35c4bae53fb": {
+  "url": "https://www.khan.co.kr/article/202609302044015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:48:57.297872+00:00"
+ },
+ "6957133fff7e289b0c0b18e969ee9235c342fc558c08a6255c41df06fe59f09d": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=05838406645585368",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:02.956776+00:00"
+ },
+ "ab6b99f21293835d6e1835563900f2f26d3ab2f57570ab594466a017fbe59457": {
+  "url": "https://www.aitimes.kr/news/articleView.html?idxno=42133",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:05.168333+00:00"
+ },
+ "0b19f79bed51b85c9b8ec0f92fd2f95f2d02d4224f3d1ce0f37237a9f3dfabbb": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=05753126645585368",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:10.752656+00:00"
+ },
+ "1c5fe34d7bd37cb4d78ed62a0da34219a9625daf396e99e206b9c3bb4af1fa13": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3709875",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:12.672722+00:00"
+ },
+ "00475e353219375b59d3b205f55533ab7954f394aef4841519013bc52936f7c2": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3709863",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:14.337600+00:00"
+ },
+ "9e37dca5fedc6a0d87dba032ee25bd518d440302356aaae01884e90a5e55c0f3": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=05559606645585368",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:19.578531+00:00"
+ },
+ "bd1f998bb0ffa215e74110d2394b5485a031cc58be03c9ce0599ab107472b25c": {
+  "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003271664",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:22.096568+00:00"
+ },
+ "27607981aaca9aea8511f59dd157f96101c8e627def85314bce4fcad06c3ca97": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003809600",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:22.766778+00:00"
+ },
+ "45a0aaf0748c5fee7845b3798144675d9d3ce3bbf86a27d1ec5481cc6ace230e": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3709848",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T11:49:24.309136+00:00"
  }
 }
