@@ -7310,10 +7310,65 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "0b57067446995074:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "0b57067446995074",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.3384/ecp1392a41",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "168f0b33ecd2b448:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "168f0b33ecd2b448",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.47363/jeast/2021/vid/1006",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "927a2870ad2f63bf:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "927a2870ad2f63bf",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.15556/ijiim.01.02.003",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "c6d77cae9d29896d:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "c6d77cae9d29896d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.5304/jafscd.2013.041.001",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "f39654f26f4f26a0:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "f39654f26f4f26a0",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.5040/9781718219342.ch-014",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 646,
+  "CLAIM": 651,
   "EVIDENCE_RECORD": 3
  }
 }
