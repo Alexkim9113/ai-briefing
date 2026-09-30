@@ -1303,6 +1303,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "25e927286cfe88c7:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "25e927286cfe88c7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.2172/7260748",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "2645ed6e1a470408:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "2645ed6e1a470408",
@@ -1432,6 +1443,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdUQ3Q0pfVjExWGpGem9vWEdERS1ObUFERWlORkhoUTJIN2UzY3l2RFZqcVBlZjB2REtkc1ktWk55UjFYUkJIWWZNVU5ZblY2OHdENWZROHh1M3lGWDdSbXY5ZmRWT0NINWsyZGRmeUN2TnEyeXhCUVdjaGNiMW5fTWhXdUg3ZFRySUxsRktB?oc=5",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "2ca1dd1b0b2bf398:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "2ca1dd1b0b2bf398",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1596/20326",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -3753,6 +3775,17 @@
   },
   {
    "change_ids": [],
+   "claim_id": "739cdbb231435820:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "739cdbb231435820",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1007/978-1-4471-4673-5_4",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "73bfd23ebd577794:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "73bfd23ebd577794",
@@ -5655,6 +5688,17 @@
    "event_ids": [],
    "evidence_record_ids": [],
    "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1wWk1HLUVSUVhpb1NCM3lmZTJmNl9reUY5UUoxQXA4R25QeEZFb3E1T0x6alF1bXJCWmM5OWo2ZG56LS1kelRHSkRrWTFCdHhCVmJYMEhqZzFaOEZKSFQya1BFMHc5d20weWR3?oc=5",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "ba5556e7140f0be2:c1",
+   "claim_status": "INSUFFICIENT_SOURCE",
+   "document_id": "ba5556e7140f0be2",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://doi.org/10.1515/ijeeps-2018-0026",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
@@ -7583,50 +7627,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "25e927286cfe88c7:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "25e927286cfe88c7",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.2172/7260748",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "2ca1dd1b0b2bf398:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "2ca1dd1b0b2bf398",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.1596/20326",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "739cdbb231435820:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "739cdbb231435820",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.1007/978-1-4471-4673-5_4",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "ba5556e7140f0be2:c1",
-   "claim_status": "INSUFFICIENT_SOURCE",
-   "document_id": "ba5556e7140f0be2",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://doi.org/10.1515/ijeeps-2018-0026",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
