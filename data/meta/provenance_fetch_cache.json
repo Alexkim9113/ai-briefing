@@ -1,0 +1,52 @@
+{
+ "1d0225677db6fd14547fbf41a90527a732c1af52ad39e112d31a12024eca713b": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808484",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:19.407004+00:00"
+ },
+ "36c7afc2c899b98f526b56a4e59ed561b5875c498ffae0ff72b0e9f3ef96e009": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808424",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:19.941928+00:00"
+ },
+ "545750fc1710b5d431e41784b5fdeeaa2a762b4b642f4b0bab9b0f8c621c954b": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=03345606645585368",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:23.329672+00:00"
+ },
+ "783730a46cec846a0165ff3edd1de1472779085a0228c823696925dcfd3e5a60": {
+  "url": "https://www.yna.co.kr/view/AKR20260930074700004",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:24.812542+00:00"
+ },
+ "aa4394da02760dcb8fc8410aaf6a3832c218a7bdd8868b8320aee93411e749f4": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=03335766645585368",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:28.866351+00:00"
+ },
+ "9e15a566c188ee6eff22b948975262b72ecbb8f5d1ba9c9e5d0832d54e7c5989": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808409",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:30.145943+00:00"
+ },
+ "51287c94167d41e0fd50de6420a2b44bf30b0278f529c765a508655024000a3a": {
+  "url": "https://www.yna.co.kr/view/AKR20260930065700001",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:33.012927+00:00"
+ },
+ "3b122bafeec7df8d12ad974e99cb22abdde9a947f5db4d644dd6a1d67d6d7a13": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808385",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:33.439277+00:00"
+ },
+ "f218ce931d7492cb1819bb13a11bfc542625855a66eea2f778bb46ad23ece4bd": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3709034",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:35.179608+00:00"
+ },
+ "e70b529c35da297638ad01d6f709eb424121e513a995c568706beae395d6dd61": {
+  "url": "https://www.donga.com/news/Economy/article/all/20260930/134758379/1",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:48:36.461956+00:00"
+ }
+}
