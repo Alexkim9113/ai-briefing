@@ -2076,7 +2076,7 @@
   {
    "change_ids": [],
    "claim_id": "468982c9c2f3ffef:c1",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "468982c9c2f3ffef",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3145,7 +3145,7 @@
   {
    "change_ids": [],
    "claim_id": "68821b181460df0c:c2",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "68821b181460df0c",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -3160,7 +3160,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_6"
+    "evr_7"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -7172,10 +7172,36 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "3b69094bd9c06432:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "3b69094bd9c06432",
+   "event_ids": [
+    "evtprod_3b69094bd9c06432"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.edaily.co.kr/News/Read?newsId=04988886645584712",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "3b69094bd9c06432:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "3b69094bd9c06432",
+   "event_ids": [
+    "evtprod_3b69094bd9c06432"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.edaily.co.kr/News/Read?newsId=04988886645584712",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 632,
+  "CLAIM": 634,
   "EVIDENCE_RECORD": 3
  }
 }

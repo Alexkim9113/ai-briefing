@@ -16,7 +16,52 @@
  "6fc7a96597354c9d": null,
  "7c355b488ad27e42": null,
  "7dc60e04d39b9e0f": null,
- "83fea80ec16ea5a8": null,
+ "83fea80ec16ea5a8": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "엔비디아가 기존 자사주 매입 계획에 더해 1500억달러 규모의 자사주를 추가로 매입하기로 했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "자사주",
+    "predicate": "자사주 추가 매입 결정",
+    "subject": "엔비디아",
+    "unit": "달러",
+    "value": 150000000000
+   },
+   {
+    "_idx": 2,
+    "claim_text": "이는 기업 역사상 자사주 매입 승인 규모로는 역대 최대 수준이다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "기업 역사상 역대 최대",
+    "predicate": "역대 최대 수준",
+    "subject": "자사주 매입 승인 규모",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT",
+    "object": "역대 최대 수준",
+    "reason": "1500억달러 규모의 추가 자사주 매입 결정이 기업 역사상 자사주 매입 승인 규모로 역대 최대 수준이라고 명시됨",
+    "relation": "자사주 매입 규모 평가",
+    "source_claim_ids": [
+     "엔비디아가 기존 자사주 매입 계획에 더해 1500억달러 규모의 자사주를 추가로 매입하기로 했다.",
+     "이는 기업 역사상 자사주 매입 승인 규모로는 역대 최대 수준이다."
+    ],
+    "subject": "엔비디아",
+    "support_type": "DIRECT_SUPPORT"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ },
  "8a763a5277f92e33": {
   "claims": [
    {

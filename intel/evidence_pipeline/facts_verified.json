@@ -3,627 +3,627 @@
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "00d2cdb46baa4993:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "00d2cdb46baa4993",
   "fact_id": "00d2cdb46baa4993:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "011ef36b54ed2caf:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "011ef36b54ed2caf:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "011ef36b54ed2caf",
   "fact_id": "011ef36b54ed2caf:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "0796b0a2299ad115:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "0796b0a2299ad115:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "0796b0a2299ad115",
   "fact_id": "0796b0a2299ad115:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AI in Science: Early Insights",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "111cd9002abfd1e0:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "111cd9002abfd1e0:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "111cd9002abfd1e0",
   "fact_id": "111cd9002abfd1e0:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): VkVIO: Cross-platform GPU Acceleration for Visual-Inertial Odometry with Vulkan",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "13eddd2d548f927d:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "13eddd2d548f927d:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "13eddd2d548f927d",
   "fact_id": "13eddd2d548f927d:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Manifold Projection and Iterative Autoencoder Refinement for Masked Language Modeling",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "1b71243b506cd89b:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "1b71243b506cd89b:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "1b71243b506cd89b",
   "fact_id": "1b71243b506cd89b:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Predicting Transmembrane Protein Topology from 3D Structure",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "1bdda2b5527a0269:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "1bdda2b5527a0269:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "1bdda2b5527a0269",
   "fact_id": "1bdda2b5527a0269:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Small Is Enough: Per-User Style Rewriting of AI-Edited Text via LoRA Adapters",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "1e10ea1539c7c6e3:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "1e10ea1539c7c6e3:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "1e10ea1539c7c6e3",
   "fact_id": "1e10ea1539c7c6e3:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BuildOcc: A Large Language Model Occupant Agent Platform for Building Energy Research",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "2ebbad3249d4bcd3:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "2ebbad3249d4bcd3:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "2ebbad3249d4bcd3",
   "fact_id": "2ebbad3249d4bcd3:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Benchy: towards a universal language for task-oriented AI benchmarks",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "378c7e6a655962f9:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "378c7e6a655962f9:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "378c7e6a655962f9",
   "fact_id": "378c7e6a655962f9:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "3b64b7e40e5ebfea:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "3b64b7e40e5ebfea:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "3b64b7e40e5ebfea",
   "fact_id": "3b64b7e40e5ebfea:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "3c7d8f12053d37d7:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "3c7d8f12053d37d7:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "3c7d8f12053d37d7",
   "fact_id": "3c7d8f12053d37d7:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): WALT: Learning World-Model-Aligned Latent Trajectories for Autonomous Driving",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "3e75f2a25891f6ef:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "3e75f2a25891f6ef:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "3e75f2a25891f6ef",
   "fact_id": "3e75f2a25891f6ef:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "40c546b01b8f0823:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "40c546b01b8f0823:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "40c546b01b8f0823",
   "fact_id": "40c546b01b8f0823:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): mHolmes improves cross anatomical cadaveric microbiome forecasting for postmortem interval estimation",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "4362ab11e73c75fe:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "4362ab11e73c75fe:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "4362ab11e73c75fe",
   "fact_id": "4362ab11e73c75fe:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Grid-Orch: An LLM-Powered Orchestrator for Distribution Grid Simulation and Analytics",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "4d4cdc5a20c81fa2:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "4d4cdc5a20c81fa2:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "4d4cdc5a20c81fa2",
   "fact_id": "4d4cdc5a20c81fa2:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Task-structured modularity emerges in artificial networks and aligns with brain architecture",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "4fddb8d043851dec:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "4fddb8d043851dec:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "4fddb8d043851dec",
   "fact_id": "4fddb8d043851dec:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Job Class Thermal Intent Aware Liquid Cooling Allocation for AI Data Centers",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "5047633d16750463:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "5047633d16750463:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "5047633d16750463",
   "fact_id": "5047633d16750463:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): BioEVAL: A global, multi-institutional benchmark of large language and multimodal models for bioengineering",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "525569900b31c3eb:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "525569900b31c3eb:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "525569900b31c3eb",
   "fact_id": "525569900b31c3eb:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Unifying non-Markovian Dynamics and Agent Heterogeneity in Scalable Stochastic Networks",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "56d2dbd4f173ee13:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "56d2dbd4f173ee13:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "56d2dbd4f173ee13",
   "fact_id": "56d2dbd4f173ee13:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Regional climate risk assessment from climate models using probabilistic machine learning",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "574d71d286dad78c:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "574d71d286dad78c:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "574d71d286dad78c",
   "fact_id": "574d71d286dad78c:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Information Aggregation with AI Agents",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "5d646df0760783f2:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "5d646df0760783f2:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "5d646df0760783f2",
   "fact_id": "5d646df0760783f2:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): How can AI accelerate the green transition?",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "66b537ba2c5a288f:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "66b537ba2c5a288f:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "66b537ba2c5a288f",
   "fact_id": "66b537ba2c5a288f:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Actively Resolving Contextual Uncertainty for Underspecified Tasks in Natural Language",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "6790127fafa1547e:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "6790127fafa1547e:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "6790127fafa1547e",
   "fact_id": "6790127fafa1547e:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): POIL: Point-based One-Shot Imitation Learning with Stable Dynamical Systems",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "68821b181460df0c:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "68821b181460df0c:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "68821b181460df0c",
   "fact_id": "68821b181460df0c:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ConTP reshapes transporter functional space to resolve substrate specificity beyond evolutionary proximity",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "6913568609c5c92b:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "6913568609c5c92b:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "6913568609c5c92b",
   "fact_id": "6913568609c5c92b:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collective impact of opinion formation on agent-based epidemic dynamics",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "6b962900432b0a4b:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "6b962900432b0a4b:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "6b962900432b0a4b",
   "fact_id": "6b962900432b0a4b:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Towards Mitigating Fabricated Consensus: The Active Provenance Gate for Multi-Agent Debate Synthesis",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "6bb04d3a16411126:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "6bb04d3a16411126:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "6bb04d3a16411126",
   "fact_id": "6bb04d3a16411126:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Agentic Workflows for Resolving Conflict Over Shared Resources: A Power Grid Application",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "6c41ae2bcdb38d72:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "6c41ae2bcdb38d72:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "6c41ae2bcdb38d72",
   "fact_id": "6c41ae2bcdb38d72:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Thinking Less to Simulate Better: Intuitive Prompting Improves LLM Agents Simulating Individual Social Media Reactions, Including Unfamiliar Content",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "788d01ac3691ff08:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "788d01ac3691ff08:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "788d01ac3691ff08",
   "fact_id": "788d01ac3691ff08:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AC Power Flow Contingency Analysis Using a Single Deep Neural Network",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "7b365b59d25c5367:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "7b365b59d25c5367:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "7b365b59d25c5367",
   "fact_id": "7b365b59d25c5367:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): MM-ContextFold: Context Folding for Multimodal Agentic Retrieval",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "8037ce5b679100a0:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "8037ce5b679100a0:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "8037ce5b679100a0",
   "fact_id": "8037ce5b679100a0:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): ADF-EA: A Unified Execution Assurance System for Agent Device Foundation",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "857d4691a1df76e2:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "857d4691a1df76e2:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "857d4691a1df76e2",
   "fact_id": "857d4691a1df76e2:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): The Crowd in the Machine: A Crisis-Informatics Reading of the 2026 Autonomous Agent Incidents",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "89cfa475c2cdfc02:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "89cfa475c2cdfc02:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "89cfa475c2cdfc02",
   "fact_id": "89cfa475c2cdfc02:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Auditing and Repairing LLM-as-Judge Failures in a Production Text-to-SQL Pipeline",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "8ce8f265fed36edb:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "8ce8f265fed36edb:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "8ce8f265fed36edb",
   "fact_id": "8ce8f265fed36edb:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "8d120e73d1ec23c7:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "8d120e73d1ec23c7:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "8d120e73d1ec23c7",
   "fact_id": "8d120e73d1ec23c7:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Hierarchical Semi-Markov Load Model for AI Data Centers Coupling Job Scheduling with Bulk-Synchronous-Parallel Power Dynamics",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "8de1456a2539f9a3:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "8de1456a2539f9a3:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "8de1456a2539f9a3",
   "fact_id": "8de1456a2539f9a3:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Warned alike, AI agents avoid the less-crowded road while people take it",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "9154f04d2070dbf3:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "9154f04d2070dbf3:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "9154f04d2070dbf3",
   "fact_id": "9154f04d2070dbf3:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Collision-free Movement on Grids and Beyond",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "9b75262a4813d73c:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "9b75262a4813d73c:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "9b75262a4813d73c",
   "fact_id": "9b75262a4813d73c:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "9cb34f07f4f3c23a:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "9cb34f07f4f3c23a:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "9cb34f07f4f3c23a",
   "fact_id": "9cb34f07f4f3c23a:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SignTrace: Describe a Sign, Find the Word",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "9f727f4c6d89ac2e:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "9f727f4c6d89ac2e:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "9f727f4c6d89ac2e",
   "fact_id": "9f727f4c6d89ac2e:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "a1f7d5b570427037:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "a1f7d5b570427037:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "a1f7d5b570427037",
   "fact_id": "a1f7d5b570427037:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): When a Few Misfits Trigger Digital Adoption Cascades: Network Reach, Threshold Heterogeneity, and Performance-Conditioned Complex Contagion in an Agent-Based Model of Firms",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "a541b3b3913208a4:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "a541b3b3913208a4:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "a541b3b3913208a4",
   "fact_id": "a541b3b3913208a4:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Neural Parameter Estimation of RC Thermal Building Models for Model Predictive Control",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "a72f36c603737ac3:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "a72f36c603737ac3:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "a72f36c603737ac3",
   "fact_id": "a72f36c603737ac3:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Not All Memories Are Equal: Hierarchical Collaborative Memory for Validity-Aware Retrieval in LLM Agents",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "aa9903feed237588:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "aa9903feed237588:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "aa9903feed237588",
   "fact_id": "aa9903feed237588:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Cartograph: Federated Tool Discovery with Operator-Attested Retrieval for AI Agents",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "b394df1ecc069ffe:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "b394df1ecc069ffe:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "b394df1ecc069ffe",
   "fact_id": "b394df1ecc069ffe:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): SlideLab: Audience-Centered Scientific Slide Generation and Evaluation",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "b8fa13cceb3fef09:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "b8fa13cceb3fef09:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "b8fa13cceb3fef09",
   "fact_id": "b8fa13cceb3fef09:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "b917c819c6d2b7c1:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "b917c819c6d2b7c1:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "b917c819c6d2b7c1",
   "fact_id": "b917c819c6d2b7c1:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "bda73e7519619ec5:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "bda73e7519619ec5:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "bda73e7519619ec5",
   "fact_id": "bda73e7519619ec5:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Subjects, Not Authors: The Authorship Hazard in Agentic Dataspaces",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "bf61df88840874c2:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "bf61df88840874c2:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "bf61df88840874c2",
   "fact_id": "bf61df88840874c2:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Spectral Feedback for Test-Time Alignment of Protein Diffusion Models",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "d794466b088fd094:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "d794466b088fd094:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "d794466b088fd094",
   "fact_id": "d794466b088fd094:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Minute-scale training for microrobot navigation",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "daa9ede7bf7e3ced:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "daa9ede7bf7e3ced:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "daa9ede7bf7e3ced",
   "fact_id": "daa9ede7bf7e3ced:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "e2305056af9a026a:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "e2305056af9a026a:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "e2305056af9a026a",
   "fact_id": "e2305056af9a026a:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "e3caf6a8ec30c10e:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "e3caf6a8ec30c10e:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "e3caf6a8ec30c10e",
   "fact_id": "e3caf6a8ec30c10e:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Do LLMs Understand Context? A Knowledge Graph-Based Evaluation Framework",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "e421d3f963f49792:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "e421d3f963f49792:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "e421d3f963f49792",
   "fact_id": "e421d3f963f49792:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): A Survey on Fake Review Detection: From Pre-trained Language Models to Large Language Models",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "e4c37e0d9bb9dcc7:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "e4c37e0d9bb9dcc7:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "e4c37e0d9bb9dcc7",
   "fact_id": "e4c37e0d9bb9dcc7:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Beyond the Last Truffula Tree: SustainAI - A Water-Aware, Closed-Loop Framework for Environmentally Accountable AI",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  },
  "f906814c00dcda1f:c1:fact": {
   "based_on_claim_status": "SOURCE_LOCATED",
   "based_on_claim_type": "RESEARCH_FINDING",
   "claim_id": "f906814c00dcda1f:c1",
-  "created_at": "2026-09-30T02:48:29.376985+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "document_id": "f906814c00dcda1f",
   "fact_id": "f906814c00dcda1f:c1:fact",
   "fact_kind": "EXISTENCE_VERIFIED",
   "statement": "식별자로 다음 논문의 존재가 확인됨(연구 결과 내용은 미검증): Pretrained ASR Pseudo-labeling for Noisy Police Audio",
-  "updated_at": "2026-09-30T02:48:29.376985+00:00"
+  "updated_at": "2026-09-30T04:56:27.408009+00:00"
  }
 }
