@@ -260,3 +260,73 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.5D -- Crossref academic-evidence pilot (real, free, no-key REST API; targets the
+  # MISSING_ACADEMIC_EVIDENCE gap type). Same isolation pattern as federal_register_shadow:
+  # own concurrency group, continue-on-error, needs build, if: always(), commits only its own
+  # new output file (intel/historical_acquisition/crossref_pilot_result.json) -- never touches
+  # documents.json. Live reachability of api.crossref.org from GitHub Actions' network is only
+  # observable once this actually runs; this sandbox confirmed the host is blocked at its own
+  # outbound proxy, and that fact is not fabricated as a GitHub Actions result here.
+  crossref_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: crossref-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Crossref Academic Evidence Pilot 실행 (실제 연결 시도)
+        continue-on-error: true
+        run: python3 intel/historical_acquisition/fetch_crossref.py
+      - name: Crossref Pilot 결과 저장 (historical_acquisition/crossref_pilot_result.json 만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/historical_acquisition/crossref_pilot_result.json
+          git diff --cached --quiet || git commit -m "Crossref Academic Evidence Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
+
+  # PHASE M.5D -- Verified Evidence Admission Gate for Crossref. Mirrors evidence_admission
+  # exactly (same admission_gate.admit_shadow_result(), same 10 checks, same idempotency
+  # guarantee) but reads crossref_pilot_result.json instead of the Federal Register shadow
+  # file. Runs AFTER crossref_shadow commits its result.
+  evidence_admission_crossref:
+    # Depends on evidence_admission too (not just crossref_shadow) so the two admission jobs
+    # never write documents.json concurrently -- avoids a documents.json merge race between
+    # two shadow sources admitting in the same run.
+    needs: [build, crossref_shadow, evidence_admission]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-admission-crossref
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verified Evidence Admission Gate 실행 (crossref_pilot_result.json → documents.json)
+        continue-on-error: true
+        run: python3 intel/evidence_admission/run_admission_crossref.py
+      - name: Admission 결과 저장 (documents.json + evidence_admission 산출물만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
+          git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate (Crossref) 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
