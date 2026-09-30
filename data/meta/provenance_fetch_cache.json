@@ -48,5 +48,55 @@
   "url": "https://www.donga.com/news/Economy/article/all/20260930/134758379/1",
   "status": "FETCH_FAILED",
   "ts": "2026-09-30T01:48:36.461956+00:00"
+ },
+ "88f6c035e3e70682fa2a58d2ecad854df665e6ca218b210ac6ec1800a57fd389": {
+  "url": "https://www.yna.co.kr/view/AKR20260930070900054",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:51:54.589749+00:00"
+ },
+ "d05c45ce2089ce3ce60be1edb6efbfe57d5e6a36be6ba5892d36b1d5d1805f5b": {
+  "url": "https://www.mk.co.kr/news/business/12164567",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:51:55.138307+00:00"
+ },
+ "a7f1178124cb9172850973f0df89ee860d0a094da4c9d5bfc5b29d7644a17f63": {
+  "url": "https://www.aitimes.kr/news/articleView.html?idxno=42117",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:51:56.736187+00:00"
+ },
+ "1952d3488f19764411023929e60c28ca57b6963bd78214ed9370912f11abc9ac": {
+  "url": "https://www.newsis.com/view/NISX20260930_0003808419",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:51:57.693357+00:00"
+ },
+ "d10f49b169681e136cac43cfd726cd18732ff84583b1fd48bd4cf3663b7643ff": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226596",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:51:59.370051+00:00"
+ },
+ "2aa0e639e8c0f01a67b724002fd6f6858d4b3129101bfea4215bdd881df6735a": {
+  "url": "https://www.yna.co.kr/view/AKR20260930067100017",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:52:00.784217+00:00"
+ },
+ "9b75069737b777ea226ee00dda2d7ec6fab20c75b0bed47df5342c91ecfa1af4": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3709066",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:52:01.981639+00:00"
+ },
+ "050e115fac591b3581f932bf82fcead736d5f6c518c714f5e98128a28ccc0eed": {
+  "url": "https://biz.heraldcorp.com/article/10888633",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:52:03.066404+00:00"
+ },
+ "513ff2bfd516dce7b7ed94aea0459f2c4184d9b940ea4b2fb4d8cefdbb59ef44": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=33885686645585368",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:52:04.225946+00:00"
+ },
+ "7d243c5b327a9b92acbe32ad64864819e05f4cbd05136464e260d32963a4fd25": {
+  "url": "https://www.khan.co.kr/article/202609301017001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FETCH_FAILED",
+  "ts": "2026-09-30T01:52:05.142615+00:00"
  }
 }
