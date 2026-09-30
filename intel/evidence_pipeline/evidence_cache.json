@@ -226,5 +226,97 @@
    "요약문 마지막 문장이 '길찾기가..'로 끝나 서비스 적용 완료 여부 및 세부 계획 문장이 온전히 종결되지 않음"
   ]
  },
- "fee412ff779a78fe": null
+ "fee412ff779a78fe": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "Peak XV ups Surge seed investment ceiling to $5M",
+    "claim_type": "DIRECT_FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "Peak XV ups Surge seed investment ceiling to $5M",
+    "object": "$5M",
+    "predicate": "ups Surge seed investment ceiling to",
+    "subject": "Peak XV",
+    "unit": "USD",
+    "value": 5000000
+   },
+   {
+    "_idx": 2,
+    "claim_text": "Peak XV unveils 18-startup cohort",
+    "claim_type": "DIRECT_FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "unveils 18-startup cohort",
+    "object": "18-startup cohort",
+    "predicate": "unveils",
+    "subject": "Peak XV",
+    "unit": "startup",
+    "value": 18
+   },
+   {
+    "_idx": 3,
+    "claim_text": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets",
+    "claim_type": "DIRECT_FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets",
+    "object": "global markets",
+    "predicate": "are targeting",
+    "subject": "13 of 18 startups in Peak XV’s latest Surge cohort",
+    "unit": "startup",
+    "value": 13
+   },
+   {
+    "_idx": 4,
+    "claim_text": "More than half of the 18 startups are based in India",
+    "claim_type": "DIRECT_FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "while more than half are based in India",
+    "object": "India",
+    "predicate": "are based in",
+    "subject": "Startups in Peak XV’s latest Surge cohort",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_EXCERPT",
+    "object": "Surge seed investment ceiling to $5M",
+    "reason": "제목에서 Peak XV가 Surge 시드 투자 한도를 5백만 달러로 상향했음을 명시함",
+    "relation": "increased_investment_ceiling",
+    "source_claim_ids": [
+     0
+    ],
+    "subject": "Peak XV",
+    "support_type": "DIRECT_SUPPORT"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_EXCERPT",
+    "object": "global markets",
+    "reason": "요약에서 코호트 내 18개 스타트업 중 13개가 글로벌 시장을 목표로 하고 있음을 명시함",
+    "relation": "market_focus",
+    "source_claim_ids": [
+     2
+    ],
+    "subject": "Peak XV's Surge cohort",
+    "support_type": "DIRECT_SUPPORT"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_EXCERPT",
+    "object": "India",
+    "reason": "요약에서 절반 이상이 인도에 기반을 두고 있음을 명시함",
+    "relation": "geographic_distribution",
+    "source_claim_ids": [
+     3
+    ],
+    "subject": "Peak XV's Surge cohort",
+    "support_type": "DIRECT_SUPPORT"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ }
 }

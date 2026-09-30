@@ -41,7 +41,61 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
+  "value": null
+ },
+ "evr_10": {
+  "_type_specific": {
+   "affected_system": "AI_INFRASTRUCTURE",
+   "controller_if_known": null,
+   "dependency_ids": [],
+   "resource_or_gate": "ELECTRICITY"
+  },
+  "claim_id": "688c6d92f147a96b:c1",
+  "claim_type": "MEDIA_REPORTED",
+  "contradicts_ids": [],
+  "created_at": "2026-09-30T09:01:51.372770+00:00",
+  "direction": null,
+  "document_id": "688c6d92f147a96b",
+  "domain_scope": [],
+  "domains": [
+   "PLANET"
+  ],
+  "entities": [],
+  "epistemic_status": "INSUFFICIENT_SOURCE",
+  "evidence_record_id": "evr_10",
+  "evidence_strength": "LOW",
+  "evidence_type": "BOTTLENECK",
+  "extraction_method": "LEVEL2_RULE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T04:30:00+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-30T09:02:38.011818+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "RULE_MAPPING",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T04:30:00+09:00",
+  "object": "AI_INFRASTRUCTURE",
+  "population_scope": null,
+  "relation": "CONSTRAINS_EXPANSION_OF",
+  "resources": [
+   "ELECTRICITY"
+  ],
+  "source_id": "src_rss_donga_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "ELECTRICITY",
+  "support_type": "ASSOCIATED",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  },
  "evr_2": {
@@ -86,7 +140,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  },
  "evr_3": {
@@ -140,7 +194,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  },
  "evr_4": {
@@ -192,7 +246,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  },
  "evr_5": {
@@ -240,7 +294,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  },
  "evr_6": {
@@ -250,6 +304,141 @@
   "contradicts_ids": [],
   "created_at": "2026-09-30T01:50:44.594430+00:00",
   "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_6",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-30T01:51:04.884521+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "Surge seed investment ceiling to $5M",
+  "population_scope": null,
+  "relation": "increased_investment_ceiling",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
+  "value": null
+ },
+ "evr_7": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_7",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-30T04:56:53.656487+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "global markets",
+  "population_scope": null,
+  "relation": "market_focus",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV's Surge cohort",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
+  "value": null
+ },
+ "evr_8": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-30T09:01:51.372770+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_8",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-30T09:02:38.011813+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "India",
+  "population_scope": null,
+  "relation": "geographic_distribution",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV's Surge cohort",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
+  "value": null
+ },
+ "evr_9": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-30T09:01:51.372770+00:00",
+  "direction": null,
   "document_id": "626a1a31b56e8ec9",
   "domain_scope": [],
   "domains": [],
@@ -258,7 +447,7 @@
    "네이버"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_6",
+  "evidence_record_id": "evr_9",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -267,7 +456,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-30T01:51:04.884521+00:00",
+    "at": "2026-09-30T09:02:38.011816+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -288,61 +477,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
-  "value": null
- },
- "evr_7": {
-  "_type_specific": {
-   "affected_system": "AI_INFRASTRUCTURE",
-   "controller_if_known": null,
-   "dependency_ids": [],
-   "resource_or_gate": "ELECTRICITY"
-  },
-  "claim_id": "688c6d92f147a96b:c1",
-  "claim_type": "MEDIA_REPORTED",
-  "contradicts_ids": [],
-  "created_at": "2026-09-30T04:56:27.408009+00:00",
-  "direction": null,
-  "document_id": "688c6d92f147a96b",
-  "domain_scope": [],
-  "domains": [
-   "PLANET"
-  ],
-  "entities": [],
-  "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_7",
-  "evidence_strength": "LOW",
-  "evidence_type": "BOTTLENECK",
-  "extraction_method": "LEVEL2_RULE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T04:30:00+09:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-09-30T04:56:53.656487+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "PENDING",
-  "institutions": [],
-  "interpretation_method": "RULE_MAPPING",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T04:30:00+09:00",
-  "object": "AI_INFRASTRUCTURE",
-  "population_scope": null,
-  "relation": "CONSTRAINS_EXPANSION_OF",
-  "resources": [
-   "ELECTRICITY"
-  ],
-  "source_id": "src_rss_donga_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "ELECTRICITY",
-  "support_type": "ASSOCIATED",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-09-30T05:30:17.443773+00:00",
+  "updated_at": "2026-09-30T09:01:51.372770+00:00",
   "value": null
  }
 }

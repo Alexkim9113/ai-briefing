@@ -1414,9 +1414,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "2fa01e8819fd9906:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "2fa01e8819fd9906",
@@ -1475,9 +1473,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "309d3a4f83f0a017:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "309d3a4f83f0a017",
@@ -2201,9 +2197,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "499b5712c021b4e7:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "499b5712c021b4e7",
@@ -3186,7 +3180,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_7"
+    "evr_10"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -3336,9 +3330,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "6ba7417936458e58:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "6ba7417936458e58",
@@ -4328,9 +4320,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "8d36a93d57a1921a:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "8d36a93d57a1921a",
@@ -4387,9 +4377,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "905fba6e1f01d1ac:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "905fba6e1f01d1ac",
@@ -5934,9 +5922,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "d3180795a4560ed3:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "d3180795a4560ed3",
@@ -6171,9 +6157,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "dcd4b5a345a64a9b:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "dcd4b5a345a64a9b",
@@ -6252,9 +6236,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "e09f773c670497f3:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "e09f773c670497f3",
@@ -6322,9 +6304,7 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [
-    "chg_7f1ae8e6b9e33860"
-   ],
+   "change_ids": [],
    "claim_id": "e1da0f895405134f:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "e1da0f895405134f",
@@ -7198,10 +7178,54 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "597975da49400eea:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "597975da49400eea",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 634,
+  "CLAIM": 638,
   "EVIDENCE_RECORD": 3
  }
 }
