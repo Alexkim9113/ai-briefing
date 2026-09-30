@@ -400,3 +400,76 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE M.5E-4 -- Federal Register TRANSITION-window pilot for the AI_ENERGY_INFRA Deep
+  # Pilot's empty TRANSITION bucket (BASELINE ~2025-09, CURRENT ~2026-09, 0 documents between
+  # them). Reuses fetch_federal_register.py's hardened pipeline exactly like
+  # federal_register_historical_shadow above -- only the query window/terms differ. Same
+  # isolation pattern: own concurrency group, continue-on-error, needs build, if: always(),
+  # commits only its own shadow-result sidecar file -- never touches documents.json. Live
+  # reachability is only observable once this actually runs; not fabricated here.
+  transition_evidence_energy_shadow:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: transition-evidence-energy-shadow
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: AI_ENERGY_INFRA TRANSITION-window Pilot 실행 (실제 연결 시도)
+        continue-on-error: true
+        run: python3 intel/gap_closure/fetch_transition_evidence_energy.py
+      - name: TRANSITION Pilot 결과 저장 (gap_closure/transition_evidence_energy_result.json 만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/gap_closure/transition_evidence_energy_result.json
+          git diff --cached --quiet || git commit -m "AI_ENERGY_INFRA TRANSITION-window Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
+
+  # PHASE M.5E-4 -- Transition Admission Gate + Verified Evidence Admission for the TRANSITION
+  # pilot above. Unlike every other admission job, this one does NOT call
+  # admission_gate.admit_shadow_result() directly on the raw shadow result -- it runs
+  # run_admission_transition_energy_gated.py, which first classifies every candidate through
+  # transition_admission_gate.py's 9-category state-change classifier (a document merely dated
+  # inside the BASELINE-CURRENT window is not automatically a TRANSITION event) and only passes
+  # TRANSITION_ADMITTED_CANDIDATE documents to the real admission gate; every verdict (admitted
+  # or not) is logged to transition_admission_gate_log.json so nothing is silently dropped.
+  # Depends on every other admission job so no two admission jobs ever write documents.json
+  # concurrently in the same run -- same race-avoidance reasoning as the other admission jobs.
+  evidence_admission_transition_energy:
+    needs: [build, transition_evidence_energy_shadow, evidence_admission, evidence_admission_crossref, evidence_admission_fedreg_historical]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: evidence-admission-transition-energy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Transition Admission Gate + Verified Evidence Admission Gate 실행 (transition_evidence_energy_result.json → documents.json)
+        continue-on-error: true
+        run: python3 intel/evidence_admission/run_admission_transition_energy_gated.py
+      - name: Admission 결과 저장 (documents.json + evidence_admission/gap_closure 산출물만)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json intel/gap_closure/transition_admission_gate_log.json
+          git diff --cached --quiet || git commit -m "Transition Admission Gate 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
