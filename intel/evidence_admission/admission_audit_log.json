@@ -2625,5 +2625,37 @@
   "reason": "document_id and content_hash already present in documents.json -- no change",
   "source": "src_federal_register",
   "timestamp": "2026-09-30T15:55:25.414856+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.2172_7260748",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "25e927286cfe88c7",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:55:52.805246+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1007_978-1-4471-4673-5_4",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "739cdbb231435820",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:55:52.805246+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1515_ijeeps-2018-0026",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "ba5556e7140f0be2",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:55:52.805246+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.1596_20326",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "2ca1dd1b0b2bf398",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_crossref",
+  "timestamp": "2026-09-30T15:55:52.805246+00:00"
  }
 ]
