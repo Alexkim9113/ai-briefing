@@ -18,6 +18,9 @@ from evidence import event_quality_record, split_supporting_contradicting  # noq
 from fact_pack import build_change_fact_pack  # noqa: E402
 from overrides import load_overrides, apply_overrides  # noqa: E402
 from memory import load_existing_changes, upsert_change  # noqa: E402
+from source_independence_gate import (  # noqa: E402
+    load_documents, independent_evidence_count,
+)
 
 EVENT_DIR = ROOT / "intel" / "event_production"
 
@@ -54,23 +57,39 @@ def run():
     raw_items = load_raw_items()
 
     candidates = generate_candidates(events, raw_items)
+    documents_by_id = load_documents()
 
     existing = load_existing_changes()
     changes = {}
     change_evidence = {}
     fact_packs = {}
+    independence_rejections = []
     for cand in candidates:
         cid = _change_id(cand["object_term"], cand["entities"])
         supporting, contradicting = split_supporting_contradicting(cand, events)
         if len(supporting) < MIN_SUPPORTING_EVENTS:
             continue  # 반대 증거를 빼고 나니 최소 조건 미달 — Change로 성립 안 함(운영자 지시 2번)
 
+        # PHASE M.5 — source independence gate (ADDITIVE ONLY, never lowers
+        # MIN_SUPPORTING_EVENTS): collapse supporting Events whose documents share an origin
+        # (SHARED_ORIGIN/DERIVED_FROM_SAME_SOURCE) into one evidence family before counting.
+        # A candidate whose raw event count clears MIN_SUPPORTING_EVENTS only because several
+        # of its Events trace back to the same underlying source is rejected here.
+        indep_count = independent_evidence_count(supporting, events, documents_by_id)
+        if indep_count < MIN_SUPPORTING_EVENTS:
+            independence_rejections.append({
+                "object_term": cand["object_term"], "entities": cand["entities"],
+                "raw_event_count": len(supporting), "independent_evidence_count": indep_count,
+            })
+            continue
+
         name = f"{cand['object_term']} 관련 변화"
         statement = _change_statement(cand["entities"], cand["direction"], cand["object_term"])
         shell = new_change_shell(cid, name, statement, cand["direction"])
         shell.update({
             "supporting_event_ids": supporting, "contradicting_event_ids": contradicting,
-            "event_count": len(supporting), "independent_source_count": len(supporting),  # Event=독립단위(12번)
+            "event_count": len(supporting),
+            "independent_source_count": indep_count,  # PHASE M.5: gated, not raw len(supporting)
             "entity_diversity": cand["entity_diversity"], "domain_diversity": len(cand["event_types"]),
             "time_span_days": _span_days(cand["first_seen"], cand["last_seen"]),
             "topics": cand["event_types"], "domains": cand["event_types"], "entities": cand["entities"],
@@ -108,6 +127,8 @@ def run():
         "changes_created": len(changes),
         "changes_by_status": _count_by(changes, "status"),
         "changes_by_direction": _count_by(changes, "direction"),
+        "independence_gate_rejections": len(independence_rejections),
+        "independence_gate_rejection_details": independence_rejections,
         "gemini_calls_added": 0, "claude_calls_added": 0, "embedding_calls": 0, "external_api_calls": 0,
     }
     HERE.joinpath("change_metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -532,6 +532,33 @@ def test_ecos_malformed_shape_fails_closed_never_crashes():
         assert reason in ("SCHEMA_CHANGED", "PARSE_FAILED", "NO_DATA_ROWS")
 
 
+def test_m5_worldbank_regression_lock_never_touched():
+    # PHASE M.5 Priority 5: ECOS returned SCHEMA_CHANGED on the real live GitHub Actions run
+    # (M.3V), and this sandbox has no live network access to observe ECOS's real response body,
+    # so no evidence-based ECOS fix was possible this round (left as SCHEMA_CHANGED, untouched).
+    # This is a regression lock proving the World Bank path (LIVE VERIFIED in M.3V against a
+    # real 2025 Korea GDP value matching this fixture's 1.87e12 USD) was not touched or altered
+    # while investigating ECOS. If this test ever fails, the World Bank parser regressed.
+    obs, reason = ri.parse_worldbank_observation(
+        WORLDBANK_FIXTURE_NORMAL, indicator_id="ind_worldbank_kr_gdp_current_usd", unit="USD",
+        retrieved_at="2026-09-30T00:00:00+00:00", provenance_id="prov1",
+    )
+    assert reason == "OK"
+    assert obs["value"] == 1870000000000.0
+    assert obs["period"] == "2025"
+    assert obs["status"] == "OFFICIAL_REPORTED"
+
+    # ECOS malformed/undocumented-shape fixtures still fail closed exactly as before — no
+    # guessed alternate schema was introduced.
+    for bad in [{}, {"StatisticSearch": {}}, {"StatisticSearch": {"row": "not a list"}}]:
+        eobs, ereason, _ = ri.parse_ecos_observation(
+            bad, indicator_id="ind_x", retrieved_at="2026-09-30T00:00:00+00:00",
+            provenance_id="prov2",
+        )
+        assert eobs is None
+        assert ereason == "SCHEMA_CHANGED"
+
+
 def test_ecos_temporal_precision_inferred_honestly():
     assert ri._infer_ecos_temporal_precision("20260801") == "DAY"
     assert ri._infer_ecos_temporal_precision("202608") == "MONTH"
