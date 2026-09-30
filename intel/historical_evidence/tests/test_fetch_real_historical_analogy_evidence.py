@@ -234,6 +234,25 @@ def test_gate_log_is_append_only_across_runs():
         log_path.unlink(missing_ok=True)
 
 
+# Regression test for a real live-run finding (GitHub Actions run 36739750117, 2026-09-30):
+# a bare "rural electrification" topic phrase in a title is NOT sufficient historical framing --
+# it wrongly admitted contemporary engineering papers about the general topic (e.g. off-grid
+# rural electrification in South Asia today) that have nothing to do with the actual historical
+# US 1930s-1950s REA analogy. See the HISTORICAL_FRAMING_KEYWORDS comment for the full story.
+def test_bare_rural_electrification_topic_phrase_is_not_historical_framing():
+    contemporary_titles = [
+        "Off-Grid Rural Electrification Experiences from South Asia",
+        "A Unique Concept of Limited Grid Capacity and Voltage-Frequency Control of an "
+        "RES Based Rural Electrification System",
+        "Reducing the Cost of Grid Extension for Rural Electrification",
+        "Rural electrification: Grid extension, decentralization, and financing",
+    ]
+    for title in contemporary_titles:
+        result = mod.admission_gate_check({"document_id": "x", "title": title, "abstract_excerpt": None})
+        assert result["verdict"] == "REAL_HISTORICAL_EVIDENCE_REJECTED", title
+        assert result["reason_code"] == "NOT_HISTORICAL_FRAMING", title
+
+
 def test_never_writes_documents_json_directly():
     src = (HIST_EVIDENCE_DIR / "fetch_real_historical_analogy_evidence.py").read_text(encoding="utf-8")
     # This module must never itself hold a documents.json path constant or write to one: the
