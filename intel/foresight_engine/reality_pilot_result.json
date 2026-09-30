@@ -1,14 +1,14 @@
 {
-  "attempted_at": "2026-09-30T04:47:51.343749+00:00",
+  "attempted_at": "2026-09-30T04:56:28.348824+00:00",
   "sandbox_network_status": "BLOCKED - confirmed by direct HTTPS attempt in this session (all sources returned proxy tunnel 403 before reaching host)",
   "sources_attempted": 2,
-  "sources_succeeded": 0,
+  "sources_succeeded": 2,
   "results": [
     {
       "source_id": "worldbank_gdp_kr",
       "organization": "World Bank",
       "url": "https://api.worldbank.org/v2/country/kr/indicator/NY.GDP.MKTP.CD?format=json&per_page=5",
-      "attempted_at": "2026-09-30T04:47:51.343749+00:00",
+      "attempted_at": "2026-09-30T04:56:28.348824+00:00",
       "indicator": {
         "indicator_id": "ind_worldbank_kr_gdp_current_usd",
         "canonical_name": "KR_GDP_CURRENT_USD",
@@ -39,7 +39,7 @@
         "price_basis": "UNKNOWN",
         "revision_status": "UNKNOWN",
         "update_frequency": null,
-        "retrieved_at": "2026-09-30T04:47:51.343749+00:00",
+        "retrieved_at": "2026-09-30T04:56:28.348824+00:00",
         "verification_status": "UNKNOWN",
         "notes": null,
         "value_type": "OTHER",
@@ -47,19 +47,18 @@
         "proxy_kind": null
       },
       "fetch_result": {
-        "ok": false,
-        "status_code": null,
-        "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"
+        "ok": true,
+        "status_code": 200,
+        "resolved_url": "https://api.worldbank.org/v2/country/kr/indicator/NY.GDP.MKTP.CD?format=json&per_page=5"
       },
-      "fetch_succeeded": false,
-      "observation_created": null,
-      "observation_rejection_demo": "observation rejected: OFFICIAL_REPORTED observation requires provenance_id (no source = no observation)"
+      "fetch_succeeded": true,
+      "observation_created": "PARSING_NOT_YET_EXERCISED_LIVE"
     },
     {
       "source_id": "ecos_bok_sample",
       "organization": "Bank of Korea (ECOS)",
       "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/5/722Y001",
-      "attempted_at": "2026-09-30T04:47:51.343749+00:00",
+      "attempted_at": "2026-09-30T04:56:28.348824+00:00",
       "indicator": {
         "indicator_id": "ind_ecos_kr_base_rate",
         "canonical_name": "KR_BOK_BASE_RATE",
@@ -90,7 +89,7 @@
         "price_basis": "UNKNOWN",
         "revision_status": "UNKNOWN",
         "update_frequency": null,
-        "retrieved_at": "2026-09-30T04:47:51.343749+00:00",
+        "retrieved_at": "2026-09-30T04:56:28.348824+00:00",
         "verification_status": "UNKNOWN",
         "notes": null,
         "value_type": "OTHER",
@@ -98,13 +97,12 @@
         "proxy_kind": null
       },
       "fetch_result": {
-        "ok": false,
-        "status_code": null,
-        "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"
+        "ok": true,
+        "status_code": 200,
+        "resolved_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/5/722Y001"
       },
-      "fetch_succeeded": false,
-      "observation_created": null,
-      "observation_rejection_demo": "observation rejected: OFFICIAL_REPORTED observation requires provenance_id (no source = no observation)"
+      "fetch_succeeded": true,
+      "observation_created": "PARSING_NOT_YET_EXERCISED_LIVE"
     }
   ],
   "next_real_verification": "GitHub Actions cron run of reality_shadow job in .github/workflows/daily.yml (real network, no sandbox proxy)"
