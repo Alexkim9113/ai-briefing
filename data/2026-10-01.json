@@ -1,6 +1,6 @@
 {
  "date": "2026-10-01",
- "generated_at": "2026-10-01T01:15+09:00",
+ "generated_at": "2026-10-01T01:20+09:00",
  "items": [
   {
    "id": "0ef1c3d80bfd2916",
@@ -1576,6 +1576,34 @@
    }
   },
   {
+   "id": "ecc087a7b297e631",
+   "title": "China's AI industry closes ranks as Deepseek ships open-source software for Huawei's Ascend chips",
+   "link": "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/",
+   "source": "The Decoder",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T14:37:24+00:00",
+   "summary": "Deepseek and Huawei have built open-source programming tools for Huawei's Ascend AI chips.",
+   "detail": "Deepseek and Huawei have built open-source programming tools for Huawei's Ascend AI chips.\nThe article China's AI industry closes ranks as Deepseek ships open-source software for Huawei's Ascend chips appeared first on The Decoder .",
+   "thumb": "",
+   "title_ko": "딥시크(Deepseek), 화웨이 ‘아센드(Ascend)’ 칩용 오픈소스 소프트웨어 출시…중국 AI 업계, 화웨이를 지지하며 단결",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Deepseek과 화웨이는 화웨이의 Ascend AI 칩을 위한 오픈소스 프로그래밍 도구를 개발했다.",
+   "detail_ko": "Deepseek과 화웨이는 화웨이의 Ascend AI 칩을 위한 오픈소스 프로그래밍 도구를 개발했다.\n\"Deepseek, 화웨이 Ascend 칩용 오픈소스 소프트웨어 출시…중국 AI 업계, 화웨이를 지지하며 결속\"이라는 기사는 The Decoder에 처음 게재되었습니다.",
+   "mx": {
+    "b": "딥시크와 화웨이가 협력하여 화웨이의 어센드 AI 칩을 위한 오픈소스 프로그래밍 도구를 출시했다. 이는 중국의 AI 산업이 자체 생태계를 강화하고 공급망 자립을 가속화하는 행보를 보여준다.",
+    "p": "미국의 대중국 반도체 규제 속에서 중국 토종 AI 모델 개발사와 팹리스가 밀착하여 하드웨어와 소프트웨어의 국산화 공조를 굳히고 있음을 시사한다.",
+    "t": [
+     "딥시크",
+     "화웨이",
+     "어센드",
+     "오픈소스"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "392274172e3a51bc",
    "title": "FTC opens probe of Anthropic, OpenAI and other super intelligence models",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWm9iakR6MEx5WHEwZmpReHA5SFdfUzMwWUNfUktNOTVPX0kzS1dleFV2azY4LXVmTTBUdE5Vay1iNy1HWjdsYzI4dHVZYzE2T2FBemZSQjJqUXU0aU9Demw0MG5zUi1GMlZCTkZuOGpsQ1I5aDlVZTFXTUFIUmk5cnU4NDJyVjAyT3ZCcnhFeGFYRW1VQjJyUGRwT2Y4UXM0MDRtSENEMkt2bGpXTHNTX0kzaFE?oc=5",
@@ -2105,6 +2133,18 @@
     ],
     "v": 1
    }
+  },
+  {
+   "id": "6a695403d5fbc4fa",
+   "title": "[AI그래픽] 2026 아이치·나고야 아시안게임 한국 '메달 리스트' 집계 (9월30일)",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ibEN2c3BTTVk0Z0V5RDhDYmxqaVpuNTB5UW5nNldHc0JOYVNuN2dXc1pIVHZHdUVSVkE1bFBSZFc4YzBzdVFIeDd4UHpOWTRrRE9mRkV0ZDA2TGhM?oc=5",
+   "source": "newspim.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-09-30T13:50:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "af7b74235bff1878",
@@ -2911,6 +2951,33 @@
      "인공지능",
      "윤리",
      "청소년"
+    ],
+    "v": 1
+   }
+  },
+  {
+   "id": "e9e2f04b89603d2c",
+   "title": "New benchmark tests AI memory for household robots",
+   "link": "https://techxplore.com/news/2026-09-benchmark-ai-memory-household-robots.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-09-30T12:20:09-04:00",
+   "summary": "In-home assistive robots could clean and organize a home while the owner is away, but without enhanced memory capabilities, they could cause more problems than they solve.",
+   "thumb": "",
+   "title_ko": "가정용 로봇의 AI 메모리 성능 평가하는 새로운 벤치마크 테스트",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "가정용 보조 로봇은 집주인이 자리를 비운 동안 집을 청소하고 정리할 수는 있지만, 향상된 기억 기능이 없다면 문제를 해결하기보다 오히려 더 많은 문제를 일으킬 수도 있다.",
+   "detail_ko": "가정용 보조 로봇은 주인이 집을 비운 사이에 청소를 하고 정리를 할 수는 있지만, 향상된 기억 기능이 없다면 문제를 해결하기보다 오히려 더 많은 문제를 야기할 수도 있다.",
+   "mx": {
+    "b": "가정용 보조 로봇의 장기 기억 능력을 평가하기 위한 새로운 벤치마크가 도입되었다. 향상된 기억력은 청소나 물건 정리 등 일상적인 집안일 수행 시 로봇의 오류를 줄이는 핵심 요소로 작용한다.",
+    "p": "가정용 로봇의 상용화를 위해 단순 물리적 제어뿐만 아니라 장기 기억과 맥락 이해 능력을 검증하는 표준화된 평가 체계가 중요해지고 있다.",
+    "t": [
+     "로봇",
+     "벤치마크",
+     "기억력",
+     "홈로봇"
     ],
     "v": 1
    }
@@ -6925,6 +6992,28 @@
    }
   },
   {
+   "id": "067506091cc8a31b",
+   "title": "Secret watermark labels proteins as ‘made by AI’",
+   "link": "https://www.nature.com/articles/d41586-026-03033-y",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-30T00:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능이 생성한 단백질에 은닉형 워터마크를 부착하여 인공 제작 여부를 식별할 수 있는 기술이 개발되었다.",
+    "p": "생성형 AI로 만들어진 바이오 물질의 무분별한 유포와 악용을 방지하기 위해 디지털 워터마킹 기술이 단백질 연구 분야까지 확장되고 있다.",
+    "t": [
+     "단백질",
+     "워터마크",
+     "생성형AI",
+     "바이오"
+    ],
+    "v": 1
+   }
+  },
+  {
    "id": "57c495282ccc9acb",
    "title": "Work with AI, don’t fear it",
    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PS0FCNmtsaHhFNVdIN05TY2dyNlQ5Umw0NDNfTUdfVEtDQlhKUERpTk40Q2Z3OTY4V0R2ZGlkMk1rYkhuMDU2WHNER2EwWEZRUHRSTnNITjVHYXZLcnZJUFE0VmliNGxHNW1tb0dMU20xQ1Q3eW0zag?oc=5",
@@ -8304,33 +8393,6 @@
    }
   },
   {
-   "id": "bf0fe8cc388a3447",
-   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
-   "link": "https://openai.com/index/basis-tax-workbook-with-astra",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T00:00:00+00:00",
-   "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
-   "thumb": "",
-   "title_ko": "Basis, GPT-6 Astra를 활용해 세무 워크북 작업을 기존보다 2배 빠르게 완료",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "GPT-6 Astra는 GPT-5.6 Sol보다 50개 탭으로 구성된 세무 워크북 작업을 두 배 더 빠르게 완료했으며, 사용자 의도를 더 잘 이해하는 덕분에 Basis는 실제 사용에 대해 더 큰 확신을 갖게 되었습니다.",
-   "detail_ko": "GPT-6 Astra는 GPT-5.6 Sol보다 50개 탭으로 구성된 세무 워크북 작업을 두 배 더 빠르게 완료했으며, 사용자 의도를 더 잘 이해함으로써 Basis는 실제 사용에 대한 확신을 갖게 되었습니다.",
-   "mx": {
-    "b": "GPT-6 Astra가 50개 탭으로 구성된 세무 워크북 작업을 이전 모델인 GPT-5.6 Sol보다 두 배 빠른 속도로 완료했다.",
-    "p": "복잡한 사용자 의도 파악 능력이 향상되면서 대규모 실무 문서 처리 작업에서 AI의 실효성이 크게 높아지고 있다.",
-    "t": [
-     "OpenAI",
-     "GPT6Astra",
-     "세무업무",
-     "성능향상"
-    ],
-    "v": 1
-   }
-  },
-  {
    "id": "68821b181460df0c",
    "title": "ConTP reshapes transporter functional space to resolve substrate specificity beyond evolutionary proximity",
    "link": "https://www.nature.com/articles/s42003-026-11044-8",
@@ -8693,21 +8755,6 @@
    "detail_ko": "Nature Machine Intelligence, 온라인 출판: 2026년 9월 10일; doi:10.1038/s42256-026-01298-6 Shi et al.\n공동 추론 및 과학 도구 실행을 위해 두 개의 경량 대형 언어 모델을 통합하여 재료 연구를 위한 이중 아키텍처 접근 방식을 보여줍니다."
   },
   {
-   "id": "efc98770f5c26215",
-   "title": "Benefit of Linked-Color Imaging in Artificial Intelligence-Assisted Diagnosis of Early Gastric Cancer: A Pilot Study With Propensity Score Adjustment.",
-   "link": "https://europepmc.org/article/MED/42524027",
-   "source": "Europe PMC · 의료",
-   "field": "의료",
-   "category": "papers",
-   "published": "2026-07-28T00:00:00+00:00",
-   "summary": "Background and aims Artificial intelligence (AI)-assisted endoscopy represents a promising approach for lesion detection, yet frequent false-positive detections impair clinical…",
-   "detail": "Background and aims Artificial intelligence (AI)-assisted endoscopy represents a promising approach for lesion detection, yet frequent false-positive detections impair clinical utility by disrupting examinations and diminishing physician confidence.",
-   "thumb": "",
-   "summary_ko": "배경 및 목표 인공지능(AI) 보조 내시경은 병변 탐지를 위한 유망한 접근 방식을 나타내지만, 빈번한 위양성 탐지는 임상적 손상을 초래합니다.",
-   "tr": "g",
-   "detail_ko": "배경 및 목표 인공지능(AI) 보조 내시경은 병변 탐지를 위한 유망한 접근 방식이지만 빈번한 위양성 탐지는 검사를 방해하고 의사의 신뢰도를 떨어뜨려 임상적 유용성을 손상시킵니다."
-  },
-  {
    "id": "9f1fbb057d1b90b9",
    "title": "한-영, 인공지능 분야 협력 강화 방안 논의",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187821",
@@ -8906,13 +8953,13 @@
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 0
+   "fetched": 30
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -8936,7 +8983,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -8954,13 +9001,13 @@
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 53
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 47
+   "fetched": 48
   },
   {
    "name": "Sequoia Capital",
@@ -9025,7 +9072,7 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 6,
+   "count": 3,
    "fetched": 10
   },
   {
@@ -9056,7 +9103,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 85
+   "fetched": 86
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -9068,25 +9115,25 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 74
+   "fetched": 77
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 60
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
@@ -9205,8 +9252,8 @@
   {
    "name": "npj Digital Medicine · 의료",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 3,
+   "fetched": 8
   },
   {
    "name": "경향신문",
@@ -9224,7 +9271,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 63
+   "fetched": 64
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -9248,7 +9295,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 32
+   "fetched": 31
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
@@ -9272,13 +9319,13 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 63
+   "fetched": 62
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 28
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
@@ -9290,7 +9337,7 @@
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "국민일보",
@@ -9404,7 +9451,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 58
+   "fetched": 60
   },
   {
    "name": "아주경제",
@@ -9452,13 +9499,13 @@
    "name": "주제: AI 철학 · AI 철학",
    "ok": true,
    "count": 3,
-   "fetched": 60
+   "fetched": 59
   },
   {
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 36
+   "fetched": 34
   },
   {
    "name": "주제: 경제 · 경제",
@@ -9488,7 +9535,7 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 54
   },
   {
    "name": "주제: 미디어 · 미디어",
@@ -9524,7 +9571,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 30
+   "fetched": 31
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -9536,19 +9583,19 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 28
   },
   {
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 23
+   "fetched": 24
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -9572,7 +9619,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 367
+   "fetched": 361
   },
   {
    "name": "프레시안",

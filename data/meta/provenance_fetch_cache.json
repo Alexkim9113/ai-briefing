@@ -1758,5 +1758,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-09-30T16:16:05.983428+00:00"
+ },
+ "88a22be3356d89140c20715542d611b0eec955c5b5f77cdc55fb231cfcf66b21": {
+  "url": "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-09-30T16:21:20.461562+00:00"
+ },
+ "31e55215cc9ab23c78b3156e2332be76cc09de39b7a8e099af805beb7dd84c8f": {
+  "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ibEN2c3BTTVk0Z0V5RDhDYmxqaVpuNTB5UW5nNldHc0JOYVNuN2dXc1pIVHZHdUVSVkE1bFBSZFc4YzBzdVFIeDd4UHpOWTRrRE9mRkV0ZDA2TGhM?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:20.771900+00:00"
+ },
+ "7fb301401bd04a21e164b4155da24e3e86dabf936b43fa96308384c50f0fc3a3": {
+  "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUTE3TzZ0d0lFaUNqcVB5UHR2cWx0c2hIRVV6OWFxMFhLYW94WXNmbmVJMDBONHVkRnlVcDFXWk5OTjhXTWdpcVU2Vl9XS3d6X1NwUXdPSlBrWkVTNTRpd2VBS1FYd1FrUDlEbllObF91NzlnSjlwREd3bUtJYVo1eVlyTTdRRDBubjlxVXo2S0Y4RkRRRE1PWW16MmIxVzZwTDM3cC1sV2FzdGsxWjBldHNZSnBPMl9mX3J3RVNha2xRcXNNd2NJd3VwRUE4czJEU2VoNmR6d2NlZVV20gHcAUFVX3lxTE9RMTdPNnR3SUVpQ2pxUHlQdHZxbHRzaEhFVXo5YXEwWEthb3hZc2ZuZUkwME40dWRGeVVwMVdaTk5OOFdNZ2lxVTZWX1dLd3pfU3BRd09KUGtaRVM1NGl3ZUFLUVh3UWtQOURuWU5sX3U3OWdKOXBER3dtS0lhWjV5WXJNN1FEMG5uOXFVejZLRjhGRFFETU9ZbXoyYjFXNnBMMzdwLWxXYXN0azFaMGV0c1lKcE8yX2ZfcndFU2FrbFFxc013Y0l3dXBFQThzMkRTZWg2ZHp3Y2VlVXY?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:20.928997+00:00"
+ },
+ "61bc7fc3163ea2d302ad1bb8a67fe6a1d873e6a06decc68f6dd6c925ab6610e3": {
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOU1dhX0JxTXU4NmI3ajE3S3hSMG54M0d2ek4yN1o0TGdILTBNVmtTQnR2VmxlM28zUVM4aFo2VVpHdVYyM0stb1VfWkhwX09YdEFDejc4ZlVMa2pOQV96QlRueEYzZ3o4dThsZF9teURvWXRKTlpUalhENUQ3MHN2TExZRQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:21.144072+00:00"
+ },
+ "06385186503c51da96f0eeccc98c74a3244d0476382cd8aa47282ee4599a5c50": {
+  "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBpVFNSWFFXVk5xMFpLajBmVmVvR0QxLUF3MFFPc29tc3NoS1BIWWtzcElneG1fWEJpLTdsNmhhZkhoUkx0VGRrRHpVejkwZXNHckdFMWxIOVJ3SnU0?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:21.382792+00:00"
+ },
+ "a2fd75398753e4fb9c3f6e6cffed328f3c9c7622126ead018a7c4c2ff8af0cfd": {
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONUpUZGllbjRiQUhRT2tfUmM4ZkNsdXpZa2VGYXU1WFI4RGpjakZJYU5DZjJGX1dUaFY0WjBFTS1LdkxIYzFNamQ2TjIzS2JHbERTcUtUNWtmeFEyMFcxbF9iSENsOGdCRDh2dDJwN1c4Z3F2QjdteXduOEJrWVJFempDQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:21.541367+00:00"
+ },
+ "453e4ec8be47bc7cc6d536229df016f691e21cc52036bd5cf47ab833434d9108": {
+  "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1yRHR4blh2bFNWRlRINmRuTzFxQ3hTNFZWYjV5NU0zSGlBSnU0RDdHQWF1SDhobW5pRG1XdF82dTNmYUJkMjd5NjZNWWJtTXFLLTdITmkwOGpMM0JkUWNR0gFfQVVfeXFMTXJEdHhuWHZsU1ZGVEg2ZG5PMXFDeFM0VlZiNXk1TTNIaUFKdTREN0dBYXVIOGhtbmlEbVd0XzZ1M2ZhQmQyN3k2Nk1ZYm1NcUstN0hOaTA4akwzQmRRY1E?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:21.749072+00:00"
+ },
+ "31b89cbf7a96ee4b398cf61cdc6d92a94d1e51c5506abf4f66ca752b145242f8": {
+  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5HNEFzdjBpMmlvVG12MUtWbmRqYkE0RWMtWHEtSWI4cTJzbUt0d0MtdXJ3dC1PTFdEa0M5S1RZMWxXNWFKN3FmdXMtdG1iUjZvOWVoeXQycHYtNDZUWmw0Mm9EcHY1QXlIWjllNE1SblptX28?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:21.934069+00:00"
+ },
+ "562f038f897191034334d4d55377c3ca3fdf9ca40c48879363ebad0b49ca71df": {
+  "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4zVEtHeHU3WnlEOU95bG5wLUVUTExTTGdiQ3UteXJJVk5hSi1fSi1wdDVfVDc2SWU3bFlqYlNMNHJ3bGMtdktJMndqSF9tT29NLXBXVk55SHlZaF93c3YwSWhvZGdqY1Y3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:22.102788+00:00"
+ },
+ "271255ae35741233dce0af1f81ab10cb611113083f524430abfb4abc0f113cb6": {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxY2JmR3dBZmxVUlZKeWEyZm5oNktIRnpOQnludlMzbVdUSnY3UE9rWWVaOHV3QkZaNzNDdGh1MjhaT1VManNWMVRYY3RrVzYwLXRIZkdKSUhRVGpBdkNNbDdJSF9EYWttM1HSAWpBVV95cUxQcWNiZkd3QWZsVVJWSnlhMmZuaDZLSEZ6TkJ5bnZTM21XVEp2N1BPa1llWjh1d0JGWjczQ3RodTI4Wk9VTGpzVjFUWGN0a1c2MC10SGZHSklIUVRqQXZDTWw3SUhfRGFrbTNR?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-09-30T16:21:22.302952+00:00"
  }
 }
