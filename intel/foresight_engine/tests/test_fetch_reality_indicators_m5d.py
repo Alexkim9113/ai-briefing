@@ -88,6 +88,8 @@ def test_run_pilot_routes_all_worldbank_sources_through_worldbank_parser():
             return {"ok": True, "data": WORLDBANK_SAMPLE_RD}
         if "NY.GDP.MKTP.CD" in url:
             return {"ok": True, "data": [{"page": 1}, [{"date": "2023", "value": 1.7e12}]]}
+        if "SL.UEM.TOTL.ZS" in url:
+            return {"ok": True, "data": WORLDBANK_SAMPLE_UNEMPLOYMENT}
         return {"ok": False, "error": "not mocked in this test: ECOS path untouched by M.5D"}
 
     orig_fetcher = fri.real_json_fetcher
@@ -98,10 +100,43 @@ def test_run_pilot_routes_all_worldbank_sources_through_worldbank_parser():
         fri.real_json_fetcher = orig_fetcher
 
     worldbank_results = [r for r in summary["results"] if r["source_id"].startswith("worldbank_")]
-    assert len(worldbank_results) == 3
+    assert len(worldbank_results) == 4
     for r in worldbank_results:
         assert r["fetch_succeeded"] is True
         assert r["observation_created"] is not None, r["source_id"]
+
+
+WORLDBANK_SAMPLE_UNEMPLOYMENT = [
+    {"page": 1, "pages": 1, "per_page": 5, "total": 5},
+    [
+        {"indicator": {"id": "SL.UEM.TOTL.ZS", "value": "Unemployment, total (% of total labor force)"},
+         "country": {"id": "KR", "value": "Korea, Rep."}, "date": "2023", "value": 2.7},
+    ],
+]
+
+
+def test_labor_source_present_and_distinct_from_other_worldbank_series():
+    # PHASE M.5E-4 -- the real World Bank labor-market indicator added for AI_LABOR (mirrors
+    # M.5D's pattern for the energy/science sources above).
+    ids = [s["source_id"] for s in fri.SOURCES]
+    assert "worldbank_unemployment_rate_kr" in ids
+    labor = next(s for s in fri.SOURCES if s["source_id"] == "worldbank_unemployment_rate_kr")
+    gdp = next(s for s in fri.SOURCES if s["source_id"] == "worldbank_gdp_kr")
+    assert "SL.UEM.TOTL.ZS" in labor["url"]
+    assert labor["url"] != gdp["url"]
+    assert labor["domain"] == "LABOR"
+
+
+def test_unemployment_rate_parses_via_generic_worldbank_parser():
+    obs, reason = ri.parse_worldbank_observation(
+        WORLDBANK_SAMPLE_UNEMPLOYMENT, indicator_id="ind_worldbank_kr_unemployment_rate",
+        unit="PERCENT", retrieved_at="2026-09-30T00:00:00+00:00",
+        provenance_id="prov_test_unemployment", geography="COUNTRY",
+    )
+    assert reason == "OK"
+    assert obs is not None
+    assert obs["value"] == 2.7
+    assert obs["period"] == "2023"
 
 
 def main():

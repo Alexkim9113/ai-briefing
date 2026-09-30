@@ -209,6 +209,31 @@ SOURCES = [
         "canonical_url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS?locations=KR",
         "license": "CC-BY-4.0",
     },
+    # PHASE M.5E-4 item — a real World Bank labor-market indicator for Korea, added at Te's
+    # explicit request to give AI_LABOR the same kind of real official-statistic acquisition
+    # attempt AI_ENERGY_INFRA already got (worldbank_electric_power_consumption_kr above). Same
+    # proven no-auth World Bank Indicators API path, different indicator code (unemployment
+    # rate, ILO modeled estimate) -- never a re-fetch of an existing series.
+    {
+        "source_id": "worldbank_unemployment_rate_kr",
+        "organization": "World Bank",
+        "country": "KOR",
+        # World Bank's own documented no-auth endpoint: unemployment, total (% of total labor
+        # force, ILO modeled estimate) -- a real, relevant proxy for AI's effect on the Korean
+        # labor market.
+        "url": "https://api.worldbank.org/v2/country/kr/indicator/SL.UEM.TOTL.ZS?format=json&per_page=5",
+        "indicator_id": "ind_worldbank_kr_unemployment_rate",
+        "canonical_name": "KR_UNEMPLOYMENT_RATE_PCT",
+        "display_name": "Korea Unemployment Rate (% of total labor force, modeled ILO estimate)",
+        "domain": "LABOR",
+        "unit": "PERCENT",
+        "frequency": "ANNUAL",
+        "geography": "COUNTRY",
+        "source_tier": "TIER_1",
+        "dataset_name": "World Development Indicators: SL.UEM.TOTL.ZS",
+        "canonical_url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS?locations=KR",
+        "license": "CC-BY-4.0",
+    },
 ]
 
 
