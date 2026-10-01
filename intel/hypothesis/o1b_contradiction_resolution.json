@@ -1,0 +1,34 @@
+{
+ "phase": "O-1B",
+ "subject": "H1 vs H3 simultaneous SUPPORTED status (AI_ENERGY_INFRA)",
+ "determined_at": "2026-10-01T00:00:00+00:00",
+ "method": "Section 4 semantic/relationship audit (statement wording, independent of evidence) performed BEFORE applying the Evidence Evaluation Contract, then cross-checked against the Section 7-12 sufficiency-rule result.",
+ "h1_statement": "AI data centers are a significant driver of electricity demand growth in some regions",
+ "h3_statement": "Recent demand growth results from multiple factors (manufacturing, electrification, EVs, population, heating/cooling) not primarily AI",
+ "relationship_classification": "COMPLEMENTARY",
+ "relationship_reasoning": "H1 asserts AI is A significant driver (does not claim AI is THE primary or dominant cause). H3 asserts non-AI structural factors are collectively the PRIMARY cause (does not claim AI contributes nothing). 'A significant contributor' and 'not the primary cause' are not logical negations of each other -- a factor can be significant without being primary, and multiple significant factors (AI among them) can coexist with none of them individually being 'primary' in isolation. Read literally, H1 and H3 are COMPLEMENTARY (different levels of explanation, Case B from the task framing), not MUTUALLY_EXCLUSIVE or COMPETING_EXPLANATION.",
+ "case_determination": "MIXED -- primarily CASE B with a real CASE C component",
+ "case_determination_reasoning": [
+  "CASE B component (relationship level): H1 and H3 were never a genuine logical contradiction. Their statements operate at different levels -- H1 at the level of 'is AI A driver' and H3 at the level of 'are non-AI factors THE primary cause'. Both can be true simultaneously without contradiction, and this phase now makes that relationship EXPLICIT (relationship_classification=COMPLEMENTARY above) rather than leaving it implicit, which is the core ask of Case B.",
+  "CASE C component (evidence-quality level): separately, the O-1 model's classify_status() count-based rule WAS quality-blind, and this phase's real evidence-evaluation run (see evaluate_hypothesis_sufficiency() output) shows H3's 4 supporting_evidence references do not resolve to any evaluable Claim object in claims.json at all (they are legacy o0/o1 acquisition-result ids, e.g. 'o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES', that were never turned into Claim records) -- so H3's SUPPORTED status rested on SOURCE_TIER=UNKNOWN, EVIDENCE_DIRECTNESS=UNKNOWN evidence across the board, failing the SOURCE_QUALITY_CHECKED_GUARD and MINIMUM_DIRECTNESS_GUARD. H3 is downgraded to PARTIALLY_SUPPORTED on quality grounds alone, independent of the H1/H3 relationship question. H1, by contrast, has 1 of its 2 supporting references resolve to a real Claim (the LBNL claim) carrying SOURCE_TIER=PRIMARY_RESEARCH and ATTRIBUTION_STRENGTH=AI_PARTIAL, and passes every guard -- H1 remains SUPPORTED on its own evidence merits, not merely by count."
+ ],
+ "resulting_status_after_o1b": {
+  "H1": "SUPPORTED (unchanged; quality-reviewed, guards passed)",
+  "H3": "PARTIALLY_SUPPORTED (changed from SUPPORTED; failed SOURCE_QUALITY_CHECKED_GUARD and MINIMUM_DIRECTNESS_GUARD because its 4 supporting_evidence references do not resolve to evaluable Claim records)"
+ },
+ "conclusion": "The apparent H1/H3 contradiction dissolves on two independent grounds: (1) read literally, the two statements were never mutually exclusive -- they are COMPLEMENTARY claims at different explanatory levels, and this file now records that relationship explicitly in the canonical record; (2) even setting the relationship question aside, H3's SUPPORTED status was itself an artifact of classify_status()'s quality-blindness combined with a provenance gap (its evidence ids were never resolved into real Claim records), and is corrected to PARTIALLY_SUPPORTED by the new Evidence Evaluation Contract. Neither H1 nor H3's corrected status should be read as proving a specific AI-vs-non-AI percentage split of demand growth -- that split is not measured anywhere in this corpus (see uncertainty update) -- only that AI is evidenced as A significant (not necessarily dominant) driver, while the case for non-AI structural factors being collectively primary is currently under-evidenced relative to its SUPPORTED label, now corrected.",
+ "other_pairs_checked": {
+  "H1_H2": {
+   "classification": "NESTED",
+   "reasoning": "H2 is a meta-hypothesis about whether AI's contribution CAN currently be isolated from the data at all. H1's claim ('AI is a significant driver') and H2's claim ('this cannot be numerically isolated yet') are not in tension -- H2 describes an epistemic limitation that applies to H1's own evidence base (the IEA/LBNL sources support H1 qualitatively while admitting they cannot quantify AI's specific share, which is exactly H2's claim). H2 is nested inside the same evidence as H1, not competing with it."
+  },
+  "H1_H4": {
+   "classification": "COMPLEMENTARY",
+   "reasoning": "H4 (regional concentration) and H1 (AI is a significant driver) address different dimensions -- WHERE impact concentrates vs WHETHER AI matters at all -- and do not conflict; US/Korea/Ireland concentration evidence is consistent with, not opposed to, AI being a significant driver somewhere."
+  },
+  "H2_H3": {
+   "classification": "INDEPENDENT",
+   "reasoning": "H2 is about measurability/isolation of AI's share; H3 is about whether non-AI factors are collectively primary. Neither statement bears directly on the other's truth value."
+  }
+ }
+}

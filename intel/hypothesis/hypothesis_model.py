@@ -227,3 +227,38 @@ def evaluate_hypothesis_sufficiency(hyp, all_claims, requirements=None):
         "contradicting_evaluation": counter_eval,
         "guard_trail": guard_trail,
     }
+
+
+def apply_quality_reevaluation(hypothesis_id, recommended_status, reason, guard_trail):
+    """O-1B Section 22 -- the ONLY function permitted to write a quality-guard-driven status into
+    hypotheses.json. This is intentionally separate from upsert_hypothesis(): upsert_hypothesis()
+    still recomputes status via the plain count-based classify_status() on every evidence-array
+    append (its existing, unchanged contract -- every current caller and test keeps working
+    exactly as before). A hypothesis whose status this function sets will therefore REVERT to its
+    count-based status the next time upsert_hypothesis() runs on it with a new evidence id --
+    that is a disclosed, real limitation of this additive layer, not a silent inconsistency; it is
+    recorded in quality_reevaluation_history every time this function runs so a reviewer can see
+    the hypothesis's status may need re-applying after any future evidence append.
+
+    `reason` must be one of STATUS_CHANGED / QUALITY_REEVALUATED_NO_STATUS_CHANGE /
+    RELATIONSHIP_RECLASSIFIED (Section 22)."""
+    assert reason in ("STATUS_CHANGED", "QUALITY_REEVALUATED_NO_STATUS_CHANGE", "RELATIONSHIP_RECLASSIFIED"), reason
+    hyps = _load()
+    hyp = hyps.get(hypothesis_id)
+    if hyp is None:
+        raise KeyError(f"no such hypothesis_id in canonical hypotheses.json: {hypothesis_id}")
+    previous_status = hyp["status"]
+    hyp["status"] = recommended_status
+    hyp.setdefault("quality_reevaluation_history", [])
+    hyp["quality_reevaluation_history"].append({
+        "previous_status": previous_status,
+        "new_status": recommended_status,
+        "reason": reason,
+        "guard_trail": guard_trail,
+        "applied_at": datetime.now(timezone.utc).isoformat(),
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)",
+    })
+    hyp["last_updated"] = datetime.now(timezone.utc).isoformat()
+    hyps[hypothesis_id] = hyp
+    _save(hyps)
+    return hyp

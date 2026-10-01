@@ -31,7 +31,48 @@
         "detail": "IEA report names AI as primary driver qualitatively but does not provide a numeric AI-vs-other-workload split"
       }
     ],
-    "last_updated": "2026-10-01T11:40:21.656829+00:00"
+    "last_updated": "2026-10-01T12:06:32.622230+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "SUPPORTED",
+        "new_status": "SUPPORTED",
+        "reason": "QUALITY_REEVALUATED_NO_STATUS_CHANGE",
+        "guard_trail": [
+          {
+            "guard": "DERIVATIVE_EVIDENCE_GUARD",
+            "result": "PASSED",
+            "detail": "2 independent origin(s) among 2 items"
+          },
+          {
+            "guard": "INDUSTRY_SELF_REPORT_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "MINIMUM_DIRECTNESS_GUARD",
+            "result": "PASSED",
+            "detail": "directness values present: ['PARTIAL', 'UNKNOWN']"
+          },
+          {
+            "guard": "FORECAST_GUARD",
+            "result": "PASSED",
+            "detail": "temporal types present: ['MIXED', 'UNKNOWN']; requires_current_state=True"
+          },
+          {
+            "guard": "AI_ATTRIBUTION_GUARD",
+            "result": "PASSED",
+            "detail": "attribution strengths present: ['AI_PARTIAL', 'UNKNOWN']; requires_ai_attribution=True"
+          }
+        ],
+        "applied_at": "2026-10-01T12:06:32.622201+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
+      }
+    ]
   },
   "hyp_o0_h2_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h2_ai_energy_infra",
@@ -52,7 +93,48 @@
         "detail": "primary-tier source (IEA) stops short of a quantitative AI-only breakdown"
       }
     ],
-    "last_updated": "2026-10-01T11:40:21.658136+00:00"
+    "last_updated": "2026-10-01T12:06:32.623293+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "SUPPORTED",
+        "new_status": "SUPPORTED",
+        "reason": "QUALITY_REEVALUATED_NO_STATUS_CHANGE",
+        "guard_trail": [
+          {
+            "guard": "DERIVATIVE_EVIDENCE_GUARD",
+            "result": "PASSED",
+            "detail": "2 independent origin(s) among 2 items"
+          },
+          {
+            "guard": "INDUSTRY_SELF_REPORT_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "MINIMUM_DIRECTNESS_GUARD",
+            "result": "PASSED",
+            "detail": "directness values present: ['PARTIAL', 'UNKNOWN']"
+          },
+          {
+            "guard": "FORECAST_GUARD",
+            "result": "PASSED",
+            "detail": "temporal types present: ['MIXED', 'UNKNOWN']; requires_current_state=True"
+          },
+          {
+            "guard": "AI_ATTRIBUTION_GUARD",
+            "result": "PASSED",
+            "detail": "attribution strengths present: ['AI_PARTIAL', 'UNKNOWN']; requires_ai_attribution=False"
+          }
+        ],
+        "applied_at": "2026-10-01T12:06:32.623285+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
+      }
+    ]
   },
   "hyp_o0_h3_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h3_ai_energy_infra",
@@ -67,7 +149,7 @@
       "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
     ],
     "contradicting_evidence": [],
-    "status": "SUPPORTED",
+    "status": "PARTIALLY_SUPPORTED",
     "status_change_rationale": "GridLab attributes PJM demand growth to 'data center additions and electrification' jointly (partial support for multi-factor view) but direct searches for manufacturing/EV/population/weather drivers were SEARCH_NOT_RUN this session (see o0_live_counterevidence_supplement.json) -- insufficient to move beyond INSUFFICIENT_EVIDENCE.",
     "uncertainty": [
       {
@@ -75,7 +157,48 @@
         "detail": "6 of 10 counterevidence directions not yet searched"
       }
     ],
-    "last_updated": "2026-10-01T11:40:21.660194+00:00"
+    "last_updated": "2026-10-01T12:06:32.624155+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "SUPPORTED",
+        "new_status": "PARTIALLY_SUPPORTED",
+        "reason": "STATUS_CHANGED",
+        "guard_trail": [
+          {
+            "guard": "DERIVATIVE_EVIDENCE_GUARD",
+            "result": "PASSED",
+            "detail": "4 independent origin(s) among 4 items"
+          },
+          {
+            "guard": "INDUSTRY_SELF_REPORT_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['UNKNOWN']"
+          },
+          {
+            "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+            "result": "FAILED",
+            "detail": "every supporting item has UNKNOWN source tier"
+          },
+          {
+            "guard": "MINIMUM_DIRECTNESS_GUARD",
+            "result": "FAILED",
+            "detail": "directness values present: ['UNKNOWN']"
+          },
+          {
+            "guard": "FORECAST_GUARD",
+            "result": "PASSED",
+            "detail": "temporal types present: ['UNKNOWN']; requires_current_state=True"
+          },
+          {
+            "guard": "AI_ATTRIBUTION_GUARD",
+            "result": "PASSED",
+            "detail": "attribution strengths present: ['UNKNOWN']; requires_ai_attribution=False"
+          }
+        ],
+        "applied_at": "2026-10-01T12:06:32.624147+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
+      }
+    ]
   },
   "hyp_o0_h4_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h4_ai_energy_infra",
@@ -90,7 +213,7 @@
       "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
     ],
     "contradicting_evidence": [],
-    "status": "SUPPORTED",
+    "status": "PARTIALLY_SUPPORTED",
     "status_change_rationale": "IEA: US holds 45% of 2024 global data center electricity use and 'by far the largest share' of projected growth; GridLab's concrete cost/bottleneck evidence is specific to the PJM region, not uniform across the US -- consistent with regional concentration, though cross-region comparison data (ERCOT/CAISO) was not fetched this run.",
     "uncertainty": [
       {
@@ -98,7 +221,48 @@
         "detail": "ERCOT/CAISO/other ISO data not fetched this run"
       }
     ],
-    "last_updated": "2026-10-01T11:40:21.661634+00:00"
+    "last_updated": "2026-10-01T12:06:32.624974+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "SUPPORTED",
+        "new_status": "PARTIALLY_SUPPORTED",
+        "reason": "STATUS_CHANGED",
+        "guard_trail": [
+          {
+            "guard": "DERIVATIVE_EVIDENCE_GUARD",
+            "result": "PASSED",
+            "detail": "4 independent origin(s) among 4 items"
+          },
+          {
+            "guard": "INDUSTRY_SELF_REPORT_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'UNKNOWN']"
+          },
+          {
+            "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'UNKNOWN']"
+          },
+          {
+            "guard": "MINIMUM_DIRECTNESS_GUARD",
+            "result": "FAILED",
+            "detail": "directness values present: ['INDIRECT', 'UNKNOWN']"
+          },
+          {
+            "guard": "FORECAST_GUARD",
+            "result": "PASSED",
+            "detail": "temporal types present: ['UNKNOWN']; requires_current_state=True"
+          },
+          {
+            "guard": "AI_ATTRIBUTION_GUARD",
+            "result": "FAILED",
+            "detail": "attribution strengths present: ['DATA_CENTER_GENERAL', 'UNKNOWN']; none is AI_DIRECT/AI_PARTIAL"
+          }
+        ],
+        "applied_at": "2026-10-01T12:06:32.624927+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
+      }
+    ]
   },
   "hyp_o0_h5_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h5_ai_energy_infra",
@@ -118,7 +282,18 @@
         "detail": "sources use 'interconnection,' 'generation,' and 'grid component' bottlenecks somewhat interchangeably"
       }
     ],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "last_updated": "2026-10-01T12:07:23.281202+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "CONTESTED",
+        "new_status": "CONTESTED",
+        "reason": "QUALITY_REEVALUATED_NO_STATUS_CHANGE",
+        "guard_trail": [],
+        "applied_at": "2026-10-01T12:06:38.177385+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)",
+        "note": "O-1B discrepancy disclosure: classify_status() recomputed from the stored supporting_evidence/contradicting_evidence arrays actually yields REJECTED (0 supporting, >=1 contradicting), not the canonical stored status -- this predates O-1B and is OUT OF SCOPE for this phase (O-1B only touches the AI_ENERGY_INFRA evidence-evaluation/sufficiency layer for H1/H3-style SUPPORTED cases, not the CONTESTED/WEAKENED/REJECTED boundary). Status left UNCHANGED at its original canonical value; this is disclosed as a residual known gap, not silently corrected or silently left inconsistent."
+      }
+    ]
   },
   "hyp_o0_h6_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h6_ai_energy_infra",
@@ -138,7 +313,18 @@
         "detail": "paper's dataset predates/straddles the generative-AI boom and is not AI-workload-specific"
       }
     ],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "last_updated": "2026-10-01T12:07:23.281246+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "WEAKENED",
+        "new_status": "WEAKENED",
+        "reason": "QUALITY_REEVALUATED_NO_STATUS_CHANGE",
+        "guard_trail": [],
+        "applied_at": "2026-10-01T12:06:38.178868+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)",
+        "note": "O-1B discrepancy disclosure: classify_status() recomputed from the stored supporting_evidence/contradicting_evidence arrays actually yields REJECTED (0 supporting, >=1 contradicting), not the canonical stored status -- this predates O-1B and is OUT OF SCOPE for this phase (O-1B only touches the AI_ENERGY_INFRA evidence-evaluation/sufficiency layer for H1/H3-style SUPPORTED cases, not the CONTESTED/WEAKENED/REJECTED boundary). Status left UNCHANGED at its original canonical value; this is disclosed as a residual known gap, not silently corrected or silently left inconsistent."
+      }
+    ]
   },
   "hyp_o0_h7_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h7_ai_energy_infra",
@@ -159,7 +345,48 @@
         "detail": "did not fetch secondary/news coverage this run to check how often they blur forecast into observed fact"
       }
     ],
-    "last_updated": "2026-10-01T11:40:21.662312+00:00"
+    "last_updated": "2026-10-01T12:06:32.625723+00:00",
+    "quality_reevaluation_history": [
+      {
+        "previous_status": "SUPPORTED",
+        "new_status": "SUPPORTED",
+        "reason": "QUALITY_REEVALUATED_NO_STATUS_CHANGE",
+        "guard_trail": [
+          {
+            "guard": "DERIVATIVE_EVIDENCE_GUARD",
+            "result": "PASSED",
+            "detail": "2 independent origin(s) among 2 items"
+          },
+          {
+            "guard": "INDUSTRY_SELF_REPORT_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+            "result": "PASSED",
+            "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
+          },
+          {
+            "guard": "MINIMUM_DIRECTNESS_GUARD",
+            "result": "PASSED",
+            "detail": "directness values present: ['PARTIAL', 'UNKNOWN']"
+          },
+          {
+            "guard": "FORECAST_GUARD",
+            "result": "PASSED",
+            "detail": "temporal types present: ['MIXED', 'UNKNOWN']; requires_current_state=False"
+          },
+          {
+            "guard": "AI_ATTRIBUTION_GUARD",
+            "result": "PASSED",
+            "detail": "attribution strengths present: ['AI_PARTIAL', 'UNKNOWN']; requires_ai_attribution=False"
+          }
+        ],
+        "applied_at": "2026-10-01T12:06:32.625716+00:00",
+        "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
+      }
+    ]
   },
   "hyp_f5f71f3a181d830c": {
     "hypothesis_id": "hyp_f5f71f3a181d830c",
