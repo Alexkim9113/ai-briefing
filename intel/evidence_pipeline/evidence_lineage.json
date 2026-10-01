@@ -1513,7 +1513,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "2fa01e8819fd9906:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "2fa01e8819fd9906",
@@ -1583,7 +1585,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "309d3a4f83f0a017:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "309d3a4f83f0a017",
@@ -2318,7 +2322,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "499b5712c021b4e7:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "499b5712c021b4e7",
@@ -3539,7 +3545,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "6ba7417936458e58:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "6ba7417936458e58",
@@ -4562,7 +4570,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "8d36a93d57a1921a:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "8d36a93d57a1921a",
@@ -4619,7 +4629,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "905fba6e1f01d1ac:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "905fba6e1f01d1ac",
@@ -6252,7 +6264,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "d3180795a4560ed3:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "d3180795a4560ed3",
@@ -6531,7 +6545,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "dcd4b5a345a64a9b:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "dcd4b5a345a64a9b",
@@ -6621,7 +6637,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "e09f773c670497f3:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "e09f773c670497f3",
@@ -6689,7 +6707,9 @@
    "stopped_at": "CLAIM"
   },
   {
-   "change_ids": [],
+   "change_ids": [
+    "chg_7f1ae8e6b9e33860"
+   ],
    "claim_id": "e1da0f895405134f:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "e1da0f895405134f",
