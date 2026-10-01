@@ -37,9 +37,9 @@
     "STATISTICAL_CONTEXT": {
       "status": "NOT_FOUND",
       "document_id": null,
-      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)",
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597) [M.5E-F update: live run confirmed a real official statistical source (EIA) is reachable -- gap downgraded from SOURCE_GAP to QUERY_GAP, see fetch_pilot_results_m5e_f_run4.json]",
       "title": null,
-      "gap_type": "SOURCE_GAP"
+      "gap_type": "QUERY_GAP"
     },
     "RESEARCH_CONTEXT": {
       "status": "SUPPORTED",
@@ -77,7 +77,7 @@
       "status": "NOT_FOUND",
       "document_id": null,
       "gap_type": "GEOGRAPHIC_GAP",
-      "reason": "documents.json carries no jurisdiction/event_country/affected_region field; only publisher-domain language can be inferred (0/12 topic documents from a .kr-pattern source_id), and Section 31 forbids using publisher language as an event-location proxy -- true geographic evidence is absent from the schema, not merely unsearched"
+      "reason": "[M.5E-F update: intel/geography/geography_model.py now provides a real publisher_country/event_country/jurisdiction/affected_region sidecar schema (0/12 topic documents have a verified publisher_country) -- the measurement capability now exists, but event_country remains honestly 0/601 confirmed corpus-wide, since Section 31 forbids inferring it from publisher_country or language]"
     },
     "UNCERTAINTY": {
       "status": "UNKNOWN",

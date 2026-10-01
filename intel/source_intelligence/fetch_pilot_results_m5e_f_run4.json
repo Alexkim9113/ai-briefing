@@ -1,0 +1,116 @@
+[
+ {
+  "discovery_url": "https://www.kdi.re.kr/research/subjectList",
+  "resolved_url": "https://www.kdi.re.kr/research/subjectList",
+  "source_type": "POLICY_RESEARCH_KR_KDI",
+  "http_status": 200,
+  "fetch_result": "FAILED",
+  "content_status": "FETCH_FAILED",
+  "failure_reason": "EXTRACTION_TOO_SHORT",
+  "classification": "QUERY_FAILURE",
+  "classification_reason": "page reachable (HTTP 200) but trafilatura extracted too little text to count as content -- likely a JS-rendered research list this static fetcher cannot execute"
+ },
+ {
+  "discovery_url": "https://www.keei.re.kr/web_keei/d_results.nsf",
+  "http_status": 404,
+  "fetch_result": "FAILED",
+  "content_status": "FETCH_FAILED",
+  "classification": "SOURCE_FAILURE",
+  "classification_reason": "404 -- the guessed .nsf path does not exist; real path unconfirmed, not retried per no-guessing rule"
+ },
+ {
+  "discovery_url": "https://www.kisdi.re.kr/kisdi/fp/kr/publication/selectResearchList.do",
+  "http_status": 404,
+  "fetch_result": "FAILED",
+  "classification": "SOURCE_FAILURE",
+  "classification_reason": "404 -- guessed path does not exist"
+ },
+ {
+  "discovery_url": "https://www.stepi.re.kr/site/stepiko/report/List.do?cmsCd=CM0012",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "content_status": "FULL_TEXT",
+  "title": "원문다운로드 자료 활용 안내",
+  "text_length": 1618,
+  "quality_flag": "LOW_QUALITY_EXTRACTION",
+  "classification": "NO_RESULT",
+  "classification_reason": "page reachable and real text extracted, but the extracted content is a generic 'how to use downloads' notice, not an actual research report -- real connection, no usable research evidence"
+ },
+ {
+  "discovery_url": "https://kosis.kr/statisticsList/statisticsListIndex.do",
+  "http_status": 404,
+  "fetch_result": "FAILED",
+  "classification": "SOURCE_FAILURE",
+  "classification_reason": "404 -- guessed path does not exist"
+ },
+ {
+  "discovery_url": "https://ecos.bok.or.kr/#/",
+  "http_status": 200,
+  "fetch_result": "FAILED",
+  "failure_reason": "EXTRACTION_TOO_SHORT",
+  "classification": "QUERY_FAILURE",
+  "classification_reason": "reachable but is a JavaScript SPA shell -- static fetch cannot retrieve its data"
+ },
+ {
+  "discovery_url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "content_status": "FULL_TEXT",
+  "title": "World Bank Open Data",
+  "text_length": 334,
+  "quality_flag": "OK",
+  "classification": "REAL_LIVE_CONNECTION",
+  "classification_reason": "real World Bank indicator page reached and real text extracted, but the real data values are rendered client-side -- landing page confirmed reachable, data series not yet extracted"
+ },
+ {
+  "discovery_url": "https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "content_status": "FULL_TEXT",
+  "title": "Data and statistics",
+  "text_length": 1231,
+  "quality_flag": "OK",
+  "classification": "REAL_LIVE_CONNECTION",
+  "classification_reason": "real ILO statistics portal reached and real text extracted (redirected to ilo.org/data-and-statistics)"
+ },
+ {
+  "discovery_url": "https://www.oecd.org/en/data/datasets.html",
+  "http_status": 403,
+  "fetch_result": "FAILED",
+  "content_status": "BLOCKED",
+  "classification": "ACCESS_RESTRICTED",
+  "classification_reason": "HTTP 403 -- OECD blocks this fetcher's User-Agent/pattern"
+ },
+ {
+  "discovery_url": "https://www.eia.gov/electricity/data.php",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "content_status": "FULL_TEXT",
+  "title": "Electricity Data - U.S. Energy Information Administration (EIA)",
+  "text_length": 4992,
+  "primary_candidate_link_count": 2,
+  "quality_flag": "LOW_QUALITY_EXTRACTION",
+  "classification": "REAL_LIVE_CONNECTION",
+  "classification_reason": "real EIA electricity statistics listing page reached with real text and 2 real primary-candidate outbound links -- the strongest real result this run, directly relevant to AI_ENERGY_INFRA STATISTICAL_CONTEXT"
+ },
+ {
+  "discovery_url": "https://www.riss.kr/index.do",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "content_status": "FULL_TEXT",
+  "title": "RISS(리스,학술연구정보서비스)",
+  "text_length": 4759,
+  "primary_candidate_link_count": 4,
+  "quality_flag": "LOW_QUALITY_EXTRACTION",
+  "classification": "REAL_LIVE_CONNECTION",
+  "classification_reason": "real RISS portal reached; actual paper search requires POST/session this pilot does not perform -- landing page only, not yet a specific paper"
+ },
+ {
+  "discovery_url": "https://api.openalex.org/works?search=AI%20energy%20demand&per-page=5",
+  "http_status": 200,
+  "fetch_result": "FAILED",
+  "content_status": "FETCH_FAILED",
+  "classification": "QUERY_FAILURE",
+  "classification_reason": "HTTP 200 with a real JSON body, but this pilot's acquire_content() only parses Content-Type text/html -- a real tooling gap (JSON API responses are never parsed), not a network/source failure"
+ }
+]

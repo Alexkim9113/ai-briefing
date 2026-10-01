@@ -29,14 +29,14 @@
     "gap_id": "gap_ai_energy_infra_statistical_context_003",
     "topic": "AI_ENERGY_INFRA",
     "node": "STATISTICAL_CONTEXT",
-    "gap_type": "SOURCE_GAP",
+    "gap_type": "QUERY_GAP",
     "query_attempt": "see node reason -- this round reused existing pilot results and ran a direct corpus check for the 3 new nodes (POLICY_RESEARCH_CONTEXT, ALTERNATIVE_EXPLANATION, GEOGRAPHIC_CONTEXT); no new live search queries were executed this round",
     "source_attempt": "existing registered source classes for this Evidence Type (query_planner.route_evidence_type_to_source_classes)",
     "access_result": "N/A -- sandbox network blocked this session; no new acquisition attempted",
     "validation_result": "N/A -- no new candidate reached the admission gate for this node this round",
-    "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)",
+    "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597) [M.5E-F update: live run confirmed a real official statistical source (EIA) is reachable -- gap downgraded from SOURCE_GAP to QUERY_GAP, see fetch_pilot_results_m5e_f_run4.json]",
     "remaining_gap": "STATISTICAL_CONTEXT for AI_ENERGY_INFRA has no SUPPORTED real evidence",
-    "next_possible_action": "register the missing source class (e.g. a Korean policy-research-institute or statistical-agency connector) before any search can succeed"
+    "next_possible_action": "execute the registered query-expansion/Evidence-Type query plan against a live connector in a network-enabled run (GitHub Actions) and feed results through the real admission gate"
   },
   {
     "gap_id": "gap_ai_energy_infra_policy_research_context_004",
@@ -99,7 +99,7 @@
     "source_attempt": "existing registered source classes for this Evidence Type (query_planner.route_evidence_type_to_source_classes)",
     "access_result": "N/A -- sandbox network blocked this session; no new acquisition attempted",
     "validation_result": "N/A -- no new candidate reached the admission gate for this node this round",
-    "reason": "documents.json carries no jurisdiction/event_country/affected_region field; only publisher-domain language can be inferred (0/12 topic documents from a .kr-pattern source_id), and Section 31 forbids using publisher language as an event-location proxy -- true geographic evidence is absent from the schema, not merely unsearched",
+    "reason": "[M.5E-F update: intel/geography/geography_model.py now provides a real publisher_country/event_country/jurisdiction/affected_region sidecar schema (0/12 topic documents have a verified publisher_country) -- the measurement capability now exists, but event_country remains honestly 0/601 confirmed corpus-wide, since Section 31 forbids inferring it from publisher_country or language]",
     "remaining_gap": "GEOGRAPHIC_CONTEXT for AI_ENERGY_INFRA has no SUPPORTED real evidence",
     "next_possible_action": "add a jurisdiction/event_country field to the document schema before this can be measured at all"
   },
@@ -159,14 +159,14 @@
     "gap_id": "gap_ai_labor_statistical_context_013",
     "topic": "AI_LABOR",
     "node": "STATISTICAL_CONTEXT",
-    "gap_type": "SOURCE_GAP",
+    "gap_type": "QUERY_GAP",
     "query_attempt": "see node reason -- this round reused existing pilot results and ran a direct corpus check for the 3 new nodes (POLICY_RESEARCH_CONTEXT, ALTERNATIVE_EXPLANATION, GEOGRAPHIC_CONTEXT); no new live search queries were executed this round",
     "source_attempt": "existing registered source classes for this Evidence Type (query_planner.route_evidence_type_to_source_classes)",
     "access_result": "N/A -- sandbox network blocked this session; no new acquisition attempted",
     "validation_result": "N/A -- no new candidate reached the admission gate for this node this round",
-    "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)",
+    "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597) [M.5E-F update: live run confirmed a real official statistical source (ILO) is reachable -- gap downgraded from SOURCE_GAP to QUERY_GAP, see fetch_pilot_results_m5e_f_run4.json]",
     "remaining_gap": "STATISTICAL_CONTEXT for AI_LABOR has no SUPPORTED real evidence",
-    "next_possible_action": "register the missing source class (e.g. a Korean policy-research-institute or statistical-agency connector) before any search can succeed"
+    "next_possible_action": "execute the registered query-expansion/Evidence-Type query plan against a live connector in a network-enabled run (GitHub Actions) and feed results through the real admission gate"
   },
   {
     "gap_id": "gap_ai_labor_research_context_014",
@@ -242,7 +242,7 @@
     "source_attempt": "existing registered source classes for this Evidence Type (query_planner.route_evidence_type_to_source_classes)",
     "access_result": "N/A -- sandbox network blocked this session; no new acquisition attempted",
     "validation_result": "N/A -- no new candidate reached the admission gate for this node this round",
-    "reason": "documents.json carries no jurisdiction/event_country/affected_region field; only publisher-domain language can be inferred (0/11 topic documents from a .kr-pattern source_id), and Section 31 forbids using publisher language as an event-location proxy -- true geographic evidence is absent from the schema, not merely unsearched",
+    "reason": "[M.5E-F update: intel/geography/geography_model.py now provides a real publisher_country/event_country/jurisdiction/affected_region sidecar schema (0/11 topic documents have a verified publisher_country) -- the measurement capability now exists, but event_country remains honestly 0/601 confirmed corpus-wide, since Section 31 forbids inferring it from publisher_country or language]",
     "remaining_gap": "GEOGRAPHIC_CONTEXT for AI_LABOR has no SUPPORTED real evidence",
     "next_possible_action": "add a jurisdiction/event_country field to the document schema before this can be measured at all"
   }
