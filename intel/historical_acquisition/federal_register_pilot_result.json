@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-10-01T06:37:59.789531+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36825239044)",
+  "attempted_at": "2026-10-01T07:30:36.402446+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36830397316)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 5,
@@ -10,11 +10,33 @@
       "source_tier": "TIER_1",
       "gap_type": "MISSING_REGULATORY_HISTORY",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&per_page=5&order=newest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-10-01T06:37:59.789531+00:00",
+      "attempted_at": "2026-10-01T07:30:36.402446+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
       "documents_canonicalized": [
+        {
+          "document_id": "fedreg_2026-20143",
+          "content_hash": "c80e2f66f677d5af",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Rule on Impersonation of Government and Businesses",
+          "abstract_excerpt": "The Federal Trade Commission (\"FTC\" or \"Commission\") proposes to commence a rulemaking proceeding to prevent certain unfair or deceptive acts or practices by search engine, social media, and other digital marketplace platforms that further government and business impersonation scams to defraud consumers. The Commission is soliciting written comment, data, and arguments concerning the need for such rulemaking.",
+          "document_kind": "Proposed Rule",
+          "citation": "91 FR 62347",
+          "agencies": [
+            "Federal Trade Commission"
+          ],
+          "published": "2026-10-01",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+          "provenance_id": "prov_fedreg_2026-20143_2026-10-01T07:30:36.402446+00:00"
+        },
         {
           "document_id": "fedreg_2026-20023",
           "content_hash": "c725bed8ed6a0fa5",
@@ -35,8 +57,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-01T06:37:59.789531+00:00",
-          "provenance_id": "prov_fedreg_2026-20023_2026-10-01T06:37:59.789531+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+          "provenance_id": "prov_fedreg_2026-20023_2026-10-01T07:30:36.402446+00:00"
         },
         {
           "document_id": "fedreg_2026-20005",
@@ -57,8 +79,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-01T06:37:59.789531+00:00",
-          "provenance_id": "prov_fedreg_2026-20005_2026-10-01T06:37:59.789531+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+          "provenance_id": "prov_fedreg_2026-20005_2026-10-01T07:30:36.402446+00:00"
         },
         {
           "document_id": "fedreg_2026-19964",
@@ -80,8 +102,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-01T06:37:59.789531+00:00",
-          "provenance_id": "prov_fedreg_2026-19964_2026-10-01T06:37:59.789531+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+          "provenance_id": "prov_fedreg_2026-19964_2026-10-01T07:30:36.402446+00:00"
         },
         {
           "document_id": "fedreg_2026-19860",
@@ -102,31 +124,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-01T06:37:59.789531+00:00",
-          "provenance_id": "prov_fedreg_2026-19860_2026-10-01T06:37:59.789531+00:00"
-        },
-        {
-          "document_id": "fedreg_2026-19835",
-          "content_hash": "8945cd59248381dc",
-          "document_type": "POLICY",
-          "source_id": "src_federal_register",
-          "source_name": "US Federal Register API",
-          "source_tier": "TIER_1",
-          "source_type": "GOVERNMENT",
-          "title": "Proposed Revision of Information Collection; National Longitudinal Survey of Youth 1979",
-          "abstract_excerpt": "The Department of Labor, as part of its continuing effort to reduce paperwork and respondent burden, conducts a pre-clearance consultation program to provide the general public and Federal agencies with an opportunity to comment on proposed and/or continuing collections of information in accordance with the Paperwork Reduction Act of 1995. This program helps to ensure that requested data can be provided in the desired format, reporting burden (time and financial resources) is minimized, collecti",
-          "document_kind": "Notice",
-          "citation": "91 FR 61458",
-          "agencies": [
-            "Labor Department",
-            "Labor Statistics Bureau"
-          ],
-          "published": "2026-09-29",
-          "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
-          "rights_mode": "LINK_ONLY",
-          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-01T06:37:59.789531+00:00",
-          "provenance_id": "prov_fedreg_2026-19835_2026-10-01T06:37:59.789531+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+          "provenance_id": "prov_fedreg_2026-19860_2026-10-01T07:30:36.402446+00:00"
         }
       ],
       "overall_status": "SUCCESS",
