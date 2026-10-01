@@ -11,6 +11,17 @@
     "general_knowledge_label": "GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE",
     "rule": "General/domain knowledge with no corpus-backed document is labeled GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE, never one of the 4 graded effect-strength labels. Only a real corpus-backed finding may receive a graded label, and POSSIBLE_IMPLICATION must never silently become EXPECTED_OUTCOME."
   },
+  "o1c_classification_vocabulary": {
+    "states": [
+      "EVIDENCE_CONNECTED",
+      "PARTIALLY_CONNECTED",
+      "UNSUPPORTED_ALTERNATIVE",
+      "SEARCH_RUN_NO_CLEAR_EVIDENCE",
+      "SEARCH_NOT_RUN"
+    ],
+    "rule": "This O-1C pass re-evaluates each alternative using the now-canonical Claims introduced this round (claim_a11c5cb4c7c4c2d1, claim_f5842e6162c8fefc, claim_d641fb1790c3ef53) plus whatever evidence_strength_label the O-0 pass already connected. `o1c_classification` is additive -- it never overwrites the original `evidence_strength_label`/`corpus_search_result` fields, which are preserved as-is.",
+    "role_by_hypothesis_note": "Section 22 discipline: the SAME evidence plays a COUNTEREVIDENCE role against an unstated/strawman 'AI is the ONLY cause' hypothesis, but only an ALTERNATIVE-EXPLANATION / co-driver role against H1 ('AI is A significant driver', which does not claim exclusivity) and a CORROBORATING role for H3 ('multiple factors'). `role_by_hypothesis` on each alternative records this distinction explicitly per hypothesis rather than using one blanket role."
+  },
   "alternatives": [
     {
       "explanation_id": "MANUFACTURING_RESHORING",
@@ -34,7 +45,15 @@
         ]
       },
       "evidence_strength_label": "POSSIBLE_IMPLICATION",
-      "evidence_strength_rationale": "Industrial-sector growth is now evidence-connected as a real co-driver at a scale comparable to the commercial/data-center sector, but the EIA source does not specifically attribute that industrial growth to reshoring/onshoring policy (vs. other industrial causes), so this stays at POSSIBLE_IMPLICATION rather than OBSERVED_EFFECT for the reshoring-specific claim."
+      "evidence_strength_rationale": "Industrial-sector growth is now evidence-connected as a real co-driver at a scale comparable to the commercial/data-center sector, but the EIA source does not specifically attribute that industrial growth to reshoring/onshoring policy (vs. other industrial causes), so this stays at POSSIBLE_IMPLICATION rather than OBSERVED_EFFECT for the reshoring-specific claim.",
+      "o1c_classification": "EVIDENCE_CONNECTED",
+      "o1c_rationale": "A real canonical Claim now exists (claim_a11c5cb4c7c4c2d1, Grid Strategies LLC national load-growth reports) naming 'strategic industries' -- semiconductor fabs, battery/EV manufacturing, hydrogen, LNG, i.e. reshoring/industrial-policy-driven manufacturing -- as a driver of rising utility load forecasts, named independently of and alongside data centers. This upgrades the alternative from EIA-adjacent-only evidence to a directly-connected, reshoring-specific real source, hence EVIDENCE_CONNECTED (not yet a quantified TWh split, so still PARTIALLY_CONNECTED in strength, but a real, on-topic claim is now attached).",
+      "o1c_new_claim_id": "claim_a11c5cb4c7c4c2d1",
+      "role_by_hypothesis": {
+        "H1": "ALTERNATIVE_EXPLANATION / co-driver -- H1 claims AI is A significant driver, not the only one, so manufacturing reshoring sits alongside AI's contribution rather than refuting it.",
+        "H3": "CORROBORATING EVIDENCE -- directly supports H3's claim that recent demand growth results from multiple factors including manufacturing.",
+        "AI_EXCLUSIVE_STRAWMAN": "COUNTEREVIDENCE -- would refute an (unstated) 'AI is the ONLY cause of demand growth' claim, which no hypothesis here actually makes."
+      }
     },
     {
       "explanation_id": "EV_CHARGING_DEMAND_GROWTH",
@@ -57,7 +76,15 @@
         ]
       },
       "evidence_strength_label": "OBSERVED_EFFECT",
-      "evidence_strength_rationale": "Real, independently-sourced, non-AI electricity demand growth is now connected (not merely asserted as general knowledge); it is a real parallel driver but is smaller in 2024 OBSERVED scale than data center consumption and is not shown to explain AI-specific grid bottlenecks such as the PJM interconnection queue."
+      "evidence_strength_rationale": "Real, independently-sourced, non-AI electricity demand growth is now connected (not merely asserted as general knowledge); it is a real parallel driver but is smaller in 2024 OBSERVED scale than data center consumption and is not shown to explain AI-specific grid bottlenecks such as the PJM interconnection queue.",
+      "o1c_classification": "EVIDENCE_CONNECTED",
+      "o1c_rationale": "Now backed by canonical Claim claim_f5842e6162c8fefc (IEA Global EV Outlook 2025), with OBSERVED 2024 (~180 TWh) and FORECAST 2030 (~780 TWh) figures kept explicitly separate. Real, quantified, non-AI electricity demand growth -- EVIDENCE_CONNECTED.",
+      "o1c_new_claim_id": "claim_f5842e6162c8fefc",
+      "role_by_hypothesis": {
+        "H1": "ALTERNATIVE_EXPLANATION / co-driver only -- H1 does not claim AI is the sole cause, so EV demand growth is a parallel driver that coexists with AI's contribution, not evidence against H1.",
+        "H3": "CORROBORATING EVIDENCE -- directly supports H3's claim that EV adoption is one of the multiple factors behind recent demand growth.",
+        "AI_EXCLUSIVE_STRAWMAN": "COUNTEREVIDENCE -- this is the clearest example in this set: EV demand growth is real, quantified, non-AI, and would refute an 'AI is the ONLY cause' claim, which no hypothesis here makes."
+      }
     },
     {
       "explanation_id": "EXTREME_CLIMATE_HVAC_DEMAND",
@@ -75,7 +102,15 @@
         "status": "NOT_FOUND",
         "matches": []
       },
-      "evidence_strength_label": "GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE"
+      "evidence_strength_label": "GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE",
+      "o1c_classification": "EVIDENCE_CONNECTED",
+      "o1c_rationale": "This round connected canonical Claim claim_d641fb1790c3ef53 (EIA 'Today in Energy' heat-wave notes + Ember 2024 heatwave analysis), OBSERVED, documenting real peak-demand increases from AC load in ERCOT/Eastern Interconnection during 2024-2025 heat waves. Upgraded from GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE to EVIDENCE_CONNECTED, but scoped specifically to PEAK/HOURLY load, not the annual-TWh growth trend H1/H2/H3 track -- see temporal_applicability.py's OUT_OF_RANGE classification for this claim, which must be respected: this evidence explains peak-load stress episodes, not baseline annual demand growth.",
+      "o1c_new_claim_id": "claim_d641fb1790c3ef53",
+      "role_by_hypothesis": {
+        "H1": "ALTERNATIVE_EXPLANATION, scoped to peak load only -- does not bear on H1's annual-growth-trend claim at all (different timescale), so it is neither support nor refutation of H1.",
+        "H3": "CORROBORATING EVIDENCE for the 'weather' factor H3 already names, but only for peak/hourly stress episodes, not the annual trend H3 also covers via other factors.",
+        "AI_EXCLUSIVE_STRAWMAN": "COUNTEREVIDENCE against a strawman that attributes ALL grid stress (including peak events) to AI; weather-driven peak demand is a clear, real, non-AI cause of grid stress."
+      }
     },
     {
       "explanation_id": "POPULATION_ECONOMIC_GROWTH",
@@ -97,7 +132,15 @@
         ]
       },
       "evidence_strength_label": "POSSIBLE_IMPLICATION",
-      "evidence_strength_rationale": "Real evidence was found, but it argues AGAINST population growth as the primary driver of the current US demand surge (residential/population-linked load is the slowest-growing segment), so this alternative is evidence-connected yet WEAKENED rather than strengthened -- never force-upgraded past POSSIBLE_IMPLICATION."
+      "evidence_strength_rationale": "Real evidence was found, but it argues AGAINST population growth as the primary driver of the current US demand surge (residential/population-linked load is the slowest-growing segment), so this alternative is evidence-connected yet WEAKENED rather than strengthened -- never force-upgraded past POSSIBLE_IMPLICATION.",
+      "o1c_classification": "PARTIALLY_CONNECTED",
+      "o1c_rationale": "Not re-researched this round (no time budget); existing EIA evidence already connects this alternative but runs against it as the primary driver. Left as-is per task instruction (existing state is not SEARCH_NOT_RUN, so out of scope to re-research this round).",
+      "o1c_new_claim_id": null,
+      "role_by_hypothesis": {
+        "H1": "WEAK_ALTERNATIVE -- even as an alternative/co-driver, existing evidence shows population-linked (residential) load growing slowest, so this does little to qualify H1's AI-driver claim either way.",
+        "H3": "WEAKLY CORROBORATING -- H3 names population as one of several factors, but the EIA evidence available undercuts population specifically as a strong contributor relative to commercial/industrial.",
+        "AI_EXCLUSIVE_STRAWMAN": "WEAK_COUNTEREVIDENCE -- population growth is real but evidence shows it is not where recent demand growth concentrates, so it is a weak rebuttal to an AI-exclusive strawman."
+      }
     },
     {
       "explanation_id": "GENERAL_CLOUD_COMPUTING_GROWTH",
@@ -120,7 +163,15 @@
         ]
       },
       "evidence_strength_label": "OBSERVED_EFFECT",
-      "evidence_strength_rationale": "A real, peer-reviewed-preprint-sourced finding now directly supports this alternative at the OBSERVED_EFFECT level for the 2016-2022 period; it cannot quantify what share of post-2022 data center growth is AI vs. general cloud, so it qualifies (does not refute) the AI-attribution of IEA's 2024 figures rather than replacing it."
+      "evidence_strength_rationale": "A real, peer-reviewed-preprint-sourced finding now directly supports this alternative at the OBSERVED_EFFECT level for the 2016-2022 period; it cannot quantify what share of post-2022 data center growth is AI vs. general cloud, so it qualifies (does not refute) the AI-attribution of IEA's 2024 figures rather than replacing it.",
+      "o1c_classification": "EVIDENCE_CONNECTED",
+      "o1c_rationale": "Already connected to canonical Claim claim_d170f52f567053e9 (this is the same evidence used as H6's contradicting evidence for the efficiency/Jevons hypothesis); classification unchanged this round. Note the claim's own temporal scope (2016-2022) is HISTORICAL_CONTEXT, not current-state, per temporal_applicability.py.",
+      "o1c_new_claim_id": null,
+      "role_by_hypothesis": {
+        "H1": "ALTERNATIVE_EXPLANATION / co-driver -- H1 claims AI is A significant driver; general cloud growth is a parallel, pre-existing driver, not a refutation.",
+        "H6": "COUNTEREVIDENCE -- this is the same evidence used directly against H6 ('efficiency improvements may offset AI workload growth'): Google's 3.7x energy growth despite near-limit PUE is a direct Jevons-paradox counterexample to H6.",
+        "AI_EXCLUSIVE_STRAWMAN": "COUNTEREVIDENCE -- non-AI cloud growth predates and continues alongside AI, directly refuting an AI-exclusive-cause strawman."
+      }
     },
     {
       "explanation_id": "INDUSTRIAL_POLICY_SUBSIDIES",
@@ -138,13 +189,86 @@
         "status": "NOT_FOUND",
         "matches": []
       },
-      "evidence_strength_label": "GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE"
+      "evidence_strength_label": "GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE",
+      "o1c_classification": "SEARCH_NOT_RUN",
+      "o1c_rationale": "No new search was run for this alternative this round (budget was spent on manufacturing reshoring, EV, and climate, which already had real canonical Claims to connect). Honest gap: this remains unresearched. It overlaps substantively with MANUFACTURING_RESHORING (claim_a11c5cb4c7c4c2d1 covers 'strategic industries' driven partly by industrial policy), so some real evidence is adjacent but was not specifically connected to the subsidies angle.",
+      "o1c_new_claim_id": null,
+      "role_by_hypothesis": {
+        "H1": "UNRESEARCHED -- potential alternative/co-driver role, not yet evidence-connected.",
+        "H3": "UNRESEARCHED -- potential corroborating factor, not yet evidence-connected.",
+        "AI_EXCLUSIVE_STRAWMAN": "UNRESEARCHED."
+      }
+    },
+    {
+      "explanation_id": "GRID_TRANSMISSION_INTERCONNECTION_BOTTLENECK",
+      "label": "Grid/transmission/interconnection bottleneck (supply-side constraint, not demand driver)",
+      "description": "The core energy-system stress may be a supply-side/transmission bottleneck (stalled interconnection queues, insufficient new generation/transmission buildout) rather than demand growth from any single sector -- a structurally different kind of alternative explanation (a different MECHANISM, not a competing demand source).",
+      "is_real_non_fabricated_alternative": true,
+      "search_keywords": [
+        "interconnection queue",
+        "transmission bottleneck",
+        "generation shortage",
+        "grid capacity"
+      ],
+      "corpus_search_result": {
+        "status": "EVIDENCE_ALREADY_IN_CORPUS_FROM_O1B_PASS",
+        "matches": [
+          {
+            "source_url": "GridLab PJM interconnection analysis (see claim_5787125ab5f0110b)",
+            "finding": "~130 GW of capacity-eligible generation is stuck, unbuilt, in PJM's interconnection queue; GridLab estimates ~$3.5B in 2026/27 consumer savings had 10% of queued projects been operational; the 2026/27 PJM capacity auction cleared at $16.1B, up 10% YoY. GridLab attributes PJM demand growth to 'data center additions and electrification' jointly (not AI specifically), and frames this explicitly as a generation/interconnection-queue SUPPLY shortage."
+          }
+        ]
+      },
+      "evidence_strength_label": "OBSERVED_EFFECT",
+      "evidence_strength_rationale": "This is the same canonical Claim already used as H5's sole resolved evidence (H5: 'the core problem may be interconnection/transmission bottlenecks rather than generation shortage' -- note GridLab's own framing is a generation-queue/supply shortage, which is why H5 is WEAKENED rather than SUPPORTED: the evidence found describes a different supply-side mechanism, generation stuck in an interconnection queue, not specifically a transmission/distribution bottleneck as H5's wording implies).",
+      "o1c_classification": "EVIDENCE_CONNECTED",
+      "o1c_rationale": "Listed as its own alternative-explanations entry for the first time this round (previously only represented as H5's hypothesis evidence, not catalogued among the 8 alternatives). Geographic scope is PJM only (US_PJM_REGION) -- per geographic_applicability.py, this must not be read as a nationwide US finding.",
+      "o1c_new_claim_id": null,
+      "o1c_existing_claim_id": "claim_5787125ab5f0110b",
+      "role_by_hypothesis": {
+        "H1": "ORTHOGONAL -- this is a supply-side mechanism claim, not a competing demand-side explanation, so it neither supports nor refutes H1's demand-driver claim.",
+        "H4": "CORROBORATING EVIDENCE -- PJM-specific finding supports H4's claim that AI-related power impact concentrates regionally rather than nationally.",
+        "H5": "DIRECT EVIDENCE (used as H5's own supporting/contradicting evidence) -- GridLab's framing as a generation-queue shortage, not a transmission bottleneck, is why H5 is WEAKENED rather than SUPPORTED.",
+        "AI_EXCLUSIVE_STRAWMAN": "ORTHOGONAL -- a strawman about AI being the sole DEMAND cause is not addressed by a supply-side mechanism claim."
+      }
+    },
+    {
+      "explanation_id": "GENERAL_DATA_CENTER_GROWTH_NON_AI_SPECIFIC",
+      "label": "General (non-AI-attributed) data center capacity growth",
+      "description": "Distinct from GENERAL_CLOUD_COMPUTING_GROWTH's workload-mix argument: this is the narrower claim that LBNL/IEA's own headline data-center electricity figures are not purely AI -- they are aggregate data-center figures (AI + non-AI compute + cooling + non-AI storage) that the source itself does not fully decompose.",
+      "is_real_non_fabricated_alternative": true,
+      "search_keywords": [
+        "data center electricity",
+        "data center growth",
+        "aggregate data center demand"
+      ],
+      "corpus_search_result": {
+        "status": "EVIDENCE_ALREADY_IN_CORPUS_SAME_CLAIM_AS_H1_H2",
+        "matches": [
+          {
+            "source_url": "LBNL/DOE 2024 US Data Center Energy report (see claim_o1_lbnl_us_dc_2023)",
+            "finding": "LBNL's own 176 TWh (2023)/325-580 TWh (2028 forecast) US data-center figures are AGGREGATE data-center electricity figures. LBNL states growth since 2017 is 'largely due to the growth in AI servers' but, per claim_o1_lbnl_us_dc_2023's own AI_ATTRIBUTION=PARTIAL note, 'does not disaggregate AI training vs. inference vs. general cloud/non-AI compute.'"
+          }
+        ]
+      },
+      "evidence_strength_label": "SUPPORTED_MECHANISM",
+      "evidence_strength_rationale": "This is the same underlying claim H1/H2 already rely on, re-read from the opposite direction: the aggregate figure includes non-AI data-center load by the source's own admission, so 'general (non-AI) data center growth' is a real, mechanistically-supported alternative/qualifier on how much of the 176-580 TWh is actually AI-attributable.",
+      "o1c_classification": "PARTIALLY_CONNECTED",
+      "o1c_rationale": "Listed as its own alternative-explanations entry for the first time this round. PARTIALLY_CONNECTED (not EVIDENCE_CONNECTED) because no claim quantifies the non-AI share directly -- the connection is the explicit admission inside claim_o1_lbnl_us_dc_2023 that the aggregate is not disaggregated, not an independent non-AI-specific data point.",
+      "o1c_new_claim_id": null,
+      "o1c_existing_claim_id": "claim_o1_lbnl_us_dc_2023",
+      "role_by_hypothesis": {
+        "H1": "QUALIFIER, not refutation -- H1 already carries an ATTRIBUTION_UNCERTAINTY note for exactly this reason (no numeric AI-vs-other-workload split); this alternative names the same gap from the alternative-explanation side.",
+        "H2": "DIRECT SUPPORT -- H2 explicitly states 'AI's independent contribution cannot currently be isolated from the data', which this alternative evidences directly.",
+        "AI_EXCLUSIVE_STRAWMAN": "COUNTEREVIDENCE -- the aggregate figure itself cannot be read as proof AI alone caused the growth, since the source does not disaggregate."
+      }
     }
   ],
   "summary": {
-    "total_alternatives": 6,
-    "graded_by_corpus_evidence": 4,
-    "general_knowledge_only": 2,
-    "o0_update_note": "O-0 live WebFetch/WebSearch acquisition connected real evidence for 4 of 6 alternatives (EV_CHARGING_DEMAND_GROWTH and GENERAL_CLOUD_COMPUTING_GROWTH at OBSERVED_EFFECT; MANUFACTURING_RESHORING and POPULATION_ECONOMIC_GROWTH at POSSIBLE_IMPLICATION, the latter with evidence running AGAINST the alternative rather than for it). EXTREME_CLIMATE_HVAC_DEMAND and INDUSTRIAL_POLICY_SUBSIDIES remain GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE -- no search was run for them this round."
+    "total_alternatives": 8,
+    "graded_by_corpus_evidence": 6,
+    "general_knowledge_only": 1,
+    "o0_update_note": "O-0 live WebFetch/WebSearch acquisition connected real evidence for 4 of 6 alternatives (EV_CHARGING_DEMAND_GROWTH and GENERAL_CLOUD_COMPUTING_GROWTH at OBSERVED_EFFECT; MANUFACTURING_RESHORING and POPULATION_ECONOMIC_GROWTH at POSSIBLE_IMPLICATION, the latter with evidence running AGAINST the alternative rather than for it). EXTREME_CLIMATE_HVAC_DEMAND and INDUSTRIAL_POLICY_SUBSIDIES remain GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE -- no search was run for them this round.",
+    "o1c_update_note": "O-1C re-evaluation: MANUFACTURING_RESHORING, EV_CHARGING_DEMAND_GROWTH, and EXTREME_CLIMATE_HVAC_DEMAND moved to EVIDENCE_CONNECTED on the strength of 3 new canonical Claims (claim_a11c5cb4c7c4c2d1, claim_f5842e6162c8fefc, claim_d641fb1790c3ef53). GENERAL_CLOUD_COMPUTING_GROWTH confirmed EVIDENCE_CONNECTED (unchanged, same claim_d170f52f567053e9 already used as H6 counterevidence). Two new alternatives were added to reach the full set of 8 named in the spec: GRID_TRANSMISSION_INTERCONNECTION_BOTTLENECK (EVIDENCE_CONNECTED, reusing H5's existing claim_5787125ab5f0110b, PJM-scoped only) and GENERAL_DATA_CENTER_GROWTH_NON_AI_SPECIFIC (PARTIALLY_CONNECTED, reusing claim_o1_lbnl_us_dc_2023's own non-disaggregation admission). POPULATION_ECONOMIC_GROWTH left as PARTIALLY_CONNECTED/unresearched-further and INDUSTRIAL_POLICY_SUBSIDIES left as SEARCH_NOT_RUN -- both honestly reported as not re-researched this round due to budget, per task instructions not to re-research unless their existing state was SEARCH_NOT_RUN (subsidies) or time permitted (population, which had real but inconclusive evidence already). Every alternative now carries a `role_by_hypothesis` field distinguishing its COUNTEREVIDENCE role against an unstated AI-exclusive strawman from its weaker ALTERNATIVE_EXPLANATION/co-driver or CORROBORATING role against H1/H3/H4/H5/H6, per spec section 22."
   }
 }

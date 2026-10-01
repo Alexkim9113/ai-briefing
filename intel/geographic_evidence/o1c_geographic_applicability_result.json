@@ -1,0 +1,404 @@
+{
+  "topic_name": "AI_ENERGY_INFRA",
+  "purpose": "Per-hypothesis, per-region geographic applicability of H1-H7's CURRENT resolved evidence, built to prevent single-region findings from being silently read as national/multi-national/cross-country generalizations.",
+  "states": [
+    "MATCHED",
+    "PARTIAL_MATCH",
+    "OUT_OF_SCOPE",
+    "UNKNOWN"
+  ],
+  "regions_considered": [
+    "USA",
+    "PJM",
+    "IRELAND",
+    "EU",
+    "CHINA",
+    "KOREA",
+    "SEOUL_METRO"
+  ],
+  "anti_overgeneralization_rules": [
+    "PJM evidence is never promoted to MATCHED for USA as a whole.",
+    "US evidence is never promoted to MATCHED/PARTIAL_MATCH for Korea, and vice versa.",
+    "Ireland's data-center-electricity-share figure is never used as an EU-wide average.",
+    "A derivative/secondary China estimate is never promoted to an official Chinese observed value.",
+    "Korea capital-region CONTRACTED power capacity is never converted into actual AI electricity consumption."
+  ],
+  "ireland_eu_note": "Ireland's ~22% data-center-electricity-share figure (CSO/EirGrid) is a COUNTRY-LEVEL figure. It must never be used as an EU-wide average -- Ireland is a small, data-center-dense outlier economy, not representative of the EU aggregate (EU-wide data center electricity share is far lower, on the order of a few percent per IEA).",
+  "per_hypothesis": {
+    "H1": {
+      "resolved_claim_ids": [
+        "claim_o1_lbnl_us_dc_2023"
+      ],
+      "regions": {
+        "USA": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: LBNL claim's geographic_scope is 'US' directly."
+          ]
+        },
+        "PJM": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-aggregate claim does not break out PJM specifically."
+          ]
+        },
+        "IRELAND": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no Ireland data."
+          ]
+        },
+        "EU": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no EU data."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no China data."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    },
+    "H2": {
+      "resolved_claim_ids": [
+        "claim_o1_lbnl_us_dc_2023"
+      ],
+      "regions": {
+        "USA": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: LBNL claim's geographic_scope is 'US' directly."
+          ]
+        },
+        "PJM": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-aggregate claim does not break out PJM specifically."
+          ]
+        },
+        "IRELAND": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no Ireland data."
+          ]
+        },
+        "EU": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no EU data."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no China data."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    },
+    "H3": {
+      "resolved_claim_ids": [
+        "claim_5787125ab5f0110b",
+        "claim_a11c5cb4c7c4c2d1",
+        "claim_f5842e6162c8fefc",
+        "claim_d641fb1790c3ef53"
+      ],
+      "regions": {
+        "USA": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is 'US_PJM_REGION' -- PJM covers 13 US states + DC, not the whole country, so this is a PARTIAL_MATCH for USA, never MATCHED. PJM-specific findings (queue size, auction price) must not be read as nationwide US figures.",
+            "claim_a11c5cb4c7c4c2d1: Manufacturing reshoring claim's geographic_scope is 'US'.",
+            "claim_f5842e6162c8fefc: Claim's geographic_scope is 'GLOBAL/EUROPE/CHINA'; claim text explicitly states no US-specific TWh figure was given -- US applicability is UNKNOWN, not inferred from the global total.",
+            "claim_d641fb1790c3ef53: Claim's geographic_scope is 'US' (ERCOT/Eastern Interconnection)."
+          ]
+        },
+        "PJM": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is directly US_PJM_REGION.",
+            "claim_a11c5cb4c7c4c2d1: US-national claim does not specify PJM-region incidence.",
+            "claim_f5842e6162c8fefc: No PJM-specific figure in claim.",
+            "claim_d641fb1790c3ef53: Eastern Interconnection partially overlaps PJM but claim does not isolate PJM specifically."
+          ]
+        },
+        "IRELAND": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no Ireland data.",
+            "claim_a11c5cb4c7c4c2d1: US-only claim.",
+            "claim_f5842e6162c8fefc: No Ireland-specific figure in claim.",
+            "claim_d641fb1790c3ef53: US-only claim."
+          ]
+        },
+        "EU": {
+          "state": "PARTIAL_MATCH",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no EU data.",
+            "claim_a11c5cb4c7c4c2d1: US-only claim.",
+            "claim_f5842e6162c8fefc: Claim gives an EU-specific 2030 FORECAST share (>4% of EU electricity demand) alongside the global OBSERVED figure -- PARTIAL_MATCH because the EU figure itself is a forecast, not an observed current-state figure.",
+            "claim_d641fb1790c3ef53: US-only claim."
+          ]
+        },
+        "CHINA": {
+          "state": "PARTIAL_MATCH",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no China data.",
+            "claim_a11c5cb4c7c4c2d1: US-only claim.",
+            "claim_f5842e6162c8fefc: Claim gives a China-specific 2030 FORECAST share (3.6%) -- PARTIAL_MATCH, forecast only, not an observed Chinese value.",
+            "claim_d641fb1790c3ef53: US-only claim."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea.",
+            "claim_a11c5cb4c7c4c2d1: US evidence never auto-applied to Korea.",
+            "claim_f5842e6162c8fefc: Claim names GLOBAL/EUROPE/CHINA only; no Korea figure given.",
+            "claim_d641fb1790c3ef53: US evidence never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea's capital region.",
+            "claim_a11c5cb4c7c4c2d1: US evidence never auto-applied to Korea's capital region.",
+            "claim_f5842e6162c8fefc: Claim names GLOBAL/EUROPE/CHINA only; no Korea figure given.",
+            "claim_d641fb1790c3ef53: US evidence never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    },
+    "H4": {
+      "resolved_claim_ids": [
+        "claim_5787125ab5f0110b",
+        "claim_o1_korea_capital_region_dc_demand"
+      ],
+      "regions": {
+        "USA": {
+          "state": "PARTIAL_MATCH",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is 'US_PJM_REGION' -- PJM covers 13 US states + DC, not the whole country, so this is a PARTIAL_MATCH for USA, never MATCHED. PJM-specific findings (queue size, auction price) must not be read as nationwide US figures.",
+            "claim_o1_korea_capital_region_dc_demand: Korea-only claim; never auto-applied to USA."
+          ]
+        },
+        "PJM": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is directly US_PJM_REGION.",
+            "claim_o1_korea_capital_region_dc_demand: Korea-only claim; never auto-applied to PJM."
+          ]
+        },
+        "IRELAND": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no Ireland data.",
+            "claim_o1_korea_capital_region_dc_demand: Korea-only claim."
+          ]
+        },
+        "EU": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no EU data.",
+            "claim_o1_korea_capital_region_dc_demand: Korea-only claim."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no China data.",
+            "claim_o1_korea_capital_region_dc_demand: Korea-only claim."
+          ]
+        },
+        "KOREA": {
+          "state": "PARTIAL_MATCH",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea.",
+            "claim_o1_korea_capital_region_dc_demand: Claim's geographic_scope is the Seoul/Gyeonggi/Incheon capital region vs. the Korea national total -- capital-region figures are PARTIAL_MATCH for 'KOREA' as a whole, never MATCHED, since 8.2% of contracted capacity lies outside the capital region. ALSO: this is CONTRACTED power capacity requested through 2029, not observed AI electricity consumption -- must never be read as an actual-consumption figure for Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea's capital region.",
+            "claim_o1_korea_capital_region_dc_demand: Claim's geographic_scope directly names Seoul/Gyeonggi/Incheon (the capital region / 수도권). NOTE: this is CONTRACTED power capacity requested through 2029 (KEPCO/National Assembly figures), not observed AI electricity consumption -- MATCHED refers to geographic coverage only, not to the figure representing AI consumption."
+          ]
+        }
+      }
+    },
+    "H5": {
+      "resolved_claim_ids": [
+        "claim_5787125ab5f0110b"
+      ],
+      "regions": {
+        "USA": {
+          "state": "PARTIAL_MATCH",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is 'US_PJM_REGION' -- PJM covers 13 US states + DC, not the whole country, so this is a PARTIAL_MATCH for USA, never MATCHED. PJM-specific findings (queue size, auction price) must not be read as nationwide US figures."
+          ]
+        },
+        "PJM": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_5787125ab5f0110b: Claim's geographic_scope is directly US_PJM_REGION."
+          ]
+        },
+        "IRELAND": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no Ireland data."
+          ]
+        },
+        "EU": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no EU data."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: PJM-only claim; no China data."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_5787125ab5f0110b: US/PJM evidence never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    },
+    "H6": {
+      "resolved_claim_ids": [
+        "claim_d170f52f567053e9"
+      ],
+      "regions": {
+        "USA": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_d170f52f567053e9: Claim's geographic_scope is 'GLOBAL' (Google/Meta infrastructure); no US-specific breakout given."
+          ]
+        },
+        "PJM": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_d170f52f567053e9: No PJM-specific data."
+          ]
+        },
+        "IRELAND": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_d170f52f567053e9: No Ireland-specific data."
+          ]
+        },
+        "EU": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_d170f52f567053e9: No EU-specific data."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_d170f52f567053e9: Models US hyperscalers' global infrastructure; no China-specific figures -- a derivative/secondary estimate for China must never be fabricated from this global figure."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_d170f52f567053e9: Global hyperscaler claim; never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_d170f52f567053e9: Global hyperscaler claim; never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    },
+    "H7": {
+      "resolved_claim_ids": [
+        "claim_o1_lbnl_us_dc_2023"
+      ],
+      "regions": {
+        "USA": {
+          "state": "MATCHED",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: LBNL claim's geographic_scope is 'US' directly."
+          ]
+        },
+        "PJM": {
+          "state": "UNKNOWN",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-aggregate claim does not break out PJM specifically."
+          ]
+        },
+        "IRELAND": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no Ireland data."
+          ]
+        },
+        "EU": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no EU data."
+          ]
+        },
+        "CHINA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US-only claim; no China data."
+          ]
+        },
+        "KOREA": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea."
+          ]
+        },
+        "SEOUL_METRO": {
+          "state": "OUT_OF_SCOPE",
+          "reasons": [
+            "claim_o1_lbnl_us_dc_2023: US evidence never auto-applied to Korea's capital region."
+          ]
+        }
+      }
+    }
+  }
+}
