@@ -1,0 +1,219 @@
+{
+  "hypothesis_id": "hyp_b0a4bbbc9b601728",
+  "counterevidence_search_log": [
+    {
+      "direction": "DATACENTER_EFFICIENCY_IMPROVEMENT",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "DATACENTER_EFFICIENCY_IMPROVEMENT",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "DATACENTER_EFFICIENCY_IMPROVEMENT",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "DATACENTER_EFFICIENCY_IMPROVEMENT",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "DATACENTER_EFFICIENCY_IMPROVEMENT",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "NON_AI_DEMAND_DRIVERS",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "NON_AI_DEMAND_DRIVERS",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "NON_AI_DEMAND_DRIVERS",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "NON_AI_DEMAND_DRIVERS",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "NON_AI_DEMAND_DRIVERS",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "GENERAL_ELECTRIFICATION",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "GENERAL_ELECTRIFICATION",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "GENERAL_ELECTRIFICATION",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "GENERAL_ELECTRIFICATION",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "GENERAL_ELECTRIFICATION",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "CLIMATE_HVAC_DEMAND",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "CLIMATE_HVAC_DEMAND",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "CLIMATE_HVAC_DEMAND",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "CLIMATE_HVAC_DEMAND",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "CLIMATE_HVAC_DEMAND",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "POPULATION_GROWTH",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "POPULATION_GROWTH",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "POPULATION_GROWTH",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "POPULATION_GROWTH",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "POPULATION_GROWTH",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "NON_AI_CLOUD_WORKLOAD",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "NON_AI_CLOUD_WORKLOAD",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "NON_AI_CLOUD_WORKLOAD",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "NON_AI_CLOUD_WORKLOAD",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "NON_AI_CLOUD_WORKLOAD",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    },
+    {
+      "direction": "AI_DEMAND_OVERESTIMATE",
+      "query_stage": "QUERY_PLANNED"
+    },
+    {
+      "direction": "AI_DEMAND_OVERESTIMATE",
+      "query_stage": "SOURCE_SELECTED",
+      "source": "intel/documents.json (only reachable evidence source this session)"
+    },
+    {
+      "direction": "AI_DEMAND_OVERESTIMATE",
+      "query_stage": "REQUESTED"
+    },
+    {
+      "direction": "AI_DEMAND_OVERESTIMATE",
+      "query_stage": "RESPONSE_RECEIVED",
+      "candidate_count": 0
+    },
+    {
+      "direction": "AI_DEMAND_OVERESTIMATE",
+      "query_stage": "VALIDATED",
+      "result": "NO_GENUINE_MATCH",
+      "note": "corpus is a Korean/global AI-news corpus, not a US grid-economics corpus; no document found that is genuinely ABOUT US electricity-demand counterevidence for this specific hypothesis"
+    }
+  ],
+  "counterevidence_result": "COUNTEREVIDENCE_GAP",
+  "counterevidence_reason": "9 search directions checked against the only reachable evidence source (existing 601-doc corpus); zero genuine matches found. Gap kept honestly -- no counterevidence fabricated.",
+  "alternative_explanation_status": [
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "manufacturing reshoring",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "EV adoption",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "weather",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "population growth",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "cloud expansion (non-AI)",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "general electrification",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    },
+    {
+      "hypothesis_id": "hyp_b0a4bbbc9b601728",
+      "explanation": "industrial policy",
+      "evidence_ids": [],
+      "status": "UNSUPPORTED_ALTERNATIVE"
+    }
+  ]
+}

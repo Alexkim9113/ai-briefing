@@ -23,5 +23,30 @@
       }
     ],
     "last_updated": "2026-10-01T02:31:56.621434+00:00"
+  },
+  "hyp_f5f71f3a181d830c": {
+    "hypothesis_id": "hyp_f5f71f3a181d830c",
+    "topic": "AI_LABOR",
+    "statement": "AI adoption is measurably shifting US labor force participation",
+    "scope": "US, 2010-2022 aggregate participation rate",
+    "supporting_evidence": [],
+    "contradicting_evidence": [],
+    "alternative_explanations": [
+      "post-2008 recession recovery cycle",
+      "aging population / retirement trends",
+      "COVID-19 labor market disruption and recovery",
+      "changes in labor force definitions/methodology",
+      "non-AI automation and outsourcing trends",
+      "minimum wage and policy changes",
+      "general economic cycle (not AI-specific)"
+    ],
+    "status": "INSUFFICIENT_EVIDENCE",
+    "uncertainty": [
+      {
+        "cause": "ATTRIBUTION_UNCERTAINTY",
+        "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+      }
+    ],
+    "last_updated": "2026-10-01T04:28:40.296291+00:00"
   }
 }

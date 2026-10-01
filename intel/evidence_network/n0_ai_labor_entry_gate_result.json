@@ -1,0 +1,26 @@
+{
+  "entry_gate_result": "PASS",
+  "topic": "AI_LABOR",
+  "series_id": "series_c302bf9e2576ad47",
+  "claim_id": "claim_4765a68987d86c67",
+  "relation_id": "rel_0ad164c8796a074d",
+  "intelligence_id": "intel_dbab7b01963396b5",
+  "hypothesis_id": "hyp_f5f71f3a181d830c",
+  "checks": {
+    "1_source_id_exists": true,
+    "2_canonical_identity_exists": true,
+    "3_retrieval_timestamp_exists": true,
+    "4_source_provenance_exists": true,
+    "5_raw_source_reference_exists": true,
+    "6_normalized_representation_exists": true,
+    "7_validation_result_exists": true,
+    "8_admission_result_exists": true,
+    "9_topic_connection_exists": true,
+    "10_temporal_context_exists": true,
+    "11_intelligence_node_connection_exists": true,
+    "12_idempotency_on_refetch": true
+  },
+  "trend_status": "STABLE",
+  "real_data_point_count": 13,
+  "note": "DESCRIPTIVE evidence only -- general labor participation rate change is explicitly NOT promoted to an AI-causal claim (Section 6 constraint)"
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": 36815034256,
+  "job_id": 110218136969,
+  "head_sha": "56d44e363be8cc1caf0460bb65bcfcc8d2cbeedc",
+  "workflow": "labor-evidence-fetch.yml",
+  "fetched_at": "2026-10-01T04:25:26Z",
+  "url": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+  "indicator": "SL.TLF.ACTI.ZS",
+  "country": "USA",
+  "source_family": "WORLD_BANK",
+  "ilo_attempted": false,
+  "ilo_note": "ILO SDMX structure not validated outside live Actions this round; World Bank used as the proven-reliable fallback per instruction's own priority list",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "real_data_point_count": 13,
+  "observations": [
+    {"period": "2010", "value": 72.558, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2011", "value": 72.03, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2012", "value": 72.006, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2013", "value": 71.751, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2014", "value": 71.655, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2015", "value": 71.583, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2016", "value": 71.925, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2017", "value": 72.301, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2018", "value": 72.562, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2019", "value": 73.017, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2020", "value": 71.872, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2021", "value": 72.233, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"},
+    {"period": "2022", "value": 72.838, "unit": "% of population 15+", "indicator_name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)", "country_name": "United States"}
+  ]
+}

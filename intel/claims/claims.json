@@ -11,5 +11,18 @@
     "created_from": "series_af37f1207e7ff042",
     "provenance": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
     "created_at": "2026-10-01T02:31:56.611311+00:00"
+  },
+  "claim_4765a68987d86c67": {
+    "claim_id": "claim_4765a68987d86c67",
+    "claim_text": "US labor force participation rate (SL.TLF.ACTI.ZS) was recorded at the following values for 2010-2022, per World Bank/modeled ILO estimate data.",
+    "topic": "AI_LABOR",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "US labor force participation rate, World Bank indicator SL.TLF.ACTI.ZS",
+    "time_scope": "2010-2022",
+    "geographic_scope": "US",
+    "status": "OPEN",
+    "created_from": "series_c302bf9e2576ad47",
+    "provenance": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+    "created_at": "2026-10-01T04:28:40.295431+00:00"
   }
 }

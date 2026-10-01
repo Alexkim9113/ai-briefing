@@ -8,5 +8,15 @@
     "reason": "the admitted statistical series directly reports the values the DESCRIPTIVE claim states; trend_status is INSUFFICIENT_SERIES/NO_CLEAR_SIGNAL-class, not asserted as a CAUSAL driver",
     "provenance": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
     "created_at": "2026-10-01T02:31:56.611771+00:00"
+  },
+  "rel_0ad164c8796a074d": {
+    "relation_id": "rel_0ad164c8796a074d",
+    "evidence_id": "series_c302bf9e2576ad47",
+    "claim_id": "claim_4765a68987d86c67",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "directly reports the values stated; a general labor-participation statistic is never promoted to an AI-attribution claim without an explicit AI-adoption-linked data point",
+    "provenance": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+    "created_at": "2026-10-01T04:28:40.295979+00:00"
   }
 }

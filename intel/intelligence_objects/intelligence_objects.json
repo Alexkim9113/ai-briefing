@@ -85,5 +85,67 @@
     "version": 1,
     "previous_version": null,
     "revision_history": []
+  },
+  "intel_dbab7b01963396b5": {
+    "intelligence_id": "intel_dbab7b01963396b5",
+    "topic": "AI_LABOR",
+    "question": "is AI adoption measurably shifting US labor force participation?",
+    "current_state": "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect.",
+    "key_claims": [
+      "claim_4765a68987d86c67"
+    ],
+    "supporting_evidence": [
+      "rel_0ad164c8796a074d"
+    ],
+    "counterevidence": [],
+    "alternative_explanations": [],
+    "statistics": [
+      "series_c302bf9e2576ad47"
+    ],
+    "research_context": [],
+    "policy_context": [],
+    "historical_context": [],
+    "geographic_context": [
+      {
+        "geography": "USA",
+        "basis": "statistic geography field (World Bank country code)",
+        "scope": "event_country=UNKNOWN"
+      }
+    ],
+    "temporal_chain": [
+      {
+        "period_start": "2010",
+        "period_end": "2022",
+        "source": "series_c302bf9e2576ad47"
+      }
+    ],
+    "uncertainties": [
+      {
+        "cause": "ATTRIBUTION_UNCERTAINTY",
+        "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+      }
+    ],
+    "known_gaps": [
+      {
+        "gap_type": "ATTRIBUTION_GAP",
+        "reason": "no sector/occupation-level decomposition linking this aggregate indicator to AI adoption specifically"
+      },
+      {
+        "gap_type": "COUNTEREVIDENCE_GAP",
+        "reason": "no counterevidence/alternative-explanation evidence connected yet for H1 beyond the listed candidate list"
+      },
+      {
+        "gap_type": "POLICY_RESEARCH_GAP",
+        "reason": "carried over -- still NOT_READY"
+      }
+    ],
+    "provenance": [
+      "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100"
+    ],
+    "last_updated": "2026-10-01T04:28:40.296660+00:00",
+    "readiness": "CONDITIONALLY_READY",
+    "version": 1,
+    "previous_version": null,
+    "revision_history": []
   }
 }
