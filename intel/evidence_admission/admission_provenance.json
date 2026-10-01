@@ -335,6 +335,23 @@
   "update_kind": "REMOVAL",
   "validation_status": "VALIDATION_OK"
  },
+ "9a370eedbc7cd51f": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-10-01T07:30:45.647662+00:00",
+  "document_id": "9a370eedbc7cd51f",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-10-01T07:30:36.402446+00:00",
+  "source_organization": [
+   "Federal Trade Commission"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "b8a4c2850d58bbd8": {
   "admission_status": "ADMITTED",
   "admitted_at": "2026-09-30T13:13:45.768929+00:00",
