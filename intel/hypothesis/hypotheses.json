@@ -31,7 +31,7 @@
         "detail": "IEA report names AI as primary driver qualitatively but does not provide a numeric AI-vs-other-workload split"
       }
     ],
-    "last_updated": "2026-10-01T12:06:32.622230+00:00",
+    "last_updated": "2026-10-01T12:40:38.682237+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -72,7 +72,53 @@
         "applied_at": "2026-10-01T12:06:32.622201+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
       }
-    ]
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "SUPPORTED",
+      "final_status": "SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
+      ],
+      "unresolved_supporting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
+      ],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "PASSED",
+          "detail": "directness values present: ['PARTIAL']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['MIXED']; requires_current_state=True"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['AI_PARTIAL']; requires_ai_attribution=True"
+        }
+      ]
+    }
   },
   "hyp_o0_h2_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h2_ai_energy_infra",
@@ -93,7 +139,7 @@
         "detail": "primary-tier source (IEA) stops short of a quantitative AI-only breakdown"
       }
     ],
-    "last_updated": "2026-10-01T12:06:32.623293+00:00",
+    "last_updated": "2026-10-01T12:40:38.683858+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -134,7 +180,53 @@
         "applied_at": "2026-10-01T12:06:32.623285+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
       }
-    ]
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "SUPPORTED",
+      "final_status": "SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
+      ],
+      "unresolved_supporting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
+      ],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "PASSED",
+          "detail": "directness values present: ['PARTIAL']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['MIXED']; requires_current_state=True"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['AI_PARTIAL']; requires_ai_attribution=False"
+        }
+      ]
+    }
   },
   "hyp_o0_h3_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h3_ai_energy_infra",
@@ -149,7 +241,7 @@
       "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
     ],
     "contradicting_evidence": [],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "INSUFFICIENT_EVIDENCE",
     "status_change_rationale": "GridLab attributes PJM demand growth to 'data center additions and electrification' jointly (partial support for multi-factor view) but direct searches for manufacturing/EV/population/weather drivers were SEARCH_NOT_RUN this session (see o0_live_counterevidence_supplement.json) -- insufficient to move beyond INSUFFICIENT_EVIDENCE.",
     "uncertainty": [
       {
@@ -157,7 +249,7 @@
         "detail": "6 of 10 counterevidence directions not yet searched"
       }
     ],
-    "last_updated": "2026-10-01T12:06:32.624155+00:00",
+    "last_updated": "2026-10-01T12:40:38.684878+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -198,6 +290,29 @@
         "applied_at": "2026-10-01T12:06:32.624147+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
       }
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
+      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
+      "final_status": "INSUFFICIENT_EVIDENCE",
+      "resolved_supporting_evidence": [],
+      "unresolved_supporting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+        "o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
+        "o1_counterevidence:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
+        "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
+      ],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": []
+    },
+    "o1c_status_change_log": [
+      {
+        "previous_status": "PARTIALLY_SUPPORTED",
+        "new_status": "INSUFFICIENT_EVIDENCE",
+        "reason": "O-1C canonical status path: status recomputed via determine_canonical_status (resolved-evidence-only count + O-1B quality guards). Unresolved evidence ids (legacy o0/o1 acquisition-result references that were never migrated into Claim records) no longer count toward the status at all, per the Unresolved Evidence ID Guard (O-1C Section 8). See canonical_status_diagnostics for the full resolved/unresolved breakdown and guard trail. This is a disclosed, material downgrade from the O-1B stored status, not a silent one -- O-1C treats the complete absence of any resolved Claim-record evidence as INSUFFICIENT_EVIDENCE rather than letting unresolved references alone sustain a stronger label."
+      }
     ]
   },
   "hyp_o0_h4_ai_energy_infra": {
@@ -221,7 +336,7 @@
         "detail": "ERCOT/CAISO/other ISO data not fetched this run"
       }
     ],
-    "last_updated": "2026-10-01T12:06:32.624974+00:00",
+    "last_updated": "2026-10-01T12:40:38.686109+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -262,7 +377,55 @@
         "applied_at": "2026-10-01T12:06:32.624927+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
       }
-    ]
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "PARTIALLY_SUPPORTED",
+      "final_status": "PARTIALLY_SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION"
+      ],
+      "unresolved_supporting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+        "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
+      ],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING']"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "FAILED",
+          "detail": "directness values present: ['INDIRECT']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['UNKNOWN']; requires_current_state=True"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "FAILED",
+          "detail": "attribution strengths present: ['DATA_CENTER_GENERAL']; none is AI_DIRECT/AI_PARTIAL"
+        }
+      ]
+    }
   },
   "hyp_o0_h5_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h5_ai_energy_infra",
@@ -274,7 +437,7 @@
     "contradicting_evidence": [
       "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"
     ],
-    "status": "CONTESTED",
+    "status": "INSUFFICIENT_EVIDENCE",
     "status_change_rationale": "GridLab explicitly frames the PJM bottleneck as a GENERATION/interconnection-queue supply shortage (130 GW of stalled generation projects), not a transmission/distribution capacity constraint -- this weighs against a pure transmission-bottleneck framing, though IEA separately notes grid-component (transformer, gas turbine) lead times doubling, which is more transmission/equipment-supply-chain-adjacent. The two sources partially disagree on where the bottleneck sits, hence CONTESTED rather than REJECTED.",
     "uncertainty": [
       {
@@ -282,7 +445,7 @@
         "detail": "sources use 'interconnection,' 'generation,' and 'grid component' bottlenecks somewhat interchangeably"
       }
     ],
-    "last_updated": "2026-10-01T12:07:23.281202+00:00",
+    "last_updated": "2026-10-01T12:40:38.687202+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "CONTESTED",
@@ -292,6 +455,26 @@
         "applied_at": "2026-10-01T12:06:38.177385+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)",
         "note": "O-1B discrepancy disclosure: classify_status() recomputed from the stored supporting_evidence/contradicting_evidence arrays actually yields REJECTED (0 supporting, >=1 contradicting), not the canonical stored status -- this predates O-1B and is OUT OF SCOPE for this phase (O-1B only touches the AI_ENERGY_INFRA evidence-evaluation/sufficiency layer for H1/H3-style SUPPORTED cases, not the CONTESTED/WEAKENED/REJECTED boundary). Status left UNCHANGED at its original canonical value; this is disclosed as a residual known gap, not silently corrected or silently left inconsistent."
+      }
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "REJECTED",
+      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
+      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
+      "final_status": "INSUFFICIENT_EVIDENCE",
+      "resolved_supporting_evidence": [],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"
+      ],
+      "guard_trail": []
+    },
+    "o1c_status_change_log": [
+      {
+        "previous_status": "CONTESTED",
+        "new_status": "INSUFFICIENT_EVIDENCE",
+        "reason": "O-1C canonical status path: status recomputed via determine_canonical_status (resolved-evidence-only count + O-1B quality guards). Unresolved evidence ids (legacy o0/o1 acquisition-result references that were never migrated into Claim records) no longer count toward the status at all, per the Unresolved Evidence ID Guard (O-1C Section 8). See canonical_status_diagnostics for the full resolved/unresolved breakdown and guard trail. This is a disclosed, material downgrade from the O-1B stored status, not a silent one -- O-1C treats the complete absence of any resolved Claim-record evidence as INSUFFICIENT_EVIDENCE rather than letting unresolved references alone sustain a stronger label."
       }
     ]
   },
@@ -305,7 +488,7 @@
     "contradicting_evidence": [
       "o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"
     ],
-    "status": "WEAKENED",
+    "status": "INSUFFICIENT_EVIDENCE",
     "status_change_rationale": "arXiv 2411.11540 found Google's hyperscale PUE near theoretical limit (~1.1) yet total energy consumption rose 3.7x from 2016-2022, i.e. efficiency gains did NOT offset aggregate growth in their dataset (a Jevons-paradox dynamic). Evidence is about general cloud computing, not AI-specific workloads (AI_ATTRIBUTION: INDIRECT), so this weakens but does not reject H6.",
     "uncertainty": [
       {
@@ -313,7 +496,7 @@
         "detail": "paper's dataset predates/straddles the generative-AI boom and is not AI-workload-specific"
       }
     ],
-    "last_updated": "2026-10-01T12:07:23.281246+00:00",
+    "last_updated": "2026-10-01T12:40:38.688408+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "WEAKENED",
@@ -323,6 +506,26 @@
         "applied_at": "2026-10-01T12:06:38.178868+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)",
         "note": "O-1B discrepancy disclosure: classify_status() recomputed from the stored supporting_evidence/contradicting_evidence arrays actually yields REJECTED (0 supporting, >=1 contradicting), not the canonical stored status -- this predates O-1B and is OUT OF SCOPE for this phase (O-1B only touches the AI_ENERGY_INFRA evidence-evaluation/sufficiency layer for H1/H3-style SUPPORTED cases, not the CONTESTED/WEAKENED/REJECTED boundary). Status left UNCHANGED at its original canonical value; this is disclosed as a residual known gap, not silently corrected or silently left inconsistent."
+      }
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "REJECTED",
+      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
+      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
+      "final_status": "INSUFFICIENT_EVIDENCE",
+      "resolved_supporting_evidence": [],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"
+      ],
+      "guard_trail": []
+    },
+    "o1c_status_change_log": [
+      {
+        "previous_status": "WEAKENED",
+        "new_status": "INSUFFICIENT_EVIDENCE",
+        "reason": "O-1C canonical status path: status recomputed via determine_canonical_status (resolved-evidence-only count + O-1B quality guards). Unresolved evidence ids (legacy o0/o1 acquisition-result references that were never migrated into Claim records) no longer count toward the status at all, per the Unresolved Evidence ID Guard (O-1C Section 8). See canonical_status_diagnostics for the full resolved/unresolved breakdown and guard trail. This is a disclosed, material downgrade from the O-1B stored status, not a silent one -- O-1C treats the complete absence of any resolved Claim-record evidence as INSUFFICIENT_EVIDENCE rather than letting unresolved references alone sustain a stronger label."
       }
     ]
   },
@@ -345,7 +548,7 @@
         "detail": "did not fetch secondary/news coverage this run to check how often they blur forecast into observed fact"
       }
     ],
-    "last_updated": "2026-10-01T12:06:32.625723+00:00",
+    "last_updated": "2026-10-01T12:40:38.689468+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -386,7 +589,53 @@
         "applied_at": "2026-10-01T12:06:32.625716+00:00",
         "method": "evaluate_hypothesis_sufficiency (O-1B Evidence Evaluation Contract)"
       }
-    ]
+    ],
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "SUPPORTED",
+      "final_status": "SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_o1_lbnl_us_dc_2023:LBNL_FORECAST_RANGE_325_580_TWH_2028"
+      ],
+      "unresolved_supporting_evidence": [
+        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
+      ],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "PASSED",
+          "detail": "directness values present: ['PARTIAL']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['MIXED']; requires_current_state=False"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['AI_PARTIAL']; requires_ai_attribution=False"
+        }
+      ]
+    }
   },
   "hyp_f5f71f3a181d830c": {
     "hypothesis_id": "hyp_f5f71f3a181d830c",
