@@ -1,0 +1,12 @@
+{
+  "note": "Section 33 -- honest instrumentation check, not a forced measurement. No new event-logging pipeline was built this round.",
+  "SOURCE_FETCHED": "UNINSTRUMENTED",
+  "CANDIDATE_EXTRACTED": "UNINSTRUMENTED",
+  "VALIDATED": "UNINSTRUMENTED",
+  "ADMITTED": "UNINSTRUMENTED",
+  "EVIDENCE_CONNECTED": "PARTIAL -- evidence_claim_relations.json records each SUPPORTS/CONTRADICTS/etc relation as it is created, but there is no counted funnel view over time",
+  "CLAIM_UPDATED": "PARTIAL -- claim status changes are visible via claims.json diffs, but not logged as discrete timestamped events",
+  "INTELLIGENCE_UPDATED": "READY -- intelligence_object.py's revision_history IS a real timestamped log of every update, with trigger_evidence/changed_fields/change_reason/impact_event",
+  "REPORT_UPDATED": "READY -- report_{id}_v{n}.json files ARE the timestamped log; diff_reports() computes what changed between versions",
+  "overall_status": "PARTIAL -- the two newest Report Engine layers (INTELLIGENCE_UPDATED, REPORT_UPDATED) are genuinely instrumented via existing version/revision history; everything upstream of Claim creation remains UNINSTRUMENTED, same as N-2's finding. Not reported as 0 to avoid implying a measured empty funnel -- it was never measured."
+}

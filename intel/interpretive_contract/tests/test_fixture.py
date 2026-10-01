@@ -580,12 +580,16 @@ def test_60_human_overrides_preserved():
 # 61-68
 # ==========================================================================
 
-def test_61_report_engine_not_implemented():
-    forbidden_names = ("report_engine", "report_generator", "weekly_report", "monthly_report")
+def test_61_report_engine_foundation_only_no_scheduled_report_generators():
+    # N-3 explicitly authorized a Report Engine FOUNDATION (intel/report_engine/: data contract,
+    # section contract, JSON reports, HTML view) -- "report_engine" itself is no longer forbidden.
+    # What remains forbidden is a scheduled/automated weekly or monthly report generator, which no
+    # phase has authorized yet.
+    forbidden_names = ("weekly_report", "monthly_report")
     existing = [d.name for d in INTEL_DIR.iterdir() if d.is_dir() and d.name.lower() in forbidden_names]
-    assert existing == [], f"금지된 Report Engine 디렉터리가 존재함: {existing}"
+    assert existing == [], f"금지된 Report Generator 디렉터리가 존재함: {existing}"
     py_hits = [str(p) for p in INTEL_DIR.rglob("*.py")
-               if any(tok in p.name.lower() for tok in ("report_generator", "weekly_generator", "monthly_generator"))]
+               if any(tok in p.name.lower() for tok in ("weekly_generator", "monthly_generator"))]
     assert py_hits == [], f"금지된 Report Generator 파일이 존재함: {py_hits}"
 
 

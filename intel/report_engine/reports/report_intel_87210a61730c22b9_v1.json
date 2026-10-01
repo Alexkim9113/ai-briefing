@@ -1,0 +1,389 @@
+{
+ "report_id": "report_intel_87210a61730c22b9_v1",
+ "intelligence_id": "intel_87210a61730c22b9",
+ "topic": "AI_ENERGY_INFRA",
+ "version": 1,
+ "generated_at": "2026-10-01T05:37:21.777263+00:00",
+ "source_snapshot": "c4cc2c72d935370f",
+ "claim_snapshot": "5488ab149e1d9ced",
+ "evidence_snapshot": "52358fe746ecd19b",
+ "readiness": "CONDITIONALLY_READY",
+ "sections": {
+  "KEY_CLAIMS": {
+   "section_id": "sec_key_claims",
+   "section_type": "KEY_CLAIMS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_7f1bc452c4ffc128",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    }
+   ],
+   "claim_ids": [
+    "claim_7f1bc452c4ffc128"
+   ],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776825+00:00"
+  },
+  "STATISTICAL_CONTEXT": {
+   "section_id": "sec_statistical_context",
+   "section_type": "STATISTICAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "EG.USE.ELEC.KH.PC",
+     "source": "src_worldbank_api",
+     "geography": "USA",
+     "period": "2010-2022",
+     "observation_count": 13,
+     "trend_status": "NO_CLEAR_SIGNAL",
+     "limitations": []
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [
+    "series_af37f1207e7ff042"
+   ],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776864+00:00"
+  },
+  "RESEARCH_EVIDENCE": {
+   "section_id": "sec_research_evidence",
+   "section_type": "RESEARCH_EVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776870+00:00"
+  },
+  "POLICY_CONTEXT": {
+   "section_id": "sec_policy_context",
+   "section_type": "POLICY_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776873+00:00"
+  },
+  "COUNTEREVIDENCE": {
+   "section_id": "sec_counterevidence",
+   "section_type": "COUNTEREVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776876+00:00",
+   "search_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "search_outcome_note": "현재 수행한 검색 범위에서는 확인하지 못했다"
+  },
+  "ALTERNATIVE_EXPLANATIONS": {
+   "section_id": "sec_alternative_explanations",
+   "section_type": "ALTERNATIVE_EXPLANATIONS",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776880+00:00"
+  },
+  "UNCERTAINTIES": {
+   "section_id": "sec_uncertainties",
+   "section_type": "UNCERTAINTIES",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+    },
+    {
+     "cause": "TEMPORAL_UNCERTAINTY",
+     "detail": "no data points after 2022 in this series"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776887+00:00"
+  },
+  "WHAT_WE_KNOW": {
+   "section_id": "sec_what_we_know",
+   "section_type": "WHAT_WE_KNOW",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776895+00:00"
+  },
+  "WHAT_WE_DO_NOT_KNOW": {
+   "section_id": "sec_what_we_do_not_know",
+   "section_type": "WHAT_WE_DO_NOT_KNOW",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no evidence yet connects AI data-center load growth specifically to this aggregate per-capita series; the indicator is undifferentiated by sector"
+    },
+    {
+     "gap_type": "TEMPORAL_GAP",
+     "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "no counterevidence/alternative-explanation evidence connected yet (manufacturing reshoring, EV adoption, weather, population growth) -- Entry Gate scope only"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+    },
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+    },
+    {
+     "cause": "TEMPORAL_UNCERTAINTY",
+     "detail": "no data points after 2022 in this series"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776900+00:00"
+  },
+  "EVIDENCE_GAPS": {
+   "section_id": "sec_evidence_gaps",
+   "section_type": "EVIDENCE_GAPS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no evidence yet connects AI data-center load growth specifically to this aggregate per-capita series; the indicator is undifferentiated by sector"
+    },
+    {
+     "gap_type": "TEMPORAL_GAP",
+     "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "no counterevidence/alternative-explanation evidence connected yet (manufacturing reshoring, EV adoption, weather, population growth) -- Entry Gate scope only"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [
+    "ATTRIBUTION_GAP",
+    "TEMPORAL_GAP",
+    "COUNTEREVIDENCE_GAP",
+    "POLICY_RESEARCH_GAP"
+   ],
+   "generated_at": "2026-10-01T05:37:21.776906+00:00"
+  },
+  "METAXIS_POINT": {
+   "section_id": "sec_metaxis_point",
+   "section_type": "METAXIS_POINT",
+   "status": "NOT_APPLICABLE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776909+00:00"
+  },
+  "EVIDENCE_MAP": {
+   "section_id": "sec_evidence_map",
+   "section_type": "EVIDENCE_MAP",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "node_type": "STATISTIC",
+     "id": "series_af37f1207e7ff042"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_290e45f3e25fcb78"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_7f1bc452c4ffc128"
+    },
+    {
+     "node_type": "INTELLIGENCE_OBJECT",
+     "id": "intel_87210a61730c22b9"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776914+00:00"
+  },
+  "SOURCE_PROVENANCE": {
+   "section_id": "sec_source_provenance",
+   "section_type": "SOURCE_PROVENANCE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "source_id": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "event:evt_a6a4027d9878143d",
+     "note": "non-document provenance reference"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [
+    "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+    "event:evt_a6a4027d9878143d"
+   ],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776919+00:00"
+  },
+  "CURRENT_STATE": {
+   "section_id": "sec_current_state",
+   "section_type": "CURRENT_STATE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022, with no AI-attribution evidence connected yet. Trend classification: NO_CLEAR_SIGNAL."
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776923+00:00"
+  },
+  "GEOGRAPHIC_CONTEXT": {
+   "section_id": "sec_geographic_context",
+   "section_type": "GEOGRAPHIC_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "geography": "USA",
+     "basis": "statistic geography field (World Bank country code), not inferred from publisher or language",
+     "scope": "event_country=UNKNOWN (per M.5E-F geography model discipline)"
+    },
+    {
+     "geography": "KR",
+     "basis": "source_registry_verified_publisher (connected event's documents)",
+     "scope": "publisher_country only for event evt_a6a4027d9878143d; event_country stays UNKNOWN (no inference from publisher to event location)"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776926+00:00"
+  },
+  "TEMPORAL_CONTEXT": {
+   "section_id": "sec_temporal_context",
+   "section_type": "TEMPORAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "period_start": "2010",
+     "period_end": "2022",
+     "source": "series_af37f1207e7ff042"
+    },
+    {
+     "period_start": "2026-09-29T10:00:04+09:00",
+     "period_end": "2026-09-29T10:00:04+09:00",
+     "source": "evt_a6a4027d9878143d",
+     "note": "1 real event, 2 documents reporting it -- document count != event count"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776928+00:00"
+  },
+  "HISTORICAL_CONTEXT": {
+   "section_id": "sec_historical_context",
+   "section_type": "HISTORICAL_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [
+    {
+     "status": "INSUFFICIENT_EVIDENCE",
+     "reason": "corpus-wide historical audit found documents dating back 13369 days, but no document specifically grounds an electrification/industrial-automation-era analogy for this pilot's AI_ENERGY_INFRA question; Te's named candidates (electrification, telecom infrastructure, data-center expansion, industrial electrification) remain conceptual references, not evidence-backed analogies, per historical_analogy.py's own no-invention discipline"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776933+00:00"
+  },
+  "KEY_QUESTION": {
+   "section_id": "sec_key_question",
+   "section_type": "KEY_QUESTION",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "is AI data center growth driving US electricity demand increase?"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.776939+00:00"
+  }
+ }
+}

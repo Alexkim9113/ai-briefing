@@ -1,0 +1,351 @@
+{
+ "report_id": "report_intel_dbab7b01963396b5_v1",
+ "intelligence_id": "intel_dbab7b01963396b5",
+ "topic": "AI_LABOR",
+ "version": 1,
+ "generated_at": "2026-10-01T05:37:21.781785+00:00",
+ "source_snapshot": "e1adb5a754252624",
+ "claim_snapshot": "b0e02283d61dc708",
+ "evidence_snapshot": "fefe68ccc8afa64a",
+ "readiness": "CONDITIONALLY_READY",
+ "sections": {
+  "KEY_CLAIMS": {
+   "section_id": "sec_key_claims",
+   "section_type": "KEY_CLAIMS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_4765a68987d86c67",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    }
+   ],
+   "claim_ids": [
+    "claim_4765a68987d86c67"
+   ],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781393+00:00"
+  },
+  "STATISTICAL_CONTEXT": {
+   "section_id": "sec_statistical_context",
+   "section_type": "STATISTICAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "SL.TLF.ACTI.ZS",
+     "source": "src_worldbank_api",
+     "geography": "USA",
+     "period": "2010-2022",
+     "observation_count": 13,
+     "trend_status": "STABLE",
+     "limitations": []
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [
+    "series_c302bf9e2576ad47"
+   ],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781416+00:00"
+  },
+  "RESEARCH_EVIDENCE": {
+   "section_id": "sec_research_evidence",
+   "section_type": "RESEARCH_EVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781420+00:00"
+  },
+  "POLICY_CONTEXT": {
+   "section_id": "sec_policy_context",
+   "section_type": "POLICY_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781423+00:00"
+  },
+  "COUNTEREVIDENCE": {
+   "section_id": "sec_counterevidence",
+   "section_type": "COUNTEREVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781427+00:00",
+   "search_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "search_outcome_note": "현재 수행한 검색 범위에서는 확인하지 못했다"
+  },
+  "ALTERNATIVE_EXPLANATIONS": {
+   "section_id": "sec_alternative_explanations",
+   "section_type": "ALTERNATIVE_EXPLANATIONS",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781430+00:00"
+  },
+  "UNCERTAINTIES": {
+   "section_id": "sec_uncertainties",
+   "section_type": "UNCERTAINTIES",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781432+00:00"
+  },
+  "WHAT_WE_KNOW": {
+   "section_id": "sec_what_we_know",
+   "section_type": "WHAT_WE_KNOW",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781438+00:00"
+  },
+  "WHAT_WE_DO_NOT_KNOW": {
+   "section_id": "sec_what_we_do_not_know",
+   "section_type": "WHAT_WE_DO_NOT_KNOW",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no sector/occupation-level decomposition linking this aggregate indicator to AI adoption specifically"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "no counterevidence/alternative-explanation evidence connected yet for H1 beyond the listed candidate list"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over -- still NOT_READY"
+    },
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781440+00:00"
+  },
+  "EVIDENCE_GAPS": {
+   "section_id": "sec_evidence_gaps",
+   "section_type": "EVIDENCE_GAPS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no sector/occupation-level decomposition linking this aggregate indicator to AI adoption specifically"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "no counterevidence/alternative-explanation evidence connected yet for H1 beyond the listed candidate list"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over -- still NOT_READY"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [
+    "ATTRIBUTION_GAP",
+    "COUNTEREVIDENCE_GAP",
+    "POLICY_RESEARCH_GAP"
+   ],
+   "generated_at": "2026-10-01T05:37:21.781447+00:00"
+  },
+  "METAXIS_POINT": {
+   "section_id": "sec_metaxis_point",
+   "section_type": "METAXIS_POINT",
+   "status": "NOT_APPLICABLE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781449+00:00"
+  },
+  "EVIDENCE_MAP": {
+   "section_id": "sec_evidence_map",
+   "section_type": "EVIDENCE_MAP",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "node_type": "STATISTIC",
+     "id": "series_c302bf9e2576ad47"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_0ad164c8796a074d"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_4765a68987d86c67"
+    },
+    {
+     "node_type": "INTELLIGENCE_OBJECT",
+     "id": "intel_dbab7b01963396b5"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781455+00:00"
+  },
+  "SOURCE_PROVENANCE": {
+   "section_id": "sec_source_provenance",
+   "section_type": "SOURCE_PROVENANCE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "source_id": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+     "note": "non-document provenance reference"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [
+    "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100"
+   ],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781459+00:00"
+  },
+  "CURRENT_STATE": {
+   "section_id": "sec_current_state",
+   "section_type": "CURRENT_STATE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect."
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781462+00:00"
+  },
+  "GEOGRAPHIC_CONTEXT": {
+   "section_id": "sec_geographic_context",
+   "section_type": "GEOGRAPHIC_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "geography": "USA",
+     "basis": "statistic geography field (World Bank country code)",
+     "scope": "event_country=UNKNOWN"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781465+00:00"
+  },
+  "TEMPORAL_CONTEXT": {
+   "section_id": "sec_temporal_context",
+   "section_type": "TEMPORAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "period_start": "2010",
+     "period_end": "2022",
+     "source": "series_c302bf9e2576ad47"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781470+00:00"
+  },
+  "HISTORICAL_CONTEXT": {
+   "section_id": "sec_historical_context",
+   "section_type": "HISTORICAL_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781472+00:00"
+  },
+  "KEY_QUESTION": {
+   "section_id": "sec_key_question",
+   "section_type": "KEY_QUESTION",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "is AI adoption measurably shifting US labor force participation?"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T05:37:21.781474+00:00"
+  }
+ }
+}

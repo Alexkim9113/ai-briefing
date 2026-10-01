@@ -1,0 +1,18 @@
+{
+  "note": "Section 34 -- no new UI, only a check of which backend data/query surfaces already exist for a future Operator Workspace to read.",
+  "Reports": "READY -- intel/report_engine/reports/{report_id}.json, versioned, both PUBLIC/OPERATOR views via build_public_view()/build_operator_view()",
+  "Claims": "READY -- intel/claims/claims.json + claim_model.py",
+  "Evidence": "READY -- intel/claims/evidence_claim_relations.json",
+  "Sources": "READY -- intel/documents.json + build_source_card()",
+  "Research": "READY -- intel/research_corpus/research_identity.py + research_corpus_audit_result.json",
+  "Statistics": "READY -- intel/statistical_evidence/statistical_evidence.json",
+  "Hypotheses": "READY -- intel/hypothesis/hypotheses.json",
+  "Uncertainties": "READY -- embedded in intelligence_objects.json per-object",
+  "Known Gaps": "READY -- embedded in intelligence_objects.json per-object",
+  "Rights": "READY -- intel/research_rights/research_rights.json",
+  "Report Versions": "READY -- report_{intelligence_id}_v{n}.json files on disk, one per version, never overwritten",
+  "Policy": "NOT_READY -- policy_context exists as a field but no real Policy Research corpus feeds it yet (carried-over known gap)",
+  "Private Research": "NOT_READY -- 0 vault records exist currently; vault.py backend exists but has no real content to serve yet",
+  "Source Health": "NOT_READY -- no dashboard/aggregation backend exists; acquisition_queue circuit-breaker state is per-run, not persisted/queryable",
+  "Acquisition Queue": "PARTIAL -- queue_model.py utility exists (N-0) but not wired to the scheduler (N-2 decision), so no live queue state to serve"
+}

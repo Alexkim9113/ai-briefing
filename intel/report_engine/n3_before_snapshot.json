@@ -1,0 +1,36 @@
+{
+  "git_head_before_n3": "579e651dcce8aef5f80482aed056e5993270cc0c",
+  "documents_count": 601,
+  "documents_by_category": {"news_global": 160, "papers": 54, "news_ko": 227, "policy": 156, "research": 4},
+  "research_count_confirmed_identity": 58,
+  "news_count_total": 387,
+  "policy_count": 156,
+  "statistics_series_count": 2,
+  "claims_count": 2,
+  "evidence_claim_relations_count": 2,
+  "hypotheses_count": 2,
+  "intelligence_objects_count": 2,
+  "events_count_in_ai_energy_infra": 1,
+  "private_research_vault_records": 0,
+  "known_gaps_total_across_intelligence_objects": 7,
+  "uncertainties_total_across_intelligence_objects": 3,
+  "intelligence_objects_full_snapshot": {
+    "note": "full structure preserved verbatim below for both existing objects, exactly as read from intel/intelligence_objects/intelligence_objects.json at N-3 start",
+    "source_file": "intel/intelligence_objects/intelligence_objects.json"
+  },
+  "readiness_at_n3_start": {
+    "N2_STATUS": "CONDITIONAL PASS",
+    "PUBLIC_RELEVANCE_SAFETY": "READY",
+    "PUBLIC_EVIDENCE_RELEVANCE_SEPARATION": "READY",
+    "RESEARCH_CORPUS": "READY",
+    "RESEARCH_NEWS_SEPARATION": "READY",
+    "RESEARCH_RIGHTS": "READY",
+    "PRIVATE_RESEARCH": "READY",
+    "PROVENANCE_CONTRACT": "READY",
+    "INTELLIGENCE_OBJECT_CONTRACT": "READY",
+    "METAXIS_POINT_GROUNDING": "CONDITIONALLY_READY",
+    "REPORT_ENGINE_ENTRY": "CONDITIONAL GO",
+    "INTELLIGENCE_READINESS": "CONDITIONALLY_READY"
+  },
+  "note": "All counts recomputed live from the repository at N-3 start, not copied from a prior report's text."
+}
