@@ -1,0 +1,56 @@
+{
+ "run_at": "2026-10-01T07:01:18.361063+00:00",
+ "note": "N-6 Priority 5 -- live counterevidence acquisition attempt. No counterevidence item is admitted into any Intelligence Object/Claim from this run unless acquisition_outcome == SEARCH_RUN_NO_EVIDENCE or better; ACCESS_BLOCKED/SEARCH_NOT_RUN/NO_REGISTERED_SOURCE rows contribute nothing to the evidence graph (and never render as 'no counterevidence exists').",
+ "results": [
+  {
+   "topic": "AI_ENERGY_INFRA",
+   "angle": "manufacturing_reshoring_power_demand",
+   "source_id": "src_eia_api",
+   "source_url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=monthly&api_key=",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "http_status": "BLOCKED",
+   "proxy_error": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "checked_at": "2026-10-01T07:01:15.850265+00:00"
+  },
+  {
+   "topic": "AI_ENERGY_INFRA",
+   "angle": "ev_adoption_power_demand",
+   "source_id": "src_eia_api",
+   "source_url": "https://api.eia.gov/v2/electricity/retail-sales/data/?frequency=monthly&api_key=",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "http_status": "BLOCKED",
+   "proxy_error": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "checked_at": "2026-10-01T07:01:16.493712+00:00"
+  },
+  {
+   "topic": "AI_ENERGY_INFRA",
+   "angle": "weather_driven_power_demand",
+   "source_id": "src_worldbank_api",
+   "source_url": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2020:2022&format=json&per_page=5",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "http_status": "BLOCKED",
+   "proxy_error": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "checked_at": "2026-10-01T07:01:17.066787+00:00"
+  },
+  {
+   "topic": "AI_LABOR",
+   "angle": "post_pandemic_labor_participation_recovery",
+   "source_id": "src_worldbank_api",
+   "source_url": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2020:2022&format=json&per_page=5",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "http_status": "BLOCKED",
+   "proxy_error": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "checked_at": "2026-10-01T07:01:17.727519+00:00"
+  },
+  {
+   "topic": "AI_LABOR",
+   "angle": "demographic_aging_labor_participation",
+   "source_id": "src_ilo",
+   "source_url": "https://www.ilo.org",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "http_status": "BLOCKED",
+   "proxy_error": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "checked_at": "2026-10-01T07:01:18.361023+00:00"
+  }
+ ]
+}
