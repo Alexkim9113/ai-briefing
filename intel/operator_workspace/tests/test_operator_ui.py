@@ -41,6 +41,20 @@ def test_overview_never_fabricates_healthy_source_status():
     assert "FAKE" not in html_doc.upper()
 
 
+def test_overview_shows_last_live_acquisition_section():
+    html_doc = ou.render_overview()
+    assert "Last Live Acquisition" in html_doc
+    assert "RUN_ID=" in html_doc
+    assert "ENVIRONMENT=" in html_doc
+
+
+def test_overview_live_run_section_never_shows_secrets_or_headers():
+    html_doc = ou.render_overview()
+    lowered = html_doc.lower()
+    for forbidden in ("authorization:", "api_key=", "x-api-key", "bearer "):
+        assert forbidden not in lowered
+
+
 def test_sources_page_caps_sample_and_links_full_json():
     html_doc = ou.render_sources()
     assert "sources_full.json" in html_doc or "first" in html_doc.lower()

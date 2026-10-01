@@ -1,0 +1,146 @@
+{
+ "note": "N-8 Section 23. Read-only -- writes no new gap_records.py entries. Every observed outcome maps onto an existing gap_type (SOURCE_GAP or QUERY_GAP); no new gap vocabulary (e.g. a 5th ACCESS_GAP type) was needed.",
+ "gap_type_vocabulary_reused": [
+  "SOURCE_GAP",
+  "ACCESS_GAP",
+  "QUERY_GAP"
+ ],
+ "rows": [
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "World Bank",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "EIA",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_LABOR",
+   "institution_or_angle": "World Bank",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_LABOR",
+   "institution_or_angle": "ILO",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "OECD",
+   "acquisition_outcome": "NO_REGISTERED_SOURCE",
+   "mapped_gap_type": "SOURCE_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "IEA",
+   "acquisition_outcome": "NO_REGISTERED_SOURCE",
+   "mapped_gap_type": "SOURCE_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "policy_research_acquisition",
+   "topic": "AI_LABOR",
+   "institution_or_angle": "KDI",
+   "acquisition_outcome": "NO_REGISTERED_SOURCE",
+   "mapped_gap_type": "SOURCE_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "counterevidence_live_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "manufacturing_reshoring_power_demand",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "counterevidence_live_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "ev_adoption_power_demand",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "counterevidence_live_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "weather_driven_power_demand",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "counterevidence_live_acquisition",
+   "topic": "AI_LABOR",
+   "institution_or_angle": "post_pandemic_labor_participation_recovery",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "counterevidence_live_acquisition",
+   "topic": "AI_LABOR",
+   "institution_or_angle": "demographic_aging_labor_participation",
+   "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
+   "mapped_gap_type": "QUERY_GAP",
+   "matches_existing_gap_record_for_topic": true,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "longitudinal_evidence_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "BASELINE",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "longitudinal_evidence_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "TRANSITION",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  },
+  {
+   "job": "longitudinal_evidence_acquisition",
+   "topic": "AI_ENERGY_INFRA",
+   "institution_or_angle": "CURRENT",
+   "acquisition_outcome": "ACCESS_BLOCKED",
+   "mapped_gap_type": "ACCESS_GAP",
+   "matches_existing_gap_record_for_topic": false,
+   "new_gap_type_needed": false
+  }
+ ],
+ "any_new_gap_type_needed": false
+}

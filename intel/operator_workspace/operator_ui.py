@@ -102,10 +102,22 @@ def render_overview():
         f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
         for k, v in o.items() if k != "source_health"
     )
+    live = op.live_run_status()
+    live_kpis = "".join(
+        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
+        for k, v in live.items() if k not in ("run_id", "head_sha", "completed_at", "environment")
+    )
+    live_section = (
+        f'<h2>Last Live Acquisition</h2>'
+        f'<p class="mono">RUN_ID={_esc(live["run_id"])} HEAD_SHA={_esc(live["head_sha"])} '
+        f'COMPLETED_AT={_esc(live["completed_at"])} ENVIRONMENT={_esc(live["environment"])}</p>'
+        f'<div class="kpi-row">{live_kpis}</div>'
+    )
     return _shell("Overview", "overview", (
         f'{PUBLIC_SAFE_BANNER}'
         f'<div class="kpi-row">{kpis}</div>'
         f'<p>Source Health (minimal contract): {_status(o["source_health"])}</p>'
+        f'{live_section}'
     ))
 
 

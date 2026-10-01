@@ -81,6 +81,46 @@ def overview():
     }
 
 
+def live_run_status():
+    """N-8 Sections 24-25 -- public-safe summary of the last real live GitHub Actions
+    acquisition run, joined with the N-8 evidence-yield funnel's measured counts. No
+    secrets, request headers, or private response bodies are read or surfaced here --
+    only the run provenance already written to evidence_yield_funnel_result.json and
+    source_health_result.github_actions.json."""
+    funnel_path = INTEL_DIR / "evidence_network" / "evidence_yield_funnel_result.json"
+    if not funnel_path.exists():
+        return {
+            "run_id": "NOT_INSTRUMENTED", "head_sha": "NOT_INSTRUMENTED",
+            "completed_at": "NOT_INSTRUMENTED", "environment": "NOT_INSTRUMENTED",
+            "status": "NOT_INSTRUMENTED", "sources_attempted": "NOT_INSTRUMENTED",
+            "candidates": "NOT_INSTRUMENTED", "admitted": "NOT_INSTRUMENTED",
+            "connected": "NOT_INSTRUMENTED",
+        }
+    funnel = _load(funnel_path)
+    n8 = funnel.get("n8_live_acquisition")
+    if not n8:
+        return {
+            "run_id": "NOT_INSTRUMENTED", "head_sha": "NOT_INSTRUMENTED",
+            "completed_at": "NOT_INSTRUMENTED", "environment": "NOT_INSTRUMENTED",
+            "status": "NOT_INSTRUMENTED", "sources_attempted": "NOT_INSTRUMENTED",
+            "candidates": "NOT_INSTRUMENTED", "admitted": "NOT_INSTRUMENTED",
+            "connected": "NOT_INSTRUMENTED",
+        }
+    prov = n8["live_run_provenance"]
+    stages = n8["stages"]
+    return {
+        "run_id": prov["run_id"],
+        "head_sha": prov["head_sha"],
+        "completed_at": prov["completed_at"],
+        "environment": prov["environment"],
+        "status": "EXECUTED/SUCCESS",
+        "sources_attempted": stages["SOURCE_SELECTED"]["count"],
+        "candidates": stages["CANDIDATE_CREATED"]["count"],
+        "admitted": stages["ADMITTED"]["count"],
+        "connected": stages["EVIDENCE_CONNECTED"]["count"],
+    }
+
+
 def list_reports():
     """Section 7 -- Operator Report List."""
     rows = []
