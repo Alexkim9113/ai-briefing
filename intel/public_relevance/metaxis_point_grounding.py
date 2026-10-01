@@ -48,3 +48,40 @@ def filter_publishable_points(sentences_with_grounding):
     sentences whose grounding status is NOT UNSUPPORTED_INTERPRETATION -- never silently
     rewrites an unsupported sentence into a supported-sounding one, only drops it."""
     return [s for s, g in sentences_with_grounding if g["status"] != "UNSUPPORTED_INTERPRETATION"]
+
+
+# N-2 -- METAXIS Point Provenance Contract (Section 13). A structural record every production
+# POINT carries so an Operator can trace it later, even though the Public UI need not display it.
+INTERPRETATION_TYPES = ("DESCRIPTIVE", "SYNTHETIC", "CAUSAL", "ATTRIBUTIONAL", "FORECAST",
+                        "EDITORIAL_INTERPRETATION")
+
+_FORECAST_MARKERS = ("전망이다", "예상된다", "것으로 보인다", "will", "is expected to")
+
+
+def classify_interpretation_type(sentence):
+    """Deterministic, conservative classification -- never an LLM judgment call. A sentence
+    matching no marker defaults to DESCRIPTIVE (the safest default: DESCRIPTIVE/SYNTHETIC are
+    never blocked by check_point_grounding's causal check, so defaulting here never over-blocks)."""
+    if _has_causal_claim(sentence):
+        return "CAUSAL" if any(m in (sentence or "") for m in ("때문에", "으로 인해", "로 인해", "원인", "초래", "주범")) else "ATTRIBUTIONAL"
+    if any(m in (sentence or "").lower() for m in _FORECAST_MARKERS):
+        return "FORECAST"
+    return "DESCRIPTIVE"
+
+
+def build_provenance_record(point_id, point_text, grounding_result, claim_ids=None, evidence_ids=None,
+                             intelligence_ids=None, source_ids=None, generated_at=None):
+    """Builds the per-POINT traceability record (point_id/point_text/claim_ids/evidence_ids/
+    intelligence_ids/source_ids/grounding_status/interpretation_type/generated_at). Never
+    fabricates an id list -- empty lists are kept empty, not padded."""
+    return {
+        "point_id": point_id,
+        "point_text": point_text,
+        "claim_ids": list(claim_ids or []),
+        "evidence_ids": list(evidence_ids or []),
+        "intelligence_ids": list(intelligence_ids or []),
+        "source_ids": list(source_ids or []),
+        "grounding_status": grounding_result["status"],
+        "interpretation_type": classify_interpretation_type(point_text),
+        "generated_at": generated_at,
+    }

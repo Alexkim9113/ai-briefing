@@ -1,0 +1,42 @@
+{
+ "status": "READY",
+ "tested_objects": 2,
+ "results": [
+  {
+   "intelligence_id": "intel_87210a61730c22b9",
+   "topic": "AI_ENERGY_INFRA",
+   "sections_present": [
+    "Executive Summary",
+    "What Happened",
+    "Evidence",
+    "Statistics",
+    "Uncertainty",
+    "METAXIS Point",
+    "Sources"
+   ],
+   "sections_insufficient_evidence": [
+    "Research",
+    "Counterevidence",
+    "Alternative Explanations"
+   ]
+  },
+  {
+   "intelligence_id": "intel_dbab7b01963396b5",
+   "topic": "AI_LABOR",
+   "sections_present": [
+    "Executive Summary",
+    "What Happened",
+    "Evidence",
+    "Statistics",
+    "Uncertainty",
+    "METAXIS Point",
+    "Sources"
+   ],
+   "sections_insufficient_evidence": [
+    "Research",
+    "Counterevidence",
+    "Alternative Explanations"
+   ]
+  }
+ ]
+}

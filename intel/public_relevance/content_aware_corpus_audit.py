@@ -33,6 +33,8 @@ def run_audit():
             "relevance_basis": result["relevance_basis"], "relevance_scope": result["relevance_scope"],
             "content_depth": result["content_depth"], "publication_eligible": result["publication_eligible"],
             "publication_reason": result["publication_reason"],
+            "evidence_relevance": result["evidence_relevance"],
+            "evidence_matched_hypotheses": result["evidence_matched_hypotheses"],
             "research_status": "UNKNOWN",  # filled in by research_corpus_audit.py
             "source_type": doc.get("category"),
             "visibility": "PUBLIC" if result["publication_eligible"] else (

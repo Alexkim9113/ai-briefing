@@ -10,6 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import relevance_gate as rg  # noqa: E402
+import evidence_relevance as evr  # noqa: E402
 
 RELEVANCE_CLASSES = (
     "AI_DIRECT", "AI_POLICY", "AI_RESEARCH", "AI_ECONOMY", "AI_CULTURE", "AI_INFRASTRUCTURE",
@@ -109,14 +110,18 @@ def classify_content_aware_relevance(doc):
     if category_result in ("WEAK_ASSOCIATION", "INCIDENTAL_AI_MENTION", "NOT_RELEVANT"):
         category_result = "GENERAL_NEWS"
 
-    if category_result in PUBLIC_RELEVANCE_CLASSES:
-        scope = "DIRECT"
-    elif category_result == "UNCERTAIN_RELEVANCE":
-        scope = "NONE"
-    else:
-        scope = "NONE"
+    # N-2 -- PUBLIC_RELEVANCE and EVIDENCE_RELEVANCE are computed independently (evr never reads
+    # category_result, and category_result above never reads evr) and relevance_scope is now
+    # actually differentiated (DIRECT/STRUCTURAL/CONTEXTUAL/IRRELEVANT/UNKNOWN) instead of
+    # collapsing everything non-DIRECT to "NONE" (N-1's disclosed simplification).
+    evidence_relevance, matched_hypotheses = evr.classify_evidence_relevance(doc)
+    scope = evr.compute_relevance_scope(category_result, PUBLIC_RELEVANCE_CLASSES, evidence_relevance, content_depth)
 
-    publication_eligible = scope in ("DIRECT", "STRUCTURAL") and category_result in PUBLIC_RELEVANCE_CLASSES
+    # publication_eligible is unchanged from N-1's rule: only a DIRECT public-category document is
+    # public-feed eligible. STRUCTURAL/CONTEXTUAL evidence relevance NEVER makes a document
+    # publication_eligible -- that would be exactly the PUBLIC_ELIGIBLE/EVIDENCE_ELIGIBLE
+    # conflation Section 10 explicitly forbids.
+    publication_eligible = scope == "DIRECT" and category_result in PUBLIC_RELEVANCE_CLASSES
     publication_reason = (
         f"relevance_class={category_result}, scope={scope} -- {basis}"
     )
@@ -128,4 +133,6 @@ def classify_content_aware_relevance(doc):
         "content_depth": content_depth,
         "publication_eligible": publication_eligible,
         "publication_reason": publication_reason,
+        "evidence_relevance": evidence_relevance,
+        "evidence_matched_hypotheses": matched_hypotheses,
     }

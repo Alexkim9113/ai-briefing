@@ -1,0 +1,40 @@
+{
+  "git_head_before_n2": "8d4ac8269ec9b86a37704e35e4c4036a0ec1eb6f",
+  "documents_count": 601,
+  "source_registry_count": 299,
+  "research_identity_count": 58,
+  "news_about_research_count": 75,
+  "no_identity_news_count": 468,
+  "duplicate_identity_groups": 0,
+  "relevance_class_distribution_after_n1": {
+    "AI_LABOR": 11, "GENERAL_NEWS": 115, "KEYWORD_COLLISION": 19, "AI_ECONOMY": 16,
+    "AI_INFRASTRUCTURE": 8, "AI_DIRECT": 218, "AI_POLICY": 136, "AI_CULTURE": 14,
+    "AI_RESEARCH": 56, "AI_GOVERNANCE": 6, "AI_SOCIAL_IMPACT": 2
+  },
+  "publication_eligible_count": 466,
+  "intelligence_object_count": 2,
+  "claim_count": 2,
+  "statistical_evidence_series_count": 2,
+  "hypothesis_count": 2,
+  "private_research_vault_records": 0,
+  "existing_readiness_matrix_from_n1": {
+    "N1_STATUS": "CONDITIONAL PASS",
+    "PUBLIC_RELEVANCE_SAFETY": "READY",
+    "METAXIS_POINT_GROUNDING": "CONDITIONALLY_READY",
+    "RESEARCH_CORPUS": "READY",
+    "RESEARCH_NEWS_SEPARATION": "CONDITIONALLY_READY",
+    "RESEARCH_RIGHTS": "READY",
+    "PRIVATE_RESEARCH": "READY",
+    "LIVE_EVIDENCE_PIPELINE": "READY",
+    "INTELLIGENCE_READINESS": "CONDITIONALLY_READY",
+    "PHASE_N_ENTRY": "CONDITIONAL GO"
+  },
+  "existing_known_gaps_from_n1": [
+    "relevance_scope never differentiates STRUCTURAL/CONTEXTUAL from DIRECT/NONE",
+    "METAXIS Point Grounding: only causal/attribution markers gated in production, full non-causal grounding not wired",
+    "documents.json category field itself not yet updated for the 75 NEWS_ABOUT_RESEARCH documents (sidecar audit only)",
+    "acquisition_queue utility not wired to scheduler",
+    "Policy Research / Counterevidence / Longitudinal remain NOT_READY (by design, not forced)"
+  ],
+  "note": "All counts independently recomputed from the live repository at N-2 start (not hard-coded from the N-1 report text) and found to match N-1's reported numbers exactly -- confirms no drift occurred between N-1's report and N-2's start."
+}

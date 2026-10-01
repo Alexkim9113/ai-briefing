@@ -1161,6 +1161,7 @@ def _mx_ok(it, r):
     # intelligence_object ids yet, so a full SOURCE_SUPPORTED/EVIDENCE_NETWORK_SUPPORTED check for
     # every non-causal Point would over-block and is left CONDITIONALLY_READY, not wired here. An
     # ungrounded causal Point is downgraded (dropped), never the whole item -- QUICK BRIEF survives.
+    provenance = None
     try:
         grounding_mod = _load_metaxis_point_grounding_module()
         if grounding_mod._has_causal_claim(p):
@@ -1168,7 +1169,17 @@ def _mx_ok(it, r):
                                                              evidence_network_refs=None,
                                                              intelligence_object_refs=None)
             if grounding["status"] == "UNSUPPORTED_INTERPRETATION":
+                provenance = grounding_mod.build_provenance_record(
+                    point_id=f"mxp_{it.get('id', '')}", point_text=p, grounding_result=grounding,
+                    source_ids=[it.get("id")], generated_at=datetime.now(timezone.utc).isoformat())
                 p = ""
+        if p:
+            # N-2 Provenance Contract -- traced even for non-blocked Points (Operator-traceable per
+            # Section 13), without changing what is shown to the Public UI (data-mv is unaffected).
+            grounding = grounding_mod.check_point_grounding(p, source_document_evidence=True)
+            provenance = grounding_mod.build_provenance_record(
+                point_id=f"mxp_{it.get('id', '')}", point_text=p, grounding_result=grounding,
+                source_ids=[it.get("id")], generated_at=datetime.now(timezone.utc).isoformat())
     except Exception:
         pass
     tags = list(dict.fromkeys(t for t in tags if len(t) <= 20))[:5]
@@ -1176,7 +1187,10 @@ def _mx_ok(it, r):
         tags = list(it["tags_fixed"])[:5]
     if len(tags) < 3:
         tags += [n for n, _ in mx_tags(it) if n not in tags][:3 - len(tags)]
-    return {"b": b, "p": p, "t": tags, "v": MX_VER}
+    result = {"b": b, "p": p, "t": tags, "v": MX_VER}
+    if provenance:  # Operator-traceable only -- _mx_attrs()/title_link() never read "prov"
+        result["prov"] = provenance
+    return result
 
 
 def ai_briefs(items, max_req=8, batch_size=10):

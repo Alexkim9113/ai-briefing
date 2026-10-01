@@ -1,0 +1,22 @@
+{
+ "schema_fields_checked": [
+  "topic",
+  "current_state",
+  "key_claims",
+  "supporting_evidence",
+  "counterevidence",
+  "alternative_explanations",
+  "statistics",
+  "research_context",
+  "policy_context",
+  "geographic_context",
+  "temporal_chain",
+  "uncertainties",
+  "known_gaps",
+  "provenance",
+  "revision_history",
+  "readiness"
+ ],
+ "missing_fields": [],
+ "status": "READY"
+}

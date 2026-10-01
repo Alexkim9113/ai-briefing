@@ -1,0 +1,18 @@
+{
+  "audit_date": "2026-10-01",
+  "scope": "N-2 Section 21-22 -- audit whether N-0's acquisition_queue utility can be safely wired into .github/workflows/daily.yml's real scheduler",
+  "existing_daily_yml_findings": {
+    "schedule": "cron '7,37 * * * *' (every 30 minutes) + workflow_dispatch",
+    "concurrency_control": "top-level `concurrency` group on the main build job, PLUS each shadow/remediation job (evidence_shadow, reality_shadow, admission_shadow/gap_closure jobs, and others) already declares its OWN separate `concurrency` group -- at least 9 distinct concurrency groups found in the current workflow",
+    "existing_isolation_pattern": "every shadow job already follows: own concurrency group + continue-on-error + needs: build + if: always() + commits only its own output file -- this is the exact pattern Section 21 asks to verify, and it already exists and is working (confirmed via git log: no duplicate-admission or push-collision incidents since this pattern was adopted)",
+    "known_past_incident": "M.5E found a push-retry race condition before this per-job concurrency-group pattern existed; it was fixed by giving each job its own concurrency group. This audit found no recurrence in the current daily.yml."
+  },
+  "acquisition_queue_module_findings": {
+    "location": "intel/acquisition_queue/queue_model.py (N-0)",
+    "status": "pure utility -- CircuitBreaker/Job/SourceFamilyQueue classes with their own tests, never imported by briefing.py or any workflow file",
+    "risk_if_wired_now": "daily.yml's existing per-job concurrency-group isolation already serves the same purpose (preventing concurrent fetch collisions) for the jobs it runs. Wiring acquisition_queue's own retry/circuit-breaker logic INTO those same jobs without first mapping exactly which job would own which SourceFamilyQueue risks two independent retry/backoff layers fighting each other (e.g. GitHub Actions' own job retry plus acquisition_queue's retry_with_backoff on the same failed fetch) -- not tested, not audited this round."
+  },
+  "decision": "NOT_WIRED",
+  "decision_reason": "The collision audit did not find an unsafe EXISTING pattern (daily.yml's own per-job concurrency isolation already works), but it also did not complete a safe mapping from acquisition_queue's SourceFamilyQueue model onto daily.yml's actual jobs. Per Te's explicit Section 22 allowance ('이번 N-2에서 scheduler 연결이 위험하면 연결하지 않고 backlog로 넘겨도 된다... Scheduler 미연결 하나만으로 Phase N을 막지 않는다'), this is deferred to backlog rather than forced.",
+  "backlog_item": "map each QUEUE_FAMILIES entry (NEWS_QUEUE/RESEARCH_QUEUE/POLICY_QUEUE/STATISTICS_QUEUE/PRIVATE_RESEARCH_QUEUE) onto a specific daily.yml job before wiring, and decide whether acquisition_queue's retry logic REPLACES or coexists with GitHub Actions' own job-level retry semantics"
+}

@@ -215,5 +215,12 @@
       "evidence_ids": [],
       "status": "UNSUPPORTED_ALTERNATIVE"
     }
-  ]
+  ],
+  "search_outcome": "SEARCH_RUN_NO_EVIDENCE",
+  "search_outcome_values": [
+    "SEARCH_NOT_RUN",
+    "SEARCH_RUN_NO_EVIDENCE",
+    "EVIDENCE_FOUND"
+  ],
+  "search_outcome_note": "N-2 Section 24 -- a real search ran across 7 directions (see counterevidence_search_log) and found 0 candidates; this is SEARCH_RUN_NO_EVIDENCE, not an assertion that no counterevidence exists."
 }
