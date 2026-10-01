@@ -1,0 +1,21 @@
+{
+  "git_head_before_n4": "3403e021",
+  "documents": 601,
+  "research_identity_confirmed": 58,
+  "news_count": 543,
+  "statistics_series_count": 2,
+  "claims_count": 2,
+  "hypotheses_count": 2,
+  "intelligence_objects_count": 2,
+  "reports_count": 2,
+  "report_versions": {"intel_87210a61730c22b9": 1, "intel_dbab7b01963396b5": 1},
+  "public_reports_count": 2,
+  "private_research_count": 0,
+  "known_gaps_total": 7,
+  "uncertainties_total": 3,
+  "report_json_hashes_before_n4": {
+    "report_intel_87210a61730c22b9_v1.json": "5eb972d0dc6a71ed",
+    "report_intel_dbab7b01963396b5_v1.json": "5f255f05d15ad71a"
+  },
+  "note": "These hashes are compared again after N-4's Presentation Layer/PDF work to verify the N-3 Report JSON's canonical meaning was not altered -- only a separate Presentation Model may be added alongside it."
+}
