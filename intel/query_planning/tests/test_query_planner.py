@@ -142,4 +142,18 @@ def test_section32_fully_exhausted_search_is_true_null():
 
 def test_section32_true_null_is_in_the_named_vocabulary():
     assert "TRUE_NULL" in m.NOT_FOUND_GAP_CLASSES
-    assert len(m.NOT_FOUND_GAP_CLASSES) == 8
+    assert len(m.NOT_FOUND_GAP_CLASSES) == 9
+
+
+def test_m5e_final_section27_validation_gap_added_not_replacing_classification_gap():
+    # Te's M.5E FINAL Section 27 restated the taxonomy with VALIDATION_GAP in place of
+    # CLASSIFICATION_GAP. CLASSIFICATION_GAP has an independent real caller elsewhere in this
+    # codebase (intel/pipeline_diagnostics/diagnostics.py), so it is kept, and VALIDATION_GAP is
+    # added as a new, distinct case rather than silently dropped.
+    assert "CLASSIFICATION_GAP" in m.NOT_FOUND_GAP_CLASSES
+    assert "VALIDATION_GAP" in m.NOT_FOUND_GAP_CLASSES
+
+
+def test_section27_candidate_failed_validation_is_validation_gap():
+    result = m.classify_not_found("RESEARCH", ["JOURNAL"], ["x"], candidate_failed_validation=True)
+    assert result == "VALIDATION_GAP"

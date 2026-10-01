@@ -1,0 +1,144 @@
+{
+  "note": "M.5E FINAL Section 33 Corpus Maturity Matrix. Deliberately NOT a composite score -- 17 independent dimensions, each judged on its own evidence.",
+  "total_documents": 601,
+  "dimensions": {
+    "SOURCE_DIVERSITY": {
+      "measurement": "distinct source_id count / total documents",
+      "numerator": 257,
+      "denominator": 601,
+      "method": "set() of source_id over documents.json",
+      "status": "SUPPORTED",
+      "limitation": "counts distinct feeds, not distinct owning organizations -- e.g. src_구글뉴스_ai_정책 and src_google_news_ai_regulation are the same aggregator counted twice"
+    },
+    "PRIMARY_SOURCE_COVERAGE": {
+      "measurement": "direct_primary_source_ratio (reused from source_diversity.audit)",
+      "numerator": null,
+      "denominator": 601,
+      "method": "intel/source_diversity/audit.py:direct_primary_source_ratio()",
+      "status": "SEE_RAW",
+      "raw": null,
+      "limitation": "primary/secondary is source_id-verified per M.5F Section 23's correction, not the raw category field"
+    },
+    "ACADEMIC_COVERAGE": {
+      "measurement": "academic_source_ratio (reused)",
+      "method": "audit.py:academic_source_ratio()",
+      "status": "SEE_RAW",
+      "raw": null,
+      "limitation": "counts arXiv/Crossref-tagged source_ids only; does not verify peer-review status of each individual document"
+    },
+    "POLICY_RESEARCH_COVERAGE": {
+      "measurement": "count of documents whose source_id matches a known policy-research-institute pattern (KDI/KIET/KEEI/KOSTAT/KISTEP/KRIHS/KREI)",
+      "numerator": 0,
+      "denominator": 601,
+      "method": "direct source_id substring check, same pattern as deep_pilot_v2.py's POLICY_RESEARCH_CONTEXT node",
+      "status": "NOT_READY",
+      "limitation": "0 confirmed -- no Korean policy-research-institute source is registered in this corpus at all; this is a real coverage gap, not a measurement artifact"
+    },
+    "STATISTICAL_COVERAGE": {
+      "measurement": "statistical_source_ratio (reused)",
+      "method": "audit.py:statistical_source_ratio()",
+      "status": "SEE_RAW",
+      "raw": null,
+      "limitation": "0 confirmed in prior rounds -- no World Bank/EIA/KOSTAT-class source registered; a real gap"
+    },
+    "TEMPORAL_DEPTH": {
+      "measurement": "earliest to latest published date span in years",
+      "numerator": 36,
+      "denominator": null,
+      "method": "min/max of documents.json published field",
+      "status": "PARTIALLY_SUPPORTED",
+      "limitation": "span is dominated by a handful of historical outliers (earliest 1990s document); the real working corpus is concentrated in 2025-2026 -- a wide span is not the same as dense longitudinal coverage"
+    },
+    "LONGITUDINAL_CONTINUITY": {
+      "measurement": "TRANSITION-bucket document count across the two rebuilt Deep Pilots",
+      "numerator": 0,
+      "denominator": 2,
+      "method": "deep_pilot_v2 TRANSITION node status, both pilots",
+      "status": "NOT_READY",
+      "limitation": "0/2 pilots have a real document bridging baseline and current state -- longitudinal continuity is a named, honest gap, not assumed solved by a wide date range"
+    },
+    "GEOGRAPHIC_COVERAGE": {
+      "measurement": "GEOGRAPHIC_CONTEXT node status across the two rebuilt Deep Pilots",
+      "numerator": 0,
+      "denominator": 2,
+      "method": "deep_pilot_v2 GEOGRAPHIC_CONTEXT node",
+      "status": "NOT_READY",
+      "limitation": "documents.json has no jurisdiction/event_country/affected_region field at all -- this is a schema gap, not a search failure"
+    },
+    "TOPIC_COVERAGE": {
+      "measurement": "domain-classified fraction of corpus",
+      "numerator": 528,
+      "denominator": 601,
+      "method": "topic_classification/domain_classifier.py build_coverage_report()",
+      "status": "PARTIALLY_SUPPORTED",
+      "limitation": "73 USEFUL_BUT_UNCLASSIFIED documents sample-audited (Section 26 of this round) -- mostly genuinely off-topic, a small borderline minority remains an honest small gap, not forced closed"
+    },
+    "COUNTEREVIDENCE_COVERAGE": {
+      "measurement": "COUNTEREVIDENCE node status across the two rebuilt Deep Pilots",
+      "numerator": 0,
+      "denominator": 2,
+      "method": "deep_pilot_v2 COUNTEREVIDENCE node",
+      "status": "NOT_READY",
+      "limitation": "0/2 pilots have real counterevidence connected; Section 28's candidate hypothesis list was not yet searched against the live corpus this round"
+    },
+    "HISTORICAL_COVERAGE": {
+      "measurement": "HISTORICAL_CONTEXT node status across the two rebuilt Deep Pilots",
+      "numerator": 0,
+      "denominator": 2,
+      "method": "deep_pilot_v2 HISTORICAL_CONTEXT node",
+      "status": "NOT_READY",
+      "limitation": "0/2; historical_analogy.py's build_analogy_v2() pipeline exists and is tested but was not re-run against either pilot topic this round"
+    },
+    "ALTERNATIVE_EXPLANATION_COVERAGE": {
+      "measurement": "ALTERNATIVE_EXPLANATION node status across the two rebuilt Deep Pilots",
+      "numerator": 0,
+      "denominator": 2,
+      "method": "deep_pilot_v2 ALTERNATIVE_EXPLANATION node",
+      "status": "NOT_READY",
+      "limitation": "Section 29's candidate list was not yet searched this round -- QUERY_GAP, not evidence that no alternative explanation exists"
+    },
+    "PROVENANCE_COMPLETENESS": {
+      "measurement": "fraction of documents with a real canonical_url and source_id",
+      "numerator": 601,
+      "denominator": 601,
+      "method": "direct field presence check on documents.json",
+      "status": "SUPPORTED",
+      "limitation": "presence of a URL/source_id is not itself verification the link resolves live (not checked in this offline round)"
+    },
+    "METADATA_QUALITY": {
+      "measurement": "1 - (METADATA_POOR bucket count / total)",
+      "numerator": 601,
+      "denominator": 601,
+      "method": "corpus_quality_audit.py bucket_counts",
+      "status": "SUPPORTED",
+      "limitation": "0 METADATA_POOR documents found in the real corpus as of this snapshot"
+    },
+    "ACCESSIBILITY": {
+      "measurement": "fraction of documents with rights_mode allowing at least a lawful link",
+      "numerator": 601,
+      "denominator": 601,
+      "method": "direct rights_mode field tally",
+      "status": "SUPPORTED",
+      "limitation": "100% LINK_ONLY is a copyright-safety strength but means 0% of this corpus has any stored full text -- 'accessible' here means 'has a lawful link', not 'full text immediately usable'"
+    },
+    "COPYRIGHT_SAFETY": {
+      "measurement": "fraction of documents NOT storing full text (rights_mode == LINK_ONLY)",
+      "numerator": 601,
+      "denominator": 601,
+      "method": "direct rights_mode field tally",
+      "status": "SUPPORTED",
+      "limitation": "measures storage-boundary compliance only, not license verification per document (no RIGHTS_STATUS/LICENSE field exists in this schema yet -- see Section 3-12 Research Rights Model, not yet implemented this round)"
+    },
+    "EVIDENCE_INDEPENDENCE": {
+      "measurement": "google_news_dependency (reused)",
+      "method": "audit.py:google_news_dependency()",
+      "status": "SEE_RAW",
+      "raw": {
+        "count": 365,
+        "total": 601,
+        "ratio": 0.6073
+      },
+      "limitation": "a high aggregator share means many documents trace back to the same upstream wire story, inflating apparent source_id diversity"
+    }
+  }
+}

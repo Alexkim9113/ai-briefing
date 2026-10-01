@@ -1,0 +1,95 @@
+{
+  "topic_name": "AI_ENERGY_INFRA",
+  "schema_version": "13_NODE_V2_M5E_FINAL_SECTION_24",
+  "total_topic_documents": 12,
+  "nodes": {
+    "CURRENT_EVENT": {
+      "status": "SUPPORTED",
+      "document_id": "acaec4a2ea38d98d",
+      "reason": "most recent real NEWS document tagged field==에너지·환경, published in the CURRENT bucket (>= 2026-09-01)",
+      "title": "뉴욕 기후주간 뒤덮은 호르무즈·AI"
+    },
+    "PRIMARY_EVIDENCE": {
+      "status": "PARTIALLY_SUPPORTED",
+      "document_id": "011ef36b54ed2caf",
+      "reason": "no government/official primary source falls in the CURRENT bucket for this topic; the most recent real RESEARCH (arXiv) document is reported instead, explicitly labeled as such, not upgraded to an official-primary-source claim",
+      "title": "Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems"
+    },
+    "PREVIOUS_STATE": {
+      "status": "SUPPORTED",
+      "document_id": "b8a4c2850d58bbd8",
+      "reason": "the only real POLICY (Federal Register) document that both title-matches this topic's energy/grid keywords and references AI, published well before the CURRENT cluster",
+      "title": "Accelerating Speed to Power/Winning the Artificial Intelligence Race: Federal Action To Rapidly Expand Grid Capacity and Enable Electricity Demand Growth"
+    },
+    "TRANSITION": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "TEMPORAL_GAP",
+      "reason": "TRANSITION bucket is empty in the real pilot (bucket_counts={'BASELINE': 1, 'TRANSITION': 0, 'CURRENT': 11, 'UNASSIGNED_GAP': 0}) -- no document bridges baseline and current state"
+    },
+    "CONFIRMED_CHANGE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no real document bridges the ~1-year gap between the 2025-09/10 BASELINE POLICY document and the 2026-09-28/29 CURRENT cluster -- this is a genuine, honestly reported gap in the corpus's real temporal coverage, not an oversight",
+      "title": null,
+      "gap_type": "TEMPORAL_GAP"
+    },
+    "STATISTICAL_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "RESEARCH_CONTEXT": {
+      "status": "SUPPORTED",
+      "document_id": "4362ab11e73c75fe",
+      "reason": "a real, distinct arXiv RESEARCH document from this topic's corpus, offering additional technical context beyond PRIMARY_EVIDENCE",
+      "title": "Grid-Orch: An LLM-Powered Orchestrator for Distribution Grid Simulation and Analytics"
+    },
+    "POLICY_RESEARCH_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "SOURCE_GAP",
+      "reason": "no document in this topic's corpus subset has a source_id matching any known Korean/international policy-research-institute pattern (('kdi', 'kiet', 'keei', 'kostat', 'krihs', 'kistep', 'krei')) -- no such source is registered in this corpus at all (direct check, not a search failure)"
+    },
+    "HISTORICAL_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "corpus-wide: intel/foresight_engine has zero registered historical_evidence records for any pilot topic today (see pilot_topic_coverage.py historical_evidence_count == 0)",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "COUNTEREVIDENCE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no counterevidence-flagging pipeline has been run for this topic; pilot_topic_coverage.py's own matrix already reports counterevidence_flagged as UNKNOWN",
+      "title": null,
+      "gap_type": "QUERY_GAP"
+    },
+    "ALTERNATIVE_EXPLANATION": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "QUERY_GAP",
+      "reason": "Section 29 alternative-explanation search was not yet executed against this topic's corpus subset in this round -- an honest QUERY_GAP, not a claim that no alternative explanation exists. See Section 29 of the final report for the candidate list this gap applies to."
+    },
+    "GEOGRAPHIC_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "GEOGRAPHIC_GAP",
+      "reason": "documents.json carries no jurisdiction/event_country/affected_region field; only publisher-domain language can be inferred (0/12 topic documents from a .kr-pattern source_id), and Section 31 forbids using publisher language as an event-location proxy -- true geographic evidence is absent from the schema, not merely unsearched"
+    },
+    "UNCERTAINTY": {
+      "status": "UNKNOWN",
+      "document_id": null,
+      "reason": "this topic's field-tagged NEWS/RESEARCH documents were all published within a single 2-day window (2026-09-28/29), and the sole BASELINE POLICY document is the only pre-2026 evidence found -- the chain's temporal depth rests on exactly one document each for BASELINE and CURRENT-cluster selection, not on a broad sample"
+    }
+  },
+  "status_counts": {
+    "SUPPORTED": 3,
+    "PARTIALLY_SUPPORTED": 1,
+    "NOT_FOUND": 8,
+    "UNKNOWN": 1
+  },
+  "superseded_old_fields_note": "The old pilot's CROSS_DOMAIN_EFFECT node has no slot in the 13-node schema and is dropped here, not silently lost -- it remains readable in the original deep_pilot_result.json for reference."
+}

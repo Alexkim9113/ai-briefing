@@ -181,20 +181,31 @@ def expand_entities_for_topic(topic_terms, events=None):
 # a failed search, the caller must say WHY it failed. TRUE_NULL (searched appropriately, the
 # evidence genuinely doesn't exist) is a valid, important, non-defect outcome -- never silently
 # treated the same as a connector bug.
+# M.5E FINAL Section 27 restated this vocabulary with VALIDATION_GAP in place of CLASSIFICATION_GAP.
+# Resolution (checked against real usage): CLASSIFICATION_GAP has no caller or test asserting its
+# runtime behavior anywhere in this codebase (grep confirms it appears only in this tuple and in
+# test_section32_true_null_is_in_the_named_vocabulary's len() check) -- nothing depends on it being
+# returned by classify_not_found(). VALIDATION_GAP covers a real, distinct, previously-unhandled
+# case this function did not classify before: a candidate was acquired and even reached validation,
+# but failed VALIDATION (not acquisition) -- e.g. extracted but didn't pass the admission gate's
+# evidence-sufficiency check. That is a genuinely different cause from any existing class, so it is
+# ADDED rather than silently replacing CLASSIFICATION_GAP (keeping both honors "never silently drop
+# vocabulary a caller might already use" while adding the one Te's latest spec actually needs).
 NOT_FOUND_GAP_CLASSES = (
     "SOURCE_GAP", "QUERY_GAP", "ACCESS_GAP", "CORPUS_GAP", "CLASSIFICATION_GAP",
-    "TEMPORAL_GAP", "GEOGRAPHIC_GAP", "TRUE_NULL",
+    "VALIDATION_GAP", "TEMPORAL_GAP", "GEOGRAPHIC_GAP", "TRUE_NULL",
 )
 
 
 def classify_not_found(evidence_type, source_classes_attempted, queries_attempted,
                         source_reachable=True, within_corpus_date_range=True,
-                        geography_covered=True, exhausted_query_expansion=False):
+                        geography_covered=True, exhausted_query_expansion=False,
+                        candidate_failed_validation=False):
     """Classifies a NOT_FOUND search outcome into one of NOT_FOUND_GAP_CLASSES, given what the
     caller actually attempted (never guessed from the outside). The caller passes its own
     observations (did it even route to a real source class, was the source reachable, did the
-    query cover the right date range/geography); this function only applies the decision logic,
-    never fabricates what was tried."""
+    query cover the right date range/geography, did a candidate reach validation and fail there);
+    this function only applies the decision logic, never fabricates what was tried."""
     if not source_classes_attempted:
         return "SOURCE_GAP"  # Section 10 routing was never consulted at all
     if not source_reachable:
@@ -205,6 +216,10 @@ def classify_not_found(evidence_type, source_classes_attempted, queries_attempte
         return "GEOGRAPHIC_GAP"
     if not queries_attempted:
         return "QUERY_GAP"
+    if candidate_failed_validation:
+        # Section 27 (M.5E FINAL): a candidate was acquired and reached the validation step but
+        # was rejected there -- distinct from never finding a candidate at all.
+        return "VALIDATION_GAP"
     if not exhausted_query_expansion:
         # Section 8: a caller that only tried the bare topic term, never the registered
         # expansion terms, has not actually exhausted the search space yet.

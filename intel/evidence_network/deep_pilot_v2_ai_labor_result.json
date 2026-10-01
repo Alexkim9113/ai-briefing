@@ -1,0 +1,97 @@
+{
+  "topic_name": "AI_LABOR",
+  "schema_version": "13_NODE_V2_M5E_FINAL_SECTION_24",
+  "total_topic_documents": 11,
+  "nodes": {
+    "CURRENT_EVENT": {
+      "status": "SUPPORTED",
+      "document_id": "cf6f3352254b1d03",
+      "reason": "most recent real NEWS document tagged field==사회·노동, published in the CURRENT bucket (>= 2026-09-01)",
+      "title": "제천복지재단, AI 시대 사회복지 인권교육…“기술보다 이용자 권리 우선”"
+    },
+    "PRIMARY_EVIDENCE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no RESEARCH or official document in the CURRENT bucket",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "PREVIOUS_STATE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no real BASELINE document found",
+      "title": null,
+      "gap_type": "TEMPORAL_GAP"
+    },
+    "TRANSITION": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "TEMPORAL_GAP",
+      "reason": "TRANSITION bucket is empty in the real pilot (bucket_counts={'BASELINE': 0, 'TRANSITION': 0, 'CURRENT': 11, 'UNASSIGNED_GAP': 0}) -- no document bridges baseline and current state"
+    },
+    "CONFIRMED_CHANGE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no real document in this topic's corpus bridges the BASELINE and CURRENT windows -- an honestly reported gap, not an oversight",
+      "title": null,
+      "gap_type": "TEMPORAL_GAP"
+    },
+    "STATISTICAL_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "corpus-wide: no statistical-agency source is registered in this corpus's admission gate (see intel/source_diversity/audit.py statistical_source_ratio() == 0/597)",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "RESEARCH_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no additional distinct RESEARCH document in this topic's corpus",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "POLICY_RESEARCH_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "SOURCE_GAP",
+      "reason": "no document in this topic's corpus subset has a source_id matching any known Korean/international policy-research-institute pattern (('kdi', 'kiet', 'keei', 'kostat', 'krihs', 'kistep', 'krei')) -- no such source is registered in this corpus at all (direct check, not a search failure)"
+    },
+    "HISTORICAL_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "corpus-wide: intel/foresight_engine has zero registered historical_evidence records for any pilot topic today (see pilot_topic_coverage.py historical_evidence_count == 0)",
+      "title": null,
+      "gap_type": "SOURCE_GAP"
+    },
+    "COUNTEREVIDENCE": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "reason": "no counterevidence-flagging pipeline has been run for this topic; pilot_topic_coverage.py's own matrix already reports counterevidence_flagged as UNKNOWN",
+      "title": null,
+      "gap_type": "QUERY_GAP"
+    },
+    "ALTERNATIVE_EXPLANATION": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "QUERY_GAP",
+      "reason": "Section 29 alternative-explanation search was not yet executed against this topic's corpus subset in this round -- an honest QUERY_GAP, not a claim that no alternative explanation exists. See Section 29 of the final report for the candidate list this gap applies to."
+    },
+    "GEOGRAPHIC_CONTEXT": {
+      "status": "NOT_FOUND",
+      "document_id": null,
+      "gap_type": "GEOGRAPHIC_GAP",
+      "reason": "documents.json carries no jurisdiction/event_country/affected_region field; only publisher-domain language can be inferred (0/11 topic documents from a .kr-pattern source_id), and Section 31 forbids using publisher language as an event-location proxy -- true geographic evidence is absent from the schema, not merely unsearched"
+    },
+    "UNCERTAINTY": {
+      "status": "UNKNOWN",
+      "document_id": null,
+      "reason": "this topic's real corpus has 11 total documents across all buckets (BASELINE=0, TRANSITION=0, CURRENT=11, UNASSIGNED_GAP=0) -- any REAL_EVIDENCE node above rests on this small, real sample, not a broad one"
+    }
+  },
+  "status_counts": {
+    "SUPPORTED": 1,
+    "NOT_FOUND": 11,
+    "UNKNOWN": 1
+  },
+  "superseded_old_fields_note": "The old pilot's CROSS_DOMAIN_EFFECT node has no slot in the 13-node schema and is dropped here, not silently lost -- it remains readable in the original deep_pilot_ai_labor_result.json for reference."
+}

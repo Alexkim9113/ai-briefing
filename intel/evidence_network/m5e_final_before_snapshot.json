@@ -1,0 +1,81 @@
+{
+  "note": "M.5E FINAL Section 2 BEFORE snapshot. Frozen before any Section 24-35 code was written. Fields with no existing sidecar to reuse are computed directly from documents.json here; this script performs no network access and writes nothing to documents.json.",
+  "git_head": "b59f59f0aa0e98ad13ef945fb44bf1f7a08cd9a5",
+  "document_count": 601,
+  "category_breakdown_real_field": {
+    "news_global": 131,
+    "papers": 129,
+    "news_ko": 181,
+    "policy": 156,
+    "research": 4
+  },
+  "news_research_policy_other_mapped": {
+    "NEWS": 312,
+    "RESEARCH": 133,
+    "POLICY": 156,
+    "OTHER": 0,
+    "mapping_note": "category news_ko+news_global->NEWS, papers+research->RESEARCH, policy->POLICY, else->OTHER (this corpus has no native top-level NEWS/RESEARCH/POLICY/OTHER field)"
+  },
+  "primary_vs_secondary": {
+    "SECONDARY_JOURNALISTIC": 450,
+    "PRIMARY_ACADEMIC": 61,
+    "AGGREGATOR_GOOGLE_NEWS": 62,
+    "PRIMARY_GOVERNMENT": 28
+  },
+  "primary_secondary_correction_note": "M.5F Section 23: the M.5E-4 report's 48% primary / 52% secondary figure was computed from the `category` field and is WRONG -- category is a topic tag, not a verified source-type tag (e.g. 128 of 156 category='policy' docs are Google News aggregator results or ordinary secondary outlets reporting ON policy, not real government primary sources; only 28 are the genuine src_federal_register primary source). primary_vs_secondary_distribution below is now source_id-verified instead; see this module's source code comment for the full count-by-count breakdown.",
+  "source_counts_top20": {
+    "src_구글뉴스_ai_정책": 35,
+    "src_federal_register": 28,
+    "src_google_news_ai_regulation": 26,
+    "src_v_daum_net": 19,
+    "src_yna_co_kr": 15,
+    "src_itbiznews_com": 14,
+    "src_newsis_com": 14,
+    "src_rss_edaily_co_kr": 14,
+    "src_arxiv_cs_ai_ai_일반": 12,
+    "src_siliconangle_com": 11,
+    "src_techcrunch_com": 11,
+    "src_mk_co_kr": 10,
+    "src_rss_donga_com": 9,
+    "src_khan_co_kr": 9,
+    "src_arxiv_cs_cl_언어_llm": 8,
+    "src_fnnews_com": 8,
+    "src_arxiv_eess_sy_에너지_환경": 7,
+    "src_hankyung_com": 7,
+    "src_arxiv_cs_ro_로봇_피지컬_ai": 6,
+    "src_the_decoder_com": 6
+  },
+  "distinct_source_count": 257,
+  "earliest_date": "1990-02-22",
+  "latest_date": "2026-09-30",
+  "temporal_span_note": "1990-02-22 to 2026-09-30",
+  "domain_classification_coverage": {
+    "total_documents": 601,
+    "documents_unclassified": 73,
+    "documents_classified": 528,
+    "documents_unclassified_fraction": 0.1215
+  },
+  "corpus_quality_bucket_counts": {
+    "GOOD_QUALITY_NO_ISSUE": 528,
+    "USEFUL_BUT_UNCLASSIFIED": 73
+  },
+  "corpus_quality_total_documents": 601,
+  "deep_pilot_ai_energy_infra_state_before": {
+    "topic_field_value": "에너지·환경",
+    "total_topic_documents": 12,
+    "note": "pre-rebuild (old 10-node scoring, M.5E era) -- see Section 24/25 rebuild"
+  },
+  "deep_pilot_ai_labor_state_before": {
+    "topic_field_value": "사회·노동",
+    "total_topic_documents": 11,
+    "note": "pre-rebuild (old 10-node scoring, M.5E era) -- see Section 24/26 rebuild"
+  },
+  "known_gaps_before": [
+    "USEFUL_BUT_UNCLASSIFIED: 73 documents (Corpus Quality Section 21) -- root cause not yet sample-audited as of this snapshot",
+    "AI_LABOR Deep Pilot historically weak (2/10 old-scoring) -- root cause not yet diagnosed as of this snapshot",
+    "NOT_FOUND_GAP_CLASSES taxonomy had a VALIDATION_GAP vs CLASSIFICATION_GAP vocabulary discrepancy vs this message's own spec -- resolved earlier in this round by adding VALIDATION_GAP alongside the existing CLASSIFICATION_GAP"
+  ],
+  "known_regression_failures_before": [
+    "None open as of this snapshot -- intel/interpretive_contract/tests/test_fixture.py reported PASSED=72/72 at the end of the prior round (commit b59f59f)"
+  ]
+}
