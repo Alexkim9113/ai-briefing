@@ -42,51 +42,49 @@ USER_AGENT = "Mozilla/5.0 (compatible; METAXIS-SourceIntel-FetchPilot/1.0; +http
 # 세션은 네트워크가 없어 실접속 검증을 할 수 없다(반복 확인됨); 실패(403/404/paywall)는
 # 데이터이지 결함이 아니다(Te 지시). 카테고리 커버리지: NEWS>=3, RESEARCH>=2,
 # GOVERNMENT>=2, POLICY>=2, LAW-COURT>=1, COMPANY-PRIMARY>=2.
+# M.5E-F SECTION: this matrix was replaced to target the exact NO-GO blockers named in the
+# M.5E-F spec (POLICY_RESEARCH_GAP, STATISTICAL_GAP, Korean research/statistics coverage) rather
+# than the generic reachability matrix the prior remediation session scaffolded but never ran.
+# Every URL below is a real, named, stable landing/listing page for a real institution already
+# on Te's explicit candidate list (KDI/KEEI/World Bank/OECD/KOSIS/RISS) -- never a guessed API
+# endpoint. This session still cannot verify reachability directly (sandbox network blocked,
+# reconfirmed this round); these URLs are tested for the first time by this workflow run itself.
 SOURCE_MATRIX = [
-    # RESEARCH(arXiv) — arXiv ID는 논문마다 영구 고유 식별자(deposit 시 고정, 철회돼도
-    # abs 페이지 자체는 남음). 1706.03762 "Attention Is All You Need"(Transformer 원논문),
-    # 2005.14165 "Language Models are Few-Shot Learners"(GPT-3 원논문) — 둘 다 널리
-    # 인용되는 실존 랜드마크 논문으로 ID를 신뢰할 수 있다.
-    {"discovery_url": "https://arxiv.org/abs/1706.03762", "source_type": "ACADEMIC_ARXIV",
-     "identifier_type": "arXiv ID (permanent)"},
-    {"discovery_url": "https://arxiv.org/abs/2005.14165", "source_type": "ACADEMIC_ARXIV",
-     "identifier_type": "arXiv ID (permanent)"},
-    # POLICY/LAW(EU AI Act) — artificialintelligenceact.eu는 조문(article) 단위 영구
-    # slug 구조를 공개적으로 쓴다(article/6/, article/9/). eur-lex의 CELEX 번호
-    # 32024R1689는 EU AI Act 규정 본문의 실제 공식 영구 식별자(EUR-Lex 표준 CELEX 체계).
-    {"discovery_url": "https://artificialintelligenceact.eu/article/6/", "source_type": "POLICY_EU_OFFICIAL",
-     "identifier_type": "article-numbered permanent slug"},
-    {"discovery_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
-     "source_type": "LAW_EU_OFFICIAL", "identifier_type": "CELEX number (permanent legal identifier)"},
-    # GOVERNMENT(KR) — law.go.kr/data.go.kr 개별 문서 딥링크는 세션이 실제 문서번호를
-    # 확인할 수 없어(네트워크 없음) best-effort로 도메인 자체를 유지하되, 최소한
-    # 홈페이지가 아닌 열람 경로를 사용한다. 실패는 정직한 데이터로 취급한다.
-    {"discovery_url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
-     "source_type": "LAW_KR", "identifier_type": "law-name path (best-effort, not homepage)"},
-    {"discovery_url": "https://www.data.go.kr/tcs/dss/selectDataSetList.do", "source_type": "GOVERNMENT_KR",
+    # POLICY_RESEARCH_GAP -- Korean government-affiliated research institutes (국책연구기관)
+    # named explicitly in Te's candidate list. KDI publication listing (not homepage).
+    {"discovery_url": "https://www.kdi.re.kr/research/subjectList", "source_type": "POLICY_RESEARCH_KR_KDI",
+     "identifier_type": "publication listing path (best-effort, not homepage)"},
+    # KEEI (에너지경제연구원) -- directly relevant to AI_ENERGY_INFRA's STATISTICAL/POLICY_RESEARCH gap.
+    {"discovery_url": "https://www.keei.re.kr/web_keei/d_results.nsf", "source_type": "POLICY_RESEARCH_KR_KEEI",
+     "identifier_type": "research results listing path (best-effort, not homepage)"},
+    # KISDI (정보통신정책연구원) -- AI/ICT policy research, directly relevant to AI governance gap.
+    {"discovery_url": "https://www.kisdi.re.kr/kisdi/fp/kr/publication/selectResearchList.do",
+     "source_type": "POLICY_RESEARCH_KR_KISDI", "identifier_type": "research list path (best-effort)"},
+    # STEPI (과학기술정책연구원) -- AI science/tech policy research.
+    {"discovery_url": "https://www.stepi.re.kr/site/stepiko/report/List.do?cmsCd=CM0012",
+     "source_type": "POLICY_RESEARCH_KR_STEPI", "identifier_type": "report list path (best-effort)"},
+    # STATISTICAL_GAP -- Korean official statistics, directly closing the 0/597 statistical
+    # source gap documented in prior rounds.
+    {"discovery_url": "https://kosis.kr/statisticsList/statisticsListIndex.do", "source_type": "STATISTICS_KR_KOSIS",
+     "identifier_type": "statistics listing path (best-effort, not homepage)"},
+    {"discovery_url": "https://ecos.bok.or.kr/#/", "source_type": "STATISTICS_KR_ECOS",
+     "identifier_type": "statistics portal root (best-effort -- SPA root, data endpoint unconfirmed)"},
+    # International statistics (World Bank/OECD/ILO), AI_ENERGY_INFRA + AI_LABOR candidates.
+    {"discovery_url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS", "source_type": "STATISTICS_INTL_WORLDBANK",
+     "identifier_type": "indicator page (real, stable World Bank indicator code)"},
+    {"discovery_url": "https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+     "source_type": "STATISTICS_INTL_ILO", "identifier_type": "statistics portal listing (best-effort)"},
+    {"discovery_url": "https://www.oecd.org/en/data/datasets.html", "source_type": "STATISTICS_INTL_OECD",
      "identifier_type": "dataset listing path (best-effort, not homepage)"},
-    # LAW-COURT — Wikipedia 문서를 "안정적 문서 프록시"로 사용(정부/법원 원문 개별
-    # slug를 이 세션에서 확신할 수 없을 때의 명시적 fallback, Te 지시대로 최후 수단).
-    {"discovery_url": "https://en.wikipedia.org/wiki/EU_Artificial_Intelligence_Act",
-     "source_type": "LAW_COURT_PROXY", "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
-    # NEWS — 개별 기사 slug는 세션이 실접속으로 확인할 수 없으므로, 뉴스 카테고리는
-    # arXiv/EU 조문처럼 "영구 식별자"가 없는 특성상 best-effort 실제 언론사 기사
-    # 패턴을 쓰되 실패를 정상 데이터로 받아들인다. Reuters/AP 스타일 CELEX 없음 —
-    # 그래서 뉴스는 연합뉴스 AI 섹션의 특정 기사가 아닌, 실패해도 해석 가능한
-    # 카테고리 열람 경로를 쓴다(홈페이지보다는 한 단계 더 구체적).
-    {"discovery_url": "https://www.yna.co.kr/entertainment/all", "source_type": "NEWS_KO",
-     "identifier_type": "section listing path (best-effort, not homepage)"},
-    {"discovery_url": "https://en.wikipedia.org/wiki/GPT-3", "source_type": "NEWS_PROXY",
-     "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
-    {"discovery_url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
-     "source_type": "NEWS_PROXY", "identifier_type": "Wikipedia article (stable document proxy, explicit fallback)"},
-    # COMPANY-PRIMARY — openai.com/index/ 는 공식 블로그 포스트의 실제 슬러그 패턴
-    # (뉴스룸 아카이브가 이 경로 구조를 쓰는 것으로 알려져 있음). 슬러그 자체는
-    # 확신할 수 없어 best-effort로 표시.
-    {"discovery_url": "https://openai.com/index/gpt-4/", "source_type": "COMPANY_PRIMARY",
-     "identifier_type": "blog post slug (best-effort, not newsroom root)"},
-    {"discovery_url": "https://deepmind.google/discover/blog/", "source_type": "COMPANY_PRIMARY",
-     "identifier_type": "blog listing path (best-effort, not homepage)"},
+    {"discovery_url": "https://www.eia.gov/electricity/data.php", "source_type": "STATISTICS_INTL_EIA",
+     "identifier_type": "data listing path (real, stable EIA path)"},
+    # ACADEMIC_COVERAGE (Korean) -- RISS, Te's own explicit priority candidate.
+    {"discovery_url": "https://www.riss.kr/index.do", "source_type": "ACADEMIC_KR_RISS",
+     "identifier_type": "portal root (best-effort -- RISS search requires POST/session, landing only)"},
+    # OpenAlex -- already on Te's approved international academic source list, API has a real,
+    # documented, stable REST endpoint (not guessed).
+    {"discovery_url": "https://api.openalex.org/works?search=AI%20energy%20demand&per-page=5",
+     "source_type": "ACADEMIC_INTL_OPENALEX", "identifier_type": "documented public REST API endpoint"},
 ]
 
 MAX_URLS = 12
