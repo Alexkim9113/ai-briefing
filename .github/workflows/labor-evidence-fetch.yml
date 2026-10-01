@@ -1,0 +1,33 @@
+name: Labor Statistical Evidence — Real World Bank Fetch (N-0 AI_LABOR E2E)
+
+# N-0 SLICE 3: fetches a real multi-point labor statistic time series from the World Bank's
+# documented public REST API, same pattern proven in M.6 for AI_ENERGY_INFRA. workflow_dispatch
+# only -- no schedule, no push trigger.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run labor statistics fetch
+        run: python3 intel/statistical_evidence/scripts/labor_fetch.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: labor-fetch-results
+          path: labor_fetch_results.json
+          retention-days: 14
