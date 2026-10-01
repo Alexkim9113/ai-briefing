@@ -1,0 +1,32 @@
+name: Statistical Evidence — Real World Bank Fetch (M.6 Entry Gate)
+
+# M.6 CONDITIONAL ENTRY GATE: fetches a real multi-point time series from the World Bank's
+# documented public REST API. workflow_dispatch only -- no schedule, no push trigger.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run World Bank fetch
+        run: python3 intel/statistical_evidence/scripts/world_bank_fetch.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: world-bank-fetch-results
+          path: world_bank_fetch_results.json
+          retention-days: 14
