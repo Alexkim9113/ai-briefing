@@ -1,0 +1,90 @@
+{
+ "checked_at": "2026-10-01T07:30:54.354991+00:00",
+ "environment": "GITHUB_ACTIONS",
+ "results": [
+  {
+   "source_id": "src_worldbank_api",
+   "status": "HEALTHY",
+   "last_checked": "2026-10-01T07:30:41.445409+00:00",
+   "last_http_status": 200,
+   "last_success": true,
+   "failure_count": 0,
+   "is_stale": false,
+   "known_limitation": "single live check, not continuous monitoring",
+   "provenance_of_check": "intel/statistical_evidence/scripts/world_bank_fetch.py",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "HEALTHY"
+  },
+  {
+   "source_id": "src_eia_api",
+   "status": "AUTH_REQUIRED",
+   "last_checked": "2026-10-01T07:30:41.993583+00:00",
+   "last_http_status": 403,
+   "last_success": false,
+   "failure_count": 3,
+   "is_stale": false,
+   "known_limitation": "3 attempt(s) failed: HTTP Error 403: Forbidden",
+   "provenance_of_check": "intel/statistical_context/energy_indicators.py",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "AUTH_REQUIRED"
+  },
+  {
+   "source_id": "src_crossref_api",
+   "status": "HEALTHY",
+   "last_checked": "2026-10-01T07:30:44.142317+00:00",
+   "last_http_status": 200,
+   "last_success": true,
+   "failure_count": 0,
+   "is_stale": false,
+   "known_limitation": "single live check, not continuous monitoring",
+   "provenance_of_check": "intel/historical_evidence/fetch_real_historical_analogy_evidence.py",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "HEALTHY"
+  },
+  {
+   "source_id": "src_federal_register_api",
+   "status": "HEALTHY",
+   "last_checked": "2026-10-01T07:30:44.336876+00:00",
+   "last_http_status": 200,
+   "last_success": true,
+   "failure_count": 0,
+   "is_stale": false,
+   "known_limitation": "single live check, not continuous monitoring",
+   "provenance_of_check": "intel/historical_acquisition/fetch_federal_register.py",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "HEALTHY"
+  },
+  {
+   "source_id": "src_ilo",
+   "status": "HEALTHY",
+   "last_checked": "2026-10-01T07:30:44.950108+00:00",
+   "last_http_status": 200,
+   "last_success": true,
+   "failure_count": 0,
+   "is_stale": false,
+   "known_limitation": "single live check, not continuous monitoring",
+   "provenance_of_check": "N-5 spec Section 58 candidate list",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "HEALTHY"
+  },
+  {
+   "source_id": "src_riss",
+   "status": "HEALTHY",
+   "last_checked": "2026-10-01T07:30:54.354970+00:00",
+   "last_http_status": 200,
+   "last_success": true,
+   "failure_count": 1,
+   "is_stale": false,
+   "known_limitation": "single live check, not continuous monitoring",
+   "provenance_of_check": "N-5 spec Section 58 candidate list",
+   "environment": "GITHUB_ACTIONS",
+   "environment_status": "OK",
+   "source_status": "HEALTHY"
+  }
+ ]
+}
