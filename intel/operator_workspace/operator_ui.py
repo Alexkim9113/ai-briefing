@@ -12,6 +12,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import operator_api as op  # noqa: E402
+sys.path.insert(0, str(HERE.parent / "report_engine"))
+import atomic_publish as apub  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a}
@@ -185,6 +187,9 @@ PAGES = {
 def build_operator_pages(site_dir):
     """Writes site/operator/{page}/index.html for each page. Never raises -- Failure Isolation
     applies here too: one page's error is recorded, the others still build."""
+    # N-6 PRIORITY 1 -- Atomic Publish: each page write is temp-written, validated (non-empty,
+    # well-formed-ish HTML / parseable JSON) then os.replace()'d into place. A bad render for one
+    # page leaves that page's last-good file untouched and is recorded in status["errors"].
     operator_dir = Path(site_dir) / "operator"
     status = {"pages_written": [], "errors": []}
     try:
@@ -193,13 +198,23 @@ def build_operator_pages(site_dir):
             try:
                 page_dir = operator_dir / name
                 page_dir.mkdir(parents=True, exist_ok=True)
-                (page_dir / "index.html").write_text(renderer(), encoding="utf-8")
+                result = apub.atomic_write(page_dir / "index.html", renderer(),
+                                            validator=apub.html_validator)
+                if result["status"] != "PUBLISHED":
+                    raise RuntimeError(result["error"])
                 status["pages_written"].append(name)
             except Exception as e:  # noqa: BLE001
                 status["errors"].append({"page": name, "error": str(e)})
-        (operator_dir / "index.html").write_text(render_overview(), encoding="utf-8")
-        (operator_dir / "sources_full.json").write_text(
-            json.dumps(op.source_inspector(), ensure_ascii=False, indent=1), encoding="utf-8")
+        overview_result = apub.atomic_write(operator_dir / "index.html", render_overview(),
+                                             validator=apub.html_validator)
+        if overview_result["status"] != "PUBLISHED":
+            status["errors"].append({"page": "index", "error": overview_result["error"]})
+        sources_result = apub.atomic_write(
+            operator_dir / "sources_full.json",
+            json.dumps(op.source_inspector(), ensure_ascii=False, indent=1),
+            validator=apub.json_validator)
+        if sources_result["status"] != "PUBLISHED":
+            status["errors"].append({"page": "sources_full.json", "error": sources_result["error"]})
     except Exception as e:  # noqa: BLE001
         status["errors"].append({"page": None, "error": str(e)})
     return status

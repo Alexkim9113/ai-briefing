@@ -13,6 +13,7 @@ sys.path.insert(0, str(HERE))
 import report_engine as re_  # noqa: E402
 import presentation_model as pm  # noqa: E402
 import product_html as ph  # noqa: E402
+import atomic_publish as apub  # noqa: E402
 
 ROOT = HERE.parents[1]
 REPORTS_DIR = re_.REPORTS_DIR
@@ -100,6 +101,11 @@ def build_public_intelligence_pages(site_dir):
     This function never raises -- Section 32's Failure Isolation principle: a failure here must
     never block the rest of the site build. Callers should wrap it in try/except regardless, but
     internal errors are also caught and reported in the returned status dict."""
+    # N-6 PRIORITY 1 -- every write below that can overwrite a previously-published, valid file
+    # (detail page HTML, copied PDF, the index page, index.json) goes through atomic_publish's
+    # temp-write + validate + os.replace. A failed validation or write leaves the existing file
+    # untouched and is recorded in status["errors"] -- it never silently clobbers a good page with
+    # a half-written one.
     documents_by_id = re_._load(re_.DOCUMENTS_PATH)
     status = {"pages_written": [], "errors": []}
     intel_dir = Path(site_dir) / "intelligence"
@@ -111,17 +117,31 @@ def build_public_intelligence_pages(site_dir):
                 html_doc, pdf_exists = render_public_page_for_report(report_path, documents_by_id)
                 page_dir = intel_dir / entry["report_id"]
                 page_dir.mkdir(parents=True, exist_ok=True)
-                (page_dir / "index.html").write_text(html_doc, encoding="utf-8")
+                html_result = apub.atomic_write(page_dir / "index.html", html_doc,
+                                                 validator=apub.html_validator)
+                if html_result["status"] != "PUBLISHED":
+                    raise RuntimeError(f"detail page publish failed: {html_result['error']}")
                 if pdf_exists:
                     pdf_src = REPORTS_DIR / f"{report_path.stem}.pdf"
-                    (page_dir / "report.pdf").write_bytes(pdf_src.read_bytes())
+                    pdf_result = apub.atomic_write(
+                        page_dir / "report.pdf", pdf_src.read_bytes(),
+                        validator=lambda p: p.stat().st_size > 0 and p.read_bytes()[:5] == b"%PDF-")
+                    if pdf_result["status"] != "PUBLISHED":
+                        raise RuntimeError(f"PDF copy publish failed: {pdf_result['error']}")
                 status["pages_written"].append(entry["report_id"])
             except Exception as e:  # noqa: BLE001 -- one bad report must not block the others
                 status["errors"].append({"report_id": entry.get("report_id"), "error": str(e)})
 
         index_html = _render_index_page(index)
-        (intel_dir / "index.html").write_text(index_html, encoding="utf-8")
-        (intel_dir / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+        index_html_result = apub.atomic_write(intel_dir / "index.html", index_html,
+                                               validator=apub.html_validator)
+        if index_html_result["status"] != "PUBLISHED":
+            status["errors"].append({"report_id": None, "error": index_html_result["error"]})
+        index_json_result = apub.atomic_write(
+            intel_dir / "index.json", json.dumps(index, ensure_ascii=False, indent=1),
+            validator=apub.json_validator)
+        if index_json_result["status"] != "PUBLISHED":
+            status["errors"].append({"report_id": None, "error": index_json_result["error"]})
     except Exception as e:  # noqa: BLE001
         status["errors"].append({"report_id": None, "error": str(e)})
     return status

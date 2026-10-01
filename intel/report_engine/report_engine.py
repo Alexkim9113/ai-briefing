@@ -380,9 +380,17 @@ def diff_reports(old_report, new_report):
 
 
 def save_report(report):
+    """N-6 PRIORITY 1 -- Atomic Publish. Although report_id already encodes the version (so this
+    normally creates a brand-new file), a retried/duplicate call must never leave a half-written
+    or corrupt JSON in place of a previously valid one -- so the write still goes through
+    atomic_publish.atomic_write()'s temp-write + JSON-validate + os.replace sequence."""
+    import atomic_publish as apub  # local import: keeps report_engine.py importable standalone
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     path = REPORTS_DIR / f"{report['report_id']}.json"
-    path.write_text(json.dumps(report, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    content = json.dumps(report, ensure_ascii=False, indent=1) + "\n"
+    result = apub.atomic_write(path, content, validator=apub.json_validator)
+    if result["status"] != "PUBLISHED":
+        raise RuntimeError(f"save_report atomic publish failed: {result}")
     return path
 
 
