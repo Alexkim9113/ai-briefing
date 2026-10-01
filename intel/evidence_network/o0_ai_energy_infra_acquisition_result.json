@@ -1,0 +1,89 @@
+{
+ "run_id": "O0_DEEP_PILOT_AI_ENERGY_INFRA",
+ "topic": "AI_ENERGY_INFRA",
+ "method": "Live WebFetch/WebSearch acquisition (not local corpus), executed in this session. Each item below was actually fetched or found via a run query; nothing here is invented.",
+ "primary_question": "AI 및 데이터센터 확장이 전력수요와 전력망에 어떤 영향을 미치고 있으며, 그 영향의 규모, 시점, 지역적 차이와 인과적 확실성은 어느 정도인가?",
+ "items": [
+  {
+   "item_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+   "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+   "source_tier": 2,
+   "source_type": "POLICY_RESEARCH",
+   "access_status": "EVIDENCE_FOUND",
+   "fetch_note": "Direct fetch of the base report page (https://www.iea.org/reports/energy-and-ai) was blocked by a provenance/permission gate in this session; the /executive-summary sub-page fetched successfully.",
+   "ai_attribution": "PARTIAL",
+   "ai_attribution_rationale": "IEA names AI as 'the most important driver of this growth, alongside growing demand for other digital services' but does NOT isolate AI's specific numeric share of data center electricity vs other workloads (crypto, general cloud/SaaS).",
+   "findings": [
+    {"fact": "Global data centers consumed ~415 TWh in 2024, about 1.5% of world electricity consumption.", "status": "OBSERVED", "geography": "GLOBAL"},
+    {"fact": "Regional split of that 2024 consumption: US 45%, China 25%, Europe 15%.", "status": "OBSERVED", "geography": "US/CHINA/EU"},
+    {"fact": "Data center electricity consumption grew ~12%/year since 2017, over 4x the rate of total electricity consumption growth.", "status": "OBSERVED", "geography": "GLOBAL"},
+    {"fact": "Projected to more than double to ~945 TWh by 2030, and ~1200 TWh by 2035; US represents by far the largest share of the projected increase.", "status": "FORECAST", "geography": "GLOBAL/US-weighted"},
+    {"fact": "Up to ~20% of planned data center projects could be at risk of delay due to grid bottlenecks if risks are not addressed; wait times for critical grid components have doubled in 3 years; gas turbine lead times now span several years, potentially delaying commissioning beyond 2030.", "status": "FORECAST/OBSERVED_MIX", "geography": "GLOBAL, US-concentrated"},
+    {"fact": "In IEA's 'High Efficiency' scenario, data center electricity demand in 2035 is 20% lower than in the Base Case.", "status": "SCENARIO", "geography": "GLOBAL"}
+   ]
+  },
+  {
+   "item_id": "ARXIV_JEVONS_CLOUD_2411.11540",
+   "source_url": "https://arxiv.org/html/2411.11540v1",
+   "source_tier": 3,
+   "source_type": "RESEARCH",
+   "access_status": "EVIDENCE_FOUND",
+   "ai_attribution": "INDIRECT",
+   "ai_attribution_rationale": "Paper models general cloud computing (Meta, Google 2016-2022), not AI-specific workloads; relevant as a mechanism-level counterweight to 'efficiency will solve this' framing, not as direct AI electricity measurement.",
+   "findings": [
+    {"fact": "Authors model cloud energy use as A = alpha*L*deltaPhi (efficiency x interface size x potential difference) and find energy consumption proportional to cumulative revenue using Meta/Google 2016-2022 data.", "status": "OBSERVED (within paper's own dataset)", "geography": "GLOBAL (Meta/Google infra)"},
+    {"fact": "Despite hyperscale PUE reaching ~1.1 (near theoretical efficiency limit), Google's total energy consumption increased 3.7x from 2016 to 2022.", "status": "OBSERVED", "geography": "GLOBAL"},
+    {"fact": "Conclusion: point-level efficiency gains (e.g., PUE) do not by themselves reduce aggregate energy growth because demand elasticity and reinvestment expand system scale (a Jevons-paradox dynamic); authors call for system-wide energy metrics rather than isolated efficiency metrics.", "status": "ESTIMATED/INTERPRETIVE (authors' own argument, not an observed AI-specific measurement)", "geography": "GLOBAL"}
+   ]
+  },
+  {
+   "item_id": "GRIDLAB_PJM_INTERCONNECTION_3_5B",
+   "source_url": "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+   "source_tier": 3,
+   "source_type": "POLICY_RESEARCH",
+   "access_status": "EVIDENCE_FOUND",
+   "ai_attribution": "PARTIAL",
+   "ai_attribution_rationale": "Report attributes PJM demand growth to 'data center additions and electrification' jointly, not AI specifically, and the bottleneck it quantifies is on the GENERATION/interconnection-queue side (stalled renewables/battery projects), not a transmission capacity shortage.",
+   "findings": [
+    {"fact": "PJM has roughly 130 GW of capacity-eligible generation projects stuck in its interconnection queue, unbuilt.", "status": "OBSERVED", "geography": "US_PJM_REGION"},
+    {"fact": "GridLab estimates customers could have saved ~$3.5 billion in the 2026/27 delivery year had just 10% of queued projects been operational.", "status": "ESTIMATED (counterfactual model)", "geography": "US_PJM_REGION"},
+    {"fact": "The 2026/2027 PJM capacity auction cleared at $16.1 billion, up 10% year over year.", "status": "OBSERVED", "geography": "US_PJM_REGION"},
+    {"fact": "This is characterized as a generation/interconnection-queue supply shortage, not a transmission/distribution capacity bottleneck.", "status": "OBSERVED (author's own framing)", "geography": "US_PJM_REGION"}
+   ]
+  }
+ ],
+ "access_blocked_items": [
+  {
+   "item_id": "IEA_ENERGY_AND_AI_BASE_PAGE",
+   "source_url": "https://www.iea.org/reports/energy-and-ai",
+   "access_status": "ACCESS_BLOCKED",
+   "reason": "WebFetch tool returned PROVENANCE_REQUIRED (permission gate not answered in time) in this non-interactive session. Mitigated by successfully fetching the executive-summary sub-page instead; base page itself was never actually read, so any additional detail only on that page is NOT claimed as evidence here."
+  },
+  {
+   "item_id": "PEW_RESEARCH_DATA_CENTERS_OCT_2025",
+   "source_url": "https://www.pewresearch.org/short-reads/2025/10/01/what-we-know-about-energy-use-at-us-data-centers-amid-the-ai-boom/",
+   "access_status": "ACCESS_BLOCKED",
+   "reason": "WebFetch tool returned PROVENANCE_REQUIRED (permission gate not answered in time) in this session. NOT retried further due to session budget. No content from this source is claimed as evidence; it remains a named candidate only, exactly as the prior attempt left it."
+  },
+  {
+   "item_id": "NATURE_FAMILY_DIGITAL_JEVONS_URBAN_DC",
+   "source_url": "UNKNOWN_EXACT_URL_NOT_RESOLVED_THIS_RUN",
+   "access_status": "SEARCH_NOT_RUN",
+   "reason": "Named by the prior attempt as 'Digital Jevons paradox in urban data center energy systems' (Nature-family) but no WebSearch/WebFetch was executed on it this run due to budget; exact URL/DOI not yet confirmed. Listed honestly as not yet acquired, not fabricated."
+  }
+ ],
+ "additional_websearch_queries_run": [
+  {"query": "EIA electricity demand data center AI 2025 statistics", "status": "SEARCH_RUN_LEADS_FOUND_NOT_FETCHED", "notable_hits": ["https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions", "https://www.congress.gov/crs-product/R48646 (CRS: Data Centers and Their Energy Consumption FAQ)"]},
+  {"query": "PJM interconnection queue data center transmission bottleneck 2025", "status": "SEARCH_RUN_LEADS_FOUND_PARTIALLY_FETCHED", "notable_hits": ["https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/ (fetched, see above)", "https://introl.com/blog/pjm-grid-crisis-6gw-shortfall-data-center-power-2027 (not fetched)"]},
+  {"query": "data center electricity demand growth predates AI boom cloud computing 2015 2018", "status": "SEARCH_RUN_LEADS_FOUND_NOT_FETCHED", "notable_hits": ["https://www.wri.org/insights/us-data-centers-electricity-demand", "https://www.belfercenter.org/research-analysis/ai-data-centers-us-electric-grid"]}
+ ],
+ "not_executed_this_run": [
+  "EIA.gov direct data pull",
+  "PJM/ERCOT/CAISO queue data direct fetch",
+  "academic PUE efficiency trend paper beyond the one arXiv paper",
+  "generative AI inference energy measurement paper",
+  "Korean-context source (한국전력/전력거래소/에너지경제연구원)",
+  "CRS report R48646 full fetch"
+ ],
+ "honest_summary": "3 of the 4 originally-named candidate sources were attempted; 1 base-page fetch and the Pew piece were ACCESS_BLOCKED (provenance gate), mitigated partially for IEA via its executive-summary sub-page. 3 real sources were actually ingested with content (IEA exec summary, arXiv Jevons paper, GridLab PJM analysis). Several additional directions (EIA direct data, grid ISO queue data, Korean context, additional academic efficiency papers) were identified via WebSearch but not fetched this run due to session budget -- recorded as SEARCH_RUN_LEADS_FOUND_NOT_FETCHED / SEARCH_NOT_RUN, not fabricated as acquired."
+}

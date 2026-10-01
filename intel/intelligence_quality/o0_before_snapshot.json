@@ -1,0 +1,29 @@
+{
+ "snapshot_id": "O0_BEFORE",
+ "topic": "AI_ENERGY_INFRA",
+ "taken_at": "2026-10-01T00:00:00+00:00",
+ "repo_head_verified": "07b3f1f",
+ "counts": {
+  "claims_total": 2,
+  "hypotheses_total": 2,
+  "intelligence_objects_total": 2,
+  "statistical_evidence_series_total": 2,
+  "research_questions_total": "NOT_YET_COUNTED_policy_research_layer_has_file_but_count_not_read_for_AI_ENERGY_INFRA_specifically",
+  "policy_research_docs_total": "SEE_policy_research_layer_files_present_but_not_individually_counted_this_pass",
+  "known_gaps_total": "research_gaps.json present, not individually counted this pass",
+  "counterevidence_records_ai_energy_infra": 1,
+  "counterevidence_directions_with_evidence_before": 0,
+  "counterevidence_directions_total_before": 4,
+  "alternative_explanation_records_ai_energy_infra": "energy_demand_alternatives_result.json present, multiple alternatives all GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE before this run",
+  "private_vault_records": "not individually counted this pass",
+  "source_registry_count": "not individually counted this pass"
+ },
+ "file_hashes_sha256_16": {
+  "intel/claims/claims.json": "e21d90573c0f67cc",
+  "intel/hypothesis/hypotheses.json": "874dc1c8ae9aa3cb",
+  "intel/claims/evidence_claim_relations.json": "f5a4535ea13067ef",
+  "intel/statistical_evidence/statistical_evidence.json": "a8a157b932829b92",
+  "intel/intelligence_objects/intelligence_objects.json": "9fd98a3894075d9c"
+ },
+ "notes": "Honest partial snapshot. Counts for research_questions/policy docs/gaps/vault/source-registry were not individually enumerated due to session budget; this is disclosed rather than fabricated. Prior AI_ENERGY_INFRA counterevidence pass (energy_infra_counterevidence_result.json) found COUNTEREVIDENCE_GAP on all 4 directions searched, against a 597-document LOCAL corpus (not live web) -- this is the actual starting point this run's live acquisition is meant to improve on."
+}

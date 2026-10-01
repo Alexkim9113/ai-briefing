@@ -1,0 +1,61 @@
+{
+ "snapshot_id": "O0_AFTER",
+ "topic": "AI_ENERGY_INFRA",
+ "taken_at": "2026-10-01T00:00:00+00:00",
+ "diff_vs_before": {
+  "new_evidence_items": 3,
+  "new_evidence_sources": ["IEA Energy and AI (executive summary)", "arXiv 2411.11540 (Jevons Paradox in Cloud Computing)", "GridLab PJM interconnection analysis"],
+  "access_blocked_sources": ["IEA base report page", "Pew Research Oct 2025 piece"],
+  "hypotheses_before": 1,
+  "hypotheses_after": 7,
+  "hypothesis_status_changes": {
+   "H1": "INSUFFICIENT_EVIDENCE -> PARTIALLY_SUPPORTED",
+   "H2_new": "PARTIALLY_SUPPORTED",
+   "H3_new": "INSUFFICIENT_EVIDENCE",
+   "H4_new": "PARTIALLY_SUPPORTED",
+   "H5_new": "CONTESTED",
+   "H6_new": "WEAKENED",
+   "H7_new": "PARTIALLY_SUPPORTED"
+  },
+  "new_counterevidence_directions_touched": 2,
+  "new_counterevidence_directions_partial": 2,
+  "counterevidence_directions_still_not_run": 6,
+  "new_alternative_explanation_updates": 0,
+  "note_on_alternatives": "intel/alternative_explanations/energy_demand_alternatives_result.json was NOT updated this run (budget) -- its alternatives remain GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE; this is an honest gap, not claimed as done.",
+  "longitudinal_chain_built": false,
+  "longitudinal_chain_note": "Not built this run. BASELINE (pre-2022 data center energy trend, ~12%/yr since 2017 per IEA) has partial support; TRANSITION (generative AI investment surge causing acceleration) is only qualitatively asserted by IEA, not quantitatively isolated; CURRENT state (2024 observed 415 TWh/1.5%) has real support. Full 3-stage chain was judged premature to assert as 'built' given TRANSITION's weak isolation -- recorded as not done rather than forced.",
+  "gaps_opened": ["AI-specific numeric share of data center electricity still unresolved", "6 of 10 counterevidence directions unsearched", "no Korean-context geographic comparison source found"],
+  "gaps_closed": ["COUNTEREVIDENCE_GAP on pure-efficiency-solves-it narrative partially addressed by Jevons paper (now WEAKENED, not a gap)"]
+ },
+ "readiness_matrix": {
+  "DEEP_RESEARCH_PIPELINE": "CONDITIONALLY_READY",
+  "PRIMARY_EVIDENCE": "CONDITIONALLY_READY",
+  "STATISTICAL_EVIDENCE": "NOT_READY",
+  "ACADEMIC_RESEARCH": "CONDITIONALLY_READY",
+  "POLICY_RESEARCH": "CONDITIONALLY_READY",
+  "COUNTEREVIDENCE": "NOT_READY",
+  "ALTERNATIVE_EXPLANATIONS": "NOT_READY",
+  "LONGITUDINAL_EVIDENCE": "NOT_READY",
+  "GEOGRAPHIC_EVIDENCE": "CONDITIONALLY_READY",
+  "AI_ATTRIBUTION": "CONDITIONALLY_READY",
+  "FORECAST_OBSERVATION_SEPARATION": "READY",
+  "EVIDENCE_INDEPENDENCE": "CONDITIONALLY_READY",
+  "UNCERTAINTY": "READY",
+  "PROVENANCE": "READY",
+  "PRIVATE_RESEARCH": "NOT_APPLICABLE",
+  "OBSIDIAN_ATOMIZATION": "NOT_APPLICABLE",
+  "INTELLIGENCE_QUALITY": "CONDITIONALLY_READY",
+  "REPORT_QUALITY": "NOT_APPLICABLE",
+  "RIGHTS_SAFETY": "READY",
+  "readiness_rationale": {
+   "STATISTICAL_EVIDENCE": "No new statistical/numeric series ingested into statistical_evidence.json this run; still 2 pre-existing series.",
+   "COUNTEREVIDENCE": "6 of 10 requested directions never searched this run.",
+   "ALTERNATIVE_EXPLANATIONS": "Not updated with live evidence this run; still GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE across the board.",
+   "LONGITUDINAL_EVIDENCE": "Chain explicitly not built -- TRANSITION stage insufficiently isolated.",
+   "PRIVATE_RESEARCH": "No private-vault-eligible full-text sources were acquired this run (all 3 ingested sources are openly accessible and summarized, not stored verbatim).",
+   "OBSIDIAN_ATOMIZATION": "No knowledge-memory atoms created this run.",
+   "REPORT_QUALITY": "Report Engine was not invoked this run -- see final report for reasoning (intelligence object was updated but report regeneration deferred)."
+  }
+ },
+ "central_honest_answer": "Yes, modestly: this run replaced 0 live-fetched primary sources with 3 actually-read primary/academic/policy sources (IEA exec summary, arXiv Jevons paper, GridLab PJM analysis), moved H1 from INSUFFICIENT_EVIDENCE to PARTIALLY_SUPPORTED on a disclosed basis (qualitative AI attribution, no numeric AI-only split), and added 6 new competing hypotheses with honestly mixed, non-forced statuses. But most of the requested counterevidence directions (6/10), the alternative-explanations update, the longitudinal chain, and statistical-evidence ingestion were NOT completed this run due to session budget -- this is a partial, honest improvement, not a completed deep-research pass."
+}
