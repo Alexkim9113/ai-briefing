@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-10-01T06:38:05.448872+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36825239044)",
+  "attempted_at": "2026-10-01T07:30:36.614055+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36830397316)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 20,
@@ -10,7 +10,7 @@
       "source_tier": "TIER_1",
       "gap_type": "INSUFFICIENT_TIME_DEPTH",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&conditions%5Bpublication_date%5D%5Bgte%5D=2025-09-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-09-01&per_page=20&order=oldest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-10-01T06:38:05.448872+00:00",
+      "attempted_at": "2026-10-01T07:30:36.614055+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
@@ -35,8 +35,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/05/2025-17086/united-states-of-america-et-al-v-realpage-inc-et-al-proposed-final-judgment-and-competitive-impact",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17086_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17086_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17310",
@@ -57,8 +57,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/09/2025-17310/final-priorities-and-definitions-secretarys-supplemental-priorities-and-definitions-on",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17310_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17310_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17361",
@@ -80,8 +80,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/10/2025-17361/cooperative-research-and-development-agreement-voicebrain",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17361_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17361_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17532",
@@ -102,8 +102,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/11/2025-17532/notice-of-public-meetings-of-the-illinois-advisory-committee-to-the-us-commission-on-civil-rights",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17532_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17532_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17651",
@@ -125,8 +125,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/12/2025-17651/digital-health-advisory-committee-notice-of-meeting-establishment-of-a-public-docket-request-for",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17651_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17651_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17710",
@@ -147,8 +147,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/15/2025-17710/privacy-act-of-1974-system-of-records",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17710_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17710_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17893",
@@ -170,8 +170,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/16/2025-17893/additions-and-revisions-to-the-entity-list",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17893_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17893_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-17960",
@@ -192,8 +192,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/17/2025-17960/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-promoting",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-17960_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-17960_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18058",
@@ -214,8 +214,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/18/2025-18058/accelerating-speed-to-powerwinning-the-artificial-intelligence-race-federal-action-to-rapidly-expand",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18058_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18058_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18121",
@@ -236,8 +236,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18121/notice-of-request-for-information-technology-roadmap-to-increase-wildfire-firefighting-capabilities",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18121_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18121_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18191",
@@ -259,8 +259,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18191/ocean-research-advisory-panel-orap",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18191_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18191_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18229",
@@ -282,8 +282,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/19/2025-18229/information-security-and-privacy-advisory-board",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18229_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18229_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18318",
@@ -304,8 +304,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/22/2025-18318/unified-agenda-of-federal-regulatory-and-deregulatory-actions-spring-2025",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18318_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18318_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18321",
@@ -326,8 +326,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/22/2025-18321/regulatory-flexibility-agenda",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18321_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18321_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18639",
@@ -348,8 +348,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/25/2025-18639/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-career",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18639_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18639_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18640",
@@ -370,8 +370,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/25/2025-18640/proposed-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-meaningful",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18640_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18640_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18695",
@@ -392,8 +392,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/26/2025-18695/advisory-committee-on-the-medical-uses-of-isotopes-meeting-notice",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18695_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18695_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-18737",
@@ -414,8 +414,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/09/26/2025-18737/notice-of-request-for-information-regulatory-reform-on-artificial-intelligence",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-18737_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-18737_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-19091",
@@ -436,8 +436,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-19091_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-19091_2026-10-01T07:30:36.614055+00:00"
         },
         {
           "document_id": "fedreg_2025-19268",
@@ -458,8 +458,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2025/10/02/2025-19268/effluent-limitations-guidelines-and-standards-for-the-steam-electric-power-generating-point-source",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "INSUFFICIENT_TIME_DEPTH",
-          "retrieved_at": "2026-10-01T06:38:05.448872+00:00",
-          "provenance_id": "prov_fedreg_2025-19268_2026-10-01T06:38:05.448872+00:00"
+          "retrieved_at": "2026-10-01T07:30:36.614055+00:00",
+          "provenance_id": "prov_fedreg_2025-19268_2026-10-01T07:30:36.614055+00:00"
         }
       ],
       "overall_status": "SUCCESS",
