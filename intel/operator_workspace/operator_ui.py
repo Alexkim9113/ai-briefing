@@ -17,17 +17,19 @@ import atomic_publish as apub  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a}
+html{overflow-x:hidden}
 *{box-sizing:border-box}
 body{font-family:'Pretendard',-apple-system,sans-serif;color:var(--ink);background:var(--bg);
-margin:0;padding:0;line-height:1.6;font-size:15px}
-.mono{font-family:'Space Grotesk','Pretendard',monospace}
+margin:0;padding:0;line-height:1.6;font-size:15px;overflow-wrap:break-word}
+.mono{font-family:'Space Grotesk','Pretendard',monospace;overflow-wrap:anywhere;word-break:break-word}
 header{border-bottom:1px solid var(--line);padding:16px 24px}
-header h1{font-size:1.1em;margin:0}
+header h1{font-size:1.1em;margin:0;overflow-wrap:break-word}
 nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em}
 nav a{color:var(--sub);text-decoration:none;padding:4px 8px;border-radius:3px}
 nav a:hover,nav a.active{background:#f2f2f2;color:var(--ink)}
 main{max-width:980px;margin:0 auto;padding:24px}
-table{border-collapse:collapse;width:100%;margin:12px 0;font-size:0.92em}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:0.92em;min-width:420px}
 td,th{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
 th{background:#fafafa;font-weight:600}
 .status{font-size:0.8em;padding:1px 6px;border-radius:3px;border:1px solid var(--line)}
@@ -36,11 +38,19 @@ th{background:#fafafa;font-weight:600}
 .status-degraded,.status-conditionally_ready,.status-auth_required{border-color:var(--warn);color:var(--warn)}
 .status-not_instrumented,.status-unknown,.status-not_available{border-color:var(--sub);color:var(--sub)}
 .empty{color:var(--sub);font-style:italic}
-.kpi-row{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
-.kpi{border:1px solid var(--line);border-radius:4px;padding:10px 14px;min-width:120px}
+.kpi-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:10px 14px;box-sizing:border-box;
+flex:0 0 calc(33.333% - 7px);max-width:calc(33.333% - 7px);min-width:0;overflow-wrap:break-word}
 .kpi .n{font-family:'Space Grotesk',monospace;font-size:1.4em}
-.kpi .l{color:var(--sub);font-size:0.78em;text-transform:uppercase}
+.kpi .l{color:var(--sub);font-size:0.78em;text-transform:uppercase;overflow-wrap:break-word}
 a:focus-visible{outline:2px solid #4b3f8a;outline-offset:2px}
+.status{overflow-wrap:break-word;display:inline-block;max-width:100%}
+@media (max-width: 480px){
+  main{padding:14px}
+  header{padding:12px 14px}
+  nav{padding:8px 14px}
+  .kpi-row{grid-template-columns:repeat(2, 1fr)}
+}
 """
 
 NAV_ITEMS = ("overview", "reports", "gaps", "rights", "sources", "source_health")
@@ -94,8 +104,8 @@ def render_reports():
         f'<td>{_status(r["html_status"])}</td><td>{_status(r["pdf_status"])}</td></tr>'
         for r in rows
     )
-    table = (f'<table><tr><th>Report</th><th>Topic</th><th>Version</th><th>Readiness</th>'
-            f'<th>Generated</th><th>HTML</th><th>PDF</th></tr>{body_rows}</table>')
+    table = ('<div class="table-wrap">' + f'<table><tr><th>Report</th><th>Topic</th><th>Version</th><th>Readiness</th>'
+            f'<th>Generated</th><th>HTML</th><th>PDF</th></tr>{body_rows}</table></div>')
     if not rows:
         table = '<p class="empty">No reports built yet.</p>'
     return _shell("Reports", "reports", table)
@@ -111,8 +121,8 @@ def render_gaps():
         f'<td>{_esc(g["description"])}</td><td>{_esc(g["next_possible_action"])}</td></tr>'
         for g in rows
     )
-    table = (f'<table><tr><th>Gap ID</th><th>Topic</th><th>Type</th><th>Status</th>'
-            f'<th>Description</th><th>Next Possible Action</th></tr>{body_rows}</table>')
+    table = ('<div class="table-wrap">' + f'<table><tr><th>Gap ID</th><th>Topic</th><th>Type</th><th>Status</th>'
+            f'<th>Description</th><th>Next Possible Action</th></tr>{body_rows}</table></div>')
     return _shell("Gaps", "gaps", f"<p>{len(rows)} known gap(s) -- none hidden.</p>{table}")
 
 
@@ -124,8 +134,8 @@ def render_rights():
         f'<td>{_esc(r["fulltext_allowed"])}</td><td>{_esc(r["private_only"])}</td></tr>'
         for r in rows
     )
-    table = (f'<table><tr><th>Source</th><th>Rights</th><th>Access</th>'
-            f'<th>Public Allowed</th><th>Fulltext Allowed</th><th>Private Only</th></tr>{body_rows}</table>')
+    table = ('<div class="table-wrap">' + f'<table><tr><th>Source</th><th>Rights</th><th>Access</th>'
+            f'<th>Public Allowed</th><th>Fulltext Allowed</th><th>Private Only</th></tr>{body_rows}</table></div>')
     if not rows:
         table = '<p class="empty">No rights-tracked sources referenced by any report yet.</p>'
     return _shell("Rights", "rights", table)
@@ -148,7 +158,7 @@ def render_sources():
         f'<td>{_esc(r["source_type"])}</td><td>{_status(r["health_status"])}</td></tr>'
         for r in sample
     )
-    table = f'<table><tr><th>Source ID</th><th>Name</th><th>Type</th><th>Health</th></tr>{body_rows}</table>'
+    table = '<div class="table-wrap">' + f'<table><tr><th>Source ID</th><th>Name</th><th>Type</th><th>Health</th></tr>{body_rows}</table></div>'
     return _shell("Sources", "sources", (
         f'<p>{len(rows)} registered sources.</p><div class="kpi-row">{kpis}</div>'
         f'<p>Showing first {len(sample)} (see index.json for the full registry).</p>{table}'
@@ -170,8 +180,8 @@ def render_source_health():
         f'<td>{_esc(s["known_limitation"])}</td></tr>'
         for s in summary["sources"]
     )
-    table = (f'<table><tr><th>Source</th><th>Status</th><th>Last Checked</th>'
-            f'<th>Stale?</th><th>Known Limitation</th></tr>{body_rows}</table>')
+    table = ('<div class="table-wrap">' + f'<table><tr><th>Source</th><th>Status</th><th>Last Checked</th>'
+            f'<th>Stale?</th><th>Known Limitation</th></tr>{body_rows}</table></div>')
     return _shell("Source Health", "source_health", (
         f'<p>Last pilot run: {_esc(summary["checked_at"])}</p>'
         f'<div class="kpi-row">{kpis}</div>{table}'

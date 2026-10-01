@@ -18,16 +18,24 @@ import presentation_model as pm  # noqa: E402
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--accent-red:#b3261e;
 --accent-amber:#8a5a00;--accent-violet:#4b3f8a;--good:#1e5c3a}
+html{overflow-x:hidden}
 *{box-sizing:border-box}
 body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
 color:var(--ink);background:var(--bg);max-width:760px;margin:0 auto;padding:32px 20px;
-line-height:1.65;font-size:16px}
-.mono,.meta,.chart-row td:nth-child(n+2){font-family:'Space Grotesk','Pretendard',monospace}
-h1{font-size:1.6em;margin-bottom:4px}
+line-height:1.65;font-size:16px;overflow-wrap:break-word}
+.mono,.meta,.chart-row td:nth-child(n+2){font-family:'Space Grotesk','Pretendard',monospace;
+overflow-wrap:anywhere;word-break:break-word}
+h1{font-size:1.6em;margin-bottom:4px;overflow-wrap:break-word}
+.chart-table-wrap{overflow-x:auto}
+@media (max-width: 480px){
+  body{padding:20px 14px;font-size:15px}
+  h1{font-size:1.3em}
+}
 h2{font-size:1.15em;border-top:1px solid var(--line);padding-top:18px;margin-top:28px}
 .meta{color:var(--sub);font-size:0.85em;margin-bottom:24px}
 .badge{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:1px 8px;
-font-size:0.75em;letter-spacing:.03em;margin-left:6px}
+font-size:0.75em;letter-spacing:.03em;margin-left:6px;max-width:100%;overflow-wrap:break-word;
+word-break:break-word;white-space:normal}
 .badge-ready,.badge-supported{border-color:var(--good);color:var(--good)}
 .badge-conditionally_ready,.badge-partially_supported{border-color:var(--accent-amber);color:var(--accent-amber)}
 .badge-insufficient_evidence,.badge-contested{border-color:var(--accent-violet);color:var(--accent-violet)}
@@ -81,8 +89,8 @@ def _render_chart(chart):
                f"({_esc(chart['geography'])}, {_esc(chart['period'])}) -- "
                f"chart type {_esc(chart['visualization_type'])}, no forecast line, "
                f"no AI-attribution overlay.")
-    return (f'<table class="chart-table" role="table" aria-label="{caption}">'
-            f'<caption class="axis-note">{caption}</caption>{rows}</table>'
+    return (f'<div class="chart-table-wrap"><table class="chart-table" role="table" aria-label="{caption}">'
+            f'<caption class="axis-note">{caption}</caption>{rows}</table></div>'
             f'<p class="axis-note">{_esc(chart["axis_note"])}</p>')
 
 
