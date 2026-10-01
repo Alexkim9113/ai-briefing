@@ -1,0 +1,60 @@
+{
+  "audit_name": "O-1D Legacy Status Engine Audit (Sections 10-12)",
+  "purpose": "Formally document every call site of hypothesis_model.classify_status() in the repository, classify each site's role, and record the CASE decision on whether classify_status() constitutes an independent/competing production write path for hypotheses.json status.",
+  "method": "grep -rn \"classify_status(\" --include=\"*.py\" . (run from repo root), each hit read in context and classified by hand.",
+  "call_sites": [
+    {
+      "file": "intel/hypothesis/hypothesis_model.py",
+      "line": 33,
+      "context": "def classify_status(supporting_evidence, contradicting_evidence):",
+      "classification": "DEFINITION",
+      "note": "The function definition itself, not a call site."
+    },
+    {
+      "file": "intel/hypothesis/hypothesis_model.py",
+      "line": 165,
+      "context": "base_status = classify_status(hyp.get('supporting_evidence', []), hyp.get('contradicting_evidence', []))",
+      "classification": "READ_ONLY_ANALYSIS",
+      "note": "Called inside evaluate_hypothesis_sufficiency(), which never writes hypotheses.json itself. Its output (base_status) feeds the O-1B quality guard layer as a diagnostic starting point, then is only ever downgraded (never upgraded) by the guards. evaluate_hypothesis_sufficiency() is in turn only called from inside determine_canonical_status() (the single canonical path) -- it is never called standalone by any write-path caller in this repo."
+    },
+    {
+      "file": "intel/hypothesis/hypothesis_model.py",
+      "line": 295,
+      "context": "legacy_full_status = classify_status(sup_ids, contra_ids)  # diagnostic only, never written",
+      "classification": "READ_ONLY_ANALYSIS",
+      "note": "Explicitly commented 'diagnostic only, never written'. Computed inside determine_canonical_status() purely for the returned diagnostics dict's legacy_full_status_count_based field, which is never assigned to hyp['status']."
+    },
+    {
+      "file": "intel/hypothesis/hypothesis_model.py",
+      "line": 296,
+      "context": "resolved_only_status = classify_status(resolved_sup, resolved_contra)",
+      "classification": "LEGACY_COMPATIBILITY",
+      "note": "Computed on the RESOLVED-ONLY evidence arrays inside determine_canonical_status(), the single canonical path. This is an internal building block of the canonical path itself (it seeds the guard-layer evaluation via evaluate_hypothesis_sufficiency(probe_hyp, ...) a few lines later), not a second, independent decision of what gets written. It cannot drive a write on its own: determine_canonical_status() always continues on to run the O-1B guard layer and only ever further DOWNGRADES this value before returning final_status."
+    },
+    {
+      "file": "intel/hypothesis/tests/test_hypothesis_model.py",
+      "line": 45,
+      "context": "assert m.classify_status([], []) == 'INSUFFICIENT_EVIDENCE'",
+      "classification": "TEST_ONLY",
+      "note": "Direct unit test of the pure function's own contract. Does not touch hypotheses.json and does not exercise upsert_hypothesis()."
+    },
+    {
+      "file": "intel/evidence_network/o1_evidence_yield_funnel.py",
+      "line": 108,
+      "context": "\"per hypothesis_model.classify_status(); H5 stayed CONTESTED, H6 stayed \"",
+      "classification": "UNUSED",
+      "note": "This is a string literal inside a comment/report text, not a function call at all. No import of hypothesis_model and no invocation in this file."
+    }
+  ],
+  "upsert_hypothesis_call_graph": {
+    "upsert_hypothesis": "calls determine_canonical_status(hyp, all_claims=all_claims) ONLY -- never calls classify_status() directly in its own function body (verified both by manual code read and by the static-analysis regression test added in O-1D, see test_o1d_canonical_closure.py).",
+    "determine_canonical_status": "calls classify_status() twice internally (legacy/diagnostic-only, and resolved-only-as-seed-for-guards), then calls evaluate_hypothesis_sufficiency() which itself calls classify_status() once more (as base_status seed for the guard layer). All three calls happen INSIDE the single canonical function; none of them independently reaches hypotheses.json's status field without first passing through the full O-1B guard layer in evaluate_hypothesis_sufficiency() and the symmetric contra-side guard in determine_canonical_status()."
+  },
+  "case_decision": {
+    "case": "CASE_A",
+    "rationale": "classify_status() is NOT used anywhere in this repository as an independent, competing production write path to hypotheses.json. Its only production uses are as an internal diagnostic/building-block computation nested entirely inside determine_canonical_status() (which is itself the sole function upsert_hypothesis() calls to decide the status field). No caller anywhere obtains a classify_status() result and writes it to hypotheses.json directly or indirectly without first passing through the full guard layer. The one non-test, non-definition, non-canonical-path reference (o1_evidence_yield_funnel.py) is a comment string, not a call. Per the O-1D spec's Section 12 decision tree, this is CASE A: no remediation (e.g. deprecation, renaming, or call-site migration) is required -- the legacy function is already correctly demoted to an internal detail of the single canonical path, and this audit exists to make that fact explicit, inspectable, and regression-tested going forward.",
+    "action_taken": "No production code change to hypothesis_model.py was needed or made. Added test_o1d_canonical_closure.py as a permanent regression guard that upsert_hypothesis()'s own function source contains no direct classify_status( call text (only a call to determine_canonical_status()), so a future edit that reintroduces a direct call would fail CI immediately."
+  },
+  "generated_at": "2026-10-01",
+  "phase": "O-1D"
+}

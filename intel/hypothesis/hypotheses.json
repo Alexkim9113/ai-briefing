@@ -6,7 +6,7 @@
     "statement": "AI data centers are a significant driver of electricity demand growth in some regions",
     "scope": "US, 2010-2022 aggregate per-capita consumption; global data center growth 2017-2024",
     "supporting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
       "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
     ],
     "contradicting_evidence": [],
@@ -31,7 +31,7 @@
         "detail": "IEA report names AI as primary driver qualitatively but does not provide a numeric AI-vs-other-workload split"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.682237+00:00",
+    "last_updated": "2026-10-01T23:46:57.910565+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -79,28 +79,27 @@
       "quality_aware_status": "SUPPORTED",
       "final_status": "SUPPORTED",
       "resolved_supporting_evidence": [
+        "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
         "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
       ],
-      "unresolved_supporting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
-      ],
+      "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [],
       "unresolved_contradicting_evidence": [],
       "guard_trail": [
         {
           "guard": "DERIVATIVE_EVIDENCE_GUARD",
           "result": "PASSED",
-          "detail": "1 independent origin(s) among 1 items"
+          "detail": "2 independent origin(s) among 2 items"
         },
         {
           "guard": "INDUSTRY_SELF_REPORT_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "SOURCE_QUALITY_CHECKED_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "MINIMUM_DIRECTNESS_GUARD",
@@ -110,7 +109,7 @@
         {
           "guard": "FORECAST_GUARD",
           "result": "PASSED",
-          "detail": "temporal types present: ['MIXED']; requires_current_state=True"
+          "detail": "temporal types present: ['MIXED', 'OBSERVATION']; requires_current_state=True"
         },
         {
           "guard": "AI_ATTRIBUTION_GUARD",
@@ -127,7 +126,7 @@
     "statement": "Data center growth matters but AI's independent contribution cannot currently be isolated from the data",
     "scope": "GLOBAL/US",
     "supporting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
       "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
     ],
     "contradicting_evidence": [],
@@ -139,7 +138,7 @@
         "detail": "primary-tier source (IEA) stops short of a quantitative AI-only breakdown"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.683858+00:00",
+    "last_updated": "2026-10-01T23:46:57.912965+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -187,28 +186,27 @@
       "quality_aware_status": "SUPPORTED",
       "final_status": "SUPPORTED",
       "resolved_supporting_evidence": [
+        "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
         "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
       ],
-      "unresolved_supporting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
-      ],
+      "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [],
       "unresolved_contradicting_evidence": [],
       "guard_trail": [
         {
           "guard": "DERIVATIVE_EVIDENCE_GUARD",
           "result": "PASSED",
-          "detail": "1 independent origin(s) among 1 items"
+          "detail": "2 independent origin(s) among 2 items"
         },
         {
           "guard": "INDUSTRY_SELF_REPORT_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "SOURCE_QUALITY_CHECKED_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "MINIMUM_DIRECTNESS_GUARD",
@@ -218,7 +216,7 @@
         {
           "guard": "FORECAST_GUARD",
           "result": "PASSED",
-          "detail": "temporal types present: ['MIXED']; requires_current_state=True"
+          "detail": "temporal types present: ['MIXED', 'OBSERVATION']; requires_current_state=True"
         },
         {
           "guard": "AI_ATTRIBUTION_GUARD",
@@ -353,10 +351,10 @@
     "statement": "AI-related power impact concentrates in specific regions/markets rather than nationally",
     "scope": "US regional (PJM) vs national",
     "supporting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
       "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
       "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION",
-      "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
+      "claim_3ab07077d739a9a4:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
     ],
     "contradicting_evidence": [],
     "status": "SUPPORTED",
@@ -367,7 +365,7 @@
         "detail": "ERCOT/CAISO/other ISO data not fetched this run"
       }
     ],
-    "last_updated": "2026-10-01T13:00:52.495168+00:00",
+    "last_updated": "2026-10-01T23:46:57.914832+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -415,20 +413,19 @@
       "quality_aware_status": "SUPPORTED",
       "final_status": "SUPPORTED",
       "resolved_supporting_evidence": [
+        "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
         "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
-        "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION"
+        "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION",
+        "claim_3ab07077d739a9a4:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
       ],
-      "unresolved_supporting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
-        "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
-      ],
+      "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [],
       "unresolved_contradicting_evidence": [],
       "guard_trail": [
         {
           "guard": "DERIVATIVE_EVIDENCE_GUARD",
           "result": "PASSED",
-          "detail": "2 independent origin(s) among 2 items"
+          "detail": "4 independent origin(s) among 4 items"
         },
         {
           "guard": "INDUSTRY_SELF_REPORT_GUARD",
@@ -448,7 +445,7 @@
         {
           "guard": "FORECAST_GUARD",
           "result": "PASSED",
-          "detail": "temporal types present: ['MIXED', 'UNKNOWN']; requires_current_state=True"
+          "detail": "temporal types present: ['MIXED', 'OBSERVATION', 'UNKNOWN']; requires_current_state=True"
         },
         {
           "guard": "AI_ATTRIBUTION_GUARD",
@@ -579,7 +576,7 @@
     "statement": "Some of the current discourse relies more on forecasts than actual observations",
     "scope": "GLOBAL/US",
     "supporting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
       "claim_o1_lbnl_us_dc_2023:LBNL_FORECAST_RANGE_325_580_TWH_2028"
     ],
     "contradicting_evidence": [],
@@ -591,7 +588,7 @@
         "detail": "did not fetch secondary/news coverage this run to check how often they blur forecast into observed fact"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.689468+00:00",
+    "last_updated": "2026-10-01T23:46:57.916285+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -639,28 +636,27 @@
       "quality_aware_status": "SUPPORTED",
       "final_status": "SUPPORTED",
       "resolved_supporting_evidence": [
+        "claim_afe7cc7b19317ee0:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
         "claim_o1_lbnl_us_dc_2023:LBNL_FORECAST_RANGE_325_580_TWH_2028"
       ],
-      "unresolved_supporting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"
-      ],
+      "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [],
       "unresolved_contradicting_evidence": [],
       "guard_trail": [
         {
           "guard": "DERIVATIVE_EVIDENCE_GUARD",
           "result": "PASSED",
-          "detail": "1 independent origin(s) among 1 items"
+          "detail": "2 independent origin(s) among 2 items"
         },
         {
           "guard": "INDUSTRY_SELF_REPORT_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "SOURCE_QUALITY_CHECKED_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['PRIMARY_RESEARCH']"
+          "detail": "source tiers present: ['PRIMARY_RESEARCH', 'UNKNOWN']"
         },
         {
           "guard": "MINIMUM_DIRECTNESS_GUARD",
@@ -670,7 +666,7 @@
         {
           "guard": "FORECAST_GUARD",
           "result": "PASSED",
-          "detail": "temporal types present: ['MIXED']; requires_current_state=False"
+          "detail": "temporal types present: ['MIXED', 'OBSERVATION']; requires_current_state=False"
         },
         {
           "guard": "AI_ATTRIBUTION_GUARD",

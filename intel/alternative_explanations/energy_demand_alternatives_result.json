@@ -140,7 +140,10 @@
         "H1": "WEAK_ALTERNATIVE -- even as an alternative/co-driver, existing evidence shows population-linked (residential) load growing slowest, so this does little to qualify H1's AI-driver claim either way.",
         "H3": "WEAKLY CORROBORATING -- H3 names population as one of several factors, but the EIA evidence available undercuts population specifically as a strong contributor relative to commercial/industrial.",
         "AI_EXCLUSIVE_STRAWMAN": "WEAK_COUNTEREVIDENCE -- population growth is real but evidence shows it is not where recent demand growth concentrates, so it is a weak rebuttal to an AI-exclusive strawman."
-      }
+      },
+      "o1d_classification": "SEARCH_RUN_NO_CLEAR_EVIDENCE",
+      "o1d_rationale": "O-1D re-ran bounded web research (EIA/IEA/World Bank electricity-demand-decomposition angle) specifically asking whether population/general economic growth explains a meaningful independent share of 2023-2024 US/global electricity demand growth. No new source was found that quantifies a population-attributable share distinct from the existing EIA sector breakdown already cited here (residential/population-linked load forecast as the SLOWEST-growing major sector, +0.7%/yr vs commercial +2.6%/yr and industrial +2.1%/yr). This is SEARCH_RUN_NO_CLEAR_EVIDENCE for a meaningful INDEPENDENT population-driven share specifically -- not UNSUPPORTED_ALTERNATIVE, since population/GDP growth is a real, well-established general driver of baseline electricity demand over long horizons; it is simply not evidenced as a major contributor to the SPECIFIC 2023-2024 surge this topic tracks. o1c_classification (PARTIALLY_CONNECTED) is left unchanged.",
+      "o1d_new_claim_id": null
     },
     {
       "explanation_id": "GENERAL_CLOUD_COMPUTING_GROWTH",
@@ -197,7 +200,14 @@
         "H1": "UNRESEARCHED -- potential alternative/co-driver role, not yet evidence-connected.",
         "H3": "UNRESEARCHED -- potential corroborating factor, not yet evidence-connected.",
         "AI_EXCLUSIVE_STRAWMAN": "UNRESEARCHED."
-      }
+      },
+      "o1d_classification": "SEARCH_RUN_NO_CLEAR_EVIDENCE",
+      "o1d_rationale": "O-1D ran bounded web research (CHIPS Act / semiconductor-fab subsidy angle) specifically separating 'industrial policy EXISTS' from 'industrial policy has a DEMONSTRATED electricity-demand effect'. Multiple sources confirm CHIPS Act subsidies and fab construction exist and are real (CRS report R49031 on CHIPS-funded fab project status; industry trade press on foundry capacity). However, no source found quantifies electricity demand specifically attributable to CHIPS-Act-subsidized construction as distinct from the general 'strategic industries'/reshoring load growth already captured in canonical Claim claim_a11c5cb4c7c4c2d1 (Grid Strategies LLC). This remains SEARCH_RUN_NO_CLEAR_EVIDENCE for the subsidy-specific causal claim, not UNSUPPORTED_ALTERNATIVE: the search was genuinely run (sources: CRS R49031, Grid Strategies national load-growth reports, industry trade press) and found policy existence but no isolated subsidy-to-electricity-demand quantification. No new Claim was created to avoid conflating policy existence with a measured demand effect that was not found. Upgraded from o1c_classification SEARCH_NOT_RUN.",
+      "o1d_new_claim_id": null,
+      "o1d_sources_checked": [
+        "https://www.everycrsreport.com/reports/R49031.html",
+        "https://www.counterpointresearch.com/insight/the-chips-act-and-its-impact-on-the-us-foundry-industry"
+      ]
     },
     {
       "explanation_id": "GRID_TRANSMISSION_INTERCONNECTION_BOTTLENECK",
