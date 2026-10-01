@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-10-01T10:03:23.217411+00:00",
+ "checked_at": "2026-10-01T13:54:21.984373+00:00",
  "environment": "GITHUB_ACTIONS",
  "results": [
   {
    "source_id": "src_worldbank_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T10:03:18.034693+00:00",
+   "last_checked": "2026-10-01T13:54:18.510216+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -19,12 +19,12 @@
   {
    "source_id": "src_eia_api",
    "status": "AUTH_REQUIRED",
-   "last_checked": "2026-10-01T10:03:18.825038+00:00",
+   "last_checked": "2026-10-01T13:54:18.761621+00:00",
    "last_http_status": 403,
    "last_success": false,
-   "failure_count": 3,
+   "failure_count": 1,
    "is_stale": false,
-   "known_limitation": "3 attempt(s) failed: HTTP Error 403: Forbidden",
+   "known_limitation": "1 attempt(s) failed: HTTP Error 403: Forbidden",
    "provenance_of_check": "intel/statistical_context/energy_indicators.py",
    "environment": "GITHUB_ACTIONS",
    "environment_status": "OK",
@@ -33,7 +33,7 @@
   {
    "source_id": "src_crossref_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T10:03:20.676617+00:00",
+   "last_checked": "2026-10-01T13:54:20.117438+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -47,7 +47,7 @@
   {
    "source_id": "src_federal_register_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T10:03:20.783197+00:00",
+   "last_checked": "2026-10-01T13:54:20.307961+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -61,7 +61,7 @@
   {
    "source_id": "src_ilo",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T10:03:21.095342+00:00",
+   "last_checked": "2026-10-01T13:54:20.939111+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -75,7 +75,7 @@
   {
    "source_id": "src_riss",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T10:03:23.217386+00:00",
+   "last_checked": "2026-10-01T13:54:21.984349+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
