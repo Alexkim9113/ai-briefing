@@ -1,0 +1,28 @@
+{
+  "run_id": 36805549197,
+  "job_id": 110188964117,
+  "head_sha": "9f739f7c843f5b43fbffc889a174ca0e77c9e0c0",
+  "workflow": "statistical-evidence-fetch.yml",
+  "fetched_at": "2026-10-01T02:22:49Z",
+  "url": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+  "indicator": "EG.USE.ELEC.KH.PC",
+  "country": "USA",
+  "http_status": 200,
+  "fetch_result": "OK",
+  "real_data_point_count": 13,
+  "observations": [
+    {"period": "2010", "value": 13392.6910118339, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2011", "value": 13235.0087662575, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2012", "value": 12945.1570388321, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2013", "value": 12972.2199687868, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2014", "value": 12962.1425409629, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2015", "value": 12828.8160828838, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2016", "value": 12806.1977101885, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2017", "value": 12604.1625559233, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2018", "value": 13054.4045353944, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2019", "value": 12678.2540503665, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2020", "value": 12393.4239035277, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2021", "value": 12556.0762291218, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"},
+    {"period": "2022", "value": 12968.9788423527, "unit": "kWh per capita", "indicator_name": "Electric power consumption (kWh per capita)", "country_name": "United States"}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "hyp_b0a4bbbc9b601728": {
+    "hypothesis_id": "hyp_b0a4bbbc9b601728",
+    "topic": "AI_ENERGY_INFRA",
+    "statement": "AI data centers are the primary driver of US electricity demand growth",
+    "scope": "US, 2010-2022 aggregate per-capita consumption",
+    "supporting_evidence": [],
+    "contradicting_evidence": [],
+    "alternative_explanations": [
+      "manufacturing reshoring",
+      "EV adoption",
+      "weather",
+      "population growth",
+      "cloud expansion (non-AI)",
+      "general electrification",
+      "industrial policy"
+    ],
+    "status": "INSUFFICIENT_EVIDENCE",
+    "uncertainty": [
+      {
+        "cause": "CAUSAL_UNCERTAINTY",
+        "detail": "no sector-decomposed evidence yet connects AI data-center load specifically to this aggregate indicator"
+      }
+    ],
+    "last_updated": "2026-10-01T02:31:56.621434+00:00"
+  }
+}

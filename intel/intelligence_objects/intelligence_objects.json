@@ -1,0 +1,89 @@
+{
+  "intel_87210a61730c22b9": {
+    "intelligence_id": "intel_87210a61730c22b9",
+    "topic": "AI_ENERGY_INFRA",
+    "question": "is AI data center growth driving US electricity demand increase?",
+    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022, with no AI-attribution evidence connected yet. Trend classification: NO_CLEAR_SIGNAL.",
+    "key_claims": [
+      "claim_7f1bc452c4ffc128"
+    ],
+    "supporting_evidence": [
+      "rel_290e45f3e25fcb78"
+    ],
+    "counterevidence": [],
+    "alternative_explanations": [],
+    "statistics": [
+      "series_af37f1207e7ff042"
+    ],
+    "research_context": [],
+    "policy_context": [],
+    "historical_context": [
+      {
+        "status": "INSUFFICIENT_EVIDENCE",
+        "reason": "corpus-wide historical audit found documents dating back 13369 days, but no document specifically grounds an electrification/industrial-automation-era analogy for this pilot's AI_ENERGY_INFRA question; Te's named candidates (electrification, telecom infrastructure, data-center expansion, industrial electrification) remain conceptual references, not evidence-backed analogies, per historical_analogy.py's own no-invention discipline"
+      }
+    ],
+    "geographic_context": [
+      {
+        "geography": "USA",
+        "basis": "statistic geography field (World Bank country code), not inferred from publisher or language",
+        "scope": "event_country=UNKNOWN (per M.5E-F geography model discipline)"
+      },
+      {
+        "geography": "KR",
+        "basis": "source_registry_verified_publisher (connected event's documents)",
+        "scope": "publisher_country only for event evt_a6a4027d9878143d; event_country stays UNKNOWN (no inference from publisher to event location)"
+      }
+    ],
+    "temporal_chain": [
+      {
+        "period_start": "2010",
+        "period_end": "2022",
+        "source": "series_af37f1207e7ff042"
+      },
+      {
+        "period_start": "2026-09-29T10:00:04+09:00",
+        "period_end": "2026-09-29T10:00:04+09:00",
+        "source": "evt_a6a4027d9878143d",
+        "note": "1 real event, 2 documents reporting it -- document count != event count"
+      }
+    ],
+    "uncertainties": [
+      {
+        "cause": "ATTRIBUTION_UNCERTAINTY",
+        "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+      },
+      {
+        "cause": "TEMPORAL_UNCERTAINTY",
+        "detail": "no data points after 2022 in this series"
+      }
+    ],
+    "known_gaps": [
+      {
+        "gap_type": "ATTRIBUTION_GAP",
+        "reason": "no evidence yet connects AI data-center load growth specifically to this aggregate per-capita series; the indicator is undifferentiated by sector"
+      },
+      {
+        "gap_type": "TEMPORAL_GAP",
+        "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+      },
+      {
+        "gap_type": "COUNTEREVIDENCE_GAP",
+        "reason": "no counterevidence/alternative-explanation evidence connected yet (manufacturing reshoring, EV adoption, weather, population growth) -- Entry Gate scope only"
+      },
+      {
+        "gap_type": "POLICY_RESEARCH_GAP",
+        "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+      }
+    ],
+    "provenance": [
+      "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+      "event:evt_a6a4027d9878143d"
+    ],
+    "last_updated": "2026-10-01T02:31:56.620890+00:00",
+    "readiness": "CONDITIONALLY_READY",
+    "version": 1,
+    "previous_version": null,
+    "revision_history": []
+  }
+}

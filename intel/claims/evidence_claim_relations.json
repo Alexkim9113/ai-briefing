@@ -1,0 +1,12 @@
+{
+  "rel_290e45f3e25fcb78": {
+    "relation_id": "rel_290e45f3e25fcb78",
+    "evidence_id": "series_af37f1207e7ff042",
+    "claim_id": "claim_7f1bc452c4ffc128",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "the admitted statistical series directly reports the values the DESCRIPTIVE claim states; trend_status is INSUFFICIENT_SERIES/NO_CLEAR_SIGNAL-class, not asserted as a CAUSAL driver",
+    "provenance": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+    "created_at": "2026-10-01T02:31:56.611771+00:00"
+  }
+}
