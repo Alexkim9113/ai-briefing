@@ -14,8 +14,11 @@ def test_build_or_no_change_returns_no_change_for_unaltered_corpus():
     result = ro.build_or_no_change("intel_87210a61730c22b9")
     assert result["status"] == "NO_CHANGE"
     # O-0: AI_ENERGY_INFRA intelligence object legitimately advanced to v2 (real new
-    # IEA/arXiv/GridLab evidence), so the real latest saved report is now v2, not v1.
-    assert result["report_id"] == "report_intel_87210a61730c22b9_v2"
+    # IEA/arXiv/GridLab evidence), so the real latest saved report was v2, not v1.
+    # O-1: the intelligence object legitimately advanced again (v3/v4: LBNL/Ireland/Korea/
+    # EU-EED/China evidence linked into key_claims/supporting_evidence), so the real latest
+    # saved report is now v3, not v2.
+    assert result["report_id"] == "report_intel_87210a61730c22b9_v3"
 
 
 def test_build_or_no_change_never_creates_a_file_on_no_change():

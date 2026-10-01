@@ -119,11 +119,17 @@ def build_o1_funnel():
                     "the HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP disclosure.",
         },
         "REPORT_UPDATED": {
-            "count": None, "status": "NOT_YET_RUN",
-            "note": "Report Engine v3 generation for report_intel_87210a61730c22b9 had not been "
-                    "run at the time this funnel file was written in this session -- see the "
-                    "final O-1 report's section AB/AC for whether it was completed later in the "
-                    "same session, and do not infer REAL from this placeholder alone.",
+            "count": 1, "status": "REAL",
+            "note": "report_intel_87210a61730c22b9_v3 was generated via report_ops."
+                    "build_or_no_change() (status=NEW_VERSION) after the key_claims/"
+                    "supporting_evidence correction; readiness=CONDITIONALLY_READY. HTML/PDF "
+                    "rendering was confirmed via build_artifacts_with_failure_isolation "
+                    "(REPORT_JSON_READY/HTML_READY/PDF_READY, pdf_validation.ok=True) but, "
+                    "following the same precedent as O-0 (see intelligence_quality/"
+                    "o0_after_snapshot.json's report_artifact_note), the derived HTML/PDF "
+                    "files themselves were not additionally persisted to disk this phase -- "
+                    "build_artifacts_with_failure_isolation() deletes its temp HTML/PDF files "
+                    "after validation by design.",
         },
     }
 
