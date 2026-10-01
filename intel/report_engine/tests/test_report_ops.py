@@ -13,7 +13,9 @@ import pdf_pipeline as pp  # noqa: E402
 def test_build_or_no_change_returns_no_change_for_unaltered_corpus():
     result = ro.build_or_no_change("intel_87210a61730c22b9")
     assert result["status"] == "NO_CHANGE"
-    assert result["report_id"] == "report_intel_87210a61730c22b9_v1"
+    # O-0: AI_ENERGY_INFRA intelligence object legitimately advanced to v2 (real new
+    # IEA/arXiv/GridLab evidence), so the real latest saved report is now v2, not v1.
+    assert result["report_id"] == "report_intel_87210a61730c22b9_v2"
 
 
 def test_build_or_no_change_never_creates_a_file_on_no_change():

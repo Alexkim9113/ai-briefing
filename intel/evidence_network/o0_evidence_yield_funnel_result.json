@@ -1,0 +1,89 @@
+{
+ "run_id": "O0_EVIDENCE_YIELD_FUNNEL_AI_ENERGY_INFRA",
+ "note": "Phase-specific funnel for O-0, instrumented from this phase's own real acquisition/claims/statistics/intelligence-object artifacts -- reuses the stage and honesty discipline of evidence_yield_funnel.py without touching that file or its AI_LABOR-era counts.",
+ "stages": {
+  "QUERY_PLANNED": {
+   "count": 6,
+   "status": "REAL_COUNT",
+   "note": "3 queries recorded in o0_ai_energy_infra_acquisition_result.json's additional_websearch_queries_run, + 3 WebSearch queries actually run in this session's counterevidence follow-up (EV/EIA, AI hardware efficiency, population growth) -- the latter 3 come from this session's own tool-call record since no persistent query log exists."
+  },
+  "SOURCE_SELECTED": {
+   "count": 10,
+   "status": "REAL_COUNT",
+   "note": "distinct source URLs appearing in the acquisition result's items+access_blocked_items and the counterevidence supplement's directions."
+  },
+  "SOURCE_FETCHED": {
+   "count": 7,
+   "status": "REAL_COUNT",
+   "note": "items/directions with access_status or status containing EVIDENCE_FOUND across both result files."
+  },
+  "CANDIDATE_CREATED": {
+   "count": 7,
+   "status": "REAL_COUNT",
+   "note": "equals SOURCE_FETCHED -- every successful fetch this phase produced extracted findings that were used downstream (claims and/or counterevidence/alt-explanation entries); no fetch produced a candidate that was then discarded."
+  },
+  "VALIDATED": {
+   "count": 7,
+   "status": "REAL_COUNT",
+   "note": "O-0 claims that passed claim_model.new_claim()'s claim_type assertion (4) + statistical observations that passed statistical_evidence.validate_observation() as VALIDATED (3, from the 2 new IEA series)."
+  },
+  "ADMITTED": {
+   "count": 6,
+   "status": "REAL_COUNT",
+   "note": "O-0 claims actually persisted to claims.json (4) + statistical series actually persisted to statistical_evidence.json (2) via their sole writer functions."
+  },
+  "EVIDENCE_CONNECTED": {
+   "count": 4,
+   "status": "REAL_COUNT",
+   "note": "evidence_claim_relations.json relations created this phase, linking the 3 ingested sources to the 4 new claims."
+  },
+  "CLAIM_UPDATED": {
+   "count": 4,
+   "status": "REAL_COUNT",
+   "note": "new claim_ids added to the AI_ENERGY_INFRA intelligence object's key_claims this phase."
+  },
+  "INTELLIGENCE_UPDATED": {
+   "count": 1,
+   "status": "REAL_COUNT",
+   "note": "1 if intel_87210a61730c22b9 (AI_ENERGY_INFRA) version advanced via incremental_update this phase, else 0. AI_LABOR's intelligence object was never touched."
+  },
+  "REPORT_UPDATED": {
+   "count": 1,
+   "status": "REAL_COUNT",
+   "note": "report_intel_87210a61730c22b9 (AI_ENERGY_INFRA) advanced v1->v2 via report_engine.build_report()/save_report(); diff_reports() confirmed real NEW_EVIDENCE + CLAIM_STATUS_CHANGED diffs, not a spurious rebuild. HTML/PDF artifact files for v2 were not written to disk this phase (JSON report, the canonical artifact, was)."
+  }
+ },
+ "source_family_yield_raw_counts_no_scoring": {
+  "IEA": {
+   "attempted": 2,
+   "fetched": 1,
+   "note": "base report page ACCESS_BLOCKED (provenance gate); executive-summary sub-page fetched successfully."
+  },
+  "arXiv": {
+   "attempted": 1,
+   "fetched": 1
+  },
+  "GridLab/PJM": {
+   "attempted": 1,
+   "fetched": 1
+  },
+  "Pew Research": {
+   "attempted": 1,
+   "fetched": 0,
+   "note": "ACCESS_BLOCKED (provenance gate)."
+  },
+  "NVIDIA/trade-press (Network World)": {
+   "attempted": 1,
+   "fetched": 1,
+   "note": "vendor-claimed figures, not independently verified."
+  },
+  "EIA": {
+   "attempted": 1,
+   "fetched": 1
+  },
+  "IEA Global EV Outlook": {
+   "attempted": 1,
+   "fetched": 1
+  }
+ }
+}

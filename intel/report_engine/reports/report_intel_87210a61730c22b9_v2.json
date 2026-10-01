@@ -1,0 +1,500 @@
+{
+ "report_id": "report_intel_87210a61730c22b9_v2",
+ "intelligence_id": "intel_87210a61730c22b9",
+ "topic": "AI_ENERGY_INFRA",
+ "version": 2,
+ "generated_at": "2026-10-01T11:10:28.104446+00:00",
+ "source_snapshot": "cbb8f7ee23602062",
+ "claim_snapshot": "f89987f50f68ca48",
+ "evidence_snapshot": "e85b11a97ebb911d",
+ "readiness": "CONDITIONALLY_READY",
+ "sections": {
+  "KEY_CLAIMS": {
+   "section_id": "sec_key_claims",
+   "section_type": "KEY_CLAIMS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "INTERPRETATION",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_1d9458f4e7e2cf69",
+     "claim_status": "OPEN",
+     "claim_type": "PREDICTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_5787125ab5f0110b",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_7f1bc452c4ffc128",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_afe7cc7b19317ee0",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "INTERPRETATION",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_d170f52f567053e9",
+     "claim_status": "OPEN",
+     "claim_type": "TREND"
+    }
+   ],
+   "claim_ids": [
+    "claim_1d9458f4e7e2cf69",
+    "claim_5787125ab5f0110b",
+    "claim_7f1bc452c4ffc128",
+    "claim_afe7cc7b19317ee0",
+    "claim_d170f52f567053e9"
+   ],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103316+00:00"
+  },
+  "STATISTICAL_CONTEXT": {
+   "section_id": "sec_statistical_context",
+   "section_type": "STATISTICAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "IEA_GLOBAL_DC_ELECTRICITY_TWH_FORECAST",
+     "source": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+     "geography": "GLOBAL",
+     "period": "2030-2035",
+     "observation_count": 2,
+     "trend_status": "INSUFFICIENT_SERIES",
+     "limitations": []
+    },
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "EG.USE.ELEC.KH.PC",
+     "source": "src_worldbank_api",
+     "geography": "USA",
+     "period": "2010-2022",
+     "observation_count": 13,
+     "trend_status": "NO_CLEAR_SIGNAL",
+     "limitations": []
+    },
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "IEA_GLOBAL_DC_ELECTRICITY_TWH_OBSERVED",
+     "source": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+     "geography": "GLOBAL",
+     "period": "2024-2024",
+     "observation_count": 1,
+     "trend_status": "INSUFFICIENT_SERIES",
+     "limitations": []
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [
+    "series_67a90dc183bd74a1",
+    "series_af37f1207e7ff042",
+    "series_d018d1290acd5f20"
+   ],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103424+00:00"
+  },
+  "RESEARCH_EVIDENCE": {
+   "section_id": "sec_research_evidence",
+   "section_type": "RESEARCH_EVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103433+00:00"
+  },
+  "POLICY_CONTEXT": {
+   "section_id": "sec_policy_context",
+   "section_type": "POLICY_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103441+00:00"
+  },
+  "COUNTEREVIDENCE": {
+   "section_id": "sec_counterevidence",
+   "section_type": "COUNTEREVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103449+00:00",
+   "search_outcome": "SEARCH_NOT_RUN",
+   "search_outcome_note": "검색이 수행되지 않았다"
+  },
+  "ALTERNATIVE_EXPLANATIONS": {
+   "section_id": "sec_alternative_explanations",
+   "section_type": "ALTERNATIVE_EXPLANATIONS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "GENERAL_CLOUD_COMPUTING_GROWTH"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103457+00:00"
+  },
+  "UNCERTAINTIES": {
+   "section_id": "sec_uncertainties",
+   "section_type": "UNCERTAINTIES",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+    },
+    {
+     "cause": "TEMPORAL_UNCERTAINTY",
+     "detail": "no data points after 2022 in this series"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103466+00:00"
+  },
+  "WHAT_WE_KNOW": {
+   "section_id": "sec_what_we_know",
+   "section_type": "WHAT_WE_KNOW",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103488+00:00"
+  },
+  "WHAT_WE_DO_NOT_KNOW": {
+   "section_id": "sec_what_we_do_not_know",
+   "section_type": "WHAT_WE_DO_NOT_KNOW",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "partially addressed: IEA/GridLab evidence now connects AI/data-center growth to electricity demand at PARTIAL attribution (named as one driver among several -- general digital services, electrification -- with no numeric AI-only split given by any source); the earlier World Bank per-capita series still cannot be decomposed by end-use sector."
+    },
+    {
+     "gap_type": "TEMPORAL_GAP",
+     "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "partially addressed: live counterevidence acquisition (o0_live_counterevidence_supplement.json) found real evidence for efficiency-improvements and non-AI-cloud-growth directions via the Jevons paper; manufacturing/reshoring, EV/electrification, population growth, and weather/climate directions remain SEARCH_NOT_RUN or evidence-thin."
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+    },
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+    },
+    {
+     "cause": "TEMPORAL_UNCERTAINTY",
+     "detail": "no data points after 2022 in this series"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103494+00:00"
+  },
+  "EVIDENCE_GAPS": {
+   "section_id": "sec_evidence_gaps",
+   "section_type": "EVIDENCE_GAPS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "partially addressed: IEA/GridLab evidence now connects AI/data-center growth to electricity demand at PARTIAL attribution (named as one driver among several -- general digital services, electrification -- with no numeric AI-only split given by any source); the earlier World Bank per-capita series still cannot be decomposed by end-use sector."
+    },
+    {
+     "gap_type": "TEMPORAL_GAP",
+     "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "partially addressed: live counterevidence acquisition (o0_live_counterevidence_supplement.json) found real evidence for efficiency-improvements and non-AI-cloud-growth directions via the Jevons paper; manufacturing/reshoring, EV/electrification, population growth, and weather/climate directions remain SEARCH_NOT_RUN or evidence-thin."
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [
+    "ATTRIBUTION_GAP",
+    "TEMPORAL_GAP",
+    "COUNTEREVIDENCE_GAP",
+    "POLICY_RESEARCH_GAP"
+   ],
+   "generated_at": "2026-10-01T11:10:28.103507+00:00"
+  },
+  "METAXIS_POINT": {
+   "section_id": "sec_metaxis_point",
+   "section_type": "METAXIS_POINT",
+   "status": "NOT_APPLICABLE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103515+00:00"
+  },
+  "EVIDENCE_MAP": {
+   "section_id": "sec_evidence_map",
+   "section_type": "EVIDENCE_MAP",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "node_type": "STATISTIC",
+     "id": "series_67a90dc183bd74a1"
+    },
+    {
+     "node_type": "STATISTIC",
+     "id": "series_af37f1207e7ff042"
+    },
+    {
+     "node_type": "STATISTIC",
+     "id": "series_d018d1290acd5f20"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_290e45f3e25fcb78"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_5561f393ab96d55f"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_8396e8c80f83a5b4"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_b9a99b4d7849f174"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_cd3a5f794ad00b81"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_1d9458f4e7e2cf69"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_5787125ab5f0110b"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_7f1bc452c4ffc128"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_afe7cc7b19317ee0"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_d170f52f567053e9"
+    },
+    {
+     "node_type": "INTELLIGENCE_OBJECT",
+     "id": "intel_87210a61730c22b9"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103536+00:00"
+  },
+  "SOURCE_PROVENANCE": {
+   "section_id": "sec_source_provenance",
+   "section_type": "SOURCE_PROVENANCE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "source_id": "event:evt_a6a4027d9878143d",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://arxiv.org/html/2411.11540v1",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+     "note": "non-document provenance reference"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [
+    "event:evt_a6a4027d9878143d",
+    "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
+    "https://arxiv.org/html/2411.11540v1",
+    "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+    "https://www.iea.org/reports/energy-and-ai/executive-summary"
+   ],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103552+00:00"
+  },
+  "CURRENT_STATE": {
+   "section_id": "sec_current_state",
+   "section_type": "CURRENT_STATE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand."
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103560+00:00"
+  },
+  "GEOGRAPHIC_CONTEXT": {
+   "section_id": "sec_geographic_context",
+   "section_type": "GEOGRAPHIC_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "geography": "USA",
+     "basis": "statistic geography field (World Bank country code), not inferred from publisher or language",
+     "scope": "event_country=UNKNOWN (per M.5E-F geography model discipline)"
+    },
+    {
+     "geography": "KR",
+     "basis": "source_registry_verified_publisher (connected event's documents)",
+     "scope": "publisher_country only for event evt_a6a4027d9878143d; event_country stays UNKNOWN (no inference from publisher to event location)"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103566+00:00"
+  },
+  "TEMPORAL_CONTEXT": {
+   "section_id": "sec_temporal_context",
+   "section_type": "TEMPORAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "period_start": "2010",
+     "period_end": "2022",
+     "source": "series_af37f1207e7ff042"
+    },
+    {
+     "period_start": "2026-09-29T10:00:04+09:00",
+     "period_end": "2026-09-29T10:00:04+09:00",
+     "source": "evt_a6a4027d9878143d",
+     "note": "1 real event, 2 documents reporting it -- document count != event count"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103574+00:00"
+  },
+  "HISTORICAL_CONTEXT": {
+   "section_id": "sec_historical_context",
+   "section_type": "HISTORICAL_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [
+    {
+     "status": "INSUFFICIENT_EVIDENCE",
+     "reason": "corpus-wide historical audit found documents dating back 13369 days, but no document specifically grounds an electrification/industrial-automation-era analogy for this pilot's AI_ENERGY_INFRA question; Te's named candidates (electrification, telecom infrastructure, data-center expansion, industrial electrification) remain conceptual references, not evidence-backed analogies, per historical_analogy.py's own no-invention discipline"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103586+00:00"
+  },
+  "KEY_QUESTION": {
+   "section_id": "sec_key_question",
+   "section_type": "KEY_QUESTION",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "is AI data center growth driving US electricity demand increase?"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-01T11:10:28.103592+00:00"
+  }
+ }
+}
