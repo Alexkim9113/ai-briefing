@@ -1,0 +1,42 @@
+{
+ "head_commit": "3b0eee34e0b700d4daa85191ef268f00423e0bee",
+ "counts": {
+  "documents": 601,
+  "events": 3,
+  "facts": 569,
+  "evidence": 500,
+  "relationships": 0,
+  "sources": 299
+ },
+ "intelligence_object_files": {
+  "intelligence_object_contract_result.json": "70c77a84ea63b2df",
+  "intelligence_objects.json": "9fd98a3894075d9c",
+  "report_engine_contract_test_result.json": "b7897becb400af84"
+ },
+ "claim_files": {
+  "claims.json": "e21d90573c0f67cc",
+  "evidence_claim_relations.json": "f5a4535ea13067ef"
+ },
+ "hypothesis_files": {
+  "ai_energy_infra_h1_counterevidence_result.json": "737798c089b07b24",
+  "hypotheses.json": "874dc1c8ae9aa3cb"
+ },
+ "report_files": {
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json": "df8995f2c995bd0b",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b8155"
+ },
+ "report_html_files": {
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_print.html": "8a7ca21b9de631e2",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_product_public.html": "4ee09741416fc575",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_public.html": "7db23e68e4af8785",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_print.html": "81fb14a2e20847e4",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_product_public.html": "a9c71689d3cd0f16",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_public.html": "4fe6fb352a0bed00"
+ },
+ "report_pdf_files": {
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.pdf": "19933710a73f0947",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.pdf": "1ad28e126819821d"
+ },
+ "private_research_count": 0,
+ "known_gaps_files": []
+}
