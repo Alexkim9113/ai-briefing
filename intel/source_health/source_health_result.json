@@ -1,10 +1,10 @@
 {
- "checked_at": "2026-10-01T06:26:43.042483+00:00",
+ "checked_at": "2026-10-01T06:59:37.127437+00:00",
  "results": [
   {
    "source_id": "src_worldbank_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:39.724184+00:00",
+   "last_checked": "2026-10-01T06:59:33.874206+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
@@ -15,7 +15,7 @@
   {
    "source_id": "src_eia_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:40.456255+00:00",
+   "last_checked": "2026-10-01T06:59:34.481169+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
@@ -26,7 +26,7 @@
   {
    "source_id": "src_crossref_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:41.168913+00:00",
+   "last_checked": "2026-10-01T06:59:35.172346+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
@@ -37,7 +37,7 @@
   {
    "source_id": "src_federal_register_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:41.719942+00:00",
+   "last_checked": "2026-10-01T06:59:35.818547+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
@@ -48,7 +48,7 @@
   {
    "source_id": "src_ilo",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:42.400911+00:00",
+   "last_checked": "2026-10-01T06:59:36.470804+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
@@ -59,7 +59,7 @@
   {
    "source_id": "src_riss",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:26:43.042452+00:00",
+   "last_checked": "2026-10-01T06:59:37.127398+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
