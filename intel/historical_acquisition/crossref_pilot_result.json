@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-10-01T00:34:25.642994+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36796570926)",
+  "attempted_at": "2026-10-01T05:10:18.934371+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36818224621)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 5,
@@ -10,7 +10,7 @@
       "source_tier": "TIER_1",
       "gap_type": "MISSING_ACADEMIC_EVIDENCE",
       "url": "https://api.crossref.org/works?query=AI%20agents%20autonomous%20systems&rows=5&sort=published&order=desc&select=title,author,DOI,abstract,published,container-title,URL,type",
-      "attempted_at": "2026-10-01T00:34:25.642994+00:00",
+      "attempted_at": "2026-10-01T05:10:18.934371+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
@@ -35,8 +35,8 @@
           "canonical_url": "https://doi.org/10.47363/jeast/2021/vid/1006",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_ACADEMIC_EVIDENCE",
-          "retrieved_at": "2026-10-01T00:34:25.642994+00:00",
-          "provenance_id": "prov_crossref_10.47363_jeast_2021_vid_1006_2026-10-01T00:34:25.642994+00:00"
+          "retrieved_at": "2026-10-01T05:10:18.934371+00:00",
+          "provenance_id": "prov_crossref_10.47363_jeast_2021_vid_1006_2026-10-01T05:10:18.934371+00:00"
         },
         {
           "document_id": "crossref_10.15556_ijiim.01.02.003",
@@ -58,8 +58,8 @@
           "canonical_url": "https://doi.org/10.15556/ijiim.01.02.003",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_ACADEMIC_EVIDENCE",
-          "retrieved_at": "2026-10-01T00:34:25.642994+00:00",
-          "provenance_id": "prov_crossref_10.15556_ijiim.01.02.003_2026-10-01T00:34:25.642994+00:00"
+          "retrieved_at": "2026-10-01T05:10:18.934371+00:00",
+          "provenance_id": "prov_crossref_10.15556_ijiim.01.02.003_2026-10-01T05:10:18.934371+00:00"
         },
         {
           "document_id": "crossref_10.5040_9781718219342.ch-014",
@@ -79,8 +79,8 @@
           "canonical_url": "https://doi.org/10.5040/9781718219342.ch-014",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_ACADEMIC_EVIDENCE",
-          "retrieved_at": "2026-10-01T00:34:25.642994+00:00",
-          "provenance_id": "prov_crossref_10.5040_9781718219342.ch-014_2026-10-01T00:34:25.642994+00:00"
+          "retrieved_at": "2026-10-01T05:10:18.934371+00:00",
+          "provenance_id": "prov_crossref_10.5040_9781718219342.ch-014_2026-10-01T05:10:18.934371+00:00"
         },
         {
           "document_id": "crossref_10.5304_jafscd.2013.041.001",
@@ -105,8 +105,8 @@
           "canonical_url": "https://doi.org/10.5304/jafscd.2013.041.001",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_ACADEMIC_EVIDENCE",
-          "retrieved_at": "2026-10-01T00:34:25.642994+00:00",
-          "provenance_id": "prov_crossref_10.5304_jafscd.2013.041.001_2026-10-01T00:34:25.642994+00:00"
+          "retrieved_at": "2026-10-01T05:10:18.934371+00:00",
+          "provenance_id": "prov_crossref_10.5304_jafscd.2013.041.001_2026-10-01T05:10:18.934371+00:00"
         },
         {
           "document_id": "crossref_10.3384_ecp1392a41",
@@ -130,8 +130,8 @@
           "canonical_url": "https://doi.org/10.3384/ecp1392a41",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_ACADEMIC_EVIDENCE",
-          "retrieved_at": "2026-10-01T00:34:25.642994+00:00",
-          "provenance_id": "prov_crossref_10.3384_ecp1392a41_2026-10-01T00:34:25.642994+00:00"
+          "retrieved_at": "2026-10-01T05:10:18.934371+00:00",
+          "provenance_id": "prov_crossref_10.3384_ecp1392a41_2026-10-01T05:10:18.934371+00:00"
         }
       ],
       "overall_status": "SUCCESS",
