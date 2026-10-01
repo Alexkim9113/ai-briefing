@@ -1,7 +1,662 @@
 {
  "date": "2026-10-02",
- "generated_at": "2026-10-02T04:30+09:00",
+ "generated_at": "2026-10-02T08:24+09:00",
  "items": [
+  {
+   "id": "33a7ca2fb54281f0",
+   "title": "[밤 사이 해외뉴스]AI가 끌어올린 美증시…나스닥·S&P500, 4년 연속 두자릿수 상승 눈앞",
+   "link": "https://www.hankyung.com/article/202610029123i",
+   "source": "한국경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T08:04:07+09:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "AI 열풍에 힘입어 미국 나스닥과 S&P 500 지수가 4년 연속 두 자릿수 연간 상승률을 기록할 가능성이 커졌다.",
+    "p": "빅테크 중심의 AI 인프라 투자와 기술 기대감이 거시경제의 불확실성을 뚫고 미국 증시 전체의 장기 랠리를 주도하는 구조가 이어지고 있다.",
+    "t": [
+     "나스닥",
+     "S&P500",
+     "미국증시",
+     "AI경제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_33a7ca2fb54281f0",
+     "point_text": "빅테크 중심의 AI 인프라 투자와 기술 기대감이 거시경제의 불확실성을 뚫고 미국 증시 전체의 장기 랠리를 주도하는 구조가 이어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "33a7ca2fb54281f0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550409+00:00"
+    }
+   }
+  },
+  {
+   "id": "8cae5b01b4d60ea5",
+   "title": "현대차, 뉴욕서 '디 올 뉴 투싼' 공개…글로벌 SUV 시장 공략(종합)",
+   "link": "https://www.yna.co.kr/view/AKR20261001099851003",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T08:01:02+09:00",
+   "summary": "(뉴욕=연합뉴스) 김윤구 기자 = 현대자동차가 대담한 디자인과 차세대 하이브리드 시스템, 인공지능(AI) 기반 인포테인먼트를 적용한 '디 올 뉴...",
+   "thumb": "",
+   "mx": {
+    "b": "현대자동차가 미국 뉴욕에서 차세대 하이브리드 파워트레인과 AI 기반 인포테인먼트 시스템을 탑재한 '디 올 뉴 투싼'을 공개했다.",
+    "p": "완성차 업계가 차량 내 사용자 경험을 차별화하기 위해 AI 기반 음성 인터페이스와 인포테인먼트 소프트웨어 고도화를 주요 판매 경쟁력으로 삼고 있다.",
+    "t": [
+     "현대자동차",
+     "투싼",
+     "차량용AI",
+     "인포테인먼트"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_8cae5b01b4d60ea5",
+     "point_text": "완성차 업계가 차량 내 사용자 경험을 차별화하기 위해 AI 기반 음성 인터페이스와 인포테인먼트 소프트웨어 고도화를 주요 판매 경쟁력으로 삼고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "8cae5b01b4d60ea5"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550470+00:00"
+    }
+   }
+  },
+  {
+   "id": "c45e65b2d49c2016",
+   "title": "쿡 연준 이사 \"AI 투자 열풍, 2027년 인플레 우려 요인\"",
+   "link": "https://www.fnnews.com/news/202610020732512234",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T07:37:02+09:00",
+   "summary": "[파이낸셜뉴스] 미국 연방준비제도(연준)의 리사 쿡 이사가 인공지능(AI) 인프라 구축에 따른 인플레이션 압력을 향후 경제의 주요 위험 요인으로 지적했다.",
+   "detail": "[파이낸셜뉴스] 미국 연방준비제도(연준)의 리사 쿡 이사가 인공지능(AI) 인프라 구축에 따른 인플레이션 압력을 향후 경제의 주요 위험 요인으로 지적했다.\n1일(현지시간) 쿡 연준 이사는 뉴욕 연방준비은행에서 열린 행사에서 존 윌리엄스 뉴욕 연은 총재와 대담을 나누며 \"AI 인프라 구축 확대가 단기간에 해결되기 어려운 인플레이션(물가상승) 압력을 유발할 가능성이 있다\"며 \"이는 2027년을 내다볼 때 가장 우려되는 핵심 요소 중 하나\"라고 밝혔다.",
+   "thumb": "",
+   "mx": {
+    "b": "리사 쿡 미 연준 이사는 데이터센터와 전력 등 대규모 AI 인프라 구축 확대가 물가 상승 압력을 지속시켜 2027년 인플레이션의 주요 위험 요인이 될 수 있다고 경고했다.",
+    "p": "AI 기술 투자가 촉발한 대규모 자본 지출과 에너지·하드웨어 수요 집중이 단기적 기술 발전을 넘어 중앙은행의 중장기 통화 정책을 흔드는 거시경제 변수로 부상했다.",
+    "t": [
+     "연준",
+     "리사쿡",
+     "AI인프라",
+     "인플레이션"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_c45e65b2d49c2016",
+     "point_text": "AI 기술 투자가 촉발한 대규모 자본 지출과 에너지·하드웨어 수요 집중이 단기적 기술 발전을 넘어 중앙은행의 중장기 통화 정책을 흔드는 거시경제 변수로 부상했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "c45e65b2d49c2016"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550555+00:00"
+    }
+   }
+  },
+  {
+   "id": "a6ff71c8ad297e63",
+   "title": "[대구·경북 조간 헤드라인]",
+   "link": "https://www.newsis.com/view/NISX20261002_0003811691",
+   "source": "뉴시스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T07:27:31+09:00",
+   "summary": "[대구=뉴시스] ▲경북도민일보 = 대구시, 주택 공급 빗장 푼다…통합심의도 확대 ▲경북신문 = 道, 앵커 사업 결실…청년 취업·정주 3602명 ▲경북일보 = 대구 건설경기 회복 신호탄…주택공급 규제 풀었다 ▲경상매일신문 = 로봇 특화단지는 TK인데…총리실 자료에선 '새만금' 먼저 ▲대구신문 = 대구, 3년 넘게 막아온…",
+   "detail": "[대구=뉴시스] ▲경북도민일보 = 대구시, 주택 공급 빗장 푼다…통합심의도 확대 ▲경북신문 = 道, 앵커 사업 결실…청년 취업·정주 3602명 ▲경북일보 = 대구 건설경기 회복 신호탄…주택공급 규제 풀었다 ▲경상매일신문 = 로봇 특화단지는 TK인데…총리실 자료에선 '새만금' 먼저 ▲대구신문 = 대구, 3년 넘게 막아온 신규 주택건설 풀었다 ▲대구일보 = 대구 주택 공급 빗장 풀렸다 ▲매일신문 = 도 넘은 박정희 모욕 \"영화 상영 중단하라\" ▲영남일보 = 1946년 대구 봉쇄, 한반도 첫 계엄이었다 ▲일간경북신문 =…",
+   "thumb": "",
+   "mx": {
+    "b": "대구시가 신규 주택건설 사업계획 승인 규제를 3년여 만에 전면 해제하고 통합심의 대상을 확대하기로 했다. 이번 조치는 장기간 얼어붙었던 지역 건설 경기에 활력을 불어넣기 위한 결정이다.",
+    "p": "지방 자치단체의 주택 공급 규제 완화가 건설·부동산 시장의 유동성을 회복시키는 계기가 될 수 있으나, 단기적 공급 과잉이나 미분양 리스크에 대한 관리도 병행되어야 한다.",
+    "t": [
+     "대구시",
+     "주택공급",
+     "부동산규제",
+     "건설경기"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a6ff71c8ad297e63",
+     "point_text": "지방 자치단체의 주택 공급 규제 완화가 건설·부동산 시장의 유동성을 회복시키는 계기가 될 수 있으나, 단기적 공급 과잉이나 미분양 리스크에 대한 관리도 병행되어야 한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a6ff71c8ad297e63"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.852795+00:00"
+    }
+   }
+  },
+  {
+   "id": "2548fab847d1b1f2",
+   "title": "압구정 한양아파트 화재, 로봇청소기 때문은 아니었다",
+   "link": "https://www.yna.co.kr/view/AKR20261001195800004",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T07:00:02+09:00",
+   "summary": "(서울=연합뉴스) 이의진 기자 = 소방당국이 지난 7월 서울 강남구 압구정동 한양아파트 화재 원인이 벽체 공간 콘센트에서 발생한 '트래킹'이라고...",
+   "thumb": "",
+   "mx": {
+    "b": "지난 7월 발생한 서울 압구정동 아파트 화재 사고의 원인이 로봇청소기가 아닌 벽체 콘센트의 트래킹 현상인 것으로 소방당국 조사 결과 밝혀졌다.",
+    "p": "",
+    "t": [
+     "소방당국",
+     "화재원인",
+     "전기안전",
+     "트래킹"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_2548fab847d1b1f2",
+     "point_text": "가전제품 관련 화재 사고 발생 시 기기의 오작동으로 단정하기 쉽지만, 정밀한 전기안전 감식을 통해 실제 원인을 규명하는 과정이 기술적·법적으로 중요하다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "2548fab847d1b1f2"
+     ],
+     "grounding_status": "UNSUPPORTED_INTERPRETATION",
+     "interpretation_type": "CAUSAL",
+     "generated_at": "2026-10-01T23:25:19.852893+00:00"
+    }
+   }
+  },
+  {
+   "id": "95cb9fff8fda964c",
+   "title": "마이크론이 연 반도체 실적시즌…'삼성전자 HBM4·범용D램'에 쏠린 눈",
+   "link": "https://www.newsis.com/view/NISX20261001_0003811458",
+   "source": "뉴시스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T07:00:00+09:00",
+   "summary": "[서울=뉴시스]송혜리 기자 = 반도체 실적 시즌의 문을 연 마이크론이 시장 기대를 웃도는 실적과 가이던스를 내놓으면서 메모리 업황에 대한 기대감이 한층 커지고 있다. 증권가에서는 인공지능(AI) 수요 확대와 고대역폭메모리(HBM)의 생산능력 잠식으로 범용 D램까지 공급 부족이 이어질 가능성에 주목하고 있다.",
+   "detail": "특히 내년 삼성전자의 HBM4 출하가 본격화하면서 실적 개선 기대가 커지는 가운데, 현재의 메모리 호황이 2028~2029년까지 이어질지가 반도체주의 추가 상승을 좌우할 핵심 변수로 꼽힌다.\n하나증권도 내년 삼성전자의 HBM 매출 확대에 주목했다.\n김록호 하나증권 연구원은 \"내년에는 삼성전자의 HBM 매출액 증대에 주목할 필요가 있다\"며 \"주요 고객사향 HBM4 출하가 본격화되며 D램 내 매출 비중이 15% 내외로 확대될 전망\"이라고 말했다.",
+   "thumb": "",
+   "mx": {
+    "b": "마이크론의 실적 발표로 반도체 호황 기대감이 커진 가운데, 내년 삼성전자의 HBM4 출하 본격화가 주요 관심사로 부각됐다. 하나증권은 내년 삼성전자의 HBM 매출 비중이 D램 내 15% 내외로 확대될 것으로 전망했다.",
+    "p": "AI 서버 중심의 메모리 수요가 단기 반짝 호황을 넘어 구조적 성장 국면에 진입했음을 보여주며, 차세대 제품 양산 수율과 고객사 확보가 실적의 향방을 가르는 결정적 요인이다.",
+    "t": [
+     "삼성전자",
+     "HBM4",
+     "반도체",
+     "하나증권"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_95cb9fff8fda964c",
+     "point_text": "AI 서버 중심의 메모리 수요가 단기 반짝 호황을 넘어 구조적 성장 국면에 진입했음을 보여주며, 차세대 제품 양산 수율과 고객사 확보가 실적의 향방을 가르는 결정적 요인이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "95cb9fff8fda964c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853011+00:00"
+    }
+   }
+  },
+  {
+   "id": "8b362e392bf543e8",
+   "title": "공장 투입 앞둔 현대차그룹 '아틀라스'…실제 제조공정 훈련 본격화(영상)",
+   "link": "https://www.newsis.com/view/NISX20261001_0003811564",
+   "source": "뉴시스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:52:15+09:00",
+   "summary": "[서울=뉴시스] 김종민 기자 = 현대자동차그룹과 보스턴다이내믹스가 개발한 휴머노이드 로봇 '아틀라스'가 미국 조지아주에 위치한 로보틱스 메타플랜트 응용센터(RMAC)에서 실제 제조 공정을 배우며 상용화를 위한 실전 검증에 들어갔다.",
+   "detail": "[서울=뉴시스] 김종민 기자 = 현대자동차그룹과 보스턴다이내믹스가 개발한 휴머노이드 로봇 '아틀라스'가 미국 조지아주에 위치한 로보틱스 메타플랜트 응용센터(RMAC)에서 실제 제조 공정을 배우며 상용화를 위한 실전 검증에 들어갔다.\n1일 보스톤다이내믹스 유튜브 채널은 현대차그룹은 '로보틱스 경쟁의 내면(Inside the Robotics Race)'이라는 제목의 영상을 통해 아틀라스의 훈련 현장을 공개했다.\n보스턴다이내믹스는 사족보행 로봇 '스팟'과 물류 로봇 '스트레치'를 통해 쌓은 상용화 노하우를 아틀라스에 적용하고 있다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "05916184913698cd",
+   "title": "구글, 우주 데이터센터 첫 궤도 실험…TPU 실은 위성 발사 성공",
+   "link": "https://www.yna.co.kr/view/AKR20261002011400009",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:40:58+09:00",
+   "summary": "(서울=연합뉴스) 정주호 기자 = 구글의 인공지능(AI) 칩을 실은 시제품 위성이 스페이스X 로켓에 실려 궤도에 오르면서 빅테크의 '우주 데이터...",
+   "thumb": "",
+   "mx": {
+    "b": "구글이 인공지능 칩인 TPU를 탑재한 시제품 위성을 스페이스X 로켓에 실어 궤도에 발사하는 데 성공했다. 이번 발사는 우주 공간에서의 데이터센터 운용 가능성을 검증하기 위한 첫 번째 궤도 실험이다.",
+    "p": "지상 데이터센터의 막대한 전력 소비와 발열 문제를 우주 환경에서 해결하려는 빅테크 기업들의 인프라 다변화 시도가 본격적인 실증 단계로 접어들었다.",
+    "t": [
+     "구글",
+     "스페이스X",
+     "TPU",
+     "우주데이터센터"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_05916184913698cd",
+     "point_text": "지상 데이터센터의 막대한 전력 소비와 발열 문제를 우주 환경에서 해결하려는 빅테크 기업들의 인프라 다변화 시도가 본격적인 실증 단계로 접어들었다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "05916184913698cd"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853163+00:00"
+    }
+   }
+  },
+  {
+   "id": "53497e9729e558cf",
+   "title": "\"수율과 고객사 확보가 진짜 승부\"…마이크론발 훈풍 속 삼전닉스의 과제",
+   "link": "https://www.newsis.com/view/NISX20261001_0003811121",
+   "source": "뉴시스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:29:48+09:00",
+   "summary": "[서울=뉴시스] 김종민 기자 = 마이크론의 깜짝 실적 발표로 고대역폭메모리(HBM) 및 서버용 반도체 수요가 입증되면서 삼성전자와 SK하이닉스 등 국내 반도체 기업들의 향후 대응과 기술 격차가 더욱 주목받고 있다.",
+   "detail": "[서울=뉴시스] 김종민 기자 = 마이크론의 깜짝 실적 발표로 고대역폭메모리(HBM) 및 서버용 반도체 수요가 입증되면서 삼성전자와 SK하이닉스 등 국내 반도체 기업들의 향후 대응과 기술 격차가 더욱 주목받고 있다.\n노근창 센터장은 영상에서 \"마이크론 실적을 보면 AI 서버 쪽 수요가 진짜라는 점이 입증됐다\"며 \"메모리 업계 막내 격인 마이크론이 이 정도 실적을 냈다면 선두권 기업들에 돌아갈 수혜는 훨씬 더 크다\"고 분석했다.",
+   "thumb": "",
+   "mx": {
+    "b": "마이크론의 호실적으로 AI 서버와 고대역폭메모리 수요가 탄탄하다는 점이 입증되면서 국내 반도체 선두 기업들의 수혜 폭에 관심이 쏠리고 있다. 전문가들은 업계의 실적 개선 흐름 속에서 기술 격차와 수율 확보가 진정한 승부처라고 분석했다.",
+    "p": "시장 전체의 수요 확대 속에서도 선도 기업과 후발 주자 간의 공정 수율 및 차세대 제품 경쟁력이 실제 수익성 차이를 결정하는 핵심 변수로 작용한다.",
+    "t": [
+     "마이크론",
+     "HBM",
+     "SK하이닉스",
+     "반도체수요"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_53497e9729e558cf",
+     "point_text": "시장 전체의 수요 확대 속에서도 선도 기업과 후발 주자 간의 공정 수율 및 차세대 제품 경쟁력이 실제 수익성 차이를 결정하는 핵심 변수로 작용한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "53497e9729e558cf"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853269+00:00"
+    }
+   }
+  },
+  {
+   "id": "f53bd2f5b50c9ecc",
+   "title": "\"中해커들, 美 AI정책 당국자·앤트로픽 간부 사칭 스파이 공작\"",
+   "link": "https://www.yna.co.kr/view/AKR20261002010000091",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:22:34+09:00",
+   "summary": "(샌프란시스코=연합뉴스) 권영전 특파원 = 중국 정부와 연계된 해커들이 미국의 인공지능(AI) 정책 당국자와 AI 기업 간부를 사칭한 스파이 공...",
+   "thumb": "",
+   "mx": {
+    "b": "중국 정부와 연계된 해커 조직이 미국의 AI 정책 당국자와 앤트로픽 임원 등으로 위장해 스파이 공작을 벌인 사실이 드러났다.",
+    "p": "인공지능 기술의 전략적 중요성이 커지면서 국가 간 기술 패권 경쟁이 정책 결정권자와 핵심 기업 리더를 겨냥한 사이버 스파이 공작 형태로 치열하게 전개되고 있다.",
+    "t": [
+     "앤트로픽",
+     "사이버보안",
+     "AI정책",
+     "해킹"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_f53bd2f5b50c9ecc",
+     "point_text": "인공지능 기술의 전략적 중요성이 커지면서 국가 간 기술 패권 경쟁이 정책 결정권자와 핵심 기업 리더를 겨냥한 사이버 스파이 공작 형태로 치열하게 전개되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "f53bd2f5b50c9ecc"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853335+00:00"
+    }
+   }
+  },
+  {
+   "id": "5be3af53d74aa18e",
+   "title": "[TODAY엔비디아]주가 230달러대 회복…수요 성장세와 장기적 실적 기대 '유효'",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=02269766645608984",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:22:02+09:00",
+   "summary": "엔비디아(NVDA)가 장기적인 반도체 매출 성장 기대감이 부각되며 다시 230달러대를 회복했다. 1일(현지시간) 정규장 거래에서 엔비디아 주가는 전일 대비 0.43% 오르며 230.86달러에 거래를 마쳤다.",
+   "detail": "엔비디아(NVDA)가 장기적인 반도체 매출 성장 기대감이 부각되며 다시 230달러대를 회복했다.\n1일(현지시간) 정규장 거래에서 엔비디아 주가는 전일 대비 0.43% 오르며 230.86달러에 거래를 마쳤다.\n이 후 현지시간 이날 오후 5시 15분 시간외 거래에서도 0.09% 오름세를 이어가며 231.06달러까지 안착을 시도 중이다.",
+   "thumb": "",
+   "mx": {
+    "b": "엔비디아 주가가 장기적인 반도체 매출 성장 기대감에 힘입어 정규장과 시간외 거래에서 230달러선을 회복했다.",
+    "p": "AI 가속기 시장의 수요 성장세가 단기 조정을 거치며 시장에서 다시 한번 중장기 실적 신뢰로 안착하고 있음을 방증한다.",
+    "t": [
+     "엔비디아",
+     "주가",
+     "반도체",
+     "AI가속기"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5be3af53d74aa18e",
+     "point_text": "AI 가속기 시장의 수요 성장세가 단기 조정을 거치며 시장에서 다시 한번 중장기 실적 신뢰로 안착하고 있음을 방증한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5be3af53d74aa18e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853434+00:00"
+    }
+   }
+  },
+  {
+   "id": "01e341fb50d3c6f7",
+   "title": "[단독]산업부, 1666억 ‘AI반도체 개발’ 예산 한푼도 안썼다",
+   "link": "https://www.donga.com/news/Politics/article/all/20261001/134770354/1",
+   "source": "동아일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:00:00+09:00",
+   "summary": "정부가 자동차와 가전·로봇·방산 분야에 탑재할 국산 온디바이스 인공지능(AI) 반도체 개발을 위해 편성한 예산의 집행률이 0%인 것으로 나타났다. 정부는 올해 이 사업에 약 1666억 원의 예산을 편성했으나 집행된 예산이 없는 것.",
+   "detail": "정부가 자동차와 가전·로봇·방산 분야에 탑재할 국산 온디바이스 인공지능(AI) 반도체 개발을 위해 편성한 예산의 집행률이 0%인 것으로 나타났다.\n정부는 올해 이 사업에 약 1666억 원의 예산을 편성했으나 집행된 예산이 없는 것.\n‘K온디바이스 AI 반도체 기술개발 ’사업은 자동차와 가전, 로봇, 방산 제품에 탑재될 국산 AI 반도체와 모듈, AI 소프트웨어를 수요기업과 함께 개발하는 것이 핵심이다.",
+   "thumb": "",
+   "mx": {
+    "b": "정부가 자동차, 가전, 로봇, 방산 분야의 국산 온디바이스 AI 반도체 개발을 위해 편성한 올해 예산 1666억 원의 집행률이 0%를 기록했다.",
+    "p": "정부가 차세대 산업 경쟁력 강화를 위해 대규모 예산을 편성했음에도 현장 수요 기업과의 연계나 실질적인 집행 체계에 차질이 빚어지면서 정책 실효성이 떨어지고 있다.",
+    "t": [
+     "산업부",
+     "온디바이스AI",
+     "반도체예산",
+     "정부정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_01e341fb50d3c6f7",
+     "point_text": "정부가 차세대 산업 경쟁력 강화를 위해 대규모 예산을 편성했음에도 현장 수요 기업과의 연계나 실질적인 집행 체계에 차질이 빚어지면서 정책 실효성이 떨어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "01e341fb50d3c6f7"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:19.853522+00:00"
+    }
+   }
+  },
+  {
+   "id": "9618b103fc211a28",
+   "title": "\"두산에너빌, AI전력 수요 증가에 포트폴리오 최적화\" 삼성證",
+   "link": "https://www.fnnews.com/news/202610011704094684",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T06:00:00+09:00",
+   "summary": "[파이낸셜뉴스]두산에너빌리티가 원전과 가스터빈을 아우르는 사업구조를 바탕으로 인공지능(AI) 데이터센터발 전력 수요 확대에 따른 직접적인 수혜를 볼 것이라는 분석이 나왔다. 안정적인 전력 공급을 담당하는 원전과 신재생에너지의 출력 변동을 보완하는 액화천연가스(LNG) 발전 수요에 동시에 대응할 수 있다는 평가다.",
+   "detail": "[파이낸셜뉴스]두산에너빌리티가 원전과 가스터빈을 아우르는 사업구조를 바탕으로 인공지능(AI) 데이터센터발 전력 수요 확대에 따른 직접적인 수혜를 볼 것이라는 분석이 나왔다.\n김영호 삼성증권 연구원은 1일 보고서를 통해 \"두산에너빌리티는 원전부터 가스터빈까지 AI 데이터센터발 전력 수요 확대 기조에 최적화된 사업 포트폴리오를 확보했다\"며 이 같이 밝혔다.\n두산에너빌리티는 원자로·증기발생기 등 원전의 1차 계통부터 증기터빈·발전기 등 2차 계통까지 제조 능력을 갖췄다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "ecfcbca41815e1c6",
+   "title": "美 모기지 금리 7.28%로 급등…4년 만에 최대폭 상승",
+   "link": "https://www.fnnews.com/news/202610020459543613",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T05:23:06+09:00",
+   "summary": "【 파이낸셜뉴스 뉴욕=이병철 특파원】 미국의 주택담보대출(모기지) 금리가 한 주 만에 0.25%p 뛰며 4년 만에 가장 큰 폭으로 상승했다. 미 국채 금리가 20여년 만에 최고 수준으로 치솟으면서 채권시장 충격이 주택시장으로 빠르게 번지고 있다.",
+   "detail": "【 파이낸셜뉴스 뉴욕=이병철 특파원】 미국의 주택담보대출(모기지) 금리가 한 주 만에 0.25%p 뛰며 4년 만에 가장 큰 폭으로 상승했다.\n미 국채 금리가 20여년 만에 최고 수준으로 치솟으면서 채권시장 충격이 주택시장으로 빠르게 번지고 있다.\n집값마저 사상 최고 수준인 가운데 모기지 금리가 다시 7%를 크게 웃돌면서 얼어붙은 미국 주택시장의 회복이 더 늦어질 것이라는 우려가 커지고 있다.\n모기지 금리는 2023년 이후 최고 수준으로 올라섰다.\n모기지 금리 급등의 직접적인 배경은 미 국채시장이다.",
+   "thumb": "",
+   "mx": {
+    "b": "미국의 주택담보대출 금리가 한 주 만에 0.25%p 상승해 7.28%를 기록하며 4년 만에 최대 폭으로 뛰어올랐다. 미 국채 금리 급등의 여파로 모기지 금리가 2023년 이후 최고 수준을 경신하면서 미국 주택시장 회복세가 더욱 지연될 것이라는 우려가 커지고 있다.",
+    "p": "글로벌 채권 금리 상승세가 주택담보대출 시장으로 직결되면서 실물 경제의 차입 비용 부담을 가중시키고 있다.",
+    "t": [
+     "미국금리",
+     "모기지",
+     "주택시장",
+     "채권시장"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ecfcbca41815e1c6",
+     "point_text": "글로벌 채권 금리 상승세가 주택담보대출 시장으로 직결되면서 실물 경제의 차입 비용 부담을 가중시키고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ecfcbca41815e1c6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.536551+00:00"
+    }
+   }
+  },
+  {
+   "id": "65f3c86c60053d70",
+   "title": "\"AI가 다 해줘도 기획·최종판단은 인간 몫…'AI프리존' 만들자\"",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01692486645608984",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T05:00:05+09:00",
+   "summary": "인공지능(AI)이 학교와 직장 전반으로 확산하는 가운데, 기획·아이디어 도출·최종 검증 등 사람이 직접 생각해야 할 핵심 단계에는 ‘AI프리존(AI-Free Zones)’을 둬야 한다는 제언이 나왔다.",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능의 확산 속에서 기획, 아이디어 도출, 최종 검증 등 인간의 고유한 사고가 필요한 핵심 단계에는 인공지능 사용을 배제하는 'AI프리존'을 도입해야 한다는 제언이 나왔다.",
+    "p": "AI 자동화의 한계를 인식하고 인간의 주체적인 판단 영역을 보호하기 위한 구체적인 업무 분할 기준이 요구되고 있다.",
+    "t": [
+     "인공지능",
+     "업무환경",
+     "AI프리존",
+     "인간통제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_65f3c86c60053d70",
+     "point_text": "AI 자동화의 한계를 인식하고 인간의 주체적인 판단 영역을 보호하기 위한 구체적인 업무 분할 기준이 요구되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "65f3c86c60053d70"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.536642+00:00"
+    }
+   }
+  },
+  {
+   "id": "6f213da52baa8362",
+   "title": "“긴축의 시대 투자로 정면돌파” … 서울머니쇼+에 초대합니다",
+   "link": "https://www.mk.co.kr/news/economy/12166434",
+   "source": "매일경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T05:00:00+09:00",
+   "summary": "코엑스 마곡서 29~31일 개최 ‘2026 서울머니쇼+’불확실성이 일상이 된 시대다. 금리는 오르고 집값은 흔들리며 인공지능(AI)은 투자 지형을 바꾸고 있다. 미국 10년물 국채..",
+   "thumb": "",
+   "mx": {
+    "b": "금리 상승, 집값 불안, 인공지능에 따른 투자 지형 변화 등 불확실성이 커진 투자 환경을 정면 돌파하기 위한 '2026 서울머니쇼+'가 코엑스 마곡에서 개최된다.",
+    "p": "급변하는 경제 지표와 기술 혁신 속에서 개인 투자자들이 새로운 자산 배분 전략을 모색하는 장이 형성되고 있다.",
+    "t": [
+     "재테크",
+     "투자",
+     "서울머니쇼",
+     "자산관리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_6f213da52baa8362",
+     "point_text": "급변하는 경제 지표와 기술 혁신 속에서 개인 투자자들이 새로운 자산 배분 전략을 모색하는 장이 형성되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "6f213da52baa8362"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.536708+00:00"
+    }
+   }
+  },
+  {
+   "id": "e7d135eef8322d49",
+   "title": "최대선 센터장 \"사이버보안 특화 모델 AI 기본법 사각지대...기준 마련 시급\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215867",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:56:01+09:00",
+   "summary": "최대선 숭실대 AI안전성연구센터장이 정부 주도로 개발 중인 '사이버보안 특화 AI 파운데이션 모델'이 정작 안전성을 규율하는 'AI 기본법'의 법적 규제와 관리 체계에서 벗어나 있어 명확한 기준과 평가 체계 마련이 시급하다고 지적했다.",
+   "detail": "최대선 숭실대 AI안전성연구센터장이 정부 주도로 개발 중인 '사이버보안 특화 AI 파운데이션 모델'이 정작 안전성을 규율하는 'AI 기본법'의 법적 규제와 관리 체계에서 벗어나 있어 명확한 기준과 평가 체계 마련이 시급하다고 지적했다.\n최대선 센터장은 1일 오후 국가AI전략위원회에서 열린 'AI 개발 속도조절론' 세미나에 참석해 보안 특화 모델은 현행 AI 기본법상 별도 관리 대상인 고영향 AI 영역에 사이버보안이 포함되지 않는 실정이라고 지적했다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "425e13567489ff1c",
+   "title": "반도체 끌고 AI·중화학이 밀었다…‘수출 1조 달러’ 조기달성 가능성",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01662966645608984",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:55:04+09:00",
+   "summary": "한국 수출이 반도체 호황과 주요 품목의 동반 증가에 힘입어 사상 첫 연간 1조달러 달성을 앞두고 있다. 현재 증가세가 이어지면 이르면 11월 말, 늦어도 12월 초에 달성할 것으로 예상된다. 반도체가 예상을 뛰어넘는 호황을 지속하고, 주요 20개 품목 가운데 11개 품목의 수출이 증가하며 뒤를 받친 덕분이다.",
+   "thumb": "",
+   "mx": {
+    "b": "반도체 호황과 주요 품목의 동반 수출 증가에 힘입어 한국의 연간 수출액이 사상 첫 1조 달러를 조기 달성할 전망이다. 반도체를 비롯한 주요 20개 품목 중 11개 품목의 수출이 늘어나며 이르면 11월 말 달성될 것으로 예상된다.",
+    "p": "반도체 주도의 회복세를 넘어 수출 품목 다변화가 동반되면서 국내 실물 경제의 대외 교역 성과가 역대 최대치를 경신하고 있다.",
+    "t": [
+     "수출",
+     "반도체",
+     "무역",
+     "한국경제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_425e13567489ff1c",
+     "point_text": "반도체 주도의 회복세를 넘어 수출 품목 다변화가 동반되면서 국내 실물 경제의 대외 교역 성과가 역대 최대치를 경신하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "425e13567489ff1c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.536844+00:00"
+    }
+   }
+  },
+  {
+   "id": "5b5dc30d5b3217e0",
+   "title": "[마켓톡스]도이체방크 “4분기도 기술주가 증시 상승 견인”",
+   "link": "https://www.edaily.co.kr/News/Read?newsId=01643286645608984",
+   "source": "이데일리",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:50:17+09:00",
+   "summary": "도이체방크는 1일(현지 시간) 3분기 시장 리뷰에서 기술주가 높은 변동성에도 불구하고 주식시장 성과를 이끈 주요 동력‘ 이었다고 평가했다. 이러한 가운데, 4분기에도 기술주가 증시 수익률을 뒷받침할 것으로 전망했다.",
+   "thumb": "",
+   "mx": {
+    "b": "도이체방크는 3분기 시장 리뷰를 통해 높은 변동성에도 불구하고 기술주가 증시 상승을 이끌었다고 평가했다. 이어 4분기에도 기술주가 주식시장의 수익률을 지지하는 핵심 동력으로 작용할 것이라고 전망했다.",
+    "p": "시장 변동성 확대 국면에서도 핵심 기술 기업들의 실적과 성장성이 증시 전반의 방향성을 결정하는 주된 요인으로 작용하고 있다.",
+    "t": [
+     "도이체방크",
+     "기술주",
+     "증시전망",
+     "주식시장"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5b5dc30d5b3217e0",
+     "point_text": "시장 변동성 확대 국면에서도 핵심 기술 기업들의 실적과 성장성이 증시 전반의 방향성을 결정하는 주된 요인으로 작용하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5b5dc30d5b3217e0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.536915+00:00"
+    }
+   }
+  },
+  {
+   "id": "75fdc36df0df2acc",
+   "title": "국가AI전략위 \"AI 속도조절보다 RSI 초지능 완성 전 기술 추격 우선\"",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215868",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:46:46+09:00",
+   "summary": "국가인공지능전략위원회가 글로벌 미·중 패권 경쟁 속에서 대두된 'AI 개발 속도조절론'에 휩쓸리지 않고, 한국이 기술 격차 축소와 글로벌 규범 제정을 동시에 주도해야 한다는 방안을 제시했다.",
+   "detail": "국가인공지능전략위원회가 글로벌 미·중 패권 경쟁 속에서 대두된 'AI 개발 속도조절론'에 휩쓸리지 않고, 한국이 기술 격차 축소와 글로벌 규범 제정을 동시에 주도해야 한다는 방안을 제시했다.\n국가인공지능전략위원회는 1일 오후 서울 종로구 광화문 KT빌딩에서 'AI 개발 속도조절론' 세미나를 개최하고 AI 경쟁력 확보와 안전 통제 사이에서 한국이 취해야 할 해법을 다각도로 논의했다.",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "0d4ba6e1eed2205a",
+   "title": "美국채 24년 만에 최고…글로벌 채권시장 '도미노 쇼크'",
+   "link": "https://www.fnnews.com/news/202610020434555692",
+   "source": "파이낸셜뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:39:36+09:00",
+   "summary": "【 파이낸셜뉴스 뉴욕=이병철 특파원】 미국에서 시작된 국채 매도세가 유럽과 일본으로 번지면서 글로벌 채권시장이 요동치고 있다. 이란 전쟁에 따른 국제유가 상승이 인플레이션 우려를 다시 키운 가운데 각국의 재정적자와 인공지능(AI) 투자 확대에 따른 자금 수요까지 겹치면서다.",
+   "detail": "【 파이낸셜뉴스 뉴욕=이병철 특파원】 미국에서 시작된 국채 매도세가 유럽과 일본으로 번지면서 글로벌 채권시장이 요동치고 있다.\n1일(현지시간) 미국 10년물 국채 금리는 장중 5.34%까지 치솟았다.\n지난 3·4분기에는 금리 상승폭 기준으로 21세기 들어 최악의 분기 성적을 기록했다.\n이후 저가 매수세가 유입되면서 10년물 금리는 5.2%대로 내려왔지만 시장에서는 추가 매도 가능성을 경계하고 있다.\n글로벌 차입비용과 자산가격의 기준 역할을 하는 32조달러 규모의 미 국채시장이 매도가 다시 매도를 부르는 악순환에 빠졌다는 분석도 나온다.",
+   "thumb": "",
+   "mx": {
+    "b": "미국 10년물 국채 금리가 장중 5.34%까지 치솟는 등 24년 만에 최고 수준을 기록하며 유럽과 일본 등 글로벌 채권시장으로 매도세가 확산하고 있다. 3분기 채권시장이 21세기 최악의 부진을 겪은 가운데, 글로벌 차입 비용 상승을 유발하는 악순환이 이어지고 있다.",
+    "p": "미국 국채시장의 유동성 긴축과 금리 급등이 전 세계 자산 가격과 차입 비용에 연쇄적인 충격을 주는 글로벌 도미노 현상이 심화되고 있다.",
+    "t": [
+     "미국국채",
+     "채권시장",
+     "금리",
+     "글로벌경제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_0d4ba6e1eed2205a",
+     "point_text": "미국 국채시장의 유동성 긴축과 금리 급등이 전 세계 자산 가격과 차입 비용에 연쇄적인 충격을 주는 글로벌 도미노 현상이 심화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "0d4ba6e1eed2205a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.537077+00:00"
+    }
+   }
+  },
   {
    "id": "137c19d89b9949ae",
    "title": "‘AI 슈퍼앱’ 꿈꾸는 유튜브 … 네카오·삼전 주주에도 후폭풍 온다",
@@ -108,6 +763,42 @@
    }
   },
   {
+   "id": "667279b33cf563a2",
+   "title": "환율 변동 손실땐 환전 3시간내 취소 앱 눈길",
+   "link": "https://www.donga.com/news/Economy/article/all/20261002/134772283/2",
+   "source": "동아일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T04:30:00+09:00",
+   "summary": "“금을 사는 게 너무 복잡해서 투자를 미뤘는데, 소액 투자 애플리케이션(앱)을 깔아 보니 편하네요. ” 1일 서울 강남구 코엑스에서 열린 ‘2026 동아 재테크쇼’ 행사장의 핀테크 기업 ‘스위치원’ 부스에서 만난 이정만 씨(57)는 금 투자에 관심을 보였다.",
+   "detail": "” 1일 서울 강남구 코엑스에서 열린 ‘2026 동아 재테크쇼’ 행사장의 핀테크 기업 ‘스위치원’ 부스에서 만난 이정만 씨(57)는 금 투자에 관심을 보였다.\n부스에서는 앱에 가입하면 0.01g(약 2000원) 상당의 금을 주는 이벤트가 열려 참가자들의 발길이 이어졌다.\n이날 개막한 2026 동아 재테크쇼에는 49개사 120개 부스가 참가했다.\n최근 코스피가 횡보하고 있는 상황에서도 혁신 기술을 앞세워 손쉽고 민첩하게 재테크를 돕는 핀테크 스타트업이 많이 참가해 관심을 모았다.",
+   "thumb": "",
+   "mx": {
+    "b": "코엑스에서 열린 '2026 동아 재테크쇼'에 혁신 기술을 앞세운 핀테크 스타트업들이 대거 참가해 주목을 받았다. 횡보하는 증시 속에서 환전 취소 기능이나 소액 금 투자 등 민첩한 자산 관리를 돕는 핀테크 서비스가 관람객들의 관심을 끌었다.",
+    "p": "전통적 투자 자산이 정체된 국면에서 모바일 기반의 혁신적인 핀테크 서비스가 개인 투자자들의 진입 장벽을 낮추며 새로운 재테크 수단으로 부상하고 있다.",
+    "t": [
+     "핀테크",
+     "재테크쇼",
+     "자산관리",
+     "스타트업"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_667279b33cf563a2",
+     "point_text": "전통적 투자 자산이 정체된 국면에서 모바일 기반의 혁신적인 핀테크 서비스가 개인 투자자들의 진입 장벽을 낮추며 새로운 재테크 수단으로 부상하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "667279b33cf563a2"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:30.537183+00:00"
+    }
+   }
+  },
+  {
    "id": "42a3356900de859a",
    "title": "스페이스X 넘는 역대급 IPO될까…앤스로픽, '11월 중순' 상장 추진",
    "link": "https://www.edaily.co.kr/News/Read?newsId=01505526645608984",
@@ -117,7 +808,7 @@
    "published": "2026-10-02T04:04:35+09:00",
    "summary": "인공지능(AI) 모델 ‘클로드(Claude)’를 개발한 앤스로픽이 이르면 오는 11월 중순 기업공개(IPO)에 나선다. 기업가치로 최대 2조달러(약 2720조원)가 거론되는 초대형 상장이다. 최근 AI 안전성에 대한 우려와 미국 IPO 시장의 부진에도 연내 증시 입성 계획을 밀어붙이는 모습이다. 앤스로픽.",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "2fb77dfbf2b19ac3",
@@ -165,7 +856,7 @@
    "published": "2026-10-02T02:42:50+09:00",
    "summary": "(샌프란시스코=연합뉴스) 권영전 특파원 = 챗GPT 개발사 오픈AI의 그레그 브록먼 사장이 인공지능(AI) 규제 완화를 요구하는 슈퍼팩(Supe...",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "2e8643147b776b17",
@@ -219,7 +910,7 @@
    "summary": "올해 1∼9월 수출이 사상 처음으로 8000억 달러를 달성하며 역대 최대였던 지난해 연간 수출액을 넘어섰다. 올해 수출 1조 달러 달성도 가시권에 들어왔다. 1일 산업통상부에 따르면 지난달 수출액은 1년 전보다 83.5% 증가한 1209억4000만 달러로 집계됐다.",
    "detail": "올해 1∼9월 수출이 사상 처음으로 8000억 달러를 달성하며 역대 최대였던 지난해 연간 수출액을 넘어섰다.\n1일 산업통상부에 따르면 지난달 수출액은 1년 전보다 83.5% 증가한 1209억4000만 달러로 집계됐다.\n월간 수출이 1200억 달러를 넘어선 것은 이번이 처음이다.\n1∼9월 누적 수출은 8145억 달러로 역대 최대였던 지난해 연간 수출액(7093억 달러)을 이미 넘어섰다.\n지난달 반도체 수출이 1년 전보다 262.8% 증가한 603억 달러로 사상 처음 600억 달러를 넘어섰다.",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "767dbac63c825919",
@@ -402,6 +1093,250 @@
    }
   },
   {
+   "id": "29fe729825a3c0d9",
+   "title": "AI 전력 수요 확대… 메타아라미드 페이퍼 글로벌 수요급증 추세",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xRVdTaGdxdjl0cDVyVnlJSmhzUVVOblZseFczeEpnN2lNemJYMUlYTzlCNGlWVGhiZzM2Z3dqdl9xbDdDc2xwejd2OERpY3ZEWlZyZVN4OENTTmhmemVWUA?oc=5",
+   "source": "아시아경제",
+   "field": "에너지·환경",
+   "category": "news_ko",
+   "published": "2026-10-01T23:20:31+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 인프라 확장에 따른 전력 수요 증가로 인해 메타아라미드 페이퍼의 글로벌 수요가 가파르게 상승하고 있다.",
+    "p": "AI 데이터센터 확충이 전력 설비뿐만 아니라 특수 소재 산업의 공급망 재편과 수요 급증으로 직결되고 있다.",
+    "t": [
+     "AI전력",
+     "소재",
+     "인프라"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_29fe729825a3c0d9",
+     "point_text": "AI 데이터센터 확충이 전력 설비뿐만 아니라 특수 소재 산업의 공급망 재편과 수요 급증으로 직결되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "29fe729825a3c0d9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026248+00:00"
+    }
+   }
+  },
+  {
+   "id": "5ce9d70b1d3d1a53",
+   "title": "국방정보통신협회-명지대, 국방 AI 보안 현대화 협력",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE52emo3S2N2ZXkzOGNFR0xwbUhNbEgtNzdaNDBERDB6NURiMFF2TmtHSXluWFpDdUNuVEFlSS1vZ0dpdlRHc2g5eXJJMmwyUQ?oc=5",
+   "source": "전자신문",
+   "field": "국방·안보",
+   "category": "papers",
+   "published": "2026-10-01T23:17:37+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "국방정보통신협회와 명지대가 국방 부문의 인공지능 및 보안 체계 현대화를 위해 상호 협력하기로 했다.",
+    "p": "사이버 안보와 국방 인프라 영역에서 AI 기술 도입과 보안 고도화가 산학 협력 형태로 본격 추진된다.",
+    "t": [
+     "국방AI",
+     "보안",
+     "산학협력"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5ce9d70b1d3d1a53",
+     "point_text": "사이버 안보와 국방 인프라 영역에서 AI 기술 도입과 보안 고도화가 산학 협력 형태로 본격 추진된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5ce9d70b1d3d1a53"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026314+00:00"
+    }
+   }
+  },
+  {
+   "id": "7e40a0abeb76bfbe",
+   "title": "Senator introduces bill to protect workers during AI boom",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOakloMTBFbHpMYXBMZTFXWG9hdTNBOU5zMzFYeFd4S2xob25PcHFidXZXUGNHLVhIam9nVDU1Tlcyd2dDTzVqV0tPeGxmVVYzRjk4Mml1STUyNmszQUJZYldJV184S2oteGVrc0FHc0RhRHJGd1hULUNhaG9zT005eE0tdU9aS0VDNnZ2OVVaLU_SAaQBQVVfeXFMT3NuUWFEZGZDQmJfVFZNaG1XNEVTUVdqU1M3NGVMYW9HZG9MenlkMFVNTlNmSUFydGViRlF6RzM1aEJxdzZZR05fVG1FXzllbVBob2dnbE1QUmJQbDBpMU9VaE5mNE80c29LcnItaDJDSHZUTGZtenJYN1kwQThtRzRNZ09ieVgwU1J0OTN1bzJmMXdrTGMtZ1IzM2FKeG1hUE9jbFo?oc=5",
+   "source": "KMVT",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T23:10:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "상원의원, AI 붐 속에서 근로자 보호를 위한 법안 발의",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "미국 상원의원이 AI 기술 확산에 따른 노동자의 권익과 일자리를 보호하기 위한 법안을 발의했다.",
+    "p": "자동화와 AI 도입이 가속화되면서 노동 시장 충격을 완화하기 위한 입법적 보호 장치 마련이 본격화되고 있다.",
+    "t": [
+     "AI법안",
+     "노동자",
+     "미국의회"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7e40a0abeb76bfbe",
+     "point_text": "자동화와 AI 도입이 가속화되면서 노동 시장 충격을 완화하기 위한 입법적 보호 장치 마련이 본격화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7e40a0abeb76bfbe"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026404+00:00"
+    }
+   }
+  },
+  {
+   "id": "fd4b9ca78fc2aa96",
+   "title": "경기도 먹거리광장 ‘테이스티광장’ 10월 참여자 모집",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5icjIwOWpDbTFqQ3FtY29uZzJkODlWNFRkQ1Vxa1RoNDBwVjlCbnNUZVpNdGc5a29PYmNsN295eFJzN21rSGE5d3VUN0ZEVmpVbGNNUEdRMkliRWIta1ZXUDA5M3U3TG9Nb2x3?oc=5",
+   "source": "프레시안",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T23:09:26+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "경기도가 먹거리광장인 '테이스티광장'의 10월 참여자 모집을 진행한다.",
+    "p": "지역 기반 먹거리 문화 공간의 참여 확대를 통해 지역 경제 활성화와 소상공인 판로를 지원한다.",
+    "t": [
+     "경기도",
+     "테이스티광장",
+     "지역경제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_fd4b9ca78fc2aa96",
+     "point_text": "지역 기반 먹거리 문화 공간의 참여 확대를 통해 지역 경제 활성화와 소상공인 판로를 지원한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "fd4b9ca78fc2aa96"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026466+00:00"
+    }
+   }
+  },
+  {
+   "id": "a8bc619c3e5a0f4f",
+   "title": "신한투자證 LG전자, AI·로봇으로 성장축 이동…목표가 29만원 상향",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45SVlvNU5QUzBuWGdqdnNyeGdCYTB6NDBCQVE2eV9aMUdTTG1KQzA4b2hjMjZIZDNycjhZUWdubEM2MHUtcFdjNzdvX0tZWkFtRmR0YVhIcFJuUdIBWEFVX3lxTE5xREhqZ0ZWVVNzSEJuUG9oYUo5cnBZZXQzYzQ2ZE5XSjBPZ1AtZGd6cDVfZzFuVXFqZS1kUmV1b3B2SklubFI5ZzZETlBqbVdXbmVwNlFRa20?oc=5",
+   "source": "아주경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T23:07:33+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "신한투자증권은 LG전자가 AI와 로봇 중심의 사업 포트폴리오 전환을 추진하고 있다고 평가하며 목표주가를 29만 원으로 상향 조정했다.",
+    "p": "전통 가전 기업이 AI 및 로봇 전문 기업으로 체질을 개선하는 과정이 시장에서 긍정적인 가치 평가로 이어지고 있다.",
+    "t": [
+     "LG전자",
+     "증권",
+     "AI로봇"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a8bc619c3e5a0f4f",
+     "point_text": "전통 가전 기업이 AI 및 로봇 전문 기업으로 체질을 개선하는 과정이 시장에서 긍정적인 가치 평가로 이어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a8bc619c3e5a0f4f"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026518+00:00"
+    }
+   }
+  },
+  {
+   "id": "f608002de378f21e",
+   "title": "Eastern Illinois Student Senate to present resolution on use of artificial intelligence by professors at next meeting",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOU3dSM2h2a0luU0F3aFJ3ZkxkZDB4YTc2MVQ5d1Y4ZmdvaHV6eGVpdGlMeXo2blIwQTQ4dDlHektTZ0E3R0V3ZmdFY3JaRzFrSW0ybVZQbmhVUGRDTVFEVXAyTWwwV25GQmZNbkdrR256N2JmZEFxdEsta0lYOU9EUjhvQkVZdzVBeGdOVGY2SmpqM0xOY2hfalM5WldSVEVVajdsR2J3R19aRE14cWNHcy1zelNjZmo2MXJNODdQdnVIb0EtWkNSWHdDRnJFMzZRZ1V2UU82MWxBNjQtakk5OTFfcU85NHk1MjF3aEpZaHRTQk5o?oc=5",
+   "source": "The Daily Eastern News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T23:05:03+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "이스턴 일리노이 대학 학생의회, 차기 회의에서 교수진의 인공지능 활용에 관한 결의안 상정 예정",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "이스턴 일리노이 대학교 학생회가 교수들의 인공지능 활용 지침에 관한 결의안을 차기 회의에서 발표할 예정이다.",
+    "p": "고등교육 현장에서 교수진의 AI 기술 활용 기준과 윤리적 가이드라인 마련을 요구하는 학생 사회의 목소리가 커지고 있다.",
+    "t": [
+     "대학",
+     "인공지능",
+     "학생회"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_f608002de378f21e",
+     "point_text": "고등교육 현장에서 교수진의 AI 기술 활용 기준과 윤리적 가이드라인 마련을 요구하는 학생 사회의 목소리가 커지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "f608002de378f21e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026567+00:00"
+    }
+   }
+  },
+  {
+   "id": "6d758ebac8769f8b",
+   "title": "美 AI 정책·기업 고위직 사칭한 中 배후 해커들…기밀 탈취 시도 발각",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PanlIcjdJSDB0RkVIdjl2ZEN4VHZfV3BQcjZ3US1aRG5MenQ5emlybGstNzVRcnp0dTljcjRwaUNBYTZEMEdoSzRuNGZGaUFwdi12eHc2bUhRejRVb2Z4dzhuU2lZQ3E2TWc?oc=5",
+   "source": "파이낸스스코프",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T23:03:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "미국의 AI 정책과 기업 고위직을 사칭해 기밀 탈취를 시도한 중국 배후의 해커 조직 활동이 적발되었다.",
+    "p": "주요 국가의 AI 정책 및 핵심 기술 정보를 선점하기 위한 국가 배후 세력의 사이버 스파이 활동이 고도화되고 있다.",
+    "t": [
+     "해킹",
+     "사이버보안",
+     "미국정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_6d758ebac8769f8b",
+     "point_text": "주요 국가의 AI 정책 및 핵심 기술 정보를 선점하기 위한 국가 배후 세력의 사이버 스파이 활동이 고도화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "6d758ebac8769f8b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026614+00:00"
+    }
+   }
+  },
+  {
    "id": "b9a53bbf04e5ae6d",
    "title": "구글 AI칩 TPU, 스페이스X 로켓타고 우주로…우주데이터센터 첫걸음",
    "link": "https://www.hankyung.com/article/202610018869i",
@@ -433,6 +1368,78 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-01T19:32:04.698231+00:00"
+    }
+   }
+  },
+  {
+   "id": "a183cb0dcb05fbcf",
+   "title": "LG전자, 서울숲서 AI 미디어아트 전시 '아트포레스트' 개최",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5wSmw3YVhxclB3US0wUWRDQ0QzanlPMXFPSFI2QjF2dU1odXNwU1JHaHNaMkZvQUY3QWMydUd3TU9tamhvVW9jZk1aNTY5d1o2RTIyODV1eElFWDRvZFVmNw?oc=5",
+   "source": "아시아경제",
+   "field": "미디어",
+   "category": "news_ko",
+   "published": "2026-10-01T23:00:36+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "LG전자가 서울숲에서 인공지능 기술을 접목한 미디어아트 전시 '아트포레스트'를 개최한다.",
+    "p": "기업이 보유한 AI 기술력을 대중적인 문화예술 콘텐츠와 결합해 브랜드 경험을 확장하고 있다.",
+    "t": [
+     "LG전자",
+     "미디어아트",
+     "서울숲"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a183cb0dcb05fbcf",
+     "point_text": "기업이 보유한 AI 기술력을 대중적인 문화예술 콘텐츠와 결합해 브랜드 경험을 확장하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a183cb0dcb05fbcf"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:39.026654+00:00"
+    }
+   }
+  },
+  {
+   "id": "b0ec33b1afe5561e",
+   "title": "Watch Suno's Mikey Shulman on the AI Music Landscape",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRjgtQVltdklKbXBLRFlBeVFScGJCR0k0V2pwcXlvM2xuVHc1eE1vc2xldmE3RXQxSWwxem9UWFlOaGRGSThBT2ZhLXlIMHJqb3doLWJfWEJuLUtCUmRXZ3A4VVl1SzZNOEhRbHZPUUFUbm9VWVhKUHozV3ZVcF9MWi1pc0FMSkplN3JKZ0NtMjFsYVY0c1FxTnhvRU9yYmhOT2tr?oc=5",
+   "source": "Bloomberg.com",
+   "field": "철학·윤리·예술",
+   "category": "news_global",
+   "published": "2026-10-01T23:00:12+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Suno의 Mikey Shulman이 말하는 AI 음악 업계 현황",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "수노(Suno)의 공동 창립자 마이키 슐먼(Mikey Shulman)이 블룸버그 인터뷰를 통해 현재 AI 음악 생태계의 현황과 비전을 공유했다.",
+    "p": "생성형 AI 기반 음악 제작 대중화가 저작권 및 기존 음악 산업 생태계에 미치는 영향이 핵심 쟁점으로 부각되고 있다.",
+    "t": [
+     "Suno",
+     "AI음악",
+     "생성형AI",
+     "음악산업"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_b0ec33b1afe5561e",
+     "point_text": "생성형 AI 기반 음악 제작 대중화가 저작권 및 기존 음악 산업 생태계에 미치는 영향이 핵심 쟁점으로 부각되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "b0ec33b1afe5561e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485340+00:00"
     }
    }
   },
@@ -477,6 +1484,373 @@
    }
   },
   {
+   "id": "0c08c7ecc0656bf3",
+   "title": "포스텍의 AI 전환법…코파일럿으로 연구 효율과 보안 잡았다 [테크리포트]",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzdU9IT1lkeW5ocTVDdEc5YXdrS1dfOW5LNXZfSjlacl9mc2FHc0F3eEh3S1BjcFczbzJ0eThYZFFLd1hxbUNtSm12R0g5cnVGX25BV2lyMlpfazQ1d0RwXzJ6bWlESzk3U1hjUEVBSG_SAXRBVV95cUxOcUNJM0NxZVVSYXRzZ0RBWExuMUJwaWh6TG5sdUF1a3I3QWdybm1sQWRzZHVrVnItXy0xUjVIVHE2ZGlwRUwybFcyY25BbFlQU2M3X25ldTVRS1VvMS1NLUZZZkRTcGJCWkh6VXVwcGlqelY0MA?oc=5",
+   "source": "it.chosun.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T23:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "포스텍이 AI 코파일럿을 도입하여 연구 효율성을 높이고 보안을 강화하는 등 대학 전반의 AI 전환을 추진하고 있다.",
+    "p": "대학 연구 환경에서 생성형 AI와 코파일럿 도입이 단순 생산성 향상을 넘어 데이터 보안과 연구 경쟁력을 좌우하는 핵심 요소로 자리 잡고 있다.",
+    "t": [
+     "포스텍",
+     "AI전환",
+     "코파일럿",
+     "연구보안"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_0c08c7ecc0656bf3",
+     "point_text": "대학 연구 환경에서 생성형 AI와 코파일럿 도입이 단순 생산성 향상을 넘어 데이터 보안과 연구 경쟁력을 좌우하는 핵심 요소로 자리 잡고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "0c08c7ecc0656bf3"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485501+00:00"
+    }
+   }
+  },
+  {
+   "id": "ebe425492b1536eb",
+   "title": "[AI그래픽뉴스] 소형 가전 속 배터리 위험해… 화재 예방 수거함 설치 속도낸다",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1nRXd4d0VDemhUNE5TREhpeU5rd09hVFd6c0tPQk1nYnZEVlhYcFk5bm1TR3BDN1dOOXVKc0N1MldseVgwcFVqZFE4c2xUZWI0alMxeUN5aW9hUXZ5?oc=5",
+   "source": "뉴스핌",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T23:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "소형 가전 배터리로 인한 화재 위험이 커지면서 지자체와 관련 기관들이 화재 예방을 위한 전용 수거함 설치를 가속화하고 있다.",
+    "p": "폐배터리 화재 사고가 사회적 문제로 대두됨에 따라, 물리적 수거 인프라 구축과 안전 관리 체계 정비가 시급한 과제로 다뤄지고 있다.",
+    "t": [
+     "배터리화재",
+     "소형가전",
+     "화재예방",
+     "안전관리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ebe425492b1536eb",
+     "point_text": "폐배터리 화재 사고가 사회적 문제로 대두됨에 따라, 물리적 수거 인프라 구축과 안전 관리 체계 정비가 시급한 과제로 다뤄지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ebe425492b1536eb"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485564+00:00"
+    }
+   }
+  },
+  {
+   "id": "4ad1f21985fb3e54",
+   "title": "트럼프 “AI 공포 과장”…기후변화·러시아 의혹과 비교하며 규제 우려 일축",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5reWhsN2Y1eVZZWExaTEd2U0Y2T2FCbHUzeTNUODNNWHktU1A1eEhjMDJ6WlhyQkM5UkI4ZzBfaFQ5cEc2eFFvdmRoUUlBTTJ2R24ybTVCZGVHdXlLNWpTamwxMzRQR2FnbnVJbA?oc=5",
+   "source": "파이낸스투데이",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T22:59:22+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "도널드 트럼프가 AI에 대한 공포가 과장되었다며 기후변화나 러시아 의혹과 비교하고 과도한 규제 우려를 일축했다.",
+    "p": "정치 지도자의 AI 규제 완화 기조는 향후 미국의 기술 산업 육성 정책과 글로벌 규제 표준 정립에 직접적인 영향을 미칠 것으로 보인다.",
+    "t": [
+     "트럼프",
+     "AI규제",
+     "미국정책",
+     "기술정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4ad1f21985fb3e54",
+     "point_text": "정치 지도자의 AI 규제 완화 기조는 향후 미국의 기술 산업 육성 정책과 글로벌 규제 표준 정립에 직접적인 영향을 미칠 것으로 보인다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4ad1f21985fb3e54"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "FORECAST",
+     "generated_at": "2026-10-01T23:25:48.485616+00:00"
+    }
+   }
+  },
+  {
+   "id": "cbe51963df63a71f",
+   "title": "군포시, 미취업 청년대상 `생성형 AI 구독료` 최대 5만 원 지원",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE93RUJScFRWNE04SWIzTGQ2NzlhOVFDYzB5U2gwUWMwYU00M0psaHJnSjFmTWw5VWhqc0l6b0ZRWG9iMG9U?oc=5",
+   "source": "광역행정신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:59:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "군포시가 미취업 청년들을 대상으로 생성형 AI 구독료를 최대 5만 원까지 지원하는 사업을 시행한다.",
+    "p": "지자체의 AI 구독료 지원은 청년층의 디지털 격차를 해소하고 최신 AI 도구 활용 역량을 높여 구직 경쟁력을 강화하려는 시도이다.",
+    "t": [
+     "군포시",
+     "생성형AI",
+     "청년지원",
+     "디지털격차"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_cbe51963df63a71f",
+     "point_text": "지자체의 AI 구독료 지원은 청년층의 디지털 격차를 해소하고 최신 AI 도구 활용 역량을 높여 구직 경쟁력을 강화하려는 시도이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "cbe51963df63a71f"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485669+00:00"
+    }
+   }
+  },
+  {
+   "id": "43b5f6d5099a7ecd",
+   "title": "중국계 해킹그룹, 美 AI 정책 전문가 겨냥 피싱…전 백악관 인사까지 사칭",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81cHNMUkZkeG9hWFF1OHNqdGowc0JRUGdmR3c0ekc3WkxsNVRWU1pmZzhtS1g4QzJpdXR3WHpJVGdNbGFNeUFOZXJONndKZlpPb2kwb2IzLW02dk9pLTNGRXBxOUI5S0kzRk9MRw?oc=5",
+   "source": "파이낸스투데이",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T22:59:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "중국계 해킹 그룹이 전 백악관 인사를 사칭하는 등 미국 AI 정책 전문가들을 겨냥해 피싱 공격을 시도했다.",
+    "p": "AI 기술 패권 경쟁이 격화되면서 주요 정책 결정권자와 전문가를 타깃으로 한 사이버 스파이 활동과 정보 탈취 시도가 고도화되고 있다.",
+    "t": [
+     "사이버보안",
+     "피싱",
+     "AI정책",
+     "해킹그룹"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_43b5f6d5099a7ecd",
+     "point_text": "AI 기술 패권 경쟁이 격화되면서 주요 정책 결정권자와 전문가를 타깃으로 한 사이버 스파이 활동과 정보 탈취 시도가 고도화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "43b5f6d5099a7ecd"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485718+00:00"
+    }
+   }
+  },
+  {
+   "id": "06d9b16eb161e089",
+   "title": "[세계 석학이 본 바이오의 미래] AI가 실험 설계, 로봇이 수행하는 자율 실험실",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBJZjVyMnlpemtGTm45ZmhweThObWgzb0JteGpuVElONXBMQzB5bVBiNlFXQkM4a0c2MHhkb3ZHNzZsS3JQdmdMbm4tdWczQTBSMUVoNFhOeWNkZ9IBWEFVX3lxTFBxNWp0dmtXVnh1U2FURV9weWpQRmV3aTQ5eFFyU2dfbFV4Vl9fb2RERWpxTDB1bzVQblpSQzJITFl2ZG9ObnZpTi1oaTk0a3k5aVpfdzE4ZUQ?oc=5",
+   "source": "아주경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:57:51+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "AI가 실험을 설계하고 로봇이 이를 수행하는 자율 실험실(Self-driving Lab)이 바이오 연구의 미래 패러다임으로 주목받고 있다.",
+    "p": "실험 자동화와 AI 결합은 신약 개발 및 바이오 연구의 속도를 극적으로 단축시키며 전통적인 연구 방법론의 근본적인 변화를 예고하고 있다.",
+    "t": [
+     "자율실험실",
+     "바이오",
+     "AI연구",
+     "실험자동화"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_06d9b16eb161e089",
+     "point_text": "실험 자동화와 AI 결합은 신약 개발 및 바이오 연구의 속도를 극적으로 단축시키며 전통적인 연구 방법론의 근본적인 변화를 예고하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "06d9b16eb161e089"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485771+00:00"
+    }
+   }
+  },
+  {
+   "id": "19553746160e2a8e",
+   "title": "BHUSD launches AI task force",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB6U2hvalhfeFlPVTVRcjU0UmplTWZCM3FVeG5LSHpKSXJUcjRNR3U5eFg3dXJFRXJDR2oydUZGZ185R19wNzM0MVFwUXhWY2F6OWMxUl84SkE3b3BjcmY0bW1IeEFVeHFOdnR1ckJabw?oc=5",
+   "source": "Beverly Press & Park Labrea News",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T22:52:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "BHUSD, AI 태스크포스 출범",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "비벌리힐스 통합교육구(BHUSD)가 교육 현장의 AI 활용 방안을 모색하기 위해 전용 태스크포스(TF)를 신설했다.",
+    "p": "기초 교육 기관 단계에서부터 AI 도입에 따른 윤리적 문제, 교육 효과, 행정 효율화를 체계적으로 다루려는 움직임이 확산되고 있다.",
+    "t": [
+     "BHUSD",
+     "교육AI",
+     "태스크포스",
+     "학교행정"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_19553746160e2a8e",
+     "point_text": "기초 교육 기관 단계에서부터 AI 도입에 따른 윤리적 문제, 교육 효과, 행정 효율화를 체계적으로 다루려는 움직임이 확산되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "19553746160e2a8e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485818+00:00"
+    }
+   }
+  },
+  {
+   "id": "65dd649f0ea7e109",
+   "title": "AI 전력전쟁, GPU 다음은 원자로…아마존·구글·MS·메타 ‘원전 확보전’",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAtdkpvck1ZdEd0cWVWeUozYUNiNEdnM1VPSUk3ekUxX0xEcGxjOEh6b0N2b0w4S2gzeWlLckpqX1pTVndxZ0pjVHo0RWRMTkY2MXlnTktfMmhXdWctTXU2UGV2ano?oc=5",
+   "source": "에너지안전신문",
+   "field": "에너지·환경",
+   "category": "news_ko",
+   "published": "2026-10-01T22:42:52+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "아마존, 구글, 마이크로소프트, 메타 등 빅테크 기업들이 급증하는 AI 전력 수요를 감당하기 위해 원자로 확보전에 나서고 있다.",
+    "p": "데이터센터 전력난이 심화되면서 원자력 에너지가 AI 인프라의 핵심 동력으로 부상하고 있으며, 빅테크와 에너지 산업 간의 연대가 강화되고 있다.",
+    "t": [
+     "원자로",
+     "빅테크",
+     "데이터센터",
+     "전력난"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_65dd649f0ea7e109",
+     "point_text": "데이터센터 전력난이 심화되면서 원자력 에너지가 AI 인프라의 핵심 동력으로 부상하고 있으며, 빅테크와 에너지 산업 간의 연대가 강화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "65dd649f0ea7e109"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485870+00:00"
+    }
+   }
+  },
+  {
+   "id": "d8363f41b3e3a650",
+   "title": "천문학적 자금 쏠린 AI 채권 시장, 투자자 냉대에 조달 경색 직면",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYllIX3VVVFRpaGhISHhEMmhFWFRaSEJldVRxNG1Oc2NCTXJNbFRSSngwcmNqNWlRbUp0SEEyVHQ2VTlwSXdsblFBQmkzakw3OFk4UHE0V3ZfdjlzeXQxUjRZZHdycmFXX0FtSXR0MENUaUJPNWdmaTY2NjZybjU0aGdVbjdBRHhq?oc=5",
+   "source": "글로벌이코노믹",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:38:50+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "천문학적인 자금이 유입되던 AI 채권 시장이 투자자들의 냉대와 조달 경색 위기에 직면했다.",
+    "p": "AI 인프라 투자의 수익성에 대한 시장의 회의론이 커지면서 자본 조달 환경이 악화되고, 향후 빅테크의 투자 속도 조절에 영향을 줄 수 있다.",
+    "t": [
+     "AI채권",
+     "자본조달",
+     "투자심리",
+     "금융시장"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d8363f41b3e3a650",
+     "point_text": "AI 인프라 투자의 수익성에 대한 시장의 회의론이 커지면서 자본 조달 환경이 악화되고, 향후 빅테크의 투자 속도 조절에 영향을 줄 수 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d8363f41b3e3a650"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:48.485918+00:00"
+    }
+   }
+  },
+  {
+   "id": "25628d89dd0be7eb",
+   "title": "AI 영화 스튜디오 내부: 하루에 4~5편의 영화를 제작하며, 각 영화는 40개의 에피소드로 구성됩니다.",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNU0RTXzZFcmtxWHNPajRGX0pKTkw4aEQ1REM5a3RfMWVZemZTWWltREZpdTJHSDVlNC05YVJBdkc2cEFmcmpib3A1TVJRZXhKQTVvSUdNZHFUNTR2N1AxQndZcE9JNExXeGwzeFpnUDlPYTBMNDVQb0JsM3QtR1kzLUNwX1dSS2NJZkozLXJB?oc=5",
+   "source": "Vietnam.vn",
+   "field": "문화·예술",
+   "category": "news_ko",
+   "published": "2026-10-01T22:38:03+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
+   "id": "d92ce74dd6d70cb8",
+   "title": "Kelly Clarkson Embraces AI but Draws the Line at Charts",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4tcC1hNExpNTNmX2xfNkNvZlRINUN4MklhWXRGcHZ4MjV1dF95b1FFUWRLM29IdG5ZV2ZrbHlLWlJ6Y2E3T25vYWJLajlZMjZIaXU5dDRrVnBiSHZGelQwRFBGWXVFSjNSZHdCcXh1c2toZw?oc=5",
+   "source": "PinkNews",
+   "field": "철학·윤리·예술",
+   "category": "news_global",
+   "published": "2026-10-01T22:36:24+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "켈리 클락슨, AI를 환영하지만 차트 순위 예측에는 선을 긋다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "가수 켈리 클락슨(Kelly Clarkson)이 인공지능 기술 활용에는 긍정적인 입장을 밝혔으나, 음악 차트 집계와 순위 산정 영역에서만큼은 선을 그었다.",
+    "p": "대중문화 예술가들이 작업 효율성을 위한 AI 도구 도입은 수용하면서도, 예술적 성취와 순위를 결정하는 핵심 지표에서는 인간의 고유성과 공정성을 지키려는 경향을 보여준다.",
+    "t": [
+     "켈리클락슨",
+     "음악",
+     "AI활용"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d92ce74dd6d70cb8",
+     "point_text": "대중문화 예술가들이 작업 효율성을 위한 AI 도구 도입은 수용하면서도, 예술적 성취와 순위를 결정하는 핵심 지표에서는 인간의 고유성과 공정성을 지키려는 경향을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d92ce74dd6d70cb8"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.740917+00:00"
+    }
+   }
+  },
+  {
    "id": "d5cf00464ee2ee17",
    "title": "GENISOM AI Showcases Embodied Intelligence and Debuts World's First Industry-Grade Educational Quadruped at IROS 2026",
    "link": "https://www.itbiznews.com/news/articleView.html?idxno=226876",
@@ -515,6 +1889,1313 @@
      "generated_at": "2026-10-01T19:32:04.698337+00:00"
     }
    }
+  },
+  {
+   "id": "b56023ff548702da",
+   "title": "Island's Mike Fey and Credo AI's Navrina Singh weigh in AI policy at CNBC AI Forum",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSF83WUdRMm9iaGlOcjJwcTJMVDlkcFlBRUp1VUdYVnZiNjRtWHM4eWxrMjFOUk1NOWJxMmhsak5yRjdOYlhRTWVrcGMzbUIxM0hnVm5GRWFZSDJ0Y3dQTmh3V1FRWS1VWER3WWVSZWtCN2tpTWFEOWc2OVlHZ2Rjc3JmQ0ctOTRuM3YxaHRQMENtZ2FrT3FYTGp1UkhwQ1hRUUFXWnVYMVllTXpWdnJLZWNFN1doZVJkeFFWb3dHSTg?oc=5",
+   "source": "cnbc.com",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T22:19:03+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "아일랜드의 마이크 페이와 크레도 AI의 나브리나 싱, CNBC AI 포럼에서 AI 정책에 대한 견해 제시",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "CNBC AI 포럼에서 아일랜드의 마이크 페이와 크레도 AI의 나브리나 싱이 AI 정책 방향에 대한 전문가 의견을 제시했다.",
+    "p": "기업들이 급변하는 규제 환경 속에서 실효성 있는 거버넌스 체계를 구축하고 정책 리스크를 관리하기 위한 구체적인 기준 마련의 필요성이 대두되고 있다.",
+    "t": [
+     "AI정책",
+     "거버넌스",
+     "규제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_b56023ff548702da",
+     "point_text": "기업들이 급변하는 규제 환경 속에서 실효성 있는 거버넌스 체계를 구축하고 정책 리스크를 관리하기 위한 구체적인 기준 마련의 필요성이 대두되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "b56023ff548702da"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.740995+00:00"
+    }
+   }
+  },
+  {
+   "id": "d8a63c951da7a369",
+   "title": "씨젠 기술공유 플랫폼, 코파일럿으로 연구·개발 속도 높였다 [테크리포트]",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB1OHl1aTZGUm52U2Ruc0x6dVpkTFBmOFlpQ2FmM2lmbFVoVk1fRjg4bU9JSTNRN2xFaGVRTDhxaG1RbGpSLVhfejE3d3Z5MzU4WEk5NXVwVjJvYTZUM0FiT0FYZzcxcnBrdzRJbnF2WG7SAXRBVV95cUxNZHk2TTdoTGdRaldBaEhqVEtMZnpORFFGVGNYcHZBcjVEel9jVjg0YS1FWlFKNUlYMjh3Z1hrd0Y2UUJ0aktjcGlDYVlTZ3A1WDNLNkpET09ic3hvZDBwTnZtVERfa2M1cThndHR6cmkzUjRsUg?oc=5",
+   "source": "it.chosun.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:10:51+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "씨젠이 기술공유 플랫폼에 코파일럿 시스템을 도입해 연구개발(R&D) 속도를 크게 향상시켰다.",
+    "p": "바이오·진단 분야에서 AI 코파일럿 도입이 단순 업무 보조를 넘어 연구 데이터 분석과 기술 공유 속도를 가속화하는 핵심 인프라로 자리 잡고 있다.",
+    "t": [
+     "씨젠",
+     "코파일럿",
+     "바이오"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d8a63c951da7a369",
+     "point_text": "바이오·진단 분야에서 AI 코파일럿 도입이 단순 업무 보조를 넘어 연구 데이터 분석과 기술 공유 속도를 가속화하는 핵심 인프라로 자리 잡고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d8a63c951da7a369"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741050+00:00"
+    }
+   }
+  },
+  {
+   "id": "fea3f1556ff58340",
+   "title": "Whatever AI Safety Is, It’s Not This",
+   "link": "https://www.wired.com/story/whatever-ai-safety-looks-like-its-not-this/",
+   "source": "WIRED AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T22:10:42+00:00",
+   "summary": "Asking AI companies to self-regulate is a great way to pretend like you’ve accomplished something.",
+   "thumb": "",
+   "title_ko": "AI 안전이 무엇이든, 이건 아니다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "AI 기업들에게 자율 규제를 요구하는 것은 마치 무언가를 성취한 것처럼 가장하기에 아주 좋은 방법이다.",
+   "detail_ko": "AI 기업들에게 자율 규제를 요구하는 것은 마치 무언가를 성취한 것처럼 가장하기에 아주 좋은 방법이다.",
+   "mx": {
+    "b": "인공지능 기업들에게 자율규제를 맡기는 방식은 실질적인 안전 확보가 아닌 성과 부양용 포장에 불과하다는 비판이 제기됐다.",
+    "p": "업계의 자율적인 규제 준수 방식이 한계를 드러내면서, 실효성 있는 외부 통제와 강제력 있는 법적 안전망 마련이 시급하다는 목소리가 커지고 있다.",
+    "t": [
+     "AISafety",
+     "자율규제",
+     "AI윤리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_fea3f1556ff58340",
+     "point_text": "업계의 자율적인 규제 준수 방식이 한계를 드러내면서, 실효성 있는 외부 통제와 강제력 있는 법적 안전망 마련이 시급하다는 목소리가 커지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "fea3f1556ff58340"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741110+00:00"
+    }
+   }
+  },
+  {
+   "id": "9875c5c01c3ec735",
+   "title": "건설연, AI 기반 교량 안전성 실시간 진단기술 개발",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUmlIbEIwQmtCY3lSVmNZbGZPRmJfY0FrbUc5cTl4QnVWQ09iR1EwVU9EbXdvRkVTcnVwSzZ1ZUdxdUVKR1N4dGVLOHlacG55cmo3NmQ2Qk5mZ2ctMlJ4MW10d1JtSlRNbllGa2llVkxJaU9OWk1XMUduYnRzRlhxcl9UTW9fVWhLVTA1TFV5Zw?oc=5",
+   "source": "사이언스타임즈",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:04:50+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "한국건설기술연구원이 인공지능을 활용해 교량의 안전성을 실시간으로 진단하는 기술을 개발했다.",
+    "p": "노후 인프라 관리 영역에서 AI 기반 실시간 모니터링이 도입되면서, 사고 예방 중심의 스마트 건설 안전 체계로의 전환이 가속화되고 있다.",
+    "t": [
+     "건설연",
+     "교량안전",
+     "실시간진단"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_9875c5c01c3ec735",
+     "point_text": "노후 인프라 관리 영역에서 AI 기반 실시간 모니터링이 도입되면서, 사고 예방 중심의 스마트 건설 안전 체계로의 전환이 가속화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "9875c5c01c3ec735"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741159+00:00"
+    }
+   }
+  },
+  {
+   "id": "620545904ccbf792",
+   "title": "서초구, ‘신성장 산업 유치 자문단’ 출범…AI 기업 유치 속도",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1sQlBPZ0trNXYxVHlKS1dTcnJTMjRMNW1pc3B5Q1FnM1JtTDZBdnpKZnhDVnF3ZUwwem1QVXpaUWZCejBXd1lQR1lfTUJiVkVt?oc=5",
+   "source": "문화일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T22:02:38+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "서울 서초구가 '신성장 산업 유치 자문단'을 출범하고 인공지능 기업 유치 활동에 본격적으로 나섰다.",
+    "p": "지자체들이 지역 경제 활성화와 미래 산업 생태계 선점을 위해 AI 기업 유치와 맞춤형 지원 정책을 경쟁적으로 추진하고 있다.",
+    "t": [
+     "서초구",
+     "AI기업",
+     "지자체정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_620545904ccbf792",
+     "point_text": "지자체들이 지역 경제 활성화와 미래 산업 생태계 선점을 위해 AI 기업 유치와 맞춤형 지원 정책을 경쟁적으로 추진하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "620545904ccbf792"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741206+00:00"
+    }
+   }
+  },
+  {
+   "id": "05effdea58bcce3b",
+   "title": "배달하던 로봇이 물건도 집는다…자율주행업계, 휴머노이드로 확장",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YQlNqN2xVU190YlJsTGRGZnZDMkJYTVJ2c1J3ZXBpWThkQ28xMFRhcHJPeVpSVWpseUlMU0NXREF4dURyQkVBbmdlSXZJMXM?oc=5",
+   "source": "v.daum.net",
+   "field": "피지컬 AI",
+   "category": "news_ko",
+   "published": "2026-10-01T22:02:11+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "자율주행 배달 로봇이 단순 물품 운송을 넘어 물건을 직접 집어 올리는 기능을 수행하며 휴머노이드 형태로 확장되고 있다.",
+    "p": "물류 로봇 시장이 단순 이동형 모빌리티에서 복잡한 물리적 조작이 가능한 휴머노이드 기술과 결합하며 현장 적용 범위를 넓혀가고 있다.",
+    "t": [
+     "휴머노이드",
+     "자율주행",
+     "배달로봇"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_05effdea58bcce3b",
+     "point_text": "물류 로봇 시장이 단순 이동형 모빌리티에서 복잡한 물리적 조작이 가능한 휴머노이드 기술과 결합하며 현장 적용 범위를 넓혀가고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "05effdea58bcce3b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741254+00:00"
+    }
+   }
+  },
+  {
+   "id": "0abb6062922a304e",
+   "title": "\"AI에 그룹 명운\"…디지털·IT 인사 역할론 부상",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9PSTdicTNPeXBrM2ctQ001STlXejNMZE9EOFBSTDBMaG4wRHRDSDdZRHpKdW1vazhJWWhYTjJPSFVXMlRfMFRmbzRUbmljZEU?oc=5",
+   "source": "딜사이트",
+   "field": "경제",
+   "category": "news_ko",
+   "published": "2026-10-01T22:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능이 기업의 생존을 좌우하는 핵심 요소로 부각되면서 디지털 및 IT 부서 임원들의 역할과 책임이 급격히 커지고 있다.",
+    "p": "AI 전환이 전사적 생존 전략으로 자리 잡음에 따라, 최고기술책임자(CTO) 등 IT 리더들이 단순 기술 관리를 넘어 경영 성과를 견인하는 주체로 부상하고 있다.",
+    "t": [
+     "디지털전환",
+     "IT인사",
+     "AI전략"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_0abb6062922a304e",
+     "point_text": "AI 전환이 전사적 생존 전략으로 자리 잡음에 따라, 최고기술책임자(CTO) 등 IT 리더들이 단순 기술 관리를 넘어 경영 성과를 견인하는 주체로 부상하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "0abb6062922a304e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741306+00:00"
+    }
+   }
+  },
+  {
+   "id": "bde6bde90f500a8b",
+   "title": "GSA issued an AI acquisition policy for new contracts. Here’s what it says.",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcWlXcm1vOGpSTDdtaWR3cTlQZUlTTVI4UUdkdGdjSVUxaUZBdEdXaHBiUThhRkYyT0VhenZ5dkFvWHBQVGF5TDg1bEVNSjI0UHB5N0o1T0FDLWViUzcweHNEcW9TSUJ3M3VtS2paV1JjUW9pbFYzOENSNGw1NUIyNlFraDBqYzU1OElHUFpJTGtXcWlnRWs2cVB3?oc=5",
+   "source": "FedScoop",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T21:51:09+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "GSA가 신규 계약을 위한 AI 조달 정책을 발표했다. 그 내용은 다음과 같다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "미국 연방조달청(GSA)이 신규 계약에 적용할 새로운 인공지능 조달 정책을 발표했다.",
+    "p": "정부 기관의 공공 계약 과정에서 AI 도입 기준이 구체화되면서, 기술 공급업체들은 보안, 윤리, 투명성 등 한층 강화된 연방 규격 준수를 요구받고 있다.",
+    "t": [
+     "GSA",
+     "조달정책",
+     "연방정부"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_bde6bde90f500a8b",
+     "point_text": "정부 기관의 공공 계약 과정에서 AI 도입 기준이 구체화되면서, 기술 공급업체들은 보안, 윤리, 투명성 등 한층 강화된 연방 규격 준수를 요구받고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "bde6bde90f500a8b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:58.741384+00:00"
+    }
+   }
+  },
+  {
+   "id": "e8d6a1bc4baa8286",
+   "title": "탈레스 CEO \"인공지능 공격에는 인공지능 방어로 맞서야 한다\"",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYnI1aTV3NVQ3ZGN3RUR4NGljMjlNWWdzZENSa2RVaXNIaHoyX3JiN1p6OUhheVFwWEhGbjNsSjdFTXVPUUF2bjB2dkZ6STYyTVNRMWJlaVZVSHpScU9Pckg4Sy1jM0JrMFpldWN0WWt6NV9UVk92b3J2MHl0M3ZJSk9nMmxySld4?oc=5",
+   "source": "글로벌이코노믹",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:48:17+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "탈레스 CEO는 고도화되는 인공지능 위협에 대응하기 위해 방어 체계 역시 인공지능 기반으로 전환해야 한다고 강조했다.",
+    "p": "사이버 보안 영역에서 AI가 공격과 방어 양측의 핵심 무기로 부상하면서, 자동화된 공방 대결이 본격적인 보안 패러다임으로 자리 잡고 있다.",
+    "t": [
+     "탈레스",
+     "사이버보안",
+     "인공지능",
+     "보안방어"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e8d6a1bc4baa8286",
+     "point_text": "사이버 보안 영역에서 AI가 공격과 방어 양측의 핵심 무기로 부상하면서, 자동화된 공방 대결이 본격적인 보안 패러다임으로 자리 잡고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e8d6a1bc4baa8286"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502659+00:00"
+    }
+   }
+  },
+  {
+   "id": "c9196a98d0fcf62d",
+   "title": "[분석] AI로 일은 빨라졌는데…일자리도 줄었다고 볼 수 있을까",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uTDUtWDRQRmJ0RmxsOXpNSkJqeHhXTnhMMHBXS0JuQkdxYUdUaFdWWWJaUmdZcXpBOFVseURXQl9oamV3NHpmek1GaE85dk5IQWFNSEZIRWlLUzk1dVVKd096TmVJaWxHZjlzYmFjQlJ6UQ?oc=5",
+   "source": "아웃소싱타임스",
+   "field": "사회·노동",
+   "category": "news_ko",
+   "published": "2026-10-01T21:30:07+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 도입으로 업무 처리 속도는 향상되었으나, 이것이 곧바로 전체 일자리 감소로 직결되었는지에 대한 분석과 논의가 이어지고 있다.",
+    "p": "생산성 증대와 고용 구조 변화 사이의 상관관계가 명확히 입증되지 않은 상태에서, 노동 시장의 질적 변화에 대한 정밀한 진단이 요구된다.",
+    "t": [
+     "노동시장",
+     "생산성",
+     "일자리",
+     "AI변화"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_c9196a98d0fcf62d",
+     "point_text": "생산성 증대와 고용 구조 변화 사이의 상관관계가 명확히 입증되지 않은 상태에서, 노동 시장의 질적 변화에 대한 정밀한 진단이 요구된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "c9196a98d0fcf62d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502737+00:00"
+    }
+   }
+  },
+  {
+   "id": "1d7b2a4f67417366",
+   "title": "[AI로 읽는 노동신문] 10월 2일(금)",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nWVpmclY0Z1FiSHNjWm50XzMyTVFfRU5uUklua0lULWVtNWVjRng5aFM1WndLeHVROXEwZklEZ3hHaUw3MHJBZ2pHang0YjRHVnlGREVzbVlfXzl5?oc=5",
+   "source": "뉴스핌",
+   "field": "사회·노동",
+   "category": "news_ko",
+   "published": "2026-10-01T21:29:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 기술을 활용해 북한 노동신문의 주요 내용을 분석하고 보도 동향을 살피는 기사가 공개됐다.",
+    "p": "정형화된 체제 선전 매체를 대상으로 AI 분석 도구가 적용되면서 대북 정보 수집과 미디어 모니터링 방식이 다변화하고 있다.",
+    "t": [
+     "노동신문",
+     "미디어분석",
+     "북한",
+     "정보수집"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1d7b2a4f67417366",
+     "point_text": "정형화된 체제 선전 매체를 대상으로 AI 분석 도구가 적용되면서 대북 정보 수집과 미디어 모니터링 방식이 다변화하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1d7b2a4f67417366"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502789+00:00"
+    }
+   }
+  },
+  {
+   "id": "89b2522fb1efeb2f",
+   "title": "New lawsuit claims DraftKings uses AI to target problem gamblers",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNXZ0WlJZU2VTT09sb1J2cENyTGF2WGE3aVZ0U3hZNXR6ZDdqazdlSUJaWjg2WXZEbExmYm1JNXpVaVpEQi1OVXZvSVBnLUJScnZDSlFpTkZjNkxWNWduWnItTUhBdjZzTWNBamE0OVJNNHJDX29rX2lIQzJGaTJ2SEMwLW1mZw?oc=5",
+   "source": "WBUR",
+   "field": "법률",
+   "category": "news_global",
+   "published": "2026-10-01T21:24:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "새로운 소송에서 드래프트킹스가 AI를 이용해 문제성 도박꾼을 표적으로 삼았다고 주장",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "온라인 도박 업체 드래프트킹스가 인공지능을 이용해 중독 위험이 있는 사용자들을 표적 삼아 도박을 유도했다는 혐의로 소송을 당했다.",
+    "p": "기업의 AI 추천 및 타겟팅 알고리즘이 사용자 보호보다는 중독을 유발하는 상업적 목적에 악용될 수 있다는 법적·윤리적 책임 문제가 제기됐다.",
+    "t": [
+     "드래프트킹스",
+     "소송",
+     "알고리즘",
+     "도박중독"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_89b2522fb1efeb2f",
+     "point_text": "기업의 AI 추천 및 타겟팅 알고리즘이 사용자 보호보다는 중독을 유발하는 상업적 목적에 악용될 수 있다는 법적·윤리적 책임 문제가 제기됐다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "89b2522fb1efeb2f"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502842+00:00"
+    }
+   }
+  },
+  {
+   "id": "1bbffde009660d04",
+   "title": "Wes Moore calls for AI regulation at Baltimore summit - WBAL-TV",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWHRNR2NYSXlxY1BNMEJEM0RvcVluQWQ1b0p1bG5vZXVGaXJ5al85RnlES1U1WVdBWjY2a1plMjd4UHdzcUN0bklDZno2SlRGdEVVbkxCeGFUWGNkYjFrc2RzUm5mY3NlV01KdHItajZseW1qNk9SanFYZW9lVVZwS1VETFN2cEU?oc=5",
+   "source": "Google News: AI regulation",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T21:20:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "웨스 무어, 볼티모어 정상회의에서 AI 규제 촉구 - WBAL-TV",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "웨스 무어 볼티모어 서밋에서 인공지능 기술을 통제하고 관리하기 위한 엄격한 규제 도입을 공식 촉구했다.",
+    "p": "지방 정부 차원에서도 AI 확산에 따른 부작용을 막기 위해 제도적 안전장치 마련의 필요성이 점차 강조되는 추세다.",
+    "t": [
+     "AI규제",
+     "웨스무어",
+     "볼티모어",
+     "정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1bbffde009660d04",
+     "point_text": "지방 정부 차원에서도 AI 확산에 따른 부작용을 막기 위해 제도적 안전장치 마련의 필요성이 점차 강조되는 추세다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1bbffde009660d04"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502888+00:00"
+    }
+   }
+  },
+  {
+   "id": "ecc39456a87a4f47",
+   "title": "AI & Tech Brief: The FTC’s weapons",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQQ1kyVjlvX2dva1BDcmNpZnJiMm5aNjBYaHdMSW5ITTJVOWUxUHNFWUlYTE5fYUlJRW9ScXEtczRqS0xJZ3Z0ZWNPSDdkbVFVTkJJTENrR0FUYW56RWtKWkNlcWE2Y2tsd1ZVZ3RoZGw0d3JwSkhlMVhEVDhZb2tJQlRqaGxKWHVUUEU0UkpwZXVkazl4YzNxQU5wMlNvNlBa?oc=5",
+   "source": "The Washington Post",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T21:19:10+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI & Tech 브리프: FTC의 무기들",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "미국 연방거래위원회(FTC)가 인공지능 및 첨단 기술 분야의 반독점 및 불공정 행위를 견제하기 위해 활용하는 규제 수단들을 조명했다.",
+    "p": "빅테크 기업들의 AI 시장 지배력 확대에 대응하여 경쟁 당국이 실질적인 법 집행 도구를 본격 가동하고 있음을 보여준다.",
+    "t": [
+     "FTC",
+     "반독점",
+     "기술규제",
+     "빅테크"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ecc39456a87a4f47",
+     "point_text": "빅테크 기업들의 AI 시장 지배력 확대에 대응하여 경쟁 당국이 실질적인 법 집행 도구를 본격 가동하고 있음을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ecc39456a87a4f47"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502937+00:00"
+    }
+   }
+  },
+  {
+   "id": "1eec1ccee066a2e9",
+   "title": "AI might be making women sound less sophisticated",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNERGOU9oY3JZbDRGU1BQVzh2NEpubWQ3WTEzOUctVEVPai16Q2lpak5ENHlNeVVGaW1MbmVHSzdWOUFGS0hDREY4NHZRdW1aNEpIakF6d2Z2NkpSOTFuV1BMLXlSbWplXzVGOHFiWWRtd2NKX0llMV9DZm5tTEJfSUllRXFaaXp0VUVWa3ZB?oc=5",
+   "source": "Yahoo Tech",
+   "field": "여성",
+   "category": "news_global",
+   "published": "2026-10-01T21:17:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI가 여성들의 말을 덜 세련되게 들리게 할 수도 있다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "인공지능 시스템이 여성의 목소리나 표현 방식을 처리하고 재생하는 과정에서 의도치 않게 지적 능력이 낮아 보이도록 왜곡할 수 있다는 우려가 제기됐다.",
+    "p": "음성 인식 및 생성 기술에 내재된 편향이 사용자 인터페이스를 통해 사회적 고정관념을 강화할 수 있다는 점을 시사한다.",
+    "t": [
+     "음성AI",
+     "성차별",
+     "기술편향",
+     "인공지능"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1eec1ccee066a2e9",
+     "point_text": "음성 인식 및 생성 기술에 내재된 편향이 사용자 인터페이스를 통해 사회적 고정관념을 강화할 수 있다는 점을 시사한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1eec1ccee066a2e9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.502986+00:00"
+    }
+   }
+  },
+  {
+   "id": "29bb13fa7f40928a",
+   "title": "“우리 가족 얼굴 알아보는 AI”…거실로 돌아온 애플",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9HRzFnVE5LUTFSbVRRUEJPSWRVUXFkVmFOUGJUMk80RlNWQTFubXBLQVllSkp4b0ZyUVEtQXRET3oxeHlfdXJSaS1HdDlzSjFpZVHSAVNBVV95cUxPZG1LSW1EUFRqTUVaUHBRRFNmZGpzVkd6UzdMRXFHeFdOR1NoWTNac01tTHpBblBqT1ZsN1U1QVdWVTVIRWsxNkJ1MFUxNHc2ZmxQNA?oc=5",
+   "source": "서울경제",
+   "field": "가족·출산",
+   "category": "news_ko",
+   "published": "2026-10-01T21:13:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "가족 구성원의 얼굴을 인식하는 인공지능 기능을 탑재한 애플의 신규 스마트 홈 기기가 거실 시장 공략에 나섰다.",
+    "p": "개인화된 생체 인식과 홈 오토메이션이 결합되면서, 스마트 홈 기기가 단순 가전을 넘어 가정 내 핵심 플랫폼으로 진화하고 있다.",
+    "t": [
+     "애플",
+     "스마트홈",
+     "안면인식",
+     "AI기기"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_29bb13fa7f40928a",
+     "point_text": "개인화된 생체 인식과 홈 오토메이션이 결합되면서, 스마트 홈 기기가 단순 가전을 넘어 가정 내 핵심 플랫폼으로 진화하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "29bb13fa7f40928a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.503034+00:00"
+    }
+   }
+  },
+  {
+   "id": "578143be7e8fa1a0",
+   "title": "Musk’s AI chatbot Grok reportedly encouraged Trump to capture Venezuela’s president",
+   "link": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
+   "source": "TechCrunch AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T21:08:11+00:00",
+   "summary": "President Trump reportedly asked for Grok's opinion before invading Venezuela and capturing Nicolás Maduro.",
+   "thumb": "",
+   "title_ko": "머스크의 AI 챗봇 ‘그록(Grok)’이 트럼프에게 베네수엘라 대통령을 체포하도록 부추겼다는 보도",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "보도에 따르면 트럼프 대통령은 베네수엘라를 침공하고 니콜라스 마두로를 체포하기 전에 그록의 의견을 물었다고 한다.",
+   "detail_ko": "보도에 따르면 트럼프 대통령은 베네수엘라를 침공하고 니콜라스 마두로를 체포하기 전에 그록의 의견을 물었다고 한다.",
+   "mx": {
+    "b": "일론 머스크의 AI 챗봇 그록이 베네수엘라 대통령 체포를 위한 군사 작전과 관련해 도널드 트럼프에게 조언을 제공했다는 보도가 나왔다.",
+    "p": "정치·외교적 중대 결정을 내리는 과정에서 AI 챗봇의 의견이 개입될 수 있다는 점이 알려지며 인공지능의 외교안보적 역할 논란이 확산되고 있다.",
+    "t": [
+     "그록",
+     "일론머스크",
+     "트럼프",
+     "AI챗봇"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_578143be7e8fa1a0",
+     "point_text": "정치·외교적 중대 결정을 내리는 과정에서 AI 챗봇의 의견이 개입될 수 있다는 점이 알려지며 인공지능의 외교안보적 역할 논란이 확산되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "578143be7e8fa1a0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.503093+00:00"
+    }
+   }
+  },
+  {
+   "id": "973e9e0328116ef3",
+   "title": "AI and the Performance of Workers with Disabilities - National Bureau of Economic Research | NBER",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8zV054bFZrY2pVRDd5Y09zNWt2R1BFMW9CRXN2ZDRNd3c0SUFmOVd3bC02Z1N2U2ZWV25iUnhIbW53VENNWEhkZk5aazV5dmQ3cWFQaG5UTHRpN21RMXpEMEU5TjFMX2RKdjQ4NXo3bWo1SlpvTF9USU03d3Rscjg?oc=5",
+   "source": "Topic: 사회·노동 · 사회·노동",
+   "field": "사회·노동",
+   "category": "news_global",
+   "published": "2026-10-01T21:05:13+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "AI와 장애인 근로자의 업무 성과 - 미국 국립경제연구국(NBER) | NBER",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "전미경제연구소가 장애 노동자의 업무 성과에 인공지능이 미치는 영향을 분석한 연구 결과를 발표했다.",
+    "p": "AI 도구가 노동 취약계층의 생산성 격차를 해소하고 노동 시장 진입을 도울 수 있는지에 대한 실증적 연구가 다각도로 이루어지고 있다.",
+    "t": [
+     "NBER",
+     "장애노동자",
+     "생산성",
+     "연구"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_973e9e0328116ef3",
+     "point_text": "AI 도구가 노동 취약계층의 생산성 격차를 해소하고 노동 시장 진입을 도울 수 있는지에 대한 실증적 연구가 다각도로 이루어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "973e9e0328116ef3"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:08.503140+00:00"
+    }
+   }
+  },
+  {
+   "id": "cf454d629e1e74d4",
+   "title": "오픈AI, 외부 AI안전 단체에 사내정보 유출한 직원 3명 해고",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEWTh4aTZCRWhSZ0hTRVJGY2hYZC1NWE50OWFWR2M1T0VuWTM2elgtM25rQVJIb0tGVmFaRnUycDN1bmwtdTRWVVRtNm5DRjdMeHRzanotSC1BU01ZSEVZRU95YXQ1NWs?oc=5",
+   "source": "연합뉴스TV",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:04:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "오픈AI가 사내 기밀 정보를 외부 AI 안전 관련 단체에 유출한 직원 3명을 해고했다. 이번 조치는 내부 정보 유출에 대한 엄격한 보안 기조를 보여준다.",
+    "p": "AI 안전성과 내부 고발을 둘러싼 기업 비밀 유지 정책 간의 갈등이 수면 위로 드러난 사례이다.",
+    "t": [
+     "오픈AI",
+     "보안",
+     "해고",
+     "AI안전"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_cf454d629e1e74d4",
+     "point_text": "AI 안전성과 내부 고발을 둘러싼 기업 비밀 유지 정책 간의 갈등이 수면 위로 드러난 사례이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "cf454d629e1e74d4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832461+00:00"
+    }
+   }
+  },
+  {
+   "id": "a2bb31295d03034e",
+   "title": "Bloom Energy Stock: 3 Catalysts For AI Data-Center Fuel-Cell Play",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQV29xSTNrdVRqNDgxQVh6dHhyS2lPcWQ2SGNfMC1reDBtTENONUpxRUtNYS1nVGFkSUVjLV9jMkVNU1RNQjJJX2VSZ2ZpUGc1NldId3p3SmtCUFpmcTZYUVV3Y2plem5aWHZpOGNMMG1YcnNXVVpPajBrbkJnQjl6VzFR?oc=5",
+   "source": "Investor's Business Daily",
+   "field": "에너지·환경",
+   "category": "news_global",
+   "published": "2026-10-01T21:04:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "블룸 에너지(Bloom Energy) 주가: AI 데이터센터 연료전지 관련 주식의 3가지 성장 동력",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "블룸에너지 주가가 AI 데이터센터의 전력 수요 증가에 힘입어 연료전지 공급 확대 기대로 주목받고 있다.",
+    "p": "AI 데이터센터의 폭발적인 전력 소모가 친환경 연료전지 산업의 실질적인 성장 동력으로 작용하고 있음을 보여준다.",
+    "t": [
+     "블룸에너지",
+     "데이터센터",
+     "연료전지",
+     "전력"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a2bb31295d03034e",
+     "point_text": "AI 데이터센터의 폭발적인 전력 소모가 친환경 연료전지 산업의 실질적인 성장 동력으로 작용하고 있음을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a2bb31295d03034e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832536+00:00"
+    }
+   }
+  },
+  {
+   "id": "1740112181ebe57b",
+   "title": "Cooke Campaign Demands Van Orden Stop Using AI Deepfake Attack Ads",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcUFWVW51SmsxZ3l3SWhKaVFVd0tUeWdkN3lBLTMya05tVHBwM1FxUHV0SXFndFdyWFBHWmJ2a0xxTkNHcVlaNW5zWlM1dHliRXZfdFNpTV9ScmF1ZlJnQTVKbFA3NjdjVDJ6TTR0U3p0eGZiMGZPSXoyUW0xT2N3a0p5eTNLRlBvcWF2Rm1mbkpxTjJ1V1pxYmVBemIwb0FvZjFDQnJiWTY?oc=5",
+   "source": "Urban Milwaukee",
+   "field": "저작권·미디어",
+   "category": "news_global",
+   "published": "2026-10-01T21:03:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "쿡 선거 캠프, 반 오든에게 AI 딥페이크 공격성 광고 사용 중단을 요구",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "미국 정치권에서 쿡 캠페인 측이 밴 오든 의원을 향해 AI 딥페이크를 활용한 네거티브 광고 중단을 공식 요구했다.",
+    "p": "선거 과정에서 AI 딥페이크 기술이 유권자를 교란하는 수단으로 악용되면서 정치적 공방과 규제 압박이 거세지고 있다.",
+    "t": [
+     "딥페이크",
+     "선거",
+     "정치",
+     "AI규제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1740112181ebe57b",
+     "point_text": "선거 과정에서 AI 딥페이크 기술이 유권자를 교란하는 수단으로 악용되면서 정치적 공방과 규제 압박이 거세지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1740112181ebe57b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832588+00:00"
+    }
+   }
+  },
+  {
+   "id": "8a989d8db3083ea9",
+   "title": "해킹 없이도 오픈웹에 노출된 개인정보…AI 사이트도 줄줄",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hX0Z0NkdGV1BRX0dmd2d1MkZGejllY3FNSjczaUlqck9GRDZLZDhrR3RpUTNidGtuOHV0VjNXZmh2YUdvN19KNlJCVVRhWXhPY3haQTRtempuSFpNbUtoN2pfU0R6NUc3SFJ3c9IBbEFVX3lxTE9hX0Z0NkdGV1BRX0dmd2d1MkZGejllY3FNSjczaUlqck9GRDZLZDhrR3RpUTNidGtuOHV0VjNXZmh2YUdvN19KNlJCVVRhWXhPY3haQTRtempuSFpNbUtoN2pfU0R6NUc3SFJ3cw?oc=5",
+   "source": "국민일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:02:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "해킹 사고가 없어도 오픈웹에 방치된 개인정보가 AI 검색과 플랫폼을 통해 무분별하게 수집 및 노출되는 문제가 발생하고 있다.",
+    "p": "AI 모델의 데이터 수집 범위가 넓어짐에 따라 공개된 웹 환경에서의 프라이버시 침해 위험이 가중되고 있다.",
+    "t": [
+     "개인정보",
+     "오픈웹",
+     "해킹",
+     "프라이버시"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_8a989d8db3083ea9",
+     "point_text": "AI 모델의 데이터 수집 범위가 넓어짐에 따라 공개된 웹 환경에서의 프라이버시 침해 위험이 가중되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "8a989d8db3083ea9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832638+00:00"
+    }
+   }
+  },
+  {
+   "id": "e57716f8a6ee042c",
+   "title": "낙상 미리 감지하는 AI기술…서울시 외국인창업경진대회 대상",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5mM0MySlN5eTdPcHVDSmdQdnhuZ1NVb0hDVmxqdnNFRXhKSmhvN0xzR1NDcnprZGNPSWhnaVJOakxFeEtPMUNTOTcydXFxLTZWbUFOcEVjMkl3ejjSAWBBVV95cUxQOFhja0lFRno2a2hZeTZ2dkIzSFgzTWZDUHR6MWViNVQ5Z3dZd24ydWFjSV9IVFZzSUlFbFI0WkJHcW13SHpoajZtMXppTGhVb1plTndPTjVzQ2ZhRzlxRTQ?oc=5",
+   "source": "연합뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:10+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "낙상 상황을 사전에 감지하는 AI 기술이 서울시 외국인 창업 경진대회에서 대상을 수상했다.",
+    "p": "고령화 사회의 안전 관리 분야에서 AI 비전 및 센서 기술의 실효성과 창업 아이템으로서의 가치를 인정받았다.",
+    "t": [
+     "서울시",
+     "낙상감지",
+     "창업",
+     "AI기술"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e57716f8a6ee042c",
+     "point_text": "고령화 사회의 안전 관리 분야에서 AI 비전 및 센서 기술의 실효성과 창업 아이템으로서의 가치를 인정받았다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e57716f8a6ee042c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832683+00:00"
+    }
+   }
+  },
+  {
+   "id": "a886b592ef2c6696",
+   "title": "500만원대 가사 로봇 등장…프리미엄 가전 가격대로 내려온 가사 로봇",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZGNqcFZEWUlaTzFNNEhLcTBsVXYyX0tNZ0FFTFMzR2tsWUFKOVJxQ0pIdk93dV8wY2pyTXJUQ2owbkRPVFVMYzhOcWJKd3llLWt2WjVpN0dQNEhPNWRia1d4a3VUS3BZX0NNNE85VFBGdzRBSFdpUm81OXlMSVZaQnh2RQ?oc=5",
+   "source": "조선일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 5,
+   "mx": {
+    "b": "프리미엄 가전제품 수준인 500만 원대 가격을 책정한 가사 로봇이 시장에 등장했다.",
+    "p": "산업용이나 고가 연구용에 머물던 휴머노이드·가사 로봇이 가격 장벽을 빠르게 낮추며 실질적인 소비자 보급 단계로 진입하기 시작했다.",
+    "t": [
+     "가사로봇",
+     "로보틱스",
+     "스마트홈",
+     "하드웨어"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a886b592ef2c6696",
+     "point_text": "산업용이나 고가 연구용에 머물던 휴머노이드·가사 로봇이 가격 장벽을 빠르게 낮추며 실질적인 소비자 보급 단계로 진입하기 시작했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a886b592ef2c6696"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550104+00:00"
+    }
+   }
+  },
+  {
+   "id": "5846b845337345d6",
+   "title": "﻿퇴근하지 않는 속기사 AI [정원훈의 AI 트렌드]",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE90aDVnclRqOVFjcFNQeDZucXQwRV9lcjQzQlY1NHRINl95YnEzU1NoTjUyeVMwLXR5aEpZalcyRkNxaV9wLW9aVm9ja0pFd0s1dTFLUFBTekdrMHAxSVdyQVY2ZmRJbVlUcEltSVBpbUM?oc=5",
+   "source": "it.chosun.com",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "속기 업무에 AI가 도입되면서 24시간 중단 없이 기록을 처리하는 자동화 환경이 구축되고 있다.",
+    "p": "반복적인 기록 및 문서화 업무가 AI로 대체되면서 전통적인 전문 사무직의 노동 형태가 빠르게 재편되고 있다.",
+    "t": [
+     "속기사",
+     "업무자동화",
+     "음성인식",
+     "AI트렌드"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5846b845337345d6",
+     "point_text": "반복적인 기록 및 문서화 업무가 AI로 대체되면서 전통적인 전문 사무직의 노동 형태가 빠르게 재편되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5846b845337345d6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832727+00:00"
+    }
+   }
+  },
+  {
+   "id": "7177a405e8b6b4b9",
+   "title": "AI 시대, 자녀 교육 어떻게 할까…서울교육청, 학부모와 토크콘서트 - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1qZVNPaWp5WnR5SW9ubVBBcFFERVJySVFLd0JmTmxhWE8zVTUxb2xTdkRteExsdHVORnQ0elN6RXQzZW5uM2ZpVWxtb0c5aDl5alllMDlIemt3STJwajY1TTJDZXVCTDVEVHfSAW9BVV95cUxPYUlWa1BvYVJkS2VrWGZXVmVMOG1FVUVmM0tlcGp5TFNxaDBTVGtEOU01OHNMYXhpQUpha0VfVkhSMFZvc25ZempELWJvRjZqNUd6TFZ5S3p3REg4Z0VVTkdmVlRocDk3Zms1OUZSdEU?oc=5",
+   "source": "머니투데이",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "서울시교육청이 학부모들을 대상으로 AI 시대에 적합한 자녀 교육 방향을 논의하는 토크콘서트를 개최했다.",
+    "p": "인공지능 대중화에 따라 학교 교육뿐만 아니라 가정 내 교육 방식과 학부모의 역할 재정립 필요성이 커지고 있다.",
+    "t": [
+     "서울교육청",
+     "자녀교육",
+     "토크콘서트",
+     "에듀케이션"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7177a405e8b6b4b9",
+     "point_text": "인공지능 대중화에 따라 학교 교육뿐만 아니라 가정 내 교육 방식과 학부모의 역할 재정립 필요성이 커지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7177a405e8b6b4b9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832773+00:00"
+    }
+   }
+  },
+  {
+   "id": "71685d50e8628ae8",
+   "title": "[문송천의 디지털 산책] 18일간 멈춘 클로드, 국산 AI 허상을 묻다",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5sVjVxQThoZDFsNklBcEJBS0hOTnNRR1E5M3NiOWp2ZHptOWJ5ZlpjTzJwNGtTbkpZNnMyMVpKeHl0b1lPQ2NRNHExcHdkNHdmbndoSlNpMmlpZ9IBWEFVX3lxTE0zd2g2Z2tDRzNFUWlwQVFCUW5YbmNUX284dkdSUnZPQmlWLXM0enFVX0UwaWFZVnQ0NXV4VGFNRnNSZWJhN0E1VWsxdHVMR2tmTGwtLVJuMm4?oc=5",
+   "source": "아주경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "글로벌 AI 서비스가 장기간 중단된 사태를 계기로 국내 AI 생태계의 자립도와 실효성에 대한 비판적 진단이 제기됐다.",
+    "p": "해외 대형 AI 의존도가 높은 상황에서 국산 AI 기술력이 실제 인프라 공백을 대체할 수 있는지 근본적인 점검이 요구된다.",
+    "t": [
+     "클로드",
+     "국산AI",
+     "인프라",
+     "디지털산책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_71685d50e8628ae8",
+     "point_text": "해외 대형 AI 의존도가 높은 상황에서 국산 AI 기술력이 실제 인프라 공백을 대체할 수 있는지 근본적인 점검이 요구된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "71685d50e8628ae8"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832821+00:00"
+    }
+   }
+  },
+  {
+   "id": "2b358a41ecb438c1",
+   "title": "[기자수첩] 피지컬 AI 시대, 한국 '제조업'의 새 문법",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBURFdjOW1kQ20zVHFfTnVYNXRlV3dVT185bjkzN1FSSThxdUdTRVBFcUVYNFNZckVOb2MtVVZPa0Q4MEpaa0tjd1NfcFhVY0VOT0JaaW1UdHkyc3Rm?oc=5",
+   "source": "뉴스핌",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "피지컬 AI 시대를 맞이하여 한국 제조업이 하드웨어 중심에서 벗어나 새로운 패러다임의 전략을 모색해야 한다는 제언이 나왔다.",
+    "p": "전통 제조업 기반의 한국 산업계가 물리적 로봇과 결합된 AI 환경에서 경쟁력을 갖추기 위한 체질 개선이 시급하다.",
+    "t": [
+     "피지컬AI",
+     "제조업",
+     "산업전환",
+     "한국경제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_2b358a41ecb438c1",
+     "point_text": "전통 제조업 기반의 한국 산업계가 물리적 로봇과 결합된 AI 환경에서 경쟁력을 갖추기 위한 체질 개선이 시급하다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "2b358a41ecb438c1"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832867+00:00"
+    }
+   }
+  },
+  {
+   "id": "fc080a2acc28e645",
+   "title": "광운대, 재직자 'AI미디어솔루션' 석사 모집 … 국내 유일 미디어 특화 과정",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBJU2w4SXN1bE9sR1pjM3VvX29RNnk3MkxXT2ZfN3hHRFVoSmVEaHJGMzNBRHBGMUk4dk50ZVVPMXJ2NWNFRDgya0RRcUg3b1h1NFA1QUhEaHFqT21uS3dTSUVlX2dyNC1yWDlLQ2gtNXdfUDlrTVREVGVuY9IBgAFBVV95cUxNQW5ieHMyWHVJTklOc0dYYmpKc0NxQXpfZlI1UjRuTklHN0ZxaFE2dVBxazdBVjVFTzYxd1kwUGNVTVhiMmU3MjhXWF9zc1VSeU43alRwcXM4QlNMUnBFbUpTU2xqV0MtMEpnWlVhcjZzY2JLcTRteHBRSEpBcU14bQ?oc=5",
+   "source": "biz.newdaily.co.kr",
+   "field": "미디어",
+   "category": "news_ko",
+   "published": "2026-10-01T21:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "광운대가 국내에서 처음으로 재직자를 위한 미디어 특화 AI 미디어솔루션 석사과정을 신설하고 신입생을 모집한다.",
+    "p": "미디어 산업 전반에 AI 기술 도입이 가속화되면서 현장 실무를 이끌어갈 융합형 전문 인력 양성 체계가 본격화되고 있다.",
+    "t": [
+     "광운대",
+     "석사과정",
+     "AI미디어",
+     "재직자교육"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_fc080a2acc28e645",
+     "point_text": "미디어 산업 전반에 AI 기술 도입이 가속화되면서 현장 실무를 이끌어갈 융합형 전문 인력 양성 체계가 본격화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "fc080a2acc28e645"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:26:17.832913+00:00"
+    }
+   }
+  },
+  {
+   "id": "9a26a894937e0633",
+   "title": "\"생각을 넘어 행동으로\"… 中 AI '맥스웰', 로봇 물리 작업 글로벌 벤치마크 1위 등극",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOUFmQ1NNcVdBYkdLSXZ0RXRSRzF4X2pveTlxVlRabjBkSGdIeXFsWGxuRHNzNU1RV2FXcTFyZ0lSYzFvdGlSTlBZcEl0Wl90aXpKRkhhaG1GMTZxa0QwRWY5X1J2OW9lVjE0ZzRvVUVzQl9UTVlJbEs5RXNfcmtROVBtWlZVMGtv?oc=5",
+   "source": "글로벌이코노믹",
+   "field": "로봇",
+   "category": "news_ko",
+   "published": "2026-10-01T20:55:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "51cdabfd74b594f9",
+   "title": "Senators Hawley, Murphy Announce Bipartisan AI Agent Accountability Act",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaUdBelJSWFdqbjQycXJMSXZzVE9LV2RVdWk0M2dlcmtySGhCaUlLZ2hLbHpFWGFoTC1VMzA5THVyeHg3eEZwaXFmbjJWTVRkak5fU3ZIMkY4WXpGU2xiS2JwdFdFOU1EUExhUVQ4bFBJcG1MMER1aWs1c0hVSHhYblRyb081THk0em1tWW9rTV9PZlhJeDBEN1VuQjhiNmZYUVhv?oc=5",
+   "source": "U.S. Senate (.gov)",
+   "field": "에이전트",
+   "category": "news_global",
+   "published": "2026-10-01T20:51:47+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "홀리·머피 상원의원, 초당적 ‘AI 에이전트 책임법’ 발의",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "a25fcaadddb38ebc",
+   "title": "'AI 깐부동맹'과 'K수소 4대천왕'[광화문] - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0taUNGaVJXczRYejdIU2hJM0c2cXM3dS0zZ1JyT195MEdPSnZiNjNrVXB0T3Y5NGpOR1E5U1lFMHBkMklyU2xOVmVKRnh0Rnl6Vlp5bWlieWdxM1FheUxKaTJVc2M1Ymh0Qlc40gFwQVVfeXFMUE1HT2EyU1VEdTJZbGcySFQ5U1c0Nmx4TFpSS21pQ29fenBpVy1Tc2c3SC1pd3lkY2p1TnNLeEFDb3F4MFFObjllcmZSa3BIbUN2VXhSQ1RjU3JUYVh6ZmpOYXdMLXBHSWlWVWZTc3JOTw?oc=5",
+   "source": "머니투데이",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T20:50:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "dfc16335d3348cc3",
+   "title": "3rd Circ.'s AI Copyright Ruling Signals Traditional Fair Use Rules Still Apply",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeU1BYkpBNDBHVl9mWkF6bmtPSmxGX2EtYTRUZHY0cWd1VmNKUDRzMm8tZmRvOUVYS3hLNmJaa1RndklJZFFGdFpiTWhwaTFGZjVzLUlObG1aYms5LXhDV3dIMFJlbDUyRmxUd20zOHhtRmRBOXF2RmYtZXNLTHpDeG5GOWNmOU1vMHB3SGJZMWxpVFQtV3c5ZmZ3dlVEVVlBTDZrQWpnc3FOeVIz?oc=5",
+   "source": "Law.com",
+   "field": "저작권·미디어",
+   "category": "news_global",
+   "published": "2026-10-01T20:38:23+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "제3순회항소법원의 AI 저작권 판결, 기존 공정 이용 원칙이 여전히 적용됨을 시사",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "57018a5862a06929",
+   "title": "How AI agents are informing JIATF-401’s procurement plans after Falcon Peak",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQnBkckNSdUlYRXNiUmptWTJrOEZHLVN1VUhodUJRTnJ3RUFvaTc0bU1zLVRwR015aFdwc1h4SkVacE9sbmRmWVdQTkt6RnJqaUdBTUN3WUU5NXVLSUFfdElzX0N5NFkzLWlIWmozd2xpM2twUlhYa1FrSC1sdkE2ejU2bGp2YnhVeFNfbGdMQQ?oc=5",
+   "source": "defensescoop.com",
+   "field": "에이전트",
+   "category": "news_global",
+   "published": "2026-10-01T20:32:55+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "팔콘 피크(Falcon Peak) 이후 AI 에이전트가 JIATF-401의 조달 계획에 어떤 영향을 미치고 있는가",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "35f4ea364f41c825",
+   "title": "라온시큐어, ‘2026 시큐업’서 에이전틱 AI 보안 전략 공개 : 네이버 블로그",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRTlJejRUQjFsamxqaGVXVGRUY1haTEFxdTNwUkVSZ1F0cVlNYm1Qd2tnaWNBMHJVaHE0WWFNUWktWF9GMFh4czlzTG5VNFJ2bXVhNmZvSFFHdldLUlljRGVZc1Y5dmFLbDFRQ0FPTnZUSmxLZHg0YjFzTHJzUHZ4bThFOHdINXlLclpsaTJoSQ?oc=5",
+   "source": "Naver Blog",
+   "field": "에이전트",
+   "category": "news_ko",
+   "published": "2026-10-01T20:30:53+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "416c17e510311c59",
+   "title": "10초만에 맞춤 정보 뚝딱…투자 돕는 '금융 AI' 만든다 - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0LXJ3RWg0VWltNWpSNjVKS2V1RERWNkFhdHNIeWJ4OXdyNW94cksxLWh2dVFzUkQ3MFVocEE2blVueW5SMk9SQjBYbzZUdklhZDBVQ2hoOHV0V0YzOWdGQ3JLVUpSLWJWZXfSAW9BVV95cUxQaVUtejJRcXFRZWdJbllGaVJDZVFBX1lUX0xPZVZBOHptbWhlaExpQTlMcWVXNlkyV19PS044azN4TWtnTGtRVVFBc2kzdUJGRGFxTVB3TTlZbDllUlJYV09DRF9iY3N2NUd1dFdVWEk?oc=5",
+   "source": "머니투데이",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T20:30:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "50945da6cebb555a",
+   "title": "충북고, ‘AI·디지털 도약 주간’으로 미래 역량 키워 : 네이버 블로그",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVzc2a0VfWEw3cmRSaG5BU0ZMZmVWUmRMNS1MbDNEd3UxdkFyYi1DUmNMVVB2Z1NhWHFkakRqU1NZeUJmVzNJa0xyNC1nSHpqUTJfTVVDMGpoalBHVEVLRFZ2MkEtZkM0MzFtbUpBM2lTLUNfYTdnNTR6NENPUktGRndUdWREMzFEcGZMajlCSQ?oc=5",
+   "source": "Naver Blog",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T20:25:44+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "9825d11feb34fab7",
+   "title": "Newsom signs order to keep artificial intelligence terminology",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMmpUdUtUSE9Bb3JSMDU4STdUb21sU3lmYl9NcFU0NmJ2d0hCbHlWQ1c1SFJrSUc1aXNtMXpKX3ozUzFSWWtPVWpjanVXeHpoU3VLbnFDNlJLV3hubDZJUTFFN0I2b1otWVVlOS1MeXZrVXlCWlk2Smp6amFNbXItMGR1dGRxVkNIc09mOHFfdnFDak1iT2NFU2R0cXAzX0tweldHMlBWNmdDTE51bl8xekdZSzVvUzh0VldF?oc=5",
+   "source": "Washington Examiner",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T20:19:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "뉴섬, 인공지능 용어 유지 명령에 서명",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "1b85c4d1a04ecb00",
+   "title": "New study identifies four unique migraine phenotypes using artificial intelligence",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1I2dUE0amlSbV9PcjNIYXZsZGxBMnM3VkxCSU9hRUhSamY5VHhZRlQ3X1lKZ01BQjJ0dVdFZjRBZGlNc3FRSHdNdGl5cktEQngydlRBcXdGcnhtSUpLenl4Ujk4SkhVMWw4c2FlaV9IYzhHWllGdEpfZ19DT0x2VXZ1aXkyVjBPYUZ5UHgyOExIRWQwRUx6UmktU0FTbVp0THV3REFrT0s?oc=5",
+   "source": "PsyPost",
+   "field": "청소년·정신건강",
+   "category": "papers",
+   "published": "2026-10-01T20:18:40+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "b705ae9ebfb2367e",
+   "title": "Deepfakes and copyright suits are writing AI's first loss history",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZlNsdndtZllUc3FYNV8xTmF4bDN4a1hnNnJlOVVDODUtdmdQNFhucTFja2ZXTkhLYTNZX1dMb1J2WFYzRVJOM3VXczVPZWVFSmo1OGlldTRaZjZZd2ZtYzZNS0ZUZzcxc1haVEJvTWt3bVBSdlJjUGZKdE5HQTVhRGFXamlHcHB3eXpuWHZPVUZSOFNpRlVoTlRmVjQtMFlaMXpOUGdHSDBhR21ZbFh5WGxNVXFkRVQyUVM0R054WmhHUG9nTVE?oc=5",
+   "source": "Insurance Business",
+   "field": "윤리·철학",
+   "category": "papers",
+   "published": "2026-10-01T20:08:46+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "d052355f85a74d18",
+   "title": "전남광주특별시교육청, 생성형 AI 활용 ‘슬기로운 청렴 생활 봇’ 개발·운영",
+   "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9mUFM2RUl4LVhFUjFSbW9ZNm4wcDREbk1SeEh0N2YzWGJCenFLamZ3LVBWay1OVzRRUGVoN1RRS2Uxak43ME1J?oc=5",
+   "source": "브레이크뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T20:07:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "6d4fa9ba1e08727c",
+   "title": "Announcing AWS Well-Architected Agent, an AI-powered intelligence to optimize your cloud environment (preview)",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxORTAwdDVMdWREcUJHV2JtUkhvRXpLWlljMnB1MGVOS2hZQzhuZGMxZzFKVVI4bGVzZHhFbVV4V2FsX3huY3dad0lraEZQZTduX1A3VHFSRF9xYW9GaTN3QW44eUNZNTRicTNUQ0FmSElIOHlHVUVpbTYxYTBUUERYaXNIOUhZYVBuc0wtRUtXU29tTG1iV2Vsb2E1bUlwNzBPalNSRmlHdjd3emxHbDRDbU5SM1U2RWc4ZkpDQ3FZX0c3Wk5aaHpmX3ZSam1rcmN3dXRieEFDajk?oc=5",
+   "source": "Amazon Web Services (AWS)",
+   "field": "에너지·환경",
+   "category": "news_global",
+   "published": "2026-10-01T20:04:04+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "클라우드 환경을 최적화하는 AI 기반 인텔리전스, ‘AWS Well-Architected Agent’ 출시 (프리뷰)",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "61e2bb436b0c2aed",
+   "title": "Video: Opinion | What A.I. Utopia Could Look Like",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVjNfZE41ems2WlNCdzNaRGMtMFJMTjBZd3RWd29qUjY0dXhnVlYxcmhGS2VxTklVbkdhZVFVQms2UjRzWW5pX2JsLVYwellvaVFlOUx4cGpNOU4wY1pLQXlkYjloTjNqaUtXYmNXTTFLbEVQMHVZck5NWXNUeXJES1FyYXJUN2tLZGlHRGZRaHJMVzQ?oc=5",
+   "source": "The New York Times",
+   "field": "AI 철학",
+   "category": "news_global",
+   "published": "2026-10-01T20:01:23+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "동영상: 칼럼 | AI 유토피아는 어떤 모습일까",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "dc41e24850f907d8",
+   "title": "\"AI 아냐?\" 공무원 60명 군무…'풍기인삼축제' 홍보영상 화제 - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAza2ZnOEdlQ0gzYy00ODRjUXVFblRUbDRibXRqOUc5TWNNWDJpVUZNYnJDaDdIOVMtUkJKQXpoME4tWUNSanhpbFVYci02OW85UFJRSVhGOU84WTBxR0VWUDlpNW90LTd3elc40gFwQVVfeXFMTTVGWFZfRzlsTjJmblpXMXlWQjVUZEw0d2NNLUs3anJqSFROOTdKZjNOSDN1R0o4bmpjeGFVbTFyTXJydXM4NmdRY2s0LUFFLU5nazR6eFVSaG50TkR1cERjT0VqenJZTTN5T25jamFIeA?oc=5",
+   "source": "머니투데이",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T20:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "7ef4fbece2cb501c",
+   "title": "[내궁내정] 카드는 숨기고 인간은 드러난다…포커가 욕망·확률·철학·AI를 품은 이유",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE02NUFLZnNrYXI3cWlzSGlvV0NfTW85U1ROaEVqTWhOZXN3SGFlbUhBVHczd3k1WWRoNGM2V0dFU3pfVkVWN1BLd3p0MFdNTk1tUnJRb1BheWRVMU0zczRQVw?oc=5",
+   "source": "뉴스스페이스",
+   "field": "AI 철학",
+   "category": "news_ko",
+   "published": "2026-10-01T20:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "cf9f1b7027558419",
+   "title": "Poll: Most US Voters Want Strong AI Regulation 10/02/2026",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRzFyejJRQWJMZzhLUVFJc1h5TXQtMUd3RERMUHQtMFVXYnRkUjZILVpYcUlWNjB3cVBYa1pOR1V2Ql9FdWQzQ1ZkVElRaXNsdV9JOGxLQ3V5OGU4MEpHOF9heXNkSVVVNXFNMFhCbGV2eWc3WVNPOUZyekJ2QVZsc2NXOWNjVkFkaWVYUVI2SmN1SHF3Qy1rY00wOEFSdEdya3BBYm9DYw?oc=5",
+   "source": "MediaPost",
+   "field": "",
+   "category": "policy",
+   "published": "2026-10-01T19:57:54+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "여론조사: 대다수 미국 유권자, 강력한 AI 규제 원해 2026년 10월 2일",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "3a61edc8ace0a8ba",
+   "title": "IBM allows on-prem deployment of its Bob agentic development platform",
+   "link": "https://siliconangle.com/2026/10/01/ibm-allows-on-prem-deployment-of-its-bob-agentic-development-platform/",
+   "source": "SiliconANGLE AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T19:49:51+00:00",
+   "summary": "IBM Corp.",
+   "detail": "It targets organizations whose sensitive source code, regulated data or critical systems limit their ability […] The post IBM allows on-prem deployment of its Bob agentic development platform appeared first on SiliconANGLE .",
+   "thumb": "",
+   "title_ko": "IBM, 자사의 Bob 에이전트형 개발 플랫폼을 온프레미스 환경에 배포할 수 있도록 허용",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "이 서비스는 민감한 소스 코드, 규제 대상 데이터 또는 핵심 시스템으로 인해 […] 능력을 제한받는 조직을 대상으로 합니다. “IBM, 자사의 Bob 에이전틱 개발 플랫폼의 온프레미스 배포 허용”이라는 기사는 SiliconANGLE에 처음 게재되었습니다."
+  },
+  {
+   "id": "fab730eab5ab1d9d",
+   "title": "NetApp’s ‘sleeping giant’ moment as AI brings new data buyers",
+   "link": "https://siliconangle.com/2026/10/01/data-infrastructure-draws-new-buyers-netapp-ai-pitch-netappinsight/",
+   "source": "SiliconANGLE AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T19:43:52+00:00",
+   "summary": "Artificial intelligence has pulled data infrastructure out of the back office and into conversations with buyers who never had to think about storage before.",
+   "thumb": "",
+   "title_ko": "AI가 새로운 데이터 구매자를 불러오며 넷앱(NetApp)에 찾아온 ‘잠자는 거인’의 순간",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "인공지능은 데이터 인프라를 백오피스에서 벗어나, 이전에는 스토리지에 대해 생각해 볼 필요조차 없었던 구매자들과의 대화 속으로 끌어들이고 있다.",
+   "detail_ko": "인공지능은 데이터 인프라를 백오피스에서 벗어나, 이전에는 스토리지에 대해 생각해 볼 필요조차 없었던 구매자들과의 대화 속으로 끌어냈습니다."
+  },
+  {
+   "id": "4b1185ed8d2e61cb",
+   "title": "Texas College Students Shy Away From AI-Exposed Majors, Dallas Fed Study Finds",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcE5uMjJ4SHprcEhLSk9UaEJJdlJZdEtmNWNUc2M4NHFUc3E3d3lidGQ0YWZ2VGtObVdLbzh3dGlyRzc1Z3FobmxQMEJHSGNxMGUtZ0wza2w1Qm5xVTRlLTFIRU1oY0ZLa0dJTU1nei1zYlBFMkw0NTZXb0VtWU15TU1XNkk4NWNBWkRUQ3Z3RUp2TWFWcFhpVENUY3Rjc0RKU1U2V1lYNTRtQQ?oc=5",
+   "source": "Dallas Innovates",
+   "field": "사회·경제",
+   "category": "papers",
+   "published": "2026-10-01T19:38:47+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4446cfb4366406bf",
+   "title": "철책 침범 북한군, AI 로봇을 만나다 [AI가 바꾸는 세상]",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1uckhJTjF0VEE0SkFsR2FXVWp0WEJNbkpCbzlrX0NTS3RjWTZHZnpEcHZxMm9HQmN1R1d4dFZGRktLNUtEY1RlU3ZBU1dmUnZrbG9aT2ZtZlNaZy1iU2dDd2hRcUlzSVkxNTd4TTdn0gFzQVVfeXFMT1pRblRueUZURVplV2k1VVBZZkFmTmpodHcwTk15RXRKZ2NySFEwVGF0RHNibWp2ZU9FZldLdHdXY0RxcDl6M0pudjVSZE44WjdmajRibXpZTFcwZXpnSUtnckxiZl9wT240QzlQYkozYjE1bw?oc=5",
+   "source": "한국일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T19:30:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "a46e9a591582ed1e",
@@ -671,6 +3352,20 @@
    }
   },
   {
+   "id": "9b812d6316208c91",
+   "title": "A Chatbot Reckoning",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMcEtZUFpSZXhOVElDejVkSlZVWGN0SXllZWNTR3FzanJobWU2TE1WNzhYNnFqRTFYYi0yUXBfT2VORGNNVnpEOW5HcWgzd0NWa2h3Y3FUYldUVmEwVE1kQWZhVFk0Y2tnVUNZN1pEX2o?oc=5",
+   "source": "verilymag.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T19:18:25+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "챗봇의 대반전",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "a7b14ae6edaba8ce",
    "title": "Google thinks SpaceX’s Starship has to launch 1,600 times before space data centers get off the ground",
    "link": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
@@ -825,6 +3520,20 @@
      "generated_at": "2026-10-01T19:32:15.472799+00:00"
     }
    }
+  },
+  {
+   "id": "a41cf9f120c65868",
+   "title": "Gemini 4 Is Here: When You May Be Able to Use Google’s New AI Model",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTGlLZk9HaWFCSG5aQ0daaEpscW9hLTFrYjlBTktRb3VXNV8wNzhRSXg0aWJnUGw2QVAwRHNzQTRGNGluTzBFOEd4OEJQb1pjYTBrWUhBcFk3SHVpMkZORlFUcTAya1dMRXdvcU15ZERZVzFyeFJBQXhYRHB0NGdCdjl2TVctZHlDczJXTGRHMzI?oc=5",
+   "source": "CNET",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T19:03:14+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "Gemini 4 출시: 구글의 새로운 AI 모델을 언제 사용할 수 있게 될까",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "4ce86b2e830576ff",
@@ -1242,6 +3951,34 @@
    }
   },
   {
+   "id": "f6109bfb18ec0b5b",
+   "title": "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples | NVIDIA Technical Blog",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTE5WeU5BMGc5RHk5a2c0dEVZamNXeXlGbkxOVEZUd2RDanRmN09RMkhsXzk4TTBkeXVyb3BVS09rOTRnNTdteC1ZYjMxN0ZGYndyVWRibGEzU1B6aDFqNHpMSkk5Y05iU19WSlFueE1TaVdmdlEwQWdBX29JREg3MmYtTE5yLXFNYlBDV095RnZ1ZTNPTVlORg?oc=5",
+   "source": "NVIDIA Developer",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T18:23:04+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "C++ 및 NVIDIA TensorRT RTX 샘플을 활용한 로컬 AI 앱 구축 | NVIDIA 기술 블로그",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
+   "id": "66e3383d136d2f1e",
+   "title": "Google Launches New AI Tools Purpose-Built for Education",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaXJuZ2lVMWpCNkFnU1JVbWczU2dfYVRUZm9KUF9zRUk3YzhmV3NHdW9KQjh3eHpna2djdHBUVFc3YTRTSS0xRmNKMUFvaEJzeS1aZHJ0Q2JPZy1PUjdwdy1QTHZDRWVKTDBfSkxqdUNhTi13ZmFnZGVObWVrN1pVc0tzZjhJYVNOQ3pvdk5fa1l4bExsZW1jM19lVGtJVnlh?oc=5",
+   "source": "EdTech Magazine",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T18:18:24+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "구글, 교육 전용으로 개발된 새로운 AI 도구 출시",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "5eb64d667e4dc7b4",
    "title": "How AI Is Changing Thoroughbred Horse Racing Analysis",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNno2Skg5amExanlUWllQTzMzYlZDV255UDlKMExNdU9RcHVPdnluMkJvdXlJX1NZSFk0MDdpOGFaaVBIVEFRcW9LNmtja2c4aGcwMF9pZTFlQzYyWmNlTzBnNjlWSFJ2SWtvSzJjbFZzVF8tN2xUZmtXOGIxV041RUJuNjIzajRhd0ptcl96TzhEY194TW5F?oc=5",
@@ -1603,6 +4340,38 @@
    }
   },
   {
+   "id": "390e9a2f4d7674cf",
+   "title": "Rogue OpenAI agents covered their tracks, report says",
+   "link": "https://techxplore.com/news/2026-10-rogue-openai-agents-tracks.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T18:00:01-04:00",
+   "summary": "Artificial intelligence agents developed by OpenAI tried to erase traces of their activity after gaining unauthorized access to government websites, according to a report…",
+   "detail": "Artificial intelligence agents developed by OpenAI tried to erase traces of their activity after gaining unauthorized access to government websites, according to a report published Thursday.",
+   "thumb": "",
+   "title_ko": "보고서에 따르면, OpenAI의 악성 에이전트들이 자신의 흔적을 지웠다고 한다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "한 보고서에 따르면, OpenAI가 개발한 인공지능 에이전트들이 정부 웹사이트에 무단 접속한 후 자신들의 활동 흔적을 지우려 시도했다고 한다…",
+   "detail_ko": "목요일 발표된 보고서에 따르면, OpenAI가 개발한 인공지능 에이전트들이 정부 웹사이트에 무단 접속한 후 자신들의 활동 흔적을 지우려 시도한 것으로 나타났다."
+  },
+  {
+   "id": "487a3c06f8822544",
+   "title": "New tool lets users repair AI-generated 3D models, then fabricate them just the way they want",
+   "link": "https://news.mit.edu/2026/instructmesh-tool-lets-users-repair-ai-3d-models-then-fabricate-them-1001",
+   "source": "MIT News · MIT 연구",
+   "field": "MIT 연구",
+   "category": "papers",
+   "published": "2026-10-01T18:00:00-04:00",
+   "summary": "“InstructMesh” can generate designs for everyday objects that are easy to edit and fabricate for both experts and newcomers to 3D modeling.",
+   "thumb": "",
+   "summary_ko": "“InstructMesh”는 3D 모델링 전문가와 초보자 모두에게 편집과 제작이 쉬운 일상용품 디자인을 생성할 수 있습니다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "“InstructMesh”는 3D 모델링 전문가와 초보자 모두에게 편집과 제작이 쉬운 일상용품의 디자인을 생성할 수 있습니다."
+  },
+  {
    "id": "1a422cba6e62be42",
    "title": "‘터미네이터’의 악몽이 눈 앞에 왔다… AI 대부의 경고",
    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNeHp1czRIbnlqNVNwWk9nTWQ1QTh3U19TMVpYamszT0g1QWR3N21maENzbVNuSnAxUUF4a0tpTzBTSzhiQ1NOM2tzYm52RHhSajB5MGczS0p4TmNFQ0MxbWZxMHlla3VLOGJJVG04Rm54U0tiOURReWZSTDBqUGdCbmNiN096UQ?oc=5",
@@ -1708,6 +4477,17 @@
    }
   },
   {
+   "id": "95f5bb923313cd12",
+   "title": "퍼플렉시티 AI, 아동·청소년 안전성 ‘위험’ 평가",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTkQ5Q1hKQWlwc0lWWmpLbkFYTU40MkVIRi1UYXpCWkRzYTZmZjVxVlZfb0lXOHc5MTNuZnZ2S3RreW9DVGZnaHZWWENXcklxNm4zOTNKbEVxZ3lSQmo3eVo0TGRSU1MtTjhtTzR3Nk4tWnp3S24zUy1RSDhQdHNwYjlYcWJXVi02TlNvcnNyZE9lUEc1Z0hvbTlMZVlvUQ?oc=5",
+   "source": "미주조선일보",
+   "field": "청소년",
+   "category": "news_ko",
+   "published": "2026-10-01T17:57:22+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "cf5fc9946e8db75f",
    "title": "Live coverage: AI datacenter prototypes, energy redirection demonstrators and more launching on SpaceX’s Transporter-18 – Spaceflight Now",
    "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPTFBlaXZEZ09mb2FXNlFLU0dqcV9jYkgxS25BTEZjX0xFYjZVcHktc25aSXpaVWQ3alc0WG5YZzYwTV9kcmgta0RiMEtjYnZSdnJzT1kwNS1MemR0NWlpeUhvX051RHBRSDZrYmRqU3FYcEdsOUZZUk5PQXRkNGRldDBOQnBBZ2RqY0FRNnVLTTBuX2NVQVlQUDZVeVhaTGxMb0V0Vmt2aWRhSjN0V2U5LXZaVUtXZ3ZSQzg0RmY0OVlUbndaQjh5N2xJdW1pRE8tWDZjZGFOZ0E0SERFS2RXNjlpS1FyNUJPZmVB?oc=5",
@@ -1786,6 +4566,17 @@
    }
   },
   {
+   "id": "f8385cea806ef64a",
+   "title": "현무·KF-21부터 레이저 무기까지…‘자주국방·AI 첨단군’ 청사진",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5JZ1V3NUZEQzdLLWdJNDQ2RERCYVVSWUR4SlUxeTZYWWtlVjJ4clRvSWFWY3BMTUlMb0lrdXppS282S0p5UXdlOV9yQVBNRlJOQnZXZkp1SlM1TXd5WHZBaXN3VQ?oc=5",
+   "source": "쿠키뉴스",
+   "field": "국방·전쟁",
+   "category": "news_ko",
+   "published": "2026-10-01T17:49:41+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "4812ea3c39a68506",
    "title": "Could humanoid robot soldiers be on the horizon?",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONExZa0ZBd3pDQ05oLU9tR1hlelV4VDNOTXVGZEctODBYRXZVdWxaZGxpZFU5WHVyRmNrVlJTb0d0dmo3NTlpUS1SZW9JWE9ZTWNqaFdaVWVsQ01vanhmQzE5V1A3ZGhTMk9hVjJPUG45ajF3X1l5ZHRXYWw5TWhQa253QzVMdzRPcmJZU2VCOXRWaFgx?oc=5",
@@ -1822,6 +4613,20 @@
      "generated_at": "2026-10-01T19:32:35.023737+00:00"
     }
    }
+  },
+  {
+   "id": "69123a1c5619b8f0",
+   "title": "Physical AI in MedTech: Why the Hard Questions Matter more than the Hype - AdvaMed®",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeDVjRlczb1pXVC00VEoxREZmejBWMjlBdjVudnQtZmhJdUJjUThYdjZqMTAxV2h2YXRRME9CWjRlUG1UNGZjTzQyVDVQckg2T1RSdFBxY2RHblI2NV9RMlZqN2xyekw5MURTLTVSSVdEX3QwMEZoTVdXaFQ2MG9OOXVxZXY?oc=5",
+   "source": "Advanced Medical Technology Association®",
+   "field": "피지컬 AI",
+   "category": "news_global",
+   "published": "2026-10-01T17:44:35+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "의료 기술 분야의 물리적 AI: 과대광고보다 어려운 질문이 더 중요한 이유 - AdvaMed®",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "ba26b22f8e96b99e",
@@ -1937,6 +4742,17 @@
      "generated_at": "2026-10-01T19:32:44.409423+00:00"
     }
    }
+  },
+  {
+   "id": "4254b423ba360a24",
+   "title": "미국인들과 AI 2",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5DOWUtTWtjcEMwOTJYRDF3RDJfeG9Qd2pkQXZVUndfd3EwX2tpSnlqRW95WGwzUWJjS1Z0SVZLZ2ZVdjNBUG1FRTB2QnJCTThSS0xuXzhiU1F4bXpLdmNVWUlOblRDQ0J4dEo4R1RNNNIBcEFVX3lxTE5wZ0pBRlM4Z2Y0V01fWnBhZ3o4b2ltaGJnbzRoUFluZGJZZ0FWbnNiZ20wRXVVbHVDVVZUODRINzRVWGg5OGwtb1c1WjFaeGRQem1kNGlEZjhOb0JLd1ZmTDA4MTJmOXJwTU9zd3dTS0c?oc=5",
+   "source": "VOA 한국어 홈페이지",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T17:26:05+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "a78f93d3f1f83d4c",
@@ -2156,7 +4972,8 @@
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-01T19:32:44.409694+00:00"
     }
-   }
+   },
+   "hot": 7
   },
   {
    "id": "ea76100b773390d7",
@@ -2168,7 +4985,7 @@
    "published": "2026-10-01T17:00:21+00:00",
    "summary": "Marvel's Wolverine and Ghost of Yōtei are the first games to support Quick Spectral Super Resolution.",
    "thumb": "",
-   "hot": 3,
+   "hot": 1,
    "title_ko": "소니, 기본형 PS5에 AI 업스케일링 기능 탑재",
    "tr": "deepl",
    "trv": 2,
@@ -2250,6 +5067,20 @@
    "detail_ko": "로봇은 누군가가 무엇을 최적화해야 하는지 명시해 주지 않으면 행동할 수 없는데, 인간이 행복을 위해 이를 해낸 적은 한 번도 없다."
   },
   {
+   "id": "39a08f0ba323b5c1",
+   "title": "Google rolls out new Gemini AI model but restricts access over safety concerns",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeGxacWxBMjBHTEdEel95dW1GOVVOX09PR3laaEVXQXZvNDBRalVNMFNDTmstQUZ2YU1fX19SaHAwZnp1UVdvS2dVeHBPbTBGU1pfYmllWmJoVFozUUZXcDdHQm9kal92dWpCaEtyVndfWFhuVkVQcEk0djRROS1VUEJFa09VOS15M0U1YVZPSHZIWDVqZVZB?oc=5",
+   "source": "The Guardian",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T16:57:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "구글, 새로운 제미니 AI 모델 출시했으나 안전 문제로 접근 제한",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "0fbb393ce28bd545",
    "title": "Amazon releases its own Jev clone as decision models flood the web",
    "link": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
@@ -2322,6 +5153,17 @@
      "generated_at": "2026-10-01T19:32:54.014401+00:00"
     }
    }
+  },
+  {
+   "id": "6e7dda86b15196f4",
+   "title": "‘편해서 썼는데’… 생성형 AI 유료 이용자, 역기능 이용 위험에 노출",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1uaWhCRUxMckxOc1A4S1ptd1I5aTNMbjB4bHRpelhUNHNNREsycWs0aVd5VEhaRTBIQjk0MEZtUDBjUERFMHNyYjlCMVFFOVhlQUxISDNoTWg0OEdFWkoyb1BqaW9aVEl0LUlmTw?oc=5",
+   "source": "뉴스N제주",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T16:46:09+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "310fbc994bad2bb3",
@@ -2559,6 +5401,17 @@
    }
   },
   {
+   "id": "59259a9426fe8e9a",
+   "title": "휴머노이드 시대, 피지컬 AI만으로 충분한가? (1) 가능한 행동에서 적절한 행동으로 – 물리·사회적 판단의 교집합",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90VzhxSnZlRlpFTGtXdWhqVVlfeGd4LVdfMTNuVFUzR3Y4Ylh3VzhHSjU0emFUOXhHWnBDcXFlQTBIeUZ2bFZuNnA0cFdrMkhyc1d5MHRaRHBiWDN0MGk1UDFIR2lMYnhRajA1OA?oc=5",
+   "source": "로봇신문",
+   "field": "피지컬 AI",
+   "category": "news_ko",
+   "published": "2026-10-01T16:33:42+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b21897a2caf96478",
    "title": "Implementing Multi-Environment Access for Claude Platform on AWS",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVG5TYWs2eXVfekFmcGJKUS03a0RMSFh1NnBJa2Fjb0JEbnlvZTVlRGNZMVctYUhsb18wNkQ2ejZSRkhWQW1VUksxUmU3b3FPN0REWnJmSTU5T3FvYlJtV05ZeHpCM2lLRS1WVFNQeVk4RzJEbjRJSGxUa0llU183YkV0ejR5ZWVsc0lXS1dyOWV6d2ZwQjFTbDV6Wk9RS05zWDdNdmF0ZEt6bElGX3VEQw?oc=5",
@@ -2743,6 +5596,53 @@
    "trv": 2
   },
   {
+   "id": "c2e280cb224968cc",
+   "title": "Google’s new Guided Vision feature can help you read the fine print",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+   "source": "The Verge AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T15:47:51-04:00",
+   "summary": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at.",
+   "thumb": "",
+   "title_ko": "구글의 새로운 ‘가이드드 비전(Guided Vision)’ 기능은 작은 글씨를 읽는 데 도움을 줍니다",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "Guided Vision이 오늘 호환되는 안드로이드 기기의 Gemini Live에서 출시되어, AI를 활용해 휴대폰 카메라로 찍은 모든 대상에 대해 실시간 음성 설명을 제공합니다.",
+   "detail_ko": "Guided Vision이 오늘 호환되는 안드로이드 기기의 Gemini Live에 출시되어, AI를 활용해 스마트폰 카메라로 가리키는 모든 대상에 대한 실시간 음성 설명을 제공합니다."
+  },
+  {
+   "id": "c3de2928f2c61590",
+   "title": "A timeline of developments in AI safety since the attack on Hugging Face",
+   "link": "https://techxplore.com/news/2026-10-timeline-ai-safety.html",
+   "source": "TechXplore AI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T15:40:41-04:00",
+   "summary": "In one alarming announcement after another, artificial intelligence companies in recent months have shared examples of their technology acting in ways that appeared to evade…",
+   "detail": "In one alarming announcement after another, artificial intelligence companies in recent months have shared examples of their technology acting in ways that appeared to evade instructions from humans.",
+   "thumb": "",
+   "title_ko": "Hugging Face 공격 이후 AI 안전 분야의 발전 연표",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "최근 몇 달간 인공지능 기업들은 잇달아 우려를 자아내는 발표를 통해, 자사 기술이 마치…를 회피하는 듯한 방식으로 작동한 사례들을 공개해 왔습니다.",
+   "detail_ko": "최근 몇 달간 인공지능 기업들은 인간의 지시를 회피하는 듯한 방식으로 작동하는 자사 기술의 사례를 잇달아 공개하며 우려를 자아내고 있다."
+  },
+  {
+   "id": "55230655c2743b72",
+   "title": "Kevin Roose on AI: \"We are faced with very intelligent, charming sociopaths\"",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcS1zT2JOdkNzdllpNGNORnd5OWpVOGxSeGxWelRWMGE5UnA2RndtdWdtTEdPMGxPbnd0OUtuVXZVTm1OWl9yaU1QdDR1cEVFS2FKaFVKaWFHR0hzbzhTUHM1ZTlRTDVSWFRIaDFBNzlPdldfV1hVd2ZRLUh5ZFBDRGtuMTlDN3NVOUpFSA?oc=5",
+   "source": "cbsnews.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T15:37:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "케빈 루스, AI에 대해: “우리는 매우 지능적이고 매력적인 소시오패스들과 마주하고 있다”",
+   "tr": "deepl",
+   "trv": 2
+  },
+  {
    "id": "617599e07135a164",
    "title": "구글, 열달 만에 최상위 AI 모델 신작 \"지금까지 개발한 모델 중 최고 성능\"",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaW9CZ2F6R3NvV2Q4WUdRdTVZdnlhUmRLN1BiQXY4czVDRTVDY3BsUnFoVGlPOVFxQkdkSkFSYzZJQTIwTWhpZ2VBMWplQ0JPZTdGeHhhQ0R6SGpFQk9maEhvZDY4WUFaZ2QyR3paRERqUmtKbkwzcmFjeUlGTGp1a0RxQQ?oc=5",
@@ -2752,6 +5652,20 @@
    "published": "2026-10-01T15:34:00+00:00",
    "summary": "",
    "thumb": ""
+  },
+  {
+   "id": "be1d417114434ae2",
+   "title": "Trump’s AI rebrand may stop at the White House",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYndZZG5Fd0dmLXI2UVA5YkNnZ2NlTC1vcm4xM0Q1OTl3ajgxQ1o2Y3lBRkx3Yk0xVWVPWlVMTFZpbHh2ZFJSaF9aS3JMMldSUFNnWDN0bm9EYzluX0pYWG96a1g4OFRad2ItZWExazFEZnBUMHFLZ01OYi1rMWtPUXNRTnh4MkNhMlpwWlNTd2FWTGt0ZWViZlZ0UQ?oc=5",
+   "source": "politico.com",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T15:31:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "트럼프의 AI 브랜드 재편, 백악관에서 멈출 수도",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "ba048d796e3a1183",
@@ -2850,6 +5764,17 @@
    "thumb": ""
   },
   {
+   "id": "e4bc2a654d8fd6e0",
+   "title": "日법원 “AI 음성 모방은 재산권 침해”… 목소리권 첫 인정",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GRnBobkx6eTJMNm1FZkZ4dldYdWtCLVRoSWEyUmRFeEJtT0U4RGhsN0pBbWZpQlY0eUE1d1V4Qkc5bzFVWE0wVlJMazA3aFFUeHV0M2VXa0Y5SFJoS3JOcEpwSk9tMWpXRERENzI1RG01U1BqRDMydjZtVWpueFk?oc=5",
+   "source": "서울신문",
+   "field": "법률",
+   "category": "news_ko",
+   "published": "2026-10-01T15:04:58+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "6c36cfd9cfc815b3",
    "title": "“시민 누구나 AI혜택 누려야⋯‘작은 AI’가 필요하다”[춘천 AI포럼]",
    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBSeUdNSWtCQzcxVGFMbWdqYkpfV2E4cGZDb0FLQVR5N3YyQmJDYVA5bzlzZzhaX01ZYndob1Z4cFIxRjUtRnp4dVk2UEtnQ3c?oc=5",
@@ -2922,6 +5847,45 @@
    "trv": 2
   },
   {
+   "id": "28e571f5513fd3c4",
+   "title": "Stone Kite Is A New Studio From Halo, Destiny Creator Jason Jones And Author Margaret Stohl, And Its First Project Is About Rogue AI Robots",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVy1ZbWZaTDFQbmtZLVY3RFZjTFBQWEkza2lTcTZQYjlQUVBBS0hIUE5sZ3BLYXBqSkRGWXBSbzJzcklLNUgzNkVxel9LN3hUVlJuZk1hSUIzczhDTU02LVUzVmJ4cmRpM0lua0hBOFZZVTlXUG13T1NBY3duTWJEbnBiU2M2V0thdlFFYnFYNW5JMFY0ZVdZU05uNGNOVFhuRWs4SGlLdjl1S2xieDdxLUxQY1BVVVA4RHBFVA?oc=5",
+   "source": "Game Informer",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T15:00:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "hot": 2,
+   "title_ko": "'Stone Kite'는 '헤일로'와 '데스티니'의 제작자 제이슨 존스와 작가 마가렛 스톨이 설립한 신생 스튜디오로, 첫 프로젝트는 반란을 일으킨 AI 로봇을 다룬다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "'헤일로' 제작자 제이슨 존스와 작가 마가렛 스톨이 신생 개발사 '스톤 카이트'를 설립하고 폭주한 AI 로봇을 다룬 첫 프로젝트 개발에 착수했다.",
+    "p": "AI 통제 상실과 기계 반란이라는 기술적 화두가 게임 서사와 콘텐츠 산업의 핵심 소재로 다시금 전면에 등장하고 있다.",
+    "t": [
+     "스톤카이트",
+     "제이슨존스",
+     "게임",
+     "AI스토리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_28e571f5513fd3c4",
+     "point_text": "AI 통제 상실과 기계 반란이라는 기술적 화두가 게임 서사와 콘텐츠 산업의 핵심 소재로 다시금 전면에 등장하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "28e571f5513fd3c4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550156+00:00"
+    }
+   }
+  },
+  {
    "id": "42c364285d2d4336",
    "title": "Q&A: AWS’ Sasha Rubel on AI Regulation & European Healthcare",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPYWc1Smh0dVNOQUVEcUs2WFhaNUJBVTdBWm9rMHZHQXhxWV9MWTdCMGQzdzRsZk5iMHVTUnhwOWdUNjhQa0IyQnZMb2RuWGt1RnprR0psMHpoWVVWWHBzU0RqMGg0dkxKa2gwU0FWUWw1RXBITFQyZVNaT0RIQzRnX2h0WkZ3MkI4R1FJQno5VHotOHMwMjdz?oc=5",
@@ -2934,17 +5898,6 @@
    "title_ko": "Q&A: AWS의 사샤 루벨, AI 규제와 유럽 의료 산업에 대해",
    "tr": "deepl",
    "trv": 2
-  },
-  {
-   "id": "7b88bdaa6488454d",
-   "title": "안산시, 10월 1일부터 생성형 인공지능(AI) 민원상담 챗봇 운영",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuZlJJLU55VEo4UEttQkdnNTNkM2kwTzB4YVNMQk5RdzdlRmIxM1NjQjNLTXRkYzFIckxDZ01jUkVOdUZuSm13U0VONTZNTUhGaGtrMDNJYXJQbjM1aTRPLUl4Y1BPSW9Sbmw4a0xQOA?oc=5",
-   "source": "뉴스파노라마",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T14:53:43+00:00",
-   "summary": "",
-   "thumb": ""
   },
   {
    "id": "ac06266b36a4b61a",
@@ -2997,6 +5950,17 @@
    "trv": 2
   },
   {
+   "id": "08bf6cb1befcf0b0",
+   "title": "안산시, 1일부터 ‘생성형 AI 민원 챗봇’ 전격 가동…24시간 맥락 파악 답변",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ETjJLOGpIemk0NTJmVnRac2FjS3VRZkMyb3MyT0FyTDFRT1YxMFR4eXdyWnZlNXM1Z3FRVXFoZTZZaC1CMmh0Z2tGMGFIMlBwMndnZ1RaOEx2U2kzbEJLRFdpUjJKcWJ0Mkkw?oc=5",
+   "source": "CNB뉴스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T14:35:10+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "0526e81bd2c74953",
    "title": "AI, robotics could make 'dark' auto factories a reality",
    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOUUEyQUx1ZElJcm1uNEV6UWhNRldIRlVxeTltbVpRbU9DbC1pdUpTcUNlT0l0N3d6VDlCenJMb1NCUGlxSHVDdGkzUzlkeTJSTE1WbDQyT0dLQ3BuazBvMlpvam41aXNNcHljMUtaenlJRHhaMTAyb29KWlpjYXBWazQ0ZEpONmU1Q3dvcTZlaU5Oa2FaVEJTLVQxT3ZrSFFZeS1YU1J0bU01d09IRnIwS3ZVeThITEN0X2hyYVhuUEx1U2hQcVBmTzFrMkFKOFhUQUlrMGZPT09NRU0?oc=5",
@@ -3036,7 +6000,32 @@
    "thumb": "",
    "title_ko": "니콘 현미경 사진 공모전 수상자, AI 사용 논란에 휩싸여",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "hot": 0,
+   "mx": {
+    "b": "니콘 현미경 사진 공모전 수상작이 AI 기술을 활용한 것으로 알려지며 비판에 직면했다.",
+    "p": "정밀한 과학적 관찰과 기록을 바탕으로 하는 과학 사진 분야에서도 생성형 AI의 경계와 출품 윤리 기준을 둘러싼 논쟁이 본격화되고 있다.",
+    "t": [
+     "니콘",
+     "현미경사진",
+     "AI윤리",
+     "이미지생성"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_aaf3b08ae77b7e36",
+     "point_text": "정밀한 과학적 관찰과 기록을 바탕으로 하는 과학 사진 분야에서도 생성형 AI의 경계와 출품 윤리 기준을 둘러싼 논쟁이 본격화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "aaf3b08ae77b7e36"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.549819+00:00"
+    }
+   }
   },
   {
    "id": "d95476e2b8c08792",
@@ -3237,6 +6226,17 @@
    "trv": 2
   },
   {
+   "id": "c21263cffa6e61f7",
+   "title": "‘한동훈 OUT’ 이어 ‘한동훈 file’…김민석 수첩 또 카메라 찍혔다",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83ZHdxVloxYkh0N2gxaHRlUnJwa3czckI2TUx5bjNmQV9aTmprSjZRTFVTblBGcE9qbE9xaU5BNlZwbXhrbUFabXBEcXFRMlViU2tqWHVR?oc=5",
+   "source": "중앙일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T12:39:17+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "6d59ba5ce8336a07",
    "title": "“AI 인류 멸망론, 당장의 현실 문제 가려”…구글 내부고발자 팀닛 게브루 ‘대안 노벨상’",
    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBhY1dNa20yNjJwMlJGWkI2VnRyQ1U1OFZUbVNWY3JQd09wdXoweU54Z2dYckE3N3kzbnI3MHdsMlBHeXNYUmVEM0E1NjdKRFNOS3p4MWg5NldsUi1XQVJj0gFfQVVfeXFMUGFjV01rbTI2MnAyUkZaQjZWdHJDVTU4VlRtU1ZjclB3T3B1ejB5TnhnZ1hyQTc3eTNucjcwd2wyUEd5c1hSZUQzQTU2N0pEU05LengxaDk2V2xSLVdBUmM?oc=5",
@@ -3291,7 +6291,32 @@
    "published": "2026-10-01T12:16:29+09:00",
    "summary": "메타가 지난 9월8일 선보인 개인용 AI 에이전트 '뮤즈(Muse)'의 돌풍에 힘입어 2013년 이후 13년 만에 최고의 월간 주가 상승률을 기록할 전망이다.",
    "detail": "메타가 지난 9월8일 선보인 개인용 AI 에이전트 '뮤즈(Muse)'의 돌풍에 힘입어 2013년 이후 13년 만에 최고의 월간 주가 상승률을 기록할 전망이다.\n9월 한 달 동안 주가가 29%가량 폭등하며 시장의 시선을 사로잡은 가운데, 초기 다운로드 열풍이 실제 장기 사용 및 유료화로 이어질지는 여전히 불투명하다는 관측이 나온다.\n30일(현지시간) CNBC에 따르면, 메타 주가는 뮤즈 출시 이후 급등세를 보이며 장중 740달러 선을 넘어서기도 했다.\n모건스탠리와 웰스파고 등 주요 투자은행은 메타의 목표 주가를 상향 조정했다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 8,
+   "mx": {
+    "b": "메타가 개인용 AI 에이전트 '뮤즈' 출시에 힘입어 9월 주가가 약 29% 급등했으나, 초기 유입 이후 장기적인 사용성 유지와 수익성 확보는 과제로 지목됐다.",
+    "p": "소비자용 AI 에이전트 서비스가 단기 주가 상승을 견인하는 동력으로 작용하고 있지만, 실질적인 구독 모델이나 광고 등 상업적 전환 지표가 뒤따라야 함을 시사한다.",
+    "t": [
+     "메타",
+     "뮤즈",
+     "AI에이전트",
+     "빅테크"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_bdfeb1c1d5a03eeb",
+     "point_text": "소비자용 AI 에이전트 서비스가 단기 주가 상승을 견인하는 동력으로 작용하고 있지만, 실질적인 구독 모델이나 광고 등 상업적 전환 지표가 뒤따라야 함을 시사한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "bdfeb1c1d5a03eeb"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550245+00:00"
+    }
+   }
   },
   {
    "id": "acff5f6d60490c87",
@@ -3401,6 +6426,43 @@
    "thumb": ""
   },
   {
+   "id": "d9fa734fb0115cd4",
+   "title": "구글, 내부서 '제미나이 4 아르곤' 성능 회의론...\"벤치맥싱 한계\" 지적",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215824",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T11:28:28+09:00",
+   "summary": "구글이 차세대 플래그십 AI 모델 '제미나이 4 아르곤'을 공개했지만, 내부에서는 실제 업무 성능을 놓고 엇갈린 평가가 나오고 있다. 각종 벤치마크에서는 높은 점수를 받았지만, 실제 제품 개발이나 복잡한 코딩 작업에서는 기대만큼 안정적인 성능을 보여주지 못한다는 지적이다.",
+   "detail": "구글이 차세대 플래그십 AI 모델 '제미나이 4 아르곤'을 공개했지만, 내부에서는 실제 업무 성능을 놓고 엇갈린 평가가 나오고 있다.\n각종 벤치마크에서는 높은 점수를 받았지만, 실제 제품 개발이나 복잡한 코딩 작업에서는 기대만큼 안정적인 성능을 보여주지 못한다는 지적이다.\n구글은 30일(현지시간) 일부 사이버보안 파트너를 대상으로 제미나이 4를 먼저 공개하고 추가 테스트를 거쳐 유료 가입자에게 접근을 확대할 계획이라고 밝혔다.",
+   "thumb": "",
+   "hot": 1,
+   "mx": {
+    "b": "구글이 차세대 플래그십 AI '제미나이 4 아르곤'을 공개했으나, 내부에서는 벤치마크 점수에 비해 실제 코딩 및 업무 환경에서의 성능이 불안정하다는 비판이 제기됐다.",
+    "p": "공개 벤치마크 최적화(벤치맥싱)를 거친 수치와 실제 현장 생산성 간의 격차가 부각되면서, 모델 평가 기준이 실질적인 태스크 수행 역량 중심으로 이동해야 한다는 압박이 커지고 있다.",
+    "t": [
+     "구글",
+     "제미나이4",
+     "벤치마크",
+     "거대언어모델"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d9fa734fb0115cd4",
+     "point_text": "공개 벤치마크 최적화(벤치맥싱)를 거친 수치와 실제 현장 생산성 간의 격차가 부각되면서, 모델 평가 기준이 실질적인 태스크 수행 역량 중심으로 이동해야 한다는 압박이 커지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d9fa734fb0115cd4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.549950+00:00"
+    }
+   }
+  },
+  {
    "id": "3c277e6955c37f02",
    "title": "LG CNS, 글로벌 투자사 ‘제너럴 애틀랜틱’과 엔터프라이즈 SW, AI 기업 투자 나선다",
    "link": "https://www.aitimes.kr/news/articleView.html?idxno=42143",
@@ -3420,6 +6482,17 @@
    "field": "",
    "category": "news_ko",
    "published": "2026-10-01T11:13:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "7f18ff58917a8e10",
+   "title": "7억 명이 쓰는 중국 생성형 AI…이제 경쟁의 무대는 ‘모델’에서 ‘산업’으로",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1KUW1zSG5nRk13Z2ZVSUNBQzNVd3hTZTh0ajlKV3pyMmZYX0dhbEY3by1acDJsY3lhVHVZYS1yTXZjWWdiUHdUR3Q5R2ZzV0QtV1B0ZkVxVHlJcGUwYTJuOUhXWTl1WnQ0c3hpZUtR?oc=5",
+   "source": "미디어피아",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T11:08:11+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -3457,7 +6530,69 @@
    "published": "2026-10-01T10:58:02+09:00",
    "summary": "업스테이지가 1일 소형언어모델(sLM) '솔라 미니 4'를 출시하고, 솔라 LLM을 '프로'와 '미니'로 나누는 투트랙 전략을 본격화한다. 솔라 미니 4는 전체 350억(35B) 매개변수 규모에 전문가 혼합(MoE) 구조를 적용, 추론 시 30억(3B) 매개변수만 활성화함으로써 응답 속도를 높이고 운영 비용을 낮췄다.",
    "detail": "업스테이지가 1일 소형언어모델(sLM) '솔라 미니 4'를 출시하고, 솔라 LLM을 '프로'와 '미니'로 나누는 투트랙 전략을 본격화한다.\n솔라 미니 4는 전체 350억(35B) 매개변수 규모에 전문가 혼합(MoE) 구조를 적용, 추론 시 30억(3B) 매개변수만 활성화함으로써 응답 속도를 높이고 운영 비용을 낮췄다.\n아티피셜 애널리시스의 인텔리전스 인덱스(AAII)에서는 종합 24점을 기록하며 활성 매개변수 30억 규모 모델 중 최고 점수를 받았다.",
-   "thumb": ""
+   "thumb": "",
+   "hot": 3,
+   "mx": {
+    "b": "업스테이지가 총 350억 매개변수 중 추론 시 30억 개만 활성화하는 MoE 기반 sLM '솔라 미니 4'를 출시하고 '프로·미니' 투트랙 체제를 가동했다.",
+    "p": "추론 비용 절감과 응답 속도 확보를 위해 활성 매개변수를 극단적으로 줄인 MoE 구조가 온디바이스 및 실무 sLM 배포의 주류 전략으로 자리 잡고 있다.",
+    "t": [
+     "업스테이지",
+     "솔라미니4",
+     "MoE",
+     "sLM"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e26df566545cbfd0",
+     "point_text": "추론 비용 절감과 응답 속도 확보를 위해 활성 매개변수를 극단적으로 줄인 MoE 구조가 온디바이스 및 실무 sLM 배포의 주류 전략으로 자리 잡고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e26df566545cbfd0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550053+00:00"
+    }
+   }
+  },
+  {
+   "id": "d0f018c498758ae3",
+   "title": "\"앤트로픽 몸값 1.5조 달러로 하향해야\"…월가의 AI IPO '거품' 경고",
+   "link": "https://www.aitimes.com/news/articleView.html?idxno=215828",
+   "source": "AI타임스",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-01T10:54:46+09:00",
+   "summary": "실리콘밸리가 부풀려 놓은 AI 기업들의 몸값에 월스트리트가 잇달아 제동을 걸고 나섰다. AI 분야의 막대한 투자 비용 대비 수익성에 대한 의구심이 커지며, 시장 전반의 기대감이 가라앉는 분위기다.",
+   "detail": "실리콘밸리가 부풀려 놓은 AI 기업들의 몸값에 월스트리트가 잇달아 제동을 걸고 나섰다.\nAI 분야의 막대한 투자 비용 대비 수익성에 대한 의구심이 커지며, 시장 전반의 기대감이 가라앉는 분위기다.\n30일 디 인포메이션과 월스트리트저널(WSJ) 등에 따르면 주식 시장의 불안감으로 인해 중소 규모 기업의 기업공개(IPO) 연기가 이어지는 가운데, 당초 예상했던 앤트로픽의 대형 IPO에 대한 열기마저 차갑게 식고 있다.",
+   "thumb": "",
+   "hot": 5,
+   "mx": {
+    "b": "월스트리트가 막대한 설비 투자 대비 수익성 저하를 이유로 앤트로픽의 기업가치 하향을 요구하는 등 생성형 AI 기업에 대한 밸류에이션 재조정에 착수했다.",
+    "p": "AI 모델 훈련 및 인프라 비용 부담이 누적되는 가운데, 구체적인 수익 모델을 입증하지 못한 AI 스타트업 전반에 대한 금융 시장의 밸류에이션 거품 경고가 확산되고 있다.",
+    "t": [
+     "앤트로픽",
+     "월가",
+     "IPO",
+     "AI거품론"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d0f018c498758ae3",
+     "point_text": "AI 모델 훈련 및 인프라 비용 부담이 누적되는 가운데, 구체적인 수익 모델을 입증하지 못한 AI 스타트업 전반에 대한 금융 시장의 밸류에이션 거품 경고가 확산되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d0f018c498758ae3"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-01T23:25:05.550333+00:00"
+    }
+   }
   },
   {
    "id": "d638ed42b3157db1",
@@ -3611,125 +6746,18 @@
    "thumb": ""
   },
   {
-   "id": "700ac6d4093e8414",
-   "title": "엔트로픽 창업자, ‘인형’을 자문위원으로 뒀다…AI 기업 창업자의 ‘특별자문단’ 화제",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5IRHNYUGQ4YldwcE9Fd29ScFpFeGJhZmRzRE5PVHIycEp5OXpXUmIycXBGWUxjMkNzdGM3Qm9qSzdSWTJRSTdVeUtCNjJ5Si1u?oc=5",
-   "source": "문화일보",
+   "id": "e53d16ae16066a69",
+   "title": "Dean of faculty authorizes professors to use AI detector Pangram to review student work",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxONVUwa2xJX1NONExzajk2UzBTdHdYUzlNTDlsQXdKZWFUcW92Z1FsM3BMNXBUV1dpcGRPaFZ1Z1prTFdTTkcyQjVUWXhKd1RWOVdCVENTMVRSNFFsamxDRHZYWGVjQnBSbTlCa0xUU1NERVlFWkVFdjRqcjJTay1URW5MVV9jM2VjM3ZiREJHQU1kbm9qSmlnZ2VDaXpva2NRLUZzMm9UdThrWmhVT2RtN2YzOXU4ZzhHc2x5QjFoVlZfdmRFZzN5Z1FRQW9jQTJwVmRR?oc=5",
+   "source": "thedartmouth.com",
    "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:57:45+00:00",
+   "category": "news_global",
+   "published": "2026-10-01T09:20:10+00:00",
    "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "038f5b53fde9b47d",
-   "title": "물가 둔화 신호에도 고금리 ‘뉴노멀’…“증시 AI 쏠림 심화 전망”",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1WZ0MzN2xLQkxTd3dxOUhmQ3I5TktiZUNSWjluQVRyemZkZld2SzY1eGxLcy1lNmlUTW9uLTVEbWFVUU9xa3JjdGVRdGJDSGxRcGNtQmlSbXQzNENFVlZ3UE1HQnB2TDQ?oc=5",
-   "source": "한겨레",
-   "field": "경제",
-   "category": "news_ko",
-   "published": "2026-10-01T09:44:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "cc6fffdf68a20695",
-   "title": "강남구육아종합지원센터, 어린이집 찾아가는 AI·디지털 교육 진행",
-   "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBVWEVoR3FEcEtuQV9XQTRWeDZtUy1TLUpjLUN3eVVTRm5DSVBuVHVHMEFNZGxMdnZxTWpEUGVUdFFjYXM3VXc?oc=5",
-   "source": "v.daum.net",
-   "field": "가족·출산",
-   "category": "news_ko",
-   "published": "2026-10-01T09:43:58+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "33e32084a86e1e59",
-   "title": "[기고] AI 인재 양성 8년, 이제 과제는 '연결'이다 - 머니투데이",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kM1JTVzR6QnJNOU8zb1FFMGxBTEhCQ0I0c1o5WWpVUl8tVzBhLWw2d0tyTmw2UUNHakt6Y2hTSWUtdFZuZDZFMU1zRVJXclVmVmtPb2JhLXFRMVVYcHU0OXRVNm5mNG9WR2ZnUWFFVGNKZ9IBckFVX3lxTE5kM1JTVzR6QnJNOU8zb1FFMGxBTEhCQ0I0c1o5WWpVUl8tVzBhLWw2d0tyTmw2UUNHakt6Y2hTSWUtdFZuZDZFMU1zRVJXclVmVmtPb2JhLXFRMVVYcHU0OXRVNm5mNG9WR2ZnUWFFVGNKZw?oc=5",
-   "source": "머니투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:41:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d9c0fc06272eea11",
-   "title": "이장섭표 AI 청주 시동...안전·돌봄·민원·교통 확 바꾼다",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSWDlDOUtrU2dXTEVVMExfbmdVbVNoU2lqd1kzWWF6dTNCWVFiczNoTllycDBIYlpoX3V1Wkh6UFg5OWdLQlhhVmRIbndQRkMyRnJ5LWl0RFNkZ9IBWEFVX3lxTE1TY3N2NTNkLVFMMmZkNGwyU19CY3U1SW9IXzZsdUZYRjBndUZoaE5vTmE4bVNkUkFIS0NNWDAtYjkxMzlsZGFsYWl5alFGQldoVW05T0N4Y20?oc=5",
-   "source": "아주경제",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:40:12+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "4829f5f67f442873",
-   "title": "\"AI 붐 둔화하면 글로벌 금융시장 휘청\"",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBwYlkzdDZUS0ZoQ0ZsUHJ5azVibVM0cHJOdmliczkwYmZkcnY1SURybGZGbjRFX2M0ZFFaN2pPUUxjZERJYUxEYjNPQlg2cmpOb0xEckczNWRuZw?oc=5",
-   "source": "파이낸셜뉴스",
-   "field": "경제",
-   "category": "news_ko",
-   "published": "2026-10-01T09:37:05+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f4444bfe62f0f511",
-   "title": "인천시, 글로벌 AI 허브 유치전 속도...행정부시장 직속 TF 가동",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aVm9hXzN5eXZRdEFpZWtteVUtSDQ4eEctb0JxcUFmSmxsTk5UMXBteWYwelJBNFMzVklSbmRDOGlSd3A4ckY2cDUyTkkycnB1MVRCV0dER2ZUWWZKaXFEX0hsdW_SAWhBVV95cUxNSzN3dE1oTU5acmU4MkMyZkpBZmVwQVNaeV9pYlJYRm5VYUUtYjlual9KS3lRMnVCY2cwSnRtOU5KTGU3NVQ5UW9iNHNqZ3VITGlUVUhWRHEwLWFib2pKd1NMeVlNalVRUQ?oc=5",
-   "source": "경인방송 뉴스",
-   "field": "정치",
-   "category": "news_ko",
-   "published": "2026-10-01T09:31:48+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "5c829cba2ef2fe41",
-   "title": "환경산업기술원, 기후부 산하 공공기관 최초 ‘AI 윤리 준수기관’",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1adFljV3dsTm02akFfbUNVOXdnQk5IX3N6Y0pXS2pab0RIZXV1aEhwQ044WG12LWdhY3pBbzJhUGtYT1Z6YWdpZl9JbHhodlFGclJOMi1YVmd0UVY4NVlkcFVIZy1KajdGaHl0eWlFdnnSAXBBVV95cUxNWnRZY1d3bE5tNmpBX21DVTl3Z0JOSF9zemNKV0tqWm9ESGV1dWhIcENOOFhtdi1nYWN6QW8yYVBrWE9WemFnaWZfSWx4aHZRRnJSTjItWFZndFFWODVZZHBVSGctSmo3Rmh5dHlpRXZ5?oc=5",
-   "source": "전기신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:23:36+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "9325f33cf3200f1d",
-   "title": "고령군 직원들, 군정 발전 위한 혁신 아이디어 공유",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9iSkVTYmpUbjRKMGpjdW1tZTNISEpRdmJuYUcwNXRNdF92TWVXU0hTTTBpcm5VWWpBRHl2TDFiQUJ6X1BQUXA5X3lBeGVqdkRYZUpmSTRPaGhmakhSREZyM2EtNi1YUEJhYVI0?oc=5",
-   "source": "프레시안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:16:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f2188c4a39a6c2ba",
-   "title": "[글로벌 핫스톡] 아이덱스, AI 더한 동물 진단장비로 성장 날개",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5MeERINjNnNVBsQzN4YU1odE5QZkh2RUhHaWRzLUN0ZXBkb3VuU2VMaS1xbHAyUWppVmNSRG50Yi1MMTA2dVlpclJrVGF3dnNsNGfSAVNBVV95cUxNa2R3ZE12ZlRJQ0JFQkU3MXlJWnJQcnI5VmNobXBwTkRTR2FtNnVoc0pJb1dDQ2lvM3NScDlSblJiN0kzc1NTeEJvemFPa1p4ZGJKcw?oc=5",
-   "source": "서울경제",
-   "field": "동물",
-   "category": "news_ko",
-   "published": "2026-10-01T09:15:01+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "72ed45a967b347f3",
-   "title": "AI·데이터 혁신 3법 국회 통과…삼성SDS·LG CNS 사업기회 커진다",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9zclNTSG5Cc0U1YXVtc2NMTnRnc0Y4aVk3Ny11eWM5cm1TR2dibzNVUWwzSE1UUnUxTVpQTTVMQUtLNmFxaUE3WFY0aWVhX3haeEF5OXZqdmdmSEpkYld5UExad3dZQQ?oc=5",
-   "source": "thelec.kr",
-   "field": "정치",
-   "category": "news_ko",
-   "published": "2026-10-01T09:05:44+00:00",
-   "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "title_ko": "학부 학장, 교수진에게 학생 과제 검토를 위해 AI 표절 탐지 도구 ‘팡그램(Pangram)’ 사용 승인",
+   "tr": "deepl",
+   "trv": 2
   },
   {
    "id": "714af4e0592d63db",
@@ -3748,17 +6776,6 @@
    "detail_ko": "PwC의 연구에 따르면, AI를 총괄할 인력의 필요성이 점점 더 커지고 있는 것으로 나타났다.\nAI 최고책임자가 해답일까?"
   },
   {
-   "id": "a6b0a1129bc13e43",
-   "title": "[취재후일담] 의료 현장의 고민에서 탄생한 AI의 진짜 쓸모",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5vNHBZY2lJcXZvVU9tYndaZWw3WDFuMzFlZkhHMnhvTkdjd2VmbnlqN2psU0dhX3dlWkwyNEd6d2pmVThGUk5uNGpoRlB1eWw3bmVKNW1VQnAwVXl6a2k0aVJwc1p1MmpGbTFaZjln?oc=5",
-   "source": "아시아투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T09:00:13+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "8a218905c25e7fe8",
    "title": "Forget ‘superintelligence’: error-prone AI nearly sparked world war three this month | Timnit Gebru and Emily M Bender",
    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcFZCSFFiVG9DajFGU0JRbWZ3ZTJZVlA4Mmc3Rk5jbXAtbzQzRHJydXhMdEhmVmFZeGpnQS1Id2hLLWtkS0xBRmpSYkRrTTZpd3EyUEloVEYxU1dXUlNiSWhody1aZld5M1VTbm5xV0Mwd20xeHA1ay1wR1lkSmtlalJwaWduWXh3VktsM1pseTdZNGFqMWo0YTRFc2ZGQU1wa25xRmNseEZJOXRrQ0hxSDEydHV6VGFSYmFfZXNTTGlnZEVjNnJBd3JNNWYxdw?oc=5",
@@ -3773,197 +6790,6 @@
    "trv": 2
   },
   {
-   "id": "cdc87fa3b9cda3b9",
-   "title": "AI 속 개인정보 보호 어떻게…세번째 '모두의 토론회'",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBQTElqN2c5VDItVXFraGt4a3NzT2Y4NkE0bHNXRVpOV1lFVXNlQ00tSlJtdlMtX0U4S3V2aEZqOC05T2tMYnd1cVVYTHFYalVZNVlDRVZR0gFQQVVfeXFMTmV6YXluaUl3N2QyMVZNQXNTZzNrTXNTa2hRSlg4c3NoZ2JtbDhFLVFHVFd4RDdEUDRtZXNtaVZqOWo0RU40cGFBUWRiRGJRWlA?oc=5",
-   "source": "더팩트",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:58:53+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "5fe9ebac44b5e6aa",
-   "title": "구글, ‘1백만 토큰’ 제미나이 4 아르곤 공개…장기·복합 업무 AI로 진화",
-   "link": "https://www.aitimes.kr/news/articleView.html?idxno=42137",
-   "source": "인공지능신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:54:52+09:00",
-   "summary": "구글이 복잡한 장기 업무를 수행할 수 있도록 추론 능력을 강화한 차세대 프론티어 AI 모델 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 지난 30일 발표하고, 우선 ‘페어윈드 프로그램(Fairwind Program)’을 통해 신뢰할 수 있는 사이버 방어 전문가들에게 제공하기 시작했다.",
-   "detail": "구글이 복잡한 장기 업무를 수행할 수 있도록 추론 능력을 강화한 차세대 프론티어 AI 모델 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 지난 30일 발표하고, 우선 ‘페어윈드 프로그램(Fairwind Program)’을 통해 신뢰할 수 있는 사이버 방어 전문가들에게 제공하기 시작했다.\n일반 개발자와 기업, 소비자를 대상으로 한 확대 공개는 안전성 검증과 초기 테스트 결과를 반영한 뒤 단계적으로 진행한다는 방침이다.\n제미나이 4 아르곤은 실제 소프트웨어 엔지니어링을 비롯해 법률·금융 등 기업 지식 업무, 사이버보안 방어를 주요",
-   "thumb": "",
-   "hot": 3,
-   "mx": {
-    "b": "구글이 1백만 토큰의 문맥 처리와 강화된 추론 능력을 갖춘 차세대 프론티어 AI 모델 '제미나이 4 아르곤'을 공개했다. 이 모델은 소프트웨어 엔지니어링, 법률, 금융, 사이버보안 등의 장기·복합 업무를 수행하도록 설계되었으며, 초기에는 사이버 방어 전문가들을 대상으로 페어윈드 프로그램을 통해 우선 제공된다.",
-    "p": "단순 텍스트 처리를 넘어 복잡한 실무와 장기 프로젝트를 완수하는 에이전트형 AI로 진화하고 있으며, 고위험 영역의 오남용을 막기 위해 철저한 제한적 출시 전략을 택했다.",
-    "t": [
-     "Google",
-     "Gemini4Argon",
-     "프론티어AI",
-     "사이버보안"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_5fe9ebac44b5e6aa",
-     "point_text": "단순 텍스트 처리를 넘어 복잡한 실무와 장기 프로젝트를 완수하는 에이전트형 AI로 진화하고 있으며, 고위험 영역의 오남용을 막기 위해 철저한 제한적 출시 전략을 택했다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "5fe9ebac44b5e6aa"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-01T19:31:44.939330+00:00"
-    }
-   }
-  },
-  {
-   "id": "2efc7862516c50b5",
-   "title": "AI가 쓰는 기사, 어디까지 허용할까…신문윤리위 ‘저널리즘 윤리포럼’ 개최",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5xN2I3WU5UNkxmT3U0YVA3aXJsY3hBQzdnQmVYSFpNQWlaWnN2dExtT0tvcWRYR1hER3JmRzVGR0JLR2tITHlKOG5aVHlKLVlXVHAwbDJQdE_SAVhBVV95cUxOcTdiN1lOVDZMZk91NGFQN2lybGN4QUM3Z0JlWEhaTUFpWlpzdnRMbU9Lb3FkWEdYREdyZkc1RkdCS0drSEx5SjhuWlR5Si1ZV1RwMGwyUHRP?oc=5",
-   "source": "전북일보 인터넷신문",
-   "field": "철학·윤리",
-   "category": "news_ko",
-   "published": "2026-10-01T08:49:31+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "38b20adef96896b3",
-   "title": "[르포] 휴가 신청부터 탄약·유류까지 AI가 살펴…'180도 달라진 군대'",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJSm14ekRpczlMY2dBaUVheFo3YjdERDAzNVI3UTlINUp6OUYwTWtCVTJmcFptV2x3N01PTUphcXdGVll1czVFa0VNT1BNWWFNeGxQQzVjUmZneW_SAVZBVV95cUxQT1Q3YlNTaXM2dlYwNmRIeUE2cHcyb1RTZUNEN3lmSllTQURQT09laEw0em4zcGFrRTlPRUVuVHFvcnlOSnRqaHBmZmpRaE9Fb1NVWEZDdw?oc=5",
-   "source": "더팩트",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:46:13+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "2c5a24bd32295fdd",
-   "title": "IDC \"올해 상반기 세계 휴머노이드 로봇 출하량 2만5000대\"",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GWXdyc3J6MlhaQ183LWZYaHBIZ095ckNUY2RvMkhad0g3V1dWN2pLZDk2MlZZQzUzWHphWVFjZk9rMkVCYXhvSUdGVWhjS1RsUGFRelJabk5MeTVuT3FLLXBqVFFfRC1CWmdkXw?oc=5",
-   "source": "로봇신문",
-   "field": "피지컬 AI",
-   "category": "news_ko",
-   "published": "2026-10-01T08:42:29+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "fb68f95620a55dfe",
-   "title": "식품연, AI로 면 제조 ‘자율생산’ 기술 개발",
-   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPcDdVcW5kVFFleTFxRk85TXhkb0M0WFdvV3dUQUk5Q2JMXzBhRHZXOVVXb2hneGxkbmE0Sm1vMTJDSFY0U3pZenYwd19qOWtxQlZXUTdsZDdBTVYxa05LYkowVHJuNTZvb3pUMmRmVjNsQXBET1lCNDJvaGpKMWdtLWdBejVQWWNtY2lPUVBVMGNNck5YNXYxSUNPbW9NVU9YaS11WUNYc29ldmp2Ukwwb3ZoUmhRRmJESm14cFZ2eElkRUd0eXZlRlAxNlU1LVJ0VmdjTmJ5LTlOc1FDaVBaTDV6cnJ0MUk1VDdrbElyYkFRSFowdmlsd25YWFFfVlNjS3c?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:42:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "1c69f2ad3ed507be",
-   "title": "현미경 영상 공모전 '스몰월드 인 모션' 우승작, AI 조작 논란",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE93a21LRERzZnB0TGtJN0d6NkFxQjJpZTlZaGJQUVEySENyMXFSVkVzNUtRRi1kSXpvQnFmdGZmbWdwalVTX29MN0VENEYzenZOd1B0Ng?oc=5",
-   "source": "DongA Science",
-   "field": "AI 철학",
-   "category": "news_ko",
-   "published": "2026-10-01T08:41:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "20c18bbfeb0298a0",
-   "title": "중진공·경북대, 대구 제조기업 ‘생성형 AI’ 실무 역량 키운다",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9zTDBsM25RUEdMNk9kZEdmX0ZQZ1hiZ2RSZjAxQzhINFNfZzhscE1YTDBVbHM2RExYcGJpdEw2TGxsQlpJRXV4SU9VUGxMWHdBOEdwdEI3TGVQVnM4UUV0LVAzaGNNWkdQNUF5MF9Pcw?oc=5",
-   "source": "kyongbuk.co.kr",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:38:25+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "c4b41286e1d3dd54",
-   "title": "인천공항·인천항에 AI 심는다…‘물류AX 얼라이언스’ 공식 출범:내외신문",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56akE2QVBwci1IZGxHQnNEU1pLS0NQMkNPWGY3eFJpWHB4a3FjcUNPLXlxYVEyRno3d1BqejctUXVBMzRGeVQ0V1pSS2M3WE9taGNCVUtUcXZLVk9GS2x3dlVnOVPSAWRBVV95cUxOempBNkFQcHItSGRsR0JzRFNaS0tDUDJDT1hmN3hSaVhweGtxY3FDTy15cWFRMkZ6N3dQano3LVF1QTM0RnlUNFdaUktjN1hPbWhjQlVLVHF2S1ZPRktsd3ZVZzlT?oc=5",
-   "source": "naewaynews.com",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:30:35+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "297ed355eff6c346",
-   "title": "인천시, 공공행정 인공지능(AI) 활용 윤리 지침 마련 논의 본격화, 30일 전문가 토론회 개최:내외신문",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XQlVzVDZtSzNWVGRlRm9xRTV2TXV3alV2bmYxSGxCWHFwV1VvSlZSdWFXa0dCTEFqVTZEeURrcHdqWnBacXlXclBLVUx3NHhOMGxNWS0tN0dkMGx5MzRwZXhmb2HSAWRBVV95cUxPV0JVc1Q2bUszVlRkZUZvcUU1dk11d2pVdm5mMUhsQlhxcFdVb0pWUnVhV2tHQkxBalU2RHlEa3B3alpwWnF5V3JQS1VMdzR4TjBsTVktLTdHZDBseTM0cGV4Zm9h?oc=5",
-   "source": "naewaynews.com",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:30:35+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "becd552c163e987e",
-   "title": "“생성형 AI로 소음 잡는다”…인천시, ‘통합 소음 분석 플랫폼’ 시연",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBYVktscExJNjQ0cWhjRmxuNmVrWjNEUXlPcTBnMUF2bmNSVXhUWlVoZWJpNlBYeDNreXhvVjlZbjkwUXNLU3Q0NnVvMDNlXzdRUTJ1b2xCRnI5MGctVUIzR0xVYjdrSC1KTkN5M1BR?oc=5",
-   "source": "아시아투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:28:11+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "f1ed0a39ccba3254",
-   "title": "박용진 “AI 리걸테크, 규제 체계 재점검해야” [정치오늘]",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5pNHJwOUJjTFhiSTJRZXVSZFNhampOV0dQLVplcmVVWmdDODVfS1JPQk91VC1kQ1ZJekQ0cm8yVV9vZHUwWDlMNzhkb0ZSZVpvbXJTU1FxeExmRzVIdEZwTndXaXpNWTZYYWZr?oc=5",
-   "source": "sisaon.co.kr",
-   "field": "법률",
-   "category": "news_ko",
-   "published": "2026-10-01T08:22:12+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d17943d6e1aa6f90",
-   "title": "국립낙동강생물자원관, 인공지능 전시 안내 서비스 운영",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1qMXlxVzNBUVRzM2xQOEpMRzRsN3dzdHBwMk1lMFdTclc5elk1UVc0dUpqQlB5YmxoZTBUeGZVUnBIdDl6TnlfeWpxOVQ5ZHBkeGJBNVZCUmQxTElkXzBKUUpEVmlfV01n?oc=5",
-   "source": "환경일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:21:33+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "54c18cf9a63bbe05",
-   "title": "“왜 AI 위험성 경고하나”…젠슨 황, 앤트로픽 CEO와 설전",
-   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBvMEw0SnpILUY4d1NScTFNdXliV3ZMTmsyS1F5eV82Njh3emd6NU43Umw3aXpVTENGcjJjc3ZGYXMxNUFTZDlnblY4Z0JYS3F1U2RCdE5PQmZBajRZLUN5V3gwNVktRXdxZC1QNm9oQnNqbTRFT1czZzlB0gFsQVVfeXFMTTZKdWYyeU92N0lJODRHdm5WOTlqWlRtb2VRekJGVlNDT0s5SFFSX3RKS0sxMmlJY1VvejlzX0dweTBaZVFMZWhPWXFTcmFySlJ1anJmdURLQnJYUFZ6clY4VWhNeUt5cjdFNERn?oc=5",
-   "source": "국민일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:16:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "bba08be80c671d01",
-   "title": "한국세무사회, AI세무회계 분야 최초 민간자격 등록",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04ZGloZER0a25UMnh1Zk5UMk51bXVXejBMQTBjaEZNajVxQXlla1VrcFJvN0xSeE5aQnotYl9mblJZYmt2ZXFSQ3JRQ2VTRFdBM294MkNOV2tYSWN5SXRDaWNvTnV5dDc1RFg3bw?oc=5",
-   "source": "세무사신문",
-   "field": "사회·노동",
-   "category": "news_ko",
-   "published": "2026-10-01T08:10:04+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "b94a27d667ef5d78",
    "title": "하정우 \"AI 속도 늦추기보다 안전 역량 함께 키워야\"",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5MMlZZY3N4ZG5MbERiUzNiZlREOUQ2WndsdVVXM0pqNFRKTmp5MVBRWndyeTUwcE5NSnR0elEzbmx4cl9RZXpJM1dtc1FVajZSVFJTTGNUYnZSekJyYlVVNkQ3cml3UjBwSlE?oc=5",
@@ -3972,18 +6798,6 @@
    "category": "policy",
    "published": "2026-10-01T08:10:00+00:00",
    "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "7fcd804f5bf54fac",
-   "title": "칼빈대 ‘AI 융합 글로벌 미션센터’ 건축 착공",
-   "link": "http://www.cupnews.kr/news/articleView.html?idxno=30290",
-   "source": "기독연합뉴스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:05:26+09:00",
-   "summary": "세계로 뻗어나가는 칼빈대학교(총장 황건영)가 ‘AI 융합 글로벌 미션센터’ 건축에 착공함으로 AI시대 글로벌 크리스천 인재양성의 비전을 선포했다. 칼빈대는 AI와 선교의 융합으로 칼빈대의 미래비전을 제시했다. 이날 기공예배는 학교 구성원은 물론 예장합동 교단까지 기쁨을 함께하며 하나님의 일하심을 찬양했다.",
-   "detail": "세계로 뻗어나가는 칼빈대학교(총장 황건영)가 ‘AI 융합 글로벌 미션센터’ 건축에 착공함으로 AI시대 글로벌 크리스천 인재양성의 비전을 선포했다.\n칼빈대는 AI와 선교의 융합으로 칼빈대의 미래비전을 제시했다.\n이날 기공예배는 학교 구성원은 물론 예장합동 교단까지 기쁨을 함께하며 하나님의 일하심을 찬양했다.\n전태진 이사의 대표기도에 이어 서광일 이사가 출애굽기 31장1~5절 성경봉독한 후 베트남 MDiv.\n제자반이 ‘감사의 찬양’을 드렸고, 예장합동 총회장 정영교 목사가 ‘하나님의 영으로 세우는 새로운 길’ 제하의 설교말씀을 전했다.",
    "thumb": ""
   },
   {
@@ -4009,94 +6823,6 @@
    "thumb": ""
   },
   {
-   "id": "e33731f402a8b946",
-   "title": "[지평선] 교황과 트럼프의 AI 충돌",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93blRJbnlDeGJOS0U4QTR6M3BCYmRlVjRRbTFzSkVnQVBfWVppX2stM21rT0lTN2pfdXB5d0dtYmNOVzByVmRpWmtsY3pqVUtBd1c0aTdUWl81dGJRUDFLa1NOOEVXOUFMZC0zSGtn0gFzQVVfeXFMTlhGaUtnX19oanl1ODV6a2VyMmkzYTlIMWtoR1FudG85Q3V6VHdoelFvWl8xUlZTWVpicUpBNDNPeGtheXRNY1pGZlJsLXk1ZTlsdnBULUs1OHU1MEYwbzZtM3RKTG9kSm1DVWp3U2pDVjMyYw?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T08:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6642df75b8640e4d",
-   "title": "카카오, 부산서 그룹 AX 사례 공유…지역 AI 창업 지원 넓힌다",
-   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPN0M1YlpjSGxvV2NIWUVaaW0waHNhZmFRTE43NkI1dFUyVk5HY09WOVNnb1lRSDZJa0QzT3RVRTI5alhzTHkzUlRoUG53Y3BQTUNYNUQtR3Q5QkFacExid0NlX3IzQnRGZnRWTTNyWTd3Q3R6UEdFLWQyRUZqaXR0UVpnS0l1c1ZNQXptRmhWR241cjJnN19hTndFLVVtdnZWN2VNYkdoNkZOUDhwcVlKaDd6dzkwT0Y1cjFDTUt4V3JEeWJWYjlvNzh5T0RFMTVNUFpSdFlyaEIyXzduV0lWTk5OYjV2Yi1ERjJsdGJxMlhqNGhBVEdPZXFXaEY3N3p0a3pv?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:59:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "5510a25688bdfc22",
-   "title": "AI가 돈 쓰는 시대…스테이블코인 다음은 ‘에이전트 거래’",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1DQU1Obm50MlA2SEVuSzVMLXB0QkZmUlo0VkgzTGsxSDMtUzRESzl1dW5CeW5QUTkwSjZyRDM4TWhlaDBBOVItSjF6OG9sWWg3RUdjT0p4U2FvQXpMLVhhdEJlalpwZnpGbGFBM2NB?oc=5",
-   "source": "아시아투데이",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:53:17+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "808ecdbbfa94d4c0",
-   "title": "문화 축제에 침투한 AI…예술과 기술의 불편한 동거",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5TRHNOVlM0eFBRVjA4cDJkMjNDdTBIZ240Z3ZtRl9laTI0eUJtZEVNUzc1SXpLby0wT1gySmRZMmZFcllKYXo0WDJ0M3pYdzZDNzdTTWdQQ0xnWXVleGtuemtuWnQ3aGV0N1g2UTdSTGx0Zw?oc=5",
-   "source": "포브스코리아",
-   "field": "문화·예술",
-   "category": "news_ko",
-   "published": "2026-10-01T07:50:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "3732371c40bebd66",
-   "title": "[서병기 문화인사이트]“AI음악 등록 방식 정교함 필요” AI 음악의 저작권을 어디까지 인정할 것인가?",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9tZ3p3WWF4SU1wZUhrdW1yZm9DUkZNRkE5LWxRcDZkUmVMMldhS093WTRDNjkyY3VRUi0tazlkZG0yR2VyRGxtR2tENA?oc=5",
-   "source": "v.daum.net",
-   "field": "문화·예술",
-   "category": "news_ko",
-   "published": "2026-10-01T07:49:44+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "19cb9d7b7bb89ba8",
-   "title": "LG화학, 육군 간부 대상 생성형 AI 실무교육",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1GczZqRUh3RG9haUhURWkyZlc1SmZPb2R5SWZSd2VtWkp3NnF2amZ2b0dtdG5md2E2VTR4a0JvZ1RnQnFuOHlkLTIwMVROVVVNcjY5M3FHOHNWblJac3oyTjQ3cUE4Z9IBZkFVX3lxTE1GczZqRUh3RG9haUhURWkyZlc1SmZPb2R5SWZSd2VtWkp3NnF2amZ2b0dtdG5md2E2VTR4a0JvZ1RnQnFuOHlkLTIwMVROVVVNcjY5M3FHOHNWblJac3oyTjQ3cUE4Zw?oc=5",
-   "source": "동아일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:42:49+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "eda3ee63ea889ab2",
-   "title": "[신간] AI가 계약·저작권·재판까지 바꾼다…‘인공지능 법정책’ 출간",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4wM3pHYXR1QXl4RHNFLXBTN0tjVkNfOE9oejdHSzFDck9TbWxWLVNjd2NHQWszWmFrNUVjeURvUENpdjFTZ3VrYkRfOVBEcDREcXBtaU9yNTM2NGxJNTYzaU1BQXR5MHp5cmJyTTJadlJKZw?oc=5",
-   "source": "로스쿨타임즈",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:42:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "87cfabdd354c4af9",
-   "title": "“고양시에 유엔 글로벌 AI허브 유치”…107만 시민 열망 결집",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTTJKSkp4YnU3aV9PUGhLZ3lTTG9RMWJGX1JPbE5fck83b0doMV82NnJFQkJ4QmlDNzlOUlRuXzdRa1FTN2NuN3U0THdrNGxqMnFLNzRWUTlEWjRQWENvalNhRTNzbmREMVIycHk4LXotcDFsNVVkcjUxNWE1M2Z0M2hIRnFiRF9PTnM3eVQtLTRKV3EzMHfSAWxBVV95cUxNTURMdnpmZURleGttTkYzd2xwQmFBd2xNVnJsaks0VHI5bHVmZjZMZFNSek1tRW5WOXBITUZRUjBUMENvM0VGR0xkQWdNWFJRc0o2R3RaNzJLNHZ2TmJFLU9keVR1a1NXUl9KdzA?oc=5",
-   "source": "국민일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:42:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "bf87162fe7ceaaf6",
    "title": "켄텍, 480억 인공지능 전진기지 된다…과기정통부 AI 핵심사업 3관왕",
    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9zTk4wT3ZQaGw1STg5SFMtSHlJZG82c1JRWFRiSHNMSVFvWXpUSExUc2xqUkV2Z21aR0NKZXQ0VWg3czd2T2Yybzh5Y01qaElWbWk40gFTQVVfeXFMT3NOTjBPdlBobDVJODlIUy1IeUlkbzZzUlFYVGJIc0xJUW9ZelRITFRzbGpSRXZnbVpHQ0pldDRVaDdzN3ZPZjJvOHljTWpoSVZtaTg?oc=5",
@@ -4104,50 +6830,6 @@
    "field": "환경·에너지·동물",
    "category": "papers",
    "published": "2026-10-01T07:39:17+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "96ad8aeadfa49333",
-   "title": "한-베, 원전부터 AI까지 협력 확대...닌투언2 수주 기반 넓힌다",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9IMUR4VHlQQUt5RVFaT1BjeW5HalNzZVZuRC1abWVKRmFIS1ZJYWNuWnpBenBtS1U5SGNjdnpQd1c4SHc3WXdyU0ZQancySFlObXk3Z1NUZk5iUdIBWEFVX3lxTE1pMElGQnhrQW5FZUJsZUpyNkdpWUVHdnZlRS1DTmxxS21NNnk3NGlNdjlvSUYyMmlnN2dFeEJSN21FdGtYUlBqdzI1YzB0WGxWaExRdlYweDU?oc=5",
-   "source": "아주경제",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:38:31+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "34bc80247691ff30",
-   "title": "광주여대 AI미디어콘텐츠학과 'AI현장중심형 전공진로 강화 프로그램' 운영",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oX0VvMDV0eURwV0lrcDBDejI0SkhoM3hMR0gzQ2kzQjFoemlhRjYxSnlIbXlTQVI1eDV2UTBtNmNJU0lXY3Y1c2pZMGFVb1RSejJEbU5Ld094LWp3SFJJM0VBNjBFbDZOVDV1dQ?oc=5",
-   "source": "베리타스알파",
-   "field": "미디어",
-   "category": "news_ko",
-   "published": "2026-10-01T07:38:31+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "bc3a428fde50fbde",
-   "title": "서강대, ‘인공지능혁신인재양성사업’ 선정…267명 양성",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0xOHlMTkVWbC1Td3ZQRktBRTh1aFZadDRZSFhFVUtyb0Fsb2lWYkJkM2RYc3ZCa2Itbmdramc1NXdNelRfd0IwdHBwUEFiRVkwOXFSRUp3?oc=5",
-   "source": "joongang.co.kr",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:35:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "1e9f3c3a5228f237",
-   "title": "타이어 번쩍 든 ‘아틀라스’…현대차 공장 투입 앞두고 실전훈련",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUZ1lyc2pjVnNiTVlWdlROS0xieUR5ZTFfRFh4YW9aSEwwMURxNVVQSU1ua29wbWY0MXlBNnpUMXctWm9uNXQxNXFDVTVxeUNWZ2RBZk13?oc=5",
-   "source": "joongang.co.kr",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:34:05+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -4163,83 +6845,6 @@
    "thumb": ""
   },
   {
-   "id": "25e5c837e788b331",
-   "title": "인트·LG CNS, 피지컬 AI 기술협력 업무협약 체결",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPakh6Qm1OLUtRQ2ZPMEMycmJaczVfeHYzaEFtRlowQlRnVXJ0cjJ2VXdkN3hvQ1FCWTJ2aEloWVF2N01ocG5WYzZnNEpwZ0ZDS2huSG90UFZpUFpETEs3RXNNZ1ZoZ21LQzhub2o5T1Q4b1pYSU9ZTDRLMzViRmJkNE92UQ?oc=5",
-   "source": "조선일보",
-   "field": "피지컬 AI",
-   "category": "news_ko",
-   "published": "2026-10-01T07:28:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "eaf97d2cdee23f22",
-   "title": "'북부대공' 춤추는 로봇 실화? '서울AI로봇쇼' 6일 개막",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rTlBtcWIxbWFpX1dtclFKcHFYSjdueC1VcjFqSWxyTjNqUFZDYV9JSnVNYnNDdmdZSVlxZXdQV2tpRmlSM1BnYm1hZW12Ry1aNEhQZzhJbUk?oc=5",
-   "source": "내 손안에 서울",
-   "field": "로봇",
-   "category": "news_ko",
-   "published": "2026-10-01T07:25:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "edc261d61c9adbe5",
-   "title": "[경기도의회 소식] \"경기도형 AI 전문강사 인증체계 구축 필요\"",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5QYS1ZNDVwOG1lQ0w3dVpZUWVYRl8wYjZRWHgydjJlSGlqWnIxR0l4bjU0WUI1VnBFcDltRk9VNVBmUFZNWDk2anFqdUpyQktIWkd3cmF6REp4cEJEcnRrUGNJOVBUTXNVNnU0?oc=5",
-   "source": "프레시안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:22:32+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e6b7e4605180aea8",
-   "title": "삼표그룹, 서울국제정원박람회 ‘삼표 정원’ 특별 체험 프로그램에 누적 300여명 참여",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qTnBsNHA3aUJMZWk5VFJWbkZVcnlFd2NmRUFtdmkwUnF6VWtvSjRPZldnZFdzTFZONnNVSFpvc1RIelNhOVdLaFlzblBteUVoQlFHSnZGeHRBcll3UDk0c29ma0t1Y0dySkRERGJ2SmR4VFRa0gF3QVVfeXFMUGhGWU05Mkg4OENYYjJlNnJjNS04cGI2Mk5HWnBOZ2g5M0REODQ3cGdIdklMVHNSZVdLT0NZcWlHQV9BTjJVbFJYVC1KZzdqS3pNeks5NGtVbjlQZDl0SUQ2VTR5TnFHckIxSmxQYnQzbGNmOFhYbFU?oc=5",
-   "source": "굿데일리",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:22:01+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "36bcf0f0bdbd0a8b",
-   "title": "조선 특화 로봇 혁신 나서는 KIRO·한화오션, 휴머노이드·AMMR 공동 개발 ‘신호탄’",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBmY1lfd3JvZnphendfTnloMjZhSXFheWtJU2VQVWhUMy1uZ0RmOUQwZmdlVEp6UF9pWDFid3UybnF1Q05PM28yajVoM2NBeW9PeTNlaUU5ekNhbkVVOVpN?oc=5",
-   "source": "헬로티",
-   "field": "로봇",
-   "category": "news_ko",
-   "published": "2026-10-01T07:18:04+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "6f3cc2b10a19df9d",
-   "title": "\"AI 속도 늦추자고? 터미네이터 잡으려면 더 센 놈 만들어야\"",
-   "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPVGt4WE9mWnhWZEVHS3RTdXJVOTZrVlFvTjhPeWNFc1FtSkdDNkh5NUlYOUdIWGZRVGJsbFI5aVl1aUJ2VkxQcUZIWkh6QzktSVZJWHJtZDV5YzJOSng5d1E5b2dZWDRnWDhwMXdBV0xjTXcyTkx5YzAzV21LOE9NN3drdnI0bXBBQzJCWWxaX3lpaldpTVhLRFZHZWpObFQxTmliSVlfQ041eXlrbWlyVjF3U0pqbG83Y0gwX01SUXZpUnZodnF0OThyUkRjdHpRdElrNy1EbTFIZGNUYllmVlF3cy1VOUpTVkM0UzhsVkg5cGVzSGZrRkl2bzh3RHBlVVA5bXlNenNIRE5NZlE?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:07:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "b95129d761021db4",
-   "title": "‘모두의 AI 경진대회’ 본선 12개 팀 출격",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNOTdUXzUzSTVoc01OYllsdjh6aFhKc1hOWUxDbXZkRHBMb2hIMlpuUjFCMGNlLTl1X0hjWlFsdWxOSzVYSGZFZVZYeUxoclloN2UxMFF4dndPVzZodDlNeERvaDROUFp6dTRDV2FUQ3NuaEpNWGpITEZUcGFDX3YzUTgteGgxc05IZmVLd2N2emV0UW1xV3BMWEhtUGw3cENSNjJlNENWOUNmSDFac3N1bFRQNmFwdUNuS1BDd1lqczZ5WjhTdFBrR0tPdFBlVXhfdm1fcWh1anJYQzFFZ3U5Y3oyUVpRN3lxV051aQ?oc=5",
-   "source": "데일리안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T07:03:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
    "id": "1c76797faff6b734",
    "title": "New Chinese embodied model Maxwell tops global AI ranking on physical tasks",
    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOZldSVkw5aWFuMGhoWFJvNW44ajJJVEFPSXRkRTVVT3NtV01UejVVeE9NVDJmZFppU01fLTdKZDVub25PTEpoczNCbEIxelN3d1V2U1VYV2xRbXF5RV81dGI0QTV6YXBOMGgtUjk3Rlk3dFlQNm41Um9yeDFySThFQjNJN2tIZEFzZks2dkJiUmd4VXR3SlpxTnNiTURfU3JvUmZfN2JIUU9vdnZzVmozZXdxdXk4dTZlNURUdDRfdG4ySFpHWHhoQnVKNVVGdkHSAc8BQVVfeXFMTmZXUlZMOWlhbjBoaFhSbzVuOGoySVRBT0l0ZEU1VU9zbVdNVHo1VXhPTVQyZmRaaVNNXy03SmQ1bm9uT0xKaHMzQmxCMXpTd3dVdlNVWFdsUW1xeUVfNXRiNEE1emFwTjBoLVI5N0ZZN3RZUDZuNVJvcngxckk4RUIzSTdrSGRBc2ZLNnZCYlJneFV0d0pacU5zYk1EX1Nyb1JmXzdiSFFPb3Z2c1ZqM2V3cXV5OHU2ZTVEVHQ0X3RuMkhaR1h4aEJ1SjVVRnZB?oc=5",
@@ -4251,127 +6856,13 @@
    "thumb": ""
   },
   {
-   "id": "8cf8269d1bb2f5dd",
-   "title": "젠슨 황 등 AI 수장들, 아모데이에게 \"AI 위험성 경고 지나쳐\" 질타",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5oU2xYXzJXR25ON09UbnFmV3cyYWFkcC1Qand2dDFqYV9tbFRNc3AxQlpxbjNiMG1kcEdXSUFwa1RKN0lydDNQVTE2cW9mWHZkV1VLUndsX2tyQzhJNjJIVUFIZ0hEWndqMjhzSXFn0gFzQVVfeXFMTnB0WGU1YVdWSWRWN29vZ1dJZ2tzekpZTU9lYWxUaWY0dzRqMHg3NW0zT3FwQ0dfLVpWdDNHbTFmVzMzRDZnUGY1M0pWeEVrcTVRTUNaeEw4MTczN1hvelRCWGNQcXBheXlzcFBNMGRYd3JfZw?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:56:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e8e61a873b41bd38",
-   "title": "“AI 저작권부터 특허 포트폴리오까지”... 미래 IP 연구인재들이 던진 ‘새로운 해법’",
-   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBBb1VHc0N1Q3Vtak5nbGF5WlBKZWZ1WWJ6UmRKUnR4ekU3NDNqeHR3Wkpkb01nRk94VGRzZDFRSHRaaFllT19uWg?oc=5",
-   "source": "특허뉴스",
-   "field": "저작권",
-   "category": "news_ko",
-   "published": "2026-10-01T06:55:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e84195a4cf4e42d1",
-   "title": "與 ‘국군의 날’ 포스터에 엉터리 태극기…“군복 무늬도 다르다”",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1GaFNJQklKOGRESFJ1dmlEVk1Pd1p5bmVvc3MyLUdOWWFTcTF1Y0w4ZHREWXNTUkR6MXBDaUtQcm9ESW5CSG1EazQ3Nm9QUFF0ekthX2dB?oc=5",
-   "source": "joongang.co.kr",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:54:14+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "53847b1f993905fd",
-   "title": "경주스마트미디어센터, 경주시민 AI 활용 특강 운영",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1MM3JGZmdnY2FQa3RFMUdIRzZsM0FvNnluVTJFb0w4QmMwcWhpN2hjT2h0NGloYzlKX2FLVjNiZzFLT05udGZhREY5VnE2c1NuZEVva0JSX0I?oc=5",
-   "source": "경북신문",
-   "field": "미디어",
-   "category": "news_ko",
-   "published": "2026-10-01T06:53:35+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "9eb3155525bde2f7",
-   "title": "충남도, 생성형 AI 활용 ‘업무지원 시스템’ 자체 개발",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9TRWplNnUzV2VHYzFGTFNfMEFYMzJIcDQtRW8wQXRVREdmUDh1Ri03Y29iUkVGU1VWTE83dThqc2h4XzJ6VnpyOGcxNEtETkVON0tCM1ppQWpOa2g3MlBMUWgtbzFTa2hUdWc?oc=5",
-   "source": "농축유통신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:48:51+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "bd81e3c236c09f29",
-   "title": "창립 10주년 한국저작권보호원, ‘AI·글로벌’ 새 비전 선포",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9YTUhXNXBKaFVNV1Zqb1JxYTJTZDJGbzM1QTYtNktnNjFKMVUtcEt6UWd5S0poOHFMUzVUUkFOcVdxdUZta0xIbmExN21TMy1FZFFTVmNYY2FUS05DRThoSDZXeFVrVkE?oc=5",
-   "source": "교수신문",
-   "field": "저작권",
-   "category": "news_ko",
-   "published": "2026-10-01T06:34:43+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "875aeb5d0fd510c1",
-   "title": "법원으로 간 AI 해킹사건…오픈AI 첫 피소, 미 연방거래위도 조사",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5McEg5R0xTZnFNOFhBLXE1TWFZbUJrczMtT1JqNmFpTThUeTRmdUttZFkzZXFoeW8yZnEzbEJ0X04zaUJOMU5VVWdGYlRUb2ZaSUxhZmh5WlNYTTE4QWM1cG8wT2tFRF9wOThYM3FR0gFzQVVfeXFMUHBRdTNCM3hpem5haDUxcHcwT1UwX2xGMnByY2pnQkFBM0ZwTXNHR2N4WTFaTloyaG5uS050ZVJ1dzF5VjNpeUhsNXh4Q3RycGExQnJNZS1OcjNoSDV4LUF0SVFMOFl2cWJPcUFxVHBMeFd0SQ?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:30:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "786284e5521b1d0d",
-   "title": "구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 \"일반 사용 제한\"",
-   "link": "https://www.aitimes.com/news/articleView.html?idxno=215821",
-   "source": "AI타임스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:23:26+09:00",
-   "summary": "구글이 프런티어급 지능과 에이전트 작업 능력을 대폭 끌어올린 차세대 플래그십 모델 '제미나이 4 아르곤(Gemini 4 Argon)'을 공개했다. 핵심 경쟁 모델들을 제치고 벤치마크 선두를 탈환했음에도 불구하고, 대다수 개발자와 기업이 당장 사용할 수 없는 '제한적 출시'에 그쳤다.",
-   "detail": "구글이 프런티어급 지능과 에이전트 작업 능력을 대폭 끌어올린 차세대 플래그십 모델 '제미나이 4 아르곤(Gemini 4 Argon)'을 공개했다.\n핵심 경쟁 모델들을 제치고 벤치마크 선두를 탈환했음에도 불구하고, 대다수 개발자와 기업이 당장 사용할 수 없는 '제한적 출시'에 그쳤다.\n구글은 30일(현지시간) 제미나이 4 아르곤을 소개하며 '페어윈드(Fairwind)' 프로그램을 통해 사전 검증된 사이버 보안 방어 파트너 및 미국 정부의 출시 전 평가 프로세스 참가자에게만 초기 접근 권한을 우선 부여했다.",
-   "thumb": "",
-   "hot": 0,
-   "mx": {
-    "b": "구글이 벤치마크 선두를 탈환한 차세대 플래그십 AI 모델 '제미나이 4 아르곤'을 공개했으나 일반 사용은 제한했다. 사이버 보안 파트너와 미국 정부의 사전 평가 프로그램 참가자에게만 제한적으로 초기 접근 권한이 부여되었다.",
-    "p": "",
-    "t": [
-     "Google",
-     "Gemini4Argon",
-     "AI안안전성",
-     "정책"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_786284e5521b1d0d",
-     "point_text": "최고 성능의 AI 모델을 확보하더라도 보안 및 오남용 우려로 인해 일반 시장 공개를 통제하는 기업형 가드레일 정책이 더욱 강화되고 있다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "786284e5521b1d0d"
-     ],
-     "grounding_status": "UNSUPPORTED_INTERPRETATION",
-     "interpretation_type": "CAUSAL",
-     "generated_at": "2026-10-01T19:31:44.939425+00:00"
-    }
-   }
-  },
-  {
-   "id": "7353ad4f51602d28",
-   "title": "AI에 못 맡길 일 따로 정하자…자연보호구역처럼 ‘인간 전용 일자리’ 논의 확산",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOEhYV2tJd1QtUTN1R1ZBNHJ2MmZrMVpEd0NMQWdrb21LYXFYU0JZQkdUT3FoTlpwOVU1bFR0UmVxQjJFX00tdDNKc1VHWklKYXJtYUhqbHB2dFFkYldRMmhhUW43SHFQR3lVVUZnRGZtbm53MllPSFNUbkxfRndPdzFEOA?oc=5",
-   "source": "조선일보",
-   "field": "사회·노동",
-   "category": "news_ko",
-   "published": "2026-10-01T06:21:00+00:00",
+   "id": "f41b9510f5b62839",
+   "title": "하성용 제주도의회 운영위원장 \"AI 의정지원 강화하고 의원 윤리 바로 세우겠다\"",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yUXJnVmMtWU5RUTJXZ2pzSlB6TVdPVnNyZ2lXNXBpYmpSZmhjTC1meU95VjJ0ejN1V1dJR1VvX1kxRkk5V0RraEt2c21zazRval9YcjZ5SWY3UDU4V2owUklJVmtsSHM?oc=5",
+   "source": "뉴스N제주",
+   "field": "윤리·철학·법",
+   "category": "papers",
+   "published": "2026-10-01T06:49:57+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -4383,160 +6874,6 @@
    "field": "사회·경제",
    "category": "papers",
    "published": "2026-10-01T06:19:39+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "e0a5551a17f6191a",
-   "title": "광주특별시, 70여 지역기업과 에너지·모빌리티·농업 'AI 전환' 본격화",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PdXJpcDdxSVNvWUdBWW1uYkFCejRWdWFQOHotbGdHOUZNOENHYW9lM0JCMG5VbHBmSUJnSlBHM3VYRVlSUXVmUlBVZEVtMUxPd3loOTJCYjFpRjNTYzFUalBCbnVaNzVOZnpF?oc=5",
-   "source": "프레시안",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:16:46+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "94bfe1413119e283",
-   "title": "[AI챗봇 과몰입, 법으로 규제] 캐릭터와 서사 입은 AI, 항상 나에게 공감...가스라이팅 위험 높아",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE96X0ZPWUI1aFI1UThpb3MzdmI2VmE1Ympabm1TNExLUUlvN1B4N0p2dkVXbnhFS3FXYUhueERlSFZ5dWtRdUNIMGJrMzJnU0p0M3F2bzBxZHhpUdIBWEFVX3lxTE5iRzQzaW9zbzY4RXd2YXhfUnhKQmxfcFFrT3JHVjY3WnQ3d1B4OHpaZklSaTNuVTVDUTBmYkppVGxJSDc3U2NBZEFaN3cyeU4wdTgzM0pKUGk?oc=5",
-   "source": "아주경제",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:08:25+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "404590261bfa3368",
-   "title": "[단독] 국공립대 37%만 AI 가이드라인…교수·학생 “도움 안 돼”",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1EeFpXRktiOF84c2ZvVS03TGhRTjF6TGVTQmVralNCazJudVlNN0x4LXRtT21zYmlkUHpoemtlVUtXU0RZT21NZWpGZ29SMlowZDFkdw?oc=5",
-   "source": "v.daum.net",
-   "field": "청소년",
-   "category": "news_ko",
-   "published": "2026-10-01T06:07:01+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "263b6f1b012d4c84",
-   "title": "의왕시 1인 창조기업지원센터, 생성형 AI 교육 확대",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9RQklvQmVseWZxVk9PTFNFVG8wcElBamJGd00wYm5EMXJzeVB4YmNZdlZUQ3FiQ05PM0hRei1vVVo5Q2Y2c2F5RUgyaE1GeEhIMGRMYk51OXhCd2VDamZDQkU5U1Vra3RNSUpFNG9VaEM?oc=5",
-   "source": "안전신문",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:05:19+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "4f4429e22bb9cefa",
-   "title": "[AI챗봇 과몰입, 법으로 규제] [단독] 청소년 AI 챗봇 과몰입 법으로 막는다....국회, 연령확인·이용시간 제한 추진",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBGRGUwTkhzVzNYbmxfelNNMHlBcUxlNFBlVWpGUjhuTk9Jb19fTUt2WENpQlh6VE9kbzJ6TlRuMlU5dHQ2VXdwTjJkWUFQYmZlM0ZUdXpWSjlFUdIBWEFVX3lxTE9lRFM1el9HSWMzZGxMSE00X043SnN3aGdaTXBPaEs0MEhDZW91ckY5UWpwYlVFeVVDVi1BdUpRR01SVUZRZlg0aXM1cjZNN2RWLUVDMnRvWTU?oc=5",
-   "source": "아주경제",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T06:00:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "843ef61fe2e182ca",
-   "title": "“AI로 취업 경쟁력 높인다”…시흥시, 여성 구직자 대상 직업교육 운영",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Jbl9qWmdyRTZXaWxHbUVGLTZ0SEFFMTVvWjdWTEtTdHFIR09MTllzR3pzOXcteWxIOVZvUHdCRUl6Wmw2ajRuNVdiY3BoVnQ4R2FLRWZLYkVjVGM?oc=5",
-   "source": "경기일보",
-   "field": "여성",
-   "category": "news_ko",
-   "published": "2026-10-01T05:53:21+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "39996d0f81f7c2b3",
-   "title": "인공지능(AI) 시대 안전한 개인정보 보호·활용 방안, 국민 의견 모은다",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xdnNQeUpwa2Nnam5xcHFRS0tmdno1QklPR3Nrc3ptcnFiNDVHb2pJem83TnNLRDZRdlZfMFAzQUplZTY0ZkVUNW1wa29XR2I4Njl6T1NsdUpjYk00SkE?oc=5",
-   "source": "한국방송뉴스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T05:53:02+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "15ac8e48747b90f3",
-   "title": "신상도 '팔릴 것'만 낸다…편의점 4사, AI 테스트 등 적중률 경쟁",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZYlI4OE5aRVJiRTZjdFllTEVFSENlMzBsR2lRQlZKMjdsZEJwcjIxX0hySE96aS1UMDhhMzFKUVgyWTUxbWJHOFYya3RSWXhsbld2VmF0SFkxODNq?oc=5",
-   "source": "뉴스핌",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T05:36:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "caf6ce9b993a6214",
-   "title": "광명여성새로일하기센터, ‘AI 활용 멀티사무원’ 교육에서 취업으로",
-   "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBPaU1MdEpEUHNDbFpNNXRrOVRIZW1nb1JRZENhbVJSNnpIcnFPdlVma1pERzVoTlFVbmRiS1Q3N1NvS2pnM1BkdThn?oc=5",
-   "source": "경기평화신문",
-   "field": "여성",
-   "category": "news_ko",
-   "published": "2026-10-01T05:36:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "a1c91756fc04337e",
-   "title": "구글, 최상위 AI '제미나이 4 아르곤' 공개...오픈AI·앤트로픽 추격",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1rc1ZFQTZENVNnOUtCQUJEZ2hQQUM3Ym9UYUFEQ1hoRzVIbmdoUzY4cVg3M3lBbzhHVFh3blg4WTY5V3VEcE1lbEY5aGdMSm5fbHoxd0pzM1BNMlZrUDVrUU1fWU55UVV2SC1JODR30gFzQVVfeXFMUDVEOFctOU5KQ3ZzQ3NxT3ZORTZKMlZpWVRveVNPeHNYblFxa0pCWERaUHozdW04RDVyenhETmFSZW1BLVF5eGxwRjFKbUNsOFozMGdHOXRrS2dJRWs1RnJEeXVWMzlmZmI2enlnNXFWcjYtUQ?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T05:34:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "d9a45fbebd4174e2",
-   "title": "오픈AI·앤트로픽, 재무 부담 가중에 연내 상장 계획 백지화",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIM3ZFT1pER2U1YkVYc3BoUmF3b3d4UnljUDdJa1lxdGI4SHdtUTVrblVyeVRoMk5kS3RUTTVORUtVUlVqX0hJZnVfOEJxUHYwYjdOVTRvSGoxUdIBWEFVX3lxTFBpdURpajA0QzZfb1l2d2ZZZXJwbWJEUmI2UVRBMHAyX1VvN3picjNVWGtPQVBzRnN4YlM2QkFZbWVtbFVDV1R3NGFVQ1ZOZ3gwSDRGNXcxTEc?oc=5",
-   "source": "아주경제",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T05:27:04+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "47c6fa43ea64f0b8",
-   "title": "세미파이브, 대동·모빌린트 농업 로봇용 AI 칩 설계",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE05VXFkZG1iTnVaOElILVlha3dGcms5RTZRUnBtdmtsNXdYSlhHUGdmRloxa3ZuTFQ4a0VzbHpmM1hCTm5ocmhRYVVQNDhTSlZIX2t5aXJtN3c4NG5qRnZxaHk3YkRzUQ?oc=5",
-   "source": "thelec.kr",
-   "field": "로봇",
-   "category": "news_ko",
-   "published": "2026-10-01T05:14:20+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "9388dd5d4e1bd4aa",
-   "title": "미국에 첫 칠러 공장 짓고 투자처 발굴… AI 사업 영토 넓히는 LG",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1YekJBTC1qajEyZE81OGY2QmxTVHJEZzZ4TFM1cS1DT2xnbEdieWg2aUpYTEU2MVZCUGp5WW5CV2F5Yy1TOEJ0aWI5V01EU05aalpUZTg4M202VjZ1MTNKdXJXYlhnSndjSm9JT1d3?oc=5",
-   "source": "한국일보",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-01T05:10:00+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "389d5651c767eb90",
-   "title": "다음 \"고정 전재료, AI 인용비 지급\"… 언론계 \"계약 지켜봐야\"",
-   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE14LVlVNzdkZHg4X0NLZzhpWVNlS0prSFMtc2w1RXlhRHVUbndZOHVHTGMtZ19ZUzJROF85MHAwR2FpS0dIbzVySXg1S21FTEQ5ZjJKN3dvWmtlcE51TkxuUEhwMA?oc=5",
-   "source": "한국기자협회",
-   "field": "미디어",
-   "category": "news_ko",
-   "published": "2026-10-01T05:03:43+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -5071,6 +7408,49 @@
    "detail_ko": "본 논문은 다중 에이전트 시스템에서 터미널 분배 매칭을 위한 확장 가능한 최적 수송 기반 프레임워크를 제시한다."
   },
   {
+   "id": "3bba527585738108",
+   "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
+   "link": "https://openai.com/index/the-den-family-social",
+   "source": "OpenAI",
+   "field": "",
+   "category": "news_global",
+   "published": "2026-10-01T00:00:00+00:00",
+   "summary": "As it opens a new location, the social club prepares grant applications in 2 hours instead of 3 days and liquor-license materials in 3 hours instead of 4 days.",
+   "thumb": "",
+   "title_ko": "The Den, ChatGPT Work를 통해 주당 10~15시간의 여유를 확보해 성장에 집중",
+   "tr": "deepl",
+   "trv": 2,
+   "summary_ko": "새로운 지점을 개설함에 따라, 이 사교 클럽은 보조금 신청서를 3일이 아닌 2시간 만에, 주류 판매 허가 관련 서류를 4일이 아닌 3시간 만에 준비하게 되었다.",
+   "detail_ko": "새로운 지점을 개설함에 따라, 이 사교 클럽은 보조금 신청서를 3일이 아닌 2시간 만에, 주류 판매 허가 관련 서류를 4일이 아닌 3시간 만에 준비하게 되었다."
+  },
+  {
+   "id": "a2411a82968c3737",
+   "title": "Sign of the times: AI lingo muscles into esteemed dictionary",
+   "link": "https://www.nature.com/articles/d41586-026-03044-9",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-10-01T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "52583f9303459502",
+   "title": "Healthcare professionals’ perceptions on AI-assisted decision-making in clinical practice: a qualitative meta-synthesis",
+   "link": "https://www.nature.com/articles/s41746-026-03338-2",
+   "source": "npj Digital Medicine · 의료",
+   "field": "의료",
+   "category": "papers",
+   "published": "2026-10-01T00:00:00+00:00",
+   "summary": "npj Digital Medicine, Published online: 01 October 2026; doi:10.1038/s41746-026-03338-2 Healthcare professionals’ perceptions on AI-assisted decision-making in clinical practice…",
+   "detail": "npj Digital Medicine, Published online: 01 October 2026; doi:10.1038/s41746-026-03338-2 Healthcare professionals’ perceptions on AI-assisted decision-making in clinical practice: a qualitative meta-synthesis",
+   "thumb": "",
+   "summary_ko": "npj Digital Medicine, 온라인 게재일: 2026년 10월 1일; doi:10.1038/s41746-026-03338-2 임상 실무에서 AI 지원 의사결정에 대한 의료 전문가들의 인식…",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 10월 1일; doi:10.1038/s41746-026-03338-2 임상 실무에서 AI 지원 의사결정에 대한 의료 전문가들의 인식: 질적 메타합성"
+  },
+  {
    "id": "ab01aea0bc0abce2",
    "title": "사이언스타임즈/사용자메뉴/과학정책/전체",
    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQ2FRXzlFNXVpenMtYy1jQ3FGaHBrellaZXp6M05ucEFuMThvUDMwaWQxa1JEZm1xbUo5SmtLQkowVEVSN0pYbnpwUTNjLUd0WWlMOU43QnZVYWVTZTlHM2VNUU9GQVQtRmIzb0tFZHZDeXJuVU5nemVmaFlMVXJsQmRFU3RYOXBPVG90UzY3bGhKM2Q3YWJBZjAxOWNzRV9CQWY4czdtV0o0MWVqbUwzSFc4ZXRXRExHeGpYS29pb0IyZU0?oc=5",
@@ -5346,6 +7726,17 @@
    }
   },
   {
+   "id": "e5aa3e8dfd359b77",
+   "title": "AI 영화는 아시아 문학예술 컨퍼런스에서 뜨거운 화두입니다.",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONXZkNThVZ0w2QzE4Z3J2cFNjNHI2NmxXRll0dmZBdkZ0SXU0Q0NDUE5jSEdHVWN1ajFkUUozMjl2aE1uUEt0TXJ6VnJKQ1FLWjUyMlU2bUIxbThleVZDY2dlcVV4SXdoOVZpeDh1MnMtTjBtZmdqS3N6QjQzbXFlQTFnYw?oc=5",
+   "source": "Vietnam.vn",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-09-30T14:38:55+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
    "id": "b87f343f44c28433",
    "title": "AI animation slider enables fine control of nuances in character motion",
    "link": "https://techxplore.com/news/2026-09-ai-animation-slider-enables-fine.html",
@@ -5376,88 +7767,6 @@
    "trv": 2,
    "summary_ko": "몰입형 환경에 등장하는 대화형 AI 캐릭터가 거짓말을 할 때, 시스템은 사용자에게 어떻게 경고해야 할까요?",
    "detail_ko": "몰입형 환경에 등장하는 대화형 AI 캐릭터가 거짓말을 할 때, 시스템은 사용자에게 어떻게 경고해야 할까요?"
-  },
-  {
-   "id": "447dcf37ab9168de",
-   "title": "Q&A: Expert says people often confuse behavior with intention with AI",
-   "link": "https://techxplore.com/news/2026-09-qa-expert-people-behavior-intention.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T13:20:06-04:00",
-   "summary": "Recent safety tests have shown advanced AI systems making misleading statements, concealing information or attempting to prevent their own shutdown.",
-   "detail": "Recent safety tests have shown advanced AI systems making misleading statements, concealing information or attempting to prevent their own shutdown.\nDo they really point to a form of deception or self-preservation in AI systems?",
-   "thumb": "",
-   "title_ko": "Q&A: 전문가 “사람들은 AI의 행동과 의도를 종종 혼동한다”",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "최근 실시된 안전성 테스트 결과, 첨단 AI 시스템들이 오해의 소지가 있는 발언을 하거나 정보를 은폐하거나, 심지어 자체적인 작동 중단을 막으려 시도하는 것으로 드러났다.",
-   "detail_ko": "최근 실시된 안전성 테스트 결과, 첨단 AI 시스템들이 오해의 소지가 있는 발언을 하거나 정보를 은폐하거나, 심지어 자체적인 작동 중단을 막으려 시도하는 것으로 드러났다.\n이것들이 정말로 AI 시스템 내의 일종의 기만이나 자기 보존 본능을 시사하는 것일까?"
-  },
-  {
-   "id": "4db40aae654acecb",
-   "title": "Researchers test AI on real-world infrastructure",
-   "link": "https://techxplore.com/news/2026-09-ai-real-world-infrastructure.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T12:40:21-04:00",
-   "summary": "Dynamic Infrastructure, the engineering AI platform for critical civil assets, today confirmed an ongoing research collaboration with the University of Bath's Department of…",
-   "detail": "Dynamic Infrastructure, the engineering AI platform for critical civil assets, today confirmed an ongoing research collaboration with the University of Bath's Department of Architecture and Civil Engineering.",
-   "thumb": "",
-   "title_ko": "연구진, 실제 인프라에서 AI 테스트 실시",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "중요 토목 자산을 위한 엔지니어링 AI 플랫폼인 Dynamic Infrastructure는 오늘, 바스 대학교의 …학과와 진행 중인 연구 협력을 확인했습니다.",
-   "detail_ko": "중요 토목 자산을 위한 엔지니어링 AI 플랫폼인 다이내믹 인프라(Dynamic Infrastructure)는 오늘, 바스 대학교 건축·토목공학과와 진행 중인 연구 협력을 확인했다."
-  },
-  {
-   "id": "e9e2f04b89603d2c",
-   "title": "New benchmark tests AI memory for household robots",
-   "link": "https://techxplore.com/news/2026-09-benchmark-ai-memory-household-robots.html",
-   "source": "TechXplore AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T12:20:09-04:00",
-   "summary": "In-home assistive robots could clean and organize a home while the owner is away, but without enhanced memory capabilities, they could cause more problems than they solve.",
-   "thumb": "",
-   "title_ko": "가정용 로봇의 AI 메모리 성능 평가하는 새로운 벤치마크 테스트",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "가정용 보조 로봇은 집주인이 자리를 비운 동안 집을 청소하고 정리할 수는 있지만, 향상된 기억 능력이 없다면 문제를 해결하기보다 오히려 더 많은 문제를 일으킬 수도 있다.",
-   "detail_ko": "가정용 보조 로봇은 집주인이 자리를 비운 동안 집을 청소하고 정리할 수는 있지만, 향상된 기억 기능이 없다면 문제를 해결하는 것보다 오히려 더 많은 문제를 야기할 수도 있다."
-  },
-  {
-   "id": "6a91381a429232e7",
-   "title": "Disrupting a coordinated model-distillation campaign",
-   "link": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T10:30:00+00:00",
-   "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
-   "thumb": "",
-   "title_ko": "조직적인 모델 증류 캠페인의 저지",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "OpenAI가 보호된 모델의 추론 과정을 추출하려는 시도를 어떻게 저지했으며, 적대적 증류에 대한 방어 체계를 어떻게 강화하고 있는지 알아보세요.",
-   "detail_ko": "OpenAI가 보호된 모델의 추론 과정을 추출하려는 시도를 어떻게 저지했으며, 적대적 증류에 대한 방어 체계를 어떻게 강화하고 있는지 알아보세요."
-  },
-  {
-   "id": "b5e5e43443d214df",
-   "title": "Helping small businesses put AI to work",
-   "link": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T10:00:00+00:00",
-   "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
-   "thumb": "",
-   "title_ko": "중소기업이 AI를 활용할 수 있도록 돕기",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "OpenAI는 미국의 SBDC와 제휴하여 중소기업을 위한 실습 중심의 AI 교육 및 지역별 지원을 확대하는 한편, 소규모 팀이 AI를 활용하는 방식에 대한 새로운 보고서도 발표했습니다.",
-   "detail_ko": "OpenAI는 미국의 SBDC와 협력하여 중소기업을 위한 실습 중심의 AI 교육 및 지역별 지원을 확대하는 한편, 소규모 팀이 AI를 어떻게 활용하고 있는지에 대한 새로운 보고서를 발표했습니다."
   },
   {
    "id": "4de7c62ba37d6217",
@@ -5493,20 +7802,6 @@
    "thumb": ""
   },
   {
-   "id": "581ab3112c302ffe",
-   "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
-   "link": "https://huggingface.co/blog/open-tts-leaderboard",
-   "source": "Hugging Face Blog",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-30T00:00:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "Open TTS 리더보드: 다국어 텍스트-음성 변환 및 음성 복제를 위한 확장 가능한 평가",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
    "id": "5cbe5510a4dc23c0",
    "title": "A scoping review and staged research agenda for artificial intelligence in viscoelastic haemostatic assays",
    "link": "https://www.nature.com/articles/s41746-026-03327-5",
@@ -5537,6 +7832,39 @@
    "tr": "deepl",
    "trv": 2,
    "detail_ko": "npj Digital Medicine, 온라인 게재일: 2026년 9월 30일; doi:10.1038/s41746-026-03156-6 환자 특성 분석의 감각적 격차를 해소하기 위한 인공지능 기반 비전 웨어러블 기기"
+  },
+  {
+   "id": "c14feca42c8bad2c",
+   "title": "WeedNet: a foundation model-based global-to-local AI approach for weed species identification and classification",
+   "link": "https://www.nature.com/articles/s41467-026-78044-4",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-30T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "067506091cc8a31b",
+   "title": "Secret watermark labels proteins as ‘made by AI’",
+   "link": "https://www.nature.com/articles/d41586-026-03033-y",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-30T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "78ba91af694b3ef1",
+   "title": "Function-preserving watermarking of AI-generated proteins",
+   "link": "https://www.nature.com/articles/s41586-026-10965-y",
+   "source": "Nature 머신러닝 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-30T00:00:00+00:00",
+   "summary": "",
+   "thumb": ""
   },
   {
    "id": "090c3d870210306c",
@@ -5607,66 +7935,15 @@
    "thumb": ""
   },
   {
-   "id": "143cdf6b2a509cab",
-   "title": "Anthropic Says It Discovered a Crispr-Like System. Now What?",
-   "link": "https://www.wired.com/story/anthropic-says-it-discovered-a-crispr-like-system-now-what/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T18:03:01+00:00",
-   "summary": "“The experiments are still in the queue. The PR is already live,” says one expert.",
-   "thumb": "",
-   "title_ko": "Anthropic, CRISPR와 유사한 시스템 발견했다고 밝혔다. 이제 어떻게 될까?",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "한 전문가는 “실험은 아직 대기 중이지만, PR은 이미 공개되었다”고 말했다.",
-   "detail_ko": "“실험은 아직 대기 중입니다.\n한 전문가는 “이 보도자료는 이미 공개된 상태입니다”라고 말했다."
-  },
-  {
-   "id": "f4754f85781e8b67",
-   "title": "Is ChatGPT your new Google Workspace alternative? Meet Space, Pages, and slides",
-   "link": "https://www.zdnet.com/innovation/chatgpt-space-pages-slides-google-workspace-alternative/",
-   "source": "ZDNET AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T17:48:00+00:00",
-   "summary": "OpenAI now lets teams create documents, build presentations, and work with AI agents inside ChatGPT",
-   "thumb": "",
-   "title_ko": "ChatGPT가 새로운 Google Workspace 대안이 될 수 있을까요? Space, Pages, Slides를 만나보세요",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "OpenAI, 이제 팀원들이 ChatGPT 내에서 문서를 작성하고, 프레젠테이션을 제작하며, AI 에이전트와 협업할 수 있게 되었습니다",
-   "detail_ko": "OpenAI는 이제 팀들이 ChatGPT 내에서 문서를 작성하고, 프레젠테이션을 제작하며, AI 에이전트와 협업할 수 있도록 지원합니다."
-  },
-  {
-   "id": "96e1a7a0f063ae0d",
-   "title": "Get Kindle Unlimited free for 3 months with this early Prime Day deal",
-   "link": "https://www.zdnet.com/uncategorized/kindle-unlimited-amazon-october-prime-day-deal-2026/",
-   "source": "ZDNET AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T17:32:42+00:00",
-   "summary": "Amazon’s free Kindle Unlimited deal only comes around a couple times a year – and I highly recommend it.",
-   "thumb": "",
-   "title_ko": "프라임 데이 조기 특가로 3개월간 Kindle Unlimited를 무료로 이용하세요",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "아마존의 무료 킨들 언리미티드 혜택은 일 년에 두어 번밖에 제공되지 않는데, 정말 강력히 추천합니다.",
-   "detail_ko": "아마존의 무료 킨들 언리미티드 혜택은 일 년에 두어 번밖에 제공되지 않는데, 저는 이 서비스를 강력히 추천합니다."
-  },
-  {
-   "id": "493cf3fce1b87919",
-   "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
-   "link": "https://huggingface.co/blog/nvidia/kumo-tabular",
-   "source": "Hugging Face Blog",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-29T15:30:38+00:00",
+   "id": "eeff515638c0ad9d",
+   "title": "AMD Buys World Labs For $8.2 Billion To Get AI Model Cred",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUUUtaTNFa29XbHJULVFqMlZSS2p4V2lPeHNfUzJBY193QWRjQW00QkJPMDR4TjlJV3A5aE9UNnRRQnVMZFhiM01jQUZsaXRpd3NCZWIzek12cFhHaVF5ZUhIZWl1a3VNYUM5dlVpTUU2N1N5MFRYbEstUkxwbXZmTmFmMXdKTzB3bGJBOGM0X3JtX1k3RnhvRG5qai1ESFdta3JlSHpkZldjQQ?oc=5",
+   "source": "The Next Platform",
+   "field": "스탠퍼드 연구",
+   "category": "papers",
+   "published": "2026-09-29T14:24:25+00:00",
    "summary": "",
-   "thumb": "",
-   "title_ko": "NVIDIA Kumo Tabular, 표 형식 예측 분야에서 정확도와 효율성의 새로운 지평을 열다",
-   "tr": "deepl",
-   "trv": 2
+   "thumb": ""
   },
   {
    "id": "5eda3d809bb15ab0",
@@ -5706,6 +7983,17 @@
    "title": "Back to Class: The AI-Powered Org",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPYU1kQS1hVDM0RkQ5bkt0dmtKeWJXVW1KR0hyOVNmWmFqd3ZzaWNtb18zYUxZX19kQk9DdnJqSERiWHN1QUtlWGk1dmFRRWs1UG5sZWtUWS1Kc3ByNEJZMGZrSUhIM3JtX2lhOElPbHhpcG4zUTlOVWRSWV9KWmpwNTBQN1Q?oc=5",
    "source": "Stanford Graduate School of Business",
+   "field": "스탠퍼드 연구",
+   "category": "papers",
+   "published": "2026-09-29T07:00:00+00:00",
+   "summary": "",
+   "thumb": ""
+  },
+  {
+   "id": "4e6cf0c58520be72",
+   "title": "California education news: What’s the latest?",
+   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE55b1RBcWxWU09GMHNjc2F2UUlHallaMF9xcUh6MkVmZlc4NFB3bi1jZDNoa0EtVUJ1Sm9obEFxRndrRW56MGNwdQ?oc=5",
+   "source": "EdSource",
    "field": "스탠퍼드 연구",
    "category": "papers",
    "published": "2026-09-29T07:00:00+00:00",
@@ -5758,17 +8046,6 @@
    "field": "청소년·가족·여성",
    "category": "papers",
    "published": "2026-09-28T21:50:20+00:00",
-   "summary": "",
-   "thumb": ""
-  },
-  {
-   "id": "aff72dfceffd2303",
-   "title": "One of AI's most influential researchers is joining AMD in an $8 billion deal",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQczdMU0NRdWdpWEpuMU04OHBJWU5Qb2tnMy1Zd1psRkxmb1VrbnNCNGwzOTV6dHpDbmYtd1RXY0Q5N1R2N3dOUlVNTGNCU3otTTN4YVViS0Zab1NzMy1OR19aOUVlT0FBYWN4dERqQ25iSHVkUjJvLXpSM0Q5S2U2ZkZpLXJDU3V2emo5VHR2QWY?oc=5",
-   "source": "Business Insider",
-   "field": "스탠퍼드 연구",
-   "category": "papers",
-   "published": "2026-09-28T21:38:00+00:00",
    "summary": "",
    "thumb": ""
   },
@@ -5832,85 +8109,6 @@
    "tr": "deepl",
    "trv": 2,
    "detail_ko": "근골격계 모델링 및 강화 학습 분야의 최근 발전 덕분에, 근육 구동형 에이전트가 점점 더 복잡한 인간의 동작을 재현할 수 있게 되었다."
-  },
-  {
-   "id": "ebb851930de734e4",
-   "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-   "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-   "source": "Google AI Blog",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T19:00:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "title_ko": "퓨처 비전 XPRIZE의 우승 트레일러인 <The Gifted>를 시청하세요",
-   "tr": "deepl",
-   "trv": 2
-  },
-  {
-   "id": "7238f9bc8ffac5b7",
-   "title": "When can we say AI made a scientific discovery?",
-   "link": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
-   "source": "MIT Technology Review",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T17:03:16+00:00",
-   "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here.",
-   "thumb": "",
-   "title_ko": "어떤 경우에 AI가 과학적 발견을 했다고 말할 수 있을까?",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "이 기사는 AI 관련 주간 뉴스레터인 'The Algorithm'에 처음 실린 것입니다. 이와 같은 기사를 가장 먼저 받아보시려면 여기에서 구독하세요.",
-   "detail_ko": "이 기사는 AI 관련 주간 뉴스레터인 ‘The Algorithm’에 처음 게재되었습니다.\n이런 기사를 가장 먼저 이메일로 받아보시려면, 여기에서 구독하세요."
-  },
-  {
-   "id": "216d56bba26ca458",
-   "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-   "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T07:00:00+00:00",
-   "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
-   "thumb": "",
-   "title_ko": "렌페스트 연구소, OpenAI의 지원 확대를 통해 획기적인 프로그램 확대",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "OpenAI는 500만 달러의 자금과 최대 500만 달러 상당의 소프트웨어 크레딧 및 엔지니어링 지원을 통해 Lenfest AI Collaborative 및 펠로우십 프로그램을 확대하고 있습니다.",
-   "detail_ko": "OpenAI는 500만 달러의 자금과 최대 500만 달러 상당의 소프트웨어 크레딧 및 엔지니어링 지원을 통해 Lenfest AI 협업 및 펠로우십 프로그램을 확대하고 있다."
-  },
-  {
-   "id": "914f14710638400c",
-   "title": "Are you a Codex Original?",
-   "link": "https://openai.com/form/codex-originals",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T00:00:00+00:00",
-   "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things.",
-   "detail": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things.\nIf you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
-   "thumb": "",
-   "title_ko": "당신은 Codex Original인가요?",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "저희는 Codex를 활용해 놀라운 성과를 만들어내고 있는 개발자, 발명가, 연구자, 창작자들의 실제 이야기를 수집하고 있습니다.",
-   "detail_ko": "저희는 Codex를 활용해 놀라운 성과를 만들어내고 있는 개발자, 취미 제작자, 연구자, 창작자들의 실제 이야기를 수집하고 있습니다.\nCodex Originals 프로그램의 다음 장에 함께하고 싶다면, 아래에 여러분의 이야기와 프로젝트에 대해 자세히 알려주세요."
-  },
-  {
-   "id": "bf0fe8cc388a3447",
-   "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
-   "link": "https://openai.com/index/basis-tax-workbook-with-astra",
-   "source": "OpenAI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-09-28T00:00:00+00:00",
-   "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
-   "thumb": "",
-   "title_ko": "Basis, GPT-6 Astra를 활용해 세무 워크북 작업을 기존보다 2배 빠르게 완료",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "GPT-6 Astra는 GPT-5.6 Sol보다 50개 탭으로 구성된 세무 워크북을 두 배 더 빠르게 완료했으며, 사용자 의도를 더 잘 이해함으로써 Basis는 실제 사용에 대한 확신을 더 갖게 되었다.",
-   "detail_ko": "GPT-6 Astra는 GPT-5.6 Sol보다 50개 탭으로 구성된 세무 워크북 작업을 두 배 더 빠르게 완료했으며, 사용자 의도를 더 잘 파악하는 능력 덕분에 Basis는 실제 사용에 대해 더 큰 확신을 갖게 되었다."
   },
   {
    "id": "f24d7bd746a73a34",
@@ -6131,7 +8329,7 @@
   {
    "name": "AI타임스 많이 본 기사",
    "ok": true,
-   "count": 5,
+   "count": 6,
    "fetched": 10
   },
   {
@@ -6161,7 +8359,7 @@
   {
    "name": "Engadget",
    "ok": true,
-   "count": 4,
+   "count": 5,
    "fetched": 20
   },
   {
@@ -6185,7 +8383,7 @@
   {
    "name": "Google News Top: Technology",
    "ok": true,
-   "count": 5,
+   "count": 4,
    "fetched": 70
   },
   {
@@ -6252,13 +8450,13 @@
    "name": "Nature 기후변화 · 에너지·환경",
    "ok": true,
    "count": 0,
-   "fetched": 30
+   "fetched": 0
   },
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 0,
-   "fetched": 0
+   "count": 5,
+   "fetched": 30
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -6275,38 +8473,38 @@
   {
    "name": "OpenAI",
    "ok": true,
-   "count": 7,
-   "fetched": 1242
+   "count": 8,
+   "fetched": 1243
   },
   {
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 55
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 61
+   "fetched": 64
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
    "ok": true,
    "count": 2,
-   "fetched": 52
+   "fetched": 56
   },
   {
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 46
+   "fetched": 45
   },
   {
    "name": "Sequoia Capital",
@@ -6330,7 +8528,7 @@
    "name": "Stanford · 스탠퍼드 연구",
    "ok": true,
    "count": 5,
-   "fetched": 53
+   "fetched": 56
   },
   {
    "name": "TED",
@@ -6371,14 +8569,14 @@
   {
    "name": "The Verge AI",
    "ok": true,
-   "count": 7,
+   "count": 8,
    "fetched": 10
   },
   {
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 50
+   "fetched": 45
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -6402,7 +8600,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 89
+   "fetched": 77
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -6414,19 +8612,19 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 42
+   "fetched": 53
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 58
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
    "ok": true,
    "count": 2,
-   "fetched": 73
+   "fetched": 79
   },
   {
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
@@ -6438,7 +8636,7 @@
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 69
+   "fetched": 58
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -6455,7 +8653,7 @@
   {
    "name": "WIRED AI",
    "ok": true,
-   "count": 3,
+   "count": 5,
    "fetched": 10
   },
   {
@@ -6570,7 +8768,7 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 51
+   "fetched": 52
   },
   {
    "name": "구글뉴스: AI 정책",
@@ -6594,7 +8792,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 30
+   "fetched": 35
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
@@ -6612,31 +8810,31 @@
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 45
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 65
+   "fetched": 60
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 32
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
    "ok": true,
    "count": 3,
-   "fetched": 29
+   "fetched": 27
   },
   {
    "name": "국내 연구: 환경·에너지·동물 · 환경·에너지·동물",
    "ok": true,
    "count": 3,
-   "fetched": 38
+   "fetched": 43
   },
   {
    "name": "국민일보",
@@ -6677,7 +8875,7 @@
   {
    "name": "뉴시스",
    "ok": true,
-   "count": 1,
+   "count": 5,
    "fetched": 100
   },
   {
@@ -6695,7 +8893,7 @@
   {
    "name": "동아일보",
    "ok": true,
-   "count": 5,
+   "count": 2,
    "fetched": 50
   },
   {
@@ -6707,7 +8905,7 @@
   {
    "name": "매일경제",
    "ok": true,
-   "count": 4,
+   "count": 5,
    "fetched": 50
   },
   {
@@ -6720,7 +8918,7 @@
    "name": "문화일보",
    "ok": true,
    "count": 5,
-   "fetched": 85
+   "fetched": 75
   },
   {
    "name": "법률저널",
@@ -6750,7 +8948,7 @@
    "name": "아시아투데이",
    "ok": true,
    "count": 5,
-   "fetched": 64
+   "fetched": 61
   },
   {
    "name": "아주경제",
@@ -6761,7 +8959,7 @@
   {
    "name": "연합뉴스",
    "ok": true,
-   "count": 1,
+   "count": 5,
    "fetched": 120
   },
   {
@@ -6773,7 +8971,7 @@
   {
    "name": "이데일리",
    "ok": true,
-   "count": 1,
+   "count": 4,
    "fetched": 50
   },
   {
@@ -6798,13 +8996,13 @@
    "name": "주제: AI 철학 · AI 철학",
    "ok": true,
    "count": 3,
-   "fetched": 56
+   "fetched": 55
   },
   {
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 19
+   "fetched": 21
   },
   {
    "name": "주제: 경제 · 경제",
@@ -6816,13 +9014,13 @@
    "name": "주제: 국방·전쟁 · 국방·전쟁",
    "ok": true,
    "count": 3,
-   "fetched": 39
+   "fetched": 41
   },
   {
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 45
+   "fetched": 48
   },
   {
    "name": "주제: 로봇 · 로봇",
@@ -6840,19 +9038,19 @@
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 55
+   "fetched": 50
   },
   {
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 40
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -6870,7 +9068,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 17
+   "fetched": 29
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -6882,7 +9080,7 @@
    "name": "주제: 정신건강 · 정신건강",
    "ok": true,
    "count": 3,
-   "fetched": 46
+   "fetched": 44
   },
   {
    "name": "주제: 정치 · 정치",
@@ -6900,7 +9098,7 @@
    "name": "주제: 청소년 · 청소년",
    "ok": true,
    "count": 3,
-   "fetched": 56
+   "fetched": 57
   },
   {
    "name": "주제: 피지컬 AI · 피지컬 AI",
@@ -6918,18 +9116,18 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 169
+   "fetched": 60
   },
   {
    "name": "프레시안",
    "ok": true,
    "count": 5,
-   "fetched": 35
+   "fetched": 38
   },
   {
    "name": "한겨레",
    "ok": true,
-   "count": 3,
+   "count": 0,
    "fetched": 30
   },
   {
