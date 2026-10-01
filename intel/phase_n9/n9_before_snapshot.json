@@ -1,0 +1,50 @@
+{
+ "head_commit_at_session_start": "742c28a",
+ "note": "Captured just after reproducing/diagnosing the 70/72 interpretive_contract failures and\nbefore any fix was applied (git diff of the test file itself had not yet been committed).\nCounts are the real, measured state of the repo at session start -- not copied from N-8's\nown snapshot, since the standing instruction is to re-measure (cron runs every 30 min).",
+ "counts": {
+  "documents": 602,
+  "claims_evidence_pipeline": 682,
+  "claims_claims_dir": 2,
+  "hypotheses": 2,
+  "intelligence_objects": 2,
+  "reports": 2,
+  "pdfs": 4,
+  "gap_records": 19,
+  "sources_registered": 299,
+  "private_research": "N/A (no private-research-vault entries counted this phase; vault.py present, unused by N-9 work)"
+ },
+ "interpretive_contract_suite_before_fix": {
+  "total_tests": 72,
+  "passing": 70,
+  "failing": [
+   "test_66b_policy_primary_verification_is_evidence_backed_not_fabricated",
+   "test_70_policy_primary_pending_root_cause_documented"
+  ],
+  "failure_cause": "both hardcoded official_domain_documents == 28; real computed value is 29 (602 documents.json total, one new federalregister.gov document admitted by a prior automated cron commit 9da6954 predating this session)"
+ },
+ "n8_related_status": {
+  "last_live_run_id": "36830397316 (per N-8's GitHub API confirmation; this session did not re-poll the Actions API)",
+  "live_acquisition_status": "N7_WIRED_AND_OBSERVED_EXECUTING (per N-8)",
+  "evidence_yield_status": "NO_CHANGE (N-8's 11-stage funnel: QUERY_PLANNED=15 ... REPORT_CHANGED=0)",
+  "scheduler_status": "NOT_WIRED (N-7 live-acquisition cron is the only existing cron; no report-rebuild scheduler wired)"
+ },
+ "canonical_hashes_sha256_16_raw_bytes": {
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b8155",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json": "df8995f2c995bd0b",
+  "intel/claims/claims.json": "e21d90573c0f67cc",
+  "intel/evidence_pipeline/claims.json": "c02b34668306f0da",
+  "intel/hypothesis/hypotheses.json": "874dc1c8ae9aa3cb",
+  "intel/intelligence_objects/intelligence_objects.json": "9fd98a3894075d9c",
+  "intel/evidence_network/policy_research_acquisition_result.json": "131533f13a6142fd",
+  "intel/evidence_network/counterevidence_live_acquisition_result.json": "96035eb5bc19744a",
+  "intel/evidence_network/longitudinal_evidence_acquisition_result.json": "9b541dc49d55fae2",
+  "intel/source_health/source_health_result.json": "c81317171f204b31"
+ },
+ "live_result_environment_fields_before_fix": {
+  "intel/evidence_network/policy_research_acquisition_result.json": null,
+  "intel/evidence_network/counterevidence_live_acquisition_result.json": null,
+  "intel/evidence_network/longitudinal_evidence_acquisition_result.json": null,
+  "intel/source_health/source_health_result.json": "SANDBOX",
+  "note": "the three evidence_network result files carried NO environment field at all before this\nphase's fix, and had no environment-suffixed canonical counterpart on disk -- exactly the\nstructural gap N-8's incident exposed (Section 9-14 target)."
+ }
+}

@@ -637,13 +637,67 @@ def test_66_production_validation_pending_state_preserved():
             raise AssertionError(f"미분류 watch key 발견 — 이 테스트를 갱신해야 함: {key}")
 
 
+def _independent_official_domain_count():
+    """N-9 SECTION 5/6: production_validation_watch.py 자체가 계산한 값을 그대로 다시
+    assert하면 동어반복(tautology)이 되므로, 동일한 '공식 도메인 판정' 규칙
+    (_OFFICIAL_DOMAIN_HINTS, news.google.com 리다이렉트 제외)을 이 테스트 파일 안에서
+    documents.json으로부터 독립적으로 재계산한다. pvw.compute_validation_watch()가
+    보고하는 official_domain_documents는 이 독립 계산과 항상 정확히 일치해야 한다 —
+    이것이 '매직넘버 28/29'가 지키려던 실제 불변식(공식 도메인 문서 카운트가 날조되거나
+    틀리게 집계되지 않는다)이며, 코퍼스가 자연 성장해도(601->602->...) 깨지지 않는다."""
+    documents = pvw._as_list(pvw._load_json(pvw.INTEL_DIR / "documents.json", []))
+    count = 0
+    for d in documents:
+        if not isinstance(d, dict):
+            continue
+        dom = pvw._domain_of(d.get("canonical_url"))
+        if not dom or dom == "news.google.com":
+            continue
+        if any(h in dom for h in pvw._OFFICIAL_DOMAIN_HINTS):
+            count += 1
+    return count
+
+
+def _independent_matching_claim_count():
+    """matching_claim_count에 대해서도 동일한 원칙 — claims.json에서 같은 claim_type/
+    claim_status 필터를 이 테스트가 독립적으로 재적용해 비교한다."""
+    claims = pvw._as_list(pvw._load_json(pvw.EVIDENCE_PIPELINE_DIR / "claims.json", []))
+    return len([
+        c for c in claims
+        if isinstance(c, dict)
+        and c.get("claim_type") in pvw._POLICY_LAW_COURT_CLAIM_TYPES
+        and c.get("claim_status") in pvw._PRIMARY_CLAIM_STATUSES
+    ])
+
+
+# N-9 SECTION 1 BEFORE-SNAPSHOT 기준 바닥값(regression floor) — 이 수보다 줄어들면 안 됨
+# (한 번 admission gate를 통과한 공식 도메인 문서가 사라지는 것은 그 자체로 회귀다).
+# 이 상수는 "정확히 이 값이어야 한다"는 천장이 아니라 "최소 이만큼은 유지되어야 한다"는
+# 바닥이므로, 코퍼스 자연 성장과 충돌하지 않는다.
+_OFFICIAL_DOMAIN_DOCUMENTS_FLOOR = 28
+_MATCHING_CLAIM_COUNT_FLOOR = 28
+
+
 def test_66b_policy_primary_verification_is_evidence_backed_not_fabricated():
-    # test_66의 VERIFIED 승격이 진짜 증거에 근거하는지 직접 확인 — matching_claim_count가
-    # 실제 admitted Federal Register 문서 수(28)와 일치해야 하며, 0이나 임의 값이 아니다.
+    # test_66의 VERIFIED 승격이 진짜 증거에 근거하는지 직접 확인 — matching_claim_count와
+    # official_domain_documents 모두 0이나 임의 값이 아니라, documents.json/claims.json을
+    # 이 테스트가 독립적으로 재계산한 값과 정확히 일치해야 한다(날조 방지 불변식). 또한
+    # N-9 Before Snapshot 시점의 실측 바닥값 이상이어야 한다(회귀 방지 불변식).
     watch = pvw.compute_validation_watch()
     entry = watch["policy_law_court_primary"]
-    assert entry["matching_claim_count"] == 28
-    assert entry["diagnosis"]["official_domain_documents"] == 28
+    expected_claims = _independent_matching_claim_count()
+    expected_docs = _independent_official_domain_count()
+    assert entry["matching_claim_count"] == expected_claims, (
+        f"matching_claim_count({entry['matching_claim_count']})가 claims.json에서 "
+        f"독립적으로 재계산한 값({expected_claims})과 다름 — 집계 로직 불일치 의심"
+    )
+    assert entry["matching_claim_count"] >= _MATCHING_CLAIM_COUNT_FLOOR
+    assert entry["diagnosis"]["official_domain_documents"] == expected_docs, (
+        f"official_domain_documents({entry['diagnosis']['official_domain_documents']})가 "
+        f"documents.json에서 독립적으로 재계산한 값({expected_docs})과 다름 — 집계 로직 "
+        f"불일치 의심(날조 또는 버그)"
+    )
+    assert entry["diagnosis"]["official_domain_documents"] >= _OFFICIAL_DOMAIN_DOCUMENTS_FLOOR
 
 
 def test_67_idempotency():
@@ -703,6 +757,25 @@ def test_68_regression_zero():
                      "intel/evidence_network/counterevidence_live_acquisition_result.json",
                      "intel/evidence_network/longitudinal_evidence_acquisition_result.json") and status == "M":
             continue
+        # PHASE N-9 (Te 승인된 스펙, Section 9-14): Live/Sandbox 아티팩트 쓰기 보호 신규
+        # sidecar 모듈(live_result_guard.py, 새 .github_actions.json 환경분리 경로)과
+        # 이 Phase가 수정하는 세 Live Acquisition 스크립트 자신('M'), N-9 전용 스냅샷/감사
+        # 산출물('phase_n9')만 해당. briefing.py/site/data는 건드리지 않음(test_56이 그대로 지킴).
+        if "phase_n9" in path and status in ("??", "M"):
+            continue
+        if path in ("intel/evidence_network/live_result_guard.py",
+                     "intel/evidence_network/policy_research_acquisition.py",
+                     "intel/evidence_network/counterevidence_live_acquisition.py",
+                     "intel/evidence_network/longitudinal_evidence_acquisition.py",
+                     "intel/evidence_network/tests/test_live_result_guard.py",
+                     "intel/evidence_network/evidence_yield_funnel.py",
+                     "intel/evidence_network/n8_gap_feedback_mapping.py") and status in ("??", "M"):
+            continue
+        if path in ("intel/evidence_network/policy_research_acquisition_result.github_actions.json",
+                     "intel/evidence_network/counterevidence_live_acquisition_result.github_actions.json",
+                     "intel/evidence_network/longitudinal_evidence_acquisition_result.github_actions.json") \
+                and status in ("??", "M"):
+            continue
         bad_lines.append(ln)
     assert bad_lines == [], f"이번 세션 밖 변경/기존 파일 수정이 감지됨(회귀): {bad_lines}"
 
@@ -724,10 +797,22 @@ def test_70_policy_primary_pending_root_cause_documented():
     # 처음 작성됐을 때는 official_domain_documents == 0이었으나, M.5E-3/M.5E-4의 실제 Federal
     # Register 연동으로 28건이 admission gate를 통과해 policy_law_court_primary가 정당하게
     # VERIFIED로 승격됐다(test_66/test_66b 참고) — 이 테스트는 이제 그 새 실제 상태를 고정한다.
+    # N-9 SECTION 5/6/7: 28이라는 절대값은 601건 corpus 스냅샷 당시의 우연한 값이었을
+    # 뿐 불변식이 아니었다 — 실제로 보호하려던 불변식은 "documents_examined가 전체
+    # documents.json 문서 수와 정확히 같고(날조된 부분집합이 아님), official_domain_
+    # documents가 그 안에서 독립적으로 재계산한 공식 도메인 카운트와 정확히 같으며,
+    # google_news_redirect 문서가 실제로 존재한다(0으로 뭉개지지 않는다)"는 것이다.
+    # 코퍼스가 602건, 603건으로 자라도 이 세 불변식은 그대로 성립해야 한다.
     watch = pvw.compute_validation_watch()
     diag = watch["policy_law_court_primary"]["diagnosis"]
+    all_documents = pvw._as_list(pvw._load_json(pvw.INTEL_DIR / "documents.json", []))
     assert diag["documents_examined"] > 0
-    assert diag["official_domain_documents"] == 28
+    assert diag["documents_examined"] == len(all_documents), (
+        "documents_examined가 documents.json 전체 문서 수와 다름 — 일부만 검사했거나 "
+        "날조된 부분집합일 위험"
+    )
+    assert diag["official_domain_documents"] == _independent_official_domain_count()
+    assert diag["official_domain_documents"] >= _OFFICIAL_DOMAIN_DOCUMENTS_FLOOR
     assert diag["google_news_redirect_documents"] > 0
 
 
