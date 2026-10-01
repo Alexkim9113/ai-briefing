@@ -1,11 +1,60 @@
 {
- "snapshot_id": "O0_AFTER",
+ "snapshot_id": "O0_AFTER_FINAL",
  "topic": "AI_ENERGY_INFRA",
  "taken_at": "2026-10-01T00:00:00+00:00",
- "diff_vs_before": {
-  "new_evidence_items": 3,
-  "new_evidence_sources": ["IEA Energy and AI (executive summary)", "arXiv 2411.11540 (Jevons Paradox in Cloud Computing)", "GridLab PJM interconnection analysis"],
+ "supersedes": "the interim O0_AFTER snapshot written mid-phase (before claims/statistical-evidence/intelligence-object linkage, additional counterevidence, alternative-explanations updates, funnel instrumentation, report update and atomization were done) -- this is the TRUE final snapshot for O-0.",
+ "counts_final": {
+  "claims_total": 6,
+  "claims_ai_energy_infra_new_this_phase": 4,
+  "evidence_claim_relations_total": 6,
+  "evidence_claim_relations_new_this_phase": 4,
+  "statistical_evidence_series_total": 4,
+  "statistical_evidence_series_new_this_phase": 2,
+  "intelligence_objects_total": 2,
+  "ai_energy_infra_object_version": 2,
+  "hypotheses_total": 8,
+  "hypotheses_ai_energy_infra": 7,
+  "reports_for_ai_energy_infra": 2,
+  "latest_report_version": "report_intel_87210a61730c22b9_v2",
+  "counterevidence_directions_total": 10,
+  "counterevidence_directions_with_real_evidence": 5,
+  "counterevidence_directions_partial": 2,
+  "counterevidence_directions_not_run": 3,
+  "alternative_explanations_total": 6,
+  "alternative_explanations_graded_by_evidence": 4,
+  "alternative_explanations_general_knowledge_only": 2,
+  "vault_m6_new_atoms_this_phase": 6
+ },
+ "diff_vs_o0_before": {
+  "new_evidence_items_ingested": 3,
+  "new_evidence_sources": [
+   "IEA Energy and AI (executive summary)",
+   "arXiv 2411.11540 (Jevons Paradox in Cloud Computing)",
+   "GridLab PJM interconnection analysis"
+  ],
+  "additional_live_sources_fetched_for_counterevidence_this_session": [
+   "NVIDIA AI hardware efficiency claims (Network World, vendor-claimed, not independently verified)",
+   "IEA Global EV Outlook 2025 (EV charging electricity demand, observed+forecast)",
+   "EIA Today in Energy (US electricity consumption drivers -- evidence AGAINST population growth as primary driver)"
+  ],
   "access_blocked_sources": ["IEA base report page", "Pew Research Oct 2025 piece"],
+  "claims_before": 2,
+  "claims_after": 6,
+  "claims_newly_grounded": [
+   "2024 OBSERVED global/US/China/Europe data center electricity consumption + 2017-2024 growth rate, AI_ATTRIBUTION=PARTIAL",
+   "2030/2035 FORECAST (kept distinct from the observed claim), AI_ATTRIBUTION=PARTIAL",
+   "Jevons-paradox cloud-efficiency finding (Google +3.7x energy 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT",
+   "PJM interconnection-queue backlog + capacity auction price, AI_ATTRIBUTION=PARTIAL, generation-side not transmission-side"
+  ],
+  "statistical_series_before": 2,
+  "statistical_series_after": 4,
+  "statistical_series_added": [
+   "IEA_GLOBAL_DC_ELECTRICITY_TWH_OBSERVED (GLOBAL, 2024 single point, INSUFFICIENT_SERIES)",
+   "IEA_GLOBAL_DC_ELECTRICITY_TWH_FORECAST (GLOBAL, 2030+2035, INSUFFICIENT_SERIES, kept as a separate series from the observed one so forecast is never merged with observation)"
+  ],
+  "intelligence_object_version_before": 1,
+  "intelligence_object_version_after": 2,
+  "intelligence_object_impact_event": "STATE_CHANGED",
   "hypotheses_before": 1,
   "hypotheses_after": 7,
   "hypothesis_status_changes": {
@@ -17,24 +66,54 @@
    "H6_new": "WEAKENED",
    "H7_new": "PARTIALLY_SUPPORTED"
   },
-  "new_counterevidence_directions_touched": 2,
-  "new_counterevidence_directions_partial": 2,
-  "counterevidence_directions_still_not_run": 6,
-  "new_alternative_explanation_updates": 0,
-  "note_on_alternatives": "intel/alternative_explanations/energy_demand_alternatives_result.json was NOT updated this run (budget) -- its alternatives remain GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE; this is an honest gap, not claimed as done.",
+  "counterevidence_directions_with_evidence_before": 0,
+  "counterevidence_directions_with_evidence_after": 5,
+  "counterevidence_directions_partial_after": 2,
+  "counterevidence_directions_not_run_after": 3,
+  "counterevidence_new_findings_this_session": [
+   "AI hardware efficiency: NVIDIA vendor-claimed ~100,000x inference energy reduction over 10yr -- not independently verified",
+   "EV electrification demand: IEA 180 TWh OBSERVED 2024 (+60% YoY), ~780 TWh FORECAST 2030 -- real but smaller-scale non-AI driver",
+   "Population growth: EIA evidence found AGAINST this direction -- residential/population-linked load is the SLOWEST-growing US sector; commercial (incl. data centers) and industrial (incl. manufacturing) are the actual drivers"
+  ],
+  "alternative_explanations_before": "all 6 GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE",
+  "alternative_explanations_after": "EV_CHARGING_DEMAND_GROWTH and GENERAL_CLOUD_COMPUTING_GROWTH upgraded to OBSERVED_EFFECT; MANUFACTURING_RESHORING and POPULATION_ECONOMIC_GROWTH upgraded to POSSIBLE_IMPLICATION (population evidence runs against, not for, the alternative); EXTREME_CLIMATE_HVAC_DEMAND and INDUSTRIAL_POLICY_SUBSIDIES remain GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE (no search run)",
+  "evidence_yield_funnel_instrumented": true,
+  "evidence_yield_funnel_real_counts": {
+   "QUERY_PLANNED": 6, "SOURCE_SELECTED": 10, "SOURCE_FETCHED": 7, "CANDIDATE_CREATED": 7,
+   "VALIDATED": 7, "ADMITTED": 6, "EVIDENCE_CONNECTED": 4, "CLAIM_UPDATED": 4,
+   "INTELLIGENCE_UPDATED": 1, "REPORT_UPDATED": 1
+  },
+  "report_regenerated": true,
+  "report_diff_type": ["NEW_EVIDENCE", "CLAIM_STATUS_CHANGED"],
+  "report_version_before": 1,
+  "report_version_after": 2,
+  "report_artifact_note": "JSON report (the canonical artifact) was regenerated and saved for v2; HTML/PDF derived artifact files were confirmed renderable (build_artifacts_with_failure_isolation returned REPORT_JSON_READY/HTML_READY/PDF_READY) but were not additionally persisted to disk this phase.",
+  "obsidian_atomization_done": true,
+  "obsidian_atoms_added": 6,
+  "obsidian_atom_note": "4 new CLAIM atoms + 2 new STATISTIC atoms added; the existing RESULT atom for intel_87210a61730c22b9 was updated in place (same stable atom_id, derived from the unchanged topic+question) rather than duplicated. AI_LABOR's vault atoms untouched.",
   "longitudinal_chain_built": false,
-  "longitudinal_chain_note": "Not built this run. BASELINE (pre-2022 data center energy trend, ~12%/yr since 2017 per IEA) has partial support; TRANSITION (generative AI investment surge causing acceleration) is only qualitatively asserted by IEA, not quantitatively isolated; CURRENT state (2024 observed 415 TWh/1.5%) has real support. Full 3-stage chain was judged premature to assert as 'built' given TRANSITION's weak isolation -- recorded as not done rather than forced.",
-  "gaps_opened": ["AI-specific numeric share of data center electricity still unresolved", "6 of 10 counterevidence directions unsearched", "no Korean-context geographic comparison source found"],
-  "gaps_closed": ["COUNTEREVIDENCE_GAP on pure-efficiency-solves-it narrative partially addressed by Jevons paper (now WEAKENED, not a gap)"]
+  "longitudinal_chain_note": "Still not built. BASELINE (pre-2022 data center energy trend, ~12%/yr since 2017 per IEA) has partial support; TRANSITION (generative AI investment surge causing acceleration) is only qualitatively asserted by IEA, not quantitatively isolated; CURRENT state (2024 observed 415 TWh/1.5%) has real support. A full 3-stage BASELINE->TRANSITION->CURRENT chain remains premature to assert given TRANSITION's weak isolation.",
+  "gaps_opened": [
+   "AI-specific numeric share of data center electricity (vs. crypto/general cloud) still unresolved by any source",
+   "3 of 10 counterevidence directions (manufacturing/reshoring-specific, weather/climate, DC-growth-without-power-problems region) remain unsearched",
+   "no Korean-context geographic comparison source found",
+   "POLICY_RESEARCH beyond the IEA/GridLab policy-adjacent items was never separately pursued this phase"
+  ],
+  "gaps_closed_or_narrowed": [
+   "ATTRIBUTION_GAP on the AI_ENERGY_INFRA intelligence object narrowed from 'no AI-attribution evidence connected' to 'PARTIAL/INDIRECT attribution connected, no numeric AI-only split available' -- narrowed, not closed",
+   "COUNTEREVIDENCE_GAP narrowed from 0/10 to 5/10 real-evidence directions",
+   "pure-efficiency-solves-it narrative weakened by the Jevons paper (real evidence against the simple counter-narrative)",
+   "population-growth alternative explanation evidence-connected (against itself) rather than left as unexamined general knowledge"
+  ]
  },
- "readiness_matrix": {
+ "readiness_matrix_final": {
   "DEEP_RESEARCH_PIPELINE": "CONDITIONALLY_READY",
   "PRIMARY_EVIDENCE": "CONDITIONALLY_READY",
-  "STATISTICAL_EVIDENCE": "NOT_READY",
+  "STATISTICAL_EVIDENCE": "CONDITIONALLY_READY",
   "ACADEMIC_RESEARCH": "CONDITIONALLY_READY",
-  "POLICY_RESEARCH": "CONDITIONALLY_READY",
-  "COUNTEREVIDENCE": "NOT_READY",
-  "ALTERNATIVE_EXPLANATIONS": "NOT_READY",
+  "POLICY_RESEARCH": "NOT_READY",
+  "COUNTEREVIDENCE": "CONDITIONALLY_READY",
+  "ALTERNATIVE_EXPLANATIONS": "CONDITIONALLY_READY",
   "LONGITUDINAL_EVIDENCE": "NOT_READY",
   "GEOGRAPHIC_EVIDENCE": "CONDITIONALLY_READY",
   "AI_ATTRIBUTION": "CONDITIONALLY_READY",
@@ -43,19 +122,58 @@
   "UNCERTAINTY": "READY",
   "PROVENANCE": "READY",
   "PRIVATE_RESEARCH": "NOT_APPLICABLE",
-  "OBSIDIAN_ATOMIZATION": "NOT_APPLICABLE",
+  "OBSIDIAN_ATOMIZATION": "CONDITIONALLY_READY",
   "INTELLIGENCE_QUALITY": "CONDITIONALLY_READY",
-  "REPORT_QUALITY": "NOT_APPLICABLE",
+  "REPORT_QUALITY": "CONDITIONALLY_READY",
   "RIGHTS_SAFETY": "READY",
   "readiness_rationale": {
-   "STATISTICAL_EVIDENCE": "No new statistical/numeric series ingested into statistical_evidence.json this run; still 2 pre-existing series.",
-   "COUNTEREVIDENCE": "6 of 10 requested directions never searched this run.",
-   "ALTERNATIVE_EXPLANATIONS": "Not updated with live evidence this run; still GENERAL_KNOWLEDGE_NO_CORPUS_EVIDENCE across the board.",
-   "LONGITUDINAL_EVIDENCE": "Chain explicitly not built -- TRANSITION stage insufficiently isolated.",
-   "PRIVATE_RESEARCH": "No private-vault-eligible full-text sources were acquired this run (all 3 ingested sources are openly accessible and summarized, not stored verbatim).",
-   "OBSIDIAN_ATOMIZATION": "No knowledge-memory atoms created this run.",
-   "REPORT_QUALITY": "Report Engine was not invoked this run -- see final report for reasoning (intelligence object was updated but report regeneration deferred)."
+   "DEEP_RESEARCH_PIPELINE": "3 real primary/academic/policy sources ingested end-to-end into claims+statistics+intelligence-object+report+vault, but only a fraction of the originally scoped acquisition queue (several named candidates remain ACCESS_BLOCKED or SEARCH_NOT_RUN).",
+   "PRIMARY_EVIDENCE": "IEA + GridLab are real primary/policy-research sources with content actually read, not just leads; base IEA report page and Pew piece remain ACCESS_BLOCKED.",
+   "STATISTICAL_EVIDENCE": "Upgraded from NOT_READY: 2 new IEA series admitted (observed 2024, forecast 2030/2035), correctly kept as separate series rather than merged; both are still INSUFFICIENT_SERIES (too few points for trend classification) and the World Bank per-capita series remains sector-undifferentiated, so CONDITIONALLY_READY not READY.",
+   "ACADEMIC_RESEARCH": "1 real arXiv paper (Jevons Paradox in Cloud Computing) ingested and claim-linked; it is general-cloud not AI-specific, and only 1 academic source total.",
+   "POLICY_RESEARCH": "GridLab is policy-research-adjacent but narrow (one US regional grid-operator analysis); no broader cross-jurisdictional policy research (EU/China/Korea regulatory response, IEA's own policy recommendations beyond the exec summary) was pursued -- carried over NOT_READY from before this phase.",
+   "COUNTEREVIDENCE": "Upgraded from NOT_READY: 5/10 directions now have real evidence (up from 0), 2 more partial, but 3 remain unsearched -- a genuine majority-covered but incomplete counterevidence base.",
+   "ALTERNATIVE_EXPLANATIONS": "Upgraded from NOT_READY: 4/6 alternatives are now evidence-connected (2 at OBSERVED_EFFECT, 2 at POSSIBLE_IMPLICATION, one of those against itself); 2/6 remain general-knowledge-only.",
+   "LONGITUDINAL_EVIDENCE": "No real BASELINE->TRANSITION->CURRENT chain exists; TRANSITION stage is not quantitatively isolated from any source acquired this phase.",
+   "GEOGRAPHIC_EVIDENCE": "US/China/Europe split and a US-regional (PJM) finding exist, but no evidence for other major AI/data-center geographies (e.g. Korea, Southeast Asia, Middle East Gulf states) was acquired.",
+   "AI_ATTRIBUTION": "Explicitly and consistently tagged PARTIAL/INDIRECT across every claim this phase touched, with the gap (no numeric AI-only split exists in any source) stated rather than papered over -- this discipline itself is why it is CONDITIONALLY_READY rather than NOT_READY, but it cannot be READY while no source gives a clean split.",
+   "FORECAST_OBSERVATION_SEPARATION": "Enforced structurally: the 2024 observed and 2030/2035 forecast figures are two separate claims and two separate statistical series, never merged into one number or one trend computation.",
+   "EVIDENCE_INDEPENDENCE": "3 independent-origin sources (IEA policy research, arXiv academic, GridLab think-tank) plus 3 more for counterevidence (NVIDIA/trade press, IEA EV Outlook, EIA) -- real independence across source types, but still a small total source count for a topic this consequential.",
+   "UNCERTAINTY": "Every new claim carries explicit AI_ATTRIBUTION and OBSERVED/FORECAST/ESTIMATED status; the intelligence object's uncertainties/known_gaps were updated rather than silently dropped.",
+   "PROVENANCE": "Every claim/relation/series carries a real source_url; no fabricated or placeholder provenance was introduced.",
+   "PRIVATE_RESEARCH": "No private-vault-eligible full-text sources were acquired or stored this phase; all ingested sources are openly accessible and only short excerpts/URLs are stored.",
+   "OBSIDIAN_ATOMIZATION": "Upgraded from NOT_APPLICABLE: new claims/statistics atomized into vault_m6/ this phase, with the RESULT atom's stable ID/sources/relations preserved on update; CONDITIONALLY_READY rather than READY because the vault only covers this phase's items, not a full re-atomization pass across the whole AI_ENERGY_INFRA claim/evidence graph.",
+   "INTELLIGENCE_QUALITY": "Claims/statistics/intelligence-object/report/vault are now mutually consistent and linked end-to-end for the 3 newly ingested sources; remaining gaps (policy research breadth, longitudinal chain, geographic breadth) keep it at CONDITIONALLY_READY.",
+   "REPORT_QUALITY": "Upgraded from NOT_APPLICABLE: report_intel_87210a61730c22b9 was regenerated to v2 off real diffs (NEW_EVIDENCE, CLAIM_STATUS_CHANGED); CONDITIONALLY_READY rather than READY because HTML/PDF artifact files for v2 were not additionally persisted to disk this phase and the report inherits every gap listed above.",
+   "RIGHTS_SAFETY": "Confirmed via test_public_view_never_contains_vault_full_text_key and manual review: only short excerpts/URLs are stored anywhere in this phase's new files; no full-text or private-vault content reached any report or public-reachable file."
   }
  },
- "central_honest_answer": "Yes, modestly: this run replaced 0 live-fetched primary sources with 3 actually-read primary/academic/policy sources (IEA exec summary, arXiv Jevons paper, GridLab PJM analysis), moved H1 from INSUFFICIENT_EVIDENCE to PARTIALLY_SUPPORTED on a disclosed basis (qualitative AI attribution, no numeric AI-only split), and added 6 new competing hypotheses with honestly mixed, non-forced statuses. But most of the requested counterevidence directions (6/10), the alternative-explanations update, the longitudinal chain, and statistical-evidence ingestion were NOT completed this run due to session budget -- this is a partial, honest improvement, not a completed deep-research pass."
+ "final_regressions": {
+  "negative_control_passed": true,
+  "negative_control_method": "grepped all JSON/markdown files touched or created this phase for the 4 banned sentences; zero matches in every case.",
+  "test_fixture_72_of_72": true,
+  "module_tests_run": [
+   "intel/claims/tests/test_claim_model.py (5/5)",
+   "intel/statistical_evidence/tests/test_statistical_evidence.py (6/6)",
+   "intel/intelligence_objects/tests/test_intelligence_object.py (4/4)",
+   "intel/intelligence_objects/tests/test_incremental_update.py (4/4)",
+   "intel/alternative_explanations/tests/test_fixture.py (8/8)",
+   "intel/evidence_network/tests/test_evidence_yield_funnel.py (9/9)",
+   "intel/report_engine/tests/test_report_engine.py (24/24)",
+   "intel/report_engine/tests/test_report_ops.py (9/9, after updating one hardcoded latest-version assertion v1->v2 to match the real, intentional corpus change)",
+   "intel/report_engine/tests/test_atomic_publish.py (6/6)",
+   "intel/knowledge_memory/tests/test_m6_atomizer.py (4/4)"
+  ],
+  "canonical_data_drift_after_tests": "none -- git status --short after every test run showed only this phase's own intended changes",
+  "git_status_clean_at_end": true
+ },
+ "undone_items_explicitly": [
+  "3 of 10 counterevidence directions (manufacturing/reshoring-specific, weather/climate demand, DC-growth-region-without-reported-power-problems) still SEARCH_NOT_RUN",
+  "POLICY_RESEARCH breadth beyond IEA/GridLab not pursued (no dedicated cross-jurisdictional policy research run)",
+  "LONGITUDINAL_EVIDENCE 3-stage chain not built (TRANSITION stage not isolated)",
+  "GEOGRAPHIC_EVIDENCE beyond US/China/Europe/PJM not acquired (no Korea-context or other-region source)",
+  "HTML/PDF artifact files for report v2 not additionally persisted to disk (JSON report, the canonical artifact, was)",
+  "No full re-atomization pass across the entire AI_ENERGY_INFRA claim/evidence graph -- only this phase's new items were atomized"
+ ],
+ "central_honest_answer": "Across the full O-0 phase (including this final pass): the AI_ENERGY_INFRA topic moved from a single undifferentiated World Bank statistic with zero connected counterevidence/alternative-explanations/report-currency, to 6 claims (4 newly grounded in 3 real, independently-read IEA/arXiv/GridLab sources with explicit OBSERVED/FORECAST and PARTIAL/INDIRECT AI-attribution tagging), 4 statistical series (2 new, forecast correctly kept separate from observation), 7 hypotheses with honestly mixed statuses, 5/10 counterevidence directions with real evidence (up from 0), 4/6 alternative explanations evidence-connected, an instrumented evidence-yield funnel with real per-stage counts, a regenerated v2 intelligence report reflecting real diffs, and atomized vault entries with preserved stable IDs. This is a genuine, verifiable improvement, not a completed deep-research pass: policy-research breadth, longitudinal evidence, broader geographic coverage, and 3 counterevidence directions remain real, disclosed gaps -- CONDITIONALLY_READY is the honest overall characterization, not READY."
 }
