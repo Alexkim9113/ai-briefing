@@ -1,0 +1,93 @@
+{
+ "snapshot_id": "O1_AFTER_FINAL",
+ "topic": "AI_ENERGY_INFRA",
+ "taken_at": "2026-10-01T11:41:49.017907+00:00",
+ "caveat_on_before_snapshot": "intel/evidence_network/o1_before_snapshot.json was computed AFTER some of this O-1 pass's own claims.json edits (LBNL, Korea), per the handoff note, so it is approximately-baseline for O-1, not a pure pre-O-1 snapshot. This after-snapshot diffs against the true O-0-final state (intel/intelligence_quality/o0_after_snapshot.json: 6 claims, 6 relations, 7 AI_ENERGY_INFRA hypotheses, 5/10 counterevidence directions with evidence) rather than against o1_before_snapshot.json, to avoid double-counting the LBNL/Korea work it already includes.",
+ "counts_final": {
+  "claims_total": 11,
+  "claims_ai_energy_infra": 10,
+  "claims_new_this_o1_pass": 5,
+  "claims_new_this_agent_pass_only": 3,
+  "evidence_claim_relations_total": 9,
+  "relations_new_this_agent_pass": 3,
+  "hypotheses_total": 8,
+  "hypotheses_ai_energy_infra": 7,
+  "counterevidence_directions_total": 10,
+  "counterevidence_directions_with_real_evidence": 9,
+  "counterevidence_directions_search_run_no_evidence": 1,
+  "counterevidence_directions_not_run": 0
+ },
+ "geographic_coverage_added_this_pass": {
+  "Europe": "Ireland (CSO 2024: 22% of metered electricity, OBSERVED, PRIMARY-via-DERIVATIVE); EU Energy Efficiency Directive Art.12 DC reporting obligation (POLICY_ANNOUNCEMENT, reporting-regime-in-force, NOT an observed consumption-reduction effect -- no post-implementation impact data found).",
+  "China": "Aggregate DC electricity ~100-200 TWh 2024 depending on source (IEA vs Goldman Sachs/Bloomberg), ~77 TWh 2022 per cited PRC government figures (not independently refetched from a primary PRC source), 400-600 TWh FORECAST 2030; East Data West Computing (东数西算) program described. Tagged DERIVATIVE_REPORTING/ACADEMIC_ANALYSIS via Carbon Brief, not PRIMARY_SOURCE."
+ },
+ "policy_research_determination": {
+  "verdict": "NOT_READY -- no new source promoted to POLICY_RESEARCH this pass",
+  "reasoning": "POLICY_RESEARCH requires a government report, parliamentary/congressional research report, public research institution report, regulator report, policy evaluation, official consultation, or impact assessment. The EU Energy Efficiency Directive Art.12 reporting requirement is real and in force, but what was fetched this pass is secondary commentary describing it (JRC PDF referenced via a blog, IIEA blog), not an independently read, verified JRC/European Commission primary report establishing observed post-implementation outcomes -- it stays DERIVATIVE/POLICY_ANNOUNCEMENT, not POLICY_RESEARCH. GridLab (already in corpus from O-0) is a non-profit research organization's own interconnection-queue analysis report; it is already classified in claims.json as ACADEMIC_RESEARCH/independent-non-profit-research-adjacent, not reclassified this pass since no new primary GridLab document was fetched. Korea and China items remain NEWS/SECONDARY and DERIVATIVE_REPORTING respectively -- neither is upgraded."
+ },
+ "hypothesis_reevaluation": {
+  "method": "intel/hypothesis/hypothesis_model.py classify_status(), run via upsert_hypothesis() with new supporting_evidence IDs for LBNL (H1,H2,H7), Korea+Ireland (H4), and manufacturing/EV/weather counterevidence already fetched in O-0/O-1 but not yet linked (H3).",
+  "before": {
+   "H1": "PARTIALLY_SUPPORTED",
+   "H2": "PARTIALLY_SUPPORTED",
+   "H3": "INSUFFICIENT_EVIDENCE",
+   "H4": "PARTIALLY_SUPPORTED",
+   "H5": "CONTESTED",
+   "H6": "WEAKENED",
+   "H7": "PARTIALLY_SUPPORTED"
+  },
+  "after": {
+   "H1": "SUPPORTED",
+   "H2": "SUPPORTED",
+   "H3": "SUPPORTED",
+   "H4": "SUPPORTED",
+   "H5": "CONTESTED",
+   "H6": "WEAKENED",
+   "H7": "SUPPORTED"
+  },
+  "important_caveat": "classify_status() is COUNT-BASED, not evidence-quality-weighted: any hypothesis with >=1 supporting_evidence entry and 0 contradicting_evidence entries is labeled SUPPORTED, regardless of whether that evidence is a single aggregate statistic with PARTIAL/INDIRECT AI attribution. This flip from PARTIALLY_SUPPORTED to SUPPORTED for H1/H2/H3/H4/H7 is the model's real, documented, deterministic behavior -- it is reported honestly here, not suppressed -- but it should NOT be read as 'AI's specific energy share is now proven': every underlying claim (IEA, LBNL, Ireland, Korea) still carries AI_ATTRIBUTION=PARTIAL or INDIRECT, and H3's new SUPPORTED status for 'multiple non-AI factors matter' sits in tension with H1's SUPPORTED status for 'AI is a significant driver' -- both are simultaneously SUPPORTED because the model does not treat them as mutually exclusive. A human reviewer should treat this flip as a signal to review the classify_status design (e.g. requiring a minimum evidence count or an evidence-quality threshold before SUPPORTED, not just nonzero-vs-zero), not as new certainty about AI's energy share."
+ },
+ "intelligence_object_and_report": {
+  "status": "NOT TOUCHED this pass -- intel_87210a61730c22b9 stays at v2, report stays at report_intel_87210a61730c22b9_v2",
+  "reasoning": "Steps 6/9/10 (intelligence object v3, report v3, HTML/PDF artifacts) were not reached within this agent pass's budget after prioritizing real Europe/China evidence acquisition (steps 1-2), the policy-research determination (step 3), evidence-claim relations (step 4), and the H1-H7 re-evaluation (step 5) -- all of which are prerequisites and are now real and committed. Per the task's own instruction ('if nothing material changed, do not force a version bump... NO_CHANGE is a valid, honest outcome' / 'If step 6 resulted in NO_CHANGE, do not force a report regeneration'), no version bump is forced here. This is an honest NOT_DONE, not a NO_CHANGE verdict: the hypothesis status changes above ARE material and would justify a v3 update; it simply was not executed this pass."
+ },
+ "evidence_yield_funnel": {
+  "status": "NOT INSTRUMENTED this pass (step 7 not reached) -- UNINSTRUMENTED, not a real 0."
+ },
+ "readiness_matrix": {
+  "O1_STATUS": "CONDITIONALLY_READY",
+  "PRIMARY_EVIDENCE": "CONDITIONALLY_READY",
+  "ACADEMIC_EVIDENCE": "CONDITIONALLY_READY",
+  "STATISTICAL_EVIDENCE": "NOT_READY",
+  "AI_ATTRIBUTION": "CONDITIONALLY_READY",
+  "POLICY_RESEARCH": "NOT_READY",
+  "GEOGRAPHIC_EVIDENCE": "CONDITIONALLY_READY",
+  "LONGITUDINAL_EVIDENCE": "NOT_READY",
+  "COUNTEREVIDENCE": "CONDITIONALLY_READY",
+  "ALTERNATIVE_EXPLANATIONS": "CONDITIONALLY_READY",
+  "FORECAST_INTEGRITY": "READY",
+  "EVIDENCE_INDEPENDENCE": "CONDITIONALLY_READY",
+  "RESEARCH_RIGHTS": "NOT_APPLICABLE",
+  "INTELLIGENCE_QUALITY": "NOT_READY",
+  "REPORT_QUALITY": "NOT_READY",
+  "PROVENANCE": "READY",
+  "PUBLIC_SAFETY": "NOT_APPLICABLE",
+  "notes": {
+   "STATISTICAL_EVIDENCE": "No new statistical_evidence.json series added this pass; all new claims are single-point/narrative, not time-series.",
+   "POLICY_RESEARCH": "See policy_research_determination above -- genuinely NOT_READY.",
+   "LONGITUDINAL_EVIDENCE": "Still single-year or short-span observed figures per geography (Ireland 2015/2023/2024 points, China single-year estimates) -- no multi-year consistent time series built.",
+   "INTELLIGENCE_QUALITY / REPORT_QUALITY": "Intelligence object and report were not advanced this pass (see above) -- still reflect pre-Europe/China/H1-H7-reeval state.",
+   "RESEARCH_RIGHTS / PUBLIC_SAFETY": "No Private Vault, rights-restricted, or public-delivery artifacts were touched this pass, so these are NOT_APPLICABLE rather than PASS/FAIL.",
+   "FORECAST_INTEGRITY": "China and Ireland claims both correctly separate OBSERVED from FORECAST fields, consistent with existing IEA/LBNL pattern."
+  }
+ },
+ "what_remains_undone": [
+  "Intelligence object v3 update (incremental_update.py) reflecting new Europe/China evidence and H1-H7 status changes",
+  "Evidence Yield Funnel instrumentation for this O-1 phase",
+  "Report v3 regeneration via report_engine.py",
+  "HTML/PDF artifact generation (Public/Operator/Print + PDF)",
+  "Public safety regression + module-specific regressions beyond the ones run this pass",
+  "Deeper China primary-government source verification (East Data West Computing official NDRC documents were not independently fetched)",
+  "EU Energy Efficiency Directive primary legal text / JRC database first-party read (only secondary summaries were fetched)"
+ ]
+}
