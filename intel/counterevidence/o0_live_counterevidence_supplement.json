@@ -10,8 +10,10 @@
    "ai_attribution": "INDIRECT (general cloud, not AI-specific workload)"
   },
   "2_AI_HARDWARE_EFFICIENCY_GAINS": {
-   "status": "SEARCH_NOT_RUN",
-   "note": "No dedicated query executed this run for GPU/accelerator perf-per-watt trend papers; budget-limited."
+   "status": "EVIDENCE_FOUND_VENDOR_CLAIMED_NOT_INDEPENDENTLY_VERIFIED",
+   "source": "https://www.networkworld.com/article/3550686/as-global-ai-energy-usage-mounts-nvidia-claims-it-has-reduced-its-consumption-by-up-to-110000x.html (NVIDIA VP presentation at AI Summit DC, reported by Network World)",
+   "finding": "NVIDIA claims ~100,000x energy-per-token reduction for inference and ~2,000x for training over roughly 10 years of GPU generations (2014-era hardware vs. Blackwell); article explicitly notes these are vendor-claimed figures with no independent third-party verification, and the 100,000x figure applies specifically to token-generation inference, not all AI workloads.",
+   "ai_attribution": "DIRECT (AI-accelerator-specific) but evidence_strength is VENDOR_CLAIM, not independently measured -- recorded honestly as such, not upgraded to an independently-verified efficiency finding."
   },
   "3_ELECTRICITY_DEMAND_GROWTH_PREDATES_AI_BOOM": {
    "status": "SEARCH_RUN_LEADS_FOUND_NOT_FETCHED",
@@ -22,10 +24,16 @@
    "status": "SEARCH_NOT_RUN"
   },
   "5_EV_ELECTRIFICATION_DEMAND": {
-   "status": "SEARCH_NOT_RUN"
+   "status": "EVIDENCE_FOUND",
+   "source": "https://www.iea.org/reports/global-ev-outlook-2025/outlook-for-energy-demand (IEA Global EV Outlook 2025)",
+   "finding": "OBSERVED: global EV charging consumed ~180 TWh of electricity in 2024 (~0.7% of final global electricity consumption), a 60% increase over 2023. FORECAST (IEA Stated Policies Scenario): EV electricity demand could grow more than fourfold to ~780 TWh by 2030 (~2.5% of global electricity demand; >4% in Europe, 3.6% in China). No US-specific TWh figure was given in the fetched section. This is real, independent (non-AI) electricity-demand growth, confirming EV charging as a genuine alternative/parallel driver, though at roughly half the 2024 OBSERVED scale of data center consumption (180 TWh vs. 415 TWh) and not shown to explain data-center-specific grid bottlenecks (e.g. PJM).",
+   "ai_attribution": "NONE (non-AI driver by construction)"
   },
   "6_POPULATION_GROWTH": {
-   "status": "SEARCH_NOT_RUN"
+   "status": "SEARCH_RUN_EVIDENCE_AGAINST_THIS_DIRECTION",
+   "source": "https://www.eia.gov/todayinenergy/detail.php?id=65264 (EIA Today in Energy)",
+   "finding": "EIA attributes the recent reversal of a near-two-decade electricity-consumption plateau primarily to the COMMERCIAL sector (explicitly including data centers, forecast +2.6%/yr 2020-2026) and INDUSTRIAL sector (including manufacturing, +2.1%/yr), while the RESIDENTIAL sector -- the segment most directly tied to population growth -- is forecast to grow slowest (+0.7%/yr) and is described as driven by temperature, not population. This is real evidence AGAINST population growth as a primary driver of the current demand surge, and is consistent with (not a refutation of) the data-center/AI-adjacent attribution, while also naming industrial/manufacturing growth as a comparably-sized co-driver.",
+   "ai_attribution": "NOT_APPLICABLE (counts against a non-AI alternative, not evidence about AI itself)"
   },
   "7_WEATHER_CLIMATE_DEMAND": {
    "status": "SEARCH_NOT_RUN"
@@ -44,8 +52,8 @@
    "status": "SEARCH_NOT_RUN"
   }
  },
- "directions_with_real_evidence_this_run": 2,
+ "directions_with_real_evidence_this_run": 5,
  "directions_partially_evidenced_this_run": 2,
- "directions_not_run_this_run": 6,
- "honest_conclusion": "This run improved on the prior COUNTEREVIDENCE_GAP (0/4 local-corpus directions) by actually fetching live sources for 2 of the 10 requested directions and partially touching 2 more, out of session budget. 6 directions remain SEARCH_NOT_RUN -- this is disclosed, not treated as SEARCH_RUN_NO_EVIDENCE or ACCESS_BLOCKED, since no query was actually attempted for them this run."
+ "directions_not_run_this_run": 3,
+ "honest_conclusion": "Across both O-0 sessions: real evidence was fetched for 5 of the 10 requested directions (efficiency improvements, non-AI cloud growth, AI hardware efficiency [vendor-claimed], EV electrification demand, and population growth [evidence found AGAINST this direction, not for it]); 2 more are partially evidenced (pre-AI-boom growth trend, grid investment already planned); 3 (manufacturing/reshoring demand specifically, weather/climate demand, regions with DC growth but no reported power problems) remain SEARCH_NOT_RUN this run -- disclosed honestly, not treated as SEARCH_RUN_NO_EVIDENCE or ACCESS_BLOCKED since no query was attempted for them."
 }
