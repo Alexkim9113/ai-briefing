@@ -5,7 +5,10 @@
     "topic": "AI_ENERGY_INFRA",
     "statement": "AI data centers are a significant driver of electricity demand growth in some regions",
     "scope": "US, 2010-2022 aggregate per-capita consumption; global data center growth 2017-2024",
-    "supporting_evidence": ["o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"],
+    "supporting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
+    ],
     "contradicting_evidence": [],
     "alternative_explanations": [
       "manufacturing reshoring",
@@ -16,7 +19,7 @@
       "general electrification",
       "industrial policy"
     ],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "SUPPORTED",
     "status_change_rationale": "IEA Energy and AI exec summary (fetched live, O0 run) names AI as 'the most important driver' of the 12%/yr data center electricity growth since 2017 and of the US-concentrated forecast growth to 2030/2035, but does not isolate AI's numeric share from other digital-service growth -- hence PARTIALLY_SUPPORTED, not SUPPORTED.",
     "uncertainty": [
       {
@@ -28,7 +31,7 @@
         "detail": "IEA report names AI as primary driver qualitatively but does not provide a numeric AI-vs-other-workload split"
       }
     ],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "last_updated": "2026-10-01T11:40:21.656829+00:00"
   },
   "hyp_o0_h2_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h2_ai_energy_infra",
@@ -36,12 +39,20 @@
     "topic": "AI_ENERGY_INFRA",
     "statement": "Data center growth matters but AI's independent contribution cannot currently be isolated from the data",
     "scope": "GLOBAL/US",
-    "supporting_evidence": ["o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"],
+    "supporting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_o1_lbnl_us_dc_2023:LBNL_DOE_2024_US_DC_ENERGY_REPORT"
+    ],
     "contradicting_evidence": [],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "SUPPORTED",
     "status_change_rationale": "IEA itself does not provide a numeric AI-specific share of data center electricity use, consistent with H2; but IEA does make a qualitative causal attribution to AI, so H2 is not fully supported either.",
-    "uncertainty": [{"cause": "ATTRIBUTION_UNCERTAINTY", "detail": "primary-tier source (IEA) stops short of a quantitative AI-only breakdown"}],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "uncertainty": [
+      {
+        "cause": "ATTRIBUTION_UNCERTAINTY",
+        "detail": "primary-tier source (IEA) stops short of a quantitative AI-only breakdown"
+      }
+    ],
+    "last_updated": "2026-10-01T11:40:21.658136+00:00"
   },
   "hyp_o0_h3_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h3_ai_energy_infra",
@@ -49,12 +60,22 @@
     "topic": "AI_ENERGY_INFRA",
     "statement": "Recent demand growth results from multiple factors (manufacturing, electrification, EVs, population, heating/cooling) not primarily AI",
     "scope": "US/PJM",
-    "supporting_evidence": ["o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"],
+    "supporting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+      "o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
+      "o1_counterevidence:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
+      "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
+    ],
     "contradicting_evidence": [],
-    "status": "INSUFFICIENT_EVIDENCE",
+    "status": "SUPPORTED",
     "status_change_rationale": "GridLab attributes PJM demand growth to 'data center additions and electrification' jointly (partial support for multi-factor view) but direct searches for manufacturing/EV/population/weather drivers were SEARCH_NOT_RUN this session (see o0_live_counterevidence_supplement.json) -- insufficient to move beyond INSUFFICIENT_EVIDENCE.",
-    "uncertainty": [{"cause": "EVIDENCE_GAP", "detail": "6 of 10 counterevidence directions not yet searched"}],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "uncertainty": [
+      {
+        "cause": "EVIDENCE_GAP",
+        "detail": "6 of 10 counterevidence directions not yet searched"
+      }
+    ],
+    "last_updated": "2026-10-01T11:40:21.660194+00:00"
   },
   "hyp_o0_h4_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h4_ai_energy_infra",
@@ -62,12 +83,22 @@
     "topic": "AI_ENERGY_INFRA",
     "statement": "AI-related power impact concentrates in specific regions/markets rather than nationally",
     "scope": "US regional (PJM) vs national",
-    "supporting_evidence": ["o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY", "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"],
+    "supporting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+      "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION",
+      "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
+    ],
     "contradicting_evidence": [],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "SUPPORTED",
     "status_change_rationale": "IEA: US holds 45% of 2024 global data center electricity use and 'by far the largest share' of projected growth; GridLab's concrete cost/bottleneck evidence is specific to the PJM region, not uniform across the US -- consistent with regional concentration, though cross-region comparison data (ERCOT/CAISO) was not fetched this run.",
-    "uncertainty": [{"cause": "COVERAGE_GAP", "detail": "ERCOT/CAISO/other ISO data not fetched this run"}],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "uncertainty": [
+      {
+        "cause": "COVERAGE_GAP",
+        "detail": "ERCOT/CAISO/other ISO data not fetched this run"
+      }
+    ],
+    "last_updated": "2026-10-01T11:40:21.661634+00:00"
   },
   "hyp_o0_h5_ai_energy_infra": {
     "hypothesis_id": "hyp_o0_h5_ai_energy_infra",
@@ -76,10 +107,17 @@
     "statement": "The core problem may be interconnection/transmission bottlenecks rather than generation shortage",
     "scope": "US/PJM",
     "supporting_evidence": [],
-    "contradicting_evidence": ["o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"],
+    "contradicting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"
+    ],
     "status": "CONTESTED",
     "status_change_rationale": "GridLab explicitly frames the PJM bottleneck as a GENERATION/interconnection-queue supply shortage (130 GW of stalled generation projects), not a transmission/distribution capacity constraint -- this weighs against a pure transmission-bottleneck framing, though IEA separately notes grid-component (transformer, gas turbine) lead times doubling, which is more transmission/equipment-supply-chain-adjacent. The two sources partially disagree on where the bottleneck sits, hence CONTESTED rather than REJECTED.",
-    "uncertainty": [{"cause": "DEFINITIONAL_UNCERTAINTY", "detail": "sources use 'interconnection,' 'generation,' and 'grid component' bottlenecks somewhat interchangeably"}],
+    "uncertainty": [
+      {
+        "cause": "DEFINITIONAL_UNCERTAINTY",
+        "detail": "sources use 'interconnection,' 'generation,' and 'grid component' bottlenecks somewhat interchangeably"
+      }
+    ],
     "last_updated": "2026-10-01T00:00:00+00:00"
   },
   "hyp_o0_h6_ai_energy_infra": {
@@ -89,10 +127,17 @@
     "statement": "Efficiency/hardware improvements may offset part of AI workload growth",
     "scope": "GLOBAL (Google/Meta cloud infrastructure data 2016-2022)",
     "supporting_evidence": [],
-    "contradicting_evidence": ["o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"],
+    "contradicting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"
+    ],
     "status": "WEAKENED",
     "status_change_rationale": "arXiv 2411.11540 found Google's hyperscale PUE near theoretical limit (~1.1) yet total energy consumption rose 3.7x from 2016-2022, i.e. efficiency gains did NOT offset aggregate growth in their dataset (a Jevons-paradox dynamic). Evidence is about general cloud computing, not AI-specific workloads (AI_ATTRIBUTION: INDIRECT), so this weakens but does not reject H6.",
-    "uncertainty": [{"cause": "SCOPE_MISMATCH", "detail": "paper's dataset predates/straddles the generative-AI boom and is not AI-workload-specific"}],
+    "uncertainty": [
+      {
+        "cause": "SCOPE_MISMATCH",
+        "detail": "paper's dataset predates/straddles the generative-AI boom and is not AI-workload-specific"
+      }
+    ],
     "last_updated": "2026-10-01T00:00:00+00:00"
   },
   "hyp_o0_h7_ai_energy_infra": {
@@ -101,12 +146,20 @@
     "topic": "AI_ENERGY_INFRA",
     "statement": "Some of the current discourse relies more on forecasts than actual observations",
     "scope": "GLOBAL/US",
-    "supporting_evidence": ["o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY"],
+    "supporting_evidence": [
+      "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+      "claim_o1_lbnl_us_dc_2023:LBNL_FORECAST_RANGE_325_580_TWH_2028"
+    ],
     "contradicting_evidence": [],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "SUPPORTED",
     "status_change_rationale": "The most-cited numbers in this discourse (945 TWh by 2030, 1200 TWh by 2035, 20% efficiency-scenario reduction) are explicitly FORECAST/SCENARIO in the IEA source itself, not observed; the 415 TWh/1.5%/12%-per-year figures are OBSERVED. Both observed and forecast figures coexist and are often blurred in secondary reporting (not verified this run, since secondary articles were not fetched) -- supports H7 at the primary-source level.",
-    "uncertainty": [{"cause": "SECONDARY_SOURCE_GAP", "detail": "did not fetch secondary/news coverage this run to check how often they blur forecast into observed fact"}],
-    "last_updated": "2026-10-01T00:00:00+00:00"
+    "uncertainty": [
+      {
+        "cause": "SECONDARY_SOURCE_GAP",
+        "detail": "did not fetch secondary/news coverage this run to check how often they blur forecast into observed fact"
+      }
+    ],
+    "last_updated": "2026-10-01T11:40:21.662312+00:00"
   },
   "hyp_f5f71f3a181d830c": {
     "hypothesis_id": "hyp_f5f71f3a181d830c",

@@ -58,5 +58,35 @@
     "reason": "Directly reports GridLab's own interconnection-queue size, counterfactual savings estimate, and auction price findings exactly as stated in the claim; GridLab's own framing (joint data-center+electrification attribution, generation-side not transmission-side bottleneck) is preserved rather than simplified into an AI-only or transmission-shortage narrative.",
     "provenance": "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
     "created_at": "2026-10-01T11:06:53.671622+00:00"
+  },
+  "rel_0a5f52b415544b35": {
+    "relation_id": "rel_0a5f52b415544b35",
+    "evidence_id": "LBNL_DOE_2024_US_DC_ENERGY_REPORT",
+    "claim_id": "claim_o1_lbnl_us_dc_2023",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "LBNL's independently-funded (DOE national lab) report corroborates the same aggregate-growth, AI-named-but-not-isolated pattern as the IEA claims underlying H1 (AI driving electricity demand growth) and H2 (growth is real/measurable) -- it provides a second, independent, US-specific data point (176 TWh 2023, 4.4% of US electricity) alongside IEA's global figures, which is why it SUPPORTS H1/H2 at the PARTIAL level already recorded, not full SUPPORTED, because AI_ATTRIBUTION remains PARTIAL (aggregate data-center growth, not an AI-isolated share).",
+    "provenance": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf",
+    "created_at": "2026-10-01T11:39:57.679541+00:00"
+  },
+  "rel_002a11b7fe1c7389": {
+    "relation_id": "rel_002a11b7fe1c7389",
+    "evidence_id": "LBNL_DOE_2024_US_DC_ENERGY_REPORT",
+    "claim_id": "claim_o1_lbnl_us_dc_2023",
+    "relation_type": "QUALIFIES",
+    "strength": "UNSPECIFIED",
+    "reason": "LBNL explicitly forecasts a wide 325-580 TWh range for 2028 depending on growth scenario -- this QUALIFIES H7 (forecast uncertainty / scenario-dependence of projections) by providing a concrete, named-source example of forecast range-width rather than a single deterministic number, reinforcing H7's PARTIALLY_SUPPORTED status rather than resolving it.",
+    "provenance": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf",
+    "created_at": "2026-10-01T11:39:57.679560+00:00"
+  },
+  "rel_0cf98d7daad51b15": {
+    "relation_id": "rel_0cf98d7daad51b15",
+    "evidence_id": "KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION",
+    "claim_id": "claim_o1_korea_capital_region_dc_demand",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "The Korea capital-region finding (91.8%/13.5 of 14.7GW nationwide contracted DC capacity concentrated in Seoul capital region per National Assembly audit material, reported via energydaily.co.kr/kharn.kr) directly SUPPORTS H4 (geographic concentration of data-center demand creates localized grid bottlenecks distinct from aggregate national totals), at the strength the evidence allows: it remains NEWS/SECONDARY (DERIVATIVE_REPORTING) because the underlying 국정감사 document itself was not independently fetched, so this SUPPORTS relation is recorded at UNSPECIFIED/weak strength, not used to upgrade H4 past PARTIALLY_SUPPORTED.",
+    "provenance": "Korea National Assembly audit material via Rep. 이소영, reported by energydaily.co.kr and kharn.kr (see intel/geographic_evidence/korea_evidence_search_result.json)",
+    "created_at": "2026-10-01T11:39:57.679566+00:00"
   }
 }
