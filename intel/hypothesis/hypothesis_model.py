@@ -54,10 +54,21 @@ def _save(data):
     HYPOTHESES_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def upsert_hypothesis(hyp, new_counterevidence_id=None, new_support_id=None, new_alternative=None):
+def upsert_hypothesis(hyp, new_counterevidence_id=None, new_support_id=None, new_alternative=None,
+                       all_claims=None):
     """The ONLY function permitted to write hypotheses.json. Appends evidence rather than
     overwriting (counterevidence is never deleted or averaged away), recomputes status
-    deterministically, and re-stamps last_updated."""
+    deterministically, and re-stamps last_updated.
+
+    O-1C Section 6-8: status is now determined by a SINGLE canonical path --
+    determine_canonical_status() -- which wraps classify_status() with the O-1B quality-aware
+    evaluation layer AND the Unresolved Evidence ID Guard, instead of calling the raw
+    count-based classify_status() directly. classify_status() itself is UNCHANGED and remains
+    available as a diagnostic/legacy function (existing tests and callers that use it directly
+    keep working), but it no longer has sole authority over what gets written to the `status`
+    field. This closes the O-1B gap where appending evidence silently bypassed the quality
+    layer and could revert a quality-corrected status (e.g. H3/H4 PARTIALLY_SUPPORTED) back to
+    a naive count-based SUPPORTED."""
     hyps = _load()
     if new_counterevidence_id and new_counterevidence_id not in hyp["contradicting_evidence"]:
         hyp["contradicting_evidence"].append(new_counterevidence_id)
@@ -65,7 +76,10 @@ def upsert_hypothesis(hyp, new_counterevidence_id=None, new_support_id=None, new
         hyp["supporting_evidence"].append(new_support_id)
     if new_alternative and new_alternative not in hyp["alternative_explanations"]:
         hyp["alternative_explanations"].append(new_alternative)
-    hyp["status"] = classify_status(hyp["supporting_evidence"], hyp["contradicting_evidence"])
+
+    canonical = determine_canonical_status(hyp, all_claims=all_claims)
+    hyp["status"] = canonical["final_status"]
+    hyp["canonical_status_diagnostics"] = canonical
     hyp["last_updated"] = datetime.now(timezone.utc).isoformat()
     hyps[hyp["hypothesis_id"]] = hyp
     _save(hyps)
@@ -226,6 +240,106 @@ def evaluate_hypothesis_sufficiency(hyp, all_claims, requirements=None):
         "supporting_evaluation": support_eval,
         "contradicting_evaluation": counter_eval,
         "guard_trail": guard_trail,
+    }
+
+
+def _resolve_ids(evidence_ids, all_claims):
+    resolved, unresolved = [], []
+    for eid in evidence_ids:
+        if _ee.resolve_evidence_id(eid, all_claims) is not None:
+            resolved.append(eid)
+        else:
+            unresolved.append(eid)
+    return resolved, unresolved
+
+
+def _load_all_claims():
+    """Loads the canonical claims store for evaluation. Never writes it. Falls back to {} (all
+    evidence ids then resolve as unresolved, which is the conservative/safe direction) if the
+    claims module cannot be imported for some reason -- this function must never raise and block
+    a hypothesis write."""
+    try:
+        claims_dir = HERE.parent / "claims"
+        import sys as _sys
+        if str(claims_dir) not in _sys.path:
+            _sys.path.insert(0, str(claims_dir))
+        import claim_model as _cm  # noqa: E402
+        return _cm.load_claims()
+    except Exception:
+        return {}
+
+
+def determine_canonical_status(hyp, all_claims=None, requirements=None):
+    """O-1C Sections 6-8 -- the SINGLE canonical path for determining a hypothesis's status on
+    write. Exactly one function (this one) decides the `status` field; upsert_hypothesis() calls
+    only this. It is still fully deterministic: same evidence in -> same status out, no LLM
+    judgment, no single combined score (Section 7's independent-dimensions rule still holds --
+    the guard trail stays a list of independent pass/fail records, never collapsed to a number).
+
+    Unresolved Evidence ID Guard (Section 8): an evidence id that does not resolve to an actual
+    canonical Claim record (e.g. a legacy 'o1_counterevidence:...' or acquisition-result
+    reference that was never turned into a Claim) can never, by itself, drive an UPGRADE of the
+    naive count-based status. Concretely: classify_status() is first computed on the
+    RESOLVED-ONLY evidence arrays (never the full arrays) to get a status that cannot be
+    artificially inflated by an unresolved id; this resolved-only status is then only ever
+    further DOWNGRADED (never upgraded) by the O-1B quality guards, never upgraded by the
+    presence of unresolved ids back toward the full-array count-based status.
+    """
+    all_claims = all_claims if all_claims is not None else _load_all_claims()
+    sup_ids = hyp.get("supporting_evidence", [])
+    contra_ids = hyp.get("contradicting_evidence", [])
+
+    resolved_sup, unresolved_sup = _resolve_ids(sup_ids, all_claims)
+    resolved_contra, unresolved_contra = _resolve_ids(contra_ids, all_claims)
+
+    legacy_full_status = classify_status(sup_ids, contra_ids)  # diagnostic only, never written
+    resolved_only_status = classify_status(resolved_sup, resolved_contra)
+
+    # Run the O-1B quality-aware guard layer against the RESOLVED-ONLY evidence (unresolved ids
+    # must not even enter the guard's SOURCE_TIER/DIRECTNESS/ATTRIBUTION/TEMPORAL evaluation as
+    # if they were real evidence -- resolve_evidence_id() already returns None for them so
+    # evaluate_hypothesis_sufficiency would tag them UNKNOWN rather than omit them, which could
+    # itself trip a guard spuriously; using the resolved-only arrays avoids that).
+    probe_hyp = dict(hyp)
+    probe_hyp["supporting_evidence"] = resolved_sup
+    probe_hyp["contradicting_evidence"] = resolved_contra
+    quality_result = evaluate_hypothesis_sufficiency(probe_hyp, all_claims, requirements=requirements)
+    final_status = quality_result["recommended_status"]
+
+    # Symmetric guard for the contradicting side (Section 9 of O-1C root-cause work): a REJECTED
+    # base status (contra-only, resolved evidence) driven by a single independent-origin item
+    # whose attribution/directness is not a clean DIRECT/AI_DIRECT match is WEAKENED rather than
+    # REJECTED -- identical rigor to the SUPPORTED-side guards, applied to counterevidence
+    # (Section 15's "identical evaluation rigor" principle), not a new asymmetric rule.
+    contra_guard_trail = []
+    if final_status == "REJECTED" and resolved_contra:
+        contra_eval = quality_result["contradicting_evaluation"]
+        distinct = _distinct_origin_count(contra_eval)
+        directness = {r["EVIDENCE_DIRECTNESS"] for r in contra_eval}
+        if distinct <= 1 and not (directness & {"DIRECT"}):
+            contra_guard_trail.append({
+                "guard": "SINGLE_ORIGIN_COUNTEREVIDENCE_GUARD", "result": "FAILED",
+                "detail": f"{len(resolved_contra)} contradicting item(s) collapse to {distinct} "
+                          f"independent origin(s) with directness {sorted(directness)} -- "
+                          "weakens rather than fully rejects",
+            })
+            final_status = "WEAKENED"
+        else:
+            contra_guard_trail.append({
+                "guard": "SINGLE_ORIGIN_COUNTEREVIDENCE_GUARD", "result": "PASSED",
+                "detail": f"{distinct} independent origin(s), directness {sorted(directness)}",
+            })
+
+    return {
+        "legacy_full_status_count_based": legacy_full_status,
+        "resolved_only_status_count_based": resolved_only_status,
+        "quality_aware_status": quality_result["recommended_status"],
+        "final_status": final_status,
+        "resolved_supporting_evidence": resolved_sup,
+        "unresolved_supporting_evidence": unresolved_sup,
+        "resolved_contradicting_evidence": resolved_contra,
+        "unresolved_contradicting_evidence": unresolved_contra,
+        "guard_trail": quality_result["guard_trail"] + contra_guard_trail,
     }
 
 

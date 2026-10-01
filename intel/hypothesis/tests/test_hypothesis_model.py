@@ -4,6 +4,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PKG_DIR = HERE.parent
 sys.path.insert(0, str(PKG_DIR))
+sys.path.insert(0, str(PKG_DIR.parent / "claims"))
 import hypothesis_model as m  # noqa: E402
 
 
@@ -45,14 +46,34 @@ def test_no_evidence_is_insufficient_not_open():
 
 
 def test_counterevidence_never_deleted_only_appended():
+    # O-1C: the canonical write path (determine_canonical_status) resolves evidence ids against
+    # the real claims.json, so this test now uses actual resolvable claim_ids rather than
+    # placeholder strings -- an unresolved placeholder id can no longer drive a SUPPORTED/
+    # CONTESTED determination at all (see test_o1c_canonical_status.py's Unresolved Evidence ID
+    # Guard tests), which is the intended O-1C behavior change.
     _cleanup()
+    import claim_model as cm  # noqa: E402
+    real_claim_id = next(iter(cm.load_claims().keys()))
     h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp")
-    h = m.upsert_hypothesis(h, new_support_id="ev1")
-    assert h["status"] == "SUPPORTED"
-    h = m.upsert_hypothesis(h, new_counterevidence_id="ev2")
-    assert h["supporting_evidence"] == ["ev1"], "support must still be present, never dropped"
-    assert h["contradicting_evidence"] == ["ev2"]
-    assert h["status"] == "CONTESTED"
+    h = m.upsert_hypothesis(h, new_support_id=real_claim_id)
+    assert h["status"] in ("SUPPORTED", "PARTIALLY_SUPPORTED"), h["status"]
+    assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "SUPPORTED"
+    h = m.upsert_hypothesis(h, new_counterevidence_id=real_claim_id)
+    assert h["supporting_evidence"] == [real_claim_id], "support must still be present, never dropped"
+    assert h["contradicting_evidence"] == [real_claim_id]
+    assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "CONTESTED"
+    _cleanup()
+
+
+def test_unresolved_evidence_id_alone_cannot_reach_supported():
+    # O-1C Section 8: a placeholder/legacy id that does not resolve to a real Claim record must
+    # never, by itself, produce SUPPORTED.
+    _cleanup()
+    h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp 2")
+    h = m.upsert_hypothesis(h, new_support_id="o1_counterevidence:does_not_exist_in_claims_json")
+    assert h["status"] == "INSUFFICIENT_EVIDENCE", h["status"]
+    assert h["canonical_status_diagnostics"]["unresolved_supporting_evidence"] == [
+        "o1_counterevidence:does_not_exist_in_claims_json"]
     _cleanup()
 
 
