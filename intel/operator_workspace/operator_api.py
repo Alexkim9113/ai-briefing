@@ -19,6 +19,9 @@ import research_rights_model as rights  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "private_research_vault"))
 import vault  # noqa: E402
 
+sys.path.insert(0, str(HERE.parent / "source_health"))
+import source_health_model as sh  # noqa: E402
+
 ROOT = HERE.parents[1]
 INTEL_DIR = ROOT / "intel"
 
@@ -270,4 +273,39 @@ def source_health():
             rows.append({"source": src, "status": "NOT_INSTRUMENTED", "last_checked": "UNKNOWN",
                         "last_http_status": "UNKNOWN", "last_success": "UNKNOWN",
                         "known_limitation": "no fetch record available"})
+    return rows
+
+
+def source_health_pilot_summary():
+    """N-5 Section 29 -- Operator Source Health UI: counts per state from the real, precomputed
+    pilot artifact (intel/source_health/source_health_result.json), never computed at request
+    time. Returns NOT_INSTRUMENTED-only if the pilot has never been run."""
+    result = sh.load_result()
+    if result is None:
+        return {"pilot_run": False, "checked_at": None, "counts": {}, "sources": []}
+    records = sh.mark_stale(result["results"])
+    counts = {}
+    for r in records:
+        counts[r["status"]] = counts.get(r["status"], 0) + 1
+    return {"pilot_run": True, "checked_at": result["checked_at"], "counts": counts, "sources": records}
+
+
+def source_inspector():
+    """Section 19 -- Source Registry viewed through the Operator. Joins the 299-entry source
+    registry (intel/sources.json) with the small Tier-1 live-pilot result where one exists; every
+    other source honestly stays NOT_INSTRUMENTED, never guessed."""
+    registry = _load(INTEL_DIR / "sources.json")
+    pilot = sh.load_result()
+    pilot_by_id = {r["source_id"]: r for r in (pilot["results"] if pilot else [])}
+    rows = []
+    for source_id, entry in registry.items():
+        health = pilot_by_id.get(source_id)
+        rows.append({
+            "source_id": source_id,
+            "name": entry.get("canonical_name") or source_id,
+            "source_type": entry.get("source_type") or "UNKNOWN",
+            "country": entry.get("country") or "UNKNOWN",
+            "health_status": health["status"] if health else "NOT_INSTRUMENTED",
+            "last_checked": health["last_checked"] if health else "UNKNOWN",
+        })
     return rows

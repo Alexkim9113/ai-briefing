@@ -44,6 +44,7 @@ ul{padding-left:20px}
 .sources li{font-size:0.9em}
 .axis-note{color:var(--sub);font-size:0.78em}
 footer{margin-top:40px;color:var(--sub);font-size:0.78em;border-top:1px solid var(--line);padding-top:12px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent-violet);outline-offset:2px}
 """
 
 
@@ -139,7 +140,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC"):
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
         f"<title>{_esc(presentation['display_title'])}</title><style>{CSS}</style></head><body>"
-        f"<main>"
+        f"<main aria-label='Intelligence Report'>"
         f"<h1>{_esc(presentation['display_title'])} {_badge(presentation['readiness'])}</h1>"
         f"<p class='meta'>report_id={_esc(presentation['report_id'])} "
         f"version={_esc(presentation['version'])} view={_esc(view)}</p>"
