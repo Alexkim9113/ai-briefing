@@ -3358,7 +3358,7 @@
   {
    "change_ids": [],
    "claim_id": "68821b181460df0c:c2",
-   "claim_status": "SECONDARY_ONLY",
+   "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "68821b181460df0c",
    "event_ids": [],
    "evidence_record_ids": [],
