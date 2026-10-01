@@ -1,0 +1,13 @@
+{
+  "wiring_location": "briefing.py::_mx_ok() (around line 1152-1173), called from ai_briefs()'s real Gemini-based production path -- NOT mx_note(), which is only the fallback used when it[\"mx\"] is absent",
+  "wiring_method": "minimal insertion -- no rewrite of _mx_ok()'s existing checks (brief/point length, MX_BAN, _mx_copied all unchanged)",
+  "scope_implemented": "Only the documented causal/attribution marker check (metaxis_point_grounding._has_causal_claim) is enforced in production. A causal/attribution-phrased Point with no source_document_evidence/evidence_network_refs/intelligence_object_refs (always the case today, since briefing.py items carry no per-item evidence/claim/intelligence ids) is downgraded: the Point (\"p\") is dropped to an empty string, the QUICK BRIEF (\"b\") is kept.",
+  "scope_not_implemented": "Full SOURCE_SUPPORTED / EVIDENCE_NETWORK_SUPPORTED / INTELLIGENCE_OBJECT_SUPPORTED grounding for every non-causal Point is NOT wired -- briefing.py's items have no evidence_ids/claim_ids/intelligence_ids fields yet, so applying the module's strict default (ungrounded-and-non-causal = UNSUPPORTED_INTERPRETATION) in production would drop nearly all Points and is an unacceptable regression. This is an honest, deliberate scope limit, not an oversight.",
+  "failure_mode": "wrapped in try/except -- any grounding-module load/call failure is swallowed and the pre-N-1 behavior (Point kept as-is) is preserved, so this wiring can never crash or regress the existing pipeline",
+  "status": "CONDITIONALLY_READY",
+  "status_reason": "The literal banned example from Te's spec (causal/attribution AI-demand claims with no evidence) is now blocked in the real production path. General non-causal unsupported-interpretation blocking remains a known gap pending per-item evidence/claim/intelligence-object wiring in a future phase.",
+  "tests": [
+    "intel/public_relevance/tests/test_metaxis_point_grounding.py (6 tests, standalone module logic)",
+    "intel/public_relevance/tests/test_metaxis_point_grounding_production.py (4 tests, real briefing.py._mx_ok() wiring)"
+  ]
+}

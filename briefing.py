@@ -1137,12 +1137,40 @@ def _mx_call(batch, model=MX_MODEL):
     return json.loads(txt)
 
 
+def _load_metaxis_point_grounding_module():
+    key = "_si_for_briefing__metaxis_point_grounding"
+    if key in sys.modules:
+        return sys.modules[key]
+    path = ROOT / "intel" / "public_relevance" / "metaxis_point_grounding.py"
+    spec = _si_ilu.spec_from_file_location(key, path)
+    mod = _si_ilu.module_from_spec(spec)
+    sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def _mx_ok(it, r):
     b, p = (r.get("brief") or "").strip(), (r.get("point") or "").strip()
     tags = [re.sub(r"^#", "", str(t)).strip() for t in (r.get("tags") or []) if str(t).strip()]
     src = " ".join([it["title"], it.get("summary") or "", it.get("detail") or ""])
     if not b or not p or len(b) > 400 or len(p) > 400 or MX_BAN.search(b + p) or _mx_copied(b + p, src):
         return None
+    # N-1 METAXIS_POINT_GROUNDING_GATE -- production wiring. Only the narrow, documented causal/
+    # attribution-marker check is enforced here (the exact unsupported "AI 수요 증가가 전력망 위기를
+    # 만들고 있다" pattern Te's spec bans); this pipeline has no per-item evidence_network/
+    # intelligence_object ids yet, so a full SOURCE_SUPPORTED/EVIDENCE_NETWORK_SUPPORTED check for
+    # every non-causal Point would over-block and is left CONDITIONALLY_READY, not wired here. An
+    # ungrounded causal Point is downgraded (dropped), never the whole item -- QUICK BRIEF survives.
+    try:
+        grounding_mod = _load_metaxis_point_grounding_module()
+        if grounding_mod._has_causal_claim(p):
+            grounding = grounding_mod.check_point_grounding(p, source_document_evidence=None,
+                                                             evidence_network_refs=None,
+                                                             intelligence_object_refs=None)
+            if grounding["status"] == "UNSUPPORTED_INTERPRETATION":
+                p = ""
+    except Exception:
+        pass
     tags = list(dict.fromkeys(t for t in tags if len(t) <= 20))[:5]
     if it.get("tags_fixed"):  # 운영자가 정한 태그가 있으면 그것을 쓴다
         tags = list(it["tags_fixed"])[:5]

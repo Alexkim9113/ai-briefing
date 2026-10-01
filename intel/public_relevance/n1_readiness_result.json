@@ -1,0 +1,38 @@
+{
+  "goal_1_content_aware_relevance": {
+    "status": "DONE",
+    "files": ["intel/public_relevance/content_aware_relevance.py", "intel/public_relevance/content_aware_corpus_audit.py"],
+    "result_file": "intel/public_relevance/content_aware_relevance_audit_result.json",
+    "known_gap": "relevance_scope currently only differentiates DIRECT vs NONE -- STRUCTURAL and CONTEXTUAL are defined in RELEVANCE_SCOPES but never actually assigned by classify_content_aware_relevance(). This is a disclosed simplification, not a hidden one: the DIRECT/NONE split alone already satisfies this round's publication_eligible gating (only DIRECT is ever public-eligible), but the richer STRUCTURAL/CONTEXTUAL distinction for Intelligence-evidence-only documents is not yet implemented and should be treated as NOT_READY for any future feature that depends on it specifically."
+  },
+  "goal_2_metaxis_point_grounding_production": {
+    "status": "CONDITIONALLY_READY",
+    "detail": "see intel/public_relevance/metaxis_point_grounding_production_result.json -- causal/attribution claims are gated in the real briefing.py production path; full non-causal grounding is a known, disclosed gap pending per-item evidence/claim wiring."
+  },
+  "goal_3_research_news_separation": {
+    "status": "DONE",
+    "files": ["intel/research_corpus/research_identity.py", "intel/research_corpus/research_corpus_audit.py"],
+    "result_files": [
+      "intel/research_corpus/research_corpus_audit_result.json",
+      "intel/research_corpus/research_news_migration_result.json",
+      "intel/research_corpus/research_source_coverage_result.json"
+    ],
+    "real_numbers": {
+      "total_documents": 601,
+      "RESEARCH_IDENTITY_CONFIRMED": 58,
+      "NEWS_ABOUT_RESEARCH": 75,
+      "NO_IDENTITY_NEWS": 468,
+      "duplicate_identity_groups_found": 0
+    },
+    "rights_model": "reused intel/research_rights/research_rights_model.py and intel/private_research_vault/vault.py unchanged (M.5E-F) -- no rebuild; this corpus's rights_mode is already 100% LINK_ONLY so the 4-case PDF model maps 1:1 without new logic needed this round."
+  },
+  "acquisition_queue_scheduler_wiring": {
+    "status": "NOT_WIRED",
+    "reason": "N-0's acquisition_queue/queue_model.py utility was not audited against daily.yml's existing fetch jobs for conflict/duplication risk this round -- per Te's explicit instruction not to force this wiring, it remains utility-only."
+  },
+  "counterevidence_longitudinal": {
+    "status": "NOT_READY (unchanged from N-0)",
+    "reason": "No new counterevidence or TRANSITION evidence was discovered as a byproduct of this round's Research/News reclassification work -- existing COUNTEREVIDENCE_GAP and longitudinal NOT_READY statuses preserved unchanged, per Te's explicit instruction not to force-fill these."
+  },
+  "regression": "see n1_full_regression_result.txt for the full suite run"
+}

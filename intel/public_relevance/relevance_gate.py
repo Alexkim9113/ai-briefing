@@ -38,11 +38,15 @@ WEAK_ASSOCIATION_WORDS = (
 # ordinary English words (maintain/contain/remain/again/claim/email/...). A standalone "AI" token
 # is instead matched separately via _AI_TOKEN_RE (word-boundary, so it only matches the real
 # acronym, never a substring of a longer word).
+# N-1 narrowing: "neural network"/"딥러닝"/"머신러닝"/"multi-agent"/"foundation model" etc. were
+# REMOVED from this unambiguous list after N-1's negative-control audit found "neural network"
+# promoting a coral-reef biology article to AI_DIRECT on a bare substring match -- these terms are
+# real AI signals only WITH supporting context (source/category/field), so they live in
+# content_aware_relevance.AI_TECHNIQUE_TERMS (gated by _plausible_context()) instead. This list
+# keeps only terms that are not ambiguous with a non-AI domain.
 AI_CORE_TERMS = (
     "인공지능", "artificial intelligence", "llm", "대규모 언어모델", "생성형 ai", "chatgpt",
-    "gpt", "gemini", "claude", "딥러닝", "머신러닝", "machine learning", "deep learning",
-    "neural network", "신경망", "foundation model", "파운데이션 모델", "agentic ai", "에이전틱 ai",
-    "ai agent", "ai 에이전트", "multi-agent", "멀티에이전트",
+    "gpt", "gemini", "claude", "agentic ai", "에이전틱 ai", "ai agent", "ai 에이전트",
 )
 
 _AI_TOKEN_RE = re.compile(r"(?<![a-zA-Z0-9])ai(?![a-zA-Z0-9])", re.IGNORECASE)

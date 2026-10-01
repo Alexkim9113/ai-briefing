@@ -1,0 +1,17 @@
+{
+  "total_documents": 601,
+  "status_counts": {
+    "NO_IDENTITY_NEWS": 468,
+    "RESEARCH_IDENTITY_CONFIRMED": 58,
+    "NEWS_ABOUT_RESEARCH": 75
+  },
+  "identity_type_counts": {
+    "ARXIV_ID": 52,
+    "DOI": 6
+  },
+  "news_about_research_count": 75,
+  "confirmed_identity_but_not_research_tagged_count": 0,
+  "duplicate_identity_group_count": 0,
+  "duplicate_identity_groups": [],
+  "confirmed_identity_but_not_research_tagged": []
+}

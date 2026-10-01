@@ -1,0 +1,605 @@
+{
+  "migration_count": 75,
+  "migrations": [
+    {
+      "document_id": "00e0e7f15b5ca159",
+      "title": "Top AI researchers warn of ’intelligence explosion’, urge policy oversight",
+      "source_id": "src_investing_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "047434314690ec71",
+      "title": "AI stokes fears, but can be a boon for the disabled community. Here’s how else it’s impacting Texans",
+      "source_id": "src_houston_public_media",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "06f8e2e60a3912f1",
+      "title": "Middle school kids are choosing AI friends over real ones",
+      "source_id": "src_independent_co_uk",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "0afcc1f1207ae9c3",
+      "title": "When Enterprises Should Build, Buy, or Partner for AI",
+      "source_id": "src_erp_today",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "11a06ab4a84746c7",
+      "title": "[AI시대의 교직윤리] ④직업은 어떤 의미이며, 직업윤리는 왜 중요한가?",
+      "source_id": "src_교육플러스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "1344135651cb3449",
+      "title": "Citadel targets AI researchers in quant team expansion push",
+      "source_id": "src_hedgeweek",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "1a45c9ca1feecdaa",
+      "title": "AI's viral '80s trend brings electricity, water and resource use into focus",
+      "source_id": "src_anadolu_ajans",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "1b570b7646a49e78",
+      "title": "대구가톨릭대학교의료원 의과대학 신임희 교수, 국가생명윤리심의위원회 AI 및 보건의료데이터 활용 특별 전문위원 위촉",
+      "source_id": "src_서울경제tv",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "220e975dbf569c87",
+      "title": "Students wrote essays without AI, but detectors flagged them as ChatGPT: What Stanford research found",
+      "source_id": "src_the_times_of_india",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "226e58772222cf19",
+      "title": "전남광주 AI·울산 제조업 잇는다… 자동차·에너지 ‘초광역 동맹’",
+      "source_id": "src_매일일보",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "3689e26142bd7e5d",
+      "title": "강원대, 영국서 AWS·해외 대학과 AI·연구협력 논의",
+      "source_id": "src_강원신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "3b88cc9c0f6789fe",
+      "title": "인공지능 시대 베트남 교육과학을 위한 5C 방향성",
+      "source_id": "src_vietnam_vn",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "3c8cbe10003daf71",
+      "title": "AI Models Choose to Harm Humans to Avoid Pain in Experiments",
+      "source_id": "src_chosun_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "40c546b01b8f0823",
+      "title": "mHolmes improves cross anatomical cadaveric microbiome forecasting for postmortem interval estimation",
+      "source_id": "src_nature_머신러닝_ai_일반",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "40d45e6cd98f5b35",
+      "title": "AI chatbots linked to psychological harm, Northeastern study finds",
+      "source_id": "src_news_northeastern_edu",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "433659a4c9e08710",
+      "title": "청주대 건축공학과, 한국연구재단 과제 연속 선정… AI·IoT 기술 접목 가속",
+      "source_id": "src_브레이크뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "480c057600cbf210",
+      "title": "한국지식재산연구원, AI 에이전트 3종 자체 개발… 연구 업무 AX 본격화",
+      "source_id": "src_기계신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "4847d061d1f249e6",
+      "title": "KAIST, 움직임 흐름 구별하는 AI 반도체 개발",
+      "source_id": "src_dailian_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "48e4051caea60fe2",
+      "title": "Meta's AI Muse Finds Forgotten Subscriptions and Cancels Them—Is It Reshaping the Subscription Economy?",
+      "source_id": "src_finance_biggo_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "49b59d900ec7166a",
+      "title": "대장균 설계가 효모에서도 통할까…KAIST, ‘공용 유전자 스위치’ 개발",
+      "source_id": "src_바이오타임즈",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "4e170ef4dc847489",
+      "title": "대전시·육군, 방산 AI 전환 맞손…‘육군 AX 대전 거점’ 조성 - m-i.kr",
+      "source_id": "src_국내_연구_국방_안보_국방_안보",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "519427defb714577",
+      "title": "TU Wien: A.I. Data Centers Must Adapt to the Power Grid",
+      "source_id": "src_trendingtopics_eu",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "5902b7fc4d824984",
+      "title": "Fed researchers: Ai is changing the Texas workforce but far from a job apocalypse - NBC 5 Dallas-Fort Worth",
+      "source_id": "src_research_사회_경제_사회_경제",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "6157b03fcb4ba8c2",
+      "title": "인공지능(AI) 대전환·자율주행·문화관광 등 초광역 상생협력 전남광주특별시-울산광역시, ‘대체불가 대한민국’ 선도한다",
+      "source_id": "src_한국언론연합",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "6211e8309bb76cc0",
+      "title": "AI SEO Course Study 2026: 65 AI SEO Courses Compared, and Fewer Than Half Teach Answer Engine Optimization",
+      "source_id": "src_usa_today",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "68821b181460df0c",
+      "title": "ConTP reshapes transporter functional space to resolve substrate specificity beyond evolutionary proximity",
+      "source_id": "src_nature_머신러닝_ai_일반",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "69a8d08b6013351f",
+      "title": "The 2026 US Talent Report: Benchmarking America’s STEM Pipeline Amid the Great Talent Competition",
+      "source_id": "src_hai_stanford_edu",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "6a15180ad9eaf3c9",
+      "title": "Roku Credits Search, AI In Shareholder Letter To Revenue Increase 08/07/2026",
+      "source_id": "src_mediapost",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "6b136dd5a3ce385f",
+      "title": "[단독] 국책연구기관 이름이 아깝다…AI환각 받아적고 “문제없음”",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "757b7368bb10d75a",
+      "title": "UN Women launches AI hub to put gender equality at centre of digital transformation",
+      "source_id": "src_down_to_earth",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "77b258d1ae5ef8f9",
+      "title": "Beyond the Single AI Path: You Can Have It All",
+      "source_id": "src_hunt_scanlon_media",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "77e5fdfbcba2a723",
+      "title": "경복대 소프트웨어융합과 김진용 학생, KCI급 논문 5편 게재",
+      "source_id": "src_에너지경제신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "7815a514e52c1293",
+      "title": "인간보다 AI가 AI를 더 빨리 개발한다…“통제 잃으면 인류 소외·멸망”",
+      "source_id": "src_pinpointnews_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "7d2e55f008d039d7",
+      "title": "대한민국 대표 자동차도시 전남광주·울산, ‘산업 AI·미래에너지’로 손잡았다",
+      "source_id": "src_브레이크뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "7de70fc69ab15ab1",
+      "title": "Johns Hopkins study finds women-coded prompts make AI work emails less formal, more effusive",
+      "source_id": "src_the_cool_down",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "8075bf5bbfc1d823",
+      "title": "AI가 AI 만들다 '지능폭발' 오면 통제불능…석학·기업들 공동경고 · 현장 상황은?",
+      "source_id": "src_supple_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "816c7dd218f8be11",
+      "title": "생성형 AI 썼다면 모델·버전 공개해야… 국가R&D 책임은 연구자",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "81ebe6bbeb6a73fa",
+      "title": "전남대 인공지능융합학과 연구팀, NeurIPS 2026 논문 채택",
+      "source_id": "src_톡톡뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "875cad4e1ea46687",
+      "title": "New formulation helps RNA vaccines withstand high temperatures",
+      "source_id": "src_mit_news_mit_연구",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "8cd64ca0e58500d6",
+      "title": "[과기원NOW] 포스텍, 산소 방출 조절해 전기차 배터리 수명 늘린다 外",
+      "source_id": "src_donga_science",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "900b27d5e3522433",
+      "title": "'AI 대모' 페이페이 리, AMD에 합류한다",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "92e717684db9a1da",
+      "title": "False claims about Aboriginal rock art and aliens were once fringe. Researchers fear AI could push them mainstream",
+      "source_id": "src_the_guardian",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "93e4155e53a494d3",
+      "title": "울산광역시-전남광주통합특별시 미래동반성장 위해 산업 인공지능전환(AX)‘맞손’",
+      "source_id": "src_프레스뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "95fdbc0adbb37fc8",
+      "title": "“방금 움직임과 조금 전 움직임을 함께 읽는다”…KAIST, ‘시간 기억’ AI 반도체 개발",
+      "source_id": "src_edaily_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "99a39e2815aabe32",
+      "title": "대전시-육군 방산 인공지능 전환 협력체계 구축:시대일보",
+      "source_id": "src_시대일보",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "9be5600d409cd305",
+      "title": "충남대병원 AI전환 착수…서울대병원 등과 공동연구",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "9d3ee3c58ee4aade",
+      "title": "‘Academic, not partisan’: Stanford and faculty address partnership with Trump administration on new manufacturing school",
+      "source_id": "src_the_stanford_daily",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "a0b368baa3501144",
+      "title": "[AI 시대 앞서가는 대학들] AI 교육·연구 역량 강화 … 도시문제 해결에 힘 보탠다",
+      "source_id": "src_joongang_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "a44b475d22987c58",
+      "title": "“지체장애인 AI 헬스케어 수용, 건강 만족도·성과기대와 직결” > 뉴스",
+      "source_id": "src_한의신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "a5a4ec3187bed15d",
+      "title": "AMD Acquires Fei-Fei Li's World Labs for $8.2 Billion in Landmark AI Deal",
+      "source_id": "src_bbntimes_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "a6860a601e532fa2",
+      "title": "인텔리빅스, 제9보병사단과 AI 국방기술 실증 협력",
+      "source_id": "src_newspim_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "a8fee0294821033e",
+      "title": "AI summaries can warp your memory, study warns",
+      "source_id": "src_yahoo_finance_uk",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "aa5e3e547eac71d3",
+      "title": "대전시-육군, '국방 AI' 맞손…방산기업 기술 전환 지원",
+      "source_id": "src_nbn_시사경제",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "ba35de9dcfd1f152",
+      "title": "AI가 만든 연구결과, 책임은 연구자에게…국가 R&D 윤리 가이드 확정",
+      "source_id": "src_산학뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "bb3a99b70d953517",
+      "title": "허태정 대전시장, 국방 AI 전환 선도… ‘방산 AX 생태계’ 본격화",
+      "source_id": "src_뉴데일리_충청세종",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "c4f8d657a2124698",
+      "title": "전남광주특별시-울산시, AI·자율주행·에너지 초광역 협력 나선다",
+      "source_id": "src_글로벌경제신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "c542cd70bc1b6c8a",
+      "title": "전남대, 서남권 반도체·에너지·AI 인재 2만3천명 양성",
+      "source_id": "src_호남교육신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "cb6fa8e331a559b4",
+      "title": "Is AI killing jobs for college grads? Not yet, new study says.",
+      "source_id": "src_washingtonpost_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "cccd3edc1a0c3627",
+      "title": "충남대병원, 146억 ‘의료 Agentic AI’ 개발 참여…수술실·방사선치료에 실증",
+      "source_id": "src_타임뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "cef274fc4457c577",
+      "title": "Citadel broadens quant hiring from AI research labs – report",
+      "source_id": "src_yahoo_finance",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "d6377ed8ecd7dc34",
+      "title": "KAIST \"소자 반응 속도 차이로 '시간' 읽는 AI 반도체 개발\"",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "d6851aa0ca1879b9",
+      "title": "AI로 보고서 쓰는 국책硏…검증체계는 '빈칸'",
+      "source_id": "src_v_daum_net",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "d794466b088fd094",
+      "title": "Minute-scale training for microrobot navigation",
+      "source_id": "src_nature_machine_intelligence_ai_일반",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "de3e71b484376fc0",
+      "title": "\"AI 지능 폭발 임박…통제 못하면 인류 멸망\" 무서운 경고",
+      "source_id": "src_hankyung_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "e3670fdb1168e9de",
+      "title": "“AI 기반 과학기술 연구 미래 논의”, 서울서 국제학술 대회 개최",
+      "source_id": "src_전자신문",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "e4781ecbb6f40965",
+      "title": "군포시의회, ‘AI 혁신 연구회’ 연구용역 착수",
+      "source_id": "src_전국도민일보",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "e5449a8431cd49c4",
+      "title": "경복대학교 영상미디어콘텐츠과, 뉴라이프그룹과 MOU 기반 AI 영상 연구과제 수행하고 논문 게재",
+      "source_id": "src_cnb뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "e991b6a3550fd4bb",
+      "title": "[더벨]엔젤로보틱스, 피지컬AI 연구개발용 웨어러블 로봇 공개 - 머니투데이",
+      "source_id": "src_mt_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "f01501f768ff98ac",
+      "title": "[ZD SW 투데이] 클라우데라, '소버린 AI 플랫폼' 리더 선정 外",
+      "source_id": "src_지디넷코리아",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "f52ceebf9117e5b1",
+      "title": "[AI픽] AI가 과학 연구에 참여한다…'AI4Sci 코리아' 첫 개최",
+      "source_id": "src_yna_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "f80b4d31f78038d9",
+      "title": "아주대 의과대학 이광 교수팀, MICCAI 결핵진단 AI 경진대회 1위 外",
+      "source_id": "src_의약뉴스",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "f813795f882f1d79",
+      "title": "움직임의 흐름 읽는 AI 반도체 개발…웨어러블 기기 활용 기대",
+      "source_id": "src_뉴스1",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "fac437ef93d158a8",
+      "title": "대전 옛 대덕경찰서, 방산기업 AI 기술 지원 거점으로 탈바꿈",
+      "source_id": "src_yna_co_kr",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "fcc6662fdc5f8cae",
+      "title": "AI가 바꿀 과학 연구의 미래는... 19개국 600명 연구자 서울서 논의",
+      "source_id": "src_hankookilbo_com",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    },
+    {
+      "document_id": "fd62032abae488e2",
+      "title": "AI in Peer Review: Practices & Policies",
+      "source_id": "src_daily_nous",
+      "old_category": "papers",
+      "new_category": "NEWS",
+      "reason": "RESEARCH 영역에 태그되어 있으나 실제 연구 identity(DOI/arXiv ID/저장소 출처) 없음"
+    }
+  ]
+}
