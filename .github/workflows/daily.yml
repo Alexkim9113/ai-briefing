@@ -139,7 +139,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/
           git diff --cached --quiet || git commit -m "Evidence Pipeline Shadow 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -223,7 +231,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
           git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -262,7 +278,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/historical_acquisition/federal_register_pilot_result.json
           git diff --cached --quiet || git commit -m "Federal Register Historical Acquisition Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -297,7 +321,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/historical_acquisition/crossref_pilot_result.json
           git diff --cached --quiet || git commit -m "Crossref Academic Evidence Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -332,7 +364,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
           git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate (Crossref) 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -367,7 +407,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/historical_acquisition/federal_register_historical_pilot_result.json
           git diff --cached --quiet || git commit -m "Federal Register Historical Window Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -402,7 +450,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json
           git diff --cached --quiet || git commit -m "Verified Evidence Admission Gate (FedReg Historical) 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -437,7 +493,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/gap_closure/transition_evidence_energy_result.json
           git diff --cached --quiet || git commit -m "AI_ENERGY_INFRA TRANSITION-window Pilot 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
@@ -475,7 +539,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add intel/documents.json intel/evidence_admission/admission_provenance.json intel/evidence_admission/admission_audit_log.json intel/gap_closure/transition_admission_gate_log.json
           git diff --cached --quiet || git commit -m "Transition Admission Gate 실행 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
-          for i in 1 2 3; do
+          # M.5F SECTION 37: bumped 3->8 retries, same fix as reality_shadow/
+          # evidence_admission_real_historical/evidence_admission_real_counterevidence below.
+          # Audited and reproduced: this job either runs in true parallel with the other
+          # needs:build-only shadow jobs, or starts while an earlier job in its own needs chain
+          # is still mid-push -- the same 6-jobs-within-15-seconds contention reality_shadow's
+          # fix comment documents (run 36736359463). 3 retries can exhaust silently (the step
+          # still exits 0, since the loop's last command was a successful rebase, not the failed
+          # push); loop body itself unchanged, no shared/commonized script.
+          for i in 1 2 3 4 5 6 7 8; do
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
