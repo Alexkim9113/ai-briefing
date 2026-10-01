@@ -1,0 +1,45 @@
+{
+ "note": "N-9 partial-scope after-snapshot (Sections 1-14 + daily.yml correctness follow-up only; see\nfinal report for exact stopping point and Section-by-section status). No new evidence was\nadmitted by this session's own work -- all canonical hashes below are byte-identical to\nn9_before_snapshot.json, which is the correct, expected NO_CHANGE outcome.",
+ "interpretive_contract_suite_after_fix": {
+  "total_tests": 72,
+  "passing": 72,
+  "failing": []
+ },
+ "canonical_hashes_sha256_16_raw_bytes_unchanged_from_before": {
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b8155",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json": "df8995f2c995bd0b",
+  "intel/claims/claims.json": "e21d90573c0f67cc",
+  "intel/evidence_pipeline/claims.json": "c02b34668306f0da",
+  "intel/hypothesis/hypotheses.json": "874dc1c8ae9aa3cb",
+  "intel/intelligence_objects/intelligence_objects.json": "9fd98a3894075d9c"
+ },
+ "source_health_recheck_github_actions_canonical_file": {
+  "src_worldbank_api": "HEALTHY",
+  "src_eia_api": "AUTH_REQUIRED",
+  "src_crossref_api": "HEALTHY",
+  "src_federal_register_api": "HEALTHY",
+  "src_ilo": "HEALTHY",
+  "src_riss": "HEALTHY",
+  "conclusion": "unchanged from N-8's finding -- re-read fresh from the committed artifact, not assumed"
+ },
+ "new_artifacts_this_phase": [
+  "intel/evidence_network/live_result_guard.py",
+  "intel/evidence_network/tests/test_live_result_guard.py",
+  "intel/evidence_network/policy_research_acquisition_result.github_actions.json",
+  "intel/evidence_network/counterevidence_live_acquisition_result.github_actions.json",
+  "intel/evidence_network/longitudinal_evidence_acquisition_result.github_actions.json",
+  "intel/phase_n9/n9_before_snapshot.json",
+  "intel/phase_n9/n9_after_snapshot.json"
+ ],
+ "commits_this_phase": [
+  "f6aab63 N-9 Sections 1-8: dynamic corpus contract fix for 70/72 regression",
+  "eb69abd N-9 Sections 9-14: live/sandbox artifact write protection",
+  "91bc234 N-9 Section 11 follow-up: daily.yml commits the new live canonical paths"
+ ],
+ "scope_not_attempted_this_session": [
+  "Sections 17-38 (funnel re-instrumentation, full failure-isolation matrix, idempotency/NO_CHANGE/affected-build dedicated new tests)",
+  "Sections 39-51 (exact responsive CDP measurement, accessibility recheck, security grep, rights/relevance/research regression re-run)",
+  "Sections 52-57 (formal scheduler pre-gate scoring across all 15 conditions, scheduler decision)",
+  "Section 58 (performance re-confirmation)"
+ ]
+}
