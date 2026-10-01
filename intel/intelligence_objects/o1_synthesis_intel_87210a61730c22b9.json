@@ -1,0 +1,59 @@
+{
+ "intelligence_id": "intel_87210a61730c22b9",
+ "synthesis_for_version": 3,
+ "note": "Dedicated synthesis file alongside the intelligence object (sidecar), since intelligence_object.py's schema has no single free-text synthesis field. Structured per Te's spec Sections 24-25.",
+ "observed": [
+  "Global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017 (IEA).",
+  "US data centers consumed 176 TWh in 2023 = 4.4% of US electricity, up from 58 TWh in 2014 (LBNL/DOE 2024 US Data Center Energy Usage Report, OBSERVED).",
+  "Ireland: data centers = 22% of Ireland's metered electricity in 2024, up from 5% in 2015 (CSO, OBSERVED, national statistical office).",
+  "~130 GW stuck in PJM's interconnection queue, ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification."
+ ],
+ "projected": [
+  "IEA: ~945 TWh global by 2030, ~1200 TWh by 2035 (FORECAST, kept separate from the 415 TWh 2024 OBSERVED figure).",
+  "LBNL: US data centers 325-580 TWh by 2028 (FORECAST, kept separate from the 176 TWh 2023 OBSERVED figure).",
+  "China: 400-600 TWh by 2030 (FORECAST per Carbon Brief/Oxford Institute for Energy Studies, derivative, not primary)."
+ ],
+ "attributable_to_ai": [
+  "Nothing in this corpus directly isolates an AI-specific TWh or percentage share of data-center electricity demand, in any geography.",
+  "Every source that connects data-center growth to AI (IEA, LBNL, Ireland CSO context, Carbon Brief on China) names AI as A driver among several (general cloud/colocation growth, crypto in some periods, electrification) -- never a measured, disaggregated one.",
+  "AI_ATTRIBUTION is coded PARTIAL (US/global, named driver without numeric split) or INDIRECT (Ireland, since CSO does not separate AI from general cloud) across every new claim added this phase -- never DIRECT."
+ ],
+ "not_yet_attributable_to_ai": [
+  "The majority of the observed TWh growth in every geography (US, Ireland, global, China) remains attribution-ambiguous between AI training/inference workloads, general cloud/SaaS growth, and (in the US/PJM case) electrification and reshored manufacturing.",
+  "Korea's capital-region concentration is a geographic/grid finding, not an AI-attribution finding -- it says where contracted DC capacity sits, not what fraction of that capacity's demand is AI-driven."
+ ],
+ "bottlenecks": [
+  {
+   "region": "PJM (US)",
+   "type": "GENERATION_AND_INTERCONNECTION_QUEUE",
+   "detail": "~130 GW stuck in the interconnection queue; a generation/interconnection-queue shortage, not a transmission bottleneck."
+  },
+  {
+   "region": "Seoul capital region (Korea)",
+   "type": "GRID_CONNECTION_AND_DISTRIBUTION",
+   "detail": "91.8% (13.5 of 14.7 GW) of nationwide contracted DC capacity through 2029 concentrates here; KEPCO's 9th T&D plan warns up to 50% of new capital-region DC demand may be unmeetable. This is a distribution/grid-connection bottleneck, kept explicitly distinct from PJM's generation/interconnection-queue bottleneck -- the two are not the same kind of constraint and are not merged into one generic 'grid problem'."
+  }
+ ],
+ "competing_explanations_now_evidenced": [
+  "Manufacturing/reshoring -- EVIDENCE_FOUND (Grid Strategies LLC reports) this phase.",
+  "Weather/peak-load climate effects -- EVIDENCE_FOUND (EIA/Ember, ERCOT/Eastern Interconnection), explicitly a PEAK-LOAD timescale finding, distinct from and not merged with the annual TWh/yr trend claims above.",
+  "General cloud/SaaS growth independent of AI -- supported by the pre-existing Jevons/rebound finding (Google total energy +3.7x 2016-2022 despite near-optimal PUE).",
+  "Population growth as a driver -- counterevidence from O-0 actually WEAKENED this explanation rather than supporting it.",
+  "DC growth without power problems in some regions -- SEARCH_RUN_NO_CLEAR_EVIDENCE: an honest negative; this direction was investigated and yielded no clear result either way, which is itself recorded rather than silently dropped."
+ ],
+ "evidence_challenging_dominant_ai_centric_narrative": [
+  "Jevons-paradox / rebound-effect finding: efficiency gains (near-optimal PUE) have not reduced total energy consumption -- Google's total energy rose 3.7x from 2016-2022 despite efficiency improvements, undercutting any simple 'AI efficiency will fix this' narrative in either direction.",
+  "The population-growth counterevidence, which weakened (did not support) a population-driven explanation for demand growth, illustrating that not every alternative explanation holds up equally -- this is itself evidence against an uncritical multi-factor narrative, not just against the AI-centric one."
+ ],
+ "remains_unknown": [
+  "Any numeric AI-specific (vs. general cloud/crypto) share of data-center electricity demand, in any geography.",
+  "Evidence depth in Europe (beyond Ireland CSO + EU EED policy-announcement-only) and China (two competing estimates not yet resolved, no primary-source verification) remains shallow relative to the US.",
+  "No real longitudinal BASELINE -> TRANSITION -> CURRENT evidence chain exists for AI_ENERGY_INFRA; all current evidence is point-in-time or forecast, not a tracked time series purpose-built for this topic.",
+  "Korea's capital-region bottleneck rests on secondary/news reporting of National Assembly audit material; the primary 국정감사 document was not independently fetched, so this claim stays at DERIVATIVE_REPORTING/NEWS-SECONDARY rather than POLICY_RESEARCH."
+ ],
+ "metaxis_point": {
+  "statement": "The structural pattern across every geography with real evidence (US, Ireland, global aggregate, and more thinly China/Korea) is consistent: data-center electricity demand is observably rising at a pace distinct from historical grid growth, AI is named as a contributing driver by every credible source examined (IEA, LBNL, Carbon Brief/Oxford), and infrastructure bottlenecks are real but structurally different by region (PJM = generation/interconnection-queue; Seoul capital region = grid-connection/distribution). But the evidentiary base in this corpus does not and cannot currently support a claim that AI specifically -- as opposed to data centers, cloud computing, or electrification in general -- is the dominant or even a measured driver of the observed growth, because no source in the corpus disaggregates AI workloads from general cloud/colocation demand.",
+  "explicit_contradiction_acknowledgment": "The hypothesis model (classify_status() in hypothesis_model.py) currently marks H1 ('AI data centers are a significant driver of electricity demand growth') and H3 ('recent demand growth results from multiple non-AI factors') BOTH as SUPPORTED. This METAXIS Point does not resolve that contradiction or pick a side: it is disclosed here as a genuine limitation of a count-only classifier that cannot weigh evidence quality, independence, or directness of contradiction between competing hypotheses. Both H1 and H3 are plausible and partially evidenced; neither should be read as settled.",
+  "banned_sentence_check": "This Point asserts no causal claim equivalent to any of the 4 banned sentences (AI caused a US power crisis; AI is the main cause of recent US demand growth; AI is collapsing the grid; data-center demand growth equals AI demand growth) -- all are explicitly contradicted by the PARTIAL/INDIRECT attribution coding throughout this corpus."
+ ]
+}

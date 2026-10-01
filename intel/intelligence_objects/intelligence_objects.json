@@ -3,22 +3,47 @@
     "intelligence_id": "intel_87210a61730c22b9",
     "topic": "AI_ENERGY_INFRA",
     "question": "is AI data center growth driving US electricity demand increase?",
-    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand.",
+    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand. [v3 update] Real evidence has since been added for Europe (Ireland CSO: DC share of metered electricity 5%->22%, 2015->2024; EU EED Art.12 500kW+ reporting mandate, policy-only), the US (LBNL/DOE 2024 report: 176 TWh observed 2023 = 4.4% of US electricity, up from 58 TWh 2014, vs. 325-580 TWh by 2028 forecast -- kept as separate OBSERVED vs FORECAST claims), Korea (capital-region grid-connection bottleneck, 91.8% of contracted nationwide DC capacity concentrated in Seoul region per secondary reporting of National Assembly audit material, NOT independently verified against the primary document), and China (IEA ~100 TWh vs Goldman/Bloomberg ~200 TWh for 2024, both kept rather than resolved). Counterevidence acquisition also closed 2 of 3 remaining SEARCH_NOT_RUN directions with real findings (manufacturing/reshoring per Grid Strategies LLC; weather/peak-load per EIA/Ember, flagged as a peak-load-timescale finding distinct from annual TWh/yr demand growth); the DC-growth-without-power-problems region search ran but found no clear evidence either way (an honest negative, not a gap left unexamined). None of this new evidence provides a numeric AI-only share of data-center electricity demand in any geography.",
     "key_claims": [
       "claim_1d9458f4e7e2cf69",
       "claim_5787125ab5f0110b",
       "claim_7f1bc452c4ffc128",
       "claim_afe7cc7b19317ee0",
-      "claim_d170f52f567053e9"
+      "claim_d170f52f567053e9",
+      "claim_o1_lbnl_us_dc_2023",
+      "claim_o1_korea_capital_region_dc_demand",
+      "claim_3ab07077d739a9a4",
+      "claim_931b08c7ebfc9604",
+      "claim_afe484e45964c605"
     ],
     "supporting_evidence": [
       "rel_290e45f3e25fcb78",
       "rel_5561f393ab96d55f",
       "rel_8396e8c80f83a5b4",
       "rel_b9a99b4d7849f174",
-      "rel_cd3a5f794ad00b81"
+      "rel_cd3a5f794ad00b81",
+      "rel_0a5f52b415544b35",
+      "rel_002a11b7fe1c7389",
+      "rel_0cf98d7daad51b15"
     ],
-    "counterevidence": [],
+    "counterevidence": [
+      {
+        "direction": "manufacturing/reshoring",
+        "status": "EVIDENCE_FOUND",
+        "source": "Grid Strategies LLC reports"
+      },
+      {
+        "direction": "weather/climate peak-load",
+        "status": "EVIDENCE_FOUND",
+        "source": "EIA/Ember peak-load spikes, ERCOT/Eastern Interconnection",
+        "note": "flagged as a PEAK-LOAD timescale finding, distinct from annual TWh/yr trend claims -- not merged with them"
+      },
+      {
+        "direction": "DC growth without power problems (region search)",
+        "status": "SEARCH_RUN_NO_CLEAR_EVIDENCE",
+        "note": "honest negative -- search was run, no clear supporting evidence found either way"
+      }
+    ],
     "alternative_explanations": [
       "GENERAL_CLOUD_COMPUTING_GROWTH"
     ],
@@ -28,7 +53,13 @@
       "series_d018d1290acd5f20"
     ],
     "research_context": [],
-    "policy_context": [],
+    "policy_context": [
+      {
+        "policy": "EU_EED_2023_1791_ART12",
+        "status": "POLICY_ANNOUNCEMENT_ONLY",
+        "detail": "500kW+ data center energy reporting mandate effective 2024-09; no observed-effect data found yet"
+      }
+    ],
     "historical_context": [
       {
         "status": "INSUFFICIENT_EVIDENCE",
@@ -45,6 +76,21 @@
         "geography": "KR",
         "basis": "source_registry_verified_publisher (connected event's documents)",
         "scope": "publisher_country only for event evt_a6a4027d9878143d; event_country stays UNKNOWN (no inference from publisher to event location)"
+      },
+      {
+        "geography": "KR",
+        "basis": "Korea capital-region grid-connection bottleneck claim (secondary reporting of National Assembly audit material, via Rep. 이소영; KEPCO 9th T&D plan)",
+        "scope": "DERIVATIVE_REPORTING/NEWS-SECONDARY, not promoted to POLICY_RESEARCH -- primary 국정감사 document not independently fetched"
+      },
+      {
+        "geography": "IE",
+        "basis": "Ireland CSO official statistics (national statistical office, PRIMARY_SOURCE)",
+        "scope": "data centers = 22% of Ireland's metered electricity 2024, up from 5% in 2015; AI_ATTRIBUTION=INDIRECT"
+      },
+      {
+        "geography": "CN",
+        "basis": "IEA vs Goldman Sachs/Bloomberg estimates via Carbon Brief / Oxford Institute for Energy Studies (DERIVATIVE_REPORTING/ACADEMIC_ANALYSIS)",
+        "scope": "~100 TWh (IEA) vs ~200 TWh (Goldman/Bloomberg) 2024, both kept side by side; East Data West Computing (东数西算) program described, not independently verified as primary source"
       }
     ],
     "temporal_chain": [
@@ -68,6 +114,10 @@
       {
         "cause": "TEMPORAL_UNCERTAINTY",
         "detail": "no data points after 2022 in this series"
+      },
+      {
+        "cause": "METHODOLOGY_UNCERTAINTY",
+        "detail": "Hypothesis statuses (H1-H7) are produced by a deterministic but count-only classifier; a status of SUPPORTED reflects 'at least one supporting claim, no claim coded as directly contradicting it' and must not be read as 'this hypothesis has been validated against competing explanations.' The H1/H3 simultaneous-SUPPORTED outcome is the clearest symptom."
       }
     ],
     "known_gaps": [
@@ -86,6 +136,10 @@
       {
         "gap_type": "POLICY_RESEARCH_GAP",
         "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+      },
+      {
+        "gap_type": "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP",
+        "reason": "intel/hypothesis/hypothesis_model.py classify_status() is purely evidence-COUNT-based with zero quality/independence weighting (if supporting_evidence and not contradicting_evidence: return SUPPORTED). As of this update it marks H1 (hyp_b0a4bbbc9b601728, 'AI data centers are a significant driver of electricity demand growth') and H3 (hyp_o0_h3_ai_energy_infra, 'recent demand growth results from multiple non-AI factors') BOTH as SUPPORTED simultaneously, even though they represent competing explanations -- because each merely has >=1 supporting claim and 0 directly-contradicting claims in the model's narrow count-based sense. This is a disclosed structural limitation of the current hypothesis model, not a data error and not silently corrected here: classify_status() was intentionally left unmodified this phase per explicit instruction, since rewriting its logic would be an unscoped architecture change. Any report or synthesis reading H1/H3 status must present both as SUPPORTED-under-this-model while explicitly flagging that the model cannot currently adjudicate between competing hypotheses by evidence quality, independence, or directness of contradiction."
       }
     ],
     "provenance": [
@@ -95,10 +149,10 @@
       "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
       "https://www.iea.org/reports/energy-and-ai/executive-summary"
     ],
-    "last_updated": "2026-10-01T11:06:53.677502+00:00",
+    "last_updated": "2026-10-01T11:50:05.835736+00:00",
     "readiness": "CONDITIONALLY_READY",
-    "version": 2,
-    "previous_version": 1,
+    "version": 4,
+    "previous_version": 3,
     "revision_history": [
       {
         "version": 1,
@@ -120,6 +174,54 @@
         ],
         "change_reason": "O-0 AI_ENERGY_INFRA deep research pilot: live-acquired IEA/arXiv/GridLab evidence connected via new claims + statistical series; AI attribution partially clarified (PARTIAL/INDIRECT, no numeric AI-only split available).",
         "impact_event": "STATE_CHANGED"
+      },
+      {
+        "version": 2,
+        "snapshot_current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand.",
+        "updated_at": "2026-10-01T11:06:53.677502+00:00",
+        "trigger_evidence": [
+          "LBNL_DOE_2024_US_DC_ENERGY_REPORT",
+          "IRELAND_CSO_2024_DC_SHARE",
+          "KOREA_CAPITAL_REGION_AUDIT_SECONDARY",
+          "EU_EED_2023_1791_ART12",
+          "CHINA_IEA_GOLDMAN_DC_ESTIMATES",
+          "COUNTEREVIDENCE_MANUFACTURING_RESHORING",
+          "COUNTEREVIDENCE_WEATHER_PEAK_LOAD",
+          "H1_H3_HYPOTHESIS_MODEL_CONTRADICTION_DISCLOSURE"
+        ],
+        "changed_fields": [
+          "statistics",
+          "geographic_context",
+          "policy_context",
+          "counterevidence",
+          "current_state",
+          "known_gaps",
+          "uncertainties"
+        ],
+        "change_reason": "O-1 phase evidence closure: added real LBNL/DOE, Ireland CSO, Korea (secondary), EU EED, and China evidence; closed 2 of 3 remaining counterevidence SEARCH_NOT_RUN gaps; re-evaluated H1-H7 via hypothesis_model.classify_status() (H1,H2,H3,H4,H7 -> SUPPORTED, H5 CONTESTED, H6 WEAKENED); explicitly recorded the H1/H3 simultaneous-SUPPORTED contradiction as a disclosed HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP rather than silently patching the classifier.",
+        "impact_event": "UNCERTAINTY_INCREASED"
+      },
+      {
+        "version": 3,
+        "snapshot_current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand. [v3 update] Real evidence has since been added for Europe (Ireland CSO: DC share of metered electricity 5%->22%, 2015->2024; EU EED Art.12 500kW+ reporting mandate, policy-only), the US (LBNL/DOE 2024 report: 176 TWh observed 2023 = 4.4% of US electricity, up from 58 TWh 2014, vs. 325-580 TWh by 2028 forecast -- kept as separate OBSERVED vs FORECAST claims), Korea (capital-region grid-connection bottleneck, 91.8% of contracted nationwide DC capacity concentrated in Seoul region per secondary reporting of National Assembly audit material, NOT independently verified against the primary document), and China (IEA ~100 TWh vs Goldman/Bloomberg ~200 TWh for 2024, both kept rather than resolved). Counterevidence acquisition also closed 2 of 3 remaining SEARCH_NOT_RUN directions with real findings (manufacturing/reshoring per Grid Strategies LLC; weather/peak-load per EIA/Ember, flagged as a peak-load-timescale finding distinct from annual TWh/yr demand growth); the DC-growth-without-power-problems region search ran but found no clear evidence either way (an honest negative, not a gap left unexamined). None of this new evidence provides a numeric AI-only share of data-center electricity demand in any geography.",
+        "updated_at": "2026-10-01T11:48:03.235223+00:00",
+        "trigger_evidence": [
+          "claim_o1_lbnl_us_dc_2023",
+          "claim_o1_korea_capital_region_dc_demand",
+          "claim_3ab07077d739a9a4",
+          "claim_931b08c7ebfc9604",
+          "claim_afe484e45964c605",
+          "rel_0a5f52b415544b35",
+          "rel_002a11b7fe1c7389",
+          "rel_0cf98d7daad51b15"
+        ],
+        "changed_fields": [
+          "statistics",
+          "key_claims",
+          "supporting_evidence"
+        ],
+        "change_reason": "Correction within the same O-1 phase: new claim ids (LBNL/Korea/Ireland/EU-EED/China) and their evidence_claim_relations were linked into key_claims/supporting_evidence -- the proper fields for Report Engine content-signature purposes -- after an earlier pass mistakenly placed claim ids into the statistics field (reserved for statistical_evidence series ids). No narrative content changed; this is a structural correction.",
+        "impact_event": "NEW_EVIDENCE_NO_CHANGE"
       }
     ]
   },
