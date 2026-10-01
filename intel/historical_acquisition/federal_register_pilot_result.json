@@ -1,21 +1,140 @@
 {
-  "attempted_at": "2026-09-30T20:48:53.396938+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36774908091)",
+  "attempted_at": "2026-10-01T00:08:31.645880+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36794384752)",
   "sources_attempted": 1,
-  "sources_reaching_success": 0,
-  "total_documents_canonicalized": 0,
+  "sources_reaching_success": 1,
+  "total_documents_canonicalized": 5,
   "results": [
     {
       "source_name": "US Federal Register API",
       "source_tier": "TIER_1",
       "gap_type": "MISSING_REGULATORY_HISTORY",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&per_page=5&order=newest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-09-30T20:48:53.396938+00:00",
-      "fetch_status": "FETCH_FAILED",
-      "fetch_status_code": 403,
-      "fetch_error": "<HTTPError 403: 'Forbidden'>",
-      "documents_canonicalized": [],
-      "overall_status": "FETCH_FAILED"
+      "attempted_at": "2026-10-01T00:08:31.645880+00:00",
+      "fetch_status": "FETCH_OK",
+      "fetch_status_code": 200,
+      "fetch_error": null,
+      "documents_canonicalized": [
+        {
+          "document_id": "fedreg_2026-20023",
+          "content_hash": "c725bed8ed6a0fa5",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Request for Information (RFI) Regarding the Digitization and Modernization of the National Technical Reports Library (NTRL) and the Leveraging of Scientific, Technical and Engineering Information (STEI) Stored in the NTRL",
+          "abstract_excerpt": "The National Technical Information Service (NTIS) is seeking general information, feedback, suggestions, and experiential and technical insights from stakeholders to inform NTIS's goal of fully digitizing, modernizing, and enhancing the utility of the National Technical Reports Library (NTRL). NTIS has historically collected, indexed, abstracted, and stored U.S. Government-sponsored technical reports and made them available to the public through the NTRL. To further unlock the NTRL's intrinsic v",
+          "document_kind": "Notice",
+          "citation": "91 FR 61835",
+          "agencies": [
+            "Commerce Department",
+            "National Technical Information Service"
+          ],
+          "published": "2026-09-30",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T00:08:31.645880+00:00",
+          "provenance_id": "prov_fedreg_2026-20023_2026-10-01T00:08:31.645880+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-20005",
+          "content_hash": "cdb00c7a6f35306c",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Renewal of the Consumer Protection and Accessibility Advisory Committee",
+          "abstract_excerpt": "The Federal Communications Commission (FCC or Commission) is publishing this notice to announce the renewal of the Consumer Protection and Accessibility Advisory Committee (CPAAC). The Commission has determined that the renewal of the CPAAC is necessary and in the public's interest.",
+          "document_kind": "Notice",
+          "citation": "91 FR 61847",
+          "agencies": [
+            "Federal Communications Commission"
+          ],
+          "published": "2026-09-30",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T00:08:31.645880+00:00",
+          "provenance_id": "prov_fedreg_2026-20005_2026-10-01T00:08:31.645880+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-19964",
+          "content_hash": "07e61fe17c7ec8fd",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "The Safer Affordable Fuel-Efficient (SAFE) Vehicles Rule III for Model Years 2022 to 2031 Passenger Cars and Light Trucks",
+          "abstract_excerpt": "NHTSA, on behalf of the U.S. Department of Transportation (DOT), is substantially recalibrating the Corporate Average Fuel Economy (CAFE) program to bring the program into compliance with the law and to remove previous regulatory distortions which have induced manufacturers to make design decisions that have neither aligned with market demand and the needs of American families nor have delivered the consistent improvements in the fuel economy performance of manufacturer fleets, as Congress inten",
+          "document_kind": "Rule",
+          "citation": "91 FR 61988",
+          "agencies": [
+            "Transportation Department",
+            "National Highway Traffic Safety Administration"
+          ],
+          "published": "2026-09-30",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T00:08:31.645880+00:00",
+          "provenance_id": "prov_fedreg_2026-19964_2026-10-01T00:08:31.645880+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-19860",
+          "content_hash": "5f6c5e4de9f2594f",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act",
+          "abstract_excerpt": "The Board of Governors of the Federal Reserve System (Board) proposes to issue regulations to implement the Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act) with respect to Board-supervised permitted payment stablecoin issuers (PPSIs) and certain other entities that are subject to the Board's jurisdiction. In addition, the Board proposes to issue regulations to implement the prohibition on tying in section 4(a)(8) of the GENIUS Act, which is applicable generally",
+          "document_kind": "Proposed Rule",
+          "citation": "91 FR 61580",
+          "agencies": [
+            "Federal Reserve System"
+          ],
+          "published": "2026-09-29",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T00:08:31.645880+00:00",
+          "provenance_id": "prov_fedreg_2026-19860_2026-10-01T00:08:31.645880+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-19835",
+          "content_hash": "8945cd59248381dc",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Proposed Revision of Information Collection; National Longitudinal Survey of Youth 1979",
+          "abstract_excerpt": "The Department of Labor, as part of its continuing effort to reduce paperwork and respondent burden, conducts a pre-clearance consultation program to provide the general public and Federal agencies with an opportunity to comment on proposed and/or continuing collections of information in accordance with the Paperwork Reduction Act of 1995. This program helps to ensure that requested data can be provided in the desired format, reporting burden (time and financial resources) is minimized, collecti",
+          "document_kind": "Notice",
+          "citation": "91 FR 61458",
+          "agencies": [
+            "Labor Department",
+            "Labor Statistics Bureau"
+          ],
+          "published": "2026-09-29",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19835/proposed-revision-of-information-collection-national-longitudinal-survey-of-youth-1979",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-01T00:08:31.645880+00:00",
+          "provenance_id": "prov_fedreg_2026-19835_2026-10-01T00:08:31.645880+00:00"
+        }
+      ],
+      "overall_status": "SUCCESS",
+      "schema_status": "VALIDATION_OK",
+      "schema_reason": null,
+      "documents_attempted": 5,
+      "documents_parsed_ok": 5,
+      "parse_failures": 0
     }
   ]
 }
