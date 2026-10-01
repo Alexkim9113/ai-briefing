@@ -1,0 +1,19 @@
+{
+ "head_commit": "72b247d228d6b01e112b68039880de6b12af6d59",
+ "counts": {
+  "documents": 602,
+  "claims": 2,
+  "hypotheses": 2,
+  "intelligence_objects": 2,
+  "reports": 2,
+  "pdfs": 2,
+  "known_gaps": "see gap_records_result.json",
+  "gap_records": 19,
+  "private_research": "N/A",
+  "source_registry": "N/A"
+ },
+ "report_sha256_16": {
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b8155",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json": "df8995f2c995bd0b"
+ }
+}
