@@ -2242,5 +2242,137 @@
     "reason": "no AI hint",
     "gate_run_at": "2026-10-01T06:38:39.019781+00:00",
     "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-00121",
+    "title": "Reissuance and Modification of Nationwide Permits",
+    "published": "2026-01-08",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-00677",
+    "title": "New Source Performance Standards Review for Stationary Combustion Turbines and Stationary Gas Turbines",
+    "published": "2026-01-15",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-01413",
+    "title": "Air Plan Disapproval; Colorado; Regional Haze Plan for the Second Implementation Period",
+    "published": "2026-01-26",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-03638",
+    "title": "National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal",
+    "published": "2026-02-24",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-04458",
+    "title": "Agency Information Collection Proposed Extension",
+    "published": "2026-03-06",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-04645",
+    "title": "Ratepayer Protection Pledge",
+    "published": "2026-03-09",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-06048",
+    "title": "Risk-Informed, Technology-Inclusive Regulatory Framework for Advanced Reactors",
+    "published": "2026-03-30",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-09895",
+    "title": "Effluent Limitations Guidelines and Standards for the Steam Electric Power Generating Point Source Category-Unmanaged Combustion Residual Leachate",
+    "published": "2026-05-18",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-11436",
+    "title": "Approval and Promulgation of Air Quality Implementation Plans; Wyoming; Regional Haze Federal Implementation Plan",
+    "published": "2026-06-08",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-14660",
+    "title": "Agency Information Collection Extension",
+    "published": "2026-07-21",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-16603",
+    "title": "Introduction to the Unified Agenda of Federal Regulatory and Deregulatory Actions-2026",
+    "published": "2026-08-14",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI_ENERGY_INFRA topic keyword; no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
+  },
+  {
+    "document_id": "fedreg_2026-17843",
+    "title": "Declaring a National Emergency To Secure the United States Bulk-Power System",
+    "published": "2026-08-31",
+    "source_id": "src_federal_register",
+    "verdict": "TRANSITION_REJECTED",
+    "reason_code": "TOPIC_NOT_RELEVANT",
+    "reason": "no AI hint",
+    "gate_run_at": "2026-10-01T07:31:20.837041+00:00",
+    "gap_type": "TRANSITION_GAP"
   }
 ]
