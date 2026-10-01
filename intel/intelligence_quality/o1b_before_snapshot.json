@@ -1,0 +1,166 @@
+{
+ "snapshot_id": "O1B_BEFORE_SNAPSHOT",
+ "phase": "O-1B",
+ "taken_at": "2026-10-01T12:01:57.298568+00:00",
+ "head_commit_sha_confirmed": "19b095e22e291ec4401df7284f52d38ff1ea0fad",
+ "counts": {
+  "documents_count": "NOT_RECOMPUTED_THIS_PASS -- documents.json is out of scope for O-1B (never touched); see canonical_file_hashes for integrity baseline instead",
+  "claims_count": 11,
+  "claims_ai_energy_infra": 10,
+  "hypotheses_count_total": 8,
+  "hypotheses_ai_energy_infra": 7,
+  "statistical_evidence_count": 4,
+  "intelligence_object_count": 2
+ },
+ "ai_energy_infra_io_version_confirmed": 4,
+ "ai_energy_infra_report_latest_version_confirmed": 3,
+ "ai_labor_io_version_confirmed": 1,
+ "h1_h7_status_before": {
+  "H1": {
+   "status": "SUPPORTED",
+   "supporting_count": 2,
+   "contradicting_count": 0
+  },
+  "H2": {
+   "status": "SUPPORTED",
+   "supporting_count": 2,
+   "contradicting_count": 0
+  },
+  "H3": {
+   "status": "SUPPORTED",
+   "supporting_count": 4,
+   "contradicting_count": 0
+  },
+  "H4": {
+   "status": "SUPPORTED",
+   "supporting_count": 4,
+   "contradicting_count": 0
+  },
+  "H5": {
+   "status": "CONTESTED",
+   "supporting_count": 0,
+   "contradicting_count": 1
+  },
+  "H6": {
+   "status": "WEAKENED",
+   "supporting_count": 0,
+   "contradicting_count": 1
+  },
+  "H7": {
+   "status": "SUPPORTED",
+   "supporting_count": 2,
+   "contradicting_count": 0
+  }
+ },
+ "ai_energy_infra_known_gaps_before": [
+  {
+   "gap_type": "ATTRIBUTION_GAP",
+   "reason": "partially addressed: IEA/GridLab evidence now connects AI/data-center growth to electricity demand at PARTIAL attribution (named as one driver among several -- general digital services, electrification -- with no numeric AI-only split given by any source); the earlier World Bank per-capita series still cannot be decomposed by end-use sector."
+  },
+  {
+   "gap_type": "TEMPORAL_GAP",
+   "reason": "series ends 2022, before the 2023+ AI data-center buildout commonly cited in AI_ENERGY_INFRA reporting -- cannot speak to the most recent period"
+  },
+  {
+   "gap_type": "COUNTEREVIDENCE_GAP",
+   "reason": "partially addressed: live counterevidence acquisition (o0_live_counterevidence_supplement.json) found real evidence for efficiency-improvements and non-AI-cloud-growth directions via the Jevons paper; manufacturing/reshoring, EV/electrification, population growth, and weather/climate directions remain SEARCH_NOT_RUN or evidence-thin."
+  },
+  {
+   "gap_type": "POLICY_RESEARCH_GAP",
+   "reason": "carried over from M.5E-F -- still NOT_READY, unresolved"
+  },
+  {
+   "gap_type": "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP",
+   "reason": "intel/hypothesis/hypothesis_model.py classify_status() is purely evidence-COUNT-based with zero quality/independence weighting (if supporting_evidence and not contradicting_evidence: return SUPPORTED). As of this update it marks H1 (hyp_b0a4bbbc9b601728, 'AI data centers are a significant driver of electricity demand growth') and H3 (hyp_o0_h3_ai_energy_infra, 'recent demand growth results from multiple non-AI factors') BOTH as SUPPORTED simultaneously, even though they represent competing explanations -- because each merely has >=1 supporting claim and 0 directly-contradicting claims in the model's narrow count-based sense. This is a disclosed structural limitation of the current hypothesis model, not a data error and not silently corrected here: classify_status() was intentionally left unmodified this phase per explicit instruction, since rewriting its logic would be an unscoped architecture change. Any report or synthesis reading H1/H3 status must present both as SUPPORTED-under-this-model while explicitly flagging that the model cannot currently adjudicate between competing hypotheses by evidence quality, independence, or directness of contradiction."
+  }
+ ],
+ "ai_energy_infra_uncertainties_before": [
+  {
+   "cause": "ATTRIBUTION_UNCERTAINTY",
+   "detail": "aggregate per-capita consumption cannot be decomposed by end-use sector from this indicator alone"
+  },
+  {
+   "cause": "TEMPORAL_UNCERTAINTY",
+   "detail": "no data points after 2022 in this series"
+  },
+  {
+   "cause": "METHODOLOGY_UNCERTAINTY",
+   "detail": "Hypothesis statuses (H1-H7) are produced by a deterministic but count-only classifier; a status of SUPPORTED reflects 'at least one supporting claim, no claim coded as directly contradicting it' and must not be read as 'this hypothesis has been validated against competing explanations.' The H1/H3 simultaneous-SUPPORTED outcome is the clearest symptom."
+  }
+ ],
+ "canonical_file_hashes_sha256": {
+  "claims.json": "c807923798787a6a2b0dcea275166d2a8fb2faa0e4947da42ebe0e88da69236a",
+  "evidence_claim_relations.json": "04f6ab5aa84324bed45bd085dfd42f1be000f4e319881442981a03d8cbd3e320",
+  "hypotheses.json": "5ce317c070d231caa966d8f6f73854d97083443e463edcb10c1458b30723fc33",
+  "statistical_evidence.json": "a36fd8bc821a32ac8bd2abe622d5f85387abb54cfa395f55cd343be322f14ff1",
+  "intelligence_objects.json": "8dd5c777a324115ce0b0a1ef4694e71d849dc2eed4aeb4e00be122a62a9892a3",
+  "report_v3.json": "09996b947684d58136b523805528f698f0feadf67d5318c47e78657046fa1f35",
+  "ai_labor_report_v1.json": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ },
+ "protect_unchanged_baseline": {
+  "ai_labor_intelligence_object_hash_note": "full intelligence_objects.json is hashed above (single file holds both topics); AI_LABOR sub-object recorded verbatim below for direct diff since the file is shared",
+  "ai_labor_io_snapshot": {
+   "intelligence_id": "intel_dbab7b01963396b5",
+   "topic": "AI_LABOR",
+   "question": "is AI adoption measurably shifting US labor force participation?",
+   "current_state": "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect.",
+   "key_claims": [
+    "claim_4765a68987d86c67"
+   ],
+   "supporting_evidence": [
+    "rel_0ad164c8796a074d"
+   ],
+   "counterevidence": [],
+   "alternative_explanations": [],
+   "statistics": [
+    "series_c302bf9e2576ad47"
+   ],
+   "research_context": [],
+   "policy_context": [],
+   "historical_context": [],
+   "geographic_context": [
+    {
+     "geography": "USA",
+     "basis": "statistic geography field (World Bank country code)",
+     "scope": "event_country=UNKNOWN"
+    }
+   ],
+   "temporal_chain": [
+    {
+     "period_start": "2010",
+     "period_end": "2022",
+     "source": "series_c302bf9e2576ad47"
+    }
+   ],
+   "uncertainties": [
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+    }
+   ],
+   "known_gaps": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no sector/occupation-level decomposition linking this aggregate indicator to AI adoption specifically"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "no counterevidence/alternative-explanation evidence connected yet for H1 beyond the listed candidate list"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over -- still NOT_READY"
+    }
+   ],
+   "provenance": [
+    "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100"
+   ],
+   "last_updated": "2026-10-01T04:28:40.296660+00:00",
+   "readiness": "CONDITIONALLY_READY",
+   "version": 1,
+   "previous_version": null,
+   "revision_history": []
+  },
+  "ai_labor_report_v1_hash": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ }
+}
