@@ -1,0 +1,84 @@
+{
+ "phase": "O-1",
+ "topic": "AI_ENERGY_INFRA",
+ "stages": {
+  "QUERY_PLANNED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "no persistent log of the web searches run across O-1's agent passes exists; queries for LBNL/Ireland/Korea/EU-EED/China and the 3 counterevidence directions were run but not logged to a query-planning artifact."
+  },
+  "SOURCE_FETCHED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "underlying web fetches (LBNL PDF, CSO Ireland page, Carbon Brief, Korean news secondary reporting, EU EED text) were not logged to a fetch-audit file."
+  },
+  "SOURCE_VALIDATED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "no persistent source-validation log distinct from claim admission exists."
+  },
+  "CANDIDATE_CREATED": {
+   "count": 9,
+   "status": "REAL",
+   "note": "real count of new claim+counterevidence candidates hand-enumerated from the actual O-1 commits (f066701, 55f0ba1) and this session's work."
+  },
+  "EVIDENCE_VALIDATED": {
+   "count": 6,
+   "status": "REAL",
+   "note": "all 6 new AI_ENERGY_INFRA claims were written to claims.json with a classification (PRIMARY_SOURCE/DERIVATIVE_REPORTING/ACADEMIC_ANALYSIS/POLICY_ANNOUNCEMENT) rather than left unclassified."
+  },
+  "EVIDENCE_ADMITTED": {
+   "count": 11,
+   "status": "REAL",
+   "note": "total claim count in claims.json after O-1 (all topics; AI_ENERGY_INFRA-specific subset is the 6 new claims above plus pre-existing O-0 claims)."
+  },
+  "CLAIM_CONNECTED": {
+   "count": 9,
+   "status": "REAL",
+   "note": "total evidence_claim_relations.json entries after O-1 (LBNL->H1/H2/H7, Korea->H4 among them); not all of the 6 new claims were linked to a hypothesis relation (Ireland/China/EU-EED feed the intelligence object's geographic/policy context directly rather than a hypothesis relation)."
+  },
+  "HYPOTHESIS_UPDATED": {
+   "count": 5,
+   "status": "REAL",
+   "note": "5 of 7 AI_ENERGY_INFRA hypotheses (H1,H2,H3,H4,H7) changed status this phase per hypothesis_model.classify_status(); H5 stayed CONTESTED, H6 stayed WEAKENED. Includes the disclosed H1/H3 simultaneous-SUPPORTED contradiction -- counted as 2 real status changes, not hidden or merged into 1."
+  },
+  "INTELLIGENCE_UPDATED": {
+   "count": 3,
+   "status": "REAL",
+   "note": "intel_87210a61730c22b9 reached version 3 (previous_version=2) via intelligence_object.upsert_intelligence_object with a real revision_history entry recording the new evidence, counterevidence, hypothesis changes, and the HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP disclosure."
+  },
+  "REPORT_UPDATED": {
+   "count": null,
+   "status": "NOT_YET_RUN",
+   "note": "Report Engine v3 generation for report_intel_87210a61730c22b9 had not been run at the time this funnel file was written in this session -- see the final O-1 report's section AB/AC for whether it was completed later in the same session, and do not infer REAL from this placeholder alone."
+  }
+ },
+ "counterevidence_directions_with_results": [
+  "manufacturing_reshoring",
+  "weather_climate_peak_load",
+  "dc_growth_without_power_problems_region"
+ ],
+ "counterevidence_file_present": true,
+ "hypothesis_status_changes": {
+  "hyp_b0a4bbbc9b601728": [
+   "PARTIALLY_SUPPORTED_or_INSUFFICIENT",
+   "SUPPORTED"
+  ],
+  "hyp_o0_h2_ai_energy_infra": [
+   "PARTIALLY_SUPPORTED_or_INSUFFICIENT",
+   "SUPPORTED"
+  ],
+  "hyp_o0_h3_ai_energy_infra": [
+   "PARTIALLY_SUPPORTED_or_INSUFFICIENT",
+   "SUPPORTED"
+  ],
+  "hyp_o0_h4_ai_energy_infra": [
+   "PARTIALLY_SUPPORTED_or_INSUFFICIENT",
+   "SUPPORTED"
+  ],
+  "hyp_o0_h7_ai_energy_infra": [
+   "PARTIALLY_SUPPORTED_or_INSUFFICIENT",
+   "SUPPORTED"
+  ]
+ }
+}
