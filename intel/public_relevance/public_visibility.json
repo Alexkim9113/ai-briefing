@@ -1,0 +1,4209 @@
+{
+  "003ca48c1f2e48ca": {
+    "document_id": "003ca48c1f2e48ca",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "003dea2169532db9": {
+    "document_id": "003dea2169532db9",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "00d2cdb46baa4993": {
+    "document_id": "00d2cdb46baa4993",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "00e0e7f15b5ca159": {
+    "document_id": "00e0e7f15b5ca159",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "011ef36b54ed2caf": {
+    "document_id": "011ef36b54ed2caf",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "01c3e8f27fbd8406": {
+    "document_id": "01c3e8f27fbd8406",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "01d52f418fedebcf": {
+    "document_id": "01d52f418fedebcf",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "01f160536bc3c001": {
+    "document_id": "01f160536bc3c001",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0271fa2552268681": {
+    "document_id": "0271fa2552268681",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "02de2b66c27b37fc": {
+    "document_id": "02de2b66c27b37fc",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "03265759f277b5fb": {
+    "document_id": "03265759f277b5fb",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "038a0e5dc7babbdd": {
+    "document_id": "038a0e5dc7babbdd",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "04414f2c8ea844a3": {
+    "document_id": "04414f2c8ea844a3",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "046bd80008b09729": {
+    "document_id": "046bd80008b09729",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "047434314690ec71": {
+    "document_id": "047434314690ec71",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0570e4ca485cbe49": {
+    "document_id": "0570e4ca485cbe49",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "05a2147b87ee773d": {
+    "document_id": "05a2147b87ee773d",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "066c898f2ae0aecb": {
+    "document_id": "066c898f2ae0aecb",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "06e93634a5683e16": {
+    "document_id": "06e93634a5683e16",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "06f8e2e60a3912f1": {
+    "document_id": "06f8e2e60a3912f1",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0796b0a2299ad115": {
+    "document_id": "0796b0a2299ad115",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "07a9ef96dd7bd930": {
+    "document_id": "07a9ef96dd7bd930",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "080c262bbf5cfa04": {
+    "document_id": "080c262bbf5cfa04",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "087053d02ab70d75": {
+    "document_id": "087053d02ab70d75",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "09150bbb5564cd7d": {
+    "document_id": "09150bbb5564cd7d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "095a0399492aabb5": {
+    "document_id": "095a0399492aabb5",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "098bf8cf7059ebdf": {
+    "document_id": "098bf8cf7059ebdf",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "09a8d4cb9c105e40": {
+    "document_id": "09a8d4cb9c105e40",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0a7bae001a4eb0a0": {
+    "document_id": "0a7bae001a4eb0a0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "0af865929333ce85": {
+    "document_id": "0af865929333ce85",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "0afcc1f1207ae9c3": {
+    "document_id": "0afcc1f1207ae9c3",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0b80e8337f170c48": {
+    "document_id": "0b80e8337f170c48",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0bebc752a36a5833": {
+    "document_id": "0bebc752a36a5833",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0c6dcbb864f90b80": {
+    "document_id": "0c6dcbb864f90b80",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0caaae60eb400887": {
+    "document_id": "0caaae60eb400887",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0cbf1320cf73baa7": {
+    "document_id": "0cbf1320cf73baa7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0d74c144cbc09cb0": {
+    "document_id": "0d74c144cbc09cb0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "0eaf81e07771f4f8": {
+    "document_id": "0eaf81e07771f4f8",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1041885bfad2900b": {
+    "document_id": "1041885bfad2900b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "10d76142cf0ed76d": {
+    "document_id": "10d76142cf0ed76d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "111cd9002abfd1e0": {
+    "document_id": "111cd9002abfd1e0",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "116d9bfc19470c66": {
+    "document_id": "116d9bfc19470c66",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "118f6df39635c424": {
+    "document_id": "118f6df39635c424",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "11a06ab4a84746c7": {
+    "document_id": "11a06ab4a84746c7",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "12f39d79cbc9ba6f": {
+    "document_id": "12f39d79cbc9ba6f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1344135651cb3449": {
+    "document_id": "1344135651cb3449",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "13b2ecb05be9b676": {
+    "document_id": "13b2ecb05be9b676",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "13e59b13604b7ad4": {
+    "document_id": "13e59b13604b7ad4",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "13eddd2d548f927d": {
+    "document_id": "13eddd2d548f927d",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1471f243a93ca936": {
+    "document_id": "1471f243a93ca936",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1543742ca214e323": {
+    "document_id": "1543742ca214e323",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "15c9ae44e0a95ffa": {
+    "document_id": "15c9ae44e0a95ffa",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "161baeca232fce4b": {
+    "document_id": "161baeca232fce4b",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "167459110ffb8ac7": {
+    "document_id": "167459110ffb8ac7",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "169818debb726db7": {
+    "document_id": "169818debb726db7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "16e8b1bd5a2b9512": {
+    "document_id": "16e8b1bd5a2b9512",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1797278454f972a0": {
+    "document_id": "1797278454f972a0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "19a8f2ba343102a9": {
+    "document_id": "19a8f2ba343102a9",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1a45c9ca1feecdaa": {
+    "document_id": "1a45c9ca1feecdaa",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b1336bb7e5fa1da": {
+    "document_id": "1b1336bb7e5fa1da",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b15c161992551ee": {
+    "document_id": "1b15c161992551ee",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1b1cdfdd178b97a5": {
+    "document_id": "1b1cdfdd178b97a5",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b226736fb66c350": {
+    "document_id": "1b226736fb66c350",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b41b176bd0adfd7": {
+    "document_id": "1b41b176bd0adfd7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b570b7646a49e78": {
+    "document_id": "1b570b7646a49e78",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1b71243b506cd89b": {
+    "document_id": "1b71243b506cd89b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1bdc1f260b416720": {
+    "document_id": "1bdc1f260b416720",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1bdda2b5527a0269": {
+    "document_id": "1bdda2b5527a0269",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1bfa38bbf1d25731": {
+    "document_id": "1bfa38bbf1d25731",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1c867f4502962656": {
+    "document_id": "1c867f4502962656",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1cbd4d0b0d0d2d55": {
+    "document_id": "1cbd4d0b0d0d2d55",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1ccdf68a6702289b": {
+    "document_id": "1ccdf68a6702289b",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1cf7a4f18314cfa2": {
+    "document_id": "1cf7a4f18314cfa2",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1d34110e9e5176a4": {
+    "document_id": "1d34110e9e5176a4",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1d95d7458c9d3ec5": {
+    "document_id": "1d95d7458c9d3ec5",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "1dd2a138c5bca1da": {
+    "document_id": "1dd2a138c5bca1da",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1e0055b0593bf80a": {
+    "document_id": "1e0055b0593bf80a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1e10ea1539c7c6e3": {
+    "document_id": "1e10ea1539c7c6e3",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "1e258d51319b94bf": {
+    "document_id": "1e258d51319b94bf",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1ec4c52a35e0c324": {
+    "document_id": "1ec4c52a35e0c324",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1ecc5bbf614279ab": {
+    "document_id": "1ecc5bbf614279ab",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1eed7c43167c6bc3": {
+    "document_id": "1eed7c43167c6bc3",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f0035151ef27b81": {
+    "document_id": "1f0035151ef27b81",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f11da8bdd103a02": {
+    "document_id": "1f11da8bdd103a02",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "1f438d32f0fe73cf": {
+    "document_id": "1f438d32f0fe73cf",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f545e2495b93dba": {
+    "document_id": "1f545e2495b93dba",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f81d9a6b7ab6af0": {
+    "document_id": "1f81d9a6b7ab6af0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f9a283cf09f0c45": {
+    "document_id": "1f9a283cf09f0c45",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "1f9e4faa2884391a": {
+    "document_id": "1f9e4faa2884391a",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2013a723b92f689a": {
+    "document_id": "2013a723b92f689a",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "205d24fc4aa4460d": {
+    "document_id": "205d24fc4aa4460d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2075b886be535ebc": {
+    "document_id": "2075b886be535ebc",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2142eb5040ffb026": {
+    "document_id": "2142eb5040ffb026",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "2144249f946e6a7f": {
+    "document_id": "2144249f946e6a7f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "214a8161345439a3": {
+    "document_id": "214a8161345439a3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "220e975dbf569c87": {
+    "document_id": "220e975dbf569c87",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "22177298ebd0d964": {
+    "document_id": "22177298ebd0d964",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "226aaee7c426d040": {
+    "document_id": "226aaee7c426d040",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "226e58772222cf19": {
+    "document_id": "226e58772222cf19",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "227c6ab559343ea9": {
+    "document_id": "227c6ab559343ea9",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2352697bb93a9ed0": {
+    "document_id": "2352697bb93a9ed0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "243bfa5dd690514d": {
+    "document_id": "243bfa5dd690514d",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "25428a889e4e17d3": {
+    "document_id": "25428a889e4e17d3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "257acf0e898c1819": {
+    "document_id": "257acf0e898c1819",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "25e927286cfe88c7": {
+    "document_id": "25e927286cfe88c7",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "2645ed6e1a470408": {
+    "document_id": "2645ed6e1a470408",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "276454588940c9c0": {
+    "document_id": "276454588940c9c0",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "27696817e653dc5b": {
+    "document_id": "27696817e653dc5b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2809059b0209e060": {
+    "document_id": "2809059b0209e060",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2815b0de7362fed6": {
+    "document_id": "2815b0de7362fed6",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "285a01d81f4609a7": {
+    "document_id": "285a01d81f4609a7",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "29f9b767f0c23a89": {
+    "document_id": "29f9b767f0c23a89",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "2a97955593b4cce8": {
+    "document_id": "2a97955593b4cce8",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2ab1aa934e12c23d": {
+    "document_id": "2ab1aa934e12c23d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2ad5e1589700ee2c": {
+    "document_id": "2ad5e1589700ee2c",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2b16df5092c4ca8e": {
+    "document_id": "2b16df5092c4ca8e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2b921d55000f83c9": {
+    "document_id": "2b921d55000f83c9",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2ca1dd1b0b2bf398": {
+    "document_id": "2ca1dd1b0b2bf398",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "2d116b4142889cd6": {
+    "document_id": "2d116b4142889cd6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2e790be387745d18": {
+    "document_id": "2e790be387745d18",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2ebbad3249d4bcd3": {
+    "document_id": "2ebbad3249d4bcd3",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2f001273e917b44c": {
+    "document_id": "2f001273e917b44c",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2fa01e8819fd9906": {
+    "document_id": "2fa01e8819fd9906",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2faf19c00cd6aed6": {
+    "document_id": "2faf19c00cd6aed6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "2fb8820ccff50440": {
+    "document_id": "2fb8820ccff50440",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "2fe5c603fb3d2b4c": {
+    "document_id": "2fe5c603fb3d2b4c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "300addd098d03404": {
+    "document_id": "300addd098d03404",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "300b661b3fac9df6": {
+    "document_id": "300b661b3fac9df6",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "309d3a4f83f0a017": {
+    "document_id": "309d3a4f83f0a017",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "31a26a71a83b2b43": {
+    "document_id": "31a26a71a83b2b43",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "323df270d2af56a8": {
+    "document_id": "323df270d2af56a8",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "32712da4bf898a6e": {
+    "document_id": "32712da4bf898a6e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "33743502a7e0c1a0": {
+    "document_id": "33743502a7e0c1a0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "342c492ea49cacef": {
+    "document_id": "342c492ea49cacef",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3458780fabb08a16": {
+    "document_id": "3458780fabb08a16",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "34e92abdf3b4ee2d": {
+    "document_id": "34e92abdf3b4ee2d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "357fe251fe22eff2": {
+    "document_id": "357fe251fe22eff2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3689e26142bd7e5d": {
+    "document_id": "3689e26142bd7e5d",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "378c7e6a655962f9": {
+    "document_id": "378c7e6a655962f9",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "38308ca5e293ac0f": {
+    "document_id": "38308ca5e293ac0f",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "39143425e551ebb4": {
+    "document_id": "39143425e551ebb4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "39318c552e3132ec": {
+    "document_id": "39318c552e3132ec",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "39d67296f72562fd": {
+    "document_id": "39d67296f72562fd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3a3635b0a8367055": {
+    "document_id": "3a3635b0a8367055",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3a99aad9e7a79fcd": {
+    "document_id": "3a99aad9e7a79fcd",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3afab9fd81992f6c": {
+    "document_id": "3afab9fd81992f6c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "3b35cb6c469f7f59": {
+    "document_id": "3b35cb6c469f7f59",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3b64b7e40e5ebfea": {
+    "document_id": "3b64b7e40e5ebfea",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "3b69094bd9c06432": {
+    "document_id": "3b69094bd9c06432",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "3b88cc9c0f6789fe": {
+    "document_id": "3b88cc9c0f6789fe",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "3c7d8f12053d37d7": {
+    "document_id": "3c7d8f12053d37d7",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "3c8cbe10003daf71": {
+    "document_id": "3c8cbe10003daf71",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3e1b942251a7a23c": {
+    "document_id": "3e1b942251a7a23c",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3e71d6c6be22f764": {
+    "document_id": "3e71d6c6be22f764",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "3e75f2a25891f6ef": {
+    "document_id": "3e75f2a25891f6ef",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "3f7969b6b8365164": {
+    "document_id": "3f7969b6b8365164",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "401262e3edacf310": {
+    "document_id": "401262e3edacf310",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "402b5453964c27e4": {
+    "document_id": "402b5453964c27e4",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "409b2b7180016fa4": {
+    "document_id": "409b2b7180016fa4",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "40c546b01b8f0823": {
+    "document_id": "40c546b01b8f0823",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "40d45e6cd98f5b35": {
+    "document_id": "40d45e6cd98f5b35",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "40d7ecedf5e75bb1": {
+    "document_id": "40d7ecedf5e75bb1",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4133fd226b224128": {
+    "document_id": "4133fd226b224128",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "430ed3a5ad4fe1e3": {
+    "document_id": "430ed3a5ad4fe1e3",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "433659a4c9e08710": {
+    "document_id": "433659a4c9e08710",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4362ab11e73c75fe": {
+    "document_id": "4362ab11e73c75fe",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "43a9c024e95cb8af": {
+    "document_id": "43a9c024e95cb8af",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "443df734f7b9b9c0": {
+    "document_id": "443df734f7b9b9c0",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "446acb23e44a7c81": {
+    "document_id": "446acb23e44a7c81",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4490d40673661919": {
+    "document_id": "4490d40673661919",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "44b4d146dc16d157": {
+    "document_id": "44b4d146dc16d157",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "452cfc6087a1ac77": {
+    "document_id": "452cfc6087a1ac77",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "453edd81f34afd76": {
+    "document_id": "453edd81f34afd76",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4588f5db52b6c56a": {
+    "document_id": "4588f5db52b6c56a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "45b5fdf5492485c9": {
+    "document_id": "45b5fdf5492485c9",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "468982c9c2f3ffef": {
+    "document_id": "468982c9c2f3ffef",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "472603c56de86f75": {
+    "document_id": "472603c56de86f75",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "473456da3332130e": {
+    "document_id": "473456da3332130e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "480c057600cbf210": {
+    "document_id": "480c057600cbf210",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4847d061d1f249e6": {
+    "document_id": "4847d061d1f249e6",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4867dab3ead8b283": {
+    "document_id": "4867dab3ead8b283",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "48a08004f52ae590": {
+    "document_id": "48a08004f52ae590",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "48e4051caea60fe2": {
+    "document_id": "48e4051caea60fe2",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "491fadb507694bf2": {
+    "document_id": "491fadb507694bf2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "496f0fcecba2eb3d": {
+    "document_id": "496f0fcecba2eb3d",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "499b5712c021b4e7": {
+    "document_id": "499b5712c021b4e7",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "49b59d900ec7166a": {
+    "document_id": "49b59d900ec7166a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "49be8e2c8fc24273": {
+    "document_id": "49be8e2c8fc24273",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4acccc39c6d4489d": {
+    "document_id": "4acccc39c6d4489d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4b0bc5a0dbd05b45": {
+    "document_id": "4b0bc5a0dbd05b45",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4b6ac88a841fbc54": {
+    "document_id": "4b6ac88a841fbc54",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4c7ff3e464e556e3": {
+    "document_id": "4c7ff3e464e556e3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4d4cdc5a20c81fa2": {
+    "document_id": "4d4cdc5a20c81fa2",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "4d9011aeb75ceea8": {
+    "document_id": "4d9011aeb75ceea8",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "4d987bc13622185d": {
+    "document_id": "4d987bc13622185d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4e170ef4dc847489": {
+    "document_id": "4e170ef4dc847489",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4e3f6a460e8216d7": {
+    "document_id": "4e3f6a460e8216d7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4e79040d2acbe57a": {
+    "document_id": "4e79040d2acbe57a",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4f20354442be35fe": {
+    "document_id": "4f20354442be35fe",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4fddb8d043851dec": {
+    "document_id": "4fddb8d043851dec",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "4fdf7655276adfec": {
+    "document_id": "4fdf7655276adfec",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5016b2f28d807d53": {
+    "document_id": "5016b2f28d807d53",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5047633d16750463": {
+    "document_id": "5047633d16750463",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "505f45831d507283": {
+    "document_id": "505f45831d507283",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "519427defb714577": {
+    "document_id": "519427defb714577",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "525569900b31c3eb": {
+    "document_id": "525569900b31c3eb",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "528909138ef9ae5b": {
+    "document_id": "528909138ef9ae5b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "53b7e0749ff9005e": {
+    "document_id": "53b7e0749ff9005e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "53ccfe4ee8a4c931": {
+    "document_id": "53ccfe4ee8a4c931",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "53efc98d45c27165": {
+    "document_id": "53efc98d45c27165",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "547ece542cfa8787": {
+    "document_id": "547ece542cfa8787",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "54f4d677add3e002": {
+    "document_id": "54f4d677add3e002",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "55148847538c1fbd": {
+    "document_id": "55148847538c1fbd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "551a43eb5d06eea0": {
+    "document_id": "551a43eb5d06eea0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "567e3791d3b6fa27": {
+    "document_id": "567e3791d3b6fa27",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "56896a5d1aac295e": {
+    "document_id": "56896a5d1aac295e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "56d2dbd4f173ee13": {
+    "document_id": "56d2dbd4f173ee13",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "56e02b88c03ebef9": {
+    "document_id": "56e02b88c03ebef9",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "56f68bc91612360d": {
+    "document_id": "56f68bc91612360d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "574d71d286dad78c": {
+    "document_id": "574d71d286dad78c",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "57dbd0f7c4aa58cd": {
+    "document_id": "57dbd0f7c4aa58cd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "58921084d65cf8e2": {
+    "document_id": "58921084d65cf8e2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "58e4b643e8c55e15": {
+    "document_id": "58e4b643e8c55e15",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "5902b7fc4d824984": {
+    "document_id": "5902b7fc4d824984",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "59511be866c5c3b5": {
+    "document_id": "59511be866c5c3b5",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "597975da49400eea": {
+    "document_id": "597975da49400eea",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "59b0e24ab40ae762": {
+    "document_id": "59b0e24ab40ae762",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5b02c13a623eb849": {
+    "document_id": "5b02c13a623eb849",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5b3bd1a0b357ff1d": {
+    "document_id": "5b3bd1a0b357ff1d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "5b890a6410cfab5e": {
+    "document_id": "5b890a6410cfab5e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5bc21962d8baa159": {
+    "document_id": "5bc21962d8baa159",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5c07b3bfc8763230": {
+    "document_id": "5c07b3bfc8763230",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "5d00ad984724aa40": {
+    "document_id": "5d00ad984724aa40",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5d646df0760783f2": {
+    "document_id": "5d646df0760783f2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5d7602215f6c3bd2": {
+    "document_id": "5d7602215f6c3bd2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5dac0a21aadd247f": {
+    "document_id": "5dac0a21aadd247f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5e7df92f76d6fc68": {
+    "document_id": "5e7df92f76d6fc68",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "5ec44a18ca5116c1": {
+    "document_id": "5ec44a18ca5116c1",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6157b03fcb4ba8c2": {
+    "document_id": "6157b03fcb4ba8c2",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "618c37c2e0a204f4": {
+    "document_id": "618c37c2e0a204f4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "61c1fe818b7043dd": {
+    "document_id": "61c1fe818b7043dd",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "61ee6443ac4c8835": {
+    "document_id": "61ee6443ac4c8835",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6211e8309bb76cc0": {
+    "document_id": "6211e8309bb76cc0",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "626a1a31b56e8ec9": {
+    "document_id": "626a1a31b56e8ec9",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "63433bc3b020cb2f": {
+    "document_id": "63433bc3b020cb2f",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "641a71ff188a7303": {
+    "document_id": "641a71ff188a7303",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "64518cad73d2f295": {
+    "document_id": "64518cad73d2f295",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "651ced999ded9424": {
+    "document_id": "651ced999ded9424",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "655bd5362be42b9c": {
+    "document_id": "655bd5362be42b9c",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6568156e487803bb": {
+    "document_id": "6568156e487803bb",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "65e0f9c45ab357a7": {
+    "document_id": "65e0f9c45ab357a7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "663a777ff2b4ac30": {
+    "document_id": "663a777ff2b4ac30",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "66b537ba2c5a288f": {
+    "document_id": "66b537ba2c5a288f",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6764d3abfb174d0e": {
+    "document_id": "6764d3abfb174d0e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6790127fafa1547e": {
+    "document_id": "6790127fafa1547e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "679e89ed0f11656e": {
+    "document_id": "679e89ed0f11656e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "68232043a61edc7c": {
+    "document_id": "68232043a61edc7c",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "68821b181460df0c": {
+    "document_id": "68821b181460df0c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "688c6d92f147a96b": {
+    "document_id": "688c6d92f147a96b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "68b13a5f5553e6df": {
+    "document_id": "68b13a5f5553e6df",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6904b4bcb1eaa371": {
+    "document_id": "6904b4bcb1eaa371",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6913568609c5c92b": {
+    "document_id": "6913568609c5c92b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6932c746610094b9": {
+    "document_id": "6932c746610094b9",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "69a8d08b6013351f": {
+    "document_id": "69a8d08b6013351f",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "69c770b5985fb631": {
+    "document_id": "69c770b5985fb631",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "69c9050fd9955f88": {
+    "document_id": "69c9050fd9955f88",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6a15180ad9eaf3c9": {
+    "document_id": "6a15180ad9eaf3c9",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6a277ac6abf1a973": {
+    "document_id": "6a277ac6abf1a973",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6a443da468f0b563": {
+    "document_id": "6a443da468f0b563",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6aa7474c11881e04": {
+    "document_id": "6aa7474c11881e04",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6b136dd5a3ce385f": {
+    "document_id": "6b136dd5a3ce385f",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6b962900432b0a4b": {
+    "document_id": "6b962900432b0a4b",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "6ba7417936458e58": {
+    "document_id": "6ba7417936458e58",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6bb04d3a16411126": {
+    "document_id": "6bb04d3a16411126",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6bd5af81db880d8e": {
+    "document_id": "6bd5af81db880d8e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6c41ae2bcdb38d72": {
+    "document_id": "6c41ae2bcdb38d72",
+    "public_relevance_category": "AI_SOCIAL_IMPACT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "6c513cccbcc753a2": {
+    "document_id": "6c513cccbcc753a2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6c9b137c8514c7dc": {
+    "document_id": "6c9b137c8514c7dc",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6cb39993ce75e2c5": {
+    "document_id": "6cb39993ce75e2c5",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6cc68bd9ad4570a4": {
+    "document_id": "6cc68bd9ad4570a4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6ccfeed8a10ffef0": {
+    "document_id": "6ccfeed8a10ffef0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6d4e864fe511d7c7": {
+    "document_id": "6d4e864fe511d7c7",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6d992b1527418012": {
+    "document_id": "6d992b1527418012",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6dd85428828d69f3": {
+    "document_id": "6dd85428828d69f3",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6de0efa96e17d673": {
+    "document_id": "6de0efa96e17d673",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6e61f7c39a884b91": {
+    "document_id": "6e61f7c39a884b91",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "6fc66bde3fb78af3": {
+    "document_id": "6fc66bde3fb78af3",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "6feba3eef71bdaf6": {
+    "document_id": "6feba3eef71bdaf6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "719f0117204ff057": {
+    "document_id": "719f0117204ff057",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7238f9bc8ffac5b7": {
+    "document_id": "7238f9bc8ffac5b7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "72d9200b61c984f6": {
+    "document_id": "72d9200b61c984f6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "739cdbb231435820": {
+    "document_id": "739cdbb231435820",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "73bfd23ebd577794": {
+    "document_id": "73bfd23ebd577794",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "74469eeb3eb1742c": {
+    "document_id": "74469eeb3eb1742c",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "757b7368bb10d75a": {
+    "document_id": "757b7368bb10d75a",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "760ebae26d64c740": {
+    "document_id": "760ebae26d64c740",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "76725908664817a7": {
+    "document_id": "76725908664817a7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "76850fadc70bcae3": {
+    "document_id": "76850fadc70bcae3",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "769e742bf21a4dc6": {
+    "document_id": "769e742bf21a4dc6",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "773930a7059cb4fc": {
+    "document_id": "773930a7059cb4fc",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "77b258d1ae5ef8f9": {
+    "document_id": "77b258d1ae5ef8f9",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "77e5fdfbcba2a723": {
+    "document_id": "77e5fdfbcba2a723",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "7815a514e52c1293": {
+    "document_id": "7815a514e52c1293",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7879ba346e816ebd": {
+    "document_id": "7879ba346e816ebd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "787b62a3a5306ff0": {
+    "document_id": "787b62a3a5306ff0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "788d01ac3691ff08": {
+    "document_id": "788d01ac3691ff08",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "79991b012ae4d53d": {
+    "document_id": "79991b012ae4d53d",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "79a580960f1c16d9": {
+    "document_id": "79a580960f1c16d9",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "79b976d981ecb781": {
+    "document_id": "79b976d981ecb781",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7b218ecf09043a44": {
+    "document_id": "7b218ecf09043a44",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7b365b59d25c5367": {
+    "document_id": "7b365b59d25c5367",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "7bede5d4c50555d6": {
+    "document_id": "7bede5d4c50555d6",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7c7b6ea24fb9b3a9": {
+    "document_id": "7c7b6ea24fb9b3a9",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7d2e55f008d039d7": {
+    "document_id": "7d2e55f008d039d7",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7de6ff5c477db9ea": {
+    "document_id": "7de6ff5c477db9ea",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7de70fc69ab15ab1": {
+    "document_id": "7de70fc69ab15ab1",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7e130d746d795b4b": {
+    "document_id": "7e130d746d795b4b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7e13e1906d2c4957": {
+    "document_id": "7e13e1906d2c4957",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "7e890a613e94f408": {
+    "document_id": "7e890a613e94f408",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "800aadf994455a8e": {
+    "document_id": "800aadf994455a8e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8037ce5b679100a0": {
+    "document_id": "8037ce5b679100a0",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8075bf5bbfc1d823": {
+    "document_id": "8075bf5bbfc1d823",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "80fc75582332491e": {
+    "document_id": "80fc75582332491e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "816c50b1f41abd48": {
+    "document_id": "816c50b1f41abd48",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "816c7dd218f8be11": {
+    "document_id": "816c7dd218f8be11",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "81ebe6bbeb6a73fa": {
+    "document_id": "81ebe6bbeb6a73fa",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "82283b8c6a2bdc8a": {
+    "document_id": "82283b8c6a2bdc8a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8231ed4ab2d7e32f": {
+    "document_id": "8231ed4ab2d7e32f",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "82835bb5b0825df4": {
+    "document_id": "82835bb5b0825df4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "843b0f840bbd2cae": {
+    "document_id": "843b0f840bbd2cae",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "857d4691a1df76e2": {
+    "document_id": "857d4691a1df76e2",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "85e24b1ddd0fddb8": {
+    "document_id": "85e24b1ddd0fddb8",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8604fa77898f35e4": {
+    "document_id": "8604fa77898f35e4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "865c5b591492119e": {
+    "document_id": "865c5b591492119e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "86c6c88fcd3ed8ce": {
+    "document_id": "86c6c88fcd3ed8ce",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "875cad4e1ea46687": {
+    "document_id": "875cad4e1ea46687",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8855c7bacd49d00c": {
+    "document_id": "8855c7bacd49d00c",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "88b9df154621717e": {
+    "document_id": "88b9df154621717e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "890a5bfa8b43e52a": {
+    "document_id": "890a5bfa8b43e52a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "89cac0c9522159fd": {
+    "document_id": "89cac0c9522159fd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "89ccee2684b4572e": {
+    "document_id": "89ccee2684b4572e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "89cfa475c2cdfc02": {
+    "document_id": "89cfa475c2cdfc02",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "89e52f095ed74bc1": {
+    "document_id": "89e52f095ed74bc1",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8a98f6e495bf9b46": {
+    "document_id": "8a98f6e495bf9b46",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "8aab122839121830": {
+    "document_id": "8aab122839121830",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8bbc61f2b406854c": {
+    "document_id": "8bbc61f2b406854c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8c298c1f1997c0d0": {
+    "document_id": "8c298c1f1997c0d0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8c40def2f753b1b8": {
+    "document_id": "8c40def2f753b1b8",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8c58e1ca7fc1bd2b": {
+    "document_id": "8c58e1ca7fc1bd2b",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8cd64ca0e58500d6": {
+    "document_id": "8cd64ca0e58500d6",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8cdc42a0090085b7": {
+    "document_id": "8cdc42a0090085b7",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8ce8f265fed36edb": {
+    "document_id": "8ce8f265fed36edb",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8d120e73d1ec23c7": {
+    "document_id": "8d120e73d1ec23c7",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8d36a93d57a1921a": {
+    "document_id": "8d36a93d57a1921a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "8de1456a2539f9a3": {
+    "document_id": "8de1456a2539f9a3",
+    "public_relevance_category": "AI_SOCIAL_IMPACT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "8e38ffc882b4bd6d": {
+    "document_id": "8e38ffc882b4bd6d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "900b27d5e3522433": {
+    "document_id": "900b27d5e3522433",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "905fba6e1f01d1ac": {
+    "document_id": "905fba6e1f01d1ac",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9072631ea5aec4b6": {
+    "document_id": "9072631ea5aec4b6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "908149d0ee3f8694": {
+    "document_id": "908149d0ee3f8694",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9154f04d2070dbf3": {
+    "document_id": "9154f04d2070dbf3",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "92e717684db9a1da": {
+    "document_id": "92e717684db9a1da",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "932e8b4711a1c5f3": {
+    "document_id": "932e8b4711a1c5f3",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "93e4155e53a494d3": {
+    "document_id": "93e4155e53a494d3",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "951237163b121a0b": {
+    "document_id": "951237163b121a0b",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "955ff8e165125ebf": {
+    "document_id": "955ff8e165125ebf",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "95fdbc0adbb37fc8": {
+    "document_id": "95fdbc0adbb37fc8",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9631da5dae6e57c0": {
+    "document_id": "9631da5dae6e57c0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "96a60e8915c660cd": {
+    "document_id": "96a60e8915c660cd",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "983a4b9ea49e5fab": {
+    "document_id": "983a4b9ea49e5fab",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9985e08aec3aa1fc": {
+    "document_id": "9985e08aec3aa1fc",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "99a39e2815aabe32": {
+    "document_id": "99a39e2815aabe32",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "9a47cecddfd15ef1": {
+    "document_id": "9a47cecddfd15ef1",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9aac76b6f2c6084f": {
+    "document_id": "9aac76b6f2c6084f",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "9b75262a4813d73c": {
+    "document_id": "9b75262a4813d73c",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9be5600d409cd305": {
+    "document_id": "9be5600d409cd305",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9c4ea00ffb83bb2b": {
+    "document_id": "9c4ea00ffb83bb2b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "9c7c53ae0a20e8e3": {
+    "document_id": "9c7c53ae0a20e8e3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9cb34f07f4f3c23a": {
+    "document_id": "9cb34f07f4f3c23a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "9d3ee3c58ee4aade": {
+    "document_id": "9d3ee3c58ee4aade",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "9ddafd358f3e430f": {
+    "document_id": "9ddafd358f3e430f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "9f727f4c6d89ac2e": {
+    "document_id": "9f727f4c6d89ac2e",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a08b66b7114bbb67": {
+    "document_id": "a08b66b7114bbb67",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a0b368baa3501144": {
+    "document_id": "a0b368baa3501144",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a118c3f0ef961232": {
+    "document_id": "a118c3f0ef961232",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a1f7d5b570427037": {
+    "document_id": "a1f7d5b570427037",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "a35fc3ec93e92876": {
+    "document_id": "a35fc3ec93e92876",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a44b475d22987c58": {
+    "document_id": "a44b475d22987c58",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a47b03818169cd6e": {
+    "document_id": "a47b03818169cd6e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a503f173e1a7cd6d": {
+    "document_id": "a503f173e1a7cd6d",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a541b3b3913208a4": {
+    "document_id": "a541b3b3913208a4",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "a5a4ec3187bed15d": {
+    "document_id": "a5a4ec3187bed15d",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a63dbbe3db8fddeb": {
+    "document_id": "a63dbbe3db8fddeb",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a6521be6e95a568b": {
+    "document_id": "a6521be6e95a568b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a6575ff74981de4c": {
+    "document_id": "a6575ff74981de4c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "a681b1f3f24363d6": {
+    "document_id": "a681b1f3f24363d6",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a682ab947fb593c6": {
+    "document_id": "a682ab947fb593c6",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a6860a601e532fa2": {
+    "document_id": "a6860a601e532fa2",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a6a095b728b64bb5": {
+    "document_id": "a6a095b728b64bb5",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a6a4027d9878143d": {
+    "document_id": "a6a4027d9878143d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a72f36c603737ac3": {
+    "document_id": "a72f36c603737ac3",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "a83beb41909f962a": {
+    "document_id": "a83beb41909f962a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a85a8039b8d4a043": {
+    "document_id": "a85a8039b8d4a043",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a85dd0cf4a15d681": {
+    "document_id": "a85dd0cf4a15d681",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "a85ddbd9692afc08": {
+    "document_id": "a85ddbd9692afc08",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a8fee0294821033e": {
+    "document_id": "a8fee0294821033e",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a98cfc6e0969e741": {
+    "document_id": "a98cfc6e0969e741",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "a9cf060b286b8ec8": {
+    "document_id": "a9cf060b286b8ec8",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "a9d16c000a5074e0": {
+    "document_id": "a9d16c000a5074e0",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "aa5e3e547eac71d3": {
+    "document_id": "aa5e3e547eac71d3",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "aa86b71b79add54e": {
+    "document_id": "aa86b71b79add54e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "aa9903feed237588": {
+    "document_id": "aa9903feed237588",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ab35ec286e01ba12": {
+    "document_id": "ab35ec286e01ba12",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "ab5676fb003650b0": {
+    "document_id": "ab5676fb003650b0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ac62a839e4263e8d": {
+    "document_id": "ac62a839e4263e8d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "acaec4a2ea38d98d": {
+    "document_id": "acaec4a2ea38d98d",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ad709c1aafc95bc2": {
+    "document_id": "ad709c1aafc95bc2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "af55192d35ffee3b": {
+    "document_id": "af55192d35ffee3b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b01fc027a9011cc3": {
+    "document_id": "b01fc027a9011cc3",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b0a61cc02d56581d": {
+    "document_id": "b0a61cc02d56581d",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b14f40615bcee62e": {
+    "document_id": "b14f40615bcee62e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b15a2ff30aed2814": {
+    "document_id": "b15a2ff30aed2814",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b18afba3ef916a01": {
+    "document_id": "b18afba3ef916a01",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b1f9e5ce7b1385e0": {
+    "document_id": "b1f9e5ce7b1385e0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b21e67bad324b73f": {
+    "document_id": "b21e67bad324b73f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b350a91f6f2ce0e2": {
+    "document_id": "b350a91f6f2ce0e2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b36b5f98085cde4d": {
+    "document_id": "b36b5f98085cde4d",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b394df1ecc069ffe": {
+    "document_id": "b394df1ecc069ffe",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b3a4b00699d9d0f6": {
+    "document_id": "b3a4b00699d9d0f6",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "b47b0d127b9b1236": {
+    "document_id": "b47b0d127b9b1236",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "b48cf3b3b7844edd": {
+    "document_id": "b48cf3b3b7844edd",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b51d0171ce50335b": {
+    "document_id": "b51d0171ce50335b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b78abc7c3138f8bd": {
+    "document_id": "b78abc7c3138f8bd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b81ae70a4b3bd443": {
+    "document_id": "b81ae70a4b3bd443",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "b89a06590653f53d": {
+    "document_id": "b89a06590653f53d",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b8a4c2850d58bbd8": {
+    "document_id": "b8a4c2850d58bbd8",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "b8fa13cceb3fef09": {
+    "document_id": "b8fa13cceb3fef09",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "b9132706b192018f": {
+    "document_id": "b9132706b192018f",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "b917c819c6d2b7c1": {
+    "document_id": "b917c819c6d2b7c1",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "ba35de9dcfd1f152": {
+    "document_id": "ba35de9dcfd1f152",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ba5556e7140f0be2": {
+    "document_id": "ba5556e7140f0be2",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "bb3a99b70d953517": {
+    "document_id": "bb3a99b70d953517",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "bc2b0801b29fc39e": {
+    "document_id": "bc2b0801b29fc39e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "bc5d1547b9dcef3e": {
+    "document_id": "bc5d1547b9dcef3e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "bc8cb8c023f350b7": {
+    "document_id": "bc8cb8c023f350b7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "bda73e7519619ec5": {
+    "document_id": "bda73e7519619ec5",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "bdec74f6ea680b93": {
+    "document_id": "bdec74f6ea680b93",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "be50ada9222b3181": {
+    "document_id": "be50ada9222b3181",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "bed33a3df012443f": {
+    "document_id": "bed33a3df012443f",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "bf1a06cfff6e0af4": {
+    "document_id": "bf1a06cfff6e0af4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "bf61df88840874c2": {
+    "document_id": "bf61df88840874c2",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "bfe97f12fbf84f80": {
+    "document_id": "bfe97f12fbf84f80",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c0c6184dd0e7e792": {
+    "document_id": "c0c6184dd0e7e792",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c19fc06aa089528b": {
+    "document_id": "c19fc06aa089528b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "c1d8d44f1e54f029": {
+    "document_id": "c1d8d44f1e54f029",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c1e3c7d0c9c4c9d9": {
+    "document_id": "c1e3c7d0c9c4c9d9",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c347fc714f369737": {
+    "document_id": "c347fc714f369737",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c36c7061caf8d96f": {
+    "document_id": "c36c7061caf8d96f",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c44ad1c92b9bfb01": {
+    "document_id": "c44ad1c92b9bfb01",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "c4f8d657a2124698": {
+    "document_id": "c4f8d657a2124698",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c542cd70bc1b6c8a": {
+    "document_id": "c542cd70bc1b6c8a",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c72be212f7c256a2": {
+    "document_id": "c72be212f7c256a2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c870309fc98a2e94": {
+    "document_id": "c870309fc98a2e94",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c919af194fa14ce4": {
+    "document_id": "c919af194fa14ce4",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c9285e8be0631961": {
+    "document_id": "c9285e8be0631961",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c9b4fb54e3eee75e": {
+    "document_id": "c9b4fb54e3eee75e",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "c9b5c0c9b9961d6e": {
+    "document_id": "c9b5c0c9b9961d6e",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ca26e7bd5d304a8e": {
+    "document_id": "ca26e7bd5d304a8e",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "ca3f9803426c7e7e": {
+    "document_id": "ca3f9803426c7e7e",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "ca6adbb0cf2b1f03": {
+    "document_id": "ca6adbb0cf2b1f03",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cb6fa8e331a559b4": {
+    "document_id": "cb6fa8e331a559b4",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cccd3edc1a0c3627": {
+    "document_id": "cccd3edc1a0c3627",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cdcf112c99277cf2": {
+    "document_id": "cdcf112c99277cf2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ce13e6afe9af5d03": {
+    "document_id": "ce13e6afe9af5d03",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ce3ae80951c6add7": {
+    "document_id": "ce3ae80951c6add7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ceefd16719823d49": {
+    "document_id": "ceefd16719823d49",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "cef274fc4457c577": {
+    "document_id": "cef274fc4457c577",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cf090ffcf44670c2": {
+    "document_id": "cf090ffcf44670c2",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cf6f3352254b1d03": {
+    "document_id": "cf6f3352254b1d03",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "cfe8e900401f31bb": {
+    "document_id": "cfe8e900401f31bb",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "d06b05a46bad9321": {
+    "document_id": "d06b05a46bad9321",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d087e0ae22225f1a": {
+    "document_id": "d087e0ae22225f1a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d12e0ed85befc587": {
+    "document_id": "d12e0ed85befc587",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "d196604bbd70d39a": {
+    "document_id": "d196604bbd70d39a",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d2394bd4dea4b108": {
+    "document_id": "d2394bd4dea4b108",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "d250725b6046ea36": {
+    "document_id": "d250725b6046ea36",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d279d4e556b691da": {
+    "document_id": "d279d4e556b691da",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d3180795a4560ed3": {
+    "document_id": "d3180795a4560ed3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d33f56aedc1a1a86": {
+    "document_id": "d33f56aedc1a1a86",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d34bf503fa4ddf38": {
+    "document_id": "d34bf503fa4ddf38",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d4e9a3cb4ba2d832": {
+    "document_id": "d4e9a3cb4ba2d832",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d5785c0c50a76b63": {
+    "document_id": "d5785c0c50a76b63",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d5ab3d9f70677efa": {
+    "document_id": "d5ab3d9f70677efa",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "d5e76bd23cb990b4": {
+    "document_id": "d5e76bd23cb990b4",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d6377ed8ecd7dc34": {
+    "document_id": "d6377ed8ecd7dc34",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d6851aa0ca1879b9": {
+    "document_id": "d6851aa0ca1879b9",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d6b794adf7b93b53": {
+    "document_id": "d6b794adf7b93b53",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "d6fa27c327baa571": {
+    "document_id": "d6fa27c327baa571",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d7480ee9eab551d4": {
+    "document_id": "d7480ee9eab551d4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d794466b088fd094": {
+    "document_id": "d794466b088fd094",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "d79b1aaf39ee63ce": {
+    "document_id": "d79b1aaf39ee63ce",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d9174ae236f11b26": {
+    "document_id": "d9174ae236f11b26",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "d9ac67ff9e968efd": {
+    "document_id": "d9ac67ff9e968efd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "daa9ede7bf7e3ced": {
+    "document_id": "daa9ede7bf7e3ced",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "dab93b32009a0922": {
+    "document_id": "dab93b32009a0922",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "daef1e4c7c82ef2d": {
+    "document_id": "daef1e4c7c82ef2d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "db0be1a0cfc1d481": {
+    "document_id": "db0be1a0cfc1d481",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "db72ace2d407e627": {
+    "document_id": "db72ace2d407e627",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "dbc88da07e499796": {
+    "document_id": "dbc88da07e499796",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "dc332ad03d778177": {
+    "document_id": "dc332ad03d778177",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "dcd4b5a345a64a9b": {
+    "document_id": "dcd4b5a345a64a9b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "ddab416a8880e847": {
+    "document_id": "ddab416a8880e847",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "dde81ed215255298": {
+    "document_id": "dde81ed215255298",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "de3e71b484376fc0": {
+    "document_id": "de3e71b484376fc0",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "de73610bdcd632eb": {
+    "document_id": "de73610bdcd632eb",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "df40f9337a2a59c2": {
+    "document_id": "df40f9337a2a59c2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "dfa177774ac07bd0": {
+    "document_id": "dfa177774ac07bd0",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "dfeca8bdbe271f85": {
+    "document_id": "dfeca8bdbe271f85",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e09f773c670497f3": {
+    "document_id": "e09f773c670497f3",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e0dee1cf2d6e1939": {
+    "document_id": "e0dee1cf2d6e1939",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e148c5ca51df1a7b": {
+    "document_id": "e148c5ca51df1a7b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e18ca1f6c1da5525": {
+    "document_id": "e18ca1f6c1da5525",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e1a8e43d7757ce5b": {
+    "document_id": "e1a8e43d7757ce5b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e1d900cc677a1485": {
+    "document_id": "e1d900cc677a1485",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e1da0f895405134f": {
+    "document_id": "e1da0f895405134f",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e201ae42e96f2746": {
+    "document_id": "e201ae42e96f2746",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "e2305056af9a026a": {
+    "document_id": "e2305056af9a026a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e24777179f397829": {
+    "document_id": "e24777179f397829",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e256f2e34277afd4": {
+    "document_id": "e256f2e34277afd4",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e3314d2b3064542c": {
+    "document_id": "e3314d2b3064542c",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e3670fdb1168e9de": {
+    "document_id": "e3670fdb1168e9de",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e3690b0a82d18e64": {
+    "document_id": "e3690b0a82d18e64",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e37a416ff32aef42": {
+    "document_id": "e37a416ff32aef42",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e3caf6a8ec30c10e": {
+    "document_id": "e3caf6a8ec30c10e",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "e421d3f963f49792": {
+    "document_id": "e421d3f963f49792",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e45955d26ea76a4b": {
+    "document_id": "e45955d26ea76a4b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e4781ecbb6f40965": {
+    "document_id": "e4781ecbb6f40965",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e4828906e0c2a24c": {
+    "document_id": "e4828906e0c2a24c",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e4c37e0d9bb9dcc7": {
+    "document_id": "e4c37e0d9bb9dcc7",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e503243640538fb4": {
+    "document_id": "e503243640538fb4",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e5069c3c119cc29d": {
+    "document_id": "e5069c3c119cc29d",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e529b3bdbc7cc843": {
+    "document_id": "e529b3bdbc7cc843",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e5449a8431cd49c4": {
+    "document_id": "e5449a8431cd49c4",
+    "public_relevance_category": "AI_CULTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e56b56dcd1e0ba39": {
+    "document_id": "e56b56dcd1e0ba39",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e56d31412fb24095": {
+    "document_id": "e56d31412fb24095",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e5a7e65e338847cf": {
+    "document_id": "e5a7e65e338847cf",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e5c1758166db1712": {
+    "document_id": "e5c1758166db1712",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e5cf82c318ebff37": {
+    "document_id": "e5cf82c318ebff37",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e67449d274f10817": {
+    "document_id": "e67449d274f10817",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e68f0666edbc5c4d": {
+    "document_id": "e68f0666edbc5c4d",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e6c2321620e27157": {
+    "document_id": "e6c2321620e27157",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e70f95ed5a22acd7": {
+    "document_id": "e70f95ed5a22acd7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e819bcf485e0e959": {
+    "document_id": "e819bcf485e0e959",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e82d6eda69f28e92": {
+    "document_id": "e82d6eda69f28e92",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e8f2a35d653481e0": {
+    "document_id": "e8f2a35d653481e0",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "e96ad269a05a37ac": {
+    "document_id": "e96ad269a05a37ac",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e97fa667cee7e431": {
+    "document_id": "e97fa667cee7e431",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e97feb962e9bc35b": {
+    "document_id": "e97feb962e9bc35b",
+    "public_relevance_category": "AI_INFRASTRUCTURE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "e991b6a3550fd4bb": {
+    "document_id": "e991b6a3550fd4bb",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ea0aad1a92c760b3": {
+    "document_id": "ea0aad1a92c760b3",
+    "public_relevance_category": "KEYWORD_COLLISION",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "제목/소개글에 약한 연관 단어만 있고 실제 AI 핵심 용어가 없음",
+    "was_previously_unclassified": false
+  },
+  "ea0c1a5244af03a7": {
+    "document_id": "ea0c1a5244af03a7",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ebb851930de734e4": {
+    "document_id": "ebb851930de734e4",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "edd509b516aeb4bf": {
+    "document_id": "edd509b516aeb4bf",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ede282772e227bbf": {
+    "document_id": "ede282772e227bbf",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ef0eefee23ced086": {
+    "document_id": "ef0eefee23ced086",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "ef6789ef59cb34bf": {
+    "document_id": "ef6789ef59cb34bf",
+    "public_relevance_category": "AI_ECONOMY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "efad110cb352af8c": {
+    "document_id": "efad110cb352af8c",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "efd6519b50453379": {
+    "document_id": "efd6519b50453379",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "efeeadbd91aa198d": {
+    "document_id": "efeeadbd91aa198d",
+    "public_relevance_category": "AI_LABOR",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f01501f768ff98ac": {
+    "document_id": "f01501f768ff98ac",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f06dbb00f986539a": {
+    "document_id": "f06dbb00f986539a",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f0cedcefd9da5ba7": {
+    "document_id": "f0cedcefd9da5ba7",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "f1e09f10ef95a3a5": {
+    "document_id": "f1e09f10ef95a3a5",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f40435708adabe08": {
+    "document_id": "f40435708adabe08",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f4536f170090e69b": {
+    "document_id": "f4536f170090e69b",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "f522c61f6424c7dd": {
+    "document_id": "f522c61f6424c7dd",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f52ceebf9117e5b1": {
+    "document_id": "f52ceebf9117e5b1",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f57f3c87d7aee0f4": {
+    "document_id": "f57f3c87d7aee0f4",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "f6508ca400c834f4": {
+    "document_id": "f6508ca400c834f4",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "f74745b2c6f47143": {
+    "document_id": "f74745b2c6f47143",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f80b4d31f78038d9": {
+    "document_id": "f80b4d31f78038d9",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f813795f882f1d79": {
+    "document_id": "f813795f882f1d79",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f837d073a2dc600b": {
+    "document_id": "f837d073a2dc600b",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f8b02ceb183ed441": {
+    "document_id": "f8b02ceb183ed441",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f8fc03d8424ebcac": {
+    "document_id": "f8fc03d8424ebcac",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f906814c00dcda1f": {
+    "document_id": "f906814c00dcda1f",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "f98a2b96f2b5a52f": {
+    "document_id": "f98a2b96f2b5a52f",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "f98d2ac1c3cdd422": {
+    "document_id": "f98d2ac1c3cdd422",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fa61fc48ebd70563": {
+    "document_id": "fa61fc48ebd70563",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fac437ef93d158a8": {
+    "document_id": "fac437ef93d158a8",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "faea70104a385ec2": {
+    "document_id": "faea70104a385ec2",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "faf7ef6da7817b0a": {
+    "document_id": "faf7ef6da7817b0a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "fb2b24a4ae8cad91": {
+    "document_id": "fb2b24a4ae8cad91",
+    "public_relevance_category": "AI_POLICY",
+    "visibility": "PUBLIC",
+    "reason": "제목에 AI 관련 키워드가 직접 등장 - 주변부 언급으로 보기 어려움",
+    "was_previously_unclassified": false
+  },
+  "fbafabe17015a664": {
+    "document_id": "fbafabe17015a664",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fcb6426185967686": {
+    "document_id": "fcb6426185967686",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fcc6662fdc5f8cae": {
+    "document_id": "fcc6662fdc5f8cae",
+    "public_relevance_category": "AI_GOVERNANCE",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fd4246f43aa9e33a": {
+    "document_id": "fd4246f43aa9e33a",
+    "public_relevance_category": "GENERAL_NEWS",
+    "visibility": "INTERNAL_ONLY",
+    "reason": "AI 관련 근거 없음 -- 일반 뉴스",
+    "was_previously_unclassified": false
+  },
+  "fd62032abae488e2": {
+    "document_id": "fd62032abae488e2",
+    "public_relevance_category": "AI_RESEARCH",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "fe88331025fecb70": {
+    "document_id": "fe88331025fecb70",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ffd9efb76c34bab5": {
+    "document_id": "ffd9efb76c34bab5",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  },
+  "ffe4a9600d2b1e95": {
+    "document_id": "ffe4a9600d2b1e95",
+    "public_relevance_category": "AI_DIRECT",
+    "visibility": "PUBLIC",
+    "reason": "제목에 독립된 AI 토큰이 등장",
+    "was_previously_unclassified": false
+  }
+}
