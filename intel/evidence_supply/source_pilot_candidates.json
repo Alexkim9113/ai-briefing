@@ -68,5 +68,33 @@
   "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
   "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
   "verification_note": "CourtListener aggregates real court opinions and is not itself a court, so source_type/institution_type here mark it as an aggregator, not the court of record - individual opinions still carry their own court/jurisdiction/case_number once fetched. Same network constraint; not registered into sources.json."
+ },
+ {
+  "candidate_id": "cand_kr_law_go_kr",
+  "canonical_name": "국가법령정보센터 (Korea Ministry of Government Legislation statute portal)",
+  "official_domain": "law.go.kr",
+  "source_type": "GOVERNMENT",
+  "country": "KR",
+  "jurisdiction": "Republic of Korea",
+  "institution_type": "EXECUTIVE_BRANCH",
+  "candidate_document_types": ["STATUTE", "REGULATION", "OFFICIAL_REPORT"],
+  "feed_url_candidate": null,
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "M.5F Section 12-13: this domain was already confirmed unreachable from this sandbox (curl -> 'CONNECT tunnel failed, response 403', re-confirmed this session). law.go.kr's own documented Open API requires a registered OC= user id, so no feed_url_candidate is asserted here (asserting one would be exactly the guessed-endpoint fabrication Section 47 forbids) -- this entry exists so verify_source_candidates.py can, from an environment with real network access, at minimum confirm the bare domain is reachable and report back whether a genuinely public (no-OC) page exists, rather than this module guessing one. Not registered into sources.json."
+ },
+ {
+  "candidate_id": "cand_kr_korea_kr_policy_briefing",
+  "canonical_name": "정책브리핑 (korea.kr, Republic of Korea government policy briefing portal)",
+  "official_domain": "korea.kr",
+  "source_type": "GOVERNMENT",
+  "country": "KR",
+  "jurisdiction": "Republic of Korea",
+  "institution_type": "EXECUTIVE_BRANCH",
+  "candidate_document_types": ["POLICY", "OFFICIAL_REPORT", "PRESS_RELEASE"],
+  "feed_url_candidate": "https://www.korea.kr/rss/dept_wn.xml",
+  "verification_method": "DOMAIN_KNOWLEDGE_ONLY_NO_LIVE_FETCH",
+  "verification_status": "UNVERIFIED_PENDING_LIVE_CHECK",
+  "verification_note": "M.5F Section 12-13: korea.kr is the Korean government's own official policy-briefing portal (정책브리핑), already confirmed unreachable from this sandbox (curl -> 'CONNECT tunnel failed, response 403', re-confirmed this session). The feed_url_candidate is a plausible, publicly documented RSS path pattern for this site's department-news feeds, but it is NOT confirmed to resolve -- same discipline as every other candidate here: UNVERIFIED until verify_source_candidates.py's three-check gate (domain reachable, real RSS/Atom XML returned, no redirect off-domain) passes from an environment with real outbound network. Not registered into sources.json."
  }
 ]

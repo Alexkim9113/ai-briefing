@@ -68,3 +68,39 @@ def test_alias_rejects_unknown_target():
     except ValueError:
         pass
     _reset()
+
+
+def test_section11_register_source_carries_required_fields_with_honest_defaults():
+    _reset()
+    sr.register_source("src_x", "X", "x.example", "COMPANY")
+    rec = sr.load_registry()["sources"]["src_x"]
+    assert rec["primary_or_secondary"] == "UNKNOWN"
+    assert rec["access_method"] == "UNKNOWN"
+    assert rec["reliability_tier"] == "UNKNOWN"
+    assert rec["auth_required"] is None
+    assert rec["known_limitations"] is None
+    _reset()
+
+
+def test_section11_register_source_rejects_unknown_enum_values():
+    _reset()
+    try:
+        sr.register_source("src_y", "Y", "y.example", "COMPANY", primary_or_secondary="MAYBE")
+        assert False, "should have raised"
+    except AssertionError:
+        pass
+    _reset()
+
+
+def test_section11_register_source_accepts_real_values_when_known():
+    _reset()
+    sr.register_source("src_fedreg", "Federal Register", "federalregister.gov", "GOVERNMENT",
+                        official_status="OFFICIAL", country="US",
+                        primary_or_secondary="PRIMARY", access_method="API",
+                        auth_required=False, structured_data_available=True,
+                        date_range="1994-present", reliability_tier="HIGH",
+                        copyright_policy="PUBLIC_DOMAIN")
+    rec = sr.load_registry()["sources"]["src_fedreg"]
+    assert rec["primary_or_secondary"] == "PRIMARY"
+    assert rec["reliability_tier"] == "HIGH"
+    _reset()

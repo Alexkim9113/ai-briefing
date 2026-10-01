@@ -69,11 +69,30 @@ def seed_registry_if_empty():
     return reg, True
 
 
+PRIMARY_OR_SECONDARY_VALUES = ("PRIMARY", "SECONDARY", "UNKNOWN")
+ACCESS_METHOD_VALUES = ("API", "RSS", "WEB_SCRAPE", "VERIFIED_OFFICIAL_PAGE", "UNKNOWN")
+RELIABILITY_TIER_VALUES = ("HIGH", "MEDIUM", "LOW", "UNKNOWN")
+
+
 def register_source(source_id, canonical_name, domain, source_type, official_status=None,
-                     country=None, institution_type=None, parent_organization=None):
+                     country=None, institution_type=None, parent_organization=None,
+                     primary_or_secondary="UNKNOWN", access_method="UNKNOWN", auth_required=None,
+                     structured_data_available=None, date_range=None, reliability_tier="UNKNOWN",
+                     copyright_policy=None, known_limitations=None):
     """새 source를 명시적으로 등록한다(호출자가 실제로 확인한 경우에만 호출해야 한다 —
-    이 함수 자체는 아무것도 추측하지 않고 주어진 값만 저장한다)."""
+    이 함수 자체는 아무것도 추측하지 않고 주어진 값만 저장한다).
+
+    M.5F SECTION 11: carries the 12 fields Te's spec requires per registered source
+    (SOURCE_ID/SOURCE_CLASS=source_type/DOMAIN=domain/GEOGRAPHY=country/
+    PRIMARY_OR_SECONDARY/ACCESS_METHOD/AUTH_REQUIRED/STRUCTURED_DATA_AVAILABLE/DATE_RANGE/
+    RELIABILITY_TIER/COPYRIGHT_POLICY/KNOWN_LIMITATIONS). The 5 new fields all default to an
+    honest UNKNOWN/None rather than a guessed value, and existing callers that don't pass them
+    are unaffected -- this is additive, not a schema break."""
     assert source_type in SOURCE_TYPES, f"unknown source_type: {source_type}"
+    assert primary_or_secondary in PRIMARY_OR_SECONDARY_VALUES, \
+        f"unknown primary_or_secondary: {primary_or_secondary}"
+    assert access_method in ACCESS_METHOD_VALUES, f"unknown access_method: {access_method}"
+    assert reliability_tier in RELIABILITY_TIER_VALUES, f"unknown reliability_tier: {reliability_tier}"
     reg = load_registry()
     reg["sources"][source_id] = {
         "source_id": source_id,
@@ -86,6 +105,14 @@ def register_source(source_id, canonical_name, domain, source_type, official_sta
         "parent_organization": parent_organization,
         "aliases": [],
         "known_domains": [domain] if domain else [],
+        "primary_or_secondary": primary_or_secondary,
+        "access_method": access_method,
+        "auth_required": auth_required,
+        "structured_data_available": structured_data_available,
+        "date_range": date_range,
+        "reliability_tier": reliability_tier,
+        "copyright_policy": copyright_policy,
+        "known_limitations": known_limitations,
     }
     _save(REGISTRY_PATH, reg)
     return reg["sources"][source_id]
