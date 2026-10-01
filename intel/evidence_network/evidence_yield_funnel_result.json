@@ -1,0 +1,82 @@
+{
+  "note": "M.5E FINAL Section 34. Volume is not the success metric -- the fraction that survives to a real SUPPORTED Deep Pilot node is. Stages this codebase does not yet log are reported UNINSTRUMENTED, not estimated.",
+  "stages": {
+    "QUERY_PLANNED": {
+      "count": null,
+      "status": "UNINSTRUMENTED",
+      "note": "no persistent log of planned queries exists yet; query_planner.py is planning-only and does not log its own calls"
+    },
+    "SOURCE_SELECTED": {
+      "count": null,
+      "status": "UNINSTRUMENTED",
+      "note": "no persistent log of source routing decisions exists yet"
+    },
+    "REQUEST_ATTEMPTED": {
+      "count": null,
+      "status": "UNINSTRUMENTED",
+      "note": "connector-level request logs are not retained past the run that produced them"
+    },
+    "RESPONSE_RECEIVED": {
+      "count": null,
+      "status": "UNINSTRUMENTED",
+      "note": "same as above"
+    },
+    "CANDIDATE_EXTRACTED": {
+      "count": 508,
+      "status": "REAL_COUNT",
+      "note": "approximated by total admission_audit_log.json entries (every row represents a candidate that reached the admission gate, i.e. was successfully extracted)"
+    },
+    "VALIDATION_PASSED": {
+      "count": 428,
+      "status": "REAL_COUNT",
+      "note": "candidates minus those rejected for failing schema validation at the gate"
+    },
+    "ADMISSION_PASSED": {
+      "count": 37,
+      "status": "REAL_COUNT",
+      "note": "real ADMITTED count from admission_audit_log.json"
+    },
+    "EVIDENCE_CONNECTED": {
+      "count": null,
+      "status": "UNINSTRUMENTED",
+      "note": "no log distinguishes 'admitted to corpus' from 'connected into a specific Deep Pilot's evidence chain'"
+    },
+    "DEEP_PILOT_SUPPORTED": {
+      "count": 4,
+      "status": "REAL_COUNT",
+      "note": "real SUPPORTED-status node count across both rebuilt Deep Pilots (deep_pilot_v2 results), max possible 26 (13 nodes x 2 pilots)"
+    }
+  },
+  "admission_decision_counts_real": {
+    "ADMITTED": 37,
+    "DUPLICATE_EXISTING": 386,
+    "REMOVED_INVALID_PUBLICATION_DATE": 5,
+    "REJECTED_INVALID_SCHEMA": 80
+  },
+  "dropout_reason_counts": {
+    "DUPLICATE": 386,
+    "INVALID_DATE": 5,
+    "METADATA_INSUFFICIENT": 80
+  },
+  "source_family_yield": {
+    "src_federal_register": {
+      "attempted": 405,
+      "admitted": 28,
+      "yield_fraction": 0.0691
+    },
+    "src_crossref": {
+      "attempted": 98,
+      "admitted": 9,
+      "yield_fraction": 0.0918
+    },
+    "manual_corrective_removal_m5d": {
+      "attempted": 5,
+      "admitted": 0,
+      "yield_fraction": 0.0
+    }
+  },
+  "source_family_yield_limitation": "Section 28-of-message asked for yield across Federal Register, World Bank, Crossref, arXiv, OpenAlex, Korean academic, Korean government, international academic. Only admission_audit_log.json's two real logged sources (src_federal_register, src_crossref, plus 5 manual_corrective_removal_m5d entries) are instrumented; World Bank/arXiv/OpenAlex/Korean academic/Korean government connectors do not yet write to this log, so their yield is honestly UNAVAILABLE rather than estimated.",
+  "total_documents_in_canonical_corpus": 601,
+  "overall_admission_yield_fraction": 0.0728,
+  "deep_pilot_supported_fraction_of_26_max": 0.1538
+}
