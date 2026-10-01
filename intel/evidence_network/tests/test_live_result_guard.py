@@ -1,6 +1,7 @@
 # N-9 SECTIONS 9-14 -- Live/Sandbox Artifact Write Protection tests.
 # Structural regression test for the exact N-8 incident: a TEST_FIXTURE/SANDBOX write must never
 # be allowed to land on a GITHUB_ACTIONS canonical result path.
+import atexit
 import json
 import sys
 import tempfile
@@ -12,6 +13,37 @@ import live_result_guard as lrg  # noqa: E402
 import policy_research_acquisition as pra  # noqa: E402
 import counterevidence_live_acquisition as cla  # noqa: E402
 import longitudinal_evidence_acquisition as lea  # noqa: E402
+
+# N-9B Deliverable 0 follow-through: the three
+# test_*_save_result_with_test_fixture_environment_never_touches_live_file
+# tests below call the real production attempt_*/save_result() functions,
+# which overwrite the real canonical BASE result file (e.g.
+# policy_research_acquisition_result.json) with freshly-fetched content as
+# a side effect, even though environment="TEST_FIXTURE" correctly keeps
+# GITHUB_ACTIONS-suffixed live files untouched. That base file is real
+# canonical data (consumed elsewhere as the SANDBOX/base precedence slot),
+# so a full-suite run must not leave it mutated. We snapshot each base
+# file's real bytes once at import time and restore them on interpreter
+# exit, the same pattern used in test_url_resolver.py / test_source_registry.py.
+_BASE_RESULT_PATHS = [
+    pra.HERE / "policy_research_acquisition_result.json",
+    cla.HERE / "counterevidence_live_acquisition_result.json",
+    lea.HERE / "longitudinal_evidence_acquisition_result.json",
+]
+_BASE_RESULT_BACKUPS = {
+    p: (p.read_bytes() if p.exists() else None) for p in _BASE_RESULT_PATHS
+}
+
+
+def _restore_base_results():
+    for p, backup in _BASE_RESULT_BACKUPS.items():
+        if backup is not None:
+            p.write_bytes(backup)
+        elif p.exists():
+            p.unlink()
+
+
+atexit.register(_restore_base_results)
 
 
 def test_detect_environment_explicit_override_wins():
