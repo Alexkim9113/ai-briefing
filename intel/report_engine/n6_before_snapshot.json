@@ -1,0 +1,19 @@
+{
+ "head_commit": "28fcd3625562433dcf105fcfdabcbac9dfe7c4ca",
+ "counts": {
+  "documents": 601,
+  "claims": 2,
+  "hypotheses": 2,
+  "intelligence_objects": 2,
+  "sources_registry": 299,
+  "statistics": 2,
+  "reports": 2,
+  "pdfs": 2,
+  "known_gaps": 7,
+  "private_research": 0
+ },
+ "report_hashes": {
+  "report_intel_87210a61730c22b9_v1.json": "5eb972d0dc6a71ed",
+  "report_intel_dbab7b01963396b5_v1.json": "5f255f05d15ad71a"
+ }
+}
