@@ -235,13 +235,13 @@
     "statement": "Recent demand growth results from multiple factors (manufacturing, electrification, EVs, population, heating/cooling) not primarily AI",
     "scope": "US/PJM",
     "supporting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
-      "o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
-      "o1_counterevidence:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
-      "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
+      "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+      "claim_a11c5cb4c7c4c2d1:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
+      "claim_f5842e6162c8fefc:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
+      "claim_d641fb1790c3ef53:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
     ],
     "contradicting_evidence": [],
-    "status": "INSUFFICIENT_EVIDENCE",
+    "status": "SUPPORTED",
     "status_change_rationale": "GridLab attributes PJM demand growth to 'data center additions and electrification' jointly (partial support for multi-factor view) but direct searches for manufacturing/EV/population/weather drivers were SEARCH_NOT_RUN this session (see o0_live_counterevidence_supplement.json) -- insufficient to move beyond INSUFFICIENT_EVIDENCE.",
     "uncertainty": [
       {
@@ -249,7 +249,7 @@
         "detail": "6 of 10 counterevidence directions not yet searched"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.684878+00:00",
+    "last_updated": "2026-10-01T13:00:52.493430+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -293,19 +293,50 @@
     ],
     "canonical_status_diagnostics": {
       "legacy_full_status_count_based": "SUPPORTED",
-      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
-      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
-      "final_status": "INSUFFICIENT_EVIDENCE",
-      "resolved_supporting_evidence": [],
-      "unresolved_supporting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
-        "o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
-        "o1_counterevidence:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
-        "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "SUPPORTED",
+      "final_status": "SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+        "claim_a11c5cb4c7c4c2d1:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
+        "claim_f5842e6162c8fefc:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
+        "claim_d641fb1790c3ef53:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD"
       ],
+      "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [],
       "unresolved_contradicting_evidence": [],
-      "guard_trail": []
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "4 independent origin(s) among 4 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'PRIMARY_OFFICIAL', 'UNKNOWN']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'PRIMARY_OFFICIAL', 'UNKNOWN']"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "PASSED",
+          "detail": "directness values present: ['CONTEXTUAL', 'PARTIAL']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['MIXED', 'OBSERVATION']; requires_current_state=True"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['AI_PARTIAL', 'NOT_APPLICABLE']; requires_ai_attribution=False"
+        }
+      ]
     },
     "o1c_status_change_log": [
       {
@@ -323,12 +354,12 @@
     "scope": "US regional (PJM) vs national",
     "supporting_evidence": [
       "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
-      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
+      "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
       "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION",
       "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
     ],
     "contradicting_evidence": [],
-    "status": "PARTIALLY_SUPPORTED",
+    "status": "SUPPORTED",
     "status_change_rationale": "IEA: US holds 45% of 2024 global data center electricity use and 'by far the largest share' of projected growth; GridLab's concrete cost/bottleneck evidence is specific to the PJM region, not uniform across the US -- consistent with regional concentration, though cross-region comparison data (ERCOT/CAISO) was not fetched this run.",
     "uncertainty": [
       {
@@ -336,7 +367,7 @@
         "detail": "ERCOT/CAISO/other ISO data not fetched this run"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.686109+00:00",
+    "last_updated": "2026-10-01T13:00:52.495168+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "SUPPORTED",
@@ -381,14 +412,14 @@
     "canonical_status_diagnostics": {
       "legacy_full_status_count_based": "SUPPORTED",
       "resolved_only_status_count_based": "SUPPORTED",
-      "quality_aware_status": "PARTIALLY_SUPPORTED",
-      "final_status": "PARTIALLY_SUPPORTED",
+      "quality_aware_status": "SUPPORTED",
+      "final_status": "SUPPORTED",
       "resolved_supporting_evidence": [
+        "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B",
         "claim_o1_korea_capital_region_dc_demand:KOREA_CAPITAL_REGION_DC_GRID_CONCENTRATION"
       ],
       "unresolved_supporting_evidence": [
         "o0_ai_energy_infra_acquisition_result:IEA_ENERGY_AND_AI_EXEC_SUMMARY",
-        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B",
         "o1_europe_claim:IRELAND_CSO_22PCT_2024_DATACENTER_ELECTRICITY"
       ],
       "resolved_contradicting_evidence": [],
@@ -397,32 +428,32 @@
         {
           "guard": "DERIVATIVE_EVIDENCE_GUARD",
           "result": "PASSED",
-          "detail": "1 independent origin(s) among 1 items"
+          "detail": "2 independent origin(s) among 2 items"
         },
         {
           "guard": "INDUSTRY_SELF_REPORT_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['DERIVATIVE_REPORTING']"
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'UNKNOWN']"
         },
         {
           "guard": "SOURCE_QUALITY_CHECKED_GUARD",
           "result": "PASSED",
-          "detail": "source tiers present: ['DERIVATIVE_REPORTING']"
+          "detail": "source tiers present: ['DERIVATIVE_REPORTING', 'UNKNOWN']"
         },
         {
           "guard": "MINIMUM_DIRECTNESS_GUARD",
-          "result": "FAILED",
-          "detail": "directness values present: ['INDIRECT']"
+          "result": "PASSED",
+          "detail": "directness values present: ['INDIRECT', 'PARTIAL']"
         },
         {
           "guard": "FORECAST_GUARD",
           "result": "PASSED",
-          "detail": "temporal types present: ['UNKNOWN']; requires_current_state=True"
+          "detail": "temporal types present: ['MIXED', 'UNKNOWN']; requires_current_state=True"
         },
         {
           "guard": "AI_ATTRIBUTION_GUARD",
-          "result": "FAILED",
-          "detail": "attribution strengths present: ['DATA_CENTER_GENERAL']; none is AI_DIRECT/AI_PARTIAL"
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['AI_PARTIAL', 'DATA_CENTER_GENERAL']; requires_ai_attribution=True"
         }
       ]
     }
@@ -435,9 +466,9 @@
     "scope": "US/PJM",
     "supporting_evidence": [],
     "contradicting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"
+      "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B"
     ],
-    "status": "INSUFFICIENT_EVIDENCE",
+    "status": "WEAKENED",
     "status_change_rationale": "GridLab explicitly frames the PJM bottleneck as a GENERATION/interconnection-queue supply shortage (130 GW of stalled generation projects), not a transmission/distribution capacity constraint -- this weighs against a pure transmission-bottleneck framing, though IEA separately notes grid-component (transformer, gas turbine) lead times doubling, which is more transmission/equipment-supply-chain-adjacent. The two sources partially disagree on where the bottleneck sits, hence CONTESTED rather than REJECTED.",
     "uncertainty": [
       {
@@ -445,7 +476,7 @@
         "detail": "sources use 'interconnection,' 'generation,' and 'grid component' bottlenecks somewhat interchangeably"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.687202+00:00",
+    "last_updated": "2026-10-01T13:00:52.496522+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "CONTESTED",
@@ -459,16 +490,22 @@
     ],
     "canonical_status_diagnostics": {
       "legacy_full_status_count_based": "REJECTED",
-      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
-      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
-      "final_status": "INSUFFICIENT_EVIDENCE",
+      "resolved_only_status_count_based": "REJECTED",
+      "quality_aware_status": "REJECTED",
+      "final_status": "WEAKENED",
       "resolved_supporting_evidence": [],
       "unresolved_supporting_evidence": [],
-      "resolved_contradicting_evidence": [],
-      "unresolved_contradicting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:GRIDLAB_PJM_INTERCONNECTION_3_5B"
+      "resolved_contradicting_evidence": [
+        "claim_5787125ab5f0110b:GRIDLAB_PJM_INTERCONNECTION_3_5B"
       ],
-      "guard_trail": []
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "SINGLE_ORIGIN_COUNTEREVIDENCE_GUARD",
+          "result": "FAILED",
+          "detail": "1 contradicting item(s) collapse to 1 independent origin(s) with directness ['PARTIAL'] -- weakens rather than fully rejects"
+        }
+      ]
     },
     "o1c_status_change_log": [
       {
@@ -486,9 +523,9 @@
     "scope": "GLOBAL (Google/Meta cloud infrastructure data 2016-2022)",
     "supporting_evidence": [],
     "contradicting_evidence": [
-      "o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"
+      "claim_d170f52f567053e9:ARXIV_JEVONS_CLOUD_2411.11540"
     ],
-    "status": "INSUFFICIENT_EVIDENCE",
+    "status": "WEAKENED",
     "status_change_rationale": "arXiv 2411.11540 found Google's hyperscale PUE near theoretical limit (~1.1) yet total energy consumption rose 3.7x from 2016-2022, i.e. efficiency gains did NOT offset aggregate growth in their dataset (a Jevons-paradox dynamic). Evidence is about general cloud computing, not AI-specific workloads (AI_ATTRIBUTION: INDIRECT), so this weakens but does not reject H6.",
     "uncertainty": [
       {
@@ -496,7 +533,7 @@
         "detail": "paper's dataset predates/straddles the generative-AI boom and is not AI-workload-specific"
       }
     ],
-    "last_updated": "2026-10-01T12:40:38.688408+00:00",
+    "last_updated": "2026-10-01T13:00:52.498004+00:00",
     "quality_reevaluation_history": [
       {
         "previous_status": "WEAKENED",
@@ -510,16 +547,22 @@
     ],
     "canonical_status_diagnostics": {
       "legacy_full_status_count_based": "REJECTED",
-      "resolved_only_status_count_based": "INSUFFICIENT_EVIDENCE",
-      "quality_aware_status": "INSUFFICIENT_EVIDENCE",
-      "final_status": "INSUFFICIENT_EVIDENCE",
+      "resolved_only_status_count_based": "REJECTED",
+      "quality_aware_status": "REJECTED",
+      "final_status": "WEAKENED",
       "resolved_supporting_evidence": [],
       "unresolved_supporting_evidence": [],
-      "resolved_contradicting_evidence": [],
-      "unresolved_contradicting_evidence": [
-        "o0_ai_energy_infra_acquisition_result:ARXIV_JEVONS_CLOUD_2411.11540"
+      "resolved_contradicting_evidence": [
+        "claim_d170f52f567053e9:ARXIV_JEVONS_CLOUD_2411.11540"
       ],
-      "guard_trail": []
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "SINGLE_ORIGIN_COUNTEREVIDENCE_GUARD",
+          "result": "FAILED",
+          "detail": "1 contradicting item(s) collapse to 1 independent origin(s) with directness ['INDIRECT'] -- weakens rather than fully rejects"
+        }
+      ]
     },
     "o1c_status_change_log": [
       {

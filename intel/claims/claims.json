@@ -162,5 +162,61 @@
     "provenance": "https://www.carbonbrief.org/explainer-how-china-is-managing-the-rising-energy-demand-from-data-centres (Carbon Brief, citing IEA, Goldman Sachs/Bloomberg, and Chinese State Council/government figures)",
     "created_at": "2026-10-01T11:39:57.678223+00:00",
     "evidence_independence": "DERIVATIVE_REPORTING / ACADEMIC_ANALYSIS -- Carbon Brief is a Western climate-policy analysis outlet; it cites but is not itself a primary Chinese government document. The underlying 77 TWh 2022 figure is attributed to Chinese government sources by Carbon Brief but was not independently located/fetched in a primary PRC government publication this pass -- so this claim is NOT tagged PRIMARY_SOURCE or POLICY_RESEARCH, only DERIVATIVE_REPORTING, consistent with the Korea claim's treatment."
+  },
+  "claim_a11c5cb4c7c4c2d1": {
+    "claim_id": "claim_a11c5cb4c7c4c2d1",
+    "claim_text": "Grid Strategies LLC's national load-growth reports (\"Strategic Industries Surging: Driving US Power Demand\", 2024, and \"Power Demand Forecasts Revised Up for Third Year Running, Led by Data Centers\", 2025) identify 'strategic industries' -- semiconductor fabs, battery/EV manufacturing, hydrogen, and LNG (i.e. reshoring/industrial-policy-driven manufacturing) -- as a driver of rising utility load forecasts named independently of, and alongside, data centers. STATUS=OBSERVED at the level of 'a named, non-AI industrial driver exists in utility planning data'; NOT a quantified TWh split versus data-center/AI demand (report body itself was not fetched in the originating pass, only report-title/summary level). This describes a co-occurring structural demand driver, not a finding that it disproves or displaces any AI-attributed demand growth. AI_ATTRIBUTION=NOT_APPLICABLE (manufacturing/reshoring load growth is a non-AI driver by construction; this claim says nothing about AI's share of demand).",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "US utility load-growth forecasts attributing a share of new demand to strategic/reshored manufacturing industries",
+    "time_scope": "2024-2025 (report publication); underlying forecasts multi-year forward",
+    "geographic_scope": "US",
+    "status": "OPEN",
+    "created_from": "o1_counterevidence:4_MANUFACTURING_RESHORING_GRID_STRATEGIES",
+    "provenance": "https://gridstrategiesllc.com/wp-content/uploads/Grid-Strategies-National-Load-Growth-Report-2025.pdf ; https://gridstrategiesllc.com/wp-content/uploads/National-Load-Growth-Report-2024.pdf",
+    "created_at": "2026-10-01T13:00:52.489273+00:00",
+    "evidence_independence": "DERIVATIVE_REPORTING"
+  },
+  "claim_f5842e6162c8fefc": {
+    "claim_id": "claim_f5842e6162c8fefc",
+    "claim_text": "Per IEA's Global EV Outlook 2025, global EV charging consumed approximately 180 TWh of electricity in 2024 (about 0.7% of final global electricity consumption), a 60% increase over 2023. STATUS=OBSERVED for the 2024 figure. FORECAST (IEA Stated Policies Scenario): EV electricity demand could grow more than fourfold to approximately 780 TWh by 2030 (about 2.5% of global electricity demand; over 4% in Europe, 3.6% in China) -- kept as a separate forecast field, never merged with the 2024 observed figure. No US-specific TWh figure was given in the fetched section. This is real, independent, non-AI electricity-demand growth (EV charging), roughly half the 2024 observed scale of global data center consumption (180 TWh vs. 415 TWh), and is NOT shown to explain any AI-specific or data-center-specific grid bottleneck (e.g. PJM interconnection delays) -- it is evidence of a parallel/co-driver demand source, not evidence against AI's contribution. AI_ATTRIBUTION=NOT_APPLICABLE (EV charging demand is a non-AI driver by construction; this claim says nothing about AI's share of demand).",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "Global (and EU/China) EV charging electricity consumption, 2024 observed and 2030 IEA Stated Policies Scenario forecast",
+    "time_scope": "2024 OBSERVED; 2030 FORECAST",
+    "geographic_scope": "GLOBAL/EUROPE/CHINA",
+    "status": "OPEN",
+    "created_from": "o1_counterevidence:5_EV_ELECTRIFICATION_IEA_GLOBAL_EV_OUTLOOK_2025",
+    "provenance": "https://www.iea.org/reports/global-ev-outlook-2025/outlook-for-energy-demand",
+    "created_at": "2026-10-01T13:00:52.489318+00:00",
+    "evidence_independence": "PRIMARY_SOURCE",
+    "forecast_fields": {
+      "base_year": 2024,
+      "base_value_twh": 180,
+      "forecast_year": 2030,
+      "forecast_value_twh_range": [
+        780,
+        780
+      ],
+      "unit": "TWh",
+      "scenario": "IEA Stated Policies Scenario (STEPS)",
+      "publisher": "International Energy Agency",
+      "publication_date": "2025",
+      "observed_or_projected": "2024=OBSERVED; 2030=FORECAST"
+    }
+  },
+  "claim_d641fb1790c3ef53": {
+    "claim_id": "claim_d641fb1790c3ef53",
+    "claim_text": "Multiple independent EIA 'Today in Energy' notes (June heat wave increased electricity demand in the eastern and midwestern United States, https://www.eia.gov/todayinenergy/detail.php?id=62410 ; Texas power grid met record-breaking demand for electricity during recent heat wave, https://www.eia.gov/todayinEnergy/detail.php?id=57240) and an Ember analysis (\"Powering through the heat: how 2024 heatwaves reshaped electricity demand\", https://ember-energy.org/latest-insights/powering-through-the-heat-how-2024-heatwaves-reshaped-electricity-demand/) document that 2024/2025 heat waves drove record or near-record PEAK electricity demand in ERCOT (Texas) and the Eastern Interconnection via air-conditioning load. STATUS=OBSERVED. This is a real, non-AI, weather-driven demand channel operating on PEAK/HOURLY timescales, not the multi-year annual TWh growth trend that the IEA/LBNL AI_ENERGY_INFRA claims track -- it is a genuine alternative explanation for PEAK LOAD STRESS episodes specifically, and must never be merged with annual-baseline electricity-growth claims as if they measured the same thing. AI_ATTRIBUTION=NOT_APPLICABLE (weather-driven peak demand is a non-AI driver by construction; this claim says nothing about AI's share of demand).",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "US (ERCOT/Eastern Interconnection) peak electricity demand during 2024-2025 heat waves",
+    "time_scope": "2024-2025 OBSERVED (peak/hourly events, not annual trend)",
+    "geographic_scope": "US",
+    "status": "OPEN",
+    "created_from": "o1_counterevidence:7_WEATHER_CLIMATE_EIA_EMBER_HEATWAVE_PEAK_LOAD",
+    "provenance": "https://www.eia.gov/todayinenergy/detail.php?id=62410 ; https://www.eia.gov/todayinEnergy/detail.php?id=57240 ; https://ember-energy.org/latest-insights/powering-through-the-heat-how-2024-heatwaves-reshaped-electricity-demand/",
+    "created_at": "2026-10-01T13:00:52.489328+00:00",
+    "evidence_independence": "PRIMARY_SOURCE (EIA) / DERIVATIVE_REPORTING (Ember analysis)"
   }
 }
