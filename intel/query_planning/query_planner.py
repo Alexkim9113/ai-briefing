@@ -177,6 +177,41 @@ def expand_entities_for_topic(topic_terms, events=None):
     return counts
 
 
+# --- SECTION 32: NOT_FOUND GAP CLASSIFICATION -- before any new code is written in response to
+# a failed search, the caller must say WHY it failed. TRUE_NULL (searched appropriately, the
+# evidence genuinely doesn't exist) is a valid, important, non-defect outcome -- never silently
+# treated the same as a connector bug.
+NOT_FOUND_GAP_CLASSES = (
+    "SOURCE_GAP", "QUERY_GAP", "ACCESS_GAP", "CORPUS_GAP", "CLASSIFICATION_GAP",
+    "TEMPORAL_GAP", "GEOGRAPHIC_GAP", "TRUE_NULL",
+)
+
+
+def classify_not_found(evidence_type, source_classes_attempted, queries_attempted,
+                        source_reachable=True, within_corpus_date_range=True,
+                        geography_covered=True, exhausted_query_expansion=False):
+    """Classifies a NOT_FOUND search outcome into one of NOT_FOUND_GAP_CLASSES, given what the
+    caller actually attempted (never guessed from the outside). The caller passes its own
+    observations (did it even route to a real source class, was the source reachable, did the
+    query cover the right date range/geography); this function only applies the decision logic,
+    never fabricates what was tried."""
+    if not source_classes_attempted:
+        return "SOURCE_GAP"  # Section 10 routing was never consulted at all
+    if not source_reachable:
+        return "ACCESS_GAP"
+    if not within_corpus_date_range:
+        return "TEMPORAL_GAP"
+    if not geography_covered:
+        return "GEOGRAPHIC_GAP"
+    if not queries_attempted:
+        return "QUERY_GAP"
+    if not exhausted_query_expansion:
+        # Section 8: a caller that only tried the bare topic term, never the registered
+        # expansion terms, has not actually exhausted the search space yet.
+        return "QUERY_GAP"
+    return "TRUE_NULL"
+
+
 def main():
     print("Query Planner is a planning-only library -- see tests for worked examples.")
     for et in EVIDENCE_TYPES:

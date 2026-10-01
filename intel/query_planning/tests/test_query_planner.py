@@ -103,3 +103,43 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def test_section32_no_source_attempted_is_source_gap():
+    result = m.classify_not_found("POLICY", [], [])
+    assert result == "SOURCE_GAP"
+
+
+def test_section32_unreachable_source_is_access_gap():
+    result = m.classify_not_found("POLICY", ["GOVERNMENT"], ["x"], source_reachable=False)
+    assert result == "ACCESS_GAP"
+
+
+def test_section32_date_range_miss_is_temporal_gap():
+    result = m.classify_not_found("HISTORICAL", ["JOURNAL"], ["x"], within_corpus_date_range=False)
+    assert result == "TEMPORAL_GAP"
+
+
+def test_section32_geography_miss_is_geographic_gap():
+    result = m.classify_not_found("POLICY", ["GOVERNMENT"], ["x"], geography_covered=False)
+    assert result == "GEOGRAPHIC_GAP"
+
+
+def test_section32_no_queries_attempted_is_query_gap():
+    result = m.classify_not_found("RESEARCH", ["JOURNAL"], [])
+    assert result == "QUERY_GAP"
+
+
+def test_section32_expansion_not_exhausted_is_query_gap_not_true_null():
+    result = m.classify_not_found("RESEARCH", ["JOURNAL"], ["x"], exhausted_query_expansion=False)
+    assert result == "QUERY_GAP"
+
+
+def test_section32_fully_exhausted_search_is_true_null():
+    result = m.classify_not_found("RESEARCH", ["JOURNAL"], ["x"], exhausted_query_expansion=True)
+    assert result == "TRUE_NULL"
+
+
+def test_section32_true_null_is_in_the_named_vocabulary():
+    assert "TRUE_NULL" in m.NOT_FOUND_GAP_CLASSES
+    assert len(m.NOT_FOUND_GAP_CLASSES) == 8
