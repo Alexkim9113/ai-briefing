@@ -412,5 +412,74 @@
     "trend_status": "STABLE",
     "admitted_at": "2026-10-01T04:28:40.293025+00:00",
     "last_updated": "2026-10-01T04:28:40.294163+00:00"
+  },
+  "series_d018d1290acd5f20": {
+    "series_id": "series_d018d1290acd5f20",
+    "indicator_id": "IEA_GLOBAL_DC_ELECTRICITY_TWH_OBSERVED",
+    "geography": "GLOBAL",
+    "source_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "observations": [
+      {
+        "indicator_id": "IEA_GLOBAL_DC_ELECTRICITY_TWH_OBSERVED",
+        "source_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "indicator_name": "Global data center electricity consumption (TWh), OBSERVED, IEA",
+        "definition": null,
+        "unit": "TWh",
+        "geography": "GLOBAL",
+        "period": "2024",
+        "value": 415.0,
+        "revision_status": "UNKNOWN",
+        "retrieved_at": "2026-10-01T11:06:53.674111+00:00",
+        "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+        "provenance": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "validation_status": "VALIDATED"
+      }
+    ],
+    "trend_status": "INSUFFICIENT_SERIES",
+    "admitted_at": "2026-10-01T11:06:53.674143+00:00",
+    "last_updated": "2026-10-01T11:06:53.674146+00:00"
+  },
+  "series_67a90dc183bd74a1": {
+    "series_id": "series_67a90dc183bd74a1",
+    "indicator_id": "IEA_GLOBAL_DC_ELECTRICITY_TWH_FORECAST",
+    "geography": "GLOBAL",
+    "source_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "observations": [
+      {
+        "indicator_id": "IEA_GLOBAL_DC_ELECTRICITY_TWH_FORECAST",
+        "source_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "indicator_name": "Global data center electricity consumption (TWh), IEA FORECAST (Base Case)",
+        "definition": null,
+        "unit": "TWh",
+        "geography": "GLOBAL",
+        "period": "2030",
+        "value": 945.0,
+        "revision_status": "UNKNOWN",
+        "retrieved_at": "2026-10-01T11:06:53.675763+00:00",
+        "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+        "provenance": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "validation_status": "VALIDATED"
+      },
+      {
+        "indicator_id": "IEA_GLOBAL_DC_ELECTRICITY_TWH_FORECAST",
+        "source_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "indicator_name": "Global data center electricity consumption (TWh), IEA FORECAST (Base Case)",
+        "definition": null,
+        "unit": "TWh",
+        "geography": "GLOBAL",
+        "period": "2035",
+        "value": 1200.0,
+        "revision_status": "UNKNOWN",
+        "retrieved_at": "2026-10-01T11:06:53.675785+00:00",
+        "source_url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+        "provenance": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+        "validation_status": "VALIDATED"
+      }
+    ],
+    "trend_status": "INSUFFICIENT_SERIES",
+    "admitted_at": "2026-10-01T11:06:53.675799+00:00",
+    "last_updated": "2026-10-01T11:06:53.675802+00:00"
   }
 }

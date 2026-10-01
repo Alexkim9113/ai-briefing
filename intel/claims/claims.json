@@ -24,5 +24,57 @@
     "created_from": "series_c302bf9e2576ad47",
     "provenance": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
     "created_at": "2026-10-01T04:28:40.295431+00:00"
+  },
+  "claim_afe7cc7b19317ee0": {
+    "claim_id": "claim_afe7cc7b19317ee0",
+    "claim_text": "Global data centers consumed approximately 415 TWh of electricity in 2024 (about 1.5% of world electricity consumption), with a regional split of US 45%, China 25%, Europe 15%, and data center electricity consumption grew ~12%/year since 2017 (over 4x the rate of total electricity consumption growth). STATUS=OBSERVED. AI_ATTRIBUTION=PARTIAL: IEA names AI as 'the most important driver of this growth, alongside growing demand for other digital services' but does not isolate AI's specific numeric share versus crypto/general cloud workloads.",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "Global + US/China/Europe data center electricity consumption, 2024 level and 2017-2024 growth rate",
+    "time_scope": "2017-2024",
+    "geographic_scope": "GLOBAL/US/CHINA/EUROPE",
+    "status": "OPEN",
+    "created_from": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "provenance": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "created_at": "2026-10-01T11:06:53.668524+00:00"
+  },
+  "claim_1d9458f4e7e2cf69": {
+    "claim_id": "claim_1d9458f4e7e2cf69",
+    "claim_text": "IEA projects global data center electricity consumption could more than double to approximately 945 TWh by 2030 and approximately 1200 TWh by 2035, with the US representing by far the largest share of the projected increase; up to ~20% of planned data center projects could be at risk of delay due to grid bottlenecks if risks are not addressed. STATUS=FORECAST (explicitly IEA's own projection, not an observed value -- must never be merged with the 2024 observed 415 TWh figure as if both were measured facts). AI_ATTRIBUTION=PARTIAL, same basis as the 2024 figure.",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "PREDICTIVE",
+    "scope": "IEA projected global data center electricity consumption, 2030 and 2035",
+    "time_scope": "2030-2035",
+    "geographic_scope": "GLOBAL/US-weighted",
+    "status": "OPEN",
+    "created_from": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "provenance": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "created_at": "2026-10-01T11:06:53.668682+00:00"
+  },
+  "claim_d170f52f567053e9": {
+    "claim_id": "claim_d170f52f567053e9",
+    "claim_text": "Despite Google's hyperscale data centers reaching a power usage effectiveness (PUE) of approximately 1.1 (near the theoretical efficiency limit), Google's total energy consumption increased 3.7x from 2016 to 2022, per peer-reviewed modeling of general cloud computing (Meta/Google infrastructure). STATUS=OBSERVED (within the paper's own dataset). The authors interpret this as a Jevons-paradox dynamic: point-level efficiency gains do not by themselves reduce aggregate energy growth because demand elasticity and reinvestment expand system scale. AI_ATTRIBUTION=INDIRECT: this paper models general cloud computing, not AI-specific workloads, and is evidence against the 'efficiency alone will solve AI energy growth' framing rather than a direct AI electricity measurement.",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "TREND",
+    "scope": "Google/Meta hyperscale cloud energy consumption vs. PUE efficiency, 2016-2022",
+    "time_scope": "2016-2022",
+    "geographic_scope": "GLOBAL",
+    "status": "OPEN",
+    "created_from": "ARXIV_JEVONS_CLOUD_2411.11540",
+    "provenance": "https://arxiv.org/html/2411.11540v1",
+    "created_at": "2026-10-01T11:06:53.668695+00:00"
+  },
+  "claim_5787125ab5f0110b": {
+    "claim_id": "claim_5787125ab5f0110b",
+    "claim_text": "Approximately 130 GW of capacity-eligible generation projects are stuck, unbuilt, in PJM's interconnection queue; GridLab estimates PJM customers could have saved approximately $3.5 billion in the 2026/27 delivery year had just 10% of queued projects been operational, and the 2026/2027 PJM capacity auction cleared at $16.1 billion, up 10% year over year. STATUS=OBSERVED for the queue size and auction price; ESTIMATED (counterfactual model) for the $3.5B savings figure. AI_ATTRIBUTION=PARTIAL: GridLab attributes PJM demand growth to 'data center additions and electrification' jointly, not AI specifically, and frames this explicitly as a generation/interconnection-queue supply shortage, not a transmission/distribution capacity bottleneck.",
+    "topic": "AI_ENERGY_INFRA",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "PJM interconnection queue backlog and capacity auction price, US PJM region",
+    "time_scope": "2025-2027",
+    "geographic_scope": "US_PJM_REGION",
+    "status": "OPEN",
+    "created_from": "GRIDLAB_PJM_INTERCONNECTION_3_5B",
+    "provenance": "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+    "created_at": "2026-10-01T11:06:53.668706+00:00"
   }
 }

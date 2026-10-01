@@ -18,5 +18,45 @@
     "reason": "directly reports the values stated; a general labor-participation statistic is never promoted to an AI-attribution claim without an explicit AI-adoption-linked data point",
     "provenance": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
     "created_at": "2026-10-01T04:28:40.295979+00:00"
+  },
+  "rel_8396e8c80f83a5b4": {
+    "relation_id": "rel_8396e8c80f83a5b4",
+    "evidence_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "claim_id": "claim_afe7cc7b19317ee0",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "Directly reports the 2024 observed TWh figure, regional split, and 2017-2024 growth rate as stated in the claim; this item was acquired via live WebFetch in O-0 (o0_ai_energy_infra_acquisition_result.json), not yet run through the formal documents.json admission pipeline -- relation is recorded honestly against that acquisition record's item_id.",
+    "provenance": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "created_at": "2026-10-01T11:06:53.671583+00:00"
+  },
+  "rel_b9a99b4d7849f174": {
+    "relation_id": "rel_b9a99b4d7849f174",
+    "evidence_id": "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+    "claim_id": "claim_1d9458f4e7e2cf69",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "Directly reports IEA's own 2030/2035 projection figures and the grid-bottleneck risk finding; strength is UNSPECIFIED because this is a forecast claim, not a directly measured observation -- the relation supports 'IEA projected this,' not 'this is what happened.'",
+    "provenance": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+    "created_at": "2026-10-01T11:06:53.671611+00:00"
+  },
+  "rel_cd3a5f794ad00b81": {
+    "relation_id": "rel_cd3a5f794ad00b81",
+    "evidence_id": "ARXIV_JEVONS_CLOUD_2411.11540",
+    "claim_id": "claim_d170f52f567053e9",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "Directly reports the paper's own PUE and total-energy-growth figures and its Jevons-paradox interpretation; relation_type is SUPPORTS for the TREND claim as stated, not promoted to a CAUSAL AI-attribution claim since the paper is AI_ATTRIBUTION=INDIRECT (general cloud, not AI-specific).",
+    "provenance": "https://arxiv.org/html/2411.11540v1",
+    "created_at": "2026-10-01T11:06:53.671617+00:00"
+  },
+  "rel_5561f393ab96d55f": {
+    "relation_id": "rel_5561f393ab96d55f",
+    "evidence_id": "GRIDLAB_PJM_INTERCONNECTION_3_5B",
+    "claim_id": "claim_5787125ab5f0110b",
+    "relation_type": "SUPPORTS",
+    "strength": "UNSPECIFIED",
+    "reason": "Directly reports GridLab's own interconnection-queue size, counterfactual savings estimate, and auction price findings exactly as stated in the claim; GridLab's own framing (joint data-center+electrification attribution, generation-side not transmission-side bottleneck) is preserved rather than simplified into an AI-only or transmission-shortage narrative.",
+    "provenance": "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+    "created_at": "2026-10-01T11:06:53.671622+00:00"
   }
 }

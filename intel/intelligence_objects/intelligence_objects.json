@@ -3,17 +3,29 @@
     "intelligence_id": "intel_87210a61730c22b9",
     "topic": "AI_ENERGY_INFRA",
     "question": "is AI data center growth driving US electricity demand increase?",
-    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022, with no AI-attribution evidence connected yet. Trend classification: NO_CLEAR_SIGNAL.",
+    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand.",
     "key_claims": [
-      "claim_7f1bc452c4ffc128"
+      "claim_1d9458f4e7e2cf69",
+      "claim_5787125ab5f0110b",
+      "claim_7f1bc452c4ffc128",
+      "claim_afe7cc7b19317ee0",
+      "claim_d170f52f567053e9"
     ],
     "supporting_evidence": [
-      "rel_290e45f3e25fcb78"
+      "rel_290e45f3e25fcb78",
+      "rel_5561f393ab96d55f",
+      "rel_8396e8c80f83a5b4",
+      "rel_b9a99b4d7849f174",
+      "rel_cd3a5f794ad00b81"
     ],
     "counterevidence": [],
-    "alternative_explanations": [],
+    "alternative_explanations": [
+      "GENERAL_CLOUD_COMPUTING_GROWTH"
+    ],
     "statistics": [
-      "series_af37f1207e7ff042"
+      "series_67a90dc183bd74a1",
+      "series_af37f1207e7ff042",
+      "series_d018d1290acd5f20"
     ],
     "research_context": [],
     "policy_context": [],
@@ -61,7 +73,7 @@
     "known_gaps": [
       {
         "gap_type": "ATTRIBUTION_GAP",
-        "reason": "no evidence yet connects AI data-center load growth specifically to this aggregate per-capita series; the indicator is undifferentiated by sector"
+        "reason": "partially addressed: IEA/GridLab evidence now connects AI/data-center growth to electricity demand at PARTIAL attribution (named as one driver among several -- general digital services, electrification -- with no numeric AI-only split given by any source); the earlier World Bank per-capita series still cannot be decomposed by end-use sector."
       },
       {
         "gap_type": "TEMPORAL_GAP",
@@ -69,7 +81,7 @@
       },
       {
         "gap_type": "COUNTEREVIDENCE_GAP",
-        "reason": "no counterevidence/alternative-explanation evidence connected yet (manufacturing reshoring, EV adoption, weather, population growth) -- Entry Gate scope only"
+        "reason": "partially addressed: live counterevidence acquisition (o0_live_counterevidence_supplement.json) found real evidence for efficiency-improvements and non-AI-cloud-growth directions via the Jevons paper; manufacturing/reshoring, EV/electrification, population growth, and weather/climate directions remain SEARCH_NOT_RUN or evidence-thin."
       },
       {
         "gap_type": "POLICY_RESEARCH_GAP",
@@ -77,14 +89,39 @@
       }
     ],
     "provenance": [
+      "event:evt_a6a4027d9878143d",
       "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
-      "event:evt_a6a4027d9878143d"
+      "https://arxiv.org/html/2411.11540v1",
+      "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
+      "https://www.iea.org/reports/energy-and-ai/executive-summary"
     ],
-    "last_updated": "2026-10-01T02:31:56.620890+00:00",
+    "last_updated": "2026-10-01T11:06:53.677502+00:00",
     "readiness": "CONDITIONALLY_READY",
-    "version": 1,
-    "previous_version": null,
-    "revision_history": []
+    "version": 2,
+    "previous_version": 1,
+    "revision_history": [
+      {
+        "version": 1,
+        "snapshot_current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022, with no AI-attribution evidence connected yet. Trend classification: NO_CLEAR_SIGNAL.",
+        "updated_at": "2026-10-01T02:31:56.620890+00:00",
+        "trigger_evidence": [
+          "IEA_ENERGY_AND_AI_EXEC_SUMMARY",
+          "ARXIV_JEVONS_CLOUD_2411.11540",
+          "GRIDLAB_PJM_INTERCONNECTION_3_5B"
+        ],
+        "changed_fields": [
+          "current_state",
+          "key_claims",
+          "supporting_evidence",
+          "statistics",
+          "alternative_explanations",
+          "known_gaps",
+          "provenance"
+        ],
+        "change_reason": "O-0 AI_ENERGY_INFRA deep research pilot: live-acquired IEA/arXiv/GridLab evidence connected via new claims + statistical series; AI attribution partially clarified (PARTIAL/INDIRECT, no numeric AI-only split available).",
+        "impact_event": "STATE_CHANGED"
+      }
+    ]
   },
   "intel_dbab7b01963396b5": {
     "intelligence_id": "intel_dbab7b01963396b5",
