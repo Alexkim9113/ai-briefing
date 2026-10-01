@@ -1,82 +1,231 @@
 {
-  "note": "M.5E FINAL Section 34. Volume is not the success metric -- the fraction that survives to a real SUPPORTED Deep Pilot node is. Stages this codebase does not yet log are reported UNINSTRUMENTED, not estimated.",
+ "note": "M.5E FINAL Section 34. Volume is not the success metric -- the fraction that survives to a real SUPPORTED Deep Pilot node is. Stages this codebase does not yet log are reported UNINSTRUMENTED, not estimated.",
+ "stages": {
+  "QUERY_PLANNED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "no persistent log of planned queries exists yet; query_planner.py is planning-only and does not log its own calls"
+  },
+  "SOURCE_SELECTED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "no persistent log of source routing decisions exists yet"
+  },
+  "REQUEST_ATTEMPTED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "connector-level request logs are not retained past the run that produced them"
+  },
+  "RESPONSE_RECEIVED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "same as above"
+  },
+  "CANDIDATE_EXTRACTED": {
+   "count": 658,
+   "status": "REAL_COUNT",
+   "note": "approximated by total admission_audit_log.json entries (every row represents a candidate that reached the admission gate, i.e. was successfully extracted)"
+  },
+  "VALIDATION_PASSED": {
+   "count": 553,
+   "status": "REAL_COUNT",
+   "note": "candidates minus those rejected for failing schema validation at the gate"
+  },
+  "ADMISSION_PASSED": {
+   "count": 38,
+   "status": "REAL_COUNT",
+   "note": "real ADMITTED count from admission_audit_log.json"
+  },
+  "EVIDENCE_CONNECTED": {
+   "count": null,
+   "status": "UNINSTRUMENTED",
+   "note": "no log distinguishes 'admitted to corpus' from 'connected into a specific Deep Pilot's evidence chain'"
+  },
+  "DEEP_PILOT_SUPPORTED": {
+   "count": 4,
+   "status": "REAL_COUNT",
+   "note": "real SUPPORTED-status node count across both rebuilt Deep Pilots (deep_pilot_v2 results), max possible 26 (13 nodes x 2 pilots)"
+  }
+ },
+ "admission_decision_counts_real": {
+  "ADMITTED": 38,
+  "DUPLICATE_EXISTING": 510,
+  "REMOVED_INVALID_PUBLICATION_DATE": 5,
+  "REJECTED_INVALID_SCHEMA": 105
+ },
+ "dropout_reason_counts": {
+  "DUPLICATE": 510,
+  "INVALID_DATE": 5,
+  "METADATA_INSUFFICIENT": 105
+ },
+ "source_family_yield": {
+  "src_federal_register": {
+   "attempted": 530,
+   "admitted": 29,
+   "yield_fraction": 0.0547
+  },
+  "src_crossref": {
+   "attempted": 123,
+   "admitted": 9,
+   "yield_fraction": 0.0732
+  },
+  "manual_corrective_removal_m5d": {
+   "attempted": 5,
+   "admitted": 0,
+   "yield_fraction": 0.0
+  }
+ },
+ "source_family_yield_limitation": "Section 28-of-message asked for yield across Federal Register, World Bank, Crossref, arXiv, OpenAlex, Korean academic, Korean government, international academic. Only admission_audit_log.json's two real logged sources (src_federal_register, src_crossref, plus 5 manual_corrective_removal_m5d entries) are instrumented; World Bank/arXiv/OpenAlex/Korean academic/Korean government connectors do not yet write to this log, so their yield is honestly UNAVAILABLE rather than estimated.",
+ "total_documents_in_canonical_corpus": 602,
+ "overall_admission_yield_fraction": 0.0578,
+ "deep_pilot_supported_fraction_of_26_max": 0.1538,
+ "n8_live_acquisition": {
+  "note": "N-8 Sections 17-22. Real funnel + source-family counts for the N-7 live GitHub Actions acquisition run (run_id 36830397316, head_sha feefdf0, completed_at 2026-10-01T07:31:26Z). Distinguishes 0 (measured, nothing found) from UNINSTRUMENTED (no log exists at all) throughout.",
+  "live_run_provenance": {
+   "run_id": "36830397316",
+   "head_sha": "feefdf0",
+   "completed_at": "2026-10-01T07:31:26Z",
+   "environment": "GITHUB_ACTIONS"
+  },
+  "outcome_counts_raw": {
+   "SEARCH_RUN_NO_EVIDENCE": 6,
+   "ACCESS_BLOCKED": 6,
+   "NO_REGISTERED_SOURCE": 3
+  },
   "stages": {
-    "QUERY_PLANNED": {
-      "count": null,
-      "status": "UNINSTRUMENTED",
-      "note": "no persistent log of planned queries exists yet; query_planner.py is planning-only and does not log its own calls"
-    },
-    "SOURCE_SELECTED": {
-      "count": null,
-      "status": "UNINSTRUMENTED",
-      "note": "no persistent log of source routing decisions exists yet"
-    },
-    "REQUEST_ATTEMPTED": {
-      "count": null,
-      "status": "UNINSTRUMENTED",
-      "note": "connector-level request logs are not retained past the run that produced them"
-    },
-    "RESPONSE_RECEIVED": {
-      "count": null,
-      "status": "UNINSTRUMENTED",
-      "note": "same as above"
-    },
-    "CANDIDATE_EXTRACTED": {
-      "count": 508,
-      "status": "REAL_COUNT",
-      "note": "approximated by total admission_audit_log.json entries (every row represents a candidate that reached the admission gate, i.e. was successfully extracted)"
-    },
-    "VALIDATION_PASSED": {
-      "count": 428,
-      "status": "REAL_COUNT",
-      "note": "candidates minus those rejected for failing schema validation at the gate"
-    },
-    "ADMISSION_PASSED": {
-      "count": 37,
-      "status": "REAL_COUNT",
-      "note": "real ADMITTED count from admission_audit_log.json"
-    },
-    "EVIDENCE_CONNECTED": {
-      "count": null,
-      "status": "UNINSTRUMENTED",
-      "note": "no log distinguishes 'admitted to corpus' from 'connected into a specific Deep Pilot's evidence chain'"
-    },
-    "DEEP_PILOT_SUPPORTED": {
-      "count": 4,
-      "status": "REAL_COUNT",
-      "note": "real SUPPORTED-status node count across both rebuilt Deep Pilots (deep_pilot_v2 results), max possible 26 (13 nodes x 2 pilots)"
-    }
+   "QUERY_PLANNED": {
+    "count": 15,
+    "status": "REAL_COUNT",
+    "note": "one row per (topic, institution/angle/period) query actually planned and attempted across the 3 N-7 live acquisition jobs"
+   },
+   "SOURCE_SELECTED": {
+    "count": 12,
+    "status": "REAL_COUNT",
+    "note": "rows where a registered source existed and was selected (excludes NO_REGISTERED_SOURCE rows, which never select a source)"
+   },
+   "REQUEST_SENT": {
+    "count": 12,
+    "status": "REAL_COUNT",
+    "note": "a live HTTP request was actually sent for every selected source"
+   },
+   "SOURCE_FETCHED": {
+    "count": 6,
+    "status": "REAL_COUNT",
+    "note": "requests that got a real HTTP response back (excludes ACCESS_BLOCKED)"
+   },
+   "CONTENT_EXTRACTED": {
+    "count": 6,
+    "status": "REAL_COUNT",
+    "note": "same as SOURCE_FETCHED for this run -- every fetched response was parsed far enough to classify as SEARCH_RUN_NO_EVIDENCE or better; no separate extraction-failure case was observed"
+   },
+   "CANDIDATE_CREATED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 -- no row in any of the 3 result files reached CANDIDATE_FOUND; every fetched source returned real data classified SEARCH_RUN_NO_EVIDENCE (TRUE_NULL, not a search failure)"
+   },
+   "VALIDATED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 for this live run -- cannot validate what was never a candidate"
+   },
+   "ADMITTED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 for this live run"
+   },
+   "EVIDENCE_CONNECTED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 for this live run"
+   },
+   "INTELLIGENCE_CHANGED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 Intelligence Objects changed by this live run -- verified directly against the 3 result files, not inferred"
+   },
+   "REPORT_CHANGED": {
+    "count": 0,
+    "status": "REAL_COUNT",
+    "note": "0 of the 2 canonical Report JSONs changed as a result of this live run (see n8_before_snapshot.json / n8_after_snapshot.json report sha256 comparison)"
+   }
   },
-  "admission_decision_counts_real": {
-    "ADMITTED": 37,
-    "DUPLICATE_EXISTING": 386,
-    "REMOVED_INVALID_PUBLICATION_DATE": 5,
-    "REJECTED_INVALID_SCHEMA": 80
+  "adjacent_stage_conversion_rates": {
+   "QUERY_PLANNED->SOURCE_SELECTED": 0.8,
+   "SOURCE_SELECTED->REQUEST_SENT": 1.0,
+   "REQUEST_SENT->SOURCE_FETCHED": 0.5,
+   "SOURCE_FETCHED->CONTENT_EXTRACTED": 1.0,
+   "CONTENT_EXTRACTED->CANDIDATE_CREATED": 0.0,
+   "CANDIDATE_CREATED->VALIDATED": "UNDEFINED_ZERO_DENOMINATOR",
+   "VALIDATED->ADMITTED": "UNDEFINED_ZERO_DENOMINATOR",
+   "ADMITTED->EVIDENCE_CONNECTED": "UNDEFINED_ZERO_DENOMINATOR"
   },
-  "dropout_reason_counts": {
-    "DUPLICATE": 386,
-    "INVALID_DATE": 5,
-    "METADATA_INSUFFICIENT": 80
-  },
-  "source_family_yield": {
-    "src_federal_register": {
-      "attempted": 405,
-      "admitted": 28,
-      "yield_fraction": 0.0691
-    },
-    "src_crossref": {
-      "attempted": 98,
-      "admitted": 9,
-      "yield_fraction": 0.0918
-    },
-    "manual_corrective_removal_m5d": {
-      "attempted": 5,
-      "admitted": 0,
-      "yield_fraction": 0.0
-    }
-  },
-  "source_family_yield_limitation": "Section 28-of-message asked for yield across Federal Register, World Bank, Crossref, arXiv, OpenAlex, Korean academic, Korean government, international academic. Only admission_audit_log.json's two real logged sources (src_federal_register, src_crossref, plus 5 manual_corrective_removal_m5d entries) are instrumented; World Bank/arXiv/OpenAlex/Korean academic/Korean government connectors do not yet write to this log, so their yield is honestly UNAVAILABLE rather than estimated.",
-  "total_documents_in_canonical_corpus": 601,
-  "overall_admission_yield_fraction": 0.0728,
-  "deep_pilot_supported_fraction_of_26_max": 0.1538
+  "source_family_yield_n8": {
+   "World Bank": {
+    "requests_observed_this_run": 4,
+    "fetch_success_observed_this_run": 4,
+    "content_extracted_observed_this_run": 4,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "HEALTHY",
+    "note": "high reachability, zero extraction yield this run (source responded, no admissible candidate in the data returned)"
+   },
+   "EIA": {
+    "requests_observed_this_run": 3,
+    "fetch_success_observed_this_run": 0,
+    "content_extracted_observed_this_run": 0,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "AUTH_REQUIRED",
+    "note": "blocked at access layer this run (no reachable response)"
+   },
+   "ILO": {
+    "requests_observed_this_run": 2,
+    "fetch_success_observed_this_run": 2,
+    "content_extracted_observed_this_run": 2,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "HEALTHY",
+    "note": "high reachability, zero extraction yield this run (source responded, no admissible candidate in the data returned)"
+   },
+   "Crossref": {
+    "requests_observed_this_run": 0,
+    "fetch_success_observed_this_run": 0,
+    "content_extracted_observed_this_run": 0,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "NOT_IN_HEALTH_CHECK",
+    "note": "not attempted this run (NO_REGISTERED_SOURCE)"
+   },
+   "Federal Register": {
+    "requests_observed_this_run": 0,
+    "fetch_success_observed_this_run": 0,
+    "content_extracted_observed_this_run": 0,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "HEALTHY",
+    "note": "not attempted this run (NO_REGISTERED_SOURCE)"
+   },
+   "RISS": {
+    "requests_observed_this_run": 0,
+    "fetch_success_observed_this_run": 0,
+    "content_extracted_observed_this_run": 0,
+    "candidates_observed_this_run": 0,
+    "validated_observed_this_run": 0,
+    "admitted_observed_this_run": 0,
+    "connected_observed_this_run": 0,
+    "independent_source_health_status": "HEALTHY",
+    "note": "not attempted this run (NO_REGISTERED_SOURCE)"
+   }
+  }
+ }
 }

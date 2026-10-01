@@ -39,6 +39,32 @@ def test_real_corpus_runs_without_crash():
     assert funnel["total_documents_in_canonical_corpus"] > 500
 
 
+def test_n8_live_funnel_has_all_11_stages():
+    n8 = m.build_n8_live_acquisition_funnel()
+    assert set(n8["stages"].keys()) == set(m.N8_FUNNEL_STAGES)
+
+
+def test_n8_live_funnel_admitted_is_measured_zero_not_uninstrumented():
+    n8 = m.build_n8_live_acquisition_funnel()
+    for stage in ("CANDIDATE_CREATED", "VALIDATED", "ADMITTED", "EVIDENCE_CONNECTED",
+                  "INTELLIGENCE_CHANGED", "REPORT_CHANGED"):
+        s = n8["stages"][stage]
+        assert s["status"] == "REAL_COUNT"
+        assert s["count"] == 0
+
+
+def test_n8_live_funnel_never_divides_by_zero():
+    n8 = m.build_n8_live_acquisition_funnel()
+    for rate in n8["adjacent_stage_conversion_rates"].values():
+        assert rate is None or rate == "UNDEFINED_ZERO_DENOMINATOR" or isinstance(rate, (int, float))
+
+
+def test_n8_source_family_yield_covers_all_6_families():
+    n8 = m.build_n8_live_acquisition_funnel()
+    assert set(n8["source_family_yield_n8"].keys()) == {
+        "World Bank", "EIA", "ILO", "Crossref", "Federal Register", "RISS"}
+
+
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0
