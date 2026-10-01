@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-10-01T07:30:54.354991+00:00",
+ "checked_at": "2026-10-01T10:03:23.217411+00:00",
  "environment": "GITHUB_ACTIONS",
  "results": [
   {
    "source_id": "src_worldbank_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T07:30:41.445409+00:00",
+   "last_checked": "2026-10-01T10:03:18.034693+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -19,7 +19,7 @@
   {
    "source_id": "src_eia_api",
    "status": "AUTH_REQUIRED",
-   "last_checked": "2026-10-01T07:30:41.993583+00:00",
+   "last_checked": "2026-10-01T10:03:18.825038+00:00",
    "last_http_status": 403,
    "last_success": false,
    "failure_count": 3,
@@ -33,7 +33,7 @@
   {
    "source_id": "src_crossref_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T07:30:44.142317+00:00",
+   "last_checked": "2026-10-01T10:03:20.676617+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -47,7 +47,7 @@
   {
    "source_id": "src_federal_register_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T07:30:44.336876+00:00",
+   "last_checked": "2026-10-01T10:03:20.783197+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -61,7 +61,7 @@
   {
    "source_id": "src_ilo",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T07:30:44.950108+00:00",
+   "last_checked": "2026-10-01T10:03:21.095342+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -75,10 +75,10 @@
   {
    "source_id": "src_riss",
    "status": "HEALTHY",
-   "last_checked": "2026-10-01T07:30:54.354970+00:00",
+   "last_checked": "2026-10-01T10:03:23.217386+00:00",
    "last_http_status": 200,
    "last_success": true,
-   "failure_count": 1,
+   "failure_count": 0,
    "is_stale": false,
    "known_limitation": "single live check, not continuous monitoring",
    "provenance_of_check": "N-5 spec Section 58 candidate list",
