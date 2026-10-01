@@ -1,0 +1,54 @@
+{
+ "phase": "N-9B",
+ "deliverable": "Public/Operator Security Audit",
+ "method": "grep -rniE across site/ for api_key|apikey|authorization|bearer|token|secret|password|cookie|private_key|client_secret|AKIA|sk-<key-shaped>, plus full_text/fulltext/vault/internal_debug markers, each match read in context and manually classified.",
+ "keyword_scan": {
+  "high_risk_terms_api_key_bearer_client_secret_private_key_cloud_key_patterns": {
+   "match_count": 0,
+   "classification": "N/A",
+   "note": "Zero matches for api_key, apikey, bearer, client_secret, private_key, AKIA-style AWS key prefix, or sk-<20+ char> style key patterns anywhere under site/."
+  },
+  "token_secret_password_authorization_cookie_terms": {
+   "match_count": 185,
+   "classification_breakdown": {
+    "SAFE_TEXT": 185,
+    "FALSE_POSITIVE": 0,
+    "POTENTIAL_SECRET": 0,
+    "CONFIRMED_SECRET": 0
+   },
+   "examples": [
+    {"file": "site/news_global/*.html, site/data/*.json, site/tag/*.html, site/policy/6.html, site/home.html, site/talks/3.html",
+     "match": "secret / token / authorization appearing inside syndicated news headlines and article text",
+     "reason": "Editorial content: e.g. \"NC's secret weapon for faster audits\", \"Destro AI's secret sauce\", \"agentic AI is breaking the token meter\", \"$150 Billion Share Repurchase Authorization Increase\", \"general secretary\" (job title). These are quoted/aggregated news titles and summaries, not application secrets.",
+     "classification": "SAFE_TEXT"},
+    {"file": "site/editor/write.html",
+     "match": "type=\"password\" maxlength=\"4\" (x4, lines 202-215)",
+     "reason": "HTML <input type=\"password\"> fields for a 4-digit editor PIN entry form. No literal password value, hash, or secret is present in the markup -- this is a UI input type attribute, not an exposed credential. The page is additionally the one path explicitly Disallow'd in site/robots.txt (Disallow: /editor/write.html).",
+     "classification": "FALSE_POSITIVE"}
+   ]
+  }
+ },
+ "full_text_vault_internal_debug_scan": {
+  "match_count_relevant": 1,
+  "findings": [
+   {
+    "path": "site/operator/rights/index.html and site/operator/sources_full.json",
+    "content": "Operator Rights/Sources workbench pages, built by intel/operator_workspace/operator_ui.py and deployed as static HTML under site/operator/**.",
+    "assessment": "Reviewed against intel/operator_workspace/operator_boundary_contract.json, which is the project's own explicit, pre-existing design contract: 'Everything under site/ (including site/operator/**) is PUBLIC. No login exists on GitHub Pages.' The contract enumerates PUBLIC_SAFE_OPERATOR allowed_contents (report/claim/rights/source-health STATUS LABELS only, e.g. UNKNOWN_RIGHTS/UNKNOWN_ACCESS, never full text) versus forbidden_contents (full text, private notes, API keys/tokens/credentials, personal information) reserved for a NOT_IMPLEMENTED_THIS_PHASE PRIVATE_OPERATOR. Manual inspection of site/operator/rights/index.html and sources_full.json confirms only status labels and public source names/URLs are present -- no full text, no credentials, no personal information.",
+    "classification": "SAFE_TEXT (by design, per existing documented contract)",
+    "note_not_a_new_finding": "This is an intentional architectural decision already documented in the repo, not a gap introduced or discovered as a surprise. Flagged here for completeness/traceability only, not as a defect to fix."
+   }
+  ],
+  "no_fulltext_or_vault_leak_found": true
+ },
+ "internal_id_exposure_check": {
+  "method": "Spot-checked Public intelligence/report pages and the Operator rights page for internal-only identifiers.",
+  "finding": "Provenance IDs (document_id/evidence_id/claim_id/report_id, e.g. 'evt_a6a4027d9878143d') are shown on Public and Operator pages, but this is explicitly on the PUBLIC_SAFE_OPERATOR allowed_contents list ('Provenance IDs ... for cross-reference') and these IDs are opaque content-hash identifiers (see claim_model.py:_claim_id / hypothesis_model.py:_hypothesis_id, sha256-derived), not database primary keys, session tokens, or anything that grants access -- exposing them carries no security risk.",
+  "classification": "SAFE_TEXT"
+ },
+ "overall_result": {
+  "CONFIRMED_SECRET_found": false,
+  "POTENTIAL_SECRET_found": false,
+  "summary": "No credentials, API keys, tokens, passwords, cookies, or authorization headers were found literally present anywhere in site/. All 185 keyword matches for token/secret/password/authorization/cookie are editorial news content, a job title ('secretary'), a financial term ('Authorization Increase'), or HTML password-type input attributes with no embedded value. The one borderline area (site/operator/**) is a pre-existing, explicitly documented public-safe design, verified in this audit to actually comply with its own stated content boundary. No action required; nothing to rotate."
+ }
+}

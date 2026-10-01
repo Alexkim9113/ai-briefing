@@ -1,0 +1,28 @@
+{
+ "head_sha": "9e87bc0",
+ "canonical_file_hashes_sha256_16": {
+  "intel/claims/claims.json": "e21d90573c0f67cc",
+  "intel/claims/evidence_claim_relations.json": "f5a4535ea13067ef",
+  "intel/hypothesis/hypotheses.json": "874dc1c8ae9aa3cb",
+  "intel/intelligence_objects/intelligence_objects.json": "9fd98a3894075d9c",
+  "intel/statistical_evidence/statistical_evidence.json": "a8a157b932829b92"
+ },
+ "comparison_to_before_snapshot": {
+  "before_snapshot_ref": "intel/phase_n9/n9b_before_snapshot.json (head_sha c004619)",
+  "all_five_canonical_hashes_identical": true,
+  "conclusion": "Deliverables 1-4 of this phase (Failure Isolation Matrix, Security Audit, Responsive Validation, Scheduler Gate) made zero writes to claims.json, evidence_claim_relations.json, hypotheses.json, intelligence_objects.json, or statistical_evidence.json. Only new files were added under intel/phase_n9/, plus a throwaway pip install of playwright (not a repo change) and read-only test/measurement scripts run from the scratchpad directory, never from inside the repo's canonical data paths."
+ },
+ "n9b_regression_checks": {
+  "test_fixture_interpretive_contract": "72/72 passed (re-run after Deliverables 1-4)",
+  "test_live_result_guard": "13/13 passed (re-run after Deliverables 1-4)",
+  "test_source_health_model": "10/10 passed (re-run after Deliverables 1-4)",
+  "git_status_after_deliverables_1_4_before_commit": [
+   "?? intel/phase_n9/n9b_failure_isolation_matrix.json",
+   "?? intel/phase_n9/n9b_responsive_validation.json",
+   "?? intel/phase_n9/n9b_scheduler_gate.json",
+   "?? intel/phase_n9/n9b_security_audit.json"
+  ],
+  "no_modified_or_deleted_files": true,
+  "status": "READY_NOT_REGRESSED"
+ }
+}

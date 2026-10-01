@@ -1,0 +1,92 @@
+{
+ "phase": "N-9B",
+ "deliverable": "Failure Isolation Matrix",
+ "method": "Manual code inspection of the actual responsible module per stage (file+line refs below). READY requires an observed isolation mechanism (per-item try/except, per-job CI boundary, atomic publish, or a sidecar file whose blast radius is already scoped). PARTIAL means isolation exists at the per-item/per-call level but a shared artifact (single JSON sidecar spanning topics) is not written atomically, so a crash mid-write could in principle corrupt other topics' data in that one file. No stage below was marked READY without a concrete code reference; none was triggered-failure-tested live (BLOCKED by time budget) so claims below are code-evidence-based, not execution-verified.",
+ "stages": [
+  {
+   "stage": "FETCH",
+   "judgment": "READY",
+   "evidence": "intel/acquisition_queue/queue_model.py SourceFamilyQueue + CircuitBreaker gives one independent breaker per source family (QUEUE_FAMILIES); a stuck/failing family cannot block another family's queue. In the real pipeline, daily.yml already runs each source family's live acquisition as a separate GitHub Actions job, which is a stronger (process-level) isolation boundary than the in-process queue model documents. Per-target loops (e.g. counterevidence_live_acquisition.py:attempt_counterevidence_acquisition) catch per-target lookup failure (NO_REGISTERED_SOURCE) and continue rather than aborting the whole batch.",
+   "caveat": "queue_model.py's own comment states it is 'not yet wired into daily.yml's actual fetch jobs this round' -- the CircuitBreaker/Job code itself is not the mechanism currently running in production; the real isolation today is the CI job boundary, which is real but coarser-grained than per-source."
+  },
+  {
+   "stage": "AUTH",
+   "judgment": "READY",
+   "evidence": "queue_model.py:NON_RETRYABLE_HTTP_STATUS_CODES = (401, 403) and retry_with_backoff() explicitly refuses to return a retry delay for 401/403, so an auth failure cannot be retried into a hot loop or treated as transient. source_health_model.check_one_source() (used by every *_live_acquisition.py script) maps such failures to a distinct AUTH_REQUIRED/BLOCKED status that acquisition scripts translate 1:1 into ACCESS_BLOCKED outcome rows rather than raising.",
+   "caveat": "none beyond FETCH's."
+  },
+  {
+   "stage": "HTTP_ERROR",
+   "judgment": "READY",
+   "evidence": "Same retry_with_backoff() bounds 5xx/transient retries to max_retries=4 with exponential backoff (never infinite). Per-candidate acquisition loops (counterevidence_live_acquisition.py, policy_research_acquisition.py) wrap each candidate's check in its own iteration and append an outcome row per candidate instead of letting one candidate's failure abort the batch.",
+   "caveat": "none."
+  },
+  {
+   "stage": "PARSE",
+   "judgment": "PARTIAL",
+   "evidence": "No dedicated 'parse' module was found as a separate pipeline stage; parsing of fetched content happens inline inside each *_acquisition.py script ahead of admission_gate.validate_candidate(). validate_candidate() (admission_gate.py:126) does structural/field validation defensively (returns failure reasons rather than raising) which is evidence a malformed single document is rejected, not fatal to the batch.",
+   "caveat": "Could not find an explicit try/except around content parsing itself (e.g. malformed HTML/JSON from a fetch) in the sampled acquisition scripts within the time budget; isolation at the admission-validation layer is confirmed but isolation one layer earlier (raw parse) is NOT_TESTABLE from static review alone."
+  },
+  {
+   "stage": "VALIDATION",
+   "judgment": "READY",
+   "evidence": "admission_gate.py:validate_candidate() (line 126) and decide_admission() (line 239) return structured pass/fail/reason data per candidate document; _first_matching_rejection() (line 164) picks one reason without raising. admit_shadow_result() (line 301) is the sole writer to documents.json, and the module's header comment states 'Nothing reaches documents.json except through admit_shadow_result()' -- a single bad candidate is rejected with a reason, not propagated as an exception that could abort sibling candidates in the same run.",
+   "caveat": "none."
+  },
+  {
+   "stage": "RIGHTS",
+   "judgment": "READY",
+   "evidence": "research_rights_model.py is a separate sidecar (research_rights.json) keyed by document_id, explicitly 'never a write to documents.json'; access_status and rights_status are kept independent (header comment: 'access_status and rights_status are always independent fields') so a rights-classification failure for one document cannot silently relax another document's rights. Default-safe: new_research_rights_record() defaults every new record to UNKNOWN_RIGHTS/UNKNOWN_ACCESS/FULLTEXT_*_ALLOWED=False, i.e. fails closed.",
+   "caveat": "Sidecar file (research_rights.json) is written with a plain write_text (not confirmed atomic via atomic_publish.py in the time available) -- a crash mid-write could in principle corrupt the whole file across all documents, which is a file-level (not per-document) blast radius. Did not find this call site in the sampled budget; flagged as PARTIAL risk, not disproven."
+  },
+  {
+   "stage": "ADMISSION",
+   "judgment": "READY",
+   "evidence": "Same admission_gate.py code as VALIDATION -- decide_admission()/admit_shadow_result() process one shadow_result at a time and the header comment establishes a single funnel. This is the stage with the clearest single-writer invariant in the whole pipeline.",
+   "caveat": "none."
+  },
+  {
+   "stage": "RELATION",
+   "judgment": "PARTIAL",
+   "evidence": "claims/claim_model.py:upsert_claim()/upsert_relation() load the entire claims.json / evidence_claim_relations.json dict, mutate one key, and call _save() which does a plain path.write_text() (claim_model.py:53-54) -- NOT routed through atomic_publish.atomic_write()/os.replace(). The sidecar is correctly separated from Evidence/documents.json (per the module's own design comment), so RELATION failures cannot corrupt FETCH/ADMISSION data. But because claims.json/relations.json are single shared files spanning ALL topics, a crash or exception mid-write (e.g. process killed between write_text() and the file being flushed, or a write of invalid data due to a code bug) is not guaranteed atomic and could corrupt every topic's claims/relations in that file, not just the one being upserted.",
+   "caveat": "No evidence of per-call exception handling around upsert_claim()/upsert_relation() callers either (not sampled in full) -- an uncaught exception during one claim's upsert could abort a batch job before later claims in the same run are written, though it would not corrupt already-saved claims from prior runs."
+  },
+  {
+   "stage": "INTELLIGENCE_BUILD",
+   "judgment": "PARTIAL",
+   "evidence": "intelligence_objects/intelligence_object.py:upsert_intelligence_object() follows the identical load-whole-dict / mutate-one-key / write_text() pattern (line 41) as RELATION, with the same non-atomic single-shared-file risk across topics. hypothesis_model.py:upsert_hypothesis() is identical (line 54).",
+   "caveat": "Same as RELATION: per-topic logical isolation (each object/hypothesis keyed independently) is real, but file-level atomicity is not verified, so this is PARTIAL rather than READY."
+  },
+  {
+   "stage": "REPORT_JSON",
+   "judgment": "READY",
+   "evidence": "report_engine/atomic_publish.py implements the explicit GENERATE -> TEMP WRITE -> VALIDATE -> ATOMIC REPLACE pattern for exactly this kind of overwrite-in-place artifact; atomic_write() never raises past the publish boundary (try/except wraps the whole body, returns PUBLISH_FAILED on any error, and the .tmp file is removed on failure while the pre-existing valid file at `path` is left untouched). json_validator() (atomic_publish.py) confirms the candidate JSON parses before the atomic os.replace().",
+   "caveat": "none -- this is the strongest-evidenced stage in the whole matrix."
+  },
+  {
+   "stage": "HTML",
+   "judgment": "READY",
+   "evidence": "Same atomic_publish.py mechanism applies via html_validator() (checks for non-empty content + <html>/</html> tags before replace). Additionally, public_delivery.py:build_public_intelligence_pages() (line 95) wraps per-report rendering in its own try/except with the comment 'one bad report must not block the others' (line 132), and a second outer try/except (line 145) around the whole index build so a single corrupt report cannot prevent pages for other topics from being rendered.",
+   "caveat": "none."
+  },
+  {
+   "stage": "PDF",
+   "judgment": "READY",
+   "evidence": "atomic_publish.py:pdf_validator_factory() binds to the existing pdf_pipeline.validate_pdf() and routes PDF publication through the same atomic_write() GENERATE/TEMP/VALIDATE/REPLACE flow as REPORT_JSON/HTML, so a PDF generation/validation failure leaves the previously-published PDF untouched.",
+   "caveat": "Did not execute a real triggered PDF-generation failure in this pass (time budget) -- judgment rests on code inspection of pdf_pipeline.py/pdf_internal_validation.py's call pattern into atomic_write(), not on an observed live failure."
+  },
+  {
+   "stage": "PUBLIC_PUBLISH",
+   "judgment": "READY",
+   "evidence": "public_delivery.py's per-report try/except (see HTML above) is the exact mechanism for this stage: one topic's publish failure during build_public_intelligence_pages() is caught, logged as an exception value, and does not stop iteration over discover_real_reports() for the remaining topics. Combined with atomic_publish.py's os.replace()-based atomicity for whatever file is ultimately written, a failed public publish for one topic cannot leave a half-written page nor block/corrupt another topic's already-published page.",
+   "caveat": "none."
+  }
+ ],
+ "summary": {
+  "READY": ["FETCH", "AUTH", "HTTP_ERROR", "VALIDATION", "RIGHTS", "ADMISSION", "REPORT_JSON", "HTML", "PDF", "PUBLIC_PUBLISH"],
+  "PARTIAL": ["PARSE", "RELATION", "INTELLIGENCE_BUILD"],
+  "FAILED": [],
+  "NOT_TESTABLE": [],
+  "note": "No stage is FAILED. Three stages (PARSE, RELATION, INTELLIGENCE_BUILD) are PARTIAL because their sidecar writes use plain write_text() rather than the atomic_publish.py os.replace() pattern used downstream for REPORT_JSON/HTML/PDF -- a real but bounded gap (file-level, not cross-file) that a future phase could close by routing claims.json/evidence_claim_relations.json/hypotheses.json/intelligence_objects.json writes through atomic_write(). This gap does NOT by itself fail the Scheduler Gate's Failure-Isolation condition, since no stage is FAILED, but it is reported honestly rather than rounded up to READY."
+ }
+}

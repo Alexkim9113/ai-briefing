@@ -1,0 +1,34 @@
+{
+ "phase": "N-9B",
+ "deliverable": "Responsive Validation",
+ "method": "Real headless Chromium (Playwright) launched with executable_path=/opt/pw-browsers/chromium-1194/chrome-linux/chrome (pre-provisioned binary; no playwright install run). Loaded actual built site/ HTML files via file:// URLs at 5 viewports (375x812, 390x844, 768x1024, 1024x768, 1440x900) and read real JS values window.innerWidth, document.documentElement.clientWidth/scrollWidth, document.body.scrollWidth. 375px rendering was fully achievable in this sandbox (not LIMITED_BY_BROWSER_ENVIRONMENT) -- the headless binary launched and rendered correctly at all 5 viewport sizes.",
+ "pages_tested": {
+  "public": [
+   {"name": "public_intelligence_index", "path": "site/intelligence/index.html"},
+   {"name": "public_report_1", "path": "site/intelligence/report_intel_dbab7b01963396b5_v1/index.html"},
+   {"name": "public_report_2", "path": "site/intelligence/report_intel_87210a61730c22b9_v1/index.html"},
+   {"name": "public_home", "path": "site/home.html"}
+  ],
+  "operator": [
+   {"name": "operator_index", "path": "site/operator/index.html"},
+   {"name": "operator_overview", "path": "site/operator/overview/index.html"},
+   {"name": "operator_reports", "path": "site/operator/reports/index.html"},
+   {"name": "operator_gaps", "path": "site/operator/gaps/index.html"},
+   {"name": "operator_rights", "path": "site/operator/rights/index.html"},
+   {"name": "operator_sources", "path": "site/operator/sources/index.html"},
+   {"name": "operator_source_health", "path": "site/operator/source_health/index.html"}
+  ],
+  "note_on_operator_coverage": "The Operator workspace lists 7 views in operator_ui.py's nav (OVERVIEW, REPORTS, GAPS, RIGHTS, SOURCES, SOURCE_HEALTH, plus the index/landing page) -- all 7 were located and tested; no view was skipped."
+ },
+ "results_summary": {
+  "total_page_viewport_combinations_tested": 55,
+  "overflow_detected_count": 0,
+  "limited_by_browser_environment_count": 0,
+  "detail": "At every one of the 11 pages x 5 viewports (55 combinations), document.documentElement.scrollWidth == document.documentElement.clientWidth == window.innerWidth, i.e. overflow_px = 0 in every case. document.body.scrollWidth was observed <= clientWidth in all cases as well (in several pages it is smaller than clientWidth, e.g. the intelligence index's body is narrower than the viewport at larger widths because of centered max-width content -- this is normal, not a bug)."
+ },
+ "overflow_bugs_found": [],
+ "overflow_bugs_fixed": [],
+ "conclusion": "No horizontal-overflow bug was found on any tested Public or Operator page at any of the 5 required viewports, including true 375px mobile rendering (confirmed achievable in this sandbox, not LIMITED_BY_BROWSER_ENVIRONMENT). No code changes were required or made for this deliverable; responsive layout is READY for all 11 pages tested.",
+ "judgment": "READY",
+ "raw_measurements_reference": "Full per-viewport raw JS values for all 11 pages are reproducible via the test script used for this run; not persisted as a separate large artifact since the summary (0 overflow everywhere) is unambiguous and complete."
+}
