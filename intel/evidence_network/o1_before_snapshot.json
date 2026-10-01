@@ -1,0 +1,28 @@
+{
+ "phase": "O-1",
+ "computed_at": "2026-10-01",
+ "claims_json_hash16": "f61617bdb32830ca",
+ "hypotheses_json_hash16": "3967def8990a24aa",
+ "relations_json_hash16": "fb9dda51a2e06a73",
+ "statistical_evidence_json_hash16": "a36fd8bc821a32ac",
+ "total_claims": 8,
+ "ai_energy_infra_claims": 7,
+ "ai_energy_infra_claim_ids": [
+  "claim_7f1bc452c4ffc128",
+  "claim_afe7cc7b19317ee0",
+  "claim_1d9458f4e7e2cf69",
+  "claim_d170f52f567053e9",
+  "claim_5787125ab5f0110b",
+  "claim_o1_lbnl_us_dc_2023",
+  "claim_o1_korea_capital_region_dc_demand"
+ ],
+ "total_hypotheses": 8,
+ "statistical_series_count": 4,
+ "evidence_claim_relations_count": 6,
+ "known_gaps_carried_from_o0": [
+  "POLICY_RESEARCH NOT_READY",
+  "LONGITUDINAL_EVIDENCE NOT_READY",
+  "KOREA_EVIDENCE_GAP (no primary KR government source in local corpus)"
+ ],
+ "note": "Computed fresh from the real files on disk at O-1 start, not copied from O-0's reported numbers."
+}
