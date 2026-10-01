@@ -687,6 +687,22 @@ def test_68_regression_zero():
         if status == "M" and str(EV_DIR.relative_to(REPO_ROOT)) in path and path.endswith(".json") \
                 and _diff_is_timestamp_only(REPO_ROOT / path):
             continue
+        # PHASE N-7 (Te 승인된 스펙): Operator 실배포 감사/Public-Safe 경계 계약/GitHub Actions
+        # Live Acquisition 배선 + Source Health 환경 분리(Section 11-12)는 이 Phase의 의도된
+        # 산출물이다 -- 새 sidecar 파일('??')과 그 파일들이 실제로 재실행되며 바뀌는 자기 자신의
+        # 결과 JSON('M')만 해당. briefing.py/site/data는 건드리지 않음(test_56이 그대로 지킴).
+        if "phase_n7" in path and status in ("??", "M"):
+            continue
+        if path == "intel/operator_workspace/operator_boundary_contract.json" and status == "??":
+            continue
+        if path in ("intel/operator_workspace/operator_api.py", "intel/operator_workspace/operator_ui.py",
+                     "intel/source_health/source_health_model.py") and status == "M":
+            continue
+        if path in ("intel/source_health/source_health_result.json",
+                     "intel/evidence_network/policy_research_acquisition_result.json",
+                     "intel/evidence_network/counterevidence_live_acquisition_result.json",
+                     "intel/evidence_network/longitudinal_evidence_acquisition_result.json") and status == "M":
+            continue
         bad_lines.append(ln)
     assert bad_lines == [], f"이번 세션 밖 변경/기존 파일 수정이 감지됨(회귀): {bad_lines}"
 

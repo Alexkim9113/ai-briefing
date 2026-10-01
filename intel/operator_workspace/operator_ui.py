@@ -83,6 +83,19 @@ def _shell(title, active, body):
     )
 
 
+PUBLIC_SAFE_BANNER = (
+    '<div style="border:1px solid var(--line);background:#fafafa;padding:10px 14px;'
+    'margin-bottom:16px;font-size:0.85em">'
+    '<strong>METAXIS OPERATOR / PUBLIC-SAFE OPERATIONS VIEW</strong><br>'
+    'This workspace is deployed on GitHub Pages and has no login. It holds only '
+    'public-safe diagnostics (report/claim/evidence status, known gaps, rights status, '
+    'source health, corpus counts, provenance IDs). It never exposes Private Research full '
+    'text, operator private notes, or restricted material. See '
+    '<code>intel/operator_workspace/operator_boundary_contract.json</code> for the full boundary.'
+    '</div>'
+)
+
+
 def render_overview():
     o = op.overview()
     kpis = "".join(
@@ -90,6 +103,7 @@ def render_overview():
         for k, v in o.items() if k != "source_health"
     )
     return _shell("Overview", "overview", (
+        f'{PUBLIC_SAFE_BANNER}'
         f'<div class="kpi-row">{kpis}</div>'
         f'<p>Source Health (minimal contract): {_status(o["source_health"])}</p>'
     ))
@@ -167,25 +181,55 @@ def render_sources():
 
 def render_source_health():
     summary = op.source_health_pilot_summary()
+    live = op.source_health_live_summary()
     if not summary["pilot_run"]:
-        return _shell("Source Health", "source_health",
-                      '<p class="empty">No Source Health pilot has been run yet (NOT_INSTRUMENTED).</p>')
-    kpis = "".join(
-        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k)}</div></div>'
-        for k, v in summary["counts"].items()
-    )
-    body_rows = "".join(
-        f'<tr><td class="mono">{_esc(s["source_id"])}</td><td>{_status(s["status"])}</td>'
-        f'<td>{_esc(s["last_checked"])}</td><td>{_esc(s["is_stale"])}</td>'
-        f'<td>{_esc(s["known_limitation"])}</td></tr>'
-        for s in summary["sources"]
-    )
-    table = ('<div class="table-wrap">' + f'<table><tr><th>Source</th><th>Status</th><th>Last Checked</th>'
-            f'<th>Stale?</th><th>Known Limitation</th></tr>{body_rows}</table></div>')
-    return _shell("Source Health", "source_health", (
-        f'<p>Last pilot run: {_esc(summary["checked_at"])}</p>'
-        f'<div class="kpi-row">{kpis}</div>{table}'
-    ))
+        sandbox_block = '<p class="empty">No Source Health sandbox pilot has been run yet (NOT_INSTRUMENTED).</p>'
+    else:
+        kpis = "".join(
+            f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k)}</div></div>'
+            for k, v in summary["counts"].items()
+        )
+        body_rows = "".join(
+            f'<tr><td class="mono">{_esc(s["source_id"])}</td>'
+            f'<td>{_status(s.get("environment", "SANDBOX"))}</td>'
+            f'<td>{_status(s.get("environment_status", "UNKNOWN"))}</td>'
+            f'<td>{_status(s.get("source_status", s["status"]))}</td>'
+            f'<td>{_esc(s["last_checked"])}</td>'
+            f'<td>{_esc(s["known_limitation"])}</td></tr>'
+            for s in summary["sources"]
+        )
+        table = ('<div class="table-wrap">' + f'<table><tr><th>Source</th><th>Environment</th>'
+                f'<th>Environment Status</th><th>Source Status</th><th>Last Checked</th>'
+                f'<th>Known Limitation</th></tr>{body_rows}</table></div>')
+        sandbox_block = (
+            f'<h2>Sandbox check (orchestration/local validation only)</h2>'
+            f'<p>Last sandbox run: {_esc(summary["checked_at"])}</p>'
+            f'<div class="kpi-row">{kpis}</div>{table}'
+        )
+
+    if not live["pilot_run"]:
+        live_block = (
+            '<h2>GitHub Actions live check</h2>'
+            '<p class="empty">No GitHub Actions live source-health run has produced a result yet '
+            '(NOT_INSTRUMENTED -- wired in .github/workflows/daily.yml job n7_live_acquisition, '
+            'not yet observed from this session; see intel/phase_n7 report, Section H).</p>'
+        )
+    else:
+        live_rows = "".join(
+            f'<tr><td class="mono">{_esc(s["source_id"])}</td>'
+            f'<td>{_status(s.get("source_status", s["status"]))}</td>'
+            f'<td>{_esc(s["last_checked"])}</td>'
+            f'<td>{_esc(s["known_limitation"])}</td></tr>'
+            for s in live["sources"]
+        )
+        live_block = (
+            '<h2>GitHub Actions live check</h2>'
+            f'<p>Last live run: {_esc(live["checked_at"])} (environment: {_esc(live["environment"])})</p>'
+            '<div class="table-wrap"><table><tr><th>Source</th><th>Live Status</th>'
+            f'<th>Last Checked</th><th>Known Limitation</th></tr>{live_rows}</table></div>'
+        )
+
+    return _shell("Source Health", "source_health", sandbox_block + live_block)
 
 
 PAGES = {

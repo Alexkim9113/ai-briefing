@@ -290,6 +290,25 @@ def source_health_pilot_summary():
     return {"pilot_run": True, "checked_at": result["checked_at"], "counts": counts, "sources": records}
 
 
+def source_health_live_summary():
+    """N-7 Section 11/35 -- the GitHub Actions LIVE source-health result, kept in a separate
+    artifact from the sandbox pilot so the two are never shown as one undifferentiated field.
+    Returns pilot_run=False (never a guessed status) if no live run has produced a result yet --
+    this is the honest state until the N-7-wired GitHub Actions job (n7_live_acquisition) has
+    actually executed at least once in the real environment."""
+    result = sh.load_live_result()
+    if result is None:
+        return {"pilot_run": False, "checked_at": None, "environment": "GITHUB_ACTIONS",
+                "counts": {}, "sources": []}
+    records = sh.mark_stale(result["results"])
+    counts = {}
+    for r in records:
+        counts[r.get("source_status", r["status"])] = counts.get(r.get("source_status", r["status"]), 0) + 1
+    return {"pilot_run": True, "checked_at": result["checked_at"],
+            "environment": result.get("environment", "GITHUB_ACTIONS"), "counts": counts,
+            "sources": records}
+
+
 def source_inspector():
     """Section 19 -- Source Registry viewed through the Operator. Joins the 299-entry source
     registry (intel/sources.json) with the small Tier-1 live-pilot result where one exists; every

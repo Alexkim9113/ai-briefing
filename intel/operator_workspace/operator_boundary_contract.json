@@ -1,0 +1,52 @@
+{
+ "contract_version": "n7",
+ "principle": "Everything under site/ (including site/operator/**) is PUBLIC. No login exists on GitHub Pages. This contract defines what may therefore live in PUBLIC_SAFE_OPERATOR today, versus what is reserved for a future PRIVATE_OPERATOR that requires authentication and is NOT implemented on GitHub Pages this phase.",
+ "PUBLIC_SAFE_OPERATOR": {
+  "status": "DEPLOYED",
+  "deployment": "site/operator/** via intel/operator_workspace/operator_ui.py, built at CI/build time, served as static HTML by GitHub Pages",
+  "allowed_contents": [
+   "Report status (version, readiness, generated_at, html/pdf status)",
+   "Claim status (SUPPORTED/PARTIALLY_SUPPORTED/CONTESTED/WEAKENED/INSUFFICIENT_EVIDENCE/REJECTED)",
+   "Evidence relation status (connected/not connected counts, IDs)",
+   "Known Gaps (gap_type, topic, status, environment, next_possible_action if known)",
+   "Rights status (RIGHTS_STATUS/ACCESS_STATUS/FULLTEXT_ALLOWED/LINK_ONLY labels, never full text)",
+   "Source Health (per-source access_result, environment, last check, never credentials)",
+   "Corpus counts (documents/research/news/claims/hypotheses/intelligence objects/reports)",
+   "Research/Statistics metadata (title, authors, publication_date, identifier, source_url)",
+   "Provenance IDs (document/evidence/claim/report IDs for cross-reference)",
+   "Public-safe diagnostics (e.g. build counts, NOT_INSTRUMENTED markers)"
+  ],
+  "forbidden_contents": [
+   "Private Research full text",
+   "Operator private notes",
+   "Private Obsidian atoms",
+   "Restricted PDF metadata/details",
+   "Internal acquisition diagnostics beyond public-safe status labels",
+   "API keys, tokens, credentials, cookies, authorization headers",
+   "Personal information"
+  ]
+ },
+ "PRIVATE_OPERATOR": {
+  "status": "NOT_IMPLEMENTED_THIS_PHASE",
+  "deployment_target": "future auth-gated environment, never GitHub Pages as-is",
+  "reserved_contents": [
+   "Private Research full text (private_research_vault/)",
+   "Operator private notes",
+   "Private Obsidian atoms (non-public atomization outputs)",
+   "Restricted PDF metadata/details",
+   "Internal acquisition diagnostics (raw request/response logs, failure internals)",
+   "Manual approve/reject workflow for candidate evidence",
+   "Private editorial workflow state"
+  ],
+  "implementation_note": "No login system is built this phase (forbidden by Section 57). This contract exists so a future phase can wire auth without redesigning the data boundary."
+ },
+ "direction_rule": {
+  "OPERATOR_TO_PUBLIC_LINKS": "ALLOWED (e.g. Operator Reports page links to the Public Intelligence Page)",
+  "PUBLIC_TO_OPERATOR_LINKS": "FORBIDDEN_BY_DEFAULT (verified: no Public intelligence page links to /operator/ as of N-7)"
+ },
+ "verification_n7": {
+  "secret_scan_of_site_operator": "no API keys / tokens / secrets / private_research full_text / cookies / authorization headers found in site/operator/** (grep-based scan, N-7)",
+  "public_nav_operator_link": "not present in site/index.html or site/intelligence/** (verified N-7)",
+  "operator_overview_banner": "METAXIS OPERATOR / PUBLIC-SAFE OPERATIONS VIEW banner added to render_overview() in operator_ui.py, N-7"
+ }
+}
