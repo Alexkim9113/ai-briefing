@@ -24,7 +24,11 @@ def test_real_corpus_maturity_computes_without_crash():
     m = cm.compute_corpus_maturity()
     assert m["total_documents"] > 500
     assert m["production_event_count"] == 28  # verified baseline (Part 1 report)
-    assert m["change_count"] == 0
+    # M.5F Section 36: this was pinned at 0, but that reflected changes.json having been
+    # emptied by a stale pre-M.5A-fix pilot run accidentally committed in c2c8f12 (see the
+    # Section 36 regression-audit commit) -- the corpus's one real Change
+    # (chg_7f1ae8e6b9e33860, HUMAN_REJECTED) was restored, so the honest count is 1, not 0.
+    assert m["change_count"] == 1
     assert m["signal_count"] == 0
     assert m["pattern_count"] == 0
     assert m["structural_analysis_count"] == 0

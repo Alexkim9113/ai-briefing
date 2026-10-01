@@ -16,25 +16,35 @@ def _fixture_documents():
         "d3": {"document_id": "d3", "category": "policy", "field": None,
                "source_id": "src_federal_register", "canonical_url": "https://federalregister.gov/x"},
         "d4": {"document_id": "d4", "category": "unknown_category", "field": None,
-               "source_id": "src_mystery", "canonical_url": "https://mystery.example/x"},
+               "source_id": None, "canonical_url": "https://mystery.example/x"},
+        # M.5F Section 23 fixtures: a document whose `category` claims it is a policy/paper
+        # source but whose real source_id is a Google News aggregator or ordinary secondary
+        # outlet -- the exact conflation this audit found in the real 601-doc corpus.
+        "d5": {"document_id": "d5", "category": "policy", "field": None,
+               "source_id": "src_구글뉴스_ai_정책", "canonical_url": "https://news.google.com/x"},
+        "d6": {"document_id": "d6", "category": "papers", "field": None,
+               "source_id": "src_yna_co_kr", "canonical_url": "https://yna.co.kr/x"},
     }
 
 
-def test_primary_secondary_distribution_maps_known_categories():
+def test_primary_secondary_distribution_uses_source_id_not_category():
+    # Section 23 correction: classification is source_id-verified, so a category="policy"/
+    # "papers" document with a non-primary source_id must NOT be counted as primary.
     result = m.primary_secondary_distribution(_fixture_documents())
-    assert result["PRIMARY_ACADEMIC"] == 1
-    assert result["SECONDARY_JOURNALISTIC"] == 1
-    assert result["PRIMARY_GOVERNMENT"] == 1
+    assert result["PRIMARY_ACADEMIC"] == 1  # d1 only (real src_crossref)
+    assert result["PRIMARY_GOVERNMENT"] == 1  # d3 only (real src_federal_register)
+    assert result["AGGREGATOR_GOOGLE_NEWS"] == 1  # d5, despite category="policy"
+    assert result["SECONDARY_JOURNALISTIC"] == 2  # d2, and d6 despite category="papers"
 
 
-def test_primary_secondary_distribution_honestly_labels_unknown_category():
+def test_primary_secondary_distribution_honestly_labels_missing_source_id():
     result = m.primary_secondary_distribution(_fixture_documents())
     assert any(k.startswith("UNCLASSIFIED") for k in result)
 
 
 def test_topic_field_distribution_reports_none_bucket_plainly():
     result = m.topic_field_distribution(_fixture_documents())
-    assert result["documents_with_no_field_value"] == 3
+    assert result["documents_with_no_field_value"] == 5
     assert result["total_distinct_field_values"] == 2
 
 
@@ -60,7 +70,7 @@ def test_evidence_family_summary_reports_not_yet_generated_honestly():
 def test_build_audit_reuses_corpus_balance_module_unmodified():
     docs = _fixture_documents()
     audit = m.build_audit(documents=docs)
-    assert audit["base_corpus_balance"]["total_documents"] == 4
+    assert audit["base_corpus_balance"]["total_documents"] == 6
     assert "primary_vs_secondary_distribution" in audit
     assert "topic_field_distribution" in audit
     assert "geography_distribution" in audit

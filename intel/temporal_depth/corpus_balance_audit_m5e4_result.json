@@ -56,10 +56,12 @@
       "overall_status": "DERIVED_FROM_SAME_SOURCE"
     }
   },
+  "primary_vs_secondary_distribution_correction_note": "M.5F Section 23: the M.5E-4 report's 48% primary / 52% secondary figure was computed from the `category` field and is WRONG -- category is a topic tag, not a verified source-type tag (e.g. 128 of 156 category='policy' docs are Google News aggregator results or ordinary secondary outlets reporting ON policy, not real government primary sources; only 28 are the genuine src_federal_register primary source). primary_vs_secondary_distribution below is now source_id-verified instead; see this module's source code comment for the full count-by-count breakdown.",
   "primary_vs_secondary_distribution": {
-    "SECONDARY_JOURNALISTIC": 312,
-    "PRIMARY_ACADEMIC": 133,
-    "PRIMARY_GOVERNMENT": 156
+    "SECONDARY_JOURNALISTIC": 450,
+    "PRIMARY_ACADEMIC": 61,
+    "AGGREGATOR_GOOGLE_NEWS": 62,
+    "PRIMARY_GOVERNMENT": 28
   },
   "topic_field_distribution": {
     "total_distinct_field_values": 41,

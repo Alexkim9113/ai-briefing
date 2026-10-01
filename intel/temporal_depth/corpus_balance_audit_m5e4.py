@@ -53,25 +53,55 @@ def load_documents(documents_path=DOCUMENTS_PATH):
     return json.loads(Path(documents_path).read_text(encoding="utf-8"))
 
 
-# Category values this corpus actually uses (from a real, direct count of intel/documents.json,
-# see module docstring): "papers"/"research" are the closest proxy this corpus has for a primary/
-# academic source; "policy" is a primary/government source; "news_ko"/"news_global" are secondary/
-# journalistic. This mapping is explicit and honestly reported as a judgment call, not asserted as
-# an authoritative primary/secondary taxonomy this corpus schema doesn't actually encode.
-_PRIMARY_SECONDARY_MAP = {
-    "papers": "PRIMARY_ACADEMIC",
-    "research": "PRIMARY_ACADEMIC",
-    "policy": "PRIMARY_GOVERNMENT",
-    "news_ko": "SECONDARY_JOURNALISTIC",
-    "news_global": "SECONDARY_JOURNALISTIC",
-}
+# M.5F SECTION 23 CORRECTION — this module originally classified primary/secondary by the
+# corpus's `category` field (papers/research -> PRIMARY_ACADEMIC, policy -> PRIMARY_GOVERNMENT,
+# news_ko/news_global -> SECONDARY_JOURNALISTIC), reported in M.5E-4 as 48% primary / 52%
+# secondary. Re-auditing per Te's M.5F instruction found this WRONG: `category` is a topic/
+# content-type tag assigned upstream (what a document is ABOUT), not a verified source-type
+# tag (what the document actually IS). Direct counts of source_id within each category show the
+# conflation concretely:
+#   - category="papers" (133 docs): only 61 are real arxiv_*/nature_*/crossref documents; the
+#     other 72 are ordinary news outlets (yna_co_kr, chosun_com, investing_com, independent_co_uk,
+#     etc.) that happened to report ON a paper/research topic.
+#   - category="policy" (156 docs): only 28 are the real src_federal_register government primary
+#     source; 62 are Google News aggregator results (src_구글뉴스_ai_정책/
+#     src_google_news_ai_regulation) and the remaining 66 are ordinary secondary news outlets
+#     (studlife.com, npr, yahoo_finance_canada, etc.) that happened to report ON a policy topic.
+# This module now classifies by source_id (the actual publisher/connector that produced the
+# document), which is the only field in this schema that is source-verified rather than topic-
+# inferred. Google News aggregator source_ids are reported as their own AGGREGATOR_GOOGLE_NEWS
+# bucket (a discovery channel, not itself a primary or lineage-confirmed secondary source) rather
+# than silently folded into either PRIMARY or SECONDARY.
+_PRIMARY_GOVERNMENT_SOURCE_IDS = {"src_federal_register"}
+
+
+def _is_primary_academic_source(source_id):
+    source_id = (source_id or "").lower()
+    return (source_id.startswith("src_arxiv") or source_id.startswith("src_crossref")
+            or "nature" in source_id)
+
+
+def _is_google_news_aggregator_source(source_id):
+    source_id = (source_id or "").lower()
+    return "구글뉴스" in source_id or "google_news" in source_id
 
 
 def primary_secondary_distribution(documents):
+    """Source_id-verified classification (see module-level correction note above) — NOT the
+    corpus's own `category` field, which this audit found conflates topic with source type."""
     counts = Counter()
     for doc in documents.values():
-        category = doc.get("category")
-        label = _PRIMARY_SECONDARY_MAP.get(category, f"UNCLASSIFIED({category!r})")
+        source_id = doc.get("source_id")
+        if source_id in _PRIMARY_GOVERNMENT_SOURCE_IDS:
+            label = "PRIMARY_GOVERNMENT"
+        elif _is_primary_academic_source(source_id):
+            label = "PRIMARY_ACADEMIC"
+        elif _is_google_news_aggregator_source(source_id):
+            label = "AGGREGATOR_GOOGLE_NEWS"
+        elif source_id:
+            label = "SECONDARY_JOURNALISTIC"
+        else:
+            label = "UNCLASSIFIED(no source_id)"
         counts[label] += 1
     return dict(counts)
 
@@ -162,6 +192,15 @@ def build_audit(documents=None):
             "phase's acquisition-priority decision, per Te's M.5E-4 section 14."
         ),
         "base_corpus_balance": base_report,
+        "primary_vs_secondary_distribution_correction_note": (
+            "M.5F Section 23: the M.5E-4 report's 48% primary / 52% secondary figure was computed "
+            "from the `category` field and is WRONG -- category is a topic tag, not a verified "
+            "source-type tag (e.g. 128 of 156 category='policy' docs are Google News aggregator "
+            "results or ordinary secondary outlets reporting ON policy, not real government "
+            "primary sources; only 28 are the genuine src_federal_register primary source). "
+            "primary_vs_secondary_distribution below is now source_id-verified instead; see this "
+            "module's source code comment for the full count-by-count breakdown."
+        ),
         "primary_vs_secondary_distribution": primary_secondary_distribution(documents),
         "topic_field_distribution": topic_field_distribution(documents),
         "geography_distribution": geography_distribution(documents),
