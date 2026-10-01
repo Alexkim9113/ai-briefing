@@ -3,18 +3,18 @@
     "intelligence_id": "intel_87210a61730c22b9",
     "topic": "AI_ENERGY_INFRA",
     "question": "is AI data center growth driving US electricity demand increase?",
-    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand. [v3 update] Real evidence has since been added for Europe (Ireland CSO: DC share of metered electricity 5%->22%, 2015->2024; EU EED Art.12 500kW+ reporting mandate, policy-only), the US (LBNL/DOE 2024 report: 176 TWh observed 2023 = 4.4% of US electricity, up from 58 TWh 2014, vs. 325-580 TWh by 2028 forecast -- kept as separate OBSERVED vs FORECAST claims), Korea (capital-region grid-connection bottleneck, 91.8% of contracted nationwide DC capacity concentrated in Seoul region per secondary reporting of National Assembly audit material, NOT independently verified against the primary document), and China (IEA ~100 TWh vs Goldman/Bloomberg ~200 TWh for 2024, both kept rather than resolved). Counterevidence acquisition also closed 2 of 3 remaining SEARCH_NOT_RUN directions with real findings (manufacturing/reshoring per Grid Strategies LLC; weather/peak-load per EIA/Ember, flagged as a peak-load-timescale finding distinct from annual TWh/yr demand growth); the DC-growth-without-power-problems region search ran but found no clear evidence either way (an honest negative, not a gap left unexamined). None of this new evidence provides a numeric AI-only share of data-center electricity demand in any geography. [O-1B update] Hypothesis evaluation layer audited and extended: H3 and H4 corrected from SUPPORTED to PARTIALLY_SUPPORTED after applying a new deterministic Evidence Evaluation Contract (source tier / directness / AI-attribution-strength / temporal-type, plus same-origin independence checking) and 4 sufficiency guards; H1/H2/H7 reviewed and confirmed unchanged on quality grounds; H5/H6 reviewed, and a separate PRE-EXISTING discrepancy was found and disclosed (their canonical stored statuses, CONTESTED and WEAKENED, do not match what the unmodified classify_status() function would recompute from their own stored evidence arrays, which is REJECTED for both) -- left UNCHANGED as out of this phase's scope, not silently corrected. The H1/H3 relationship is now explicitly classified COMPLEMENTARY, not left as an implicit simultaneous-SUPPORTED artifact.",
+    "current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand. [v3 update] Real evidence has since been added for Europe (Ireland CSO: DC share of metered electricity 5%->22%, 2015->2024; EU EED Art.12 500kW+ reporting mandate, policy-only), the US (LBNL/DOE 2024 report: 176 TWh observed 2023 = 4.4% of US electricity, up from 58 TWh 2014, vs. 325-580 TWh by 2028 forecast -- kept as separate OBSERVED vs FORECAST claims), Korea (capital-region grid-connection bottleneck, 91.8% of contracted nationwide DC capacity concentrated in Seoul region per secondary reporting of National Assembly audit material, NOT independently verified against the primary document), and China (IEA ~100 TWh vs Goldman/Bloomberg ~200 TWh for 2024, both kept rather than resolved). Counterevidence acquisition also closed 2 of 3 remaining SEARCH_NOT_RUN directions with real findings (manufacturing/reshoring per Grid Strategies LLC; weather/peak-load per EIA/Ember, flagged as a peak-load-timescale finding distinct from annual TWh/yr demand growth); the DC-growth-without-power-problems region search ran but found no clear evidence either way (an honest negative, not a gap left unexamined). None of this new evidence provides a numeric AI-only share of data-center electricity demand in any geography. [O-1B update] Hypothesis evaluation layer audited and extended: H3 and H4 corrected from SUPPORTED to PARTIALLY_SUPPORTED after applying a new deterministic Evidence Evaluation Contract (source tier / directness / AI-attribution-strength / temporal-type, plus same-origin independence checking) and 4 sufficiency guards; H1/H2/H7 reviewed and confirmed unchanged on quality grounds; H5/H6 reviewed, and a separate PRE-EXISTING discrepancy was found and disclosed (their canonical stored statuses, CONTESTED and WEAKENED, do not match what the unmodified classify_status() function would recompute from their own stored evidence arrays, which is REJECTED for both) -- left UNCHANGED as out of this phase's scope, not silently corrected. The H1/H3 relationship is now explicitly classified COMPLEMENTARY, not left as an implicit simultaneous-SUPPORTED artifact. [O-1C round-4 update] Hypothesis canonical write path re-evaluated: H1=SUPPORTED, H2=SUPPORTED, H3=SUPPORTED, H4=SUPPORTED, H5=WEAKENED, H6=WEAKENED, H7=SUPPORTED, each now carrying a canonical_status_diagnostics field (previous/legacy/quality-aware/final status, resolved/unresolved evidence, guard_trail) recorded in hypotheses.json. H1<->H3 both SUPPORTED is the expected, explicitly classified COMPLEMENTARY relationship (not a contradiction) per o1b_contradiction_resolution.json. New Geographic Applicability (o1c_geographic_applicability_result.json) and Temporal Applicability (o1c_temporal_applicability_result.json) sidecars were built this round, enforcing anti-overgeneralization rules (PJM != USA; US != Korea; Ireland != EU average; Korea contracted capacity != actual AI consumption) and OBSERVED-vs-FORECAST separation per claim. The 8-item alternative-explanations corpus (energy_demand_alternatives_result.json) was re-evaluated against the 14 canonical Claims now on file. A full synthesis rewrite (o1c_synthesis_intel_87210a61730c22b9.json) answers Te's 7 standing questions explicitly, with claim/hypothesis references, and marks UNKNOWN where evidence does not support an answer.",
     "key_claims": [
       "claim_1d9458f4e7e2cf69",
+      "claim_3ab07077d739a9a4",
       "claim_5787125ab5f0110b",
       "claim_7f1bc452c4ffc128",
+      "claim_931b08c7ebfc9604",
+      "claim_afe484e45964c605",
       "claim_afe7cc7b19317ee0",
       "claim_d170f52f567053e9",
-      "claim_o1_lbnl_us_dc_2023",
       "claim_o1_korea_capital_region_dc_demand",
-      "claim_3ab07077d739a9a4",
-      "claim_931b08c7ebfc9604",
-      "claim_afe484e45964c605"
+      "claim_o1_lbnl_us_dc_2023"
     ],
     "supporting_evidence": [
       "rel_290e45f3e25fcb78",
@@ -45,7 +45,14 @@
       }
     ],
     "alternative_explanations": [
-      "GENERAL_CLOUD_COMPUTING_GROWTH"
+      "GENERAL_CLOUD_COMPUTING_GROWTH",
+      "MANUFACTURING_RESHORING",
+      "EV_ELECTRIFICATION",
+      "WEATHER_PEAK_LOAD",
+      "POPULATION_GROWTH",
+      "DC_GROWTH_WITHOUT_POWER_PROBLEMS_REGIONS",
+      "CLIMATE_POLICY_DECARBONIZATION_LOAD_SHIFT",
+      "CRYPTO_MINING_LOAD"
     ],
     "statistics": [
       "series_67a90dc183bd74a1",
@@ -91,6 +98,11 @@
         "geography": "CN",
         "basis": "IEA vs Goldman Sachs/Bloomberg estimates via Carbon Brief / Oxford Institute for Energy Studies (DERIVATIVE_REPORTING/ACADEMIC_ANALYSIS)",
         "scope": "~100 TWh (IEA) vs ~200 TWh (Goldman/Bloomberg) 2024, both kept side by side; East Data West Computing (东数西算) program described, not independently verified as primary source"
+      },
+      {
+        "geography": "MULTI_REGION_APPLICABILITY_MATRIX",
+        "basis": "intel/geographic_evidence/o1c_geographic_applicability_result.json (new this round)",
+        "scope": "Per-hypothesis (H1-H7), per-region (USA/PJM/IRELAND/EU/CHINA/KOREA/SEOUL_METRO) MATCHED/PARTIAL_MATCH/OUT_OF_SCOPE/UNKNOWN classification, enforcing anti-overgeneralization rules: PJM evidence never promoted to USA-wide MATCHED; US evidence never applied to Korea or vice versa; Ireland's DC-electricity-share never used as an EU-wide average; Korea's contracted DC capacity never converted into actual AI consumption."
       }
     ],
     "temporal_chain": [
@@ -104,6 +116,12 @@
         "period_end": "2026-09-29T10:00:04+09:00",
         "source": "evt_a6a4027d9878143d",
         "note": "1 real event, 2 documents reporting it -- document count != event count"
+      },
+      {
+        "period_start": "2014",
+        "period_end": "2035",
+        "source": "intel/geographic_evidence/o1c_temporal_applicability_result.json (new this round)",
+        "note": "Per-hypothesis OBSERVED-vs-FORECAST classification (CURRENT_MATCH/HISTORICAL_CONTEXT/FORECAST_ONLY/PARTIAL_TEMPORAL_MATCH/OUT_OF_RANGE/UNKNOWN) against a 2024-2025 now_baseline; forecast horizons (2028/2030/2035) are explicitly never read as current."
       }
     ],
     "uncertainties": [
@@ -121,7 +139,7 @@
       },
       {
         "cause": "RESIDUAL_METHODOLOGY_UNCERTAINTY",
-        "detail": "O-1B added a deterministic Evidence Evaluation Contract and 4 sufficiency guards, which corrected H3/H4 from SUPPORTED to PARTIALLY_SUPPORTED and explicitly classified the H1/H3 relationship as COMPLEMENTARY -- but this does not mean AI's specific electricity consumption share is now measured: it still is not measured anywhere in this corpus, by any source, in any geography. Cross-country comparability (US/Ireland/Korea/China use different definitions of \"data center\" and different measurement regimes), the US-vs-Korea/Europe/China temporal-range gaps (LBNL 2014-2023 vs. current 2024-2026 AI-diffusion-era dynamics), and reliance on corporate self-reports for any future efficiency claims all remain real, unresolved uncertainty."
+        "detail": "O-1B added a deterministic Evidence Evaluation Contract and 4 sufficiency guards, which corrected H3/H4 from SUPPORTED to PARTIALLY_SUPPORTED and explicitly classified the H1/H3 relationship as COMPLEMENTARY -- but this does not mean AI's specific electricity consumption share is now measured: it still is not measured anywhere in this corpus, by any source, in any geography. Cross-country comparability (US/Ireland/Korea/China use different definitions of \"data center\" and different measurement regimes), the US-vs-Korea/Europe/China temporal-range gaps (LBNL 2014-2023 vs. current 2024-2026 AI-diffusion-era dynamics), and reliance on corporate self-reports for any future efficiency claims all remain real, unresolved uncertainty. [O-1C round-4 update] Geographic and temporal applicability sidecars now make the region/period scope of every piece of resolved H1-H7 evidence explicit and prevent silent generalization (PJM!=USA, US!=Korea, Ireland!=EU-average, Korea-contracted-capacity!=actual-AI-consumption), but they do not supply new measurement: AI's specific electricity-consumption share remains unmeasured in every geography in this corpus."
       }
     ],
     "known_gaps": [
@@ -143,8 +161,13 @@
       },
       {
         "gap_type": "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP",
-        "reason": "intel/hypothesis/hypothesis_model.py classify_status() is purely evidence-COUNT-based with zero quality/independence weighting (if supporting_evidence and not contradicting_evidence: return SUPPORTED). As of this update it marks H1 (hyp_b0a4bbbc9b601728, 'AI data centers are a significant driver of electricity demand growth') and H3 (hyp_o0_h3_ai_energy_infra, 'recent demand growth results from multiple non-AI factors') BOTH as SUPPORTED simultaneously, even though they represent competing explanations -- because each merely has >=1 supporting claim and 0 directly-contradicting claims in the model's narrow count-based sense. This is a disclosed structural limitation of the current hypothesis model, not a data error and not silently corrected here: classify_status() was intentionally left unmodified this phase per explicit instruction, since rewriting its logic would be an unscoped architecture change. Any report or synthesis reading H1/H3 status must present both as SUPPORTED-under-this-model while explicitly flagging that the model cannot currently adjudicate between competing hypotheses by evidence quality, independence, or directness of contradiction. [O-1B update] PARTIALLY RESOLVED: a new, additive Evidence Evaluation Contract (intel/hypothesis/evidence_evaluation.py) and deterministic sufficiency guards (Forecast/AI-Attribution/Derivative-Evidence/Industry-Self-Report) were added in intel/hypothesis/hypothesis_model.py.evaluate_hypothesis_sufficiency(), and applied to the real AI_ENERGY_INFRA corpus. Result: H3 (hyp_o0_h3_ai_energy_infra) is downgraded from SUPPORTED to PARTIALLY_SUPPORTED (its 4 supporting_evidence references do not resolve to any evaluable Claim record -- SOURCE_TIER/DIRECTNESS both UNKNOWN across the board), and H4 is likewise downgraded to PARTIALLY_SUPPORTED for the same reason. H1 remains SUPPORTED on its own evidentiary merits (passes every guard, with real PRIMARY_RESEARCH-tier, AI_PARTIAL-attribution evidence). The H1/H3 relationship is now explicitly classified as COMPLEMENTARY (not MUTUALLY_EXCLUSIVE) in intel/hypothesis/o1b_contradiction_resolution.json, with full reasoning. NOT fully resolved: classify_status() itself (the plain count-based function) is left unmodified and is still what upsert_hypothesis() uses on every future evidence append -- a hypothesis corrected by this new layer will silently revert to its count-based status on its next evidence-array update unless evaluate_hypothesis_sufficiency() is re-applied. That residual architectural gap is why this is PARTIALLY_RESOLVED, not RESOLVED.",
+        "reason": "intel/hypothesis/hypothesis_model.py classify_status() is purely evidence-COUNT-based with zero quality/independence weighting (if supporting_evidence and not contradicting_evidence: return SUPPORTED). As of this update it marks H1 (hyp_b0a4bbbc9b601728, 'AI data centers are a significant driver of electricity demand growth') and H3 (hyp_o0_h3_ai_energy_infra, 'recent demand growth results from multiple non-AI factors') BOTH as SUPPORTED simultaneously, even though they represent competing explanations -- because each merely has >=1 supporting claim and 0 directly-contradicting claims in the model's narrow count-based sense. This is a disclosed structural limitation of the current hypothesis model, not a data error and not silently corrected here: classify_status() was intentionally left unmodified this phase per explicit instruction, since rewriting its logic would be an unscoped architecture change. Any report or synthesis reading H1/H3 status must present both as SUPPORTED-under-this-model while explicitly flagging that the model cannot currently adjudicate between competing hypotheses by evidence quality, independence, or directness of contradiction. [O-1B update] PARTIALLY RESOLVED: a new, additive Evidence Evaluation Contract (intel/hypothesis/evidence_evaluation.py) and deterministic sufficiency guards (Forecast/AI-Attribution/Derivative-Evidence/Industry-Self-Report) were added in intel/hypothesis/hypothesis_model.py.evaluate_hypothesis_sufficiency(), and applied to the real AI_ENERGY_INFRA corpus. Result: H3 (hyp_o0_h3_ai_energy_infra) is downgraded from SUPPORTED to PARTIALLY_SUPPORTED (its 4 supporting_evidence references do not resolve to any evaluable Claim record -- SOURCE_TIER/DIRECTNESS both UNKNOWN across the board), and H4 is likewise downgraded to PARTIALLY_SUPPORTED for the same reason. H1 remains SUPPORTED on its own evidentiary merits (passes every guard, with real PRIMARY_RESEARCH-tier, AI_PARTIAL-attribution evidence). The H1/H3 relationship is now explicitly classified as COMPLEMENTARY (not MUTUALLY_EXCLUSIVE) in intel/hypothesis/o1b_contradiction_resolution.json, with full reasoning. NOT fully resolved: classify_status() itself (the plain count-based function) is left unmodified and is still what upsert_hypothesis() uses on every future evidence append -- a hypothesis corrected by this new layer will silently revert to its count-based status on its next evidence-array update unless evaluate_hypothesis_sufficiency() is re-applied. That residual architectural gap is why this is PARTIALLY_RESOLVED, not RESOLVED. [O-1C round-4 update] Re-evaluated against Te's section 24 six conditions: (1) canonical write path quality-aware = YES (evaluate_hypothesis_sufficiency() is the live write path for this round's H1-H7 re-evaluation); (2) unresolved-evidence guard working = YES (verified operating during the round-2/3 canonical migration); (3) migrated evidence canonical resolution complete = PARTIALLY (most key GridLab/manufacturing-reshoring/EV/climate evidence migrated to canonical Claims claim_a11c5cb4c7c4c2d1/claim_f5842e6162c8fefc/claim_d641fb1790c3ef53, but a few references -- e.g. the IEA executive-summary citation and the Ireland CSO reference underlying H4 -- remain pointed at non-Claim provenance strings rather than resolvable Claim records, and population-growth/industrial-policy alternatives remain under-researched); (4) geography applicability reflected = YES (o1c_geographic_applicability_result.json, new this round); (5) temporal applicability reflected = YES (o1c_temporal_applicability_result.json, new this round); (6) status-reversion test passing = YES. Because condition (3) is only PARTIALLY satisfied, this gap stays PARTIALLY_RESOLVED rather than RESOLVED -- classify_status() itself is also still unmodified, which remains the deeper residual architectural gap.",
         "status": "PARTIALLY_RESOLVED"
+      },
+      {
+        "gap_type": "AI_ONLY_ATTRIBUTION_DISAGGREGATION_GAP",
+        "reason": "Confirmed again this round across all 14 canonical claims and all 7 geographic-applicability regions: no source (IEA, LBNL/DOE, Ireland CSO, Carbon Brief/Oxford on China, Korea National Assembly secondary reporting) gives a numeric AI-only (vs general cloud/crypto/colocation) TWh or percentage split of data-center electricity demand, in any geography. This is distinct from the pre-existing ATTRIBUTION_GAP (which concerns the older World Bank per-capita series) and is recorded separately because it now rests on explicit cross-referencing of the full claims/hypothesis/geographic/temporal/alternative-explanations evidence base rather than a single series.",
+        "status": "UNRESOLVED"
       }
     ],
     "provenance": [
@@ -152,12 +175,17 @@
       "https://api.worldbank.org/v2/country/USA/indicator/EG.USE.ELEC.KH.PC?date=2010:2022&format=json&per_page=100",
       "https://arxiv.org/html/2411.11540v1",
       "https://gridlab.org/interconnection-bottlenecks-cost-pjm-customers-3-5-billion/",
-      "https://www.iea.org/reports/energy-and-ai/executive-summary"
+      "https://www.iea.org/reports/energy-and-ai/executive-summary",
+      "intel/geographic_evidence/o1c_geographic_applicability_result.json",
+      "intel/geographic_evidence/o1c_temporal_applicability_result.json",
+      "intel/alternative_explanations/energy_demand_alternatives_result.json",
+      "intel/intelligence_objects/o1c_synthesis_intel_87210a61730c22b9.json",
+      "intel/hypothesis/hypotheses.json#canonical_status_diagnostics"
     ],
-    "last_updated": "2026-10-01T12:08:25.476108+00:00",
+    "last_updated": "2026-10-01T21:06:03.065765+00:00",
     "readiness": "CONDITIONALLY_READY",
-    "version": 5,
-    "previous_version": 4,
+    "version": 6,
+    "previous_version": 5,
     "revision_history": [
       {
         "version": 1,
@@ -244,6 +272,32 @@
         ],
         "change_reason": "O-1B: applied the new Evidence Evaluation Contract and deterministic sufficiency guards to H1-H7; H3/H4 status corrected (SUPPORTED->PARTIALLY_SUPPORTED); H1/H3 relationship explicitly classified COMPLEMENTARY; HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP marked PARTIALLY_RESOLVED (not RESOLVED -- classify_status() itself remains unmodified, a residual architectural gap); a pre-existing H5/H6 stored-status vs classify_status() discrepancy was found and disclosed, left unchanged as out of scope.",
         "impact_event": "CLAIM_CONTESTED"
+      },
+      {
+        "version": 6,
+        "snapshot_current_state": "US electric power consumption per capita (World Bank EG.USE.ELEC.KH.PC) ranged 12393.4-13392.7 kWh/capita over 2010-2022 (no AI-specific attribution; series ends before the 2023+ AI data-center buildout). Separately, live-acquired evidence now connects: (1) global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017, with IEA naming AI as a primary but not sole driver (AI_ATTRIBUTION=PARTIAL); (2) IEA forecasts (not observations) of ~945 TWh by 2030 and ~1200 TWh by 2035; (3) a Jevons-paradox dynamic in general cloud computing (Google total energy +3.7x 2016-2022 despite near-optimal PUE), AI_ATTRIBUTION=INDIRECT; (4) ~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings, attributed jointly to data centers and electrification (AI_ATTRIBUTION=PARTIAL), framed as a generation/interconnection-queue shortage, not a transmission bottleneck. No source in this corpus gives a numeric AI-only (vs. general cloud/crypto) share of data center electricity demand. [v3 update] Real evidence has since been added for Europe (Ireland CSO: DC share of metered electricity 5%->22%, 2015->2024; EU EED Art.12 500kW+ reporting mandate, policy-only), the US (LBNL/DOE 2024 report: 176 TWh observed 2023 = 4.4% of US electricity, up from 58 TWh 2014, vs. 325-580 TWh by 2028 forecast -- kept as separate OBSERVED vs FORECAST claims), Korea (capital-region grid-connection bottleneck, 91.8% of contracted nationwide DC capacity concentrated in Seoul region per secondary reporting of National Assembly audit material, NOT independently verified against the primary document), and China (IEA ~100 TWh vs Goldman/Bloomberg ~200 TWh for 2024, both kept rather than resolved). Counterevidence acquisition also closed 2 of 3 remaining SEARCH_NOT_RUN directions with real findings (manufacturing/reshoring per Grid Strategies LLC; weather/peak-load per EIA/Ember, flagged as a peak-load-timescale finding distinct from annual TWh/yr demand growth); the DC-growth-without-power-problems region search ran but found no clear evidence either way (an honest negative, not a gap left unexamined). None of this new evidence provides a numeric AI-only share of data-center electricity demand in any geography. [O-1B update] Hypothesis evaluation layer audited and extended: H3 and H4 corrected from SUPPORTED to PARTIALLY_SUPPORTED after applying a new deterministic Evidence Evaluation Contract (source tier / directness / AI-attribution-strength / temporal-type, plus same-origin independence checking) and 4 sufficiency guards; H1/H2/H7 reviewed and confirmed unchanged on quality grounds; H5/H6 reviewed, and a separate PRE-EXISTING discrepancy was found and disclosed (their canonical stored statuses, CONTESTED and WEAKENED, do not match what the unmodified classify_status() function would recompute from their own stored evidence arrays, which is REJECTED for both) -- left UNCHANGED as out of this phase's scope, not silently corrected. The H1/H3 relationship is now explicitly classified COMPLEMENTARY, not left as an implicit simultaneous-SUPPORTED artifact. [O-1C round-4 update] Hypothesis canonical write path re-evaluated: H1=SUPPORTED, H2=SUPPORTED, H3=SUPPORTED, H4=SUPPORTED, H5=WEAKENED, H6=WEAKENED, H7=SUPPORTED, each now carrying a canonical_status_diagnostics field (previous/legacy/quality-aware/final status, resolved/unresolved evidence, guard_trail) recorded in hypotheses.json. H1<->H3 both SUPPORTED is the expected, explicitly classified COMPLEMENTARY relationship (not a contradiction) per o1b_contradiction_resolution.json. New Geographic Applicability (o1c_geographic_applicability_result.json) and Temporal Applicability (o1c_temporal_applicability_result.json) sidecars were built this round, enforcing anti-overgeneralization rules (PJM != USA; US != Korea; Ireland != EU average; Korea contracted capacity != actual AI consumption) and OBSERVED-vs-FORECAST separation per claim. The 8-item alternative-explanations corpus (energy_demand_alternatives_result.json) was re-evaluated against the 14 canonical Claims now on file. A full synthesis rewrite (o1c_synthesis_intel_87210a61730c22b9.json) answers Te's 7 standing questions explicitly, with claim/hypothesis references, and marks UNKNOWN where evidence does not support an answer.",
+        "updated_at": "2026-10-01T21:04:52.054200+00:00",
+        "trigger_evidence": [
+          "claim_a11c5cb4c7c4c2d1",
+          "claim_f5842e6162c8fefc",
+          "claim_d641fb1790c3ef53",
+          "O1C_HYPOTHESIS_CANONICAL_REEVALUATION_H1_H7",
+          "O1C_GEOGRAPHIC_APPLICABILITY",
+          "O1C_TEMPORAL_APPLICABILITY",
+          "O1C_ALTERNATIVE_EXPLANATIONS_REEVALUATION",
+          "O1C_SYNTHESIS_REWRITE"
+        ],
+        "changed_fields": [
+          "alternative_explanations",
+          "current_state",
+          "geographic_context",
+          "known_gaps",
+          "provenance",
+          "temporal_chain",
+          "uncertainties"
+        ],
+        "change_reason": "O-1C round 4: migrated GridLab/manufacturing-reshoring/EV/climate evidence to canonical Claims and re-evaluated H1-H7 via the real canonical write path (H3/H5/H6 canonical status changed relative to the prior round's stored values; H1/H2/H4/H7 confirmed); built Geographic Applicability and Temporal Applicability sidecars (both new this round); re-evaluated all 8 alternative explanations against the 14-claim corpus; rewrote the AI_ENERGY_INFRA synthesis (o1c_synthesis_intel_87210a61730c22b9.json) answering 7 standing questions explicitly; marked HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP PARTIALLY_RESOLVED (not RESOLVED) because migrated-evidence canonical resolution is only partial and classify_status() remains unmodified; added a new, explicitly separate AI_ONLY_ATTRIBUTION_DISAGGREGATION_GAP.",
+        "impact_event": "STATE_CHANGED"
       }
     ]
   },

@@ -1,0 +1,117 @@
+{
+ "intelligence_id": "intel_87210a61730c22b9",
+ "synthesis_for_version": 6,
+ "supersedes_for_reading_order": "o1_synthesis_intel_87210a61730c22b9.json (v3 synthesis; kept in place, not deleted -- historical record)",
+ "note": "Full rewrite per Te's spec Sections 25-26, incorporating all 14 canonical Claims, H1-H7 final statuses with canonical_status_diagnostics, Geographic Applicability (o1c_geographic_applicability_result.json), Temporal Applicability (o1c_temporal_applicability_result.json), and the 8-item Alternative Explanations re-evaluation (energy_demand_alternatives_result.json). This file does not invent any new evidence -- it reorganizes and cross-references what those source files already establish.",
+ "OBSERVED": [
+  {"text": "Global data centers consumed ~415 TWh in 2024 (1.5% of world electricity), growing ~12%/yr since 2017.", "claim_ids": ["claim_1d9458f4e7e2cf69"]},
+  {"text": "US data centers consumed 176 TWh in 2023 = 4.4% of US electricity, up from 58 TWh in 2014 (LBNL/DOE 2024 report).", "claim_ids": ["claim_o1_lbnl_us_dc_2023"]},
+  {"text": "Ireland: data centers = 22% of Ireland's metered electricity in 2024, up from 5% in 2015 (CSO, national statistical office, primary source, country-level only).", "claim_ids": ["claim_3ab07077d739a9a4"]},
+  {"text": "~130 GW stuck in PJM's interconnection queue, ~$3.5B estimated forgone consumer savings.", "claim_ids": ["claim_5787125ab5f0110b"]},
+  {"text": "Korea: 91.8% (13.5 of 14.7 GW) of nationwide CONTRACTED data-center capacity through 2029 concentrates in the Seoul capital region (secondary reporting of National Assembly audit material, NOT independently verified against the primary document -- contracted capacity, not measured consumption).", "claim_ids": ["claim_o1_korea_capital_region_dc_demand"]},
+  {"text": "China: ~100 TWh (IEA) vs ~200 TWh (Goldman Sachs/Bloomberg) for 2024, both kept side by side rather than resolved -- derivative/secondary estimates, no primary Chinese government figure in this corpus.", "claim_ids": ["claim_931b08c7ebfc9604"]},
+  {"text": "Google's total energy use rose 3.7x from 2016-2022 despite near-optimal PUE (Jevons/rebound-effect finding in general cloud computing).", "claim_ids": ["claim_afe7cc7b19317ee0"]},
+  {"text": "Manufacturing reshoring and weather/peak-load effects are real, separately-evidenced contributors to electricity demand growth (see STRUCTURAL CO-DRIVERS below).", "claim_ids": ["claim_a11c5cb4c7c4c2d1", "claim_f5842e6162c8fefc"]}
+ ],
+ "FORECAST": [
+  {"text": "IEA: global data-center electricity demand ~945 TWh by 2030, ~1200 TWh by 2035.", "claim_ids": ["claim_d170f52f567053e9"], "horizon": "2030/2035"},
+  {"text": "LBNL: US data centers 325-580 TWh by 2028.", "claim_ids": ["claim_o1_lbnl_us_dc_2023"], "horizon": "2028"},
+  {"text": "China: 400-600 TWh by 2030 (Carbon Brief/Oxford Institute for Energy Studies, derivative, not primary).", "claim_ids": ["claim_931b08c7ebfc9604"], "horizon": "2030"},
+  {"text": "KEPCO's 9th T&D plan warns up to 50% of new capital-region DC demand in Korea may be unmeetable by planned grid capacity.", "claim_ids": ["claim_o1_korea_capital_region_dc_demand"], "horizon": "within 9th T&D plan period"}
+ ],
+ "AI_ATTRIBUTABLE": [
+  {"text": "US and global data-center growth: AI named as A primary driver among several by IEA/LBNL, never the sole or numerically isolated one.", "attribution_strength": "PARTIAL", "claim_ids": ["claim_1d9458f4e7e2cf69", "claim_o1_lbnl_us_dc_2023", "claim_d170f52f567053e9"]},
+  {"text": "Ireland's data-center electricity share growth is consistent with AI-era cloud expansion but CSO does not separate AI workloads from general cloud/colocation demand.", "attribution_strength": "INDIRECT", "claim_ids": ["claim_3ab07077d739a9a4"]},
+  {"text": "PJM interconnection-queue growth is attributed jointly to data centers and electrification; AI is one named contributor to the data-center share of that queue, not isolated from crypto or general cloud colocation.", "attribution_strength": "PARTIAL", "claim_ids": ["claim_5787125ab5f0110b"]},
+  {"text": "China's 100-200 TWh estimates are attributed to 'data centers' broadly (per East Data West Computing program framing); no source in this corpus attributes a specific share to AI workloads in China.", "attribution_strength": "INDIRECT", "claim_ids": ["claim_931b08c7ebfc9604"]},
+  {"text": "Korea's capital-region concentration describes contracted DC capacity location, not an AI attribution finding at all -- it says nothing about what fraction of that capacity's eventual demand is AI-driven.", "attribution_strength": "INDIRECT", "claim_ids": ["claim_o1_korea_capital_region_dc_demand"]}
+ ],
+ "ATTRIBUTION_LIMIT": [
+  "No source anywhere in this corpus -- IEA, LBNL/DOE, Ireland CSO, Carbon Brief/Oxford on China, or the Korea National Assembly secondary reporting -- provides a numeric AI-only (as opposed to general cloud/SaaS/crypto/colocation) TWh or percentage split of data-center electricity demand, in any geography.",
+  "Every AI-attribution coding in this corpus is PARTIAL or INDIRECT; none is DIRECT. This is a structural limit of the available evidence base, not a modeling choice that could be tightened by re-analysis of the same sources.",
+  "H2 (hyp_o0_h2_ai_energy_infra, 'data center growth matters but AI's independent contribution cannot currently be isolated') is itself SUPPORTED, i.e. the claim that isolation is currently impossible is the best-evidenced position in this corpus, not merely an assumed caveat."
+ ],
+ "STRUCTURAL_CO_DRIVERS": [
+  {"driver": "Manufacturing reshoring / onshoring", "status": "EVIDENCE_FOUND", "source": "Grid Strategies LLC reports", "claim_ids": ["claim_a11c5cb4c7c4c2d1"], "o1c_classification": "see energy_demand_alternatives_result.json MANUFACTURING_RESHORING entry"},
+  {"driver": "EV adoption / electrification", "status": "CONNECTED_THIS_ROUND", "claim_ids": ["claim_f5842e6162c8fefc"], "note": "migrated to canonical Claims in round 2 per task context; attributed jointly with data centers in the PJM interconnection-queue finding"},
+  {"driver": "Weather / climate peak-load effects", "status": "EVIDENCE_FOUND", "source": "EIA/Ember, ERCOT/Eastern Interconnection", "claim_ids": ["claim_d641fb1790c3ef53"], "note": "a PEAK-LOAD timescale finding, explicitly NOT merged with annual TWh/yr demand-growth trend claims"},
+  {"driver": "General cloud/SaaS growth independent of AI", "status": "EVIDENCE_FOUND (Jevons/rebound)", "claim_ids": ["claim_afe7cc7b19317ee0"]},
+  {"driver": "Population growth", "status": "COUNTEREVIDENCE_WEAKENED_THIS_EXPLANATION", "note": "O-0 counterevidence acquisition found evidence that actually weakens (does not support) population growth as a driver -- recorded honestly rather than dropped."}
+ ],
+ "INFRASTRUCTURE_BOTTLENECKS": [
+  {"region": "PJM (US)", "type": "GENERATION_AND_INTERCONNECTION_QUEUE", "detail": "~130 GW stuck in the interconnection queue -- a generation/interconnection-queue shortage, NOT a transmission/distribution bottleneck.", "claim_ids": ["claim_5787125ab5f0110b"]},
+  {"region": "Seoul capital region (Korea)", "type": "GRID_CONNECTION_AND_DISTRIBUTION", "detail": "Distribution/grid-connection constraint (KEPCO 9th T&D plan); explicitly a DIFFERENT kind of constraint from PJM's generation/interconnection-queue bottleneck -- the two must never be merged into one generic 'grid problem'.", "claim_ids": ["claim_o1_korea_capital_region_dc_demand"]},
+  {"note": "GridLab's PJM documentation concerns interconnection QUEUE DELAYS (new generation/load waiting to connect), not a shortage of existing generation capacity -- this distinction is load-bearing and must be preserved in any downstream report language."}
+ ],
+ "COUNTEREVIDENCE": [
+  {"hypothesis": "H5 (hyp_o0_h5_ai_energy_infra)", "statement": "The core problem may be interconnection/transmission bottlenecks rather than generation shortage", "final_status": "WEAKENED", "why": "Per canonical_status_diagnostics in hypotheses.json, H5's own resolved evidence does not sufficiently and independently support an interconnection/transmission-specific framing once quality-aware evaluation and the unresolved-evidence guard are applied; GridLab evidence documents queue delays but the broader corpus mixes queue-delay and generation-adequacy framings without a clean separation strong enough to leave H5 SUPPORTED.", "limit": "WEAKENED is not REJECTED -- the GridLab interconnection-queue finding remains real and well-evidenced for PJM specifically; the weakening reflects insufficient evidence to generalize H5's framing beyond PJM, not a finding that transmission bottlenecks do not exist."},
+  {"hypothesis": "H6 (hyp_o0_h6_ai_energy_infra)", "statement": "Efficiency/hardware improvements may offset part of AI workload growth", "final_status": "WEAKENED", "why": "The Jevons-paradox/rebound finding (Google total energy +3.7x 2016-2022 despite near-optimal PUE) is itself evidence AGAINST H6's offset hypothesis, not for it -- efficiency gains in this corpus's own evidence have not reduced total energy consumption.", "limit": "This undercuts any simple 'AI efficiency improvements will fix the demand problem' narrative, but is a single rebound-effect case study (Google, general cloud, not AI-isolated) and does not prove efficiency gains never offset any AI-specific workload growth anywhere."}
+ ],
+ "ALTERNATIVE_EXPLANATIONS": [
+  {"id": "MANUFACTURING_RESHORING", "role_vs_H1": "co-driver/alternative, not exclusivity disproof", "role_vs_H3": "corroborating", "status": "EVIDENCE_FOUND"},
+  {"id": "EV_ELECTRIFICATION", "status": "CONNECTED (claim_f5842e6162c8fefc)"},
+  {"id": "WEATHER_PEAK_LOAD", "status": "EVIDENCE_FOUND", "note": "peak-load timescale, kept separate from annual TWh/yr trend"},
+  {"id": "GENERAL_CLOUD_SAAS_GROWTH", "status": "EVIDENCE_FOUND (Jevons/rebound)"},
+  {"id": "POPULATION_GROWTH", "status": "COUNTEREVIDENCE_WEAKENED -- this alternative is itself undercut by the evidence, recorded honestly"},
+  {"id": "DC_GROWTH_WITHOUT_POWER_PROBLEMS_REGIONS", "status": "SEARCH_RUN_NO_CLEAR_EVIDENCE -- honest negative"},
+  {"id": "CLIMATE_POLICY_DECARBONIZATION_LOAD_SHIFT", "status": "see energy_demand_alternatives_result.json for full o1c_classification"},
+  {"id": "CRYPTO_MINING_LOAD", "status": "see energy_demand_alternatives_result.json for full o1c_classification"},
+  {"note": "Full detail, search keywords, corpus_search_result and o1c_classification for all 8 alternatives are preserved in intel/alternative_explanations/energy_demand_alternatives_result.json -- this section is a summary index, not a replacement for that file."}
+ ],
+ "UNKNOWN": [
+  "No source anywhere in this corpus provides a numeric AI-specific (vs. general cloud/crypto) TWh or percentage share of data-center electricity demand, in any geography (US, global, Ireland, EU, China, or Korea).",
+  "Korea's actual AI electricity consumption is unknown -- only CONTRACTED capacity concentration (91.8% in Seoul capital region) is known; contracted capacity is never to be read as actual consumption.",
+  "China's official/primary observed data-center electricity figure is unknown -- only two competing derivative estimates (IEA ~100 TWh, Goldman/Bloomberg ~200 TWh) exist, unresolved against each other.",
+  "EU-wide data-center electricity share is unknown -- only Ireland's country-level 22% figure (an outlier, data-center-dense economy) is observed; this must never be used as an EU-wide average.",
+  "Population growth and broader industrial-policy alternatives remain under-researched relative to manufacturing/reshoring and weather/peak-load, which have real connected evidence this round.",
+  "Geographic applicability: PJM evidence is never MATCHED for the US as a whole, and US evidence is never MATCHED/PARTIAL_MATCH for Korea or vice versa (see o1c_geographic_applicability_result.json anti_overgeneralization_rules) -- cross-region generalization from any single region's finding remains unsupported.",
+  "No real longitudinal BASELINE -> TRANSITION -> CURRENT evidence chain exists purpose-built for AI_ENERGY_INFRA; all evidence is point-in-time observation or forecast, never a tracked time series.",
+  "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP remains PARTIALLY_RESOLVED, not RESOLVED (see IO known_gaps v6): classify_status() itself is unmodified and a hypothesis status can still silently revert to its count-based value on a future evidence-array update unless the Evidence Evaluation Contract is re-applied."
+ ],
+ "seven_questions": {
+  "q1_data_center_demand_increasing": {
+   "question_ko": "데이터센터 전력수요는 실제 증가하고 있는가?",
+   "answer": "YES, observed (not merely forecast) in every geography with real data: global +~12%/yr since 2017 to ~415 TWh (2024); US 58->176 TWh, 2014->2023 (+4.4% of US electricity); Ireland 5%->22% of metered electricity, 2015->2024.",
+   "claim_ids": ["claim_1d9458f4e7e2cf69", "claim_o1_lbnl_us_dc_2023", "claim_3ab07077d739a9a4"],
+   "hypothesis_ids": ["hyp_b0a4bbbc9b601728"]
+  },
+  "q2_ai_significant_driver": {
+   "question_ko": "AI는 그 증가의 유의미한 동인인가?",
+   "answer": "PARTIALLY SUPPORTED. H1 (hyp_b0a4bbbc9b601728) is SUPPORTED on quality-aware re-evaluation -- IEA/LBNL name AI as a primary driver among several, with PRIMARY_RESEARCH-tier evidence. But H3 (multiple non-AI factors) is ALSO SUPPORTED in this corpus (COMPLEMENTARY relationship, per o1b_contradiction_resolution.json), so AI is A significant driver, not shown to be THE dominant one.",
+   "claim_ids": ["claim_1d9458f4e7e2cf69", "claim_o1_lbnl_us_dc_2023"],
+   "hypothesis_ids": ["hyp_b0a4bbbc9b601728", "hyp_o0_h3_ai_energy_infra"]
+  },
+  "q3_ai_contribution_quantitatively_isolated": {
+   "question_ko": "AI의 독립적인 전력소비 기여량을 현재 정량 분리할 수 있는가?",
+   "answer": "NO -- UNKNOWN/cannot-determine. H2 (hyp_o0_h2_ai_energy_infra, 'AI's independent contribution cannot currently be isolated') is SUPPORTED. No source in the 14-claim corpus gives a numeric AI-only split in any geography.",
+   "claim_ids": [],
+   "hypothesis_ids": ["hyp_o0_h2_ai_energy_infra"]
+  },
+  "q4_other_structural_drivers": {
+   "question_ko": "다른 구조적 동인은 무엇인가?",
+   "answer": "Manufacturing reshoring (EVIDENCE_FOUND, Grid Strategies LLC), EV/electrification (connected this round), weather/peak-load (EVIDENCE_FOUND, EIA/Ember, peak-load timescale only), and general cloud/SaaS growth independent of AI (Jevons/rebound finding). Population growth was investigated and WEAKENED rather than supported.",
+   "claim_ids": ["claim_a11c5cb4c7c4c2d1", "claim_f5842e6162c8fefc", "claim_d641fb1790c3ef53", "claim_afe7cc7b19317ee0"],
+   "hypothesis_ids": ["hyp_o0_h3_ai_energy_infra", "hyp_o0_h4_ai_energy_infra"]
+  },
+  "q5_bottlenecks_same_across_regions": {
+   "question_ko": "전력 인프라 병목은 지역마다 같은가?",
+   "answer": "NO. PJM (US) is a GENERATION_AND_INTERCONNECTION_QUEUE bottleneck (~130 GW queued, not a generation-adequacy or transmission-wire problem). Seoul capital region (Korea) is a GRID_CONNECTION_AND_DISTRIBUTION bottleneck (91.8% of contracted capacity concentrated there, KEPCO warns up to 50% of new demand may be unmeetable). These are explicitly different constraint types per the geographic applicability anti-overgeneralization rules; PJM findings are never applied to Korea or vice versa.",
+   "claim_ids": ["claim_5787125ab5f0110b", "claim_o1_korea_capital_region_dc_demand"],
+   "hypothesis_ids": ["hyp_o0_h5_ai_energy_infra"]
+  },
+  "q6_observation_vs_forecast": {
+   "question_ko": "무엇이 Observation이고 무엇이 Forecast인가?",
+   "answer": "OBSERVED: global 415 TWh (2024), US 176 TWh (2023), Ireland 22% (2024), PJM 130 GW queued, China 100-200 TWh (2024, derivative). FORECAST (never to be read as current): global 945 TWh (2030)/1200 TWh (2035) per IEA, US 325-580 TWh (2028) per LBNL, China 400-600 TWh (2030) per Carbon Brief/Oxford. H7 (hyp_o0_h7_ai_energy_infra, 'some discourse relies more on forecasts than observations') is SUPPORTED -- this OBSERVED/FORECAST conflation is itself a documented pattern in the discourse, which this synthesis and every downstream claim explicitly avoids repeating.",
+   "claim_ids": ["claim_1d9458f4e7e2cf69", "claim_d170f52f567053e9", "claim_o1_lbnl_us_dc_2023"],
+   "hypothesis_ids": ["hyp_o0_h7_ai_energy_infra"]
+  },
+  "q7_biggest_evidence_gap": {
+   "question_ko": "현재 가장 큰 Evidence Gap은 무엇인가?",
+   "answer": "The absence, anywhere in this corpus and in any geography, of a numeric AI-only (vs. general cloud/crypto/colocation) share of data-center electricity demand. Every attribution in this corpus is coded PARTIAL or INDIRECT, never DIRECT. Secondary gaps: Korea's capital-region claim rests on unverified secondary reporting of National Assembly material (not primary-source verified); China has two unresolved competing derivative estimates with no primary government figure; EU-wide data-center share is unknown beyond Ireland's non-representative outlier figure.",
+   "claim_ids": [],
+   "hypothesis_ids": ["hyp_o0_h2_ai_energy_infra"]
+  }
+ },
+ "generated_at": "2026-10-01T00:00:00+00:00",
+ "generation_note": "Authored by O-1C round-4 synthesis pass; cross-references hypotheses.json canonical_status_diagnostics, o1c_geographic_applicability_result.json, o1c_temporal_applicability_result.json, and energy_demand_alternatives_result.json rather than restating their full content."
+}
