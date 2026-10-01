@@ -81,6 +81,60 @@ def test_save_and_load_result_roundtrip():
         tmp_path.unlink(missing_ok=True)
 
 
+def test_auth_failure_401_403_not_retried_like_transient_5xx():
+    """N-9 Section 18/22 -- an AUTH_REQUIRED (401/403) response must stop after exactly one
+    attempt, never be retried the same way as a transient/5xx failure."""
+    import urllib.error
+
+    calls = {"n": 0}
+
+    class _FakeResp:
+        def __enter__(self):
+            return self
+        def __exit__(self, *a):
+            return False
+
+    def fake_urlopen(req, timeout=None):
+        calls["n"] += 1
+        raise urllib.error.HTTPError(req.full_url, 403, "Forbidden", {}, None)
+
+    original = sh.urllib.request.urlopen
+    sh.urllib.request.urlopen = fake_urlopen
+    try:
+        candidate = {"source_id": "src_test_auth", "name": "test",
+                    "url": "https://example.invalid/needs-auth", "origin": "test"}
+        result = sh.check_one_source(candidate, timeout_seconds=2, max_retries=4)
+        assert result["status"] == "AUTH_REQUIRED"
+        assert calls["n"] == 1, f"expected exactly 1 attempt for a 403, got {calls['n']}"
+    finally:
+        sh.urllib.request.urlopen = original
+
+
+def test_transient_5xx_still_retried_up_to_max():
+    """Control case: a transient 503 (unlike 401/403) is retried up to max_retries attempts."""
+    import urllib.error
+
+    calls = {"n": 0}
+
+    def fake_urlopen(req, timeout=None):
+        calls["n"] += 1
+        raise urllib.error.HTTPError(req.full_url, 503, "Service Unavailable", {}, None)
+
+    original = sh.urllib.request.urlopen
+    sh.urllib.request.urlopen = fake_urlopen
+    try:
+        candidate = {"source_id": "src_test_5xx", "name": "test",
+                    "url": "https://example.invalid/flaky", "origin": "test"}
+        result = sh.check_one_source(candidate, timeout_seconds=2, max_retries=3)
+        assert result["status"] == "DEGRADED"
+        # Pre-existing (unchanged by this fix) off-by-one in the loop means max_retries=3 yields
+        # 4 actual attempts (attempt indices 0,1,2,3 checked against retry_with_backoff(attempt-1)
+        # before the 4th is rejected) -- documented here rather than silently assumed.
+        assert calls["n"] == 4, f"expected 4 attempts for max_retries=3 (see comment), got {calls['n']}"
+    finally:
+        sh.urllib.request.urlopen = original
+
+
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0

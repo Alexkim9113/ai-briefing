@@ -7,7 +7,30 @@ sys.path.insert(0, str(PKG_DIR))
 import claim_model as m  # noqa: E402
 
 
+# N-9 Section 25 fix: CLAIMS_PATH/RELATIONS_PATH ARE the production canonical files (this module
+# never used a separate test fixture path). The old _cleanup() permanently deleted them, which
+# destroyed real corpus data every time this test file ran. We now snapshot their real content
+# once per process and restore it exactly, via main()'s try/finally, instead of leaving them gone.
+_REAL_BACKUP = {}
+
+
+def _snapshot_real_files_once():
+    for p in (m.CLAIMS_PATH, m.RELATIONS_PATH):
+        if p not in _REAL_BACKUP:
+            _REAL_BACKUP[p] = p.read_bytes() if p.exists() else None
+
+
+def _restore_real_files():
+    for p, content in _REAL_BACKUP.items():
+        if content is None:
+            if p.exists():
+                p.unlink()
+        else:
+            p.write_bytes(content)
+
+
 def _cleanup():
+    _snapshot_real_files_once()
     for p in (m.CLAIMS_PATH, m.RELATIONS_PATH):
         if p.exists():
             p.unlink()
@@ -59,13 +82,16 @@ def test_upsert_and_load_roundtrip():
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0
-    for t in tests:
-        try:
-            t()
-            print(f"PASS {t.__name__}")
-        except AssertionError as e:
-            failed += 1
-            print(f"FAIL {t.__name__}: {e}")
+    try:
+        for t in tests:
+            try:
+                t()
+                print(f"PASS {t.__name__}")
+            except AssertionError as e:
+                failed += 1
+                print(f"FAIL {t.__name__}: {e}")
+    finally:
+        _restore_real_files()
     print(f"\n{len(tests) - failed}/{len(tests)} passed")
     sys.exit(1 if failed else 0)
 

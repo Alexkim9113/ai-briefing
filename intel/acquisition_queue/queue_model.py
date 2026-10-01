@@ -42,9 +42,16 @@ class CircuitBreaker:
             self.opened_at = self._clock()
 
 
-def retry_with_backoff(attempt, base_seconds=1, max_retries=4):
+NON_RETRYABLE_HTTP_STATUS_CODES = (401, 403)  # auth/permission failures: retrying on the same
+# credentials cannot succeed, so these must never be retried the same way as a 5xx/transient error.
+
+
+def retry_with_backoff(attempt, base_seconds=1, max_retries=4, http_status_code=None):
     """Returns the backoff delay for `attempt` (0-indexed), or None once max_retries is exceeded
-    (the caller must stop -- this function never signals infinite retry)."""
+    or `http_status_code` is a non-retryable 4xx (401/403) (the caller must stop in either case --
+    this function never signals infinite retry, and never signals a retry for an auth failure)."""
+    if http_status_code in NON_RETRYABLE_HTTP_STATUS_CODES:
+        return None
     if attempt >= max_retries:
         return None
     return base_seconds * (2 ** attempt)

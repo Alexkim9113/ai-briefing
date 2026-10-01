@@ -7,7 +7,29 @@ sys.path.insert(0, str(PKG_DIR))
 import intelligence_object as m  # noqa: E402
 
 
+# N-9 Section 25 fix: OBJECTS_PATH is the production canonical file. The old _cleanup()
+# permanently deleted it. We now snapshot+restore instead (see claim_model's test for the
+# identical fix and rationale).
+_REAL_BACKUP = {}
+
+
+def _snapshot_real_files_once():
+    if m.OBJECTS_PATH not in _REAL_BACKUP:
+        p = m.OBJECTS_PATH
+        _REAL_BACKUP[p] = p.read_bytes() if p.exists() else None
+
+
+def _restore_real_files():
+    for p, content in _REAL_BACKUP.items():
+        if content is None:
+            if p.exists():
+                p.unlink()
+        else:
+            p.write_bytes(content)
+
+
 def _cleanup():
+    _snapshot_real_files_once()
     if m.OBJECTS_PATH.exists():
         m.OBJECTS_PATH.unlink()
 
@@ -48,13 +70,16 @@ def test_impact_event_types_are_named_vocabulary():
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0
-    for t in tests:
-        try:
-            t()
-            print(f"PASS {t.__name__}")
-        except AssertionError as e:
-            failed += 1
-            print(f"FAIL {t.__name__}: {e}")
+    try:
+        for t in tests:
+            try:
+                t()
+                print(f"PASS {t.__name__}")
+            except AssertionError as e:
+                failed += 1
+                print(f"FAIL {t.__name__}: {e}")
+    finally:
+        _restore_real_files()
     print(f"\n{len(tests) - failed}/{len(tests)} passed")
     sys.exit(1 if failed else 0)
 

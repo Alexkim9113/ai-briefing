@@ -99,8 +99,16 @@ def check_one_source(candidate, timeout_seconds=8, max_retries=2, clock=time.tim
         except Exception as e:  # noqa: BLE001 -- a failed health check must never raise
             last_error = e
             breaker.record_failure()
-            delay = qm.retry_with_backoff(attempt, base_seconds=1, max_retries=max_retries)
             attempt += 1
+            # N-9 Section 18/22 fix: a 4xx auth/permission failure (401/403) is not transient --
+            # retrying it on the same credentials cannot succeed, so it must not be retried the
+            # same way as a 5xx/transient network failure. Classify first and stop immediately.
+            is_auth_failure = (
+                isinstance(e, urllib.error.HTTPError) and e.code in (401, 403)
+            )
+            if is_auth_failure:
+                break
+            delay = qm.retry_with_backoff(attempt - 1, base_seconds=1, max_retries=max_retries)
             if delay is None:
                 break
 
