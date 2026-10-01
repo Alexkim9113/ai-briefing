@@ -629,3 +629,54 @@ jobs:
             git push && break
             git fetch origin main && git rebase -X theirs origin/main
           done
+
+  # PHASE N-7 Section 8-13 -- Live Acquisition Execution Environment Shift. The sandbox this repo
+  # is developed in has org-policy egress blocks (confirmed repeatedly: World Bank/EIA/Crossref/
+  # Federal Register/ILO/RISS all return proxy "Tunnel connection failed: 403 Forbidden"), so real
+  # HTTP acquisition for Source Health + Policy Research + Counterevidence + Longitudinal Evidence
+  # happens here, in the real GitHub Actions network, instead of being repeated against the sandbox.
+  # Reuses the EXISTING modules as-is (source_health_model.py, policy_research_acquisition.py,
+  # counterevidence_live_acquisition.py, longitudinal_evidence_acquisition.py) -- no new
+  # acquisition logic, no new Rights/Claim/Hypothesis system. Each run commits only its own result
+  # JSON to main (never documents.json/claims/hypotheses here -- those stay gated behind the
+  # existing Admission jobs above, which already run for real). Fail-soft per script
+  # (continue-on-error) so one blocked/slow source never fails the whole job.
+  n7_live_acquisition:
+    needs: [build]
+    if: always()
+    runs-on: ubuntu-latest
+    concurrency:
+      group: n7-live-acquisition
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Source Health 실사 점검 (GitHub Actions 실네트워크, environment=GITHUB_ACTIONS 태깅)
+        continue-on-error: true
+        run: python3 intel/source_health/source_health_model.py
+      - name: Policy Research 실사 수집 시도 (등록된 소스만, URL 추측 금지)
+        continue-on-error: true
+        run: python3 intel/evidence_network/policy_research_acquisition.py
+      - name: Counterevidence 실사 수집 시도 (H1 대안 설명 7종)
+        continue-on-error: true
+        run: python3 intel/evidence_network/counterevidence_live_acquisition.py
+      - name: Longitudinal Evidence 실사 수집 시도 (BASELINE→TRANSITION→CURRENT)
+        continue-on-error: true
+        run: python3 intel/evidence_network/longitudinal_evidence_acquisition.py
+      - name: 결과 저장 (각 모듈의 산출물 JSON만, Admission/Claim/Hypothesis 파일은 건드리지 않음)
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel/source_health/source_health_result.github_actions.json \
+                  intel/evidence_network/policy_research_acquisition_result.json \
+                  intel/evidence_network/counterevidence_live_acquisition_result.json \
+                  intel/evidence_network/longitudinal_evidence_acquisition_result.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "N7: GitHub Actions 실네트워크 Live Acquisition 결과 $(TZ=Asia/Seoul date +%F' '%H:%M)"
+          for i in 1 2 3 4 5 6 7 8; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done

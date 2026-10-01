@@ -1,71 +1,90 @@
 {
- "checked_at": "2026-10-01T06:59:37.127437+00:00",
+ "checked_at": "2026-10-01T07:24:33.992049+00:00",
+ "environment": "SANDBOX",
  "results": [
   {
    "source_id": "src_worldbank_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:33.874206+00:00",
+   "last_checked": "2026-10-01T07:24:29.792587+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "intel/statistical_evidence/scripts/world_bank_fetch.py"
+   "provenance_of_check": "intel/statistical_evidence/scripts/world_bank_fetch.py",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   },
   {
    "source_id": "src_eia_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:34.481169+00:00",
+   "last_checked": "2026-10-01T07:24:30.590530+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "intel/statistical_context/energy_indicators.py"
+   "provenance_of_check": "intel/statistical_context/energy_indicators.py",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   },
   {
    "source_id": "src_crossref_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:35.172346+00:00",
+   "last_checked": "2026-10-01T07:24:31.363548+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "intel/historical_evidence/fetch_real_historical_analogy_evidence.py"
+   "provenance_of_check": "intel/historical_evidence/fetch_real_historical_analogy_evidence.py",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   },
   {
    "source_id": "src_federal_register_api",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:35.818547+00:00",
+   "last_checked": "2026-10-01T07:24:32.067728+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "intel/historical_acquisition/fetch_federal_register.py"
+   "provenance_of_check": "intel/historical_acquisition/fetch_federal_register.py",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   },
   {
    "source_id": "src_ilo",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:36.470804+00:00",
+   "last_checked": "2026-10-01T07:24:32.781958+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "N-5 spec Section 58 candidate list"
+   "provenance_of_check": "N-5 spec Section 58 candidate list",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   },
   {
    "source_id": "src_riss",
    "status": "BLOCKED",
-   "last_checked": "2026-10-01T06:59:37.127398+00:00",
+   "last_checked": "2026-10-01T07:24:33.992011+00:00",
    "last_http_status": "UNKNOWN",
    "last_success": false,
    "failure_count": 3,
    "is_stale": false,
    "known_limitation": "3 attempt(s) failed: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "provenance_of_check": "N-5 spec Section 58 candidate list"
+   "provenance_of_check": "N-5 spec Section 58 candidate list",
+   "environment": "SANDBOX",
+   "environment_status": "EGRESS_BLOCKED",
+   "source_status": "UNKNOWN"
   }
  ]
 }
