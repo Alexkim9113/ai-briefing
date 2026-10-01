@@ -63,10 +63,34 @@ def build_intelligence_index_entry(report_path):
     }
 
 
+def latest_report_paths():
+    """O-1D fix -- discover_real_reports() returns every version file ever produced for every
+    intelligence_id (append-only, by design). The Public Intelligence Index must show the
+    CURRENT state of each intelligence object, not one duplicate row per historical version, so
+    this groups by intelligence_id (the report filename prefix before '_v{N}.json') and keeps
+    only the highest version per topic. Older version files are untouched on disk and their
+    detail pages are still generated (see build_public_intelligence_pages) -- this function only
+    narrows what appears as the PRIMARY/listed entry on the index."""
+    by_intel_id = {}
+    for p in discover_real_reports():
+        # filename is report_{intelligence_id}_v{N}.json
+        stem = p.stem  # report_{intelligence_id}_v{N}
+        prefix, _, vpart = stem.rpartition("_v")
+        try:
+            version = int(vpart)
+        except ValueError:
+            version = -1
+        best = by_intel_id.get(prefix)
+        if best is None or version > best[0]:
+            by_intel_id[prefix] = (version, p)
+    return sorted(path for _, path in by_intel_id.values())
+
+
 def build_report_index():
     """Section 20 -- minimal Report Search/Index. No full-body duplication: just the fields a
-    list/search view needs."""
-    return [build_intelligence_index_entry(p) for p in discover_real_reports()]
+    list/search view needs. Lists only the latest version per intelligence_id (see
+    latest_report_paths) so the Public Index shows one current row per topic."""
+    return [build_intelligence_index_entry(p) for p in latest_report_paths()]
 
 
 def search_report_index(index, query=None, readiness=None):
@@ -112,7 +136,11 @@ def build_public_intelligence_pages(site_dir):
     try:
         intel_dir.mkdir(parents=True, exist_ok=True)
         index = build_report_index()
-        for report_path, entry in zip(discover_real_reports(), index):
+        # Detail pages are written for EVERY version on disk (historical pages stay reachable by
+        # direct link/old bookmarks, per the brief's "old v1 links can stay as historical"), while
+        # `index` (above) lists only the latest version per topic -- see latest_report_paths().
+        all_entries = [build_intelligence_index_entry(p) for p in discover_real_reports()]
+        for report_path, entry in zip(discover_real_reports(), all_entries):
             try:
                 html_doc, pdf_exists = render_public_page_for_report(report_path, documents_by_id)
                 page_dir = intel_dir / entry["report_id"]

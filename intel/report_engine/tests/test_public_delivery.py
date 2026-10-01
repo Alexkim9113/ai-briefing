@@ -46,7 +46,9 @@ def test_build_public_intelligence_pages_writes_real_artifacts_without_errors():
     try:
         status = pd.build_public_intelligence_pages(tmp)
         assert status["errors"] == []
-        assert len(status["pages_written"]) == 2
+        # O-1D: a detail page is written for EVERY version on disk for each intelligence_id
+        # (historical pages stay reachable), not just the latest -- see latest_report_paths().
+        assert len(status["pages_written"]) == len(pd.discover_real_reports())
         assert (tmp / "intelligence" / "index.html").exists()
         for report_id in status["pages_written"]:
             page_html = (tmp / "intelligence" / report_id / "index.html").read_text(encoding="utf-8")
@@ -67,6 +69,31 @@ def test_build_public_intelligence_pages_never_raises_on_bad_site_dir():
         assert status["errors"] != []  # failure recorded, not raised
     finally:
         tmp_file.unlink(missing_ok=True)
+
+
+def test_report_index_lists_only_latest_version_per_intelligence_id():
+    # O-1D fix: public_delivery previously listed every version file as its own Public Index
+    # row (discover_real_reports() is append-only across all versions). With v2/v3/v4 now on
+    # disk for AI_ENERGY_INFRA, the index must show that topic exactly once, at its highest
+    # version, while still leaving the older version files and their detail pages untouched.
+    index = pd.build_report_index()
+    energy_rows = [e for e in index if e["intelligence_id"] == "intel_87210a61730c22b9"]
+    assert len(energy_rows) == 1
+    assert energy_rows[0]["version"] == 4
+    assert energy_rows[0]["report_id"] == "report_intel_87210a61730c22b9_v4"
+    labor_rows = [e for e in index if e["intelligence_id"] == "intel_dbab7b01963396b5"]
+    assert len(labor_rows) == 1
+    assert labor_rows[0]["version"] == 1
+
+
+def test_latest_report_paths_picks_highest_version_per_prefix():
+    paths = pd.latest_report_paths()
+    names = {p.name for p in paths}
+    assert "report_intel_87210a61730c22b9_v4.json" in names
+    assert "report_intel_87210a61730c22b9_v1.json" not in names
+    assert "report_intel_87210a61730c22b9_v2.json" not in names
+    assert "report_intel_87210a61730c22b9_v3.json" not in names
+    assert "report_intel_dbab7b01963396b5_v1.json" in names
 
 
 def main():
