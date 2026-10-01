@@ -5135,6 +5135,58 @@
   },
   {
    "change_ids": [],
+   "claim_id": "a6575ff74981de4c:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6575ff74981de4c",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6575ff74981de4c:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6575ff74981de4c",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6575ff74981de4c:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6575ff74981de4c",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6575ff74981de4c:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6575ff74981de4c",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "a681b1f3f24363d6:c1",
    "claim_status": "SECONDARY_ONLY",
    "document_id": "a681b1f3f24363d6",
@@ -7647,58 +7699,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "a6575ff74981de4c:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "a6575ff74981de4c",
-   "event_ids": [
-    "evtprod_5dac0a21aadd247f"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "a6575ff74981de4c:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "a6575ff74981de4c",
-   "event_ids": [
-    "evtprod_5dac0a21aadd247f"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "a6575ff74981de4c:g3",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "a6575ff74981de4c",
-   "event_ids": [
-    "evtprod_5dac0a21aadd247f"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "a6575ff74981de4c:g4",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "a6575ff74981de4c",
-   "event_ids": [
-    "evtprod_5dac0a21aadd247f"
-   ],
-   "evidence_record_ids": [],
-   "source_url": "https://www.khan.co.kr/article/202609291103001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
