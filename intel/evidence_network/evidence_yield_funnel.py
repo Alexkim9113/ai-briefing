@@ -148,9 +148,16 @@ def build_n8_live_acquisition_funnel():
     log and canonical corpus/report state show downstream. A stage with no real log backing
     it is recorded as the string "UNINSTRUMENTED", never a silent 0, per the standing rule
     distinguishing 0 (measured, zero observed) from UNINSTRUMENTED (not measured at all)."""
+    import sys as _sys
+    _sys.path.insert(0, str(INTEL_DIR / "evidence_network"))
+    import live_result_guard as _lrg  # noqa: E402
+
     def _load(name):
+        # N-9 Section 14 -- deterministic selection: a real GITHUB_ACTIONS result always takes
+        # precedence over a same-named sandbox/base file for this funnel's purposes (the funnel
+        # is reporting on the live acquisition job, not on incidental local test runs).
         p = INTEL_DIR / "evidence_network" / name
-        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+        return _lrg.load_with_precedence(p)["primary"]
 
     policy = _load("policy_research_acquisition_result.json")
     counterev = _load("counterevidence_live_acquisition_result.json")

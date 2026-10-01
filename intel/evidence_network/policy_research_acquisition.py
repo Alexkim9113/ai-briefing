@@ -15,6 +15,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "intel" / "source_health"))
 import source_health_model as shm  # noqa: E402
+import live_result_guard as lrg  # noqa: E402
 
 RESULT_PATH = HERE / "policy_research_acquisition_result.json"
 
@@ -65,9 +66,14 @@ def attempt_policy_research_acquisition(targets=POLICY_RESEARCH_TARGETS):
     return results
 
 
-def save_result(results):
+def save_result(results, environment=None):
+    """N-9 Section 9-11: tags the result with its real execution environment and routes
+    GITHUB_ACTIONS results to their own canonical path so a sandbox/test run of this same
+    function can never again silently clobber a real live result (the exact N-8 incident)."""
+    env = lrg.detect_environment(environment)
     payload = {
         "run_at": shm._now(),
+        "environment": env,
         "note": ("N-6 Priority 4 -- live policy research acquisition attempt. No evidence item is "
                  "admitted into any Intelligence Object/Claim from this run unless "
                  "acquisition_outcome == SEARCH_RUN_NO_EVIDENCE or better; ACCESS_BLOCKED/"
@@ -75,8 +81,8 @@ def save_result(results):
                  "graph."),
         "results": results,
     }
-    RESULT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    return RESULT_PATH
+    target = lrg.select_output_path(RESULT_PATH, env)
+    return lrg.guarded_write(target, payload, env)
 
 
 if __name__ == "__main__":

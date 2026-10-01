@@ -15,6 +15,8 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "intel" / "source_health"))
 import source_health_model as shm  # noqa: E402
 
+import live_result_guard as lrg  # noqa: E402
+
 RESULT_PATH = HERE / "counterevidence_live_acquisition_result.json"
 
 _CANDIDATES_BY_ID = {c["source_id"]: c for c in shm.TIER1_CANDIDATES}
@@ -54,9 +56,14 @@ def attempt_counterevidence_acquisition(targets=COUNTEREVIDENCE_TARGETS):
     return results
 
 
-def save_result(results):
+def save_result(results, environment=None):
+    """N-9 Section 9-11: see policy_research_acquisition.save_result for the rationale -- same
+    environment-tagging + canonical-path routing so a sandbox/test run can never clobber the real
+    GITHUB_ACTIONS result."""
+    env = lrg.detect_environment(environment)
     payload = {
         "run_at": shm._now(),
+        "environment": env,
         "note": ("N-6 Priority 5 -- live counterevidence acquisition attempt. No counterevidence "
                  "item is admitted into any Intelligence Object/Claim from this run unless "
                  "acquisition_outcome == SEARCH_RUN_NO_EVIDENCE or better; ACCESS_BLOCKED/"
@@ -64,8 +71,8 @@ def save_result(results):
                  "graph (and never render as 'no counterevidence exists')."),
         "results": results,
     }
-    RESULT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    return RESULT_PATH
+    target = lrg.select_output_path(RESULT_PATH, env)
+    return lrg.guarded_write(target, payload, env)
 
 
 if __name__ == "__main__":

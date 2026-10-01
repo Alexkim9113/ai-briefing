@@ -17,6 +17,8 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "intel" / "source_health"))
 import source_health_model as shm  # noqa: E402
 
+import live_result_guard as lrg  # noqa: E402
+
 RESULT_PATH = HERE / "longitudinal_evidence_acquisition_result.json"
 
 # BASELINE/TRANSITION/CURRENT windows for the same already-registered World Bank indicator this
@@ -63,10 +65,15 @@ def attempt_longitudinal_acquisition(targets=LONGITUDINAL_TARGETS):
     return results
 
 
-def save_result(results):
+def save_result(results, environment=None):
+    """N-9 Section 9-11: see policy_research_acquisition.save_result for the rationale -- same
+    environment-tagging + canonical-path routing so a sandbox/test run can never clobber the real
+    GITHUB_ACTIONS result."""
+    env = lrg.detect_environment(environment)
     all_blocked = all(r["acquisition_outcome"] != "SEARCH_RUN_NO_EVIDENCE" for r in results)
     payload = {
         "run_at": shm._now(),
+        "environment": env,
         "note": ("N-6 Priority 6 -- live longitudinal (BASELINE/TRANSITION/CURRENT) acquisition "
                  "attempt. No BASELINE->TRANSITION->CURRENT structure is constructed from this "
                  "run's results, and no existing single statistic is promoted into a 'transition' "
@@ -77,8 +84,8 @@ def save_result(results):
         "longitudinal_structure_constructed": False,  # never flipped true by this run alone
         "results": results,
     }
-    RESULT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    return RESULT_PATH
+    target = lrg.select_output_path(RESULT_PATH, env)
+    return lrg.guarded_write(target, payload, env)
 
 
 if __name__ == "__main__":

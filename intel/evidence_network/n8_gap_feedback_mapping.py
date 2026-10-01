@@ -29,9 +29,15 @@ _OUTCOME_TO_GAP_TYPE = {
 
 
 def build_mapping():
+    import sys as _sys
+    _sys.path.insert(0, str(HERE))
+    import live_result_guard as _lrg  # noqa: E402
+
     def _load(name):
+        # N-9 Section 14 -- same deterministic GITHUB_ACTIONS-takes-precedence selection rule
+        # as evidence_yield_funnel.build_n8_live_acquisition_funnel().
         p = HERE / name
-        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+        return _lrg.load_with_precedence(p)["primary"]
 
     policy = _load("policy_research_acquisition_result.json")
     counterev = _load("counterevidence_live_acquisition_result.json")
