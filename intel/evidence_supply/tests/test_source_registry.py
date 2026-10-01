@@ -1,3 +1,4 @@
+import atexit
 import json
 import sys
 from pathlib import Path
@@ -6,6 +7,23 @@ HERE = Path(__file__).resolve().parent
 PKG_DIR = HERE.parent
 sys.path.insert(0, str(PKG_DIR))
 import source_registry as sr  # noqa: E402
+
+# N-9B Deliverable 0 fix: this test repeatedly deletes the real
+# REGISTRY_PATH with no restore. If a real registry ever exists at
+# that canonical path, a full-suite run would permanently destroy it.
+# We snapshot its real bytes once (if present) and restore them on
+# interpreter exit, the same pattern used in claims/hypothesis tests.
+_REAL_REGISTRY_BACKUP = sr.REGISTRY_PATH.read_bytes() if sr.REGISTRY_PATH.exists() else None
+
+
+def _restore_real_registry():
+    if _REAL_REGISTRY_BACKUP is not None:
+        sr.REGISTRY_PATH.write_bytes(_REAL_REGISTRY_BACKUP)
+    elif sr.REGISTRY_PATH.exists():
+        sr.REGISTRY_PATH.unlink()
+
+
+atexit.register(_restore_real_registry)
 
 
 def _reset():

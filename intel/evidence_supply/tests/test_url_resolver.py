@@ -1,3 +1,4 @@
+import atexit
 import json
 import sys
 from pathlib import Path
@@ -6,6 +7,23 @@ HERE = Path(__file__).resolve().parent
 PKG_DIR = HERE.parent
 sys.path.insert(0, str(PKG_DIR))
 import url_resolver as ur  # noqa: E402
+
+# N-9B Deliverable 0 fix: this test repeatedly deletes the real
+# REDIRECT_CACHE_PATH with no restore. If a real cache ever exists at
+# that canonical path, a full-suite run would permanently destroy it.
+# We snapshot its real bytes once (if present) and restore them on
+# interpreter exit, the same pattern used in claims/hypothesis tests.
+_REAL_CACHE_BACKUP = ur.REDIRECT_CACHE_PATH.read_bytes() if ur.REDIRECT_CACHE_PATH.exists() else None
+
+
+def _restore_real_cache():
+    if _REAL_CACHE_BACKUP is not None:
+        ur.REDIRECT_CACHE_PATH.write_bytes(_REAL_CACHE_BACKUP)
+    elif ur.REDIRECT_CACHE_PATH.exists():
+        ur.REDIRECT_CACHE_PATH.unlink()
+
+
+atexit.register(_restore_real_cache)
 
 
 def _clear_cache():

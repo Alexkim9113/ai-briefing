@@ -1,0 +1,22 @@
+{
+ "head_sha": "c004619",
+ "canonical_file_hashes_sha256_16": {
+  "intel/claims/claims.json": "e21d90573c0f67cc",
+  "intel/claims/evidence_claim_relations.json": "f5a4535ea13067ef",
+  "intel/hypothesis/hypotheses.json": "874dc1c8ae9aa3cb",
+  "intel/intelligence_objects/intelligence_objects.json": "9fd98a3894075d9c",
+  "intel/statistical_evidence/statistical_evidence.json": "a8a157b932829b92"
+ },
+ "n9_regression_checks": {
+  "test_fixture_interpretive_contract": "72/72 passed",
+  "test_live_result_guard": "13/13 passed",
+  "test_source_health_model": "10/10 passed",
+  "snapshot_restore_pattern_intact": [
+   "intel/claims/tests/test_claim_model.py",
+   "intel/hypothesis/tests/test_hypothesis_model.py",
+   "intel/intelligence_objects/tests/test_intelligence_object.py",
+   "intel/statistical_evidence/tests/test_statistical_evidence.py"
+  ],
+  "status": "READY_NOT_REGRESSED"
+ }
+}

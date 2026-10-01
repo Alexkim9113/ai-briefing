@@ -1,0 +1,64 @@
+{
+ "method": "grep -rlnE 'os\\.remove|os\\.unlink|shutil\\.rmtree|open\\([^)]*, *[\\x27\\\"]w[\\x27\\\"]\\)' intel --include=test_*.py, then manually read each match's surrounding context",
+ "total_test_files_in_repo": 127,
+ "files_matching_write_or_delete_pattern": 15,
+ "classification": {
+  "intel/signal_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+  "intel/temporal_depth/tests/test_corpus_balance_audit_m5e4.py": "READ_ONLY",
+  "intel/topic_classification/tests/test_domain_classifier.py": "READ_ONLY",
+  "intel/structural_change_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+  "intel/evidence_pipeline/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+  "intel/structural_analysis_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+  "intel/operator_workspace/tests/test_operator_ui.py": "SAFE_TEMP_FIXTURE",
+  "intel/corpus_quality/tests/test_corpus_quality_audit.py": "READ_ONLY",
+  "intel/knowledge_memory/tests/test_m6_atomizer.py": "SAFE_TEMP_FIXTURE",
+  "intel/geographic_evidence/tests/test_event_geography_separation.py": "READ_ONLY",
+  "intel/evidence_admission/tests/test_admission_idempotency.py": "SAFE_TEMP_FIXTURE",
+  "intel/report_engine/tests/test_responsive_validation.py": "SAFE_TEMP_FIXTURE",
+  "intel/report_engine/tests/test_public_delivery.py": "SAFE_TEMP_FIXTURE",
+  "intel/pattern_layer/tests/test_source_independence_gate.py": "SAFE_TEMP_FIXTURE",
+  "intel/pattern_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE"
+ },
+ "classification_notes": {
+  "SAFE_TEMP_FIXTURE": "Uses tempfile.mkdtemp()/tmp_path for all write/open('w') targets; shutil.rmtree only ever targets that same temp dir, never a package-root canonical *.json path.",
+  "READ_ONLY": "The matched open(...,'w') string appears only inside a string literal / grep-style source-text assertion (e.g. asserting the string 'open(DOCUMENTS_PATH, \"w\")' does NOT appear in production source) — the test itself performs no write."
+ },
+ "previously_fixed_files_reverified_intact": {
+  "intel/claims/tests/test_claim_model.py": "BACKUP_AND_RESTORE - snapshot/restore pattern present, confirmed via grep",
+  "intel/hypothesis/tests/test_hypothesis_model.py": "BACKUP_AND_RESTORE - snapshot/restore pattern present, confirmed via grep",
+  "intel/intelligence_objects/tests/test_intelligence_object.py": "BACKUP_AND_RESTORE - snapshot/restore pattern present, confirmed via grep",
+  "intel/statistical_evidence/tests/test_statistical_evidence.py": "BACKUP_AND_RESTORE - snapshot/restore pattern present, confirmed via grep"
+ },
+ "second_pass_search": {
+  "method": "grep -rlnE '\\.unlink\\(\\)|write_text\\(' intel --include=test_*.py (closes the first pass's own caveat about .unlink()/write_text patterns not caught by the first regex)",
+  "files_found": 23,
+  "additional_classification": {
+   "intel/operator_brain/tests/test_reports_on_expansion.py": "SAFE_TEMP_FIXTURE",
+   "intel/futures_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+   "intel/historical_evidence/tests/test_fetch_real_historical_analogy_evidence.py": "SAFE_TEMP_FIXTURE (writes to a tmp log path)",
+   "intel/counterevidence/tests/test_fetch_real_counterevidence.py": "SAFE_TEMP_FIXTURE (writes to a tmp log path)",
+   "intel/event_production/tests/test_rotation_regression.py": "SAFE_TEMP_FIXTURE",
+   "intel/knowledge_memory/tests/test_productionization.py": "SAFE_TEMP_FIXTURE",
+   "intel/change_layer/tests/test_rotation_regression.py": "SAFE_TEMP_FIXTURE",
+   "intel/epistemic_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+   "intel/report_engine/tests/test_atomic_publish.py": "SAFE_TEMP_FIXTURE (unlink only within its own tempfile.TemporaryDirectory)",
+   "intel/policy_research_layer/tests/test_fixture.py": "SAFE_TEMP_FIXTURE",
+   "intel/evidence_supply/tests/test_url_resolver.py": "UNSAFE_CANONICAL_MUTATION -> FIXED",
+   "intel/evidence_supply/tests/test_source_registry.py": "UNSAFE_CANONICAL_MUTATION -> FIXED"
+  },
+  "unsafe_found_detail": {
+   "intel/evidence_supply/tests/test_url_resolver.py": "Helper _clear_cache() called `ur.REDIRECT_CACHE_PATH.unlink()` directly on the module's real canonical path (intel/evidence_supply/redirect_cache.json) throughout the test, with no snapshot/restore. Risk was lower than the N-9 claims/hypothesis incidents because this file is untracked by git and not currently present on disk (auto-reseeded on next real run), but the destructive pattern is the same class of bug.",
+   "intel/evidence_supply/tests/test_source_registry.py": "Helper _reset() called `sr.REGISTRY_PATH.unlink()` directly on the module's real canonical path (intel/evidence_supply/source_registry.json) throughout the test, with no snapshot/restore. Same risk profile as above (untracked, currently absent, but same destructive pattern)."
+  },
+  "fix_applied": "OLD TEST INTENT: give each test a clean-slate cache/registry before exercising cache/registry behavior. OLD IMPLEMENTATION: unconditional path.unlink() with no backup. WHY STALE/UNSAFE: if a real redirect_cache.json or source_registry.json is ever produced by a live run and committed/present, a routine test-suite run would permanently delete it, exactly like the N-9 claims.json/hypotheses.json incident. NEW CONTRACT: snapshot the real file's bytes once at module import (None if absent), register an atexit restore that writes the real bytes back (or removes the file again if none existed), while leaving all existing in-test unlink()/reset() calls free to clear the cache mid-test for isolation. WHY THIS PRESERVES INTENT: each test still gets a clean slate during its run (unlink() calls are untouched), but the real file's prior state (or absence) is guaranteed restored when the process exits, so no test run can net-destroy real production data.",
+  "verification": "python3 intel/evidence_supply/tests/test_url_resolver.py and test_source_registry.py both exit 0 after the fix; neither canonical path exists afterward (consistent with their pre-test absent state)."
+ },
+ "unsafe_canonical_mutation_count_found": 2,
+ "unsafe_canonical_mutation_count_remaining_after_fix": 0,
+ "fixes_applied_this_phase": [
+  "intel/evidence_supply/tests/test_url_resolver.py",
+  "intel/evidence_supply/tests/test_source_registry.py"
+ ],
+ "result": "2_UNSAFE_CANONICAL_MUTATION_FILES_FOUND_AND_FIXED_0_REMAINING",
+ "caveat": "Two grep passes were run (os.remove/unlink/rmtree/open(w) and separately .unlink()/write_text()) across all 127 test_*.py files, covering the destructive-write surface described in the project history. This is not a byte-for-byte guarantee against every conceivable write pattern (e.g. a canonical path built dynamically via string concatenation that evades grep, or json.dump() to a variable-mode file handle) — a fully static analysis (AST-based) was out of scope for this phase's time-box."
+}
