@@ -2458,5 +2458,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-01T10:01:12.259381+00:00"
+ },
+ "f4a64203917f9f4598b17425a63f773f4167957a8db6e02251d315bc6b2ae30e": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003811551",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:09.357888+00:00"
+ },
+ "39e0de63472c5dc68a3d341ab74efff8723e40a2b16e5012b761e643bcff8241": {
+  "url": "https://www.mk.co.kr/news/world/12166547",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:09.750969+00:00"
+ },
+ "04ecae27e61c67e0dd3a2706cbbc37fa0f14dccd13078b530320af32fc42c337": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3711065",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:11.760224+00:00"
+ },
+ "86b18119db6c9c25db96aefb69b97a1ab3498fddae0155a3f2f1d470137e74a7": {
+  "url": "https://www.hankyung.com/article/202610018799i",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:12.648040+00:00"
+ },
+ "3b8d707867de50f4574c594599a660249928b5a53b0e661bb181a8159a42ce4f": {
+  "url": "https://www.khan.co.kr/article/202610012057035/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:14.541052+00:00"
+ },
+ "1d2d07f17cf3fb11b53c4850096d1e0f189351ee00b7eaae214b23fd82db2866": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003811528",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:15.303985+00:00"
+ },
+ "5971c83dd47260b375e831fb5e17c4b9a7c4f6c4fecfe948822bdaef8ee00cdd": {
+  "url": "https://www.yna.co.kr/view/AKR20261001145452002",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:17.515045+00:00"
+ },
+ "c9cef142293e493fc5edb4c156a3304f4d13dfedfade889bc4410a1d1893d5d5": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226865",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:19.444245+00:00"
+ },
+ "69ab29c3ea6183704cfad943d013c2c37090ae8d734953ef93dedefe9594f0f9": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226864",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:21.159967+00:00"
+ },
+ "1383827f31d8459b34a8b84f8fc9237d7d79d677834481c07b937caf711d6b1b": {
+  "url": "https://www.aitimes.kr/news/articleView.html?idxno=42157",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T13:52:22.471511+00:00"
  }
 }
