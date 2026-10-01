@@ -1968,5 +1968,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-01T00:06:24.875383+00:00"
+ },
+ "4ca26a9245355285243c6eb076b83e17930dda73cbbae9a71dbdc3fa18aac5d9": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003810082",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:49.091931+00:00"
+ },
+ "a10ada5f8c7d3ec725647a171ddee2d979853807941603702b163bbe6b0c2b46": {
+  "url": "https://www.mk.co.kr/news/business/12165651",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:49.329943+00:00"
+ },
+ "7f33d109922efb8caf571ddaba4c93557cf4c163478bbd78fb603c29f7ab955d": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003810094",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:49.981837+00:00"
+ },
+ "cfa3277f4d4b101ea973a7f2da22a9337d1d402d8216c06b82bcd37a3bd23644": {
+  "url": "https://www.mk.co.kr/news/stock/12165648",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:53.442760+00:00"
+ },
+ "ec6a32eac3f08e2dd6ec3090e88b66dea540a6d6136fc09b1e204c064c676019": {
+  "url": "https://www.yna.co.kr/view/AKR20261001039900003",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:54.873182+00:00"
+ },
+ "816c5be2e7210ca7855a0474c39aa4aecd88068e06fcc412d1084ee7641d4e39": {
+  "url": "https://www.edaily.co.kr/News/Read?newsId=02952006645608656",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:31:58.982093+00:00"
+ },
+ "445b38499d5392b33ca3a61153007e258a82bd2a608e6c1484093efbb88ade5e": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003810081",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:32:00.901740+00:00"
+ },
+ "4650cb6ed2a5aee6aa4b1201bed955e8cf328d45e59c77a4f1f73a6d5045ec38": {
+  "url": "https://www.newsis.com/view/NISX20261001_0003810061",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:32:02.595594+00:00"
+ },
+ "571ec8b948aee13907a7f148eb943a5c6bf01e9575c68f134aced58d5966c1c0": {
+  "url": "https://www.yna.co.kr/view/AKR20261001039100009",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:32:03.902820+00:00"
+ },
+ "5cf0271b7431bcb6bbc997d6ca59c01e4a1d499128618fc8a725f31a8c350291": {
+  "url": "https://www.yna.co.kr/view/AKR20261001030900017",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-01T00:32:05.261356+00:00"
  }
 }
