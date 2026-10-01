@@ -1,5 +1,5 @@
 {
- "snapshot_id": "O1_AFTER_FINAL",
+ "snapshot_id": "O1_AFTER_FINAL_V2",
  "topic": "AI_ENERGY_INFRA",
  "taken_at": "2026-10-01T11:41:49.017907+00:00",
  "caveat_on_before_snapshot": "intel/evidence_network/o1_before_snapshot.json was computed AFTER some of this O-1 pass's own claims.json edits (LBNL, Korea), per the handoff note, so it is approximately-baseline for O-1, not a pure pre-O-1 snapshot. This after-snapshot diffs against the true O-0-final state (intel/intelligence_quality/o0_after_snapshot.json: 6 claims, 6 relations, 7 AI_ENERGY_INFRA hypotheses, 5/10 counterevidence directions with evidence) rather than against o1_before_snapshot.json, to avoid double-counting the LBNL/Korea work it already includes.",
@@ -89,5 +89,48 @@
   "Public safety regression + module-specific regressions beyond the ones run this pass",
   "Deeper China primary-government source verification (East Data West Computing official NDRC documents were not independently fetched)",
   "EU Energy Efficiency Directive primary legal text / JRC database first-party read (only secondary summaries were fetched)"
- ]
+ ],
+ "final_update_note": "This file's original content (snapshot_id=O1_AFTER_FINAL) reflected an interim state in which Te had deliberately held back Intelligence Object/Report advancement pending explicit sign-off on how to handle the H1/H3 hypothesis-model contradiction. That sign-off was given (disclose, don't silently fix, don't block), and the remaining work was then completed in this same session: Intelligence Object v2->v4 (new evidence links + HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP/METHODOLOGY_UNCERTAINTY disclosure), a synthesis sidecar file, an O-1 evidence yield funnel, and Report v3 (readiness=CONDITIONALLY_READY, HTML/PDF confirmed renderable via build_artifacts_with_failure_isolation but not persisted to disk, matching the O-0 precedent). This block records the TRUE final state; fields below it (counts_final, readiness_matrix, etc.) are left as originally written for that interim state's own record, and are superseded by final_readiness_matrix_v2 below.",
+ "intelligence_object_and_report_final": {
+  "intelligence_object_version": 4,
+  "previous_version": 3,
+  "report_version": 3,
+  "report_id": "report_intel_87210a61730c22b9_v3",
+  "report_readiness": "CONDITIONALLY_READY",
+  "html_pdf_status": "HTML_READY / PDF_READY (pdf_validation.ok=True, size_bytes=357897); not persisted to disk this phase, consistent with o0_after_snapshot.json's report_artifact_note precedent for the same reason (build_artifacts_with_failure_isolation deletes its temp files by design).",
+  "known_gaps_added": [
+   "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP"
+  ],
+  "uncertainties_added": [
+   "METHODOLOGY_UNCERTAINTY (H1/H3 simultaneous-SUPPORTED disclosure)"
+  ]
+ },
+ "final_readiness_matrix_v2": {
+  "O1_STATUS": "CONDITIONALLY_READY",
+  "PRIMARY_EVIDENCE": "CONDITIONALLY_READY",
+  "ACADEMIC_EVIDENCE": "CONDITIONALLY_READY",
+  "STATISTICAL_EVIDENCE": "NOT_READY",
+  "AI_ATTRIBUTION": "CONDITIONALLY_READY",
+  "POLICY_RESEARCH": "NOT_READY",
+  "GEOGRAPHIC_EVIDENCE": "CONDITIONALLY_READY",
+  "LONGITUDINAL_EVIDENCE": "NOT_READY",
+  "COUNTEREVIDENCE": "CONDITIONALLY_READY",
+  "ALTERNATIVE_EXPLANATIONS": "CONDITIONALLY_READY",
+  "FORECAST_INTEGRITY": "READY",
+  "EVIDENCE_INDEPENDENCE": "CONDITIONALLY_READY",
+  "RESEARCH_RIGHTS": "NOT_APPLICABLE",
+  "INTELLIGENCE_QUALITY": "CONDITIONALLY_READY",
+  "REPORT_QUALITY": "CONDITIONALLY_READY",
+  "PROVENANCE": "READY",
+  "PUBLIC_SAFETY": "CONDITIONALLY_READY",
+  "notes": {
+   "INTELLIGENCE_QUALITY": "Upgraded from NOT_READY to CONDITIONALLY_READY (never to READY): the Intelligence Object was genuinely advanced to v4 with real new evidence and a fully disclosed H1/H3 hypothesis-model contradiction recorded in its own known_gaps/uncertainties fields -- but that contradiction itself is a live, unresolved structural limitation (classify_status() has zero quality/independence weighting), so this dimension cannot honestly reach READY while it stands.",
+   "REPORT_QUALITY": "Upgraded from NOT_READY to CONDITIONALLY_READY: Report v3 was generated via the existing Report Engine with every required section present and explicitly marked AVAILABLE/INSUFFICIENT_EVIDENCE (RESEARCH_EVIDENCE, WHAT_WE_KNOW, HISTORICAL_CONTEXT = INSUFFICIENT_EVIDENCE, never omitted); overall readiness= CONDITIONALLY_READY per the Report Engine's own compute_readiness().",
+   "PUBLIC_SAFETY": "Upgraded from NOT_APPLICABLE to CONDITIONALLY_READY: the Public view of report v3 was built via build_public_view and passed a manual negative-control grep for all 4 banned sentences (none found as asserted fact) and the existing test_n4_boundary_consistency.py / test_negative_controls.py suites still pass on this corpus; CONDITIONALLY_READY rather than READY because the HTML was not persisted to disk for an independent artifact-level re-review outside this session.",
+   "STATISTICAL_EVIDENCE": "Still NOT_READY -- no new statistical_evidence.json time series were added this phase; all new claims are single-point/narrative figures.",
+   "POLICY_RESEARCH": "Still NOT_READY -- EU EED Art.12 remains POLICY_ANNOUNCEMENT only; Korea's audit material remains DERIVATIVE_REPORTING/NEWS-SECONDARY, not independently fetched as a primary 국정감사 document.",
+   "LONGITUDINAL_EVIDENCE": "Still NOT_READY -- no multi-year consistent time series exists for AI_ENERGY_INFRA; all figures are single-year points or forecasts."
+  }
+ }
 }
+
