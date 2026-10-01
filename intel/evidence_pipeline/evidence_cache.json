@@ -136,7 +136,103 @@
    "The timeline and specific manner in which the assumption will be challenged are qualified only by 'may soon'."
   ]
  },
- "8f3bfb96a2250671": null,
+ "8f3bfb96a2250671": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "이재용과 최태원이 젠슨 황 축하를 위해 뉴욕에 갔다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "뉴욕",
+    "predicate": "방문하다",
+    "subject": "이재용, 최태원",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "젠슨 황 엔비디아 최고경영자(CEO)와 이재용 삼성전자 회장, 최태원 SK그룹 회장이 미국 뉴욕에서 28일(현지시간) 만났다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약 첫 번째 문장",
+    "object": "미국 뉴욕",
+    "predicate": "만났다",
+    "subject": "젠슨 황, 이재용, 최태원",
+    "unit": null,
+    "value": "28일(현지시간)"
+   },
+   {
+    "_idx": 3,
+    "claim_text": "젠슨 황 CEO가 '2026 밴 플리트상'을 수상했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약 두 번째 문장",
+    "object": "2026 밴 플리트상",
+    "predicate": "수상하다",
+    "subject": "젠슨 황",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 4,
+    "claim_text": "황 CEO의 수상을 축하하기 위해 모인 이들은 엔비디아와의 협력을 이어가겠다고 강조했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약 두 번째 문장",
+    "object": "엔비디아와의 협력을 이어감",
+    "predicate": "강조하다",
+    "subject": "이들(이재용 삼성전자 회장, 최태원 SK그룹 회장 등)",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_CITATION",
+    "object": "미국 뉴욕",
+    "reason": "요약문에 세 인물이 미국 뉴욕에서 28일(현지시간) 만났음이 명시됨.",
+    "relation": "만남",
+    "source_claim_ids": [
+     1
+    ],
+    "subject": "젠슨 황, 이재용, 최태원",
+    "support_type": "DIRECT"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_CITATION",
+    "object": "2026 밴 플리트상",
+    "reason": "요약문에 '황 CEO의 ‘2026 밴 플리트상’ 수상'이라는 내용이 명시됨.",
+    "relation": "수상",
+    "source_claim_ids": [
+     2
+    ],
+    "subject": "젠슨 황",
+    "support_type": "DIRECT"
+   }
+  ],
+  "relations": [
+   {
+    "relation": "회장",
+    "source": "이재용",
+    "target": "삼성전자"
+   },
+   {
+    "relation": "회장",
+    "source": "최태원",
+    "target": "SK그룹"
+   },
+   {
+    "relation": "최고경영자(CEO)",
+    "source": "젠슨 황",
+    "target": "엔비디아"
+   }
+  ],
+  "uncertainties": []
+ },
  "a19f90d6751a8e8b": null,
  "b60e7d5b5dd2dca3": null,
  "b663d647e51483a7": null,
