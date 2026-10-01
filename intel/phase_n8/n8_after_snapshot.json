@@ -1,0 +1,20 @@
+{
+ "head_commit_at_write_time": "2f5cf51c9bb4da82cd6a6b1c0339184ae4632a60",
+ "note": "written after all N-8 continuation edits except the final audit commit itself",
+ "counts": {
+  "documents": 602,
+  "claims": 2,
+  "hypotheses": 2,
+  "intelligence_objects": 2,
+  "reports": 2,
+  "pdfs": 2,
+  "known_gaps": "see gap_records_result.json",
+  "gap_records": 19,
+  "private_research": "N/A",
+  "source_registry": "N/A"
+ },
+ "report_sha256_16": {
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b8155",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json": "df8995f2c995bd0b"
+ }
+}
