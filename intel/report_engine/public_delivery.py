@@ -41,13 +41,19 @@ def discover_real_reports():
 def build_intelligence_index_entry(report_path):
     r = json.loads(report_path.read_text(encoding="utf-8"))
     pdf_path = REPORTS_DIR / f"{report_path.stem}.pdf"
+    # Section 7 -- short summary comes straight from the report's own real CURRENT_STATE text,
+    # never a separately written description that could drift from the canonical content.
+    current_state_blocks = r["sections"].get("CURRENT_STATE", {}).get("content_blocks") or []
+    summary = current_state_blocks[0] if current_state_blocks else "UNKNOWN"
     return {
         "report_id": r["report_id"],
         "intelligence_id": r["intelligence_id"],
         "topic": r["topic"],
         "title": f"{r['topic']} Intelligence Report",
+        "summary": summary,
         "version": r["version"],
         "generated_at": r["generated_at"],
+        "updated_at": r["generated_at"],
         "readiness": r["readiness"],
         "available_formats": {
             "html": True,  # product_html is always generated alongside the Report JSON in this pipeline
@@ -129,8 +135,10 @@ def _render_index_page(index):
         if e["available_formats"]["pdf"]:
             href = _html.escape(e["report_id"]) + "/report.pdf"
             pdf_link = f" <a class='pdf' href='{href}'>PDF</a>"
-        return (f'<li><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a> '
-                f'<span class="badge">{_html.escape(e["readiness"])}</span>{pdf_link}</li>')
+        return (f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
+                f'<p>{_html.escape(e["summary"])}</p>'
+                f'<p><span class="badge">Evidence Status: {_html.escape(e["readiness"])}</span> '
+                f'<span class="meta">Updated {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p></li>')
 
     rows = "".join(_row(e) for e in index)
     return (
@@ -140,3 +148,16 @@ def _render_index_page(index):
         "<main><h1>METAXIS Intelligence Reports</h1><ul>"
         f"{rows}</ul></main></body></html>"
     )
+
+
+if __name__ == "__main__":
+    # N-5 PRIORITY 1 -- an independent build step, never a briefing.py modification (see
+    # n5_public_integration_decision.json). Invoked as its own shell step in daily.yml, after
+    # `python briefing.py build` has produced site/, and before the gh-pages commit -- so it
+    # writes into an already-built site/ tree without briefing.py ever importing or calling it.
+    site_dir = sys.argv[1] if len(sys.argv) > 1 else str(ROOT / "site")
+    result = build_public_intelligence_pages(site_dir)
+    print(json.dumps(result, ensure_ascii=False))
+    # Failure isolation at the process level too: errors are reported in `result`, never raised,
+    # so a non-zero exit here would be the only way this step could ever block site publishing --
+    # and it doesn't, because build_public_intelligence_pages() never raises.

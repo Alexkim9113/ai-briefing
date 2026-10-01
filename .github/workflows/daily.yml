@@ -98,6 +98,13 @@ jobs:
         run: |
           git pull -q --rebase -X theirs origin main || true   # 그 사이 올라온 에디터 글까지 받아서
           python briefing.py build                             # 다시 만든다(에디터 글이 사라지지 않게)
+          # N-5 Public Intelligence Page -- briefing.py를 전혀 수정하지 않는 독립 빌드 스텝
+          # (n5_public_integration_decision.json 참고). site/는 이미 build()가 만든 뒤이고,
+          # 실패해도 사이트 게시 자체는 절대 막지 않는다(fail-soft).
+          python intel/report_engine/public_delivery.py site/ || echo "[intelligence] 생성 건너뜀(비치명적)"
+          # N-5 Operator Workspace(PUBLIC_SAFE_OPERATOR -- GitHub Pages는 인증이 없으므로
+          # 민감 데이터를 전혀 쓰지 않는 inspection 전용 뷰만 생성한다). 동일하게 fail-soft.
+          python intel/operator_workspace/operator_ui.py site/ || echo "[operator] 생성 건너뜀(비치명적)"
           cd site
           git init -q -b gh-pages
           git config user.name "briefing-bot"
