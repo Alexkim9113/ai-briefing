@@ -92,6 +92,23 @@ def _status(value):
     return f'<span class="status status-{_esc(slug)}">{_esc(value)}</span>'
 
 
+# Section 11/O-2E -- allow only http/https source links anywhere a dynamic URL is rendered;
+# anything else (javascript:, data:, mailto:, a bare NOT_VERIFIED token, etc.) is shown as plain
+# escaped text instead of an <a href>, never as a clickable link.
+def _safe_link(url, label=None):
+    label = _esc(label if label is not None else url)
+    if isinstance(url, str) and (url.startswith("http://") or url.startswith("https://")):
+        return f'<a href="{_esc(url)}" target="_blank" rel="noopener noreferrer">{label}</a>'
+    return f'<span class="mono">{label}</span>'
+
+
+def _priority_badge(level, reason):
+    """Section 3 -- Operator-only editorial priority label. Structurally separate from evidence
+    status: this never appears in the same field as Evidence Status, and never on Public."""
+    return (f'<span class="status status-{_esc(level.lower())}" title="{_esc(reason)}">'
+            f'{_esc(level)} 우선순위</span> <span class="empty">({_esc(reason)})</span>')
+
+
 def _nav(active, depth=1):
     up = "../" * depth
     links = "".join(
@@ -136,64 +153,148 @@ def _portfolio_rows():
 
 
 def _portfolio_section_html():
-    rows = _portfolio_rows()
+    rows = op.portfolio_summary()
     cards = "".join(
         f'<div class="kpi" style="flex:0 0 calc(50% - 7px);max-width:calc(50% - 7px)">'
-        f'<div class="l">{_esc(r["topic"])}</div>'
+        f'<div class="l">{_esc(r["topic_ko"])} <span class="empty">({_esc(r["topic"])})</span></div>'
         f'<div>{_status(r["readiness"])} &middot; IO v{_esc(r["io_version"])} '
-        f'&middot; updated {_esc(r["updated"])}</div>'
-        f'<div>보고서(Report): {_esc(r["latest_report_version"])} &middot; '
-        f'근거(Evidence): {_esc(r["evidence_count"])} &middot; '
-        f'반증(Counterevidence): {"있음 (YES)" if r["has_counterevidence"] else "없음 (NONE)"} &middot; '
-        f'미해결 쟁점(Open Gaps): {_esc(r["known_gap_count"])}</div>'
+        f'&middot; Report v{_esc(r["latest_report_version"])} &middot; updated {_esc(r["updated"])}</div>'
+        f'<div>핵심 판단(Core judgment): {_esc(r["core_judgment"])} {_status(r["core_judgment_status"])}</div>'
+        f'<div>핵심 근거(Key evidence): {_esc(r["key_evidence_count"])} &middot; '
+        f'핵심 반증(Key counterevidence): {_esc(r["key_counterevidence_count"])} &middot; '
+        f'미해결 쟁점(Known gaps): {_esc(r["known_gap_count"])}</div>'
         f'<div>{_index_detail_link(r)}</div></div>'
         for r in rows
     )
-    return f'<h2>인텔리전스 포트폴리오 / Intelligence Portfolio</h2><div class="kpi-row">{cards}</div>'
+    return f'<h2>Intelligence Portfolio / 인텔리전스 포트폴리오</h2><div class="kpi-row">{cards}</div>'
+
+
+def _key_signals_section_html():
+    """Section 2 -- '오늘의 핵심 신호'. Real claim-derived cards from op.today_key_signals(), or
+    the honest NO_CHANGE empty state. Never a firehose, never an invented score."""
+    signals = op.today_key_signals()
+    if not signals:
+        return (
+            '<h2>오늘의 핵심 신호 / Today\'s Key Signals</h2>'
+            '<p class="empty">오늘 기존 Intelligence 판단을 변경할 정도의 새로운 신호는 확인되지 않았습니다. '
+            '(No new evidence wired into an existing hypothesis since each topic\'s latest published '
+            'Report -- this is a normal, expected result, not a missing feature.)</p>'
+        )
+    cards = []
+    for s in signals:
+        obs_ko = op.OBSERVATION_FORECAST_KO.get(
+            str(s["observation_or_forecast"]).split(" ")[0].upper(), s["observation_or_forecast"])
+        role_label = "지지 근거 (SUPPORTING)" if s["role"] == "SUPPORTING" else "반증 (CONTRADICTING)"
+        cards.append(
+            '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+            f'<div><strong>{_esc(s["claim_text"])}</strong></div>'
+            f'<div>{_esc(s["topic_ko"])} <span class="empty">({_esc(s["topic"])})</span> &middot; '
+            f'가설(Hypothesis) {_esc(s["hypothesis_code"])}: {_esc(s["hypothesis_statement"])}</div>'
+            f'<div>역할(Role): {_esc(role_label)} &middot; 왜 중요한가(Why it matters): {_esc(s["why_it_matters"])}</div>'
+            f'<div>출처(Source): {_esc(s["institution"])} ({_esc(s["year"])}) &middot; {_esc(obs_ko)} '
+            f'<span class="empty">({_esc(s["observation_or_forecast"])})</span></div>'
+            f'<div>{_safe_link(s["url"])}</div>'
+            f'<div class="mono">claim_id={_esc(s["claim_id"])}</div>'
+            '</div>'
+        )
+    return (
+        f'<h2>오늘의 핵심 신호 / Today\'s Key Signals ({len(signals)})</h2>'
+        f'<div class="kpi-row">{"".join(cards)}</div>'
+    )
+
+
+def _change_watch_section_html():
+    """Section 4 -- Intelligence 변화 가능성 (Change Watch)."""
+    watch = op.intelligence_change_watch()
+    contested = watch["contested_hypotheses"]
+    if contested:
+        rows = "".join(
+            f'<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+            f'<div><strong>{_esc(c["hypothesis_code"])}</strong> ({_esc(c["topic_ko"])}): {_esc(c["statement"])}</div>'
+            f'<div>현재 상태(Current status): {_status(c["status"])} &middot; '
+            f'반증 건수(Contradicting evidence): {_esc(c["contradicting_evidence_count"])}</div>'
+            f'</div>'
+            for c in contested
+        )
+        contested_block = f'<div class="kpi-row">{rows}</div>'
+    else:
+        contested_block = '<p class="empty">현재 반증이 연결된 가설이 없습니다 (no hypothesis currently carries contradicting_evidence).</p>'
+    return (
+        '<h2>Intelligence 변화 가능성 / Judgment-Change Watch</h2>'
+        f'<h3>반증이 연결된 가설 (contradicting_evidence wired)</h3>{contested_block}'
+    )
+
+
+def _gap_categories_section_html():
+    """Section 6 -- categorized Known Gaps, display-layer only."""
+    buckets = op.gaps_by_category()
+    if not buckets:
+        return '<h2>조사 필요 항목 / Gap Categories</h2><p class="empty">No known gaps recorded.</p>'
+    parts = []
+    for cat, rows in sorted(buckets.items(), key=lambda kv: -len(kv[1])):
+        label = op.GAP_CATEGORY_KO.get(cat, cat)
+        items = "".join(
+            f'<li>{_esc(g["topic"])} &middot; {_esc(g["gap_type"])}: {_esc(g["description"])}</li>'
+            for g in rows
+        )
+        parts.append(f'<h3>{_esc(label)} <span class="empty">({_esc(cat)}, {len(rows)})</span></h3><ul>{items}</ul>')
+    return '<h2>조사 필요 항목 / Gap Categories</h2>' + "".join(parts)
 
 
 def render_overview():
+    """Section 1 -- information hierarchy per Te's O-2E spec, reordered so Intelligence content
+    always comes before system/pipeline status:
+    1 Today's Key Signals, 2 Change Watch, 3 Open Issues/Gaps, 4 Portfolio, 5 latest Reports
+    pointer, 6 Gap Categories, 7 (counterevidence is embedded in Change Watch/portfolio),
+    8 Source Health, 9 System/Pipeline Health (last)."""
     o = op.overview()
-    kpis = "".join(
-        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
-        for k, v in o.items() if k != "source_health"
-    )
-    live = op.live_run_status()
-    live_kpis = "".join(
-        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
-        for k, v in live.items() if k not in ("run_id", "head_sha", "completed_at", "environment")
-    )
-    live_section = (
-        f'<h2>최근 라이브 수집 / Last Live Acquisition</h2>'
-        f'<p class="mono">RUN_ID={_esc(live["run_id"])} HEAD_SHA={_esc(live["head_sha"])} '
-        f'COMPLETED_AT={_esc(live["completed_at"])} ENVIRONMENT={_esc(live["environment"])}</p>'
-        f'<div class="kpi-row">{live_kpis}</div>'
-    )
     gaps = op.gap_inspector()
     open_gaps = [g for g in gaps if str(g.get("status", "")).upper() not in ("RESOLVED", "CLOSED")]
     gaps_section = (
-        '<h2>열린 쟁점 / Open Issues</h2>'
+        '<h2>열린 쟁점 / Evidence Gap</h2>'
         + (f'<p>{len(open_gaps)} open of {len(gaps)} recorded. See '
            f'<a href="../gaps/">{_ko("gaps")} / Gaps</a> for the full list.</p>'
            if gaps else '<p class="empty">No known gaps recorded.</p>')
     )
     reports_section = (
-        f'<h2>최신 보고서 / Latest Reports</h2>'
+        f'<h2>최신 Evidence / Latest Reports</h2>'
         f'<p>See <a href="../reports/">{_ko("reports")} / Reports</a> and '
         f'<a href="../intelligence_index/">{_ko("intelligence_index")}</a> for per-topic detail.</p>'
     )
-    return _shell(f"{_ko('overview')} / Overview", "overview", (
-        f'{PUBLIC_SAFE_BANNER}'
-        f'<h2>오늘의 핵심 신호 / Today\'s Key Signals</h2>'
-        f'<div class="kpi-row">{kpis}</div>'
-        f'{_portfolio_section_html()}'
-        f'{gaps_section}'
-        f'{reports_section}'
-        f'<h2>출처 상태 / Source Health</h2>'
+    source_health_section = (
+        '<h2>Source Health</h2>'
         f'<p>Source Health (minimal contract): {_status(o["source_health"])}. '
         f'See <a href="../source_health/">{_ko("source_health")} / Source Health</a>.</p>'
-        f'<h2>시스템 상태 / System Status</h2>'
-        f'{live_section}'
+    )
+
+    live = op.live_run_status()
+    live_kpis = "".join(
+        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
+        for k, v in live.items() if k not in ("run_id", "head_sha", "completed_at", "environment")
+    )
+    kpis = "".join(
+        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
+        for k, v in o.items() if k != "source_health"
+    )
+    system_health_section = (
+        '<h2>Pipeline / System Health</h2>'
+        f'<div class="kpi-row">{kpis}</div>'
+        f'<h3>최근 라이브 수집 / Last Live Acquisition</h3>'
+        f'<p class="mono">RUN_ID={_esc(live["run_id"])} HEAD_SHA={_esc(live["head_sha"])} '
+        f'COMPLETED_AT={_esc(live["completed_at"])} ENVIRONMENT={_esc(live["environment"])}</p>'
+        f'<div class="kpi-row">{live_kpis}</div>'
+    )
+
+    return _shell(f"{_ko('overview')} / Overview", "overview", (
+        f'{PUBLIC_SAFE_BANNER}'
+        f'{_key_signals_section_html()}'
+        f'{_change_watch_section_html()}'
+        f'{gaps_section}'
+        f'{_portfolio_section_html()}'
+        f'{reports_section}'
+        f'{_gap_categories_section_html()}'
+        f'{source_health_section}'
+        f'{system_health_section}'
     ))
 
 
@@ -377,7 +478,7 @@ def render_report_sources(r):
         f'<td>{_esc(s["institution"])}</td><td>{_esc(s["title"])}</td><td>{_esc(s["year"])}</td>'
         f'<td>{_esc(s["tier"])}</td><td>{_esc(s["observation_or_forecast"])}</td>'
         f'<td>{_status(s["access_status"])}</td>'
-        f'<td><a href="{_esc(s["url"])}" target="_blank" rel="noopener noreferrer">{_esc(s["url"])}</a></td>'
+        f'<td>{_safe_link(s["url"])}</td>'
         f'<td>{_esc(s["verification"])}</td></tr>'
         for s in sources
     )

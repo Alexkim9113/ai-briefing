@@ -556,6 +556,249 @@ def provenance_chain_full(report_id):
             "statistical_chain": base["statistical_chain"]}
 
 
+# ---------------------------------------------------------------------------------------------
+# O-2E -- Operator Intelligence Command Center. Everything below is a read-only DERIVATION over
+# claims.json / hypotheses.json / intelligence_objects.json (already loaded elsewhere in this
+# module) plus source_registry.py's existing curated metadata. No new scoring engine, no LLM
+# call, no write path, no new canonical field. A claim/hypothesis/IO is never recomputed here --
+# only read, counted, and relabeled in Korean for the Operator UI.
+# ---------------------------------------------------------------------------------------------
+
+TOPIC_KO = {
+    "AI_ENERGY_INFRA": "AI 에너지·인프라",
+    "AI_LABOR": "AI 노동시장",
+}
+
+# Section 7/O-2E -- AI attribution codes shown raw nowhere else in the corpus (checked: no
+# attribution-code field is currently surfaced to Operator), added here for the new signal cards
+# in case upstream data ever carries one. Honest UNKNOWN passthrough for anything unmapped.
+ATTRIBUTION_KO = {
+    "DIRECT": "직접 귀속",
+    "PARTIAL": "부분 귀속",
+    "INDIRECT": "간접 관련",
+    "NOT_APPLICABLE": "AI 귀속 대상 아님",
+    "UNKNOWN": "판단 불가",
+}
+
+OBSERVATION_FORECAST_KO = {
+    "OBSERVATION": "관측",
+    "FORECAST": "전망",
+}
+
+# Section 12/O-2E -- a display-only keyword bucketing of existing gap_type / description text.
+# This never changes gap_records.py's own vocabulary (KNOWN_GAP_TYPES_SEEN_IN_CORPUS above); it
+# only groups the existing rows for the Operator home page. Anything that matches no keyword is
+# labeled UNCATEGORIZED rather than forced into a bucket.
+GAP_CATEGORY_KO = {
+    "NEEDS_INVESTIGATION": "조사 필요",
+    "SOURCE_VERIFICATION": "출처 검증 필요",
+    "AI_ATTRIBUTION_UNCLEAR": "AI 귀속 불명확",
+    "GEOGRAPHIC_GENERALIZATION_RISK": "지역 일반화 위험",
+    "TEMPORAL_LIMITATION": "시간적 한계",
+    "METHODOLOGICAL_LIMITATION": "방법론적 한계",
+    "UNCATEGORIZED": "미분류",
+}
+
+_GAP_CATEGORY_KEYWORDS = (
+    ("SOURCE_VERIFICATION", ("verif", "unverified", "access_blocked", "source quality")),
+    ("AI_ATTRIBUTION_UNCLEAR", ("ai-attribut", "ai attribut", "attribution", "isolate ai", "ai's numeric share", "ai-specific")),
+    ("GEOGRAPHIC_GENERALIZATION_RISK", ("geographic", "region", "us-only", "country", "generaliz")),
+    ("TEMPORAL_LIMITATION", ("temporal", "time-scope", "time scope", "outdated", "lag", "2022", "2023", "stale")),
+    ("METHODOLOGICAL_LIMITATION", ("methodolog", "sample size", "proxy", "aggregate", "decompos")),
+    ("NEEDS_INVESTIGATION", ("missing", "no evidence", "not yet", "no data", "no sector-decomposed", "gap")),
+)
+
+
+def categorize_gap(gap_type, description):
+    """Section 12 -- keyword bucketing over EXISTING gap_type + description text. Pure display
+    layer: reads two already-stored strings, returns one of GAP_CATEGORY_KO's keys. No new gap is
+    created or hidden; ambiguous text is honestly UNCATEGORIZED."""
+    haystack = f"{gap_type or ''} {description or ''}".lower()
+    for category, keywords in _GAP_CATEGORY_KEYWORDS:
+        if any(kw in haystack for kw in keywords):
+            return category
+    return "UNCATEGORIZED"
+
+
+def _latest_report_generated_at_by_topic():
+    """The generated_at of each topic's highest-version real on-disk report, used only as the
+    honest reference point for 'newer than our last published judgment' (Section 2). Topics with
+    no report yet get None -- never a fabricated timestamp."""
+    best = {}
+    for path in re_.REPORTS_DIR.glob("report_intel_*_v*.json"):
+        r = _load(path)
+        topic = r.get("topic")
+        if topic is None:
+            continue
+        cur = best.get(topic)
+        if cur is None or r.get("version", 0) > cur[0]:
+            best[topic] = (r.get("version", 0), r.get("generated_at"))
+    return {t: v[1] for t, v in best.items()}
+
+
+def _claim_source_meta(claim_id, claim):
+    """Reuses source_registry._SOURCE_META where curated, else falls back to the claim's own raw
+    provenance URL. Never fabricates an institution/title/URL."""
+    meta = sreg_mod()._SOURCE_META.get(claim_id) or {}
+    prov = claim.get("provenance") or ""
+    url = prov if isinstance(prov, str) and prov.startswith("http") else None
+    return {
+        "institution": meta.get("institution", "UNKNOWN -- not in curated source registry"),
+        "title": meta.get("title", claim.get("claim_text", "UNKNOWN")),
+        "year": meta.get("year", "UNKNOWN"),
+        "observation_or_forecast": meta.get("observation_or_forecast", "UNKNOWN"),
+        "url": url or "URL_NOT_VERIFIED",
+        "verification": meta.get("verification", "NOT_TESTABLE -- no curated verification record"),
+    }
+
+
+_sreg_cache = []
+
+
+def sreg_mod():
+    """Lazy import of report_engine/source_registry.py (avoids a hard import cycle at module load
+    time -- operator_api.py already sys.path-inserts report_engine above)."""
+    if not _sreg_cache:
+        import source_registry as _s  # noqa: E402
+        _sreg_cache.append(_s)
+    return _sreg_cache[0]
+
+
+_ROLE_WHY_KO = {
+    "SUPPORTING": "기존 가설을 뒷받침하는 근거로 새로 연결됨",
+    "CONTRADICTING": "기존 가설과 상충하는 반증으로 새로 연결됨",
+}
+
+
+def today_key_signals():
+    """Section 2 -- '오늘의 핵심 신호'. Deterministic, non-LLM: a claim is surfaced here only if
+    (a) it is referenced in some hypothesis's supporting_evidence or contradicting_evidence array
+    (i.e. it is actually wired into an existing Intelligence judgment, not just sitting in
+    claims.json), AND (b) its created_at is strictly after the generated_at of that topic's
+    latest published Report (i.e. it was not yet reflected in the last judgment the Report
+    recorded). No score is invented; 'why it matters' is derived purely from the wiring role
+    (supporting vs contradicting). An honest empty list is a normal, expected result."""
+    claims = _load(re_.CLAIMS_PATH)
+    hyp_path = INTEL_DIR / "hypothesis" / "hypotheses.json"
+    hypotheses = _load(hyp_path) if hyp_path.exists() else {}
+    latest_report_at = _latest_report_generated_at_by_topic()
+
+    signals = []
+    seen = set()
+    for h in hypotheses.values():
+        topic = h.get("topic")
+        ref_at = latest_report_at.get(topic)
+        for role, refs in (("SUPPORTING", h.get("supporting_evidence") or []),
+                           ("CONTRADICTING", h.get("contradicting_evidence") or [])):
+            for ref in refs:
+                claim_id = ref.split(":", 1)[0] if isinstance(ref, str) and ":" in ref else ref
+                claim = claims.get(claim_id)
+                if claim is None:
+                    continue
+                key = (h.get("hypothesis_id"), claim_id, role)
+                if key in seen:
+                    continue
+                seen.add(key)
+                created_at = claim.get("created_at")
+                is_new = bool(ref_at) and bool(created_at) and created_at > ref_at
+                if not is_new:
+                    continue
+                meta = _claim_source_meta(claim_id, claim)
+                signals.append({
+                    "claim_id": claim_id,
+                    "claim_text": claim.get("claim_text", "UNKNOWN"),
+                    "topic": topic,
+                    "topic_ko": TOPIC_KO.get(topic, topic),
+                    "hypothesis_id": h.get("hypothesis_id"),
+                    "hypothesis_code": h.get("hypothesis_code", "H?"),
+                    "hypothesis_statement": h.get("statement", "UNKNOWN"),
+                    "role": role,
+                    "why_it_matters": _ROLE_WHY_KO.get(role, "UNKNOWN"),
+                    "institution": meta["institution"],
+                    "year": meta["year"],
+                    "url": meta["url"],
+                    "observation_or_forecast": meta["observation_or_forecast"],
+                    "claim_created_at": created_at,
+                    "reference_report_generated_at": ref_at,
+                })
+    signals.sort(key=lambda s: s.get("claim_created_at") or "", reverse=True)
+    return signals
+
+
+def intelligence_change_watch():
+    """Section 4 -- Intelligence Change Watch. Purely a read + count over hypotheses.json /
+    intelligence_objects.json fields already present: which hypotheses currently carry
+    contradicting_evidence (a live threat to their current status), and which Known Gaps on each
+    topic's Intelligence Object might be closing because a new wired claim (per
+    today_key_signals()) falls into the same gap_type bucket already on record. No new
+    computation beyond simple reads/counts; never reclassifies a hypothesis's canonical status."""
+    hyp_path = INTEL_DIR / "hypothesis" / "hypotheses.json"
+    hypotheses = _load(hyp_path) if hyp_path.exists() else {}
+    objects = _load(ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+
+    contested = []
+    for h in hypotheses.values():
+        contradicting = h.get("contradicting_evidence") or []
+        if contradicting:
+            contested.append({
+                "hypothesis_id": h.get("hypothesis_id"),
+                "hypothesis_code": h.get("hypothesis_code", "H?"),
+                "topic": h.get("topic"),
+                "topic_ko": TOPIC_KO.get(h.get("topic"), h.get("topic")),
+                "statement": h.get("statement", "UNKNOWN"),
+                "status": h.get("status", "UNKNOWN"),
+                "contradicting_evidence_count": len(contradicting),
+            })
+
+    gap_watch = []
+    for oid, obj in objects.items():
+        gaps = obj.get("known_gaps") or []
+        if gaps:
+            gap_watch.append({
+                "intelligence_id": oid,
+                "topic": obj.get("topic"),
+                "topic_ko": TOPIC_KO.get(obj.get("topic"), obj.get("topic")),
+                "open_gap_count": len(gaps),
+            })
+
+    return {"contested_hypotheses": contested, "gap_watch": gap_watch}
+
+
+def portfolio_summary():
+    """Section 5 -- Intelligence Portfolio comparison. Extends intelligence_index() /
+    hypotheses_for_topic() (already used by operator_ui._portfolio_rows) with the remaining
+    fields Te's spec asks for, reading only existing data: current core judgment (first
+    SUPPORTED/PARTIALLY_SUPPORTED hypothesis statement found, else the topic's first hypothesis),
+    key evidence / counterevidence counts, and the latest report link path. Never invents a
+    judgment the hypotheses don't already state."""
+    rows = []
+    for row in intelligence_index():
+        hyps = hypotheses_for_topic(row["topic"])
+        core = next((h for h in hyps if str(h.get("status", "")).upper().endswith("SUPPORTED")), None)
+        core = core or (hyps[0] if hyps else None)
+        supporting = sum(len(h.get("supporting_evidence") or []) for h in hyps)
+        contradicting = sum(len(h.get("contradicting_evidence") or []) for h in hyps)
+        rows.append({
+            **row,
+            "topic_ko": TOPIC_KO.get(row["topic"], row["topic"]),
+            "core_judgment": core.get("statement") if core else "UNKNOWN",
+            "core_judgment_status": core.get("status") if core else "UNKNOWN",
+            "key_evidence_count": supporting,
+            "key_counterevidence_count": contradicting,
+        })
+    return rows
+
+
+def gaps_by_category():
+    """Section 6 -- groups gap_inspector()'s existing rows by categorize_gap(), display layer
+    only. Returns {category: [rows]}; a category with zero matches is simply absent."""
+    buckets = {}
+    for g in gap_inspector():
+        cat = categorize_gap(g.get("gap_type"), g.get("description"))
+        buckets.setdefault(cat, []).append(g)
+    return buckets
+
+
 def source_inspector():
     """Section 19 -- Source Registry viewed through the Operator. Joins the 299-entry source
     registry (intel/sources.json) with the small Tier-1 live-pilot result where one exists; every
