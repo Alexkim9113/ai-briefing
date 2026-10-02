@@ -1,7 +1,7 @@
 {
-  "total_documents": 597,
-  "before_unknown_country_count": 569,
-  "after_unknown_country_count": 364,
+  "total_documents": 604,
+  "before_unknown_country_count": 573,
+  "after_unknown_country_count": 368,
   "newly_classified_count": 205,
   "newly_classified_by_signal": {
     "SOURCE_ID_REGISTRY": 159,
@@ -9,28 +9,28 @@
   },
   "before_geographic_distribution": {
     "by_country": {
-      "UNKNOWN": 569,
-      "US": 28
+      "UNKNOWN": 573,
+      "US": 31
     },
     "by_jurisdiction": {
-      "UNKNOWN": 569,
-      "US_FEDERAL": 28
+      "UNKNOWN": 573,
+      "US_FEDERAL": 31
     },
-    "unknown_country_count": 569,
-    "unknown_jurisdiction_count": 569
+    "unknown_country_count": 573,
+    "unknown_jurisdiction_count": 573
   },
   "after_geographic_distribution": {
     "by_country": {
-      "US": 83,
-      "UNKNOWN": 364,
+      "US": 86,
+      "UNKNOWN": 368,
       "KR": 150
     },
     "by_jurisdiction": {
-      "UNKNOWN": 569,
-      "US_FEDERAL": 28
+      "UNKNOWN": 573,
+      "US_FEDERAL": 31
     },
-    "unknown_country_count": 364,
-    "unknown_jurisdiction_count": 569
+    "unknown_country_count": 368,
+    "unknown_jurisdiction_count": 573
   },
   "newly_classified_documents": [
     {

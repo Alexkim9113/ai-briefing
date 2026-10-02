@@ -1,12 +1,12 @@
 {
   "note": "M.5F Sections 3-6 Topic Classification Coverage audit. Additive only -- never writes documents.json/`field`. Multi-label (a document may carry 0+ domains). Reuses the existing, already-tested REAL_DOMAINS/PLANET_SUBDOMAINS taxonomy from intel/evidence_pipeline/schema.py rather than inventing a new one, per Te's 'reuse existing modules maximally' instruction. Evidence basis is always reported per document (EXISTING_FIELD/SOURCE_TOPIC_SUFFIX HIGH confidence, TITLE_KEYWORD LOW confidence) -- never silently merged.",
-  "total_documents": 601,
-  "documents_unclassified": 73,
-  "documents_unclassified_fraction": 0.1215,
+  "total_documents": 604,
+  "documents_unclassified": 75,
+  "documents_unclassified_fraction": 0.1242,
   "documents_multi_label": 188,
   "domain_distribution": {
     "TECHNOLOGY_INFRASTRUCTURE": 357,
-    "POLICY_LAW_GOVERNANCE": 116,
+    "POLICY_LAW_GOVERNANCE": 117,
     "HUMAN_SOCIETY_EDUCATION": 78,
     "ECONOMY_INDUSTRY_LABOR": 54,
     "SECURITY_GEOPOLITICS": 31,
@@ -18,14 +18,14 @@
   },
   "evidence_basis_distribution": {
     "EXISTING_FIELD": 210,
-    "TITLE_KEYWORD": 317,
-    "NONE": 73,
+    "TITLE_KEYWORD": 318,
+    "NONE": 75,
     "SOURCE_TOPIC_SUFFIX": 1
   },
   "confidence_distribution": {
     "HIGH": 211,
-    "LOW": 317,
-    "NONE": 73
+    "LOW": 318,
+    "NONE": 75
   },
   "per_document": {
     "003ca48c1f2e48ca": {
@@ -385,6 +385,11 @@
       ],
       "basis": "TITLE_KEYWORD",
       "confidence": "LOW"
+    },
+    "1503d0b2a2159ba7": {
+      "domains": [],
+      "basis": "NONE",
+      "confidence": "NONE"
     },
     "1543742ca214e323": {
       "domains": [],
@@ -1772,6 +1777,11 @@
       "basis": "NONE",
       "confidence": "NONE"
     },
+    "6389f8193cbf433a": {
+      "domains": [],
+      "basis": "NONE",
+      "confidence": "NONE"
+    },
     "641a71ff188a7303": {
       "domains": [
         "SECURITY_GEOPOLITICS",
@@ -2676,6 +2686,13 @@
       ],
       "basis": "EXISTING_FIELD",
       "confidence": "HIGH"
+    },
+    "9a370eedbc7cd51f": {
+      "domains": [
+        "POLICY_LAW_GOVERNANCE"
+      ],
+      "basis": "TITLE_KEYWORD",
+      "confidence": "LOW"
     },
     "9a47cecddfd15ef1": {
       "domains": [
