@@ -3088,5 +3088,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-02T15:50:09.625060+00:00"
+ },
+ "08ecb33c488cabc30c60a6a52397ce8deb46d52fe4e9ab01d058135f2eea45ef": {
+  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaW9VTzR5bkJYdmJGams3elZMa3hyaXRmOHJVN05BWnZ6VjNRcGlRM243SGwtWGhMeFlIX05haGhqZkFQeXJYcEpYMjdjazJTdmpHVVNsOFItNWxKd1pyenZ1SDVydnRORUZxNkR0TkJhN1YxeG9XSEY4cy1PMUh2Q1Zmd2VuMExUNWZkQ3l4R0hKbXBmVnJOMUpydGRrbnd1d0ZMdFQyWmN3cHlCV1dmYXI3S01iQQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:23.942976+00:00"
+ },
+ "c8de231cce2b214b4ffcbd0f39f7ec78628b1632ceeef98d06bd3ebf35e1d6a3": {
+  "url": "https://siliconangle.com/2026/10/02/ai2-releases-olmo-core-3-to-make-developing-large-mixture-of-experts-llms-more-efficient/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T16:34:24.142406+00:00"
+ },
+ "c38af6e5cae43e23a64c1d509c6a587da67c166f4c093fc7e47ef57f26c07a7c": {
+  "url": "https://openai.com/index/practical-guide-building-gpt-6",
+  "status": "BLOCKED",
+  "diagnostic_stage": "http",
+  "diagnostic_code": "HTTP_403",
+  "ts": "2026-10-02T16:34:24.203023+00:00"
+ },
+ "9d1203839ac18f9596bbadd914769de7469206f0f02899e98fa711b542ee108e": {
+  "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQXzhOMDZ0MDRWWEJVaUhhMm8zZ1ZMUVZ2U2VpTUl1SU9GSjRwcE44QmZSRFBYei1mU3EwMUZ0ZDRsVU9WZ3FVNTU0RFVEdk9xTmlyRkhfbzN2ZHY4NVBhNHNxTTdQMWdBZFNQcXhqcGNOZnNVS3lSTE9OZ01vbHBWcFBQbFg3eU1ZUElHc0hrWHlxRVBPMXRoODhLdXFTc0oxdmVHSnMyVEZ3dTZVemF3enRfb0p6ZmxCaHg2OGh1VXFmUjA3amthNHFubzZkTjA3dDdLYzk5ZmNsYmFyanBoZzMwOEZJajlHWnM0LUViWWlsRWJHaWpWVnAzMVBiUi1wdmEwa0szZ3hlV05wSFdTUXZxV0V4dVdVWGN6SHB5UnVkNUtCVjJ1MHJnMDBzemx2QUQ4cXpGWC0wSF9GNGdUaWNwdlBQWTgyRXc?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:24.629089+00:00"
+ },
+ "cde15ab3731e792d53b4dc9f3dc342e5f5cd054cb70113ff56155e19b79d1182": {
+  "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNaGkzRmlTSnVWWmxlOUhsanRlWmJMcVJHQmMxazhiUVVreXMtSnZSUjNDd3JGVFA4X1prREttQ2ZSY0JqM2lEbEZZTExWbDhJTUl3UmQzWlJJZ0FvU1U1eGJfei14UVREaUdZVE96TXJyc2RjV0xxb1lKdm1hdEE3aEl5cUJVOFl2Q3dlV0ZHcVMzYlNXTklRclBRdFFjbGk3dERsdVRVOTRjeU5tb0FwcWQ2VkZkMU0wZEhmX3pILTctaE8zYjFNYVZLd21GeFhFZWtlWTNULVl6WldKQ3RDa2dXNkVJWFJaSkc5d2laZTFaUlNJb3c?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:25.020935+00:00"
+ },
+ "7d20b41c720c8a97eaf015fc4a1f151f0e1099cbf6e397d9499b4dedef1c12c9": {
+  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85NG1DeTltWGZkV2UyeG10b09HNXo2dTlFZ0loSHJMLVBQMEdEcEpvUVZfQnM4QUZWNmF3QWMxckV0VThHcU5nVnVFYzNnRFpNdEFzamg1LTgyXzJXRXFfT2c1TzZWeHIzeV9YVXpmVjM?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:25.410695+00:00"
+ },
+ "8e17ecf9396aa637357a142c31281085d47fa3495c7750bf0d70412d36c51863": {
+  "url": "https://www.youtube.com/watch?v=2te983n_D2k",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:26.145220+00:00"
+ },
+ "d3741997b0decd0514d9b848383e20954e9fbadbe49d378bc8b49793407fada9": {
+  "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9MZGNsaGw0dnFlcnZyN0dUaHg5dmZlSHdnMHM4WVNSOGdsSHBPTkFWX29laDJLbWdCWE9NVkFURUJ3QmRCNm9IVndkZGNydlZnYWxtcnFR?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:26.548575+00:00"
+ },
+ "43e54beed8f3c7bd8ed6642e62eceb8af737ab2fb9b1b018efba010d980eef67": {
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8wZ2wyc29paFlLbnVCZldqbnptdW56cmtORHpfQjZ2VXJ1R3ZpSXRzM25LcVdESzdsakxGcjJkTmdTQUd0UkRQX3lrQVFyc28xZzMtNUlCa3drY2Q1SzVVMVl3U0k4VXBkRTVFZXBTRVpoWC1POFE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T16:34:26.948590+00:00"
+ },
+ "3b49cf8848dc7786a8a214620c5f1330bf0e3679486210ec785cbada5b98f821": {
+  "url": "https://www.wired.com/story/trillium-labs-wants-to-do-high-risk-ai-research-in-the-open/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T16:34:27.085346+00:00"
  }
 }
