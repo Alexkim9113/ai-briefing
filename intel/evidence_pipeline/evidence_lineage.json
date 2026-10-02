@@ -7745,10 +7745,65 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1503d0b2a2159ba7:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "1503d0b2a2159ba7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "6389f8193cbf433a:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "6389f8193cbf433a",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "875cad4e1ea46687:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "875cad4e1ea46687",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "875cad4e1ea46687:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "875cad4e1ea46687",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "875cad4e1ea46687:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "875cad4e1ea46687",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 683,
+  "CLAIM": 688,
   "EVIDENCE_RECORD": 3
  }
 }

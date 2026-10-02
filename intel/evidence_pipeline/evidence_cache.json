@@ -303,7 +303,61 @@
  "ced92f830e8457aa": null,
  "d54eb592a6eb20ad": null,
  "ef388b3207c53003": null,
- "f4e46bc1a978def5": null,
+ "f4e46bc1a978def5": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "New formulation helps RNA vaccines withstand high temperatures",
+    "claim_type": "direct_statement",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "high temperatures for RNA vaccines",
+    "predicate": "helps withstand",
+    "subject": "New formulation",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "MIT engineers have found a way to stabilize the lipid nanoparticles used to deliver RNA vaccines",
+    "claim_type": "direct_statement",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "lipid nanoparticles used to deliver RNA vaccines",
+    "predicate": "have found a way to stabilize",
+    "subject": "MIT engineers",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 3,
+    "claim_text": "which could allow the vaccines to be more widely distributed",
+    "claim_type": "speculative_statement",
+    "confidence": "MEDIUM",
+    "evidence_locator": "요약",
+    "object": "the vaccines to be more widely distributed",
+    "predicate": "could allow",
+    "subject": "stabilizing the lipid nanoparticles",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "text_summary",
+    "object": "lipid nanoparticles for RNA vaccines",
+    "reason": "텍스트 요약에 명시된 사실 내용",
+    "relation": "developed formulation to stabilize",
+    "source_claim_ids": [],
+    "subject": "MIT engineers",
+    "support_type": "direct"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ },
  "f4e862b183458e9a": {
   "claims": [
    {
