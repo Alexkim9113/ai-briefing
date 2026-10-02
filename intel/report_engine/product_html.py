@@ -119,11 +119,38 @@ def _render_chart(chart):
             f'<p class="axis-note">{_esc(chart["axis_note"])}</p>')
 
 
+# O-1G: ALTERNATIVE_EXPLANATIONS content blocks are bare internal enum codes in canonical data
+# (e.g. "GENERAL_CLOUD_COMPUTING_GROWTH") with no human-readable description anywhere in the
+# object -- found during the first-time-reader audit as a readability problem (a first-time
+# reader cannot tell what these codes mean). This is a presentation-only label map: it only
+# changes how the existing code is displayed (the code itself is kept, in parentheses, for
+# traceability back to canonical data), never the underlying list or its meaning.
+_ALT_EXPLANATION_LABELS = {
+    "GENERAL_CLOUD_COMPUTING_GROWTH": "General cloud-computing growth (not AI-specific)",
+    "MANUFACTURING_RESHORING": "Manufacturing/industrial reshoring driving power demand",
+    "EV_ELECTRIFICATION": "EV and broader electrification of the grid",
+    "WEATHER_PEAK_LOAD": "Weather-driven peak-load demand spikes",
+    "POPULATION_GROWTH": "Population growth",
+    "DC_GROWTH_WITHOUT_POWER_PROBLEMS_REGIONS": "Regions with data-center growth but no power problems",
+    "CLIMATE_POLICY_DECARBONIZATION_LOAD_SHIFT": "Climate-policy/decarbonization load shift",
+    "CRYPTO_MINING_LOAD": "Cryptocurrency-mining electricity load",
+}
+
+
+def _humanize_alt_explanation(code):
+    label = _ALT_EXPLANATION_LABELS.get(code)
+    if label:
+        return f"{label} ({code})"
+    return code.replace("_", " ").title() + f" ({code})"
+
+
 def _render_block(block, section_type):
     if isinstance(block, str):
         # O-1F: bare-string content_blocks (e.g. SOURCE_PROVENANCE's source_ids) can themselves be
         # internal repo file paths (e.g. "intel/hypothesis/hypotheses.json#...") rather than a real
         # URL -- strip the same way structural fields are stripped elsewhere on this page.
+        if section_type == "ALTERNATIVE_EXPLANATIONS":
+            return f"<li>{_esc(_humanize_alt_explanation(block))}</li>"
         return f"<li>{_esc(_strip_internal_ids(block))}</li>"
     if not isinstance(block, dict):
         return f"<li>{_esc(block)}</li>"
