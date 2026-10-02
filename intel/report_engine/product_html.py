@@ -162,20 +162,21 @@ def _humanize_alt_explanation(code):
     return code.replace("_", " ").title() + f" ({code})"
 
 
-def _render_block(block, section_type, view="OPERATOR"):
+def _render_block(block, section_type, view="OPERATOR", topic=None):
     if isinstance(block, str):
         # O-1F: bare-string content_blocks (e.g. SOURCE_PROVENANCE's source_ids) can themselves be
         # internal repo file paths (e.g. "intel/hypothesis/hypotheses.json#...") rather than a real
         # URL -- strip the same way structural fields are stripped elsewhere on this page.
         if section_type == "ALTERNATIVE_EXPLANATIONS":
             return f"<li>{_esc(_humanize_alt_explanation(block))}</li>"
-        return f"<li>{_esc(_strip_internal_ids(block))}</li>"
+        text = _mark_citations(_strip_internal_ids(block), topic)
+        return f"<li>{_esc(text)}</li>"
     if not isinstance(block, dict):
         return f"<li>{_esc(block)}</li>"
     if "text" in block:
         status = block.get("claim_status")
         extra = f" {_badge(status, view)}" if status else ""
-        text = _strip_internal_ids(str(block["text"]))
+        text = _mark_citations(_strip_internal_ids(str(block["text"])), topic)
         return f"<li>{_esc(text)}{extra}</li>"
     if "indicator" in block:
         return f"<li>{_render_chart(pm.build_statistics_chart_spec(block), view)}</li>"
@@ -374,21 +375,131 @@ def _public_source_label(source):
     return source
 
 
-def render_section(entry, view="OPERATOR"):
+# Priority 6 (O-2C): no canonical mapping exists anywhere (confirmed again this round, same as
+# the prior round's finding) from a STATISTIC (series_)/EVIDENCE_RELATION (rel_)/
+# INTELLIGENCE_OBJECT (intel_) Evidence Map node id to any human-readable record -- only CLAIM
+# nodes have a real, derivable chain (via _evidence_map_claim_chain, reusing source_registry).
+# Previously every non-CLAIM node repeated its own "reference (internal id withheld in Public
+# view)" <li>, which for a typical report means the same honest-but-empty sentence 8-12+ times in
+# a row. This renders each CLAIM node's real chain individually (unchanged), then collapses every
+# non-CLAIM node into ONE consolidated, honest sentence per section instead of one per node --
+# same meaning (no connection info is publicly available for these node types), stated once.
+def _render_evidence_map_body(blocks, view, topic):
+    claim_items = []
+    withheld_counts = {}
+    for b in blocks:
+        if isinstance(b, dict) and b.get("node_type") == "CLAIM":
+            claim_items.append(_render_block(b, "EVIDENCE_MAP", view, topic))
+        elif isinstance(b, dict) and "node_type" in b:
+            label = str(b.get("node_type") or "").replace("_", " ").title() or "Evidence item"
+            withheld_counts[label] = withheld_counts.get(label, 0) + 1
+        else:
+            claim_items.append(_render_block(b, "EVIDENCE_MAP", view, topic))
+    html_parts = [f"<ul>{''.join(claim_items)}</ul>"] if claim_items else []
+    if withheld_counts:
+        breakdown = ", ".join(f"{label} x{n}" for label, n in withheld_counts.items())
+        html_parts.append(
+            "<p class='axis-note'>현재 공개 가능한 연결 정보가 없습니다 "
+            f"({_esc(breakdown)}).</p>"
+        )
+    return "".join(html_parts) if html_parts else "<p class='axis-note'>현재 공개 가능한 연결 정보가 없습니다.</p>"
+
+
+def render_section(entry, view="OPERATOR", topic=None):
     section = entry["section"]
     hidden_cls = " hidden" if entry["visibility"] == "HIDDEN" else ""
     note = (f"<p class='search-note'>{_esc(section['search_outcome_note'])}</p>"
             if "search_outcome_note" in section else "")
     if section["status"] == "INSUFFICIENT_EVIDENCE" and not section.get("content_blocks"):
         body = "<p class='axis-note'>Insufficient evidence in the current search scope.</p>"
+    elif entry["section_type"] == "EVIDENCE_MAP":
+        body = _render_evidence_map_body(section.get("content_blocks", []), view, topic)
     else:
-        body = f"<ul>{''.join(_render_block(b, entry['section_type'], view) for b in section.get('content_blocks', []))}</ul>"
+        body = f"<ul>{''.join(_render_block(b, entry['section_type'], view, topic) for b in section.get('content_blocks', []))}</ul>"
     return (
         f'<section class="report-section{hidden_cls}" id="{_esc(entry["section_type"].lower())}" '
         f'aria-labelledby="{_esc(entry["section_type"].lower())}-h">'
         f'<h2 id="{_esc(entry["section_type"].lower())}-h">{_esc(entry["display_title"])} '
         f'{_badge(section["status"], view)}</h2>{note}{body}</section>'
     )
+
+
+# Priority 5 (O-2C, Te section on inline citations): a small, hand-curated map of (exact
+# substring already present in a report's own canonical text) -> (the real claim_id that
+# genuinely backs that specific sentence, per claims.json / source_registry._SOURCE_META -- the
+# same registry already used for the mandatory Sources section and the Evidence Map claim chain).
+# This is a templating addition only -- it never invents a citation, never attaches a source to a
+# sentence it doesn't actually support, and matches on text that already exists verbatim in the
+# canonical Report JSON (CURRENT_STATE's own numbered-facts narrative). A substring not found in
+# a given render is simply not cited (never a silent guess).
+_INLINE_CITATIONS = {
+    "AI_ENERGY_INFRA": [
+        ("~415 TWh in 2024", "claim_afe7cc7b19317ee0"),
+        # claim_1d9458f4e7e2cf69 (the FORECAST-labeled claim) and claim_afe7cc7b19317ee0 (the
+        # OBSERVATION-labeled claim) both cite the exact same IEA "Energy and AI" page (per
+        # source_registry._SOURCE_META's own verification notes, that single page states both the
+        # 415 TWh 2024 observation and the 945/1200 TWh 2030/2035 projections) -- and
+        # build_sources_for_report() dedupes by URL, so only one of the two claim_ids survives
+        # into this report's real_sources. Cite the one that is actually present there, rather
+        # than a claim_id that would silently drop (never a fabricated link).
+        ("~945 TWh by 2030", "claim_afe7cc7b19317ee0"),
+        ("a Jevons-paradox dynamic in general cloud computing", "claim_d170f52f567053e9"),
+        ("~130 GW stuck in PJM's interconnection queue with ~$3.5B estimated forgone savings",
+         "claim_5787125ab5f0110b"),
+    ],
+    "AI_LABOR": [
+        ("OECD AI Exposure Measure methodology", "claim_b9370aa7d219d791"),
+        ("US BLS JOLTS Aug 2026 aggregate labor-flow data", "claim_4731da53eae6b843"),
+        ("NBER w31161 field experiment: generative-AI assistant raised customer-support "
+         "productivity 14% on average", "claim_fe878b52922b46a4"),
+        ("Stanford SIEPR 'Canaries in the Coal Mine': 13% relative employment decline for "
+         "early-career (22-25) US workers", "claim_8fd5da8f27c9fc2b"),
+        ("ETLA/Finland peer-reviewed population-level study found NO statistically significant "
+         "wage/employment divergence", "claim_8e305d0c30d23514"),
+        ("Fed FEDS Note: US firm/worker AI-adoption rates", "claim_0da20db21fe1463a"),
+        ("KDI Korea macro FORECAST (not observed): +3.5% TFP over 10 years", "claim_30fdf98bc1a9c818"),
+    ],
+}
+
+_CITE_MARKER_RE = _re.compile(r"@@CITE:(claim_[a-f0-9]+)@@")
+
+
+def _mark_citations(text, topic):
+    """Inserts a plain-ASCII marker token (no HTML-special characters, so it survives _esc()
+    unchanged) right after each known, real-source-backed substring. Resolved to an actual
+    citation anchor by _resolve_citations() once the full page's real Sources list (and its
+    anchor numbering) is known."""
+    if not topic:
+        return text
+    for substring, claim_id in _INLINE_CITATIONS.get(topic, []):
+        if substring in text:
+            text = text.replace(substring, f"{substring}@@CITE:{claim_id}@@", 1)
+    return text
+
+
+def _resolve_citations(html_doc, real_sources):
+    """Replaces every @@CITE:claim_id@@ marker left by _mark_citations() with a real, clickable
+    '(Institution, Year)' citation linked to that exact source's existing #source-N anchor in the
+    rendered Sources section (33G). A marker whose claim_id is not actually present in this
+    report's own real_sources (i.e. not really cited by this report) is stripped rather than
+    linked -- never a fabricated or misattributed citation."""
+    by_claim = {}
+    for i, s in enumerate(real_sources or [], 1):
+        if s.get("claim_id"):
+            by_claim[s["claim_id"]] = (i, s.get("institution"), s.get("year"))
+
+    def _sub(m):
+        claim_id = m.group(1)
+        entry = by_claim.get(claim_id)
+        if not entry:
+            return ""
+        idx, institution, year = entry
+        year_match = _re.search(r"\d{4}", str(year) or "")
+        year_label = year_match.group(0) if year_match else _esc(year)
+        return (f' <sup class="cite"><a href="#source-{idx}">'
+                f'{_esc(institution)}, {year_label}</a></sup>')
+
+    return _CITE_MARKER_RE.sub(_sub, html_doc)
 
 
 def render_sources(source_cards):
@@ -459,7 +570,8 @@ def render_real_sources(sources, report_topic=None, show_internal_ids=False):
 
 
 def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sources=None):
-    sections_html = "".join(render_section(e, view) for e in presentation["sections"])
+    topic = presentation.get("topic")
+    sections_html = "".join(render_section(e, view, topic) for e in presentation["sections"])
     sources_html = render_sources(source_cards) if source_cards else ""
     # Section 33A/33G -- the reader-facing "출처 / Sources" section, independent of the older
     # document-registry render_sources() above (kept for NON_DOCUMENT_PROVENANCE internal cards).
@@ -467,7 +579,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sou
     # nothing extra, so this never breaks a caller that hasn't been updated yet.
     real_sources_html = (render_real_sources(real_sources, show_internal_ids=(view != "PUBLIC"))
                          if real_sources is not None else "")
-    return (
+    doc = (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
         f"<title>{_esc(presentation['display_title'])}</title><style>{CSS}</style></head><body>"
@@ -482,3 +594,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sou
         f"<footer>METAXIS Intelligence Observatory -- structured evidence, not editorial conclusions.</footer>"
         f"</main></body></html>"
     )
+    # Priority 5 (O-2C): resolve any @@CITE:claim_id@@ markers left by _mark_citations() into real
+    # clickable (Institution, Year) citations anchored to this report's own Sources section, now
+    # that real_sources (and its #source-N anchor numbering) is known.
+    return _resolve_citations(doc, real_sources)

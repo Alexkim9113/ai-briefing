@@ -53,11 +53,15 @@ def build_intelligence_index_entry(report_path):
     # never a separately written description that could drift from the canonical content.
     current_state_blocks = r["sections"].get("CURRENT_STATE", {}).get("content_blocks") or []
     summary = current_state_blocks[0] if current_state_blocks else "UNKNOWN"
+    # Priority 4 (O-2C reader-flow review): same presentation-only human-readable headline as the
+    # detail page (pm.TOPIC_DISPLAY_TITLES) -- the Index listing is the first thing a reader sees,
+    # so it must not show the raw topic_id either. r["topic"] itself is untouched.
+    title = pm.TOPIC_DISPLAY_TITLES.get(r["topic"]) or f"{r['topic']} Intelligence Report"
     return {
         "report_id": r["report_id"],
         "intelligence_id": r["intelligence_id"],
         "topic": r["topic"],
-        "title": f"{r['topic']} Intelligence Report",
+        "title": title,
         "summary": summary,
         "version": r["version"],
         "generated_at": r["generated_at"],
@@ -203,10 +207,26 @@ def _render_index_page(index):
                 f'<span class="meta">Updated {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p></li>')
 
     rows = "".join(_row(e) for e in index)
+    # Priority 2 (O-2C responsive measurement): this page had no stylesheet at all, so a long
+    # unbroken token in a report's own summary text (e.g. a slash-joined internal section-type
+    # list with no spaces) forced the whole page to a ~860px min-content width regardless of the
+    # actual viewport, overflowing at 375/390/768px -- a real, Playwright-measured bug, not a
+    # cosmetic one. Minimal CSS only (no visual redesign): the same overflow-wrap/word-break
+    # affordance product_html.py's CSS already applies to report body text.
+    css = (
+        "html{overflow-x:hidden}*{box-sizing:border-box}"
+        "body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,"
+        "'Malgun Gothic',sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;"
+        "line-height:1.6;overflow-wrap:break-word;word-break:break-word}"
+        "a{overflow-wrap:anywhere;word-break:break-word}"
+        "ul{padding-left:20px}"
+        "a:focus-visible{outline:2px solid #3552c9;outline-offset:2px}"
+        "@media (max-width:480px){body{padding:20px 14px}}"
+    )
     return (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
-        "<title>Intelligence Reports</title></head><body>"
+        f"<title>Intelligence Reports</title><style>{css}</style></head><body>"
         "<main><h1>METAXIS Intelligence Reports</h1><ul>"
         f"{rows}</ul></main></body></html>"
     )

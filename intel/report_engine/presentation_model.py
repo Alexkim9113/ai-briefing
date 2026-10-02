@@ -15,10 +15,23 @@ import schema as sc  # noqa: E402
 # KEY_FINDINGS/WHAT_TO_WATCH/METHODOLOGY/LIMITATIONS, which are presentation-only framing the
 # report_engine module does not compute as separate sections; their content is derived from
 # existing section data at render time, never invented).
+# Priority 4 (O-2C, Te reader-flow review): reordered to the recommended reading sequence --
+# 핵심 질문 -> 현재 판단 -> 무엇이 관측됐는가 -> (전망/정책 맥락) -> 반대 근거 -> 다른 가능한 설명 ->
+# 지역별 차이 -> 시간적 한계 -> 아직 모르는 것 -> 근거 지도 -> 출처. This project has no separate
+# FORECAST or "AI 귀속 가능/불가" section_type (that content lives inline in CURRENT_STATE/
+# WHAT_WE_KNOW/STATISTICAL_CONTEXT text, e.g. the existing AI_ATTRIBUTION=PARTIAL/INDIRECT tags),
+# so no new section is invented here -- this only reorders the existing section_types into the
+# closest matching sequence: counterevidence and alternative explanations now immediately follow
+# the observation/evidence group instead of trailing after uncertainties, and
+# WHAT_WE_DO_NOT_KNOW/UNCERTAINTIES now sit right before the Evidence Map/Sources close, matching
+# "아직 모르는 것" -> "근거 지도" -> "출처". Presentation-only: no section_type is added, removed,
+# or recomputed, and no canonical JSON is touched.
 DISPLAY_SECTION_ORDER = (
-    "KEY_QUESTION", "CURRENT_STATE", "KEY_CLAIMS", "WHAT_WE_KNOW", "WHAT_WE_DO_NOT_KNOW",
-    "STATISTICAL_CONTEXT", "RESEARCH_EVIDENCE", "POLICY_CONTEXT", "COUNTEREVIDENCE",
-    "ALTERNATIVE_EXPLANATIONS", "UNCERTAINTIES", "GEOGRAPHIC_CONTEXT", "TEMPORAL_CONTEXT",
+    "KEY_QUESTION", "CURRENT_STATE", "WHAT_WE_KNOW", "KEY_CLAIMS",
+    "STATISTICAL_CONTEXT", "RESEARCH_EVIDENCE", "POLICY_CONTEXT",
+    "COUNTEREVIDENCE", "ALTERNATIVE_EXPLANATIONS",
+    "GEOGRAPHIC_CONTEXT", "TEMPORAL_CONTEXT",
+    "WHAT_WE_DO_NOT_KNOW", "UNCERTAINTIES",
     "METAXIS_POINT", "EVIDENCE_MAP", "SOURCE_PROVENANCE",
 )
 
@@ -101,6 +114,19 @@ def build_statistics_chart_spec(statistics_block):
     }
 
 
+# Priority 4 (O-2C, Te reader-flow review): the Public page's main visible headline was the raw
+# internal topic identifier (e.g. "AI_ENERGY_INFRA Intelligence Report") rather than a human
+# readable title -- a first-time reader cannot tell what the report is about from the headline
+# alone. Presentation-only label map: report['topic'] (the internal identifier) is left completely
+# unchanged everywhere in canonical data/code logic (report_id, intelligence_id, topic field,
+# file/directory names, Operator views all still use/show the real topic code); this only changes
+# the RENDERED headline text on Public pages that don't pass their own display_title.
+TOPIC_DISPLAY_TITLES = {
+    "AI_ENERGY_INFRA": "AI 확산과 전력·데이터센터 인프라",
+    "AI_LABOR": "AI는 노동시장을 어떻게 바꾸고 있는가",
+}
+
+
 def build_presentation(report, display_title=None):
     """Attaches presentation-only metadata to a copy of the report. Never mutates the input
     report dict, never changes any claim/evidence/section content -- verified by
@@ -125,7 +151,8 @@ def build_presentation(report, display_title=None):
         "report_id": report["report_id"],
         "intelligence_id": report["intelligence_id"],
         "topic": report["topic"],
-        "display_title": display_title or f"{report['topic']} Intelligence Report",
+        "display_title": display_title or TOPIC_DISPLAY_TITLES.get(report["topic"])
+                          or f"{report['topic']} Intelligence Report",
         "version": report["version"],
         "readiness": report["readiness"],
         "executive_card": build_executive_card(report),
