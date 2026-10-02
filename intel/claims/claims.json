@@ -218,5 +218,44 @@
     "provenance": "https://www.eia.gov/todayinenergy/detail.php?id=62410 ; https://www.eia.gov/todayinEnergy/detail.php?id=57240 ; https://ember-energy.org/latest-insights/powering-through-the-heat-how-2024-heatwaves-reshaped-electricity-demand/",
     "created_at": "2026-10-01T13:00:52.489328+00:00",
     "evidence_independence": "PRIMARY_SOURCE (EIA) / DERIVATIVE_REPORTING (Ember analysis)"
+  },
+  "claim_b9370aa7d219d791": {
+    "claim_id": "claim_b9370aa7d219d791",
+    "claim_text": "The OECD AI Exposure Measure (built on AI Capability Indicators across nine cognitive/social/physical domains) finds occupations involving routine information processing, administrative work, and codifiable tasks have the highest AI exposure, while roles requiring contextual judgment, interpersonal understanding, and complex decision-making have the lowest exposure; the measure explicitly assesses exposure/capability-gap only, not actual job displacement, which the OECD states depends on adoption, regulation, organisational change and social choice.",
+    "topic": "AI_LABOR",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "Occupational AI exposure (capability-gap methodology), not displacement",
+    "time_scope": "2024 publication, forward-looking 5-10 year horizon",
+    "geographic_scope": "OECD countries (cross-country, methodology paper)",
+    "status": "OPEN",
+    "created_from": "websearch_oecd_ai_exposure_measure",
+    "provenance": "https://www.oecd.org/en/publications/the-oecd-ai-exposure-measure_f3da0f0a-en.html",
+    "created_at": "2026-10-02T02:44:34.640114+00:00"
+  },
+  "claim_4731da53eae6b843": {
+    "claim_id": "claim_4731da53eae6b843",
+    "claim_text": "US BLS JOLTS report for August 2026 (released September 29, 2026) recorded job openings at 7.1 million (4.3% rate), hires at 5.2 million (3.3% rate), and total separations at 5.1 million (3.2% rate), each described by BLS as little changed/unchanged from the prior month.",
+    "topic": "AI_LABOR",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "US aggregate labor market flow data (JOLTS), no AI attribution in the release itself",
+    "time_scope": "August 2026 (released September 2026)",
+    "geographic_scope": "US",
+    "status": "OPEN",
+    "created_from": "websearch_bls_jolts",
+    "provenance": "https://www.bls.gov/news.release/jolts.nr0.htm",
+    "created_at": "2026-10-02T02:44:34.640181+00:00"
+  },
+  "claim_fe878b52922b46a4": {
+    "claim_id": "claim_fe878b52922b46a4",
+    "claim_text": "A field experiment (Brynjolfsson, Li, and Raymond, NBER Working Paper 31161, 2023) studying 5,179 customer support agents given a generative-AI conversational assistant found a 14% average increase in issues resolved per hour, with a 34% improvement for novice/low-skilled workers and minimal effect for experienced/highly skilled workers; this is a productivity (output-per-hour) finding, not evidence of employment or headcount change at the firm.",
+    "topic": "AI_LABOR",
+    "claim_type": "CAUSAL",
+    "scope": "Firm-level productivity effect of generative AI tool on customer support agents; NOT employment/headcount evidence",
+    "time_scope": "2020-2023 (study period), published 2023",
+    "geographic_scope": "US (single large US software firm call center, per paper)",
+    "status": "OPEN",
+    "created_from": "websearch_nber_w31161",
+    "provenance": "https://www.nber.org/papers/w31161",
+    "created_at": "2026-10-02T02:44:34.640240+00:00"
   }
 }
