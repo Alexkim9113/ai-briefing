@@ -1672,7 +1672,7 @@
    "document_id": "3458780fabb08a16",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_4"
+    "evr_6"
    ],
    "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wQi1KWm8yQ3dZcnhQdHhpSVN1Vl8tQ243OVlhZGFod2NieEZBeXV6bVJaMVdTM2MzRVB5T3pXaG5NUkF2VXRRVEVqcWIweFhJVlhXOVNRNXJHdw?oc=5",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -3395,7 +3395,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_10"
+    "evr_12"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -7800,10 +7800,43 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "243bfa5dd690514d:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "243bfa5dd690514d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.newsis.com/view/NISX20260929_0003806804",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "243bfa5dd690514d:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "243bfa5dd690514d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.newsis.com/view/NISX20260929_0003806804",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "243bfa5dd690514d:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "243bfa5dd690514d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.newsis.com/view/NISX20260929_0003806804",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 688,
+  "CLAIM": 691,
   "EVIDENCE_RECORD": 3
  }
 }
