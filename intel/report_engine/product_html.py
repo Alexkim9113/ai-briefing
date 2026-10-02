@@ -16,16 +16,17 @@ sys.path.insert(0, str(HERE))
 import presentation_model as pm  # noqa: E402
 
 CSS = """
-:root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--accent-red:#b3261e;
---accent-amber:#8a5a00;--accent-violet:#4b3f8a;--good:#1e5c3a}
+:root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--accent-red:#b3261e;
+--accent-amber:#8a5a00;--accent-violet:#3552c9;--good:#1e5c3a}
 html{overflow-x:hidden}
 *{box-sizing:border-box}
-body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
 color:var(--ink);background:var(--bg);max-width:760px;margin:0 auto;padding:32px 20px;
 line-height:1.65;font-size:16px;overflow-wrap:break-word}
 .mono,.meta,.chart-row td:nth-child(n+2){font-family:'Space Grotesk','Pretendard',monospace;
 overflow-wrap:anywhere;word-break:break-word}
-h1{font-size:1.6em;margin-bottom:4px;overflow-wrap:break-word}
+h1{font-family:'Noto Serif KR','Pretendard Variable',serif;letter-spacing:-.02em;font-weight:700;
+font-size:1.6em;margin-bottom:4px;overflow-wrap:break-word}
 .chart-table-wrap{overflow-x:auto}
 @media (max-width: 480px){
   body{padding:20px 14px;font-size:15px}
@@ -33,14 +34,14 @@ h1{font-size:1.6em;margin-bottom:4px;overflow-wrap:break-word}
 }
 h2{font-size:1.15em;border-top:1px solid var(--line);padding-top:18px;margin-top:28px}
 .meta{color:var(--sub);font-size:0.85em;margin-bottom:24px}
-.badge{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:1px 8px;
+.badge{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:1px 10px;
 font-size:0.75em;letter-spacing:.03em;margin-left:6px;max-width:100%;overflow-wrap:break-word;
 word-break:break-word;white-space:normal}
 .badge-ready,.badge-supported{border-color:var(--good);color:var(--good)}
 .badge-conditionally_ready,.badge-partially_supported{border-color:var(--accent-amber);color:var(--accent-amber)}
 .badge-insufficient_evidence,.badge-contested{border-color:var(--accent-violet);color:var(--accent-violet)}
 .badge-blocked,.badge-rejected{border-color:var(--accent-red);color:var(--accent-red)}
-.exec-card{border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:18px 0 28px}
+.exec-card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0 28px}
 .exec-card dt{color:var(--sub);font-size:0.78em;text-transform:uppercase;letter-spacing:.04em;margin-top:10px}
 .exec-card dt:first-child{margin-top:0}
 .exec-card dd{margin:2px 0 0}

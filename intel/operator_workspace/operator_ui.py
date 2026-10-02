@@ -21,34 +21,34 @@ import report_engine as re_  # noqa: E402
 import source_registry as sreg  # noqa: E402
 
 CSS = """
-:root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a}
+:root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a;--accent:#3552c9;--soft:#eef1fb}
 html{overflow-x:hidden}
 *{box-sizing:border-box}
-body{font-family:'Pretendard',-apple-system,sans-serif;color:var(--ink);background:var(--bg);
+body{font-family:'Pretendard Variable','Pretendard',-apple-system,sans-serif;color:var(--ink);background:var(--bg);
 margin:0;padding:0;line-height:1.6;font-size:15px;overflow-wrap:break-word}
 .mono{font-family:'Space Grotesk','Pretendard',monospace;overflow-wrap:anywhere;word-break:break-word}
 header{border-bottom:1px solid var(--line);padding:16px 24px}
-header h1{font-size:1.1em;margin:0;overflow-wrap:break-word}
+header h1{font-family:'Noto Serif KR','Pretendard Variable',serif;letter-spacing:-.02em;font-size:1.1em;margin:0;overflow-wrap:break-word}
 nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em}
-nav a{color:var(--sub);text-decoration:none;padding:4px 8px;border-radius:3px}
-nav a:hover,nav a.active{background:#f2f2f2;color:var(--ink)}
+nav a{color:var(--sub);text-decoration:none;padding:4px 10px;border-radius:99px}
+nav a:hover,nav a.active{background:var(--soft);color:var(--accent)}
 main{max-width:980px;margin:0 auto;padding:24px}
 .table-wrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:0.92em;min-width:420px}
 td,th{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
-th{background:#fafafa;font-weight:600}
-.status{font-size:0.8em;padding:1px 6px;border-radius:3px;border:1px solid var(--line)}
+th{background:var(--soft);font-weight:600}
+.status{font-size:0.8em;padding:1px 8px;border-radius:99px;border:1px solid var(--line)}
 .status-healthy,.status-ready{border-color:var(--ok);color:var(--ok)}
 .status-blocked,.status-not_found,.status-pdf_failed{border-color:var(--bad);color:var(--bad)}
 .status-degraded,.status-conditionally_ready,.status-auth_required{border-color:var(--warn);color:var(--warn)}
 .status-not_instrumented,.status-unknown,.status-not_available{border-color:var(--sub);color:var(--sub)}
 .empty{color:var(--sub);font-style:italic}
 .kpi-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-.kpi{border:1px solid var(--line);border-radius:4px;padding:10px 14px;box-sizing:border-box;
+.kpi{border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-sizing:border-box;
 flex:0 0 calc(33.333% - 7px);max-width:calc(33.333% - 7px);min-width:0;overflow-wrap:break-word}
 .kpi .n{font-family:'Space Grotesk',monospace;font-size:1.4em}
 .kpi .l{color:var(--sub);font-size:0.78em;text-transform:uppercase;overflow-wrap:break-word}
-a:focus-visible{outline:2px solid #4b3f8a;outline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .status{overflow-wrap:break-word;display:inline-block;max-width:100%}
 @media (max-width: 480px){
   main{padding:14px}
@@ -112,7 +112,7 @@ def _shell(title, active, body, depth=1):
 
 
 PUBLIC_SAFE_BANNER = (
-    '<div style="border:1px solid var(--line);background:#fafafa;padding:10px 14px;'
+    '<div style="border:1px solid var(--line);background:var(--soft);padding:10px 14px;'
     'margin-bottom:16px;font-size:0.85em">'
     '<strong>METAXIS OPERATOR / PUBLIC-SAFE OPERATIONS VIEW</strong><br>'
     'This workspace is deployed on GitHub Pages and has no login. It holds only '
