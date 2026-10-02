@@ -7977,5 +7977,165 @@
   "reason": "failed check PUBLICATION_DATE_VALID",
   "source": "src_crossref",
   "timestamp": "2026-10-02T20:44:03.547598+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17086",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "276454588940c9c0",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17310",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "769e742bf21a4dc6",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17361",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "ef0eefee23ced086",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17532",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "6aa7474c11881e04",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17651",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "472603c56de86f75",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17710",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "760ebae26d64c740",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17893",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "b9132706b192018f",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-17960",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "07a9ef96dd7bd930",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18058",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "b8a4c2850d58bbd8",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18121",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "ca3f9803426c7e7e",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18191",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "04414f2c8ea844a3",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18229",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "0af865929333ce85",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18318",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "c44ad1c92b9bfb01",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18321",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "300addd098d03404",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18639",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "4d9011aeb75ceea8",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18640",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "e8f2a35d653481e0",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18695",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "13e59b13604b7ad4",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-18737",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "f0cedcefd9da5ba7",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-19091",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "6904b4bcb1eaa371",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2025-19268",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "c19fc06aa089528b",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T20:44:14.277936+00:00"
  }
 ]
