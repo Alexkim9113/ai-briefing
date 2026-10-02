@@ -42,6 +42,8 @@ word-break:break-word;white-space:normal}
 .badge-insufficient_evidence,.badge-contested{border-color:var(--accent-violet);color:var(--accent-violet)}
 .badge-blocked,.badge-rejected{border-color:var(--accent-red);color:var(--accent-red)}
 .exec-card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0 28px}
+.exec-lede{border-top:none;padding-top:0;margin-top:14px}
+.exec-lede h2{border-top:none;padding-top:0;margin-top:0}
 .exec-card dt{color:var(--sub);font-size:0.78em;text-transform:uppercase;letter-spacing:.04em;margin-top:10px}
 .exec-card dt:first-child{margin-top:0}
 .exec-card dd{margin:2px 0 0}
@@ -639,9 +641,129 @@ def render_real_sources(sources, report_topic=None, show_internal_ids=False):
     )
 
 
+# Priority 7 (O-2D, Te's core complaint: the opening of the Detail page): PUBLIC view only.
+# Rebuilds the opening of the Detail page into a short deterministic reading order --
+# 1 title / 2 한눈에 보는 판단 / 3 핵심 신호 / 4-7 known/uncertain/counterevidence/geography /
+# 8 앞으로 볼 것 / 9 출처 -- reusing the exact same executive_card fields and section
+# content_blocks the OPERATOR view already renders (via render_executive_card/render_section).
+# This never invents new facts, never calls an LLM, and never changes canonical data -- it only
+# reorders and shortens what presentation_model.build_presentation() already computed. The
+# OPERATOR view is untouched: it keeps calling render_executive_card() (full dl) followed by every
+# section in DISPLAY_SECTION_ORDER, exactly as before this change (verified byte-identical by
+# test_product_html_operator_unchanged.py).
+_SENT_SPLIT_RE = _re.compile(r"(?<=[.!?。])\s+|(?<=다\.)\s+|(?<=음\.)\s+")
+
+
+def _shorten(text, max_sentences=2, max_chars=280):
+    """Deterministic, rule-based shortening -- no LLM, no new content. Takes the first
+    `max_sentences` sentences of an already-translated/stripped narrative field and, if that is
+    still too long, hard-truncates on a word boundary with an ellipsis. Never pads short input."""
+    text = (text or "").strip()
+    if not text:
+        return ""
+    parts = [p.strip() for p in _SENT_SPLIT_RE.split(text) if p.strip()]
+    short = " ".join(parts[:max_sentences]).strip() if parts else text
+    if len(short) > max_chars:
+        short = short[:max_chars].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return short
+
+
+def _render_public_lede(presentation, view):
+    """Item 2 -- 한눈에 보는 판단. Composed only from the executive_card's current_state,
+    key_signal and major_uncertainty fields (already PUBLIC-stripped/translated), each shortened
+    to its leading sentence(s). Replaces the old practice of opening the page with the full raw
+    CURRENT_STATE paragraph. If fewer than 3 sentences result, that is left as-is -- never padded
+    with invented text."""
+    card = presentation["executive_card"]
+    cs = _strip_internal_ids(_narrative_text(card["current_state"]), view)
+    ks = _strip_internal_ids(_narrative_text(card["key_signal"]), view)
+    mu = _strip_internal_ids(_narrative_text(card["major_uncertainty"]), view)
+    sentences = []
+    cs_short = _shorten(cs, max_sentences=2, max_chars=320)
+    if cs_short:
+        sentences.append(cs_short)
+    ks_short = _shorten(ks, max_sentences=1, max_chars=200)
+    if ks_short:
+        sentences.append(f"핵심 신호: {ks_short}")
+    mu_short = _shorten(mu, max_sentences=1, max_chars=200)
+    if mu_short:
+        sentences.append(f"주요 불확실성: {mu_short}")
+    body = " ".join(sentences)
+    badge = _badge(card["evidence_status"], view)
+    return (
+        '<section class="report-section exec-lede" aria-labelledby="lede-h">'
+        '<h2 id="lede-h">한눈에 보는 판단</h2>'
+        f'<p>{_esc(body)} {badge}</p></section>'
+    )
+
+
+def _public_key_signals_html(entry, view, topic):
+    """Item 3 -- 핵심 신호. Promotes up to 6 of the existing KEY_CLAIMS content_blocks (same
+    claim_status + text data, same _render_block() rendering already used for the KEY_CLAIMS
+    section elsewhere) to a short bulleted section near the top, instead of leaving them buried
+    further down the page. Renders nothing if the section is hidden/empty -- never invents items."""
+    if not entry or entry["visibility"] == "HIDDEN":
+        return ""
+    blocks = entry["section"].get("content_blocks", [])[:6]
+    items = "".join(_render_block(b, "KEY_CLAIMS", view, topic) for b in blocks)
+    if not items:
+        return ""
+    return (
+        '<section class="report-section" id="key_signals" aria-labelledby="key_signals-h">'
+        '<h2 id="key_signals-h">핵심 신호</h2>'
+        f'<ul>{items}</ul></section>'
+    )
+
+
+def _render_what_to_watch(card, view):
+    """Item 8 -- 앞으로 볼 것. Same what_to_watch list the executive card already computes
+    (known_gaps as monitoring targets, never a predicted event), rendered as its own section."""
+    items = [_strip_internal_ids(_narrative_text(w), view) for w in card["what_to_watch"]]
+    return (
+        '<section class="report-section" id="what_to_watch" aria-labelledby="what_to_watch-h">'
+        '<h2 id="what_to_watch-h">앞으로 볼 것</h2>'
+        f'<ul>{"".join(f"<li>{_esc(w)}</li>" for w in items)}</ul></section>'
+    )
+
+
+# Items 4-7 of the new PUBLIC reading order -- existing sections, just positioned right after the
+# lede/key-signals instead of being buried after the supplementary technical sections.
+_PUBLIC_PROMOTED_ORDER = (
+    "WHAT_WE_KNOW", "UNCERTAINTIES", "WHAT_WE_DO_NOT_KNOW",
+    "COUNTEREVIDENCE", "ALTERNATIVE_EXPLANATIONS", "GEOGRAPHIC_CONTEXT",
+)
+
+# Supplementary/technical sections (full raw CURRENT_STATE, STATISTICAL_CONTEXT,
+# RESEARCH_EVIDENCE, POLICY_CONTEXT, TEMPORAL_CONTEXT, KEY_QUESTION, METAXIS_POINT, EVIDENCE_MAP,
+# SOURCE_PROVENANCE, and KEY_CLAIMS itself) are still fully reachable on the page -- rendering
+# code is untouched -- they just no longer appear ahead of items 1-8. They render after item 8 and
+# before the mandatory Sources section, which must remain last.
+_PUBLIC_SUPPLEMENTARY_ORDER = (
+    "CURRENT_STATE", "KEY_CLAIMS", "STATISTICAL_CONTEXT", "RESEARCH_EVIDENCE", "POLICY_CONTEXT",
+    "TEMPORAL_CONTEXT", "KEY_QUESTION", "METAXIS_POINT", "EVIDENCE_MAP", "SOURCE_PROVENANCE",
+)
+
+
+def _render_public_body(presentation, view, topic):
+    sections_by_type = {e["section_type"]: e for e in presentation["sections"]}
+    parts = [_render_public_lede(presentation, view)]
+    key_signals_html = _public_key_signals_html(sections_by_type.get("KEY_CLAIMS"), view, topic)
+    if key_signals_html:
+        parts.append(key_signals_html)
+    for section_type in _PUBLIC_PROMOTED_ORDER:
+        entry = sections_by_type.get(section_type)
+        if entry:
+            parts.append(render_section(entry, view, topic))
+    parts.append(_render_what_to_watch(presentation["executive_card"], view))
+    for section_type in _PUBLIC_SUPPLEMENTARY_ORDER:
+        entry = sections_by_type.get(section_type)
+        if entry:
+            parts.append(render_section(entry, view, topic))
+    return "".join(parts)
+
+
 def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sources=None):
     topic = presentation.get("topic")
-    sections_html = "".join(render_section(e, view, topic) for e in presentation["sections"])
     sources_html = render_sources(source_cards) if source_cards else ""
     # Section 33A/33G -- the reader-facing "출처 / Sources" section, independent of the older
     # document-registry render_sources() above (kept for NON_DOCUMENT_PROVENANCE internal cards).
@@ -649,6 +771,14 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sou
     # nothing extra, so this never breaks a caller that hasn't been updated yet.
     real_sources_html = (render_real_sources(real_sources, show_internal_ids=(view != "PUBLIC"))
                          if real_sources is not None else "")
+    if view == "PUBLIC":
+        # Priority 7 (O-2D): restructured opening order -- see _render_public_body above.
+        body_main = _render_public_body(presentation, view, topic)
+    else:
+        # OPERATOR view: completely unchanged from before this round -- same full executive card,
+        # same DISPLAY_SECTION_ORDER sequence, same technical text.
+        body_main = (f"{render_executive_card(presentation['executive_card'], view)}"
+                     f"{''.join(render_section(e, view, topic) for e in presentation['sections'])}")
     doc = (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
@@ -657,8 +787,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sou
         f"<h1>{_esc(presentation['display_title'])} {_badge(presentation['readiness'])}</h1>"
         f"<p class='meta'>report_id={_esc(presentation['report_id'])} "
         f"version={_esc(presentation['version'])} view={_esc(view)}</p>"
-        f"{render_executive_card(presentation['executive_card'], view)}"
-        f"{sections_html}"
+        f"{body_main}"
         f"{sources_html}"
         f"{real_sources_html}"
         f"<footer>METAXIS Intelligence Observatory -- structured evidence, not editorial conclusions.</footer>"
