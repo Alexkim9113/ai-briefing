@@ -3,3 +3,5 @@ __pycache__/
 tests/fixtures/
 .editor/
 intel/operator_brain/operator_history.json
+intel/report_engine/tests/_atomic_publish_scratch/
+intel/report_engine/tests/_responsive_validation_scratch/
