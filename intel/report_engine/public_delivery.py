@@ -200,7 +200,7 @@ def _render_index_page(index):
         # build_intelligence_index_entry above) and can embed the same internal ids/repo file
         # paths the detail page's product_html renderer strips -- reuse that exact helper here
         # rather than duplicating the stripping logic.
-        summary = ph._strip_internal_ids(str(e["summary"]))
+        summary = ph._strip_internal_ids(str(e["summary"]), "PUBLIC")
         return (f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
                 f'<p>{_html.escape(summary)}</p>'
                 f'<p><span class="badge">Evidence Status: {_html.escape(e["readiness"])}</span> '

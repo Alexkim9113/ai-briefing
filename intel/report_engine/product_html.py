@@ -105,10 +105,10 @@ def render_executive_card(card, view="OPERATOR"):
     # O-1F: these free-text narrative fields (current_state/key_signal/major_uncertainty/
     # what_to_watch) can themselves embed internal ids/repo file paths (same family as the
     # content_block narrative fields below) -- stripped the same way, meaning preserved.
-    current_state = _strip_internal_ids(_narrative_text(card["current_state"]))
-    key_signal = _strip_internal_ids(_narrative_text(card["key_signal"]))
-    major_uncertainty = _strip_internal_ids(_narrative_text(card["major_uncertainty"]))
-    what_to_watch = [_strip_internal_ids(_narrative_text(w)) for w in card["what_to_watch"]]
+    current_state = _strip_internal_ids(_narrative_text(card["current_state"]), view)
+    key_signal = _strip_internal_ids(_narrative_text(card["key_signal"]), view)
+    major_uncertainty = _strip_internal_ids(_narrative_text(card["major_uncertainty"]), view)
+    what_to_watch = [_strip_internal_ids(_narrative_text(w), view) for w in card["what_to_watch"]]
     return (
         '<section aria-label="Executive Intelligence" class="exec-card">'
         f'<dl><dt>Current State</dt><dd>{_esc(current_state)}</dd>'
@@ -169,14 +169,14 @@ def _render_block(block, section_type, view="OPERATOR", topic=None):
         # URL -- strip the same way structural fields are stripped elsewhere on this page.
         if section_type == "ALTERNATIVE_EXPLANATIONS":
             return f"<li>{_esc(_humanize_alt_explanation(block))}</li>"
-        text = _mark_citations(_strip_internal_ids(block), topic)
+        text = _mark_citations(_strip_internal_ids(block, view), topic)
         return f"<li>{_esc(text)}</li>"
     if not isinstance(block, dict):
         return f"<li>{_esc(block)}</li>"
     if "text" in block:
         status = block.get("claim_status")
         extra = f" {_badge(status, view)}" if status else ""
-        text = _mark_citations(_strip_internal_ids(str(block["text"])), topic)
+        text = _mark_citations(_strip_internal_ids(str(block["text"]), view), topic)
         return f"<li>{_esc(text)}{extra}</li>"
     if "indicator" in block:
         return f"<li>{_render_chart(pm.build_statistics_chart_spec(block), view)}</li>"
@@ -193,13 +193,13 @@ def _render_block(block, section_type, view="OPERATOR", topic=None):
         # COUNTEREVIDENCE / ALTERNATIVE_EXPLANATIONS content blocks
         # ({'direction':..., 'status':..., 'source' or 'note':...}).
         direction = _esc(block.get("direction"))
-        extra = _strip_internal_ids(str(block.get("source") or block.get("note") or ""))
+        extra = _strip_internal_ids(str(block.get("source") or block.get("note") or ""), view)
         return (f"<li>{direction} {_badge(block['status'], view)}"
                 f"{': ' + _esc(extra) if extra else ''}</li>")
     if "cause" in block and "detail" in block:
         # UNCERTAINTIES content blocks ({'cause': ..., 'detail': ...}) -- same dict-repr-fallback
         # bug family as the other structural fields here (O-1G); render as a readable sentence.
-        detail = _strip_internal_ids(str(block.get("detail", "")))
+        detail = _strip_internal_ids(str(block.get("detail", "")), view)
         return f"<li>{_esc(detail)} ({_esc(block['cause'])})</li>"
     if "node_type" in block:
         # EVIDENCE_MAP entries carry internal graph node references ({'node_type': ..., 'id': ...}).
@@ -231,8 +231,8 @@ def _render_block(block, section_type, view="OPERATOR", topic=None):
         # GEOGRAPHIC_CONTEXT entries ({'geography':..., 'basis':..., 'scope': <free text that may
         # itself mention an internal evt_/claim_/series_ id>}). Structural provenance data, same
         # dict-repr-fallback bug family as EVIDENCE_MAP/TEMPORAL_CONTEXT (O-1E).
-        scope = _strip_internal_ids(str(block.get("scope", "")))
-        basis = _strip_internal_ids(str(block.get("basis", "")))
+        scope = _strip_internal_ids(str(block.get("scope", "")), view)
+        basis = _strip_internal_ids(str(block.get("basis", "")), view)
         return (f"<li>{_esc(block.get('geography'))} ({_esc(basis)})"
                 f"{': ' + _esc(scope) if scope else ''}</li>")
     if "source_id" in block:
@@ -275,7 +275,7 @@ def _render_block(block, section_type, view="OPERATOR", topic=None):
                 "hypotheses, so this remains a partial fix rather than a complete one."
             )
         else:
-            reason = _strip_internal_ids(str(block.get("reason", "")))
+            reason = _strip_internal_ids(str(block.get("reason", "")), view)
         gap_type = _esc(gap_type_raw)
         status = block.get("status")
         extra = f" {_badge(status)}" if status else ""
@@ -312,19 +312,79 @@ _INTERNAL_PATH_RE = _re.compile(
 # that follows the tag already stands on its own (it is itself a complete statement), so removing
 # the bracket and the single trailing space leaves the surrounding meaning intact.
 _DEV_PHASE_TAG_RE = _re.compile(r"\[O-\d[A-Za-z0-9]*(?:\s+round[-\s]?\d+)?\s+update\]\s*")
+# Same family, shorter form actually found in canonical text ("[v3 update]", "[v4 update]").
+_DEV_PHASE_TAG_RE_SHORT = _re.compile(r"\[v\d+\s+update\]\s*")
+# Bare, unbracketed internal round/phase references used as prose subjects, e.g.
+# "O-1B added a deterministic Evidence Evaluation Contract...". Same reasoning as
+# _DEV_PHASE_TAG_RE: this names an internal build phase, not a fact about the subject matter.
+_BARE_ROUND_REF_RE = _re.compile(r"\bO-\d[A-Za-z0-9]*(?:\s+round(?:[-\s]?\d+)?)?\b")
 
 
 def _clean_dev_phase_language(text):
     """Public-view-only: strips internal build-phase/round annotations from narrative text. Never
     touches canonical JSON -- this only changes what is rendered."""
-    return _DEV_PHASE_TAG_RE.sub("", text)
+    text = _DEV_PHASE_TAG_RE.sub("", text)
+    text = _DEV_PHASE_TAG_RE_SHORT.sub("", text)
+    return text
 
 
-def _strip_internal_ids(text):
-    """Public-view-only: replaces any bare internal id token embedded inside an otherwise
-    human-readable structural-field string with a neutral placeholder, without altering the
-    surrounding sentence/meaning. Also strips dev-phase/process annotations (Priority 2)."""
+# Priority 1 (O-2D, Te sections 3-6): Editorial Translation Layer. These are internal engineering
+# terms -- pipeline/implementation vocabulary for how a judgment was computed or re-checked --
+# that were written straight into canonical narrative text (CURRENT_STATE/UNCERTAINTIES) during
+# earlier build rounds. This maps each one to a plain-language equivalent that preserves the exact
+# same meaning (what was checked, what the result was, what remains uncertain) without naming the
+# internal mechanism by its engineering name. It is intentionally NOT a rewrite of the surrounding
+# sentence -- only these phrases are substituted -- so no judgment, uncertainty, attribution limit,
+# or evidence-gap content is added, removed, or reworded beyond the phrase itself. Longer phrases
+# are listed first so a specific phrase is matched before a shorter one it contains.
+_EDITORIAL_TRANSLATIONS = [
+    ("Evidence Evaluation Contract", "근거 평가 기준"),
+    ("canonical_status_diagnostics field", "현재 판단의 근거 정보"),
+    ("canonical_status_diagnostics", "현재 판단의 근거"),
+    ("guard_trail", "검증 과정"),
+    ("unresolved evidence reference", "출처를 완전히 확인하지 못한 초기 근거"),
+    ("unresolved evidence", "충분히 확인되지 않은 근거"),
+    ("resolved/unresolved evidence", "확인된/미확인된 근거"),
+    ("4 sufficiency guards", "4가지 근거 충분성 점검"),
+    ("sufficiency guards", "근거 충분성 점검"),
+    ("sufficiency guard", "근거 충분성 점검"),
+    ("UNKNOWN-tier guard fires", "출처 신뢰등급 미확인 점검이 작동함"),
+    ("UNKNOWN-source-tier guard", "출처 신뢰등급 미확인 점검"),
+    ("UNKNOWN-tier guard", "출처 신뢰등급 미확인 점검"),
+    ("generalization guard", "일반화 방지 점검"),
+    ("source-tier not yet classified", "출처 신뢰등급이 아직 분류되지 않음"),
+    ("source-tier", "출처 신뢰등급"),
+    ("source tier", "출처 신뢰등급"),
+    ("canonical write path", "공식 판단 갱신 절차"),
+    ("canonical Claims", "공식 확인된 주장"),
+    ("canonical claim", "공식 확인된 주장"),
+    ("canonical status", "공식 판단"),
+    ("canonical stored statuses", "공식 기록된 판단"),
+    ("write path", "판단 갱신 절차"),
+    ("SEARCH_NOT_RUN", "아직 조사하지 않은 방향"),
+]
+
+
+def _apply_editorial_translations(text):
+    """Public-view-only. Substitutes internal engineering vocabulary with a plain-language
+    equivalent (see _EDITORIAL_TRANSLATIONS above), and removes bare build-round references used
+    as prose subjects (e.g. "O-1B added..."). Operator view never calls this -- it keeps the
+    original technical text, same as before this round."""
+    for phrase, replacement in _EDITORIAL_TRANSLATIONS:
+        text = text.replace(phrase, replacement)
+    text = _BARE_ROUND_REF_RE.sub("This round", text)
+    return text
+
+
+def _strip_internal_ids(text, view="OPERATOR"):
+    """Replaces any bare internal id token embedded inside an otherwise human-readable
+    structural-field string with a neutral placeholder, without altering the surrounding
+    sentence/meaning. Also strips dev-phase/process annotations. The additional Editorial
+    Translation Layer (jargon -> plain language) applies ONLY when view=="PUBLIC" -- Operator
+    keeps the original technical text."""
     text = _clean_dev_phase_language(text)
+    if view == "PUBLIC":
+        text = _apply_editorial_translations(text)
     text = _INTERNAL_ID_RE.sub("[internal id withheld in Public view]", text)
     text = _INTERNAL_PATH_RE.sub("[internal reference withheld in Public view]", text)
     return text

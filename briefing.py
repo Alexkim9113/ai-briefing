@@ -2353,6 +2353,10 @@ def page(title, body, base="", cats=None, search=True, desc=None, path="", jsonl
     nav = f'<a href="{base}home.html"{on("home")}>홈</a><a href="{base}editor/"{on("editor")}>에디터</a>'  # 홈 화면 순서대로: 에디터가 홈 바로 옆
     if cats:
         nav += "".join(f'<a href="{base}{c}/"{on(c)}>{esc(n)}</a>' for c, n in cats.items())
+    # O-2D Priority 3: Intelligence는 수집 카테고리(cats)가 아니라 별도 정적 페이지(site/intelligence/,
+    # public_delivery.py가 생성)라 cats 루프에 넣지 않는다. 기존 메뉴 구조·cats 로직은 그대로 두고
+    # 같은 모양의 링크 하나만 덧붙인다('에디터'와 동일하게 cats와 무관한 고정 링크).
+    nav += f'<a href="{base}intelligence/"{on("intelligence")}>인텔리전스</a>'
     box = (f'<label class="search">{ICON_SEARCH}<input type="search" placeholder="뉴스, 주제 검색" aria-label="검색"></label>'
            if search else "")
     verify = ""
