@@ -60,7 +60,8 @@ def build_index_card_summary(report):
     card = pm.build_executive_card(report)
     current_state = ph._strip_internal_ids(ph._narrative_text(card["current_state"]), "PUBLIC")
     key_signal_raw = ph._narrative_text(card["key_signal"])
-    major_uncertainty = ph._strip_internal_ids(ph._narrative_text(card["major_uncertainty"]), "PUBLIC")
+    major_uncertainty = ph._strip_trailing_cause_code(
+        ph._strip_internal_ids(ph._narrative_text(card["major_uncertainty"]), "PUBLIC"))
 
     def _first_sentences(text, n, max_chars):
         # Split on sentence-ending punctuation NOT immediately preceded/followed by a digit, so a
@@ -72,7 +73,26 @@ def build_index_card_summary(report):
             out = out[:max_chars].rsplit(" ", 1)[0] + "..."
         return out
 
-    sentences = [_first_sentences(current_state, 2, 220)]
+    opening = _first_sentences(current_state, 2, 220)
+    # O-2E round 2 fix: an Index card must never open with a raw English statistical clause either
+    # (same Korean-first requirement as the Detail page's lede -- see product_html._is_korean_leading
+    # / _find_korean_opening_clause). Reuses that exact deterministic detector/search, no new logic,
+    # no LLM, no translation -- only reordering of already-existing PUBLIC-derived text.
+    if opening and not ph._is_korean_leading(opening):
+        display_title = pm.TOPIC_DISPLAY_TITLES.get(report["topic"]) or f"{report['topic']} Intelligence Report"
+        key_claims_section = report["sections"].get("KEY_CLAIMS", {})
+        key_claims_entry = {
+            "visibility": "VISIBLE" if key_claims_section.get("content_blocks") else "HIDDEN",
+            "section": key_claims_section,
+        }
+        korean_clause = ph._find_korean_opening_clause(card, key_claims_entry, "PUBLIC")
+        if korean_clause:
+            opening = f"{korean_clause} ({opening})" if korean_clause != opening else korean_clause
+        else:
+            readiness_ko = _READINESS_KO.get(report["readiness"], report["readiness"])
+            opening = f"{display_title} · {readiness_ko}. ({opening})"
+
+    sentences = [opening]
     if card["key_signal_status"] == "KEY_SIGNAL_PRESENT":
         key_signal = ph._strip_internal_ids(key_signal_raw, "PUBLIC")
         sentences.append("현재 판단: " + _first_sentences(key_signal, 1, 160))
@@ -83,10 +103,27 @@ def build_index_card_summary(report):
     return " ".join(s for s in sentences if s).strip()
 
 
+def build_index_card_top_signal(report):
+    """Section J fix (O-2E round 2): the Index card's own '핵심 신호' line must be ONE
+    representative sentence, not the full grouped list (which belongs on the Detail page). Reuses
+    product_html._group_key_claims's dedup/grouping and takes its single most load-bearing group
+    (the first one, i.e. the group presentation_model's DISPLAY ordering already puts first)."""
+    key_claims_section = report["sections"].get("KEY_CLAIMS", {})
+    blocks = [b for b in key_claims_section.get("content_blocks", []) if isinstance(b, dict)]
+    if not blocks:
+        return ""
+    groups = ph._group_key_claims(blocks, "PUBLIC", report.get("topic"))
+    if not groups:
+        return ""
+    _status, label_html, _subjects = groups[0]
+    return _re.sub(r"<[^>]+>", "", label_html).strip()
+
+
 def build_intelligence_index_entry(report_path):
     r = json.loads(report_path.read_text(encoding="utf-8"))
     pdf_path = REPORTS_DIR / f"{report_path.stem}.pdf"
     summary = build_index_card_summary(r)
+    top_signal = build_index_card_top_signal(r)
     # Priority 4 (O-2C reader-flow review): same presentation-only human-readable headline as the
     # detail page (pm.TOPIC_DISPLAY_TITLES) -- the Index listing is the first thing a reader sees,
     # so it must not show the raw topic_id either. r["topic"] itself is untouched.
@@ -97,6 +134,7 @@ def build_intelligence_index_entry(report_path):
         "topic": r["topic"],
         "title": title,
         "summary": summary,
+        "top_signal": top_signal,
         "version": r["version"],
         "generated_at": r["generated_at"],
         "updated_at": r["generated_at"],
@@ -244,9 +282,12 @@ def _render_index_page(index):
         # pass a raw block, never relied on to do the shortening itself.
         summary = ph._strip_internal_ids(str(e["summary"]), "PUBLIC")
         readiness_ko = _READINESS_KO.get(e["readiness"], e["readiness"])
+        top_signal = ph._strip_internal_ids(str(e.get("top_signal") or ""), "PUBLIC")
+        signal_html = f'<p class="top-signal">핵심 신호: {_html.escape(top_signal)}</p>' if top_signal else ""
         return (
             f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
             f'<p>{_html.escape(summary)}</p>'
+            f'{signal_html}'
             f'<p class="pills">'
             f'<span class="badge">{_html.escape(e.get("topic", ""))}</span> '
             f'<span class="badge">근거 상태: {_html.escape(readiness_ko)}</span> '

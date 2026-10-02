@@ -202,6 +202,13 @@ def _render_block(block, section_type, view="OPERATOR", topic=None):
         # UNCERTAINTIES content blocks ({'cause': ..., 'detail': ...}) -- same dict-repr-fallback
         # bug family as the other structural fields here (O-1G); render as a readable sentence.
         detail = _strip_internal_ids(str(block.get("detail", "")), view)
+        # O-2E round 2 vocabulary-audit fix: PUBLIC must never show the raw internal `cause` enum
+        # code (e.g. "SOURCE_TIER_CLASSIFICATION_GAP", "ATTRIBUTION_UNCERTAINTY") -- it is an
+        # internal classification tag, not reader vocabulary. OPERATOR keeps showing it unchanged
+        # (byte-identical to before this fix -- see test_operator_view_html_byte_identical_to_pre_
+        # restructure_snapshot).
+        if view == "PUBLIC":
+            return f"<li>{_esc(detail)}</li>"
         return f"<li>{_esc(detail)} ({_esc(block['cause'])})</li>"
     if "node_type" in block:
         # EVIDENCE_MAP entries carry internal graph node references ({'node_type': ..., 'id': ...}).
@@ -668,20 +675,113 @@ def _shorten(text, max_sentences=2, max_chars=280):
     return short
 
 
-def _render_public_lede(presentation, view):
+_TRAILING_CAUSE_CODE_RE = _re.compile(r"\s*\([A-Z][A-Z_]{3,}\)\s*$")
+
+
+def _strip_trailing_cause_code(text):
+    """PUBLIC-only vocabulary-audit fix: _narrative_text() renders a structured {'cause','detail'}
+    field (used by UNCERTAINTIES/major_uncertainty) as 'detail (CAUSE_CODE)' -- fine for OPERATOR,
+    but CAUSE_CODE is an internal enum that must never reach a PUBLIC reader. Only used by the
+    PUBLIC-specific summary composers below; _narrative_text/render_executive_card (OPERATOR) are
+    untouched so OPERATOR output stays byte-identical."""
+    return _TRAILING_CAUSE_CODE_RE.sub("", text or "").strip()
+
+
+_HANGUL_RE = _re.compile(r"[가-힣]")
+_LEDE_CLAUSE_SPLIT_RE = _re.compile(r"(?<=[.!?。])\s+|(?<=[다음]\.)\s+")
+
+_READINESS_KO_LEDE = {
+    "READY": "근거 충분", "CONDITIONALLY_READY": "근거 축적 중", "BLOCKED": "근거 부족",
+}
+
+
+def _first_clause(text):
+    text = (text or "").strip()
+    if not text:
+        return ""
+    parts = [p.strip() for p in _LEDE_CLAUSE_SPLIT_RE.split(text) if p.strip()]
+    return parts[0] if parts else text
+
+
+def _is_korean_leading(text):
+    """Deterministic Korean-vs-English-leading detector (no LLM, no translation): looks only at
+    the first clause (up to the first sentence boundary) and checks whether Hangul characters make
+    up a meaningful share of its letters. A clause with no Hangul at all, or where ASCII-Latin
+    letters clearly dominate, is treated as English-leading."""
+    clause = _first_clause(text)
+    if not clause:
+        return False
+    hangul = len(_HANGUL_RE.findall(clause))
+    latin = len(_re.findall(r"[A-Za-z]", clause))
+    if hangul == 0:
+        return False
+    return hangul >= latin
+
+
+def _find_korean_opening_clause(card, key_claims_entry, view):
+    """Priority 7 fix (O-2E round): if current_state does not already open in Korean, search other
+    already-PUBLIC-derived canonical text (key_signal, major_uncertainty, then KEY_CLAIMS content
+    block text) for the first clause that is itself Korean-leading, and use that as the opening
+    instead of the raw English statistical clause. Never translates or invents text -- only
+    reorders which already-existing clause is shown first. Returns '' if none exists anywhere."""
+    for field in ("key_signal", "major_uncertainty"):
+        text = _strip_internal_ids(_narrative_text(card[field]), view)
+        clause = _first_clause(text)
+        if _is_korean_leading(clause):
+            return clause
+    if key_claims_entry and key_claims_entry["visibility"] != "HIDDEN":
+        for block in key_claims_entry["section"].get("content_blocks", []):
+            text = _strip_internal_ids(_narrative_text(block), view) if not isinstance(block, dict) \
+                else _strip_internal_ids(str(block.get("text", "")), view)
+            clause = _first_clause(text)
+            if _is_korean_leading(clause):
+                return clause
+    return ""
+
+
+def _render_public_lede(presentation, view, key_claims_entry=None):
     """Item 2 -- 한눈에 보는 판단. Composed only from the executive_card's current_state,
     key_signal and major_uncertainty fields (already PUBLIC-stripped/translated), each shortened
     to its leading sentence(s). Replaces the old practice of opening the page with the full raw
     CURRENT_STATE paragraph. If fewer than 3 sentences result, that is left as-is -- never padded
-    with invented text."""
+    with invented text.
+
+    Priority 7 fix (round 2, O-2E): current_state's first clause is frequently a raw English
+    statistical clause (e.g. a World Bank indicator description). A reader must never see that
+    English fragment as the very first thing on the page. This composer checks the opening clause
+    deterministically (Hangul-vs-Latin ratio, no LLM) and, if it is English-leading, looks for the
+    first already-existing Korean clause among key_signal/major_uncertainty/KEY_CLAIMS text and
+    promotes that to the opening sentence instead -- the English statistical detail is not deleted,
+    it is simply not the first-read line (it still appears in the CURRENT_STATE/STATISTICAL_CONTEXT
+    sections further down the page). If no Korean clause exists anywhere in the derivable canonical
+    text for this report, this honestly falls back to a minimal Korean-only opening built only from
+    the already-Korean evidence-status label and topic display title -- it never fabricates a
+    conclusion sentence the data does not support."""
     card = presentation["executive_card"]
     cs = _strip_internal_ids(_narrative_text(card["current_state"]), view)
     ks = _strip_internal_ids(_narrative_text(card["key_signal"]), view)
     mu = _strip_internal_ids(_narrative_text(card["major_uncertainty"]), view)
-    sentences = []
+    if view == "PUBLIC":
+        mu = _strip_trailing_cause_code(mu)
+
     cs_short = _shorten(cs, max_sentences=2, max_chars=320)
-    if cs_short:
-        sentences.append(cs_short)
+    opening = None
+    if cs_short and not _is_korean_leading(cs_short):
+        korean_clause = _find_korean_opening_clause(card, key_claims_entry, view)
+        if korean_clause:
+            # Korean clause leads; the English statistical detail follows parenthetically rather
+            # than disappearing from the page.
+            opening = f"{korean_clause} ({cs_short})" if korean_clause != cs_short else korean_clause
+        else:
+            # Honest gap: no Korean clause exists anywhere in this report's derivable text. Fall
+            # back to the already-Korean evidence-status phrase + topic title rather than inventing
+            # a Korean sentence, and still surface the English statistic parenthetically.
+            readiness_ko = _READINESS_KO_LEDE.get(card["evidence_status"], card["evidence_status"])
+            opening = f"{presentation['display_title']} · {readiness_ko}. ({cs_short})"
+    else:
+        opening = cs_short
+
+    sentences = [opening] if opening else []
     ks_short = _shorten(ks, max_sentences=1, max_chars=200)
     if ks_short:
         sentences.append(f"핵심 신호: {ks_short}")
@@ -697,21 +797,100 @@ def _render_public_lede(presentation, view):
     )
 
 
+#  bucket Korean labels (Priority 2/8, O-2E round 2): maps existing claim_status values onto the
+# minimal display buckets ("확인된 사실 / 전망 / 반대 근거 / 대안 설명 / 아직 모르는 것 / 지역적
+# 한계 / AI 귀속 한계") without inventing a new status vocabulary -- this is strictly a display
+# label over presentation_model.EVIDENCE_STATUS_BADGES / existing claim_status values.
+_SIGNAL_GROUP_KO = {
+    "SUPPORTED": "확인된 사실", "PARTIALLY_SUPPORTED": "부분적으로 확인된 사실",
+    "CONTESTED": "상충하는 근거", "WEAKENED": "반대 근거로 약화된 주장",
+    "REJECTED": "반증된 주장", "OPEN": "아직 확인되지 않은 사실",
+    "INSUFFICIENT_EVIDENCE": "근거가 부족한 주장", "UNKNOWN": "근거가 부족한 주장",
+}
+
+
+def _claim_subject(block, view, topic):
+    """Deterministic, non-LLM subject label for one claim -- used only as a sub-bullet under a
+    collapsed group, never as the page's opening line. Prefers the claim's own canonical
+    claim_text (looked up by claim_id) over the generic status-derived 'text' field, since several
+    distinct claims can render identical generic text (e.g. 'OPEN' claims all render '현재 확인되지
+    않았다.'); falls back to the rendered text when no richer claim_text is available. Truncated to
+    a short label -- never translated or paraphrased."""
+    claim_id = block.get("claim_id") if isinstance(block, dict) else None
+    subject = None
+    if claim_id:
+        claim = _claim_by_id(claim_id)
+        if claim:
+            subject = claim.get("claim_text") or claim.get("text")
+    if not subject:
+        subject = str(block.get("text", "")) if isinstance(block, dict) else str(block)
+    subject = _strip_internal_ids(subject, view)
+    return _shorten(subject, max_sentences=1, max_chars=90)
+
+
+def _group_key_claims(blocks, view, topic):
+    """Deterministic grouping/dedup (Priority 8, O-2E round 2): groups claim content_blocks by
+    claim_status, then within a group collapses claims whose rendered claim text is exact-identical
+    (after the existing _strip_internal_ids/translation pipeline) into one representative line with
+    a count, listing up to 3 distinct underlying claim subjects as sub-items. Genuinely distinct
+    rendered text within a group is never force-collapsed -- it is listed as its own line. No
+    embedding/LLM similarity is used; the only similarity test is normalized string equality, which
+    is what this report's data actually exhibits (every OPEN claim here renders the identical
+    generic '현재 확인되지 않았다.' placeholder). Never reads/writes claims.json -- purely a
+    render-time view over the content_blocks already present on the report."""
+    order = []
+    by_status = {}
+    for b in blocks:
+        status = b.get("claim_status", "UNKNOWN") if isinstance(b, dict) else "UNKNOWN"
+        rendered = _strip_internal_ids(str(b.get("text", "")) if isinstance(b, dict) else str(b), view)
+        key = (status, rendered.strip())
+        if key not in by_status:
+            by_status[key] = []
+            order.append(key)
+        by_status[key].append(b)
+
+    groups = []  # (status, label_html, sub_items)
+    for (status, rendered) in order:
+        members = by_status[(status, rendered)]
+        label = _SIGNAL_GROUP_KO.get(status, status)
+        if len(members) == 1:
+            groups.append((status, f"{_esc(rendered)} <span class=\"mono\">({_esc(status)})</span>", []))
+        else:
+            subjects = []
+            seen = set()
+            for m in members:
+                subj = _claim_subject(m, view, topic)
+                if subj and subj not in seen:
+                    seen.add(subj)
+                    subjects.append(subj)
+                if len(subjects) >= 3:
+                    break
+            groups.append((status, f"{label} ({len(members)}건)", subjects))
+    return groups
+
+
 def _public_key_signals_html(entry, view, topic):
-    """Item 3 -- 핵심 신호. Promotes up to 6 of the existing KEY_CLAIMS content_blocks (same
-    claim_status + text data, same _render_block() rendering already used for the KEY_CLAIMS
-    section elsewhere) to a short bulleted section near the top, instead of leaving them buried
-    further down the page. Renders nothing if the section is hidden/empty -- never invents items."""
+    """Item 3 -- 핵심 신호. Deterministically groups/dedups the existing KEY_CLAIMS content_blocks
+    (see _group_key_claims) instead of listing up to 6 raw blocks, which previously produced near-
+    identical repeated bullets (e.g. 6x '현재 확인되지 않았다. (OPEN)') with no differentiation.
+    Renders nothing if the section is hidden/empty -- never invents items."""
     if not entry or entry["visibility"] == "HIDDEN":
         return ""
-    blocks = entry["section"].get("content_blocks", [])[:6]
-    items = "".join(_render_block(b, "KEY_CLAIMS", view, topic) for b in blocks)
-    if not items:
+    blocks = [b for b in entry["section"].get("content_blocks", []) if isinstance(b, dict)]
+    groups = _group_key_claims(blocks, view, topic)
+    if not groups:
         return ""
+    lines = []
+    for status, label_html, subjects in groups:
+        if subjects:
+            sub_html = "".join(f"<li>{_esc(s)}</li>" for s in subjects)
+            lines.append(f"<li>{label_html}<ul>{sub_html}</ul></li>")
+        else:
+            lines.append(f"<li>{label_html}</li>")
     return (
         '<section class="report-section" id="key_signals" aria-labelledby="key_signals-h">'
         '<h2 id="key_signals-h">핵심 신호</h2>'
-        f'<ul>{items}</ul></section>'
+        f'<ul>{"".join(lines)}</ul></section>'
     )
 
 
@@ -746,8 +925,9 @@ _PUBLIC_SUPPLEMENTARY_ORDER = (
 
 def _render_public_body(presentation, view, topic):
     sections_by_type = {e["section_type"]: e for e in presentation["sections"]}
-    parts = [_render_public_lede(presentation, view)]
-    key_signals_html = _public_key_signals_html(sections_by_type.get("KEY_CLAIMS"), view, topic)
+    key_claims_entry = sections_by_type.get("KEY_CLAIMS")
+    parts = [_render_public_lede(presentation, view, key_claims_entry)]
+    key_signals_html = _public_key_signals_html(key_claims_entry, view, topic)
     if key_signals_html:
         parts.append(key_signals_html)
     for section_type in _PUBLIC_PROMOTED_ORDER:
