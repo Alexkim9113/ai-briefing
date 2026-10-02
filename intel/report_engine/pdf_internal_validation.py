@@ -17,6 +17,7 @@ sys.path.insert(0, str(HERE))
 import report_engine as re_  # noqa: E402
 import presentation_model as pm  # noqa: E402
 import pdf_pipeline as pp  # noqa: E402
+import source_registry as sreg  # noqa: E402
 
 BANNED_SENTENCES = (
     "AI 데이터센터 때문에 미국 전력 위기가 발생했다.",
@@ -53,12 +54,22 @@ def validate_one(intelligence_id):
         else:
             cards.append({"title": sid, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
                           "access_status": "UNKNOWN", "rights_status": "UNKNOWN"})
-    print_html = pp.render_print_html(presentation, source_cards=cards, view="PUBLIC")
+    real_sources = sreg.build_sources_for_report(r)
+    print_html = pp.render_print_html(presentation, source_cards=cards, view="PUBLIC",
+                                       real_sources=real_sources)
     source_html_hash = _hash(print_html)
+
+    import re as _re_mod
+    internal_id_leak = _re_mod.search(
+        r"\b(?:claim_|hyp_|intel_|evt_)[a-zA-Z0-9_]*", print_html.split('id="sources"', 1)[-1]
+    ) if 'id="sources"' in print_html else None
 
     checks = {
         "title_topic_match": r["topic"] in print_html,
         "sources_section_present": "Sources" in print_html,
+        "real_sources_section_present": "sources-h" in print_html,
+        "real_sources_has_clickable_link": '<a href="http' in print_html,
+        "no_internal_id_near_sources": internal_id_leak is None,
         "no_private_full_text": "full_text" not in print_html and "vault_record" not in print_html,
         "no_restricted_body": "body_text" not in print_html,
         "no_banned_causal_sentence": all(s not in print_html for s in BANNED_SENTENCES),

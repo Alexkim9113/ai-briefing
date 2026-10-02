@@ -323,9 +323,69 @@ def render_sources(source_cards):
     return f'<section aria-label="Sources"><h2>Sources</h2><ol class="sources">{"".join(items)}</ol></section>'
 
 
-def render_product_html(presentation, source_cards=None, view="PUBLIC"):
+# Section 33A-33I -- "출처 / Sources" section, reader-facing. Built from source_registry's
+# read-only derivation (real report SOURCE_PROVENANCE.source_ids x claims.json), never from
+# internal Claim/Evidence/Hypothesis ids (33C). Public/Print/PDF all go through this one function
+# (33G); it never shows a bare claim_/intel_/hyp_/evt_ id, only a human-readable institution,
+# title, year, document type, tier, and a real clickable <a href> to the original URL.
+def render_real_sources(sources, report_topic=None, show_internal_ids=False):
+    if not sources:
+        return (
+            '<section aria-label="시출 / Sources"><h2>시출 / Sources</h2>'
+            '<p class="axis-note">No independently-cited sources were recorded for this report '
+            'version (SOURCE_TRACEABILITY: NOT_READY).</p></section>'
+        )
+    items = []
+    for i, s in enumerate(sources, 1):
+        url = s.get("url") or ""
+        institution = _esc(s.get("institution"))
+        title = _esc(s.get("title"))
+        year = _esc(s.get("year"))
+        doc_type = _esc(s.get("doc_type"))
+        tier = _esc(s.get("tier"))
+        access = _esc(s.get("access_status"))
+        obs = _esc(s.get("observation_or_forecast"))
+        # Real clickable anchor -- never a raw internal id anywhere near it (33C/33H check 8).
+        link = (f'<a href="{_esc(url)}" rel="noopener noreferrer" target="_blank">{_esc(url)}</a>'
+                if url else "")
+        # show_internal_ids is Operator-view-only (33F): the chain claim -> evidence -> real
+        # source is shown explicitly there, retaining full provenance depth; Public/Print/PDF
+        # (show_internal_ids=False, the default) never render a bare claim_/evidence_ id (33C/33H
+        # check 8) -- they get only the plain-language 주장->근거->실제출처 relationship.
+        provenance_line = ""
+        if show_internal_ids and s.get("claim_id"):
+            provenance_line = (f'<br><span class="mono axis-note">claim_id={_esc(s["claim_id"])} '
+                                f'claim_type={_esc(s.get("claim_type"))} '
+                                f'evidence_independence={_esc(s.get("evidence_independence"))} '
+                                f'verification={_esc(s.get("verification"))}</span>')
+        items.append(
+            f'<li id="source-{i}"><span class="cite">[{i}]</span> '
+            f'<strong>{institution}</strong>. <em>{title}</em>. {year}. {doc_type}. '
+            f'<span class="badge">{tier}</span> <span class="badge">{access}</span> '
+            f'<span class="axis-note">{obs}</span><br>{link}{provenance_line}</li>'
+        )
+    heading_note = (
+        '<p class="axis-note">Each source below was actually used as Evidence for a claim in this '
+        'report (주장→근거→실제출처: claim → evidence → '
+        'real source). Access status: ORIGINAL_SOURCE / OFFICIAL_DATA_PAGE / DOI / WORKING_PAPER / '
+        'SECONDARY_SOURCE / ACCESS_BLOCKED.</p>'
+    )
+    return (
+        '<section aria-label="시출 / Sources" id="sources">'
+        '<h2 id="sources-h">시출 / Sources</h2>'
+        f'{heading_note}<ol class="sources">{"".join(items)}</ol></section>'
+    )
+
+
+def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sources=None):
     sections_html = "".join(render_section(e) for e in presentation["sections"])
     sources_html = render_sources(source_cards) if source_cards else ""
+    # Section 33A/33G -- the reader-facing "출처 / Sources" section, independent of the older
+    # document-registry render_sources() above (kept for NON_DOCUMENT_PROVENANCE internal cards).
+    # real_sources is None (not just empty) is treated as "caller did not pass it" and renders
+    # nothing extra, so this never breaks a caller that hasn't been updated yet.
+    real_sources_html = (render_real_sources(real_sources, show_internal_ids=(view != "PUBLIC"))
+                         if real_sources is not None else "")
     return (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
@@ -337,6 +397,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC"):
         f"{render_executive_card(presentation['executive_card'])}"
         f"{sections_html}"
         f"{sources_html}"
+        f"{real_sources_html}"
         f"<footer>METAXIS Intelligence Observatory -- structured evidence, not editorial conclusions.</footer>"
         f"</main></body></html>"
     )

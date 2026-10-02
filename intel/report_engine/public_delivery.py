@@ -14,6 +14,7 @@ import report_engine as re_  # noqa: E402
 import presentation_model as pm  # noqa: E402
 import product_html as ph  # noqa: E402
 import atomic_publish as apub  # noqa: E402
+import source_registry as sreg  # noqa: E402
 
 ROOT = HERE.parents[1]
 REPORTS_DIR = re_.REPORTS_DIR
@@ -117,7 +118,9 @@ def render_public_page_for_report(report_path, documents_by_id):
     pub = re_.build_public_view(r)
     presentation = pm.build_presentation(pub)
     cards = _source_cards(pub, documents_by_id)
-    html_doc = ph.render_product_html(presentation, source_cards=cards, view="PUBLIC")
+    real_sources = sreg.build_sources_for_report(r)
+    html_doc = ph.render_product_html(presentation, source_cards=cards, view="PUBLIC",
+                                       real_sources=real_sources)
     pdf_exists = (REPORTS_DIR / f"{report_path.stem}.pdf").exists()
     return html_doc, pdf_exists
 

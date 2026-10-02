@@ -25,8 +25,9 @@ PRINT_CSS = """
 """
 
 
-def render_print_html(presentation, source_cards=None, view="PUBLIC"):
-    base = ph.render_product_html(presentation, source_cards=source_cards, view=view)
+def render_print_html(presentation, source_cards=None, view="PUBLIC", real_sources=None):
+    base = ph.render_product_html(presentation, source_cards=source_cards, view=view,
+                                   real_sources=real_sources)
     return base.replace("</style>", PRINT_CSS + "</style>")
 
 

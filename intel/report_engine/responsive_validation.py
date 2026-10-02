@@ -58,6 +58,7 @@ def build_sample_pages(scratch_dir, reports_dir=None):
     import report_engine as re_
     import presentation_model as pm
     import pdf_pipeline as pp
+    import source_registry as sreg
 
     scratch_dir = Path(scratch_dir)
     scratch_dir.mkdir(parents=True, exist_ok=True)
@@ -78,7 +79,9 @@ def build_sample_pages(scratch_dir, reports_dir=None):
             sid = b.get("source_id")
             if sid in docs:
                 cards.append(re_.build_source_card(docs[sid]))
-        print_html = pp.render_print_html(presentation, source_cards=cards, view="PUBLIC")
+        real_sources = sreg.build_sources_for_report(r)
+        print_html = pp.render_print_html(presentation, source_cards=cards, view="PUBLIC",
+                                           real_sources=real_sources)
         print_html_path = scratch_dir / "print_sample.html"
         print_html_path.write_text(print_html, encoding="utf-8")
 

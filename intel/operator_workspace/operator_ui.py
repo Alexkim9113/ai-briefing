@@ -15,6 +15,10 @@ import operator_api as op  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "report_engine"))
 import atomic_publish as apub  # noqa: E402
 import report_engine as re_  # noqa: E402
+# Section 33F -- Operator reuses source_registry's read-only derivation (the SAME underlying
+# logic as Public/Print/PDF, per 33G), never product_html.py: Operator must keep full internal
+# provenance (claim_id, evidence_independence, claim_type) that Public deliberately withholds.
+import source_registry as sreg  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a}
@@ -291,6 +295,30 @@ def _hyp_rows_html(hyps):
             f'<th>Canonical Status</th><th>ID</th></tr>{rows}</table></div>')
 
 
+def render_report_sources(r):
+    """Operator-only Sources rendering (33F): same source_registry derivation as Public/Print/PDF
+    (33G), but keeps the full claim_id -> evidence_independence -> real-URL chain instead of
+    stripping it -- Operator must never lose provenance depth that Public legitimately withholds."""
+    sources = sreg.build_sources_for_report(r)
+    if not sources:
+        return '<h3>Sources (시출)</h3><p class="empty">No independently-cited real-URL sources recorded for this report version.</p>'
+    rows = "".join(
+        f'<tr><td class="mono">{_esc(s["claim_id"] or "UNMATCHED")}</td>'
+        f'<td>{_esc(s["institution"])}</td><td>{_esc(s["title"])}</td><td>{_esc(s["year"])}</td>'
+        f'<td>{_esc(s["tier"])}</td><td>{_esc(s["observation_or_forecast"])}</td>'
+        f'<td>{_status(s["access_status"])}</td>'
+        f'<td><a href="{_esc(s["url"])}" target="_blank" rel="noopener noreferrer">{_esc(s["url"])}</a></td>'
+        f'<td>{_esc(s["verification"])}</td></tr>'
+        for s in sources
+    )
+    table = (
+        '<div class="table-wrap"><table><tr><th>Claim ID</th><th>Institution</th><th>Title</th>'
+        '<th>Year</th><th>Tier</th><th>Observation/Forecast</th><th>Access Status</th>'
+        f'<th>Real URL</th><th>Link Verification</th></tr>{rows}</table></div>'
+    )
+    return f'<h3>Sources (시출) -- {len(sources)} actually used</h3>{table}'
+
+
 def render_report_inspector(report_id):
     insp = op.report_inspector(report_id)
     if insp["status"] != "FOUND":
@@ -381,11 +409,12 @@ def render_report_inspector(report_id):
         f'<p><a href="../../provenance/{_esc(report_id)}/">Full Report &#8594; IO &#8594; Hypothesis &#8594; '
         'Claim &#8594; Evidence &#8594; Source chain &#8594;</a></p>'
     )
+    sources_block = render_report_sources(r)
 
     body = "".join([
         header, "<h3>Current State</h3>", _esc(obj.get("current_state", "UNKNOWN")),
         hyp_block, claims_block, evidence_block, stats_block, counterev_block, altexp_block,
-        geo_block, temp_block, gaps_block, versions_block, diff_block, provenance_block,
+        geo_block, temp_block, gaps_block, sources_block, versions_block, diff_block, provenance_block,
     ])
     return _shell(f"Report {report_id}", None, body, depth=2)
 

@@ -12,6 +12,7 @@ import report_engine as re_  # noqa: E402
 import presentation_model as pm  # noqa: E402
 import product_html as ph  # noqa: E402
 import pdf_pipeline as pp  # noqa: E402
+import source_registry as sreg  # noqa: E402
 
 ARTIFACT_STATES = ("REPORT_JSON_READY", "HTML_READY", "PDF_READY", "PDF_FAILED", "NO_CHANGE")
 
@@ -81,7 +82,9 @@ def build_artifacts_with_failure_isolation(report, documents_by_id, view="PUBLIC
             else:
                 cards.append({"title": sid, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
                               "access_status": "UNKNOWN", "rights_status": "UNKNOWN"})
-        html_doc = ph.render_product_html(presentation, source_cards=cards, view=view)
+        real_sources = sreg.build_sources_for_report(report)
+        html_doc = ph.render_product_html(presentation, source_cards=cards, view=view,
+                                           real_sources=real_sources)
         status["html"] = "HTML_READY"
         status["html_doc"] = html_doc
     except Exception as e:  # noqa: BLE001 -- an HTML failure must not raise past this point either
@@ -92,7 +95,8 @@ def build_artifacts_with_failure_isolation(report, documents_by_id, view="PUBLIC
     tmp_html = re_.REPORTS_DIR / f"{report['report_id']}_tmp_print.html"
     tmp_pdf = re_.REPORTS_DIR / f"{report['report_id']}_tmp.pdf"
     try:
-        print_html = pp.render_print_html(presentation, source_cards=cards, view=view)
+        print_html = pp.render_print_html(presentation, source_cards=cards, view=view,
+                                           real_sources=real_sources)
         tmp_html.write_text(print_html, encoding="utf-8")
         pp.generate_pdf(tmp_html, tmp_pdf)
         validation = pp.validate_pdf(tmp_pdf)
