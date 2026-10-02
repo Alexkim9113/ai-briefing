@@ -16,6 +16,7 @@ import presentation_model as pm  # noqa: E402
 import product_html as ph  # noqa: E402
 import atomic_publish as apub  # noqa: E402
 import source_registry as sreg  # noqa: E402
+import reader_summaries as rsum  # noqa: E402
 
 ROOT = HERE.parents[1]
 REPORTS_DIR = re_.REPORTS_DIR
@@ -57,6 +58,13 @@ def build_index_card_summary(report):
     what the Presentation Model already computes from the canonical Report JSON. Each component
     still goes through product_html's PUBLIC-view id-stripping + editorial translation layer, so
     the card never shows a raw enum/id/internal phrase either."""
+    summary = rsum.get_reader_summary(report.get("intelligence_id"))
+    if summary:
+        # The hand-authored Reader Summary's current_judgment_ko is already a short (2-4 sentence),
+        # Korean-first, hypothesis-grounded judgment -- use it directly as the Index card body
+        # instead of the auto-derived current_state/key_signal/major_uncertainty composition below.
+        return summary["current_judgment_ko"]
+
     card = pm.build_executive_card(report)
     current_state = ph._strip_internal_ids(ph._narrative_text(card["current_state"]), "PUBLIC")
     key_signal_raw = ph._narrative_text(card["key_signal"])

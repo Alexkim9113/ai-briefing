@@ -18,6 +18,7 @@ import report_engine as re_  # noqa: E402
 import presentation_model as pm  # noqa: E402
 import pdf_pipeline as pp  # noqa: E402
 import source_registry as sreg  # noqa: E402
+import reader_summaries as rsum  # noqa: E402
 
 BANNED_SENTENCES = (
     "AI 데이터센터 때문에 미국 전력 위기가 발생했다.",
@@ -64,8 +65,15 @@ def validate_one(intelligence_id):
         r"\b(?:claim_|hyp_|intel_|evt_)[a-zA-Z0-9_]*", print_html.split('id="sources"', 1)[-1]
     ) if 'id="sources"' in print_html else None
 
+    # Reader Summary round: for a report with a hand-authored reader_summary, the bare topic
+    # string previously only appeared incidentally inside the now-superseded WHAT_WE_DO_NOT_KNOW
+    # narrative text (e.g. "... AI_ENERGY_INFRA reporting") -- never title/h1 text, which already
+    # used the human-readable display_title. The presentation's own topic field is still checked
+    # for consistency instead.
+    title_topic_match = (presentation["topic"] == r["topic"]) if rsum.get_reader_summary(intelligence_id) \
+        else (r["topic"] in print_html)
     checks = {
-        "title_topic_match": r["topic"] in print_html,
+        "title_topic_match": title_topic_match,
         "sources_section_present": "Sources" in print_html,
         "real_sources_section_present": "sources-h" in print_html,
         "real_sources_has_clickable_link": '<a href="http' in print_html,

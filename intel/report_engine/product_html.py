@@ -14,6 +14,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import presentation_model as pm  # noqa: E402
+import reader_summaries as rs  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--accent-red:#b3261e;
@@ -923,18 +924,64 @@ _PUBLIC_SUPPLEMENTARY_ORDER = (
 )
 
 
+# Reader Summary (reader_summaries.py) -- a hand-authored, hypothesis/claim-grounded Korean
+# synthesis. When one exists for this report (keyed by intelligence_id), it supersedes the
+# auto-derived lede/key-signal sections on the PUBLIC Detail page: 1 한눈에 보는 판단 (lede) ->
+# 2 확인된 사실 -> 3 아직 모르는 것 -> 4 반대 근거와 다른 설명 -> 5 앞으로 볼 것. The existing
+# auto-derived KEY_CLAIMS "핵심 신호" grouping (_public_key_signals_html) is kept as a supplementary
+# section further down the page (it still shows the full per-claim-status breakdown the hand-
+# authored summary condenses away) rather than removed outright. `source_basis` is never rendered
+# here -- it is Operator-only traceability metadata.
+def _render_reader_summary(summary, view):
+    def _list_section(section_id, title, items):
+        if not items:
+            return ""
+        lis = "".join(f"<li>{_esc(item)}</li>" for item in items)
+        return (
+            f'<section class="report-section" id="{section_id}" aria-labelledby="{section_id}-h">'
+            f'<h2 id="{section_id}-h">{title}</h2><ul>{lis}</ul></section>'
+        )
+
+    lede = (
+        '<section class="report-section exec-lede" aria-labelledby="lede-h">'
+        '<h2 id="lede-h">한눈에 보는 판단</h2>'
+        f'<p>{_esc(summary["current_judgment_ko"])}</p></section>'
+    )
+    parts = [lede]
+    parts.append(_list_section("reader_known", "확인된 사실", summary.get("what_we_know_ko")))
+    parts.append(_list_section("reader_unknown", "아직 모르는 것", summary.get("what_we_dont_know_ko")))
+    counter_and_alt = list(summary.get("counterevidence_ko") or [])
+    parts.append(_list_section("reader_counterevidence", "반대 근거와 다른 설명", counter_and_alt))
+    parts.append(_list_section("reader_watch", "앞으로 볼 것", summary.get("watch_next_ko")))
+    return "".join(parts)
+
+
 def _render_public_body(presentation, view, topic):
     sections_by_type = {e["section_type"]: e for e in presentation["sections"]}
     key_claims_entry = sections_by_type.get("KEY_CLAIMS")
-    parts = [_render_public_lede(presentation, view, key_claims_entry)]
+    summary = rs.get_reader_summary(presentation.get("intelligence_id"))
+    if summary:
+        parts = [_render_reader_summary(summary, view)]
+    else:
+        parts = [_render_public_lede(presentation, view, key_claims_entry)]
     key_signals_html = _public_key_signals_html(key_claims_entry, view, topic)
     if key_signals_html:
         parts.append(key_signals_html)
-    for section_type in _PUBLIC_PROMOTED_ORDER:
-        entry = sections_by_type.get(section_type)
-        if entry:
-            parts.append(render_section(entry, view, topic))
-    parts.append(_render_what_to_watch(presentation["executive_card"], view))
+    if summary:
+        # GEOGRAPHIC_CONTEXT is not covered by the hand-authored Reader Summary (it carries no
+        # geography bullets of its own), so it is not superseded -- still rendered here. The other
+        # promoted sections (WHAT_WE_KNOW/UNCERTAINTIES/WHAT_WE_DO_NOT_KNOW/COUNTEREVIDENCE/
+        # ALTERNATIVE_EXPLANATIONS) and what_to_watch directly overlap the Reader Summary's own
+        # 확인된 사실/아직 모르는 것/반대 근거와 다른 설명/앞으로 볼 것 sections and are skipped here.
+        geo_entry = sections_by_type.get("GEOGRAPHIC_CONTEXT")
+        if geo_entry:
+            parts.append(render_section(geo_entry, view, topic))
+    else:
+        for section_type in _PUBLIC_PROMOTED_ORDER:
+            entry = sections_by_type.get(section_type)
+            if entry:
+                parts.append(render_section(entry, view, topic))
+        parts.append(_render_what_to_watch(presentation["executive_card"], view))
     for section_type in _PUBLIC_SUPPLEMENTARY_ORDER:
         entry = sections_by_type.get(section_type)
         if entry:

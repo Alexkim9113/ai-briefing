@@ -93,13 +93,20 @@ def test_public_detail_section_ordering_matches_spec():
 
 
 def test_public_detail_what_to_watch_section_renders():
+    import reader_summaries as rsum
     for p in _real_reports():
         r = json.loads(p.read_text(encoding="utf-8"))
         pub = re_.build_public_view(r)
         presentation = pm.build_presentation(pub)
         html_doc = ph.render_product_html(presentation, source_cards=[], view="PUBLIC", real_sources=[])
         assert "앞으로 볼 것" in html_doc
-        assert 'id="what_to_watch"' in html_doc
+        if rsum.get_reader_summary(r.get("intelligence_id")):
+            # Reader Summary round: the auto-derived "앞으로 볼 것" (id="what_to_watch") section is
+            # superseded by the Reader Summary's own watch_next_ko section (id="reader_watch") --
+            # same heading text, hand-verified content grounded in EVIDENCE_GAPS.
+            assert 'id="reader_watch"' in html_doc
+        else:
+            assert 'id="what_to_watch"' in html_doc
 
 
 def test_public_detail_sources_section_still_renders_last():

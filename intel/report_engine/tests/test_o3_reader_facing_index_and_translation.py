@@ -10,6 +10,7 @@ sys.path.insert(0, str(HERE.parent))
 import public_delivery as pd  # noqa: E402
 import product_html as ph  # noqa: E402
 import report_engine as re_  # noqa: E402
+import reader_summaries as rsum  # noqa: E402
 
 REPORTS_DIR = re_.REPORTS_DIR
 
@@ -44,7 +45,15 @@ def test_index_card_summary_is_short_and_derived_not_raw_current_state():
         raw = current_state_blocks[0] if current_state_blocks else ""
         summary = pd.build_index_card_summary(r)
         assert summary != raw
-        assert "현재 판단:" in summary
+        # Reader Summary round: when a hand-authored reader_summary exists for this report
+        # (reader_summaries.py), build_index_card_summary() returns its current_judgment_ko
+        # directly -- a short, already-composed judgment with no "현재 판단:" label prefix (that
+        # prefix belongs only to the auto-derived fallback composition used for reports with no
+        # reader_summary entry).
+        if rsum.get_reader_summary(r.get("intelligence_id")):
+            assert summary == rsum.get_reader_summary(r["intelligence_id"])["current_judgment_ko"]
+        else:
+            assert "현재 판단:" in summary
 
 
 def test_rendered_index_page_has_pills_and_no_banned_tokens():
@@ -102,6 +111,14 @@ def test_counterevidence_and_alternative_explanations_sections_still_render_in_p
         presentation = pm.build_presentation(pub)
         html_doc = ph.render_product_html(presentation, source_cards=[], view="PUBLIC",
                                            real_sources=[])
+        has_summary = rsum.get_reader_summary(r.get("intelligence_id")) is not None
+        if has_summary:
+            # Reader Summary round: for a report with a hand-authored reader_summary, the
+            # COUNTEREVIDENCE/ALTERNATIVE_EXPLANATIONS auto-derived sections are superseded by the
+            # Reader Summary's own "반대 근거와 다른 설명" section (counterevidence_ko) -- the same
+            # meaning, in hand-verified plain Korean, rather than the raw enum-coded block render.
+            assert 'id="reader_counterevidence"' in html_doc
+            continue
         if r["sections"].get("COUNTEREVIDENCE", {}).get("content_blocks"):
             assert 'id="counterevidence"' in html_doc
         if r["sections"].get("ALTERNATIVE_EXPLANATIONS", {}).get("content_blocks"):
