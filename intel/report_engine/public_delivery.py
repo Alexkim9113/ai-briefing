@@ -189,8 +189,13 @@ def _render_index_page(index):
         if e["available_formats"]["pdf"]:
             href = _html.escape(e["report_id"]) + "/report.pdf"
             pdf_link = f" <a class='pdf' href='{href}'>PDF</a>"
+        # O-1F: the index page's summary is the report's own raw CURRENT_STATE text (see
+        # build_intelligence_index_entry above) and can embed the same internal ids/repo file
+        # paths the detail page's product_html renderer strips -- reuse that exact helper here
+        # rather than duplicating the stripping logic.
+        summary = ph._strip_internal_ids(str(e["summary"]))
         return (f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
-                f'<p>{_html.escape(e["summary"])}</p>'
+                f'<p>{_html.escape(summary)}</p>'
                 f'<p><span class="badge">Evidence Status: {_html.escape(e["readiness"])}</span> '
                 f'<span class="meta">Updated {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p></li>')
 

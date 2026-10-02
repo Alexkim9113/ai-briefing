@@ -66,13 +66,20 @@ def _badge(value):
 
 
 def render_executive_card(card):
+    # O-1F: these free-text narrative fields (current_state/key_signal/major_uncertainty/
+    # what_to_watch) can themselves embed internal ids/repo file paths (same family as the
+    # content_block narrative fields below) -- stripped the same way, meaning preserved.
+    current_state = _strip_internal_ids(str(card["current_state"]))
+    key_signal = _strip_internal_ids(str(card["key_signal"]))
+    major_uncertainty = _strip_internal_ids(str(card["major_uncertainty"]))
+    what_to_watch = [_strip_internal_ids(str(w)) for w in card["what_to_watch"]]
     return (
         '<section aria-label="Executive Intelligence" class="exec-card">'
-        f'<dl><dt>Current State</dt><dd>{_esc(card["current_state"])}</dd>'
-        f'<dt>Key Signal</dt><dd>{_esc(card["key_signal"])} {_badge(card["key_signal_status"])}</dd>'
+        f'<dl><dt>Current State</dt><dd>{_esc(current_state)}</dd>'
+        f'<dt>Key Signal</dt><dd>{_esc(key_signal)} {_badge(card["key_signal_status"])}</dd>'
         f'<dt>Evidence Status</dt><dd>{_badge(card["evidence_status"])}</dd>'
-        f'<dt>Major Uncertainty</dt><dd>{_esc(card["major_uncertainty"])}</dd>'
-        f'<dt>What To Watch</dt><dd><ul>{"".join(f"<li>{_esc(w)}</li>" for w in card["what_to_watch"])}</ul></dd>'
+        f'<dt>Major Uncertainty</dt><dd>{_esc(major_uncertainty)}</dd>'
+        f'<dt>What To Watch</dt><dd><ul>{"".join(f"<li>{_esc(w)}</li>" for w in what_to_watch)}</ul></dd>'
         '</dl></section>'
     )
 
@@ -96,7 +103,10 @@ def _render_chart(chart):
 
 def _render_block(block, section_type):
     if isinstance(block, str):
-        return f"<li>{_esc(block)}</li>"
+        # O-1F: bare-string content_blocks (e.g. SOURCE_PROVENANCE's source_ids) can themselves be
+        # internal repo file paths (e.g. "intel/hypothesis/hypotheses.json#...") rather than a real
+        # URL -- strip the same way structural fields are stripped elsewhere on this page.
+        return f"<li>{_esc(_strip_internal_ids(block))}</li>"
     if not isinstance(block, dict):
         return f"<li>{_esc(block)}</li>"
     if "text" in block:
@@ -130,7 +140,8 @@ def _render_block(block, section_type):
         # itself mention an internal evt_/claim_/series_ id>}). Structural provenance data, same
         # dict-repr-fallback bug family as EVIDENCE_MAP/TEMPORAL_CONTEXT (O-1E).
         scope = _strip_internal_ids(str(block.get("scope", "")))
-        return (f"<li>{_esc(block.get('geography'))} ({_esc(block.get('basis'))})"
+        basis = _strip_internal_ids(str(block.get("basis", "")))
+        return (f"<li>{_esc(block.get('geography'))} ({_esc(basis)})"
                 f"{': ' + _esc(scope) if scope else ''}</li>")
     if "source_id" in block:
         # SOURCE_PROVENANCE entries ({'source_id': <url, or 'event:evt_...'>, 'note': ...}). A real
@@ -141,6 +152,23 @@ def _render_block(block, section_type):
         if block.get("note"):
             text += f" -- {_esc(block['note'])}"
         return f"<li>{text}</li>"
+    if "reason" in block and "gap_type" in block:
+        # KNOWN_GAPS / EVIDENCE_GAPS entries ({'gap_type':..., 'reason': <free-text narrative that
+        # may itself reference internal claim_/hyp_/intel_/series_ ids, e.g. "migrated to canonical
+        # Claims claim_a11c5.../claim_f584...">, 'status':...}). This previously fell through to the
+        # raw dict-repr fallback below, which is how O-1F found bare claim_/intel_...json ids baked
+        # into the AI_ENERGY_INFRA Report v4 narrative text leaking onto the Public page. The ids
+        # here are threaded through dense, multi-paragraph internal engineering narrative (file
+        # paths, numbered audit conditions) without a single clean referent, so -- consistent with
+        # the O-1D/O-1E precedent of not forcing an unsafe substitution -- we withhold the bare id
+        # tokens with the same neutral placeholder used for structural fields elsewhere on this
+        # page, rather than inventing a human label we cannot derive with confidence. This never
+        # changes the sentence's meaning, only withholds the internal identifier substrings.
+        reason = _strip_internal_ids(str(block.get("reason", "")))
+        gap_type = _esc(block.get("gap_type"))
+        status = block.get("status")
+        extra = f" {_badge(status)}" if status else ""
+        return f"<li><strong>{gap_type}</strong>: {_esc(reason)}{extra}</li>"
     return f"<li>{_esc(block)}</li>"
 
 
@@ -153,12 +181,25 @@ _INTERNAL_ID_RE = _re.compile(
     r"\b(?:claim_|series_|intel_|hyp_|evt_|rel_|event:evt_)[a-zA-Z0-9_]*"
 )
 
+# O-1F: the EVIDENCE_WEIGHTING_GAP known_gaps 'reason' narrative also threads in bare repo file
+# paths/filenames (e.g. "intel/hypothesis/hypothesis_model.py", "o1b_contradiction_resolution.json")
+# and internal function names (e.g. "evaluate_hypothesis_sufficiency()") alongside the canonical
+# ids above. These are mechanical, low-risk substitutions -- a filename or path token withheld in
+# place leaves the surrounding sentence's meaning intact -- unlike the dense multi-condition prose
+# around them, which we do not attempt to rewrite (see the EVIDENCE_WEIGHTING_GAP branch above).
+_INTERNAL_PATH_RE = _re.compile(
+    r"\b(?:intel/[a-zA-Z0-9_./-]+|[a-zA-Z_][a-zA-Z0-9_]*\.(?:json|py))\b"
+    r"|\b[a-zA-Z_][a-zA-Z0-9_]*\(\)"
+)
+
 
 def _strip_internal_ids(text):
     """Public-view-only: replaces any bare internal id token embedded inside an otherwise
     human-readable structural-field string with a neutral placeholder, without altering the
     surrounding sentence/meaning."""
-    return _INTERNAL_ID_RE.sub("[internal id withheld in Public view]", text)
+    text = _INTERNAL_ID_RE.sub("[internal id withheld in Public view]", text)
+    text = _INTERNAL_PATH_RE.sub("[internal reference withheld in Public view]", text)
+    return text
 
 
 def _public_source_label(source):
@@ -166,7 +207,7 @@ def _public_source_label(source):
     real document URL/path) is replaced with a neutral label. Real URLs/paths pass through
     unchanged -- this never invents or alters any fact, it only withholds an internal id."""
     s = str(source) if source is not None else ""
-    if any(s.startswith(p) for p in _INTERNAL_ID_PREFIXES):
+    if any(s.startswith(p) for p in _INTERNAL_ID_PREFIXES) or s.startswith("intel/"):
         return "internal data series/event reference (id withheld in Public view)"
     return source
 

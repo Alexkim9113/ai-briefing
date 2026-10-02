@@ -4,6 +4,7 @@
 # evaluation layer. Manual def test_...(): + bare assert, no pytest/unittest, per project
 # convention. Snapshot/restore discipline for hypotheses.json (N-9B pattern), never destroying
 # canonical data.
+import atexit
 import sys
 from pathlib import Path
 
@@ -34,6 +35,11 @@ def _cleanup():
     _snapshot_real_files_once()
     if m.HYPOTHESES_PATH.exists():
         m.HYPOTHESES_PATH.unlink()
+
+
+# O-1F fix: see test_claim_model.py's identical fix for the full rationale -- main()'s
+# try/finally never runs under pytest, so restore must also be registered at interpreter exit.
+atexit.register(_restore_real_files)
 
 
 def _claim(claim_id, text, evidence_independence=None, forecast_fields=None, created_from=None,

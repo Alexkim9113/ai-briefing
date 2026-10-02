@@ -1,3 +1,4 @@
+import atexit
 import sys
 from pathlib import Path
 
@@ -34,6 +35,15 @@ def _cleanup():
     for p in (m.CLAIMS_PATH, m.RELATIONS_PATH):
         if p.exists():
             p.unlink()
+
+
+# O-1F fix: main()'s try/finally only runs _restore_real_files() under `python3 file.py` --
+# pytest collects and calls the test_* functions directly without ever calling main(), so under
+# pytest the canonical file was deleted by the first test's _cleanup() and NEVER restored. Also
+# register restore at interpreter exit (same pattern already used in test_url_resolver.py /
+# test_source_registry.py / test_live_result_guard.py), which fires on both invocation styles and
+# on an unhandled exception, independent of whether main() ever runs.
+atexit.register(_restore_real_files)
 
 
 def test_claim_identity_stable_across_upserts():

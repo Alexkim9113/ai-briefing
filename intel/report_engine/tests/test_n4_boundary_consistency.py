@@ -211,6 +211,32 @@ def test_public_html_temporal_geographic_provenance_has_no_series_or_event_id_le
         assert not leak_pattern.search(doc), f"{iid}: series_/evt_ id leaked into Public HTML"
 
 
+def test_o1f_public_html_zero_internal_id_leak():
+    """O-1F closure -- the known_gaps/EVIDENCE_WEIGHTING_GAP 'reason' narrative (rendered via
+    product_html.py's "reason"+"gap_type" _render_block branch and executive-card/source-string
+    fields), which O-1D/O-1E explicitly left unpatched as a content-authoring issue, has now been
+    closed at the PRESENTATION layer only (product_html.py/_public_source_label/_strip_internal_ids
+    extended to also run over executive-card narrative fields, bare-string content_blocks, the
+    GEOGRAPHIC_CONTEXT 'basis' field, and repo file-path/.json/.py/function-name tokens, plus the
+    Public Index page's summary in public_delivery.py reusing the same helper). The canonical
+    Report v4 JSON itself is NOT modified -- see o1f_before_snapshot.json / the O-1F handback for
+    the byte-identical hash proof. This asserts the full id/path leak surface is now empty for
+    both real reports, not just the series_/evt_ subset O-1E could assert zero for."""
+    import re as _re
+    leak_pattern = _re.compile(
+        r"\b(?:claim_|series_|intel_|hyp_|evt_|rel_|event:evt_)[a-zA-Z0-9_]+"
+        r"|\bintel/[a-zA-Z0-9_./-]+|\b[a-zA-Z_][a-zA-Z0-9_]*\.(?:json|py)\b"
+    )
+    for iid in REAL_IDS:
+        _, _, _, doc = _public_product_html(iid)
+        matches = leak_pattern.findall(doc)
+        # The page's own report_id (e.g. "report_id=report_intel_..._v4") is its own public-facing
+        # identifier -- the equivalent of a URL slug -- shown by design elsewhere on the same page
+        # (the intelligence index links to it), not a narrative-text id leak. Exclude only that.
+        matches = [m for m in matches if not _re.fullmatch(r"intel_[0-9a-f]{16}(?:_v\d+)?", m)]
+        assert matches == [], f"{iid}: internal id/path leak(s) found in Public HTML: {matches}"
+
+
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0

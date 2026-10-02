@@ -1,0 +1,65 @@
+{
+ "phase": "O-1F",
+ "computed_at": "2026-10-02",
+ "git_head_before": "cbc815a1c914131ed0bd487bcdea6d170f02ecfe",
+ "git_status_before": "clean (up to date with origin/main)",
+ "claims_count": 14,
+ "hypotheses_count": 8,
+ "intelligence_objects": {
+  "intel_87210a61730c22b9": {"topic": "AI_ENERGY_INFRA", "version": 6},
+  "intel_dbab7b01963396b5": {"topic": "AI_LABOR", "version": 1}
+ },
+ "latest_report_ai_energy_infra": "report_intel_87210a61730c22b9_v4",
+ "report_artifact_files": [
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.json",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1.pdf",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_print.html",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_product_public.html",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v1_public.html",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v2.json",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v3.json",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.json",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.pdf",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4_operator.html",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4_print.html",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4_product_public.html",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.pdf",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_print.html",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_product_public.html",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1_public.html"
+ ],
+ "public_pages_built_by_public_delivery_build_public_intelligence_pages": [
+  "intelligence/index.html",
+  "intelligence/index.json",
+  "intelligence/report_intel_87210a61730c22b9_v1/index.html",
+  "intelligence/report_intel_87210a61730c22b9_v1/report.pdf",
+  "intelligence/report_intel_87210a61730c22b9_v2/index.html",
+  "intelligence/report_intel_87210a61730c22b9_v3/index.html",
+  "intelligence/report_intel_87210a61730c22b9_v4/index.html",
+  "intelligence/report_intel_87210a61730c22b9_v4/report.pdf",
+  "intelligence/report_intel_dbab7b01963396b5_v1/index.html",
+  "intelligence/report_intel_dbab7b01963396b5_v1/report.pdf"
+ ],
+ "operator_pages_built_by_operator_ui_build_operator_pages": [
+  "operator/overview/index.html",
+  "operator/gaps/index.html",
+  "operator/rights/index.html",
+  "operator/intelligence_index/index.html",
+  "operator/sources_full.json",
+  "operator/report/report_intel_87210a61730c22b9_v1/index.html",
+  "operator/report/report_intel_87210a61730c22b9_v2/index.html",
+  "operator/report/report_intel_87210a61730c22b9_v3/index.html",
+  "operator/report/report_intel_87210a61730c22b9_v4/index.html",
+  "operator/report/report_intel_dbab7b01963396b5_v1/index.html"
+ ],
+ "canonical_file_sha256_before": {
+  "intel/claims/claims.json": "324e41c7425a6171e9bfaf9906bd1ad9c3487e8cc9a94cda6a3033bbd2088b0b",
+  "intel/hypothesis/hypotheses.json": "f295d1f8d9770a72d25eb3b8b4389aba5fe900835a8271029426eafffd73bbe2",
+  "intel/intelligence_objects/intelligence_objects.json": "82d00cc37fde1d7b657f7da73f2532b5f8b890596aba879cc2ab9d38d78a8a6a",
+  "intel/statistical_evidence/statistical_evidence.json": "a36fd8bc821a32ac8bd2abe622d5f85387abb54cfa395f55cd343be322f14ff1",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.json": "beb034796e62d93f9a1921c450dca441812fdd56f99fc42eef46c9a2a9ca9420",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ },
+ "note": "Computed fresh from the real files on disk at O-1F start. AI_LABOR IO/claims/hypotheses/report data is listed for hash-stability verification only and is never modified this phase."
+}

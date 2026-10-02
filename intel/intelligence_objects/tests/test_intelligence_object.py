@@ -1,3 +1,4 @@
+import atexit
 import sys
 from pathlib import Path
 
@@ -32,6 +33,11 @@ def _cleanup():
     _snapshot_real_files_once()
     if m.OBJECTS_PATH.exists():
         m.OBJECTS_PATH.unlink()
+
+
+# O-1F fix: see test_claim_model.py's identical fix for the full rationale -- main()'s
+# try/finally never runs under pytest, so restore must also be registered at interpreter exit.
+atexit.register(_restore_real_files)
 
 
 def test_identity_stable_for_same_topic_question():
