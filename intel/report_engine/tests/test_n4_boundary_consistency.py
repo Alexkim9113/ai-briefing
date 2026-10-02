@@ -172,6 +172,24 @@ def test_negative_control_banned_sentences_absent_from_operator_html():
             assert sentence not in doc
 
 
+def test_public_html_evidence_map_has_no_raw_dict_repr_or_ids():
+    """O-1D final round -- regression test for the EVIDENCE_MAP raw-ID leak (product_html.py
+    _render_block's generic dict fallback used to print Python dict reprs like
+    "{'node_type': 'CLAIM', 'id': 'claim_...'}" straight into Public HTML). Asserts the
+    EVIDENCE_MAP rendering path itself never emits a raw dict repr or a bare internal node id.
+    NOTE: this does not assert zero internal-id substrings anywhere on the page -- a separate,
+    pre-existing issue (internal claim ids baked directly into free-text narrative content in the
+    canonical Report JSON, e.g. report_intel_87210a61730c22b9's LIMITATIONS/METHODOLOGY text) is
+    a content-authoring issue, not a rendering bug, and is out of scope for this fix; see O-1D
+    final-round report for exact locations."""
+    import re as _re
+    dict_repr_pattern = _re.compile(r"\{&#x27;node_type&#x27;")
+    for iid in REAL_IDS:
+        _, _, _, doc = _public_product_html(iid)
+        assert "node_type" not in doc, f"{iid}: raw dict repr leaked into Public HTML"
+        assert not dict_repr_pattern.search(doc), f"{iid}: raw dict repr pattern found"
+
+
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0

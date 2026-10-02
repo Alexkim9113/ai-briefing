@@ -108,6 +108,12 @@ def _render_block(block, section_type):
     if "title" in block:
         return (f"<li>{_esc(block.get('title'))} "
                 f"({_esc(block.get('identity_type'))}: {_esc(block.get('identity_value'))})</li>")
+    if "node_type" in block:
+        # EVIDENCE_MAP entries carry internal graph node references ({'node_type': ..., 'id': ...}).
+        # Per the Public/Operator boundary (never expose internal Claim/Evidence/Hypothesis IDs in
+        # Public), render a neutral, human-readable label instead of the raw dict repr / internal ID.
+        label = str(block.get("node_type", "")).replace("_", " ").title() or "Evidence item"
+        return f"<li>{_esc(label)} reference (internal id withheld in Public view)</li>"
     return f"<li>{_esc(block)}</li>"
 
 
