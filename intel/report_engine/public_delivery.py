@@ -27,7 +27,13 @@ def _source_cards(pub_report, documents_by_id):
         if sid in documents_by_id:
             cards.append(re_.build_source_card(documents_by_id[sid]))
         else:
-            cards.append({"title": sid, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
+            # O-1E: a non-document provenance id (e.g. "event:evt_...") must not be shown as the
+            # card's visible title in Public -- it is an internal reference, not reader-facing
+            # text. Use a neutral label; the raw id is still available to Operator via the
+            # canonical JSON, never altered here.
+            title = ph._public_source_label(sid) if (sid or "").startswith(("event:", "claim_",
+                "series_", "intel_", "hyp_", "evt_", "rel_")) else sid
+            cards.append({"title": title, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
                           "access_status": "UNKNOWN", "rights_status": "UNKNOWN"})
     return cards
 

@@ -114,7 +114,61 @@ def _render_block(block, section_type):
         # Public), render a neutral, human-readable label instead of the raw dict repr / internal ID.
         label = str(block.get("node_type", "")).replace("_", " ").title() or "Evidence item"
         return f"<li>{_esc(label)} reference (internal id withheld in Public view)</li>"
+    if "period_start" in block or "period_end" in block:
+        # TEMPORAL_CONTEXT entries ({'period_start':..., 'period_end':..., 'source': <series_/evt_
+        # id or a real document path>, 'note': ...}). The 'source' field is internal provenance,
+        # not reader-facing text -- a bare series_/evt_/claim_/intel_/hyp_ id must never be shown
+        # (O-1E: this fell through to the raw dict-repr fallback below and leaked series_/evt_ IDs).
+        source = block.get("source")
+        source_label = _public_source_label(source)
+        text = f"{_esc(block.get('period_start'))} - {_esc(block.get('period_end'))} ({_esc(source_label)})"
+        if block.get("note"):
+            text += f" -- {_esc(block['note'])}"
+        return f"<li>{text}</li>"
+    if "geography" in block and "basis" in block:
+        # GEOGRAPHIC_CONTEXT entries ({'geography':..., 'basis':..., 'scope': <free text that may
+        # itself mention an internal evt_/claim_/series_ id>}). Structural provenance data, same
+        # dict-repr-fallback bug family as EVIDENCE_MAP/TEMPORAL_CONTEXT (O-1E).
+        scope = _strip_internal_ids(str(block.get("scope", "")))
+        return (f"<li>{_esc(block.get('geography'))} ({_esc(block.get('basis'))})"
+                f"{': ' + _esc(scope) if scope else ''}</li>")
+    if "source_id" in block:
+        # SOURCE_PROVENANCE entries ({'source_id': <url, or 'event:evt_...'>, 'note': ...}). A real
+        # URL is reader-facing provenance and is shown as-is; an internal id reference (e.g.
+        # 'event:evt_...') is replaced with a neutral label (O-1E).
+        source_label = _public_source_label(block.get("source_id"))
+        text = _esc(source_label)
+        if block.get("note"):
+            text += f" -- {_esc(block['note'])}"
+        return f"<li>{text}</li>"
     return f"<li>{_esc(block)}</li>"
+
+
+_INTERNAL_ID_PREFIXES = ("claim_", "series_", "intel_", "hyp_", "evt_", "rel_", "event:evt_")
+
+
+import re as _re
+
+_INTERNAL_ID_RE = _re.compile(
+    r"\b(?:claim_|series_|intel_|hyp_|evt_|rel_|event:evt_)[a-zA-Z0-9_]*"
+)
+
+
+def _strip_internal_ids(text):
+    """Public-view-only: replaces any bare internal id token embedded inside an otherwise
+    human-readable structural-field string with a neutral placeholder, without altering the
+    surrounding sentence/meaning."""
+    return _INTERNAL_ID_RE.sub("[internal id withheld in Public view]", text)
+
+
+def _public_source_label(source):
+    """Public-view-only: a 'source' / 'source_id' value that is itself an internal id (not a
+    real document URL/path) is replaced with a neutral label. Real URLs/paths pass through
+    unchanged -- this never invents or alters any fact, it only withholds an internal id."""
+    s = str(source) if source is not None else ""
+    if any(s.startswith(p) for p in _INTERNAL_ID_PREFIXES):
+        return "internal data series/event reference (id withheld in Public view)"
+    return source
 
 
 def render_section(entry):

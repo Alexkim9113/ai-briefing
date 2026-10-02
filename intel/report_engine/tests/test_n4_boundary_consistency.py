@@ -32,7 +32,11 @@ def _source_cards(pub_report):
         if sid in DOCS:
             cards.append(re_.build_source_card(DOCS[sid]))
         else:
-            cards.append({"title": sid, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
+            # O-1E: mirror public_delivery.py's _source_cards fix -- a non-document provenance id
+            # (e.g. "event:evt_...") must not be shown as the visible card title in Public.
+            title = ph._public_source_label(sid) if (sid or "").startswith(("event:", "claim_",
+                "series_", "intel_", "hyp_", "evt_", "rel_")) else sid
+            cards.append({"title": title, "publisher": "NON_DOCUMENT_PROVENANCE", "date": "UNKNOWN",
                           "access_status": "UNKNOWN", "rights_status": "UNKNOWN"})
     return cards
 
@@ -188,6 +192,23 @@ def test_public_html_evidence_map_has_no_raw_dict_repr_or_ids():
         _, _, _, doc = _public_product_html(iid)
         assert "node_type" not in doc, f"{iid}: raw dict repr leaked into Public HTML"
         assert not dict_repr_pattern.search(doc), f"{iid}: raw dict repr pattern found"
+
+
+def test_public_html_temporal_geographic_provenance_has_no_series_or_event_id_leak():
+    """O-1E -- regression test for the TEMPORAL_CONTEXT/SOURCE_PROVENANCE/GEOGRAPHIC_CONTEXT raw
+    dict-repr leak (same bug family as O-1D's EVIDENCE_MAP fix, different block shapes:
+    {'period_start':..., 'source': 'series_...'/'evt_...'}, {'source_id': 'event:evt_...'},
+    {'geography':..., 'scope': '...evt_... embedded in free text'}). Asserts no bare series_/evt_
+    id appears in the Public HTML for either real intelligence object. Does NOT assert zero
+    claim_/intel_/hyp_ substrings anywhere on the page -- those are the separate, pre-existing
+    narrative-text issue documented in test_public_html_evidence_map_has_no_raw_dict_repr_or_ids
+    and in the O-1E round report, intentionally left unpatched (editing canonical Report JSON
+    narrative content is out of scope for a presentation-only fix)."""
+    import re as _re
+    leak_pattern = _re.compile(r"\b(?:series_|evt_|event:evt_)[a-zA-Z0-9_]+")
+    for iid in REAL_IDS:
+        _, _, _, doc = _public_product_html(iid)
+        assert not leak_pattern.search(doc), f"{iid}: series_/evt_ id leaked into Public HTML"
 
 
 def main():
