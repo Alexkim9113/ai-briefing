@@ -98,13 +98,6 @@ jobs:
         run: |
           git pull -q --rebase -X theirs origin main || true   # 그 사이 올라온 에디터 글까지 받아서
           python briefing.py build                             # 다시 만든다(에디터 글이 사라지지 않게)
-          # N-5 Public Intelligence Page -- briefing.py를 전혀 수정하지 않는 독립 빌드 스텝
-          # (n5_public_integration_decision.json 참고). site/는 이미 build()가 만든 뒤이고,
-          # 실패해도 사이트 게시 자체는 절대 막지 않는다(fail-soft).
-          python intel/report_engine/public_delivery.py site/ || echo "[intelligence] 생성 건너뜀(비치명적)"
-          # N-5 Operator Workspace(PUBLIC_SAFE_OPERATOR -- GitHub Pages는 인증이 없으므로
-          # 민감 데이터를 전혀 쓰지 않는 inspection 전용 뷰만 생성한다). 동일하게 fail-soft.
-          python intel/operator_workspace/operator_ui.py site/ || echo "[operator] 생성 건너뜀(비치명적)"
           cd site
           git init -q -b gh-pages
           git config user.name "briefing-bot"
@@ -112,6 +105,23 @@ jobs:
           git add -A
           git commit -q -m "사이트 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+          cd ..
+          # O-3A PUBLIC FREEZE / OPERATOR-PRIVATE: Intelligence/Operator 페이지는 더 이상
+          # gh-pages(= metaxis.kr, 인증 없는 공개 사이트)에 게시하지 않는다. GitHub Pages는
+          # 정적 호스팅이라 클라이언트 측 암호 게이트로는 실제 인증을 보장할 수 없으므로,
+          # 인증 계층이 마련되기 전까지는 intel_private/ 아래에 빌드해 private 저장소의
+          # main 브랜치에만 커밋한다 (저장소 자체가 private이므로 GitHub 로그인 없이는
+          # 접근 불가). intel/CONTRACTS.md 및 Te의 O-3 스펙(섹션 3, 24) 참고.
+          python intel/report_engine/public_delivery.py intel_private/ || echo "[intelligence] 생성 건너뜀(비치명적)"
+          python intel/operator_workspace/operator_ui.py intel_private/ || echo "[operator] 생성 건너뜀(비치명적)"
+      - name: Operator 빌드 결과 저장(private main 브랜치, gh-pages 아님)
+        run: |
+          git add intel_private
+          git diff --cached --quiet || git commit -m "Operator 빌드 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          for i in 1 2 3; do
+            git push && break
+            git fetch origin main && git rebase -X theirs origin/main
+          done
 
   # PRODUCTION EVIDENCE SUPPLY v1.0 SUBSTEP G/H(운영자 승인 2026-09-29). Evidence Pipeline을
   # 완전히 분리된 job으로 SHADOW 실행한다 — build job과 독립된 concurrency group을 써서
