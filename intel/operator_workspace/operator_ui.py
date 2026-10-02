@@ -20,6 +20,11 @@ import report_engine as re_  # noqa: E402
 # logic as Public/Print/PDF, per 33G), never product_html.py: Operator must keep full internal
 # provenance (claim_id, evidence_independence, claim_type) that Public deliberately withholds.
 import source_registry as sreg  # noqa: E402
+sys.path.insert(0, str(HERE.parent / "daily_taxonomy"))
+sys.path.insert(0, str(HERE.parent / "intelligence_candidate"))
+sys.path.insert(0, str(HERE.parent / "ai_relevance_gate"))
+import taxonomy as _taxonomy  # noqa: E402
+import candidate_engine as _candidates  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a;--accent:#3552c9;--soft:#eef1fb}
@@ -59,12 +64,16 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 }
 """
 
-NAV_ITEMS = ("overview", "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
+NAV_ITEMS = ("overview", "daily_discovery", "emerging_issues", "research_queue",
+             "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
 
 # Korean-first labels (Te's O-2C mapping). Presentation text only -- never changes route slugs,
 # internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
 KO_LABELS = {
     "overview": "운영 현황",
+    "daily_discovery": "데일리 디스커버리",
+    "emerging_issues": "이머징 이슈",
+    "research_queue": "리서치",
     "intelligence_index": "인텔리전스 포트폴리오",
     "reports": "보고서",
     "gaps": "미해결 쟁점",
@@ -132,11 +141,12 @@ def _shell(title, active, body, depth=1):
 PUBLIC_SAFE_BANNER = (
     '<div style="border:1px solid var(--line);background:var(--soft);padding:10px 14px;'
     'margin-bottom:16px;font-size:0.85em">'
-    '<strong>METAXIS OPERATOR / PUBLIC-SAFE OPERATIONS VIEW</strong><br>'
-    'This workspace is deployed on GitHub Pages and has no login. It holds only '
-    'public-safe diagnostics (report/claim/evidence status, known gaps, rights status, '
-    'source health, corpus counts, provenance IDs). It never exposes Private Research full '
-    'text, operator private notes, or restricted material. See '
+    '<strong>METAXIS OPERATOR / PRIVATE WORKSPACE</strong><br>'
+    'Since O-3A this workspace is built only into intel_private/ on this repository\'s private '
+    'main branch -- it is no longer published to the public gh-pages site/metaxis.kr. It is '
+    'reachable only to GitHub accounts with repository access (git clone/pull), not via a '
+    'client-side password gate. A browsable, logged-in web Operator is a separate, not-yet-built '
+    'Authentication Phase (O-3 section 34). See '
     '<code>intel/operator_workspace/operator_boundary_contract.json</code> for the full boundary.'
     '</div>'
 )
@@ -542,6 +552,145 @@ def render_source_health():
     return _shell(f"{_ko('source_health')} / Source Health", "source_health", sandbox_block + live_block)
 
 
+# O-3D sections 23-26 -- dedicated 데일리 디스커버리 page, with real field/region filter tabs
+# wired to O-3C's actual 11-field taxonomy output (daily_taxonomy_result.json), not a hardcoded
+# count or a decorative button. Tabs are plain anchor-linked <details>/<section> groups (no JS
+# framework, matching this workspace's static-HTML-only contract) so every count is whatever the
+# last real pipeline run computed.
+def _daily_taxonomy_live():
+    """Best-effort read of the real daily_taxonomy_result.json sidecar. Never raises -- an
+    honest NOT_AVAILABLE state when the taxonomy pipeline hasn't run yet is correct, not an
+    error to hide."""
+    path = HERE.parent / "daily_taxonomy" / "daily_taxonomy_result.json"
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def render_daily_discovery():
+    result = _daily_taxonomy_live()
+    if not result:
+        return _shell(f"{_ko('daily_discovery')} / Daily Discovery", "daily_discovery",
+                       '<h2>데일리 디스커버리</h2>'
+                       '<p class="empty">NOT_AVAILABLE -- daily_taxonomy 파이프라인이 아직 실행되지 '
+                       '않았습니다.</p>')
+
+    field_counts = result["field_counts_any"]
+    region_counts = result["region_counts"]
+    total = result["total_pass_documents"]
+
+    region_order = ["KR", "US", "CN", "EU", "JP", "IN", "UNKNOWN"]
+    region_pills = "".join(
+        f'<span class="badge">{_esc(r)}: {_esc(region_counts.get(r, 0))}</span> '
+        for r in region_order if r in region_counts or r != "UNKNOWN"
+    )
+    other_regions = {k: v for k, v in region_counts.items() if k not in region_order}
+    if other_regions:
+        region_pills += "".join(f'<span class="badge">{_esc(k)}: {_esc(v)}</span> '
+                                  for k, v in other_regions.items())
+
+    sections = []
+    for field in _taxonomy.FIELDS:
+        docs = [d for d in result["per_document"].values()
+                if field in ([d["primary_field"]] if d["primary_field"] else []) + d["secondary_fields"]]
+        rows = "".join(
+            f'<li>{_esc(d["title"])} &middot; {_esc(d["country"])} &middot; '
+            f'{_esc(d["ai_relevance"]["gate"])}</li>'
+            for d in docs[:20]
+        )
+        sections.append(
+            f'<details><summary><strong>{_esc(field)}</strong> ({len(docs)}건)</summary>'
+            + (f'<ul>{rows}</ul>' if rows else '<p class="empty">실제 corpus에 이 분야 항목이 없습니다 '
+                                                 '(NO_DISCOVERY_IN_CURRENT_CORPUS).</p>')
+            + (f'<p class="empty">상위 20건만 표시, 전체 {len(docs)}건</p>' if len(docs) > 20 else "")
+            + '</details>'
+        )
+
+    return _shell(f"{_ko('daily_discovery')} / Daily Discovery", "daily_discovery", (
+        f'<h2>오늘의 AI Intelligence Discovery</h2>'
+        f'<p>AI Relevance Gate PASS {total}건 기준 (전체 {_esc(_ai_gate_total())}건 중). '
+        '분야는 복수 라벨 가능(primary+secondary 합산 표시), 지역은 추측 없이 실제 출처 메타데이터 기반.</p>'
+        f'<h3>지역 필터</h3><p>{region_pills}</p>'
+        f'<h3>분야별</h3>{"".join(sections)}'
+    ))
+
+
+def _ai_gate_total():
+    path = HERE.parent / "ai_relevance_gate" / "ai_relevance_gate_result.json"
+    if not path.exists():
+        return "N/A"
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))["document_count"]
+    except Exception:
+        return "N/A"
+
+
+# O-3D section 28 -- dedicated 이머징 이슈 page (full list; overview keeps only a summary).
+def render_emerging_issues():
+    emerging = dd.emerging_issues(data_dir=str(op.ROOT / "data"))
+    body = _emerging_issues_section_html(emerging)
+    return _shell(f"{_ko('emerging_issues')} / Emerging Issues", "emerging_issues", body)
+
+
+# O-3D sections 14-18, 29 -- 리서치(Research Queue) page. Shows the real research_queue.json
+# the Candidate Engine maintains, grouped into Te's 4 buckets. Hermes is explicitly not
+# connected yet (section 17/29) -- said plainly, never implied otherwise.
+_RESEARCH_BUCKETS = (
+    ("RESEARCH_PENDING", "지금 확인할 것"),
+    ("RESEARCH_IN_PROGRESS", "계속 추적"),
+    ("RESEARCH_BLOCKED", "대기"),
+    ("RESEARCH_DONE", "완료"),
+    ("RESEARCH_FAILED", "실패"),
+)
+
+
+def render_research_queue():
+    path = HERE.parent / "intelligence_candidate" / "research_queue.json"
+    rows = []
+    if path.exists():
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            rows = []
+
+    by_status = {}
+    for r in rows:
+        by_status.setdefault(r.get("research_status", "RESEARCH_PENDING"), []).append(r)
+
+    sections = []
+    for status_key, ko_label in _RESEARCH_BUCKETS:
+        bucket_rows = by_status.get(status_key, [])
+        cards = "".join(
+            '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+            f'<div><strong>{_esc(r["title"])}</strong> &middot; {_esc(r["field"])} &middot; '
+            f'{_esc(r["region"])}</div>'
+            f'<div>{_esc(r["reason"])}</div>'
+            f'<div>Priority: {_esc(r["priority"])} &middot; Evidence Quality: {_esc(r["evidence_quality"])} '
+            '(별도 지표, 합산하지 않음)</div>'
+            f'<div>관련 Event {_esc(r["related_events"])} &middot; 독립 출처 {_esc(r["sources"])} &middot; '
+            f'Source Tier: {_esc(r["source_tiers"])}</div>'
+            f'<div class="empty">최초 포착 {_esc(r["first_seen"][:10])} / 최근 갱신 {_esc(r["last_seen"][:10])}</div>'
+            '</div>'
+            for r in bucket_rows
+        )
+        sections.append(
+            f'<h2>{ko_label} ({len(bucket_rows)})</h2>'
+            + (f'<div class="kpi-row">{cards}</div>' if cards
+               else '<p class="empty">해당 항목이 없습니다.</p>')
+        )
+
+    return _shell(f"{_ko('research_queue')} / Research Queue", "research_queue", (
+        '<div style="border:1px solid var(--line);background:var(--soft);padding:10px 14px;'
+        'margin-bottom:16px;font-size:0.85em"><strong>Hermes 미연결</strong> -- 이 Queue는 '
+        'Research Worker Interface를 통해 향후 Hermes(또는 다른 Agent)가 읽을 수 있는 일반 '
+        'schema이지만, 현재 세션에서 자동으로 조사를 수행하는 Agent는 연결되어 있지 않습니다.</div>'
+        + "".join(sections)
+    ))
+
+
 def _index_detail_link(row):
     if row["latest_report_id"]:
         return f'<a href="../report/{_esc(row["latest_report_id"])}/">Inspect</a>'
@@ -570,7 +719,39 @@ def render_intelligence_index():
              f'<th>Detail</th></tr>{body_rows}</table></div>')
     note = ('<p class="empty">No overall quality score is shown here by design -- these are '
             'independent counts only, each traceable to its own backend field.</p>')
-    return _shell(f"{_ko('intelligence_index')} / Intelligence Portfolio", "intelligence_index", f"{table}{note}")
+
+    # O-3D section 30 -- the Intelligence page is restructured around 확정 인텔리전스 (above) +
+    # Candidates + Change Watch + 반대근거 + Known Gaps, so the two existing Intelligence Objects
+    # are never presented as if they were METAXIS's entire scope (section AK/13).
+    cand_path = HERE.parent / "intelligence_candidate" / "intelligence_candidates.json"
+    candidates_html = '<p class="empty">NOT_AVAILABLE -- Candidate Engine이 아직 실행되지 않았습니다.</p>'
+    if cand_path.exists():
+        try:
+            cand_result = json.loads(cand_path.read_text(encoding="utf-8"))
+            cands = cand_result.get("candidates", [])
+            if cand_result.get("status") != "OK":
+                candidates_html = f'<p class="empty">{_esc(cand_result.get("status"))}</p>'
+            elif not cands:
+                candidates_html = '<p class="empty">현재 승격 조건을 충족하는 Candidate가 없습니다.</p>'
+            else:
+                candidates_html = '<div class="kpi-row">' + "".join(
+                    '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+                    f'<div><strong>{_esc(c["title"])}</strong> &middot; {_esc(c["field"])} &middot; '
+                    f'{_esc(c["region"])}</div>'
+                    f'<div>{_esc(c["reason"])}</div>'
+                    f'<div class="empty">상태: {_esc(c["status"])} (Claim/IO 아님, Evidence Quality: '
+                    f'{_esc(c["evidence_quality"])})</div>'
+                    '</div>' for c in cands
+                ) + '</div>'
+        except Exception:
+            pass
+
+    return _shell(f"{_ko('intelligence_index')} / Intelligence Portfolio", "intelligence_index", (
+        f'<h2>확정 인텔리전스 / Confirmed Intelligence</h2>{table}{note}'
+        f'<h2>Intelligence Candidates</h2>'
+        f'{candidates_html}'
+        f'{_change_watch_section_html()}'
+    ))
 
 
 def _hyp_rows_html(hyps):
@@ -783,7 +964,11 @@ def render_provenance_inspector(report_id):
 
 
 PAGES = {
-    "overview": render_overview, "intelligence_index": render_intelligence_index,
+    "overview": render_overview,
+    "daily_discovery": render_daily_discovery,
+    "emerging_issues": render_emerging_issues,
+    "research_queue": render_research_queue,
+    "intelligence_index": render_intelligence_index,
     "reports": render_reports, "gaps": render_gaps,
     "rights": render_rights, "sources": render_sources, "source_health": render_source_health,
 }

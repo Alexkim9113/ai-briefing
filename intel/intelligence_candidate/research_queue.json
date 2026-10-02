@@ -1,0 +1,522 @@
+[
+  {
+    "candidate_id": "cand_2d6ea616afc70525",
+    "title": "엔비디아 관련 동향: LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
+    "reason": "7일 연속 반복, 독립 출처 31개",
+    "field": "산업·경제",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 40,
+    "sources": 31,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 7,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_5b10d6c5d5fed530",
+    "title": "오픈AI",
+    "reason": "7일 연속 반복, 독립 출처 28개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 40,
+    "sources": 28,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 7,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_2b35ee3d9209e767",
+    "title": "미국",
+    "reason": "7일 연속 반복, 독립 출처 21개",
+    "field": "산업·경제",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 22,
+    "sources": 21,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 7,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_c05fe314d2d8f228",
+    "title": "앤트로픽",
+    "reason": "7일 연속 반복, 독립 출처 15개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 17,
+    "sources": 15,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 7,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_2182a580b46e9af3",
+    "title": "트럼프 관련 동향: 빌 게이츠 \"트럼프의 AI 안전장치 거부는 착오...중국도 규제 동참할 것\"",
+    "reason": "6일 연속 반복, 독립 출처 37개",
+    "field": "법·제도",
+    "region": "CHINA",
+    "countries": [
+      "CHINA"
+    ],
+    "related_events": 51,
+    "sources": 37,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_83c17e4459fa43ad",
+    "title": "중국",
+    "reason": "6일 연속 반복, 독립 출처 16개",
+    "field": "정책·국제질서",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 17,
+    "sources": 16,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_56fd9cdffe4b51be",
+    "title": "정부 관련 동향: 오픈AI 에이전트 호주 정부 시스템 해킹…\"전대미문 사건\"",
+    "reason": "6일 연속 반복, 독립 출처 15개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 16,
+    "sources": 15,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_b83147ec1608ef02",
+    "title": "구글",
+    "reason": "6일 연속 반복, 독립 출처 10개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 12,
+    "sources": 10,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_ddd2fb64b5f9b141",
+    "title": "한국 관련 동향: [신중론 이후④] 추격국 한국의 ‘AI 정책 속도’는?…“역량은 가속, 규범은 발맞춤”",
+    "reason": "6일 연속 반복, 독립 출처 10개",
+    "field": "교육·사회",
+    "region": "KOREA",
+    "countries": [
+      "KOREA"
+    ],
+    "related_events": 10,
+    "sources": 10,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_ff0290f8ecbf9f3a",
+    "title": "삼성 관련 동향: 삼성전기, 국내·베트남 기판 증설에 6조7천억원 투자(종합)",
+    "reason": "6일 연속 반복, 독립 출처 8개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 12,
+    "sources": 8,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 6,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_2b4bf0ec9f5daee4",
+    "title": "서울대 관련 동향: 서울대기술지주, 'GPU 종속 낮출' AI SW에 베팅 [fn마켓워치]",
+    "reason": "5일 연속 반복, 독립 출처 8개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 8,
+    "sources": 8,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 5,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_0f49f1c66fd9462c",
+    "title": "엘지",
+    "reason": "5일 연속 반복, 독립 출처 4개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 5,
+    "sources": 4,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 5,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_d75c07e1054af551",
+    "title": "메타 관련 동향: 美, AI 의료기기 목록 정비…中은 병원체 메타게놈 검사 시약 허가",
+    "reason": "4일 연속 반복, 독립 출처 10개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 10,
+    "sources": 10,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 4,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_399aadb53397239a",
+    "title": "마이크로소프트",
+    "reason": "4일 연속 반복, 독립 출처 5개",
+    "field": "기술",
+    "region": "CHINA",
+    "countries": [
+      "CHINA"
+    ],
+    "related_events": 5,
+    "sources": 5,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 4,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_3d28651f4723f84a",
+    "title": "그록",
+    "reason": "4일 연속 반복, 독립 출처 5개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 5,
+    "sources": 5,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "HIGH",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 4,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_b3d931197132c673",
+    "title": "일본 관련 동향: 일본 애니메이션 성우, AI 목소리 복제 문제로 틱톡과 소송",
+    "reason": "3일 연속 반복, 독립 출처 3개",
+    "field": "산업·경제",
+    "region": "JAPAN",
+    "countries": [
+      "JAPAN"
+    ],
+    "related_events": 3,
+    "sources": 3,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 3,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_6708a294216dcf6b",
+    "title": "아마존",
+    "reason": "2일 연속 반복, 독립 출처 6개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 8,
+    "sources": 6,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_0630222cc3bc5a2c",
+    "title": "애플",
+    "reason": "2일 연속 반복, 독립 출처 4개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 4,
+    "sources": 4,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_47f19b503b3dcb72",
+    "title": "SK하이닉스",
+    "reason": "2일 연속 반복, 독립 출처 3개",
+    "field": "기술",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 3,
+    "sources": 3,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_31e6bcfc40a1388a",
+    "title": "유럽 관련 동향: AI와 U-space의 만남 – 유럽이 아직 해결하지 못한 규제 상의 충돌",
+    "reason": "2일 연속 반복, 독립 출처 3개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 3,
+    "sources": 3,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_166282975797704c",
+    "title": "국회 관련 동향: 'AI 시대, 대한민국 콘텐츠 산업의 새로운 도약과 정책 과제' 정책토론회 29일 국회 개최:동아경제신문 & daenews.co.kr",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_3909fa22d368c03c",
+    "title": "영국 관련 동향: 영국 최대 규모의 테이블탑 컨벤션에서 몇 가지 예외를 제외하고 AI 금지",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "법·제도",
+    "region": "UK",
+    "countries": [
+      "UK"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_c7690f7109a16212",
+    "title": "네이버",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_fce8b4f02fadd315",
+    "title": "인도 관련 동향: AI 부담과 고객들의 신중한 태도가 9월 분기 인도 IT 업계 실적에 먹구름을 드리웠다",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "산업·경제",
+    "region": "INDIA",
+    "countries": [
+      "INDIA"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_7d1397481afef07b",
+    "title": "카카오 관련 동향: [AI 정책] “전 국민 1인 1 AI 에이전트” 시동…SKT·카카오·KT, ‘모두의 AI’로 외산 포위망 뚫는다",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  },
+  {
+    "candidate_id": "cand_44d53c4f76cbfb82",
+    "title": "러시아 관련 동향: 트럼프 “AI 공포 과장”…기후변화·러시아 의혹과 비교하며 규제 우려 일축",
+    "reason": "2일 연속 반복, 독립 출처 2개",
+    "field": "법·제도",
+    "region": "GLOBAL/UNKNOWN",
+    "countries": [
+      "GLOBAL/UNKNOWN"
+    ],
+    "related_events": 2,
+    "sources": 2,
+    "source_tiers": "UNKNOWN",
+    "first_seen": "2026-10-02T16:22:08.544331+00:00",
+    "last_seen": "2026-10-02T16:28:35.326036+00:00",
+    "research_status": "RESEARCH_PENDING",
+    "priority": "NORMAL",
+    "evidence_quality": "UNKNOWN",
+    "recurring_days": 2,
+    "tier1_present": false
+  }
+]

@@ -33,7 +33,26 @@ sys.path.insert(0, str(INTEL_DIR / "ai_relevance_gate"))
 sys.path.insert(0, str(INTEL_DIR / "topic_classification"))
 sys.path.insert(0, str(INTEL_DIR / "geographic_evidence"))
 import gate as _gate  # noqa: E402
-import domain_classifier as _domain  # noqa: E402
+
+# domain_classifier.py does `import schema as _evidence_pipeline_schema`, under the bare,
+# generic module name "schema" -- a name report_engine.py/presentation_model.py ALSO use for
+# their own, different schema.py. When this module is imported from within a process that
+# already imported report_engine first (e.g. operator_ui.py, which imports both), Python's
+# sys.modules cache returns the WRONG already-cached "schema" to domain_classifier, which then
+# fails with AttributeError: no REAL_DOMAINS. This is a pre-existing generic-name collision risk
+# in the codebase, not something to fix by renaming domain_classifier.py's own tested import --
+# instead this import is isolated: temporarily clear any existing sys.modules['schema'] so
+# domain_classifier gets a fresh, correct import, then restore whatever was there before so
+# other already-imported modules (report_engine) are unaffected.
+_saved_schema_module = sys.modules.pop("schema", None)
+try:
+    import domain_classifier as _domain  # noqa: E402
+finally:
+    if _saved_schema_module is not None:
+        sys.modules["schema"] = _saved_schema_module
+    else:
+        sys.modules.pop("schema", None)
+
 import geography_inference as _geo  # noqa: E402
 
 # Te's O-3C section E: exactly 11 top-level fields, fixed. No sub-splitting into separate
@@ -101,6 +120,23 @@ _CULTURE_VOCAB = (
     "design", "디자인", "architecture", "건축", "creativ", "창작", "aesthetic", "미학",
 )
 
+# O-3D section 27 -- real-data finding: domain_classifier's own TITLE_KEYWORD bucket maps the
+# bare word "security" to SECURITY_GEOPOLITICS (a LOW-confidence, title-keyword-only signal), so
+# ordinary enterprise security product news ("identity and database security", "agent runtime
+# security") was reading as 국방·안보. A conservative context rule, per Te's instruction not to
+# rebuild the classifier itself: when SECURITY_GEOPOLITICS came in at LOW confidence via
+# TITLE_KEYWORD *and* the title carries an enterprise/product-security term with no genuine
+# national-security term, suppress 국방·안보 for that document (it still keeps 기술/산업·경제 from
+# its other domain signals, if any).
+_ENTERPRISE_SECURITY_VOCAB = (
+    "identity security", "database security", "enterprise security", "cybersecurity product",
+    "cloud security", "endpoint security", "application security", "data security",
+)
+_GENUINE_NATIONAL_SECURITY_VOCAB = (
+    "military", "defense", "weapon", "국방", "군사", "자율무기", "national security", "국가안보",
+    "cyberwarfare", "정보전", "critical infrastructure security", "government security",
+)
+
 _POLICY_INTL_VOCAB = (
     "export control", "수출통제", "sovereign ai", "ai 패권", "미중", "semiconductor control",
     "반도체 통제", "national ai strategy", "국가 ai 전략", "trade war", "geopolit",
@@ -147,10 +183,15 @@ _NARROW_CULTURE_FIELD_TAGS = {"문화·예술", "철학·윤리·예술", "문�
 _BROAD_MEDIA_FIELD_TAGS = {"문화·미디어", "사회·미디어"}
 
 
-def classify_fields(title, existing_domains, source_field=None):
+def classify_fields(title, existing_domains, source_field=None, basis=None, confidence=None):
     """Returns (primary_field, secondary_fields[]). Never forces more than one label when the
     signal doesn't support it (section G: "모든 자료에 억지로 여러 label을 붙이지 않는다")."""
     title_lower = (title or "").lower()
+    suppress_defense = (
+        basis == "TITLE_KEYWORD" and confidence == "LOW"
+        and _text_hits(title_lower, _ENTERPRISE_SECURITY_VOCAB)
+        and not _text_hits(title_lower, _GENUINE_NATIONAL_SECURITY_VOCAB)
+    )
     candidate_fields = []
     for dom in existing_domains:
         for f in _DOMAIN_TO_FIELDS.get(dom, ()):
@@ -162,6 +203,8 @@ def classify_fields(title, existing_domains, source_field=None):
                 for alt in ("법·제도", "미디어·콘텐츠"):
                     if alt not in candidate_fields:
                         candidate_fields.append(alt)
+                continue
+            if f == "국방·안보" and suppress_defense:
                 continue
             if f not in candidate_fields:
                 candidate_fields.append(f)
@@ -221,7 +264,8 @@ def run(out_path=None):
             continue
         title = doc.get("title") or ""
         dom_info = domain_result["per_document"].get(doc_id, {"domains": []})
-        primary, secondary = classify_fields(title, dom_info["domains"], doc.get("field"))
+        primary, secondary = classify_fields(title, dom_info["domains"], doc.get("field"),
+                                              dom_info.get("basis"), dom_info.get("confidence"))
 
         country = doc.get("country") or (newly_classified.get(doc_id) or {}).get("country") or "UNKNOWN"
         region_counts[country] = region_counts.get(country, 0) + 1

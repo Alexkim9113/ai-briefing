@@ -113,10 +113,23 @@ jobs:
           # main 브랜치에만 커밋한다 (저장소 자체가 private이므로 GitHub 로그인 없이는
           # 접근 불가). intel/CONTRACTS.md 및 Te의 O-3 스펙(섹션 3, 24) 참고.
           python intel/report_engine/public_delivery.py intel_private/ || echo "[intelligence] 생성 건너뜀(비치명적)"
+          # O-3D 24/7 PIPELINE: AI Relevance Gate -> 11-Field Taxonomy -> Intelligence Candidate
+          # Engine -> Research Queue, 매 cron 실행마다(사용자 PC와 무관하게) 돈다. 전부 fail-soft:
+          # 한 단계가 실패해도 이후 Operator 빌드는 각자 NOT_AVAILABLE을 정직하게 보여줄 뿐 전체
+          # 게시를 막지 않는다. LLM 호출 없음(결정론적), Claim/Hypothesis/IO/Report 생성 없음.
+          python intel/ai_relevance_gate/gate.py || echo "[ai_relevance_gate] 생성 건너뜀(비치명적)"
+          python intel/daily_taxonomy/taxonomy.py || echo "[daily_taxonomy] 생성 건너뜀(비치명적)"
+          python intel/intelligence_candidate/candidate_engine.py || echo "[candidate_engine] 생성 건너뜀(비치명적)"
           python intel/operator_workspace/operator_ui.py intel_private/ || echo "[operator] 생성 건너뜀(비치명적)"
       - name: Operator 빌드 결과 저장(private main 브랜치, gh-pages 아님)
         run: |
-          git add intel_private
+          git add intel_private \
+                  intel/ai_relevance_gate/ai_relevance_gate_result.json \
+                  intel/daily_taxonomy/daily_taxonomy_result.json \
+                  intel/intelligence_candidate/intelligence_candidates.json \
+                  intel/intelligence_candidate/research_queue.json \
+                  intel/topic_classification/domain_classification_result.json \
+                  intel/geographic_evidence/geography_inference_result.json
           git diff --cached --quiet || git commit -m "Operator 빌드 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
           for i in 1 2 3; do
             git push && break

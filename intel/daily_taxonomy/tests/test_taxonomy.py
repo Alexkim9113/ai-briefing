@@ -124,3 +124,29 @@ def test_six_core_regions_are_representable():
     # geography_inference.py's own country codes) -- this test documents the expected vocabulary
     # rather than asserting the classifier itself restricts outputs to it.
     assert core | extra  # vocabulary sanity, not a runtime assertion on live data
+
+
+def test_enterprise_security_not_defense_section27():
+    # Real-data QA finding (O-3D section 27): domain_classifier's LOW-confidence TITLE_KEYWORD
+    # basis maps bare "security" to SECURITY_GEOPOLITICS -- "identity and database security" is
+    # an enterprise product story, not national security, and must not become 국방·안보.
+    primary, secondary = taxonomy.classify_fields(
+        "Agentic AI puts new pressure on identity and database security",
+        ["SECURITY_GEOPOLITICS"], None, basis="TITLE_KEYWORD", confidence="LOW")
+    assert "국방·안보" not in ([primary] + secondary)
+
+
+def test_genuine_national_security_still_classified_as_defense():
+    primary, secondary = taxonomy.classify_fields(
+        "대전시·육군, 방산 AI 전환 맞손", ["SECURITY_GEOPOLITICS"], None,
+        basis="EXISTING_FIELD", confidence="HIGH")
+    assert "국방·안보" in ([primary] + secondary)
+
+
+def test_enterprise_security_suppression_only_applies_to_low_confidence_title_keyword():
+    # A HIGH-confidence EXISTING_FIELD basis (e.g. a genuinely tagged 국방·안보 document) must
+    # never be suppressed just because its title also contains an enterprise-security phrase.
+    primary, secondary = taxonomy.classify_fields(
+        "database security", ["SECURITY_GEOPOLITICS"], None,
+        basis="EXISTING_FIELD", confidence="HIGH")
+    assert "국방·안보" in ([primary] + secondary)
