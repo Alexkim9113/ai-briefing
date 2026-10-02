@@ -700,5 +700,232 @@
       }
     ],
     "last_updated": "2026-10-01T04:28:40.296291+00:00"
+  },
+  "hyp_b365b95148a3a372": {
+    "hypothesis_id": "hyp_b365b95148a3a372",
+    "topic": "AI_LABOR",
+    "statement": "AI adoption among US firms and workers is measurably increasing",
+    "scope": "US firm/worker-level AI adoption rates, survey data through Nov 2025",
+    "supporting_evidence": [
+      "claim_0da20db21fe1463a:O-2 round 3 WebFetch research"
+    ],
+    "contradicting_evidence": [],
+    "alternative_explanations": [
+      "self-reported survey adoption may overstate actual integrated/productive use"
+    ],
+    "status": "PARTIALLY_SUPPORTED",
+    "uncertainty": [
+      {
+        "cause": "SOURCE_INDEPENDENCE_UNCERTAINTY",
+        "detail": "single Fed FEDS Note synthesizing three surveys; no independent second data source yet cross-validates the adoption rate, and the claim's evidence_independence/source-tier metadata is not yet classified (UNKNOWN tier), so this is adoption-only and should not be read as implying any productivity or employment effect"
+      }
+    ],
+    "last_updated": "2026-10-02T02:50:42.297749+00:00",
+    "hypothesis_code": "HL1",
+    "geographic_scope": "United States",
+    "time_scope": "2025-2026 (survey waves through Nov 2025; published Apr 2026)",
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "PARTIALLY_SUPPORTED",
+      "final_status": "PARTIALLY_SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_0da20db21fe1463a:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['UNKNOWN']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "FAILED",
+          "detail": "every supporting item has UNKNOWN source tier"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "FAILED",
+          "detail": "directness values present: ['UNKNOWN']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['UNKNOWN']; requires_current_state=False"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['UNKNOWN']; requires_ai_attribution=False"
+        }
+      ]
+    }
+  },
+  "hyp_b3a8bfef91a47a45": {
+    "hypothesis_id": "hyp_b3a8bfef91a47a45",
+    "topic": "AI_LABOR",
+    "statement": "There is direct observed employment effect from AI exposure, concentrated specifically in early-career (ages 22-25) US workers",
+    "scope": "US early-career (22-25) workers in high-AI-exposure occupations since generative AI adoption (post-2022), contrasted with Finnish population-level null result",
+    "supporting_evidence": [
+      "claim_8fd5da8f27c9fc2b:O-2 round 3 WebFetch research"
+    ],
+    "contradicting_evidence": [
+      "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+    ],
+    "alternative_explanations": [
+      "differing labor-market institutions (US vs. Finland) rather than AI exposure explain the divergence",
+      "early-career US effect may reflect general post-2022 tech-sector hiring slowdown, not AI specifically",
+      "OECD AI Exposure Measure framing: exposure is not displacement -- SIEPR's finding should not be generalized into an economy-wide AI-displacement claim"
+    ],
+    "status": "CONTESTED",
+    "uncertainty": [
+      {
+        "cause": "GEOGRAPHIC_SCOPE_UNCERTAINTY",
+        "detail": "Stanford SIEPR (US, narrow 22-25 cohort) and ETLA (Finland, full working population) differ in both geography and population scope, so the two findings are not a strict apples-to-apples contradiction -- genuine tension is surfaced, not resolved, by this hypothesis"
+      },
+      {
+        "cause": "GENERALIZATION_GUARD",
+        "detail": "OECD AI Exposure Measure (claim_931b08c7ebfc9604) explicitly states exposure != displacement; this hypothesis is scoped to the narrow early-career cohort and must not be read as 'AI causes job loss' broadly"
+      }
+    ],
+    "last_updated": "2026-10-02T02:50:42.300145+00:00",
+    "hypothesis_code": "HL2",
+    "geographic_scope": "United States (supporting); Finland (contradicting/complicating)",
+    "time_scope": "2022-2025",
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "CONTESTED",
+      "resolved_only_status_count_based": "CONTESTED",
+      "quality_aware_status": "CONTESTED",
+      "final_status": "CONTESTED",
+      "resolved_supporting_evidence": [
+        "claim_8fd5da8f27c9fc2b:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [
+        "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": []
+    }
+  },
+  "hyp_c4b0429622eb6dd7": {
+    "hypothesis_id": "hyp_c4b0429622eb6dd7",
+    "topic": "AI_LABOR",
+    "statement": "AI shows a measurable productivity effect in specific, well-studied task contexts (generative-AI-assisted customer support)",
+    "scope": "Firm-level productivity (issues resolved per hour) for customer support agents using a generative-AI assistant; NOT an employment/headcount or economy-wide productivity claim",
+    "supporting_evidence": [
+      "claim_fe878b52922b46a4:O-2 round 3 WebFetch research"
+    ],
+    "contradicting_evidence": [],
+    "alternative_explanations": [
+      "effect may not generalize beyond customer-support-style, highly codifiable task contexts"
+    ],
+    "status": "PARTIALLY_SUPPORTED",
+    "uncertainty": [
+      {
+        "cause": "SCOPE_UNCERTAINTY",
+        "detail": "single-firm field experiment (NBER w31161); strictly scoped to customer-support productivity, not employment, and not a general claim about AI productivity effects across occupations"
+      }
+    ],
+    "last_updated": "2026-10-02T02:50:42.302660+00:00",
+    "hypothesis_code": "HL3",
+    "geographic_scope": "United States (single large US software firm call center)",
+    "time_scope": "2020-2023 (study period), published 2023",
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "SUPPORTED",
+      "resolved_only_status_count_based": "SUPPORTED",
+      "quality_aware_status": "PARTIALLY_SUPPORTED",
+      "final_status": "PARTIALLY_SUPPORTED",
+      "resolved_supporting_evidence": [
+        "claim_fe878b52922b46a4:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": [
+        {
+          "guard": "DERIVATIVE_EVIDENCE_GUARD",
+          "result": "PASSED",
+          "detail": "1 independent origin(s) among 1 items"
+        },
+        {
+          "guard": "INDUSTRY_SELF_REPORT_GUARD",
+          "result": "PASSED",
+          "detail": "source tiers present: ['UNKNOWN']"
+        },
+        {
+          "guard": "SOURCE_QUALITY_CHECKED_GUARD",
+          "result": "FAILED",
+          "detail": "every supporting item has UNKNOWN source tier"
+        },
+        {
+          "guard": "MINIMUM_DIRECTNESS_GUARD",
+          "result": "FAILED",
+          "detail": "directness values present: ['UNKNOWN']"
+        },
+        {
+          "guard": "FORECAST_GUARD",
+          "result": "PASSED",
+          "detail": "temporal types present: ['UNKNOWN']; requires_current_state=False"
+        },
+        {
+          "guard": "AI_ATTRIBUTION_GUARD",
+          "result": "PASSED",
+          "detail": "attribution strengths present: ['UNKNOWN']; requires_ai_attribution=False"
+        }
+      ]
+    }
+  },
+  "hyp_8691a1cb2d7c0d45": {
+    "hypothesis_id": "hyp_8691a1cb2d7c0d45",
+    "topic": "AI_LABOR",
+    "statement": "AI is driving large-scale, economy-wide job displacement at the national level (beyond the narrow early-career cohort)",
+    "scope": "Economy-wide (not occupation- or cohort-scoped) AI-attributed job displacement; tests forecast (KDI Korea) against observed aggregate labor-market data (US BLS JOLTS) and observed population-level null result (Finland/ETLA)",
+    "supporting_evidence": [
+      "claim_30fdf98bc1a9c818:O-2 round 3 WebFetch research"
+    ],
+    "contradicting_evidence": [
+      "claim_4731da53eae6b843:websearch_bls_jolts",
+      "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+    ],
+    "alternative_explanations": [
+      "KDI's projection is a macro-structural model (TFP-based), not a direct observation, and may simply not have had time to materialize yet in observed data",
+      "US and Finnish labor markets may not be representative of Korea's AI-exposure/occupational structure"
+    ],
+    "status": "WEAKENED",
+    "uncertainty": [
+      {
+        "cause": "FORECAST_VS_OBSERVED_DIVERGENCE",
+        "detail": "KDI's ~256k jobs/year displacement figure is explicitly a 10-year macro forecast, not an observed outcome; current observed aggregate US labor-flow data (BLS JOLTS Aug 2026) shows no AI-attributed change, and Finnish population-level data shows no significant employment/wage divergence by AI exposure 2 years post-ChatGPT -- this hypothesis is honestly WEAKENED by that absence of corroborating observed evidence, not rejected, since the forecast horizon has not yet elapsed and geography differs"
+      }
+    ],
+    "last_updated": "2026-10-02T02:50:42.304851+00:00",
+    "hypothesis_code": "HL4",
+    "geographic_scope": "South Korea (forecast); United States and Finland (observed, contradicting)",
+    "time_scope": "Forecast horizon 2026-2036 (KDI) vs. observed 2022-2026 (BLS, ETLA)",
+    "canonical_status_diagnostics": {
+      "legacy_full_status_count_based": "WEAKENED",
+      "resolved_only_status_count_based": "WEAKENED",
+      "quality_aware_status": "WEAKENED",
+      "final_status": "WEAKENED",
+      "resolved_supporting_evidence": [
+        "claim_30fdf98bc1a9c818:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_supporting_evidence": [],
+      "resolved_contradicting_evidence": [
+        "claim_4731da53eae6b843:websearch_bls_jolts",
+        "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+      ],
+      "unresolved_contradicting_evidence": [],
+      "guard_trail": []
+    }
   }
 }
