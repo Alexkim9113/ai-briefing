@@ -212,6 +212,20 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
+      "candidate_id": "cand_aa89d80c163a3c4f",
+      "title": "아마존",
+      "field": "산업·경제",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 3,
+      "independent_source_count": 7,
+      "related_event_count": 9,
+      "tier1_present": false,
+      "related_intelligence_topic": null,
+      "evidence_quality": "UNKNOWN",
+      "reason": "3일 연속 반복, 독립 출처 7개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
       "candidate_id": "cand_b3d931197132c673",
       "title": "일본 관련 동향: 일본 애니메이션 성우, AI 목소리 복제 문제로 틱톡과 소송",
       "field": "산업·경제",
@@ -223,20 +237,6 @@
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "3일 연속 반복, 독립 출처 3개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_6708a294216dcf6b",
-      "title": "아마존",
-      "field": "법·제도",
-      "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 2,
-      "independent_source_count": 6,
-      "related_event_count": 8,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
-      "evidence_quality": "UNKNOWN",
-      "reason": "2일 연속 반복, 독립 출처 6개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
