@@ -1,5 +1,6 @@
 import atexit
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -46,12 +47,26 @@ def _cleanup():
 atexit.register(_restore_real_files)
 
 
+# O-1F residual fix: atexit only fires once the WHOLE python process exits, which is too late
+# when several of these test files run together in one pytest invocation -- an earlier file's
+# _cleanup() left the canonical file deleted for the entire rest of the session, breaking later
+# tests (in this file or others) that read it. Every mutating test must restore the real file
+# immediately after itself, not just at process exit. atexit stays registered above purely as a
+# last-resort backstop for an uncaught crash path.
+@contextmanager
+def _isolated_canonical_files():
+    _cleanup()
+    try:
+        yield
+    finally:
+        _restore_real_files()
+
+
 def test_claim_identity_stable_across_upserts():
-    _cleanup()
-    c1 = m.new_claim("test claim text", "AI_ENERGY_INFRA", "DESCRIPTIVE")
-    c2 = m.new_claim("test claim text", "AI_ENERGY_INFRA", "DESCRIPTIVE")
-    assert c1["claim_id"] == c2["claim_id"]
-    _cleanup()
+    with _isolated_canonical_files():
+        c1 = m.new_claim("test claim text", "AI_ENERGY_INFRA", "DESCRIPTIVE")
+        c2 = m.new_claim("test claim text", "AI_ENERGY_INFRA", "DESCRIPTIVE")
+        assert c1["claim_id"] == c2["claim_id"]
 
 
 def test_invalid_claim_type_rejected():
@@ -81,12 +96,11 @@ def test_relation_strength_never_defaults_to_a_fabricated_number():
 
 
 def test_upsert_and_load_roundtrip():
-    _cleanup()
-    claim = m.new_claim("roundtrip test", "AI_LABOR", "DESCRIPTIVE")
-    m.upsert_claim(claim)
-    loaded = m.load_claims()
-    assert claim["claim_id"] in loaded
-    _cleanup()
+    with _isolated_canonical_files():
+        claim = m.new_claim("roundtrip test", "AI_LABOR", "DESCRIPTIVE")
+        m.upsert_claim(claim)
+        loaded = m.load_claims()
+        assert claim["claim_id"] in loaded
 
 
 def main():

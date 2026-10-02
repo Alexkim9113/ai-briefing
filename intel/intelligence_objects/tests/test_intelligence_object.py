@@ -1,5 +1,6 @@
 import atexit
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -40,6 +41,19 @@ def _cleanup():
 atexit.register(_restore_real_files)
 
 
+# O-1F residual fix: atexit only fires once the WHOLE python process exits, which is too late
+# when several of these test files run together in one pytest invocation. Every mutating test
+# must restore the real file immediately after itself. atexit stays registered above purely as a
+# last-resort backstop for an uncaught crash path.
+@contextmanager
+def _isolated_canonical_files():
+    _cleanup()
+    try:
+        yield
+    finally:
+        _restore_real_files()
+
+
 def test_identity_stable_for_same_topic_question():
     o1 = m.new_intelligence_object("AI_ENERGY_INFRA", "is AI driving electricity demand growth?")
     o2 = m.new_intelligence_object("AI_ENERGY_INFRA", "is AI driving electricity demand growth?")
@@ -47,19 +61,18 @@ def test_identity_stable_for_same_topic_question():
 
 
 def test_revision_history_never_overwritten_only_appended():
-    _cleanup()
-    obj = m.new_intelligence_object("AI_ENERGY_INFRA", "q")
-    obj["current_state"] = "v1 state"
-    m.upsert_intelligence_object(obj)
-    obj["current_state"] = "v2 state"
-    m.upsert_intelligence_object(obj, trigger_evidence="ev1", changed_fields=["current_state"],
-                                  change_reason="new evidence", impact_event="STATE_CHANGED")
-    objects = m.load_intelligence_objects()
-    stored = objects[obj["intelligence_id"]]
-    assert stored["version"] == 2
-    assert len(stored["revision_history"]) == 1
-    assert stored["revision_history"][0]["snapshot_current_state"] == "v1 state"
-    _cleanup()
+    with _isolated_canonical_files():
+        obj = m.new_intelligence_object("AI_ENERGY_INFRA", "q")
+        obj["current_state"] = "v1 state"
+        m.upsert_intelligence_object(obj)
+        obj["current_state"] = "v2 state"
+        m.upsert_intelligence_object(obj, trigger_evidence="ev1", changed_fields=["current_state"],
+                                      change_reason="new evidence", impact_event="STATE_CHANGED")
+        objects = m.load_intelligence_objects()
+        stored = objects[obj["intelligence_id"]]
+        assert stored["version"] == 2
+        assert len(stored["revision_history"]) == 1
+        assert stored["revision_history"][0]["snapshot_current_state"] == "v1 state"
 
 
 def test_empty_evidence_arrays_stay_empty_not_backfilled():

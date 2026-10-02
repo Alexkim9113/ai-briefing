@@ -6,6 +6,7 @@ import atexit
 import inspect
 import json
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -42,6 +43,19 @@ def _cleanup():
 # O-1F fix: see test_claim_model.py's identical fix for the full rationale -- main()'s
 # try/finally never runs under pytest, so restore must also be registered at interpreter exit.
 atexit.register(_restore_real_files)
+
+
+# O-1F residual fix: atexit only fires once the WHOLE python process exits, which is too late
+# when several of these test files run together in one pytest invocation. Every mutating test
+# must restore the real file immediately after itself. atexit stays registered above purely as a
+# last-resort backstop for an uncaught crash path.
+@contextmanager
+def _isolated_canonical_files():
+    _cleanup()
+    try:
+        yield
+    finally:
+        _restore_real_files()
 
 
 # --- 1. Static-analysis regression: upsert_hypothesis() never calls classify_status() directly ---
@@ -96,44 +110,42 @@ def test_canonical_status_invariant_holds_for_every_real_hypothesis():
 # status. (test_o1c_canonical_status.py already covers the generic unresolved-id-cannot-flip-to-
 # SUPPORTED case; these two add H3/H4-specific simulations using their real requirement profiles.)
 def test_h3_style_hypothesis_appending_unresolved_evidence_does_not_upgrade():
-    _cleanup()
-    claims = {
-        "c1": {"claim_id": "c1", "claim_text": "Multi-factor demand growth. STATUS=OBSERVED.",
-                "evidence_independence": "PRIMARY_OFFICIAL", "provenance": "https://example.org/c1",
-                "created_from": "c1"},
-    }
-    h = m.new_hypothesis("AI_ENERGY_INFRA", "h3 style reversion test")
-    h["hypothesis_code"] = "H3"
-    h = m.upsert_hypothesis(h, new_support_id="c1", all_claims=claims)
-    before = h["status"]
-    h = m.upsert_hypothesis(h, new_support_id="legacy_ref:not_a_real_claim", all_claims=claims)
-    assert h["status"] != "SUPPORTED" or before == "SUPPORTED", (
-        f"H3-style hypothesis must not be upgraded to SUPPORTED by an unresolved id "
-        f"(was {before}, now {h['status']})")
-    assert "legacy_ref:not_a_real_claim" in h["canonical_status_diagnostics"][
-        "unresolved_supporting_evidence"]
-    _cleanup()
+    with _isolated_canonical_files():
+        claims = {
+            "c1": {"claim_id": "c1", "claim_text": "Multi-factor demand growth. STATUS=OBSERVED.",
+                    "evidence_independence": "PRIMARY_OFFICIAL", "provenance": "https://example.org/c1",
+                    "created_from": "c1"},
+        }
+        h = m.new_hypothesis("AI_ENERGY_INFRA", "h3 style reversion test")
+        h["hypothesis_code"] = "H3"
+        h = m.upsert_hypothesis(h, new_support_id="c1", all_claims=claims)
+        before = h["status"]
+        h = m.upsert_hypothesis(h, new_support_id="legacy_ref:not_a_real_claim", all_claims=claims)
+        assert h["status"] != "SUPPORTED" or before == "SUPPORTED", (
+            f"H3-style hypothesis must not be upgraded to SUPPORTED by an unresolved id "
+            f"(was {before}, now {h['status']})")
+        assert "legacy_ref:not_a_real_claim" in h["canonical_status_diagnostics"][
+            "unresolved_supporting_evidence"]
 
 
 def test_h4_style_hypothesis_appending_unresolved_evidence_does_not_upgrade():
-    _cleanup()
-    claims = {
-        "c1": {"claim_id": "c1",
-                "claim_text": "Regional concentration. AI_ATTRIBUTION=AI_PARTIAL. STATUS=OBSERVED.",
-                "evidence_independence": "PRIMARY_SOURCE", "provenance": "https://example.org/c1",
-                "created_from": "c1"},
-    }
-    h = m.new_hypothesis("AI_ENERGY_INFRA", "h4 style reversion test")
-    h["hypothesis_code"] = "H4"
-    h = m.upsert_hypothesis(h, new_support_id="c1", all_claims=claims)
-    before = h["status"]
-    h = m.upsert_hypothesis(h, new_support_id="legacy_ref:another_unresolved", all_claims=claims)
-    assert h["status"] != "SUPPORTED" or before == "SUPPORTED", (
-        f"H4-style hypothesis must not be upgraded to SUPPORTED by an unresolved id "
-        f"(was {before}, now {h['status']})")
-    assert "legacy_ref:another_unresolved" in h["canonical_status_diagnostics"][
-        "unresolved_supporting_evidence"]
-    _cleanup()
+    with _isolated_canonical_files():
+        claims = {
+            "c1": {"claim_id": "c1",
+                    "claim_text": "Regional concentration. AI_ATTRIBUTION=AI_PARTIAL. STATUS=OBSERVED.",
+                    "evidence_independence": "PRIMARY_SOURCE", "provenance": "https://example.org/c1",
+                    "created_from": "c1"},
+        }
+        h = m.new_hypothesis("AI_ENERGY_INFRA", "h4 style reversion test")
+        h["hypothesis_code"] = "H4"
+        h = m.upsert_hypothesis(h, new_support_id="c1", all_claims=claims)
+        before = h["status"]
+        h = m.upsert_hypothesis(h, new_support_id="legacy_ref:another_unresolved", all_claims=claims)
+        assert h["status"] != "SUPPORTED" or before == "SUPPORTED", (
+            f"H4-style hypothesis must not be upgraded to SUPPORTED by an unresolved id "
+            f"(was {before}, now {h['status']})")
+        assert "legacy_ref:another_unresolved" in h["canonical_status_diagnostics"][
+            "unresolved_supporting_evidence"]
 
 
 def main():

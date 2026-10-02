@@ -1,5 +1,6 @@
 import atexit
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -41,6 +42,21 @@ def _cleanup():
 atexit.register(_restore_real_files)
 
 
+# O-1F residual fix: atexit only fires once the WHOLE python process exits, which is too late
+# when several of these test files run together in one pytest invocation -- an earlier file's
+# _cleanup() left the canonical file deleted for the entire rest of the session, breaking later
+# tests (in this file or others) that read it. Every mutating test must restore the real file
+# immediately after itself, not just at process exit. atexit stays registered above purely as a
+# last-resort backstop for an uncaught crash path.
+@contextmanager
+def _isolated_canonical_files():
+    _cleanup()
+    try:
+        yield
+    finally:
+        _restore_real_files()
+
+
 def test_identity_stable():
     h1 = m.new_hypothesis("AI_ENERGY_INFRA", "AI data centers drive electricity demand growth")
     h2 = m.new_hypothesis("AI_ENERGY_INFRA", "AI data centers drive electricity demand growth")
@@ -57,30 +73,28 @@ def test_counterevidence_never_deleted_only_appended():
     # placeholder strings -- an unresolved placeholder id can no longer drive a SUPPORTED/
     # CONTESTED determination at all (see test_o1c_canonical_status.py's Unresolved Evidence ID
     # Guard tests), which is the intended O-1C behavior change.
-    _cleanup()
-    import claim_model as cm  # noqa: E402
-    real_claim_id = next(iter(cm.load_claims().keys()))
-    h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp")
-    h = m.upsert_hypothesis(h, new_support_id=real_claim_id)
-    assert h["status"] in ("SUPPORTED", "PARTIALLY_SUPPORTED"), h["status"]
-    assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "SUPPORTED"
-    h = m.upsert_hypothesis(h, new_counterevidence_id=real_claim_id)
-    assert h["supporting_evidence"] == [real_claim_id], "support must still be present, never dropped"
-    assert h["contradicting_evidence"] == [real_claim_id]
-    assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "CONTESTED"
-    _cleanup()
+    with _isolated_canonical_files():
+        import claim_model as cm  # noqa: E402
+        real_claim_id = next(iter(cm.load_claims().keys()))
+        h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp")
+        h = m.upsert_hypothesis(h, new_support_id=real_claim_id)
+        assert h["status"] in ("SUPPORTED", "PARTIALLY_SUPPORTED"), h["status"]
+        assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "SUPPORTED"
+        h = m.upsert_hypothesis(h, new_counterevidence_id=real_claim_id)
+        assert h["supporting_evidence"] == [real_claim_id], "support must still be present, never dropped"
+        assert h["contradicting_evidence"] == [real_claim_id]
+        assert h["canonical_status_diagnostics"]["resolved_only_status_count_based"] == "CONTESTED"
 
 
 def test_unresolved_evidence_id_alone_cannot_reach_supported():
     # O-1C Section 8: a placeholder/legacy id that does not resolve to a real Claim record must
     # never, by itself, produce SUPPORTED.
-    _cleanup()
-    h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp 2")
-    h = m.upsert_hypothesis(h, new_support_id="o1_counterevidence:does_not_exist_in_claims_json")
-    assert h["status"] == "INSUFFICIENT_EVIDENCE", h["status"]
-    assert h["canonical_status_diagnostics"]["unresolved_supporting_evidence"] == [
-        "o1_counterevidence:does_not_exist_in_claims_json"]
-    _cleanup()
+    with _isolated_canonical_files():
+        h = m.new_hypothesis("AI_ENERGY_INFRA", "test hyp 2")
+        h = m.upsert_hypothesis(h, new_support_id="o1_counterevidence:does_not_exist_in_claims_json")
+        assert h["status"] == "INSUFFICIENT_EVIDENCE", h["status"]
+        assert h["canonical_status_diagnostics"]["unresolved_supporting_evidence"] == [
+            "o1_counterevidence:does_not_exist_in_claims_json"]
 
 
 def test_status_is_named_vocabulary_only():

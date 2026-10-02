@@ -1,5 +1,6 @@
 import atexit
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -40,17 +41,29 @@ def _cleanup():
 atexit.register(_restore_real_files)
 
 
+# O-1F residual fix: atexit only fires once the WHOLE python process exits, which is too late
+# when several of these test files run together in one pytest invocation. Every mutating test
+# must restore the real file immediately after itself. atexit stays registered above purely as a
+# last-resort backstop for an uncaught crash path.
+@contextmanager
+def _isolated_canonical_files():
+    _cleanup()
+    try:
+        yield
+    finally:
+        _restore_real_files()
+
+
 def test_admission_is_idempotent_no_duplicate_series():
-    _cleanup()
-    raw = [{"period": "2020", "value": 100.0, "indicator_name": "test", "unit": "kWh"}]
-    rec1, new1 = m.admit_statistical_series("TEST.IND", "USA", raw, "https://example.com", "src_test")
-    rec2, new2 = m.admit_statistical_series("TEST.IND", "USA", raw, "https://example.com", "src_test")
-    assert new1 is True
-    assert new2 is False
-    assert rec1["series_id"] == rec2["series_id"]
-    sidecar = m.load_sidecar()
-    assert len(sidecar) == 1
-    _cleanup()
+    with _isolated_canonical_files():
+        raw = [{"period": "2020", "value": 100.0, "indicator_name": "test", "unit": "kWh"}]
+        rec1, new1 = m.admit_statistical_series("TEST.IND", "USA", raw, "https://example.com", "src_test")
+        rec2, new2 = m.admit_statistical_series("TEST.IND", "USA", raw, "https://example.com", "src_test")
+        assert new1 is True
+        assert new2 is False
+        assert rec1["series_id"] == rec2["series_id"]
+        sidecar = m.load_sidecar()
+        assert len(sidecar) == 1
 
 
 def test_missing_value_rejected_not_fabricated():
