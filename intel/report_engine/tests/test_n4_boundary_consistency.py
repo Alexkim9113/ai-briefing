@@ -237,6 +237,81 @@ def test_o1f_public_html_zero_internal_id_leak():
         assert matches == [], f"{iid}: internal id/path leak(s) found in Public HTML: {matches}"
 
 
+def test_o2c_dev_phase_language_not_in_public_html():
+    """O-2C Priority 2 -- dev-phase/round annotations baked into canonical narrative text (e.g.
+    "[O-1C round-4 update]", "[O-1B update]") must never reach the Public page: they are process
+    noise for a reader, stripped at the presentation layer only (product_html._strip_internal_ids /
+    _clean_dev_phase_language). The canonical Report JSON itself is untouched -- only what is
+    rendered changes."""
+    import re as _re
+    tag_pattern = _re.compile(r"\[O-\d[A-Za-z0-9]*(?:\s+round[-\s]?\d+)?\s+update\]")
+    for iid in REAL_IDS:
+        _, _, _, doc = _public_product_html(iid)
+        assert tag_pattern.findall(doc) == [], f"{iid}: dev-phase tag leaked into Public HTML"
+
+
+def _badge_status_values(node):
+    """Walk a report's PUBLIC-view dict and collect every value actually rendered through
+    product_html._badge (a 'status' key on a section/content_block, not a status word merely
+    mentioned inside free-text narrative prose)."""
+    found = set()
+    if isinstance(node, dict):
+        for key in ("status", "claim_status", "trend_status", "evidence_status", "key_signal_status"):
+            if key in node and isinstance(node[key], str):
+                found.add(node[key])
+        for v in node.values():
+            found |= _badge_status_values(v)
+    elif isinstance(node, list):
+        for v in node:
+            found |= _badge_status_values(v)
+    return found
+
+
+def test_o2c_korean_status_labels_in_public_html():
+    """O-2C Priority 2 -- Public HTML shows the Korean plain-language status label as primary,
+    with the internal English enum code kept only as a small secondary tag, for every badge-
+    rendered status this corpus actually uses. The underlying status value itself is never altered
+    (still computed only by determine_canonical_status()/evaluate_hypothesis_sufficiency())."""
+    found_any = False
+    for iid in REAL_IDS:
+        _, pub, _, doc = _public_product_html(iid)
+        for code in _badge_status_values(pub):
+            ko = ph._STATUS_KO.get(code)
+            if ko:
+                assert ko in doc, f"{iid}: Korean label for {code} missing from Public HTML"
+                found_any = True
+    assert found_any, "no known status code exercised by either real report -- test is not checking anything"
+
+
+def test_o2c_korean_labels_absent_from_operator_html():
+    """O-2C Priority 2 -- the Korean plain-language relabeling is Public-view-only; Operator keeps
+    the original English status codes it has always shown (view != 'PUBLIC' in product_html._badge)."""
+    for iid in REAL_IDS:
+        _, _, _, doc = _operator_product_html(iid)
+        for ko in ph._STATUS_KO.values():
+            assert ko not in doc, f"{iid}: Korean label leaked into Operator HTML"
+
+
+def test_o2c_evidence_map_claim_chain_has_no_internal_ids():
+    """O-2C Priority 3 -- a CLAIM node in the Public Evidence Map renders a real
+    주장->출처->역할 chain (claim text + the institution actually cited for it + an
+    observation/forecast role label), not a bare '(internal reference withheld)' placeholder, and
+    still carries zero internal ids (claim_/hyp_/intel_/series_/evt_/rel_)."""
+    import re as _re
+    id_pattern = _re.compile(r"\b(?:claim_|series_|intel_|hyp_|evt_|rel_)[a-zA-Z0-9_]+")
+    for iid in REAL_IDS:
+        _, pub, _, doc = _public_product_html(iid)
+        evmap = pub["sections"].get("EVIDENCE_MAP", {})
+        has_claim_node = any(b.get("node_type") == "CLAIM" for b in evmap.get("content_blocks", []))
+        if not has_claim_node:
+            continue
+        assert "<strong>주장</strong>" in doc, f"{iid}: no real claim->source chain rendered in Evidence Map"
+        start = doc.find('id="evidence_map"')
+        end = doc.find("</section>", start)
+        section_html = doc[start:end]
+        assert id_pattern.findall(section_html) == [], f"{iid}: internal id leaked in Evidence Map section"
+
+
 def main():
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0

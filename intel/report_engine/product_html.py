@@ -60,9 +60,26 @@ def _esc(x):
     return _html.escape(str(x)) if x is not None else ""
 
 
-def _badge(value):
+# Priority 2 (O-2C, Te section 6-7): Public-facing readers should see plain-language status, not
+# internal enum codes. Korean primary label, English code kept only as a small secondary tag so
+# Operator/traceability is not lost. This is presentation-only -- the underlying status value
+# (SUPPORTED/WEAKENED/etc, already computed by determine_canonical_status()) is never altered.
+_STATUS_KO = {
+    "PARTIALLY_SUPPORTED": "부분적으로 뒷받침됨",
+    "WEAKENED": "반대 근거로 인해 약화됨",
+    "CONTESTED": "상충하는 증거가 존재함",
+    "INSUFFICIENT_EVIDENCE": "판단하기에 근거가 부족함",
+}
+
+
+def _badge(value, view="OPERATOR"):
     slug = str(value).lower()
-    return f'<span class="badge badge-{_esc(slug)}">{_esc(value)}</span>'
+    label = _esc(value)
+    if view == "PUBLIC":
+        ko = _STATUS_KO.get(str(value))
+        if ko:
+            label = f'{_esc(ko)} <span class="mono">({_esc(value)})</span>'
+    return f'<span class="badge badge-{_esc(slug)}">{label}</span>'
 
 
 def _narrative_text(value):
@@ -83,7 +100,7 @@ def _narrative_text(value):
     return str(value)
 
 
-def render_executive_card(card):
+def render_executive_card(card, view="OPERATOR"):
     # O-1F: these free-text narrative fields (current_state/key_signal/major_uncertainty/
     # what_to_watch) can themselves embed internal ids/repo file paths (same family as the
     # content_block narrative fields below) -- stripped the same way, meaning preserved.
@@ -94,21 +111,21 @@ def render_executive_card(card):
     return (
         '<section aria-label="Executive Intelligence" class="exec-card">'
         f'<dl><dt>Current State</dt><dd>{_esc(current_state)}</dd>'
-        f'<dt>Key Signal</dt><dd>{_esc(key_signal)} {_badge(card["key_signal_status"])}</dd>'
-        f'<dt>Evidence Status</dt><dd>{_badge(card["evidence_status"])}</dd>'
+        f'<dt>Key Signal</dt><dd>{_esc(key_signal)} {_badge(card["key_signal_status"], view)}</dd>'
+        f'<dt>Evidence Status</dt><dd>{_badge(card["evidence_status"], view)}</dd>'
         f'<dt>Major Uncertainty</dt><dd>{_esc(major_uncertainty)}</dd>'
         f'<dt>What To Watch</dt><dd><ul>{"".join(f"<li>{_esc(w)}</li>" for w in what_to_watch)}</ul></dd>'
         '</dl></section>'
     )
 
 
-def _render_chart(chart):
+def _render_chart(chart, view="OPERATOR"):
     rows = (
         f"<tr><td>Indicator</td><td>{_esc(chart['indicator'])}</td></tr>"
         f"<tr><td>Geography</td><td>{_esc(chart['geography'])}</td></tr>"
         f"<tr><td>Period</td><td>{_esc(chart['period'])}</td></tr>"
         f"<tr><td>Source</td><td>{_esc(chart['source'])}</td></tr>"
-        f"<tr><td>Trend</td><td>{_badge(chart['trend_status'])}</td></tr>"
+        f"<tr><td>Trend</td><td>{_badge(chart['trend_status'], view)}</td></tr>"
     )
     caption = (f"Statistical series: {_esc(chart['indicator'])} "
                f"({_esc(chart['geography'])}, {_esc(chart['period'])}) -- "
@@ -144,7 +161,7 @@ def _humanize_alt_explanation(code):
     return code.replace("_", " ").title() + f" ({code})"
 
 
-def _render_block(block, section_type):
+def _render_block(block, section_type, view="OPERATOR"):
     if isinstance(block, str):
         # O-1F: bare-string content_blocks (e.g. SOURCE_PROVENANCE's source_ids) can themselves be
         # internal repo file paths (e.g. "intel/hypothesis/hypotheses.json#...") rather than a real
@@ -156,10 +173,11 @@ def _render_block(block, section_type):
         return f"<li>{_esc(block)}</li>"
     if "text" in block:
         status = block.get("claim_status")
-        extra = f" {_badge(status)}" if status else ""
-        return f"<li>{_esc(block['text'])}{extra}</li>"
+        extra = f" {_badge(status, view)}" if status else ""
+        text = _strip_internal_ids(str(block["text"]))
+        return f"<li>{_esc(text)}{extra}</li>"
     if "indicator" in block:
-        return f"<li>{_render_chart(pm.build_statistics_chart_spec(block))}</li>"
+        return f"<li>{_render_chart(pm.build_statistics_chart_spec(block), view)}</li>"
     if "title" in block:
         return (f"<li>{_esc(block.get('title'))} "
                 f"({_esc(block.get('identity_type'))}: {_esc(block.get('identity_value'))})</li>")
@@ -167,24 +185,34 @@ def _render_block(block, section_type):
         # POLICY_CONTEXT content blocks ({'policy':..., 'status':..., 'detail':...}).
         policy = _esc(block.get("policy"))
         detail = _esc(block.get("detail", ""))
-        return (f"<li><strong>{policy}</strong> {_badge(block['status'])}"
+        return (f"<li><strong>{policy}</strong> {_badge(block['status'], view)}"
                 f"{': ' + detail if detail else ''}</li>")
     if "direction" in block and "status" in block:
         # COUNTEREVIDENCE / ALTERNATIVE_EXPLANATIONS content blocks
         # ({'direction':..., 'status':..., 'source' or 'note':...}).
         direction = _esc(block.get("direction"))
-        extra = block.get("source") or block.get("note") or ""
-        return (f"<li>{direction} {_badge(block['status'])}"
+        extra = _strip_internal_ids(str(block.get("source") or block.get("note") or ""))
+        return (f"<li>{direction} {_badge(block['status'], view)}"
                 f"{': ' + _esc(extra) if extra else ''}</li>")
     if "cause" in block and "detail" in block:
         # UNCERTAINTIES content blocks ({'cause': ..., 'detail': ...}) -- same dict-repr-fallback
         # bug family as the other structural fields here (O-1G); render as a readable sentence.
-        return f"<li>{_esc(block['detail'])} ({_esc(block['cause'])})</li>"
+        detail = _strip_internal_ids(str(block.get("detail", "")))
+        return f"<li>{_esc(detail)} ({_esc(block['cause'])})</li>"
     if "node_type" in block:
         # EVIDENCE_MAP entries carry internal graph node references ({'node_type': ..., 'id': ...}).
-        # Per the Public/Operator boundary (never expose internal Claim/Evidence/Hypothesis IDs in
-        # Public), render a neutral, human-readable label instead of the raw dict repr / internal ID.
-        label = str(block.get("node_type", "")).replace("_", " ").title() or "Evidence item"
+        # Priority 3 (O-2C, Te section 8): for a CLAIM node we have a real, honest chain available
+        # (claim text + the source actually cited for it, via source_registry's existing
+        # derivation) -- render 주장→근거→출처→역할 instead of a bare placeholder. For node types
+        # with no such lookup (STATISTIC/EVIDENCE_RELATION/INTELLIGENCE_OBJECT -- internal graph
+        # bookkeeping ids with no equivalent human-readable record), keep the neutral withheld
+        # label rather than inventing one (Public/Operator boundary, O-1D/O-1E precedent).
+        node_type = block.get("node_type")
+        if node_type == "CLAIM":
+            chain = _evidence_map_claim_chain(block.get("id"))
+            if chain:
+                return f"<li>{chain}</li>"
+        label = str(node_type or "").replace("_", " ").title() or "Evidence item"
         return f"<li>{_esc(label)} reference (internal id withheld in Public view)</li>"
     if "period_start" in block or "period_end" in block:
         # TEMPORAL_CONTEXT entries ({'period_start':..., 'period_end':..., 'source': <series_/evt_
@@ -274,13 +302,65 @@ _INTERNAL_PATH_RE = _re.compile(
 )
 
 
+# Priority 2 (O-2C, Te section 6-7): dev-phase/internal-process annotations that were written
+# straight into canonical narrative text during earlier build rounds (e.g. "[O-1C round-4
+# update]", "[O-2 round 4 update]"). These are pure process noise for a reader -- they name an
+# internal build phase, not a fact about the subject matter -- so they are removed here, at the
+# presentation layer only; the canonical Report/IO JSON text is never rewritten. The sentence
+# that follows the tag already stands on its own (it is itself a complete statement), so removing
+# the bracket and the single trailing space leaves the surrounding meaning intact.
+_DEV_PHASE_TAG_RE = _re.compile(r"\[O-\d[A-Za-z0-9]*(?:\s+round[-\s]?\d+)?\s+update\]\s*")
+
+
+def _clean_dev_phase_language(text):
+    """Public-view-only: strips internal build-phase/round annotations from narrative text. Never
+    touches canonical JSON -- this only changes what is rendered."""
+    return _DEV_PHASE_TAG_RE.sub("", text)
+
+
 def _strip_internal_ids(text):
     """Public-view-only: replaces any bare internal id token embedded inside an otherwise
     human-readable structural-field string with a neutral placeholder, without altering the
-    surrounding sentence/meaning."""
+    surrounding sentence/meaning. Also strips dev-phase/process annotations (Priority 2)."""
+    text = _clean_dev_phase_language(text)
     text = _INTERNAL_ID_RE.sub("[internal id withheld in Public view]", text)
     text = _INTERNAL_PATH_RE.sub("[internal reference withheld in Public view]", text)
     return text
+
+
+# Priority 3 (O-2C, Te section 8): Evidence Map real chain for CLAIM nodes. Reuses the same
+# claims.json + source_registry curated metadata already used by the mandatory Sources section
+# (source_registry.py) -- no new data, no invented facts, read-only lookups.
+_claims_cache = None
+
+
+def _claim_by_id(claim_id):
+    global _claims_cache
+    if _claims_cache is None:
+        import source_registry as _sr
+        _claims_cache = _sr._load_claims()
+    return _claims_cache.get(claim_id)
+
+
+def _evidence_map_claim_chain(claim_id):
+    import source_registry as _sr
+    claim = _claim_by_id(claim_id)
+    if not claim:
+        return None
+    claim_text = _strip_internal_ids(str(claim.get("claim_text", "")))
+    summary = (claim_text[:160] + "...") if len(claim_text) > 160 else claim_text
+    meta = _sr._SOURCE_META.get(claim_id, {})
+    institution = meta.get("institution") or "출처 미상 (institution not recorded)"
+    obs = meta.get("observation_or_forecast", "")
+    if "FORECAST" in obs.upper():
+        role = "전망(예측) 근거"
+    elif "OBSERVATION" in obs.upper():
+        role = "관측 근거"
+    else:
+        role = "근거 자료"
+    return (f"<strong>주장</strong>: {_esc(summary)} "
+            f"&mdash; <strong>출처</strong>: {_esc(institution)} "
+            f"&mdash; <strong>역할</strong>: {_esc(role)}")
 
 
 def _public_source_label(source):
@@ -293,7 +373,7 @@ def _public_source_label(source):
     return source
 
 
-def render_section(entry):
+def render_section(entry, view="OPERATOR"):
     section = entry["section"]
     hidden_cls = " hidden" if entry["visibility"] == "HIDDEN" else ""
     note = (f"<p class='search-note'>{_esc(section['search_outcome_note'])}</p>"
@@ -301,12 +381,12 @@ def render_section(entry):
     if section["status"] == "INSUFFICIENT_EVIDENCE" and not section.get("content_blocks"):
         body = "<p class='axis-note'>Insufficient evidence in the current search scope.</p>"
     else:
-        body = f"<ul>{''.join(_render_block(b, entry['section_type']) for b in section.get('content_blocks', []))}</ul>"
+        body = f"<ul>{''.join(_render_block(b, entry['section_type'], view) for b in section.get('content_blocks', []))}</ul>"
     return (
         f'<section class="report-section{hidden_cls}" id="{_esc(entry["section_type"].lower())}" '
         f'aria-labelledby="{_esc(entry["section_type"].lower())}-h">'
         f'<h2 id="{_esc(entry["section_type"].lower())}-h">{_esc(entry["display_title"])} '
-        f'{_badge(section["status"])}</h2>{note}{body}</section>'
+        f'{_badge(section["status"], view)}</h2>{note}{body}</section>'
     )
 
 
@@ -378,7 +458,7 @@ def render_real_sources(sources, report_topic=None, show_internal_ids=False):
 
 
 def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sources=None):
-    sections_html = "".join(render_section(e) for e in presentation["sections"])
+    sections_html = "".join(render_section(e, view) for e in presentation["sections"])
     sources_html = render_sources(source_cards) if source_cards else ""
     # Section 33A/33G -- the reader-facing "출처 / Sources" section, independent of the older
     # document-registry render_sources() above (kept for NON_DOCUMENT_PROVENANCE internal cards).
@@ -394,7 +474,7 @@ def render_product_html(presentation, source_cards=None, view="PUBLIC", real_sou
         f"<h1>{_esc(presentation['display_title'])} {_badge(presentation['readiness'])}</h1>"
         f"<p class='meta'>report_id={_esc(presentation['report_id'])} "
         f"version={_esc(presentation['version'])} view={_esc(view)}</p>"
-        f"{render_executive_card(presentation['executive_card'])}"
+        f"{render_executive_card(presentation['executive_card'], view)}"
         f"{sections_html}"
         f"{sources_html}"
         f"{real_sources_html}"
