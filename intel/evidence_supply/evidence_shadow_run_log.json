@@ -30,7 +30,7 @@
   "evidence_records": 13,
   "external_api_calls": 15,
   "facts_verified": 57,
-  "gemini_cache_hits": 5,
+  "gemini_cache_hits": 6,
   "gemini_calls_added": 15,
   "human_review_by_priority": {
    "HIGH": 63,
@@ -73,7 +73,7 @@
   "reports_on_relationships_created": 0,
   "self_references": 3
  },
- "run_at": "2026-10-02T02:36:39.623694+00:00",
+ "run_at": "2026-10-02T07:39:46.189026+00:00",
  "shadow_mode": true,
  "status": "SUCCESS"
 }
