@@ -128,6 +128,14 @@ HYPOTHESIS_REQUIREMENTS = {
            "note": "statement is specifically about AI workload growth being offset by efficiency"},
     "H7": {"requires_ai_attribution": False, "requires_current_state": False,
            "note": "the hypothesis IS about forecast-vs-observation composition of the discourse -- the forecast guard does not apply to it"},
+    "HL1": {"requires_ai_attribution": True, "requires_current_state": True,
+            "note": "statement asserts AI adoption specifically among US firms/workers is CURRENTLY measurably increasing"},
+    "HL2": {"requires_ai_attribution": True, "requires_current_state": True,
+            "note": "statement asserts a direct, CURRENTLY observed AI-exposure employment effect concentrated in early-career (22-25) US workers -- requires AI attribution, not just any employment change"},
+    "HL3": {"requires_ai_attribution": True, "requires_current_state": True,
+            "note": "statement asserts AI specifically shows a measurable CURRENT productivity effect in a narrow, well-studied task context (gen-AI customer support) -- scope is explicitly narrow, not economy-wide"},
+    "HL4": {"requires_ai_attribution": True, "requires_current_state": True,
+            "note": "statement asserts AI specifically is driving large-scale, economy-wide, CURRENT job displacement beyond the narrow early-career cohort"},
 }
 
 
