@@ -1,0 +1,41 @@
+{
+ "phase": "O-1G",
+ "computed_at": "2026-10-02",
+ "git_head_before": "e621cfa",
+ "git_status_before": "clean (up to date with origin/main)",
+ "claims_count": 14,
+ "hypotheses_count": 8,
+ "intelligence_objects": {
+  "intel_87210a61730c22b9": {"topic": "AI_ENERGY_INFRA", "version": 6},
+  "intel_dbab7b01963396b5": {"topic": "AI_LABOR", "version": 1}
+ },
+ "latest_report_ai_energy_infra": "report_intel_87210a61730c22b9_v4",
+ "canonical_file_sha256_before": {
+  "intel/claims/claims.json": "324e41c7425a6171e9bfaf9906bd1ad9c3487e8cc9a94cda6a3033bbd2088b0b",
+  "intel/hypothesis/hypotheses.json": "f295d1f8d9770a72d25eb3b8b4389aba5fe900835a8271029426eafffd73bbe2",
+  "intel/intelligence_objects/intelligence_objects.json": "82d00cc37fde1d7b657f7da73f2532b5f8b890596aba879cc2ab9d38d78a8a6a",
+  "intel/statistical_evidence/statistical_evidence.json": "a36fd8bc821a32ac8bd2abe622d5f85387abb54cfa395f55cd343be322f14ff1",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.json": "beb034796e62d93f9a1921c450dca441812fdd56f99fc42eef46c9a2a9ca9420",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ },
+ "canonical_file_sha256_after": {
+  "intel/claims/claims.json": "324e41c7425a6171e9bfaf9906bd1ad9c3487e8cc9a94cda6a3033bbd2088b0b",
+  "intel/hypothesis/hypotheses.json": "f295d1f8d9770a72d25eb3b8b4389aba5fe900835a8271029426eafffd73bbe2",
+  "intel/intelligence_objects/intelligence_objects.json": "82d00cc37fde1d7b657f7da73f2532b5f8b890596aba879cc2ab9d38d78a8a6a",
+  "intel/statistical_evidence/statistical_evidence.json": "a36fd8bc821a32ac8bd2abe622d5f85387abb54cfa395f55cd343be322f14ff1",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.json": "beb034796e62d93f9a1921c450dca441812fdd56f99fc42eef46c9a2a9ca9420",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ },
+ "unsafe_canonical_mutation_count": 0,
+ "public_pages_built": 24,
+ "pdf_artifacts_built": 3,
+ "idempotency_check": "two fresh builds of Public+Operator site produced byte-identical trees (diff -rq empty)",
+ "presentation_layer_fixes_this_phase": [
+  "intel/report_engine/product_html.py: render_executive_card's major_uncertainty/current_state/key_signal/what_to_watch fields could be a structured dict (e.g. {'cause':...,'detail':...}) rather than a plain string; str(dict) leaked a raw Python repr onto the Public page. Added _narrative_text() to render such fields as a readable sentence. No canonical data changed.",
+  "intel/report_engine/product_html.py: _render_block() generic dict fallback leaked raw Python dict reprs for UNCERTAINTIES ({'cause','detail'}), POLICY_CONTEXT ({'policy','status','detail'}), and COUNTEREVIDENCE/ALTERNATIVE_EXPLANATIONS ({'direction','status','source'|'note'}) content blocks. Added dedicated readable renderers for each shape. No canonical data changed.",
+  "intel/report_engine/product_html.py: HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP known_gaps entry's canonical 'reason' is dense multi-paragraph internal audit prose; added a presentation-only reader-friendly summary sentence for this specific gap_type (canonical intelligence_objects.json text left untouched; no IO/Report version bump)."
+ ],
+ "io_version_bumped": false,
+ "report_version_bumped": false,
+ "ai_labor_io_and_report_hash_touched": false
+}

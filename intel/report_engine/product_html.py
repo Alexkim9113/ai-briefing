@@ -65,14 +65,32 @@ def _badge(value):
     return f'<span class="badge badge-{_esc(slug)}">{_esc(value)}</span>'
 
 
+def _narrative_text(value):
+    # O-1G: a narrative field can be a structured {"cause": ..., "detail": ...} block
+    # (e.g. an UNCERTAINTIES content block) rather than a plain string. str() on a dict
+    # leaks a raw Python repr ("{'cause': ...}") into Public HTML -- render it as a
+    # readable sentence instead, preserving the same meaning, not inventing new content.
+    if isinstance(value, dict):
+        cause = value.get("cause")
+        detail = value.get("detail")
+        if cause and detail:
+            return f"{detail} ({cause})"
+        if detail:
+            return str(detail)
+        if cause:
+            return str(cause)
+        return ", ".join(f"{k}: {v}" for k, v in value.items())
+    return str(value)
+
+
 def render_executive_card(card):
     # O-1F: these free-text narrative fields (current_state/key_signal/major_uncertainty/
     # what_to_watch) can themselves embed internal ids/repo file paths (same family as the
     # content_block narrative fields below) -- stripped the same way, meaning preserved.
-    current_state = _strip_internal_ids(str(card["current_state"]))
-    key_signal = _strip_internal_ids(str(card["key_signal"]))
-    major_uncertainty = _strip_internal_ids(str(card["major_uncertainty"]))
-    what_to_watch = [_strip_internal_ids(str(w)) for w in card["what_to_watch"]]
+    current_state = _strip_internal_ids(_narrative_text(card["current_state"]))
+    key_signal = _strip_internal_ids(_narrative_text(card["key_signal"]))
+    major_uncertainty = _strip_internal_ids(_narrative_text(card["major_uncertainty"]))
+    what_to_watch = [_strip_internal_ids(_narrative_text(w)) for w in card["what_to_watch"]]
     return (
         '<section aria-label="Executive Intelligence" class="exec-card">'
         f'<dl><dt>Current State</dt><dd>{_esc(current_state)}</dd>'
@@ -118,6 +136,23 @@ def _render_block(block, section_type):
     if "title" in block:
         return (f"<li>{_esc(block.get('title'))} "
                 f"({_esc(block.get('identity_type'))}: {_esc(block.get('identity_value'))})</li>")
+    if "policy" in block and "status" in block:
+        # POLICY_CONTEXT content blocks ({'policy':..., 'status':..., 'detail':...}).
+        policy = _esc(block.get("policy"))
+        detail = _esc(block.get("detail", ""))
+        return (f"<li><strong>{policy}</strong> {_badge(block['status'])}"
+                f"{': ' + detail if detail else ''}</li>")
+    if "direction" in block and "status" in block:
+        # COUNTEREVIDENCE / ALTERNATIVE_EXPLANATIONS content blocks
+        # ({'direction':..., 'status':..., 'source' or 'note':...}).
+        direction = _esc(block.get("direction"))
+        extra = block.get("source") or block.get("note") or ""
+        return (f"<li>{direction} {_badge(block['status'])}"
+                f"{': ' + _esc(extra) if extra else ''}</li>")
+    if "cause" in block and "detail" in block:
+        # UNCERTAINTIES content blocks ({'cause': ..., 'detail': ...}) -- same dict-repr-fallback
+        # bug family as the other structural fields here (O-1G); render as a readable sentence.
+        return f"<li>{_esc(block['detail'])} ({_esc(block['cause'])})</li>"
     if "node_type" in block:
         # EVIDENCE_MAP entries carry internal graph node references ({'node_type': ..., 'id': ...}).
         # Per the Public/Operator boundary (never expose internal Claim/Evidence/Hypothesis IDs in
@@ -164,8 +199,27 @@ def _render_block(block, section_type):
         # tokens with the same neutral placeholder used for structural fields elsewhere on this
         # page, rather than inventing a human label we cannot derive with confidence. This never
         # changes the sentence's meaning, only withholds the internal identifier substrings.
-        reason = _strip_internal_ids(str(block.get("reason", "")))
-        gap_type = _esc(block.get("gap_type"))
+        gap_type_raw = block.get("gap_type")
+        if gap_type_raw == "HYPOTHESIS_MODEL_QUALITY_WEIGHTING_GAP":
+            # O-1G: this gap's canonical 'reason' is dense internal audit prose (a multi-paragraph
+            # engineering changelog) that survives ID-stripping as a wall of jargon. Canonical text
+            # (intelligence_objects.json) is left untouched; this is a presentation-only, reader-
+            # facing summary of the same meaning: some supporting evidence for these hypotheses was
+            # not yet verified against a traceable source and so was excluded or downweighted when
+            # the hypotheses were evaluated; it has since been reconnected to a source wherever that
+            # could be confirmed, but one combined evidence-quality score for every hypothesis does
+            # not exist yet, so the underlying evaluation logic can still revert a hypothesis to its
+            # plain evidence-count status the next time its evidence list changes.
+            reason = (
+                "Some of the evidence behind these hypotheses had not yet been verified against a "
+                "traceable source, so it was excluded or given less weight when the hypotheses were "
+                "evaluated. Where that evidence could later be confirmed against a real source, it was "
+                "reconnected. There is still no single combined evidence-quality score across all "
+                "hypotheses, so this remains a partial fix rather than a complete one."
+            )
+        else:
+            reason = _strip_internal_ids(str(block.get("reason", "")))
+        gap_type = _esc(gap_type_raw)
         status = block.get("status")
         extra = f" {_badge(status)}" if status else ""
         return f"<li><strong>{gap_type}</strong>: {_esc(reason)}{extra}</li>"
