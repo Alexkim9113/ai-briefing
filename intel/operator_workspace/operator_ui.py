@@ -12,6 +12,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import operator_api as op  # noqa: E402
+import daily_discovery as dd  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "report_engine"))
 import atomic_publish as apub  # noqa: E402
 import report_engine as re_  # noqa: E402
@@ -203,6 +204,39 @@ def _key_signals_section_html():
     )
 
 
+def _daily_discovery_section_html(items):
+    """O-2F (scoped) -- '오늘의 핵심 Discovery'. Reads daily_discovery.daily_discovery_items()'s
+    plain dicts over the raw day's Feed (data/*.json), never claims.json. Structurally separate
+    from '오늘의 핵심 신호' (today_key_signals, which is wired-into-hypothesis Claim data): every
+    card here carries its own DISCOVERY_ONLY evidence_status banner so it is never mistaken for a
+    Claim. Honest empty state when no item passes the deterministic filter."""
+    if not items:
+        return (
+            '<h2>오늘의 핵심 Discovery / Today\'s Key Discovery</h2>'
+            '<p class="empty">오늘 중요한 Discovery 항목이 확인되지 않았습니다.</p>'
+        )
+    cards = []
+    for it in items:
+        cards.append(
+            '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+            f'<div><strong>{_esc(it["title_ko"])}</strong></div>'
+            f'<div>출처(Source): {_esc(it["source"])} (Tier {_esc(it["source_tier"])}) &middot; '
+            f'날짜(Date): {_esc(it["date"])}</div>'
+            f'<div>왜 중요한가(Why it matters): {_esc(it["why_it_matters"])}</div>'
+            f'<div>연관 Intelligence: {_esc(it["related_intelligence"])}</div>'
+            f'<div>{_safe_link(it["url"])}</div>'
+            f'<div class="empty">{_esc(it["evidence_status"])}</div>'
+            '</div>'
+        )
+    return (
+        f'<h2>오늘의 핵심 Discovery / Today\'s Key Discovery ({len(items)})</h2>'
+        '<p class="empty">결정론적(non-LLM) 중요도 필터: Tier 1 출처 또는 정책/규제 키워드 일치. '
+        'claims.json에 기록되지 않는 Discovery 전용 항목입니다 (근접 중복 제거는 이번 라운드에서 '
+        '적용되지 않음 -- known limitation).</p>'
+        f'<div class="kpi-row">{"".join(cards)}</div>'
+    )
+
+
 def _change_watch_section_html():
     """Section 4 -- Intelligence 변화 가능성 (Change Watch)."""
     watch = op.intelligence_change_watch()
@@ -285,8 +319,11 @@ def render_overview():
         f'<div class="kpi-row">{live_kpis}</div>'
     )
 
+    discovery_items = dd.daily_discovery_items(data_dir=str(op.ROOT / "data"))
+
     return _shell(f"{_ko('overview')} / Overview", "overview", (
         f'{PUBLIC_SAFE_BANNER}'
+        f'{_daily_discovery_section_html(discovery_items)}'
         f'{_key_signals_section_html()}'
         f'{_change_watch_section_html()}'
         f'{gaps_section}'
