@@ -349,6 +349,213 @@ def source_health_live_summary():
             "sources": records}
 
 
+def intelligence_index():
+    """Section 10 -- Operator Intelligence Index. One row per Intelligence Object, independent
+    facts only (no invented overall quality score). Readiness is the IO's own `readiness` field,
+    never recomputed here."""
+    objects = _load(ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+    claims = _load(re_.CLAIMS_PATH)
+    hyp_path = INTEL_DIR / "hypothesis" / "hypotheses.json"
+    hypotheses = _load(hyp_path) if hyp_path.exists() else {}
+    reports = list(re_.REPORTS_DIR.glob("report_intel_*_v*.json"))
+
+    rows = []
+    for oid, obj in objects.items():
+        topic = obj.get("topic", "UNKNOWN")
+        topic_reports = sorted(
+            (p for p in reports if p.name.startswith(f"report_{oid}_v")),
+            key=lambda p: _load(p).get("version", 0),
+        )
+        latest_report = _load(topic_reports[-1]) if topic_reports else None
+        topic_claims = [c for c in claims.values() if c.get("topic") == topic]
+        topic_hyps = [h for h in hypotheses.values() if h.get("topic") == topic]
+        evidence_ids = set()
+        for h in topic_hyps:
+            evidence_ids.update(h.get("supporting_evidence") or [])
+            evidence_ids.update(h.get("contradicting_evidence") or [])
+        rows.append({
+            "intelligence_id": oid,
+            "topic": topic,
+            "io_version": obj.get("version", "UNKNOWN"),
+            "latest_report_version": latest_report["version"] if latest_report else "NOT_BUILT",
+            "latest_report_id": latest_report["report_id"] if latest_report else None,
+            "readiness": obj.get("readiness", "UNKNOWN"),
+            "updated": obj.get("last_updated", "UNKNOWN"),
+            "claim_count": len(topic_claims),
+            "hypothesis_count": len(topic_hyps),
+            "evidence_count": len(evidence_ids),
+            "known_gap_count": len(obj.get("known_gaps") or []),
+        })
+    return rows
+
+
+def hypotheses_for_topic(topic):
+    """Thin read of hypotheses.json filtered by topic. Returns canonical `status` as stored --
+    never recomputes or reclassifies it here."""
+    hyp_path = INTEL_DIR / "hypothesis" / "hypotheses.json"
+    hypotheses = _load(hyp_path) if hyp_path.exists() else {}
+    return [h for h in hypotheses.values() if h.get("topic") == topic]
+
+
+def report_versions_for_intelligence(intelligence_id):
+    """Section 13 -- every preserved report version for one Intelligence Object, with real
+    on-disk artifact existence per version (never assumed)."""
+    rows = []
+    for path in sorted(re_.REPORTS_DIR.glob(f"report_{intelligence_id}_v*.json")):
+        r = _load(path)
+        stem = path.stem
+        rows.append({
+            "report_id": r["report_id"], "version": r["version"], "readiness": r["readiness"],
+            "generated_at": r["generated_at"],
+            "source_count": len(r.get("source_snapshot") or []) if isinstance(r.get("source_snapshot"), list) else "UNKNOWN",
+            "claim_count": len(r.get("claim_snapshot") or []) if isinstance(r.get("claim_snapshot"), list) else "UNKNOWN",
+            "evidence_snapshot": r.get("evidence_snapshot"),
+            "artifacts": {
+                "json": True,
+                "pdf": (re_.REPORTS_DIR / f"{stem}.pdf").exists(),
+                "operator_html": (re_.REPORTS_DIR / f"{stem}_operator.html").exists(),
+                "print_html": (re_.REPORTS_DIR / f"{stem}_print.html").exists(),
+                "public_html": (re_.REPORTS_DIR / f"{stem}_product_public.html").exists(),
+            },
+        })
+    return rows
+
+
+def report_version_diffs(intelligence_id):
+    """Section 14 -- adjacent-version diffs reusing report_engine.diff_reports() verbatim. No new
+    diff logic. Returns NO_CHANGE when diff_reports() finds nothing (it always reports at least
+    NEW_EVIDENCE for the first version, which we relabel BASELINE here)."""
+    paths = sorted(re_.REPORTS_DIR.glob(f"report_{intelligence_id}_v*.json"),
+                    key=lambda p: _load(p).get("version", 0))
+    reports = [_load(p) for p in paths]
+    diffs = []
+    for i, r in enumerate(reports):
+        prev = reports[i - 1] if i > 0 else None
+        d = re_.diff_reports(prev, r)
+        if prev is None:
+            d = ["BASELINE"]
+        elif not d:
+            d = ["NO_CHANGE"]
+        diffs.append({"from_version": prev["version"] if prev else None, "to_version": r["version"],
+                      "diff_types": d})
+    return diffs
+
+
+def provenance_chain_full(report_id):
+    """Sections 15-17 -- extends provenance_inspector() with human-readable labels and an
+    explicit per-edge connectivity state in {CONNECTED, PARTIALLY_CONNECTED, NOT_CONNECTED,
+    UNRESOLVED_REFERENCE}. Mapping notes (documented, not invented):
+      - a claim_id/evidence_id/source_id present and resolvable in its own store -> CONNECTED
+      - the base provenance_inspector() literal "NOT_CONNECTED" placeholder -> NOT_CONNECTED
+      - an id present on the edge but not found in any store we can read -> UNRESOLVED_REFERENCE
+      - an edge with some but not all of its expected legs resolved -> PARTIALLY_CONNECTED
+    Never fabricates a connection the underlying data does not have."""
+    base = provenance_inspector(report_id)
+    if base["status"] != "FOUND":
+        return base
+    path = re_.REPORTS_DIR / f"{report_id}.json"
+    r = _load(path)
+    objects = _load(ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+    obj = objects.get(r["intelligence_id"]) or {}
+    topic = obj.get("topic", "UNKNOWN")
+    claims = _load(re_.CLAIMS_PATH)
+    hyp_path = INTEL_DIR / "hypothesis" / "hypotheses.json"
+    hypotheses = _load(hyp_path) if hyp_path.exists() else {}
+    stats_by_id = _load(re_.STAT_PATH)
+    documents = _load(re_.DOCUMENTS_PATH)
+    rel_path = INTEL_DIR / "claims" / "evidence_claim_relations.json"
+    relations = _load(rel_path) if rel_path.exists() else {}
+    relations_by_claim = {}
+    for rel in relations.values():
+        relations_by_claim.setdefault(rel.get("claim_id"), []).append(rel)
+
+    topic_hyps = [h for h in hypotheses.values() if h.get("topic") == topic]
+
+    nodes = {
+        "report": {"report_id": report_id, "version": r["version"], "status": r["readiness"]},
+        "intelligence_object": {"intelligence_id": r["intelligence_id"], "topic": topic,
+                                 "version": obj.get("version", "UNKNOWN"),
+                                 "readiness": obj.get("readiness", "UNKNOWN")},
+    }
+
+    hyp_edges = []
+    for h in topic_hyps:
+        hyp_label = f'{h.get("hypothesis_code", "H?")}: {h.get("statement", "UNKNOWN")}'
+        claim_edges = []
+        all_claim_refs = (h.get("supporting_evidence") or []) + (h.get("contradicting_evidence") or [])
+        for ref in all_claim_refs:
+            cid = ref.split(":", 1)[0] if ":" in ref else ref
+            claim = claims.get(cid)
+            if claim is None:
+                claim_edges.append({
+                    "claim_id": cid, "claim_text": "UNKNOWN", "claim_type": "UNKNOWN",
+                    "claim_status": "UNKNOWN", "connectivity": "UNRESOLVED_REFERENCE",
+                    "evidence": [],
+                })
+                continue
+            ev_edges = []
+            for rel in relations_by_claim.get(cid, []):
+                eid = rel.get("evidence_id")
+                series = stats_by_id.get(eid)
+                doc = documents.get(eid)
+                if series:
+                    source_id = series.get("source_id") or "NOT_CONNECTED"
+                    ev_conn = "CONNECTED" if source_id not in (None, "NOT_CONNECTED") else "PARTIALLY_CONNECTED"
+                    ev_edges.append({
+                        "evidence_id": eid, "evidence_type": "STATISTICAL_SERIES",
+                        "temporal_type": series.get("temporal_type", "UNKNOWN"),
+                        "attribution": series.get("source_id", "UNKNOWN"),
+                        "source_id": source_id, "connectivity": ev_conn,
+                    })
+                elif doc:
+                    ev_edges.append({
+                        "evidence_id": eid, "evidence_type": doc.get("category", "DOCUMENT"),
+                        "temporal_type": doc.get("published_at", "UNKNOWN"),
+                        "attribution": doc.get("source") or doc.get("publisher") or "UNKNOWN",
+                        "source_id": doc.get("source") or doc.get("url") or "NOT_CONNECTED",
+                        "connectivity": "CONNECTED" if doc.get("source") or doc.get("url") else "PARTIALLY_CONNECTED",
+                    })
+                elif rel.get("provenance"):
+                    # Evidence id is not resolvable against series/documents stores, but the
+                    # relation itself carries a real source URL (e.g. items acquired outside the
+                    # formal documents.json admission pipeline) -- honestly PARTIALLY_CONNECTED,
+                    # not UNRESOLVED_REFERENCE, since a real source attribution does exist.
+                    ev_edges.append({
+                        "evidence_id": eid, "evidence_type": "EXTERNAL_ACQUISITION_RECORD",
+                        "temporal_type": "UNKNOWN", "attribution": rel.get("provenance"),
+                        "source_id": rel.get("provenance"), "connectivity": "PARTIALLY_CONNECTED",
+                    })
+                else:
+                    ev_edges.append({
+                        "evidence_id": eid, "evidence_type": "UNKNOWN", "temporal_type": "UNKNOWN",
+                        "attribution": "UNKNOWN", "source_id": "UNRESOLVED_REFERENCE",
+                        "connectivity": "UNRESOLVED_REFERENCE",
+                    })
+            claim_conn = (
+                "CONNECTED" if ev_edges and all(e["connectivity"] == "CONNECTED" for e in ev_edges)
+                else "PARTIALLY_CONNECTED" if ev_edges
+                else "NOT_CONNECTED"
+            )
+            claim_edges.append({
+                "claim_id": cid, "claim_text": claim.get("claim_text", "UNKNOWN"),
+                "claim_type": claim.get("claim_type", "UNKNOWN"),
+                "claim_status": claim.get("status", "UNKNOWN"),
+                "connectivity": claim_conn, "evidence": ev_edges,
+            })
+        hyp_conn = (
+            "CONNECTED" if claim_edges and all(c["connectivity"] == "CONNECTED" for c in claim_edges)
+            else "PARTIALLY_CONNECTED" if claim_edges
+            else "NOT_CONNECTED"
+        )
+        hyp_edges.append({
+            "hypothesis_id": h.get("hypothesis_id"), "label": hyp_label,
+            "status": h.get("status", "UNKNOWN"), "connectivity": hyp_conn, "claims": claim_edges,
+        })
+
+    return {"status": "FOUND", "nodes": nodes, "hypotheses": hyp_edges,
+            "statistical_chain": base["statistical_chain"]}
+
+
 def source_inspector():
     """Section 19 -- Source Registry viewed through the Operator. Joins the 299-entry source
     registry (intel/sources.json) with the small Tier-1 live-pilot result where one exists; every

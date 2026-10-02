@@ -14,6 +14,7 @@ sys.path.insert(0, str(HERE))
 import operator_api as op  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "report_engine"))
 import atomic_publish as apub  # noqa: E402
+import report_engine as re_  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#dcdcdc;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a}
@@ -53,7 +54,7 @@ a:focus-visible{outline:2px solid #4b3f8a;outline-offset:2px}
 }
 """
 
-NAV_ITEMS = ("overview", "reports", "gaps", "rights", "sources", "source_health")
+NAV_ITEMS = ("overview", "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
 
 
 def _esc(x):
@@ -65,21 +66,22 @@ def _status(value):
     return f'<span class="status status-{_esc(slug)}">{_esc(value)}</span>'
 
 
-def _nav(active):
+def _nav(active, depth=1):
+    up = "../" * depth
     links = "".join(
-        f'<a href="../{n}/" class="{"active" if n == active else ""}">{n.upper()}</a>'
+        f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{n.upper()}</a>'
         for n in NAV_ITEMS
     )
     return f"<nav aria-label='Operator navigation'>{links}</nav>"
 
 
-def _shell(title, active, body):
+def _shell(title, active, body, depth=1):
     return (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
         f"<title>Operator -- {_esc(title)}</title><style>{CSS}</style></head><body>"
         "<header><h1>METAXIS Intelligence Workbench (Operator)</h1></header>"
-        f"{_nav(active)}<main aria-label='Operator workspace'>{body}</main></body></html>"
+        f"{_nav(active, depth)}<main aria-label='Operator workspace'>{body}</main></body></html>"
     )
 
 
@@ -244,8 +246,224 @@ def render_source_health():
     return _shell("Source Health", "source_health", sandbox_block + live_block)
 
 
+def _index_detail_link(row):
+    if row["latest_report_id"]:
+        return f'<a href="../report/{_esc(row["latest_report_id"])}/">Inspect</a>'
+    return '<span class="empty">no report built</span>'
+
+
+def render_intelligence_index():
+    rows = op.intelligence_index()
+    body_rows = "".join(
+        f'<tr><td>{_esc(row["topic"])}</td>'
+        f'<td class="mono">{_esc(row["io_version"])}</td>'
+        f'<td class="mono">{_esc(row["latest_report_version"])}</td>'
+        f'<td>{_status(row["readiness"])}</td>'
+        f'<td class="mono">{_esc(row["updated"])}</td>'
+        f'<td>{_esc(row["claim_count"])}</td>'
+        f'<td>{_esc(row["hypothesis_count"])}</td>'
+        f'<td>{_esc(row["evidence_count"])}</td>'
+        f'<td>{_esc(row["known_gap_count"])}</td>'
+        f'<td>{_index_detail_link(row)}</td>'
+        f'</tr>'
+        for row in rows
+    )
+    table = ('<div class="table-wrap"><table><tr><th>Topic</th><th>IO Version</th>'
+             '<th>Latest Report Version</th><th>Readiness</th><th>Updated</th>'
+             '<th>Claims</th><th>Hypotheses</th><th>Evidence</th><th>Known Gaps</th>'
+             f'<th>Detail</th></tr>{body_rows}</table></div>')
+    note = ('<p class="empty">No overall quality score is shown here by design -- these are '
+            'independent counts only, each traceable to its own backend field.</p>')
+    return _shell("Intelligence Index", "intelligence_index", f"{table}{note}")
+
+
+def _hyp_rows_html(hyps):
+    if not hyps:
+        return '<p class="empty">No hypotheses recorded for this topic.</p>'
+    rows = "".join(
+        f'<tr><td class="mono">{_esc(h.get("hypothesis_code", "H?"))}</td>'
+        f'<td>{_esc(h.get("statement", "UNKNOWN"))}</td>'
+        f'<td>{_status(h.get("status", "UNKNOWN"))}</td>'
+        f'<td class="mono">{_esc(h.get("hypothesis_id"))}</td></tr>'
+        for h in hyps
+    )
+    return ('<div class="table-wrap"><table><tr><th>Code</th><th>Statement</th>'
+            f'<th>Canonical Status</th><th>ID</th></tr>{rows}</table></div>')
+
+
+def render_report_inspector(report_id):
+    insp = op.report_inspector(report_id)
+    if insp["status"] != "FOUND":
+        return _shell("Report Inspector", None, f'<p class="empty">Report {_esc(report_id)} NOT_FOUND.</p>', depth=2)
+    r = insp["report"]
+    objects = json.loads((Path(op.ROOT) / "intel" / "intelligence_objects" / "intelligence_objects.json").read_text(encoding="utf-8"))
+    obj = objects.get(r["intelligence_id"]) or {}
+    topic = obj.get("topic", "UNKNOWN")
+    hyps = op.hypotheses_for_topic(topic)
+    versions = op.report_versions_for_intelligence(r["intelligence_id"])
+    diffs = op.report_version_diffs(r["intelligence_id"])
+
+    header = (
+        f'<h2>{_esc(r["topic"])} -- Report {_esc(r["report_id"])}</h2>'
+        f'<p class="mono">version={_esc(r["version"])} readiness={_status(r["readiness"])} '
+        f'generated_at={_esc(r["generated_at"])}</p>'
+        f'<p>Intelligence Object: <span class="mono">{_esc(r["intelligence_id"])}</span> '
+        f'(IO version {_esc(obj.get("version", "UNKNOWN"))}, readiness {_status(obj.get("readiness", "UNKNOWN"))})</p>'
+        f'<p><a href="../../provenance/{_esc(report_id)}/">Provenance Inspector for this report &#8594;</a></p>'
+    )
+
+    def _section(title, section_key):
+        s = r["sections"].get(section_key)
+        if not s or not s.get("content_blocks"):
+            return f'<h3>{_esc(title)}</h3><p class="empty">empty / NOT_AVAILABLE</p>'
+        items = "".join(f'<li>{_esc(json.dumps(b, ensure_ascii=False)) if not isinstance(b, str) else _esc(b)}</li>'
+                         for b in s["content_blocks"])
+        return f'<h3>{_esc(title)} <span class="status">{_esc(s.get("status"))}</span></h3><ul>{items}</ul>'
+
+    hyp_block = f'<h3>Hypotheses (canonical status)</h3>{_hyp_rows_html(hyps)}'
+    claims_block = _section("Claims (Key Claims)", "KEY_CLAIMS")
+    evidence_block = _section("Research Evidence", "RESEARCH_EVIDENCE")
+    stats_obs = r["sections"].get("STATISTICAL_CONTEXT", {})
+    # Section 11 -- Observation and Forecast kept as two visually separated lists, never merged.
+    obs_blocks = [b for b in stats_obs.get("content_blocks", []) if isinstance(b, dict) and b.get("temporal_type", "").upper() != "FORECAST"]
+    fcst_blocks = [b for b in stats_obs.get("content_blocks", []) if isinstance(b, dict) and b.get("temporal_type", "").upper() == "FORECAST"]
+    def _stat_list(blocks):
+        if not blocks:
+            return '<p class="empty">none</p>'
+        return "<ul>" + "".join(f'<li>{_esc(json.dumps(b, ensure_ascii=False))}</li>' for b in blocks) + "</ul>"
+    stats_block = (
+        '<h3>Statistics</h3>'
+        f'<h4>Observation</h4>{_stat_list(obs_blocks)}'
+        f'<h4>Forecast</h4>{_stat_list(fcst_blocks)}'
+    )
+    counterev_block = _section("Counterevidence", "COUNTEREVIDENCE")
+    altexp_block = _section("Alternative Explanations", "ALTERNATIVE_EXPLANATIONS")
+    geo_block = _section("Geographic Applicability", "GEOGRAPHIC_CONTEXT")
+    temp_block = _section("Temporal Applicability", "TEMPORAL_CONTEXT")
+    gaps_block = _section("Known Gaps", "EVIDENCE_GAPS")
+
+    def _version_link(v):
+        label = f'v{_esc(v["version"])}'
+        if v["report_id"] != report_id:
+            return f'<a href="../{_esc(v["report_id"])}/">{label}</a>'
+        return f'<strong>{label} (this page)</strong>'
+
+    version_rows = "".join(
+        f'<tr><td>{_version_link(v)}</td>'
+        f'<td>{_esc(v["generated_at"])}</td><td>{_status(v["readiness"])}</td>'
+        f'<td>{_esc(v["source_count"])}</td><td>{_esc(v["claim_count"])}</td>'
+        f'<td class="mono">{_esc(v["evidence_snapshot"])}</td>'
+        f'<td>{"OK" if v["artifacts"]["json"] else "MISSING"}</td>'
+        f'<td>{"OK" if v["artifacts"]["pdf"] else "MISSING"}</td>'
+        f'<td>{"OK" if v["artifacts"]["operator_html"] else "MISSING"}</td>'
+        f'<td>{"OK" if v["artifacts"]["print_html"] else "MISSING"}</td>'
+        f'<td>{"OK" if v["artifacts"]["public_html"] else "MISSING"}</td></tr>'
+        for v in versions
+    )
+    versions_block = (
+        '<h3>Reports (version history)</h3>'
+        '<div class="table-wrap"><table><tr><th>Version</th><th>Generated</th><th>Readiness</th>'
+        '<th>Sources</th><th>Claims</th><th>Evidence Snapshot</th>'
+        '<th>.json</th><th>.pdf</th><th>_operator.html</th><th>_print.html</th>'
+        f'<th>_product_public.html</th></tr>{version_rows}</table></div>'
+    )
+    diff_rows = "".join(
+        f'<tr><td>{_esc(d["from_version"]) if d["from_version"] is not None else "--"} &#8594; v{_esc(d["to_version"])}</td>'
+        f'<td>{", ".join(_esc(x) for x in d["diff_types"])}</td></tr>'
+        for d in diffs
+    )
+    diff_block = (
+        '<h3>Version Diffs (via report_engine.diff_reports())</h3>'
+        f'<div class="table-wrap"><table><tr><th>Transition</th><th>Diff Types</th></tr>{diff_rows}</table></div>'
+    )
+    provenance_block = (
+        '<h3>Provenance</h3>'
+        f'<p><a href="../../provenance/{_esc(report_id)}/">Full Report &#8594; IO &#8594; Hypothesis &#8594; '
+        'Claim &#8594; Evidence &#8594; Source chain &#8594;</a></p>'
+    )
+
+    body = "".join([
+        header, "<h3>Current State</h3>", _esc(obj.get("current_state", "UNKNOWN")),
+        hyp_block, claims_block, evidence_block, stats_block, counterev_block, altexp_block,
+        geo_block, temp_block, gaps_block, versions_block, diff_block, provenance_block,
+    ])
+    return _shell(f"Report {report_id}", None, body, depth=2)
+
+
+CONNECTIVITY_NOTE = (
+    '<p class="empty">Connectivity vocabulary: CONNECTED (fully resolved), '
+    'PARTIALLY_CONNECTED (some but not all legs resolved), NOT_CONNECTED (no edge exists in the '
+    'data), UNRESOLVED_REFERENCE (an id is referenced but not found in any readable store). '
+    'Never fabricated.</p>'
+)
+
+
+def render_provenance_inspector(report_id):
+    chain = op.provenance_chain_full(report_id)
+    if chain["status"] != "FOUND":
+        return _shell("Provenance Inspector", None, f'<p class="empty">Report {_esc(report_id)} NOT_FOUND.</p>', depth=2)
+    n = chain["nodes"]
+    header = (
+        f'<h2>Provenance -- {_esc(n["report"]["report_id"])}</h2>'
+        f'<p>REPORT <span class="mono">{_esc(n["report"]["report_id"])}</span> '
+        f'(v{_esc(n["report"]["version"])}, {_status(n["report"]["status"])}) &#8594; '
+        f'INTELLIGENCE OBJECT <strong>{_esc(n["intelligence_object"]["topic"])}</strong> '
+        f'<span class="mono">{_esc(n["intelligence_object"]["intelligence_id"])}</span> '
+        f'(v{_esc(n["intelligence_object"]["version"])}, {_status(n["intelligence_object"]["readiness"])})</p>'
+        f'{CONNECTIVITY_NOTE}'
+    )
+
+    def _ev_html(ev):
+        return (
+            f'<li><strong>{_esc(ev["evidence_type"])}</strong> '
+            f'(temporal: {_esc(ev["temporal_type"])}, attribution: {_esc(ev["attribution"])}) '
+            f'<span class="mono">{_esc(ev["evidence_id"])}</span> '
+            f'&#8594; SOURCE <span class="mono">{_esc(ev["source_id"])}</span> '
+            f'{_status(ev["connectivity"])}</li>'
+        )
+
+    hyp_blocks = []
+    for h in chain["hypotheses"]:
+        claim_items = []
+        for c in h["claims"]:
+            ev_items = "".join(_ev_html(e) for e in c["evidence"]) or '<li class="empty">no evidence resolved</li>'
+            claim_items.append(
+                f'<li><strong>{_esc(c["claim_text"])}</strong> '
+                f'(type: {_esc(c["claim_type"])}, status: {_esc(c["claim_status"])}) '
+                f'<span class="mono">{_esc(c["claim_id"])}</span> {_status(c["connectivity"])}'
+                f'<ul>{ev_items}</ul></li>'
+            )
+        claim_list_html = "".join(claim_items) or '<li class="empty">no claims</li>'
+        hyp_blocks.append(
+            f'<li><strong>{_esc(h["label"])}</strong> (status: {_esc(h["status"])}) '
+            f'<span class="mono">{_esc(h["hypothesis_id"])}</span> {_status(h["connectivity"])}'
+            f'<ul>{claim_list_html}</ul></li>'
+        )
+    hyp_list_html = "".join(hyp_blocks) or '<li class="empty">no hypotheses for this topic</li>'
+    hyp_section = (
+        '<h3>Hypothesis &#8594; Claim &#8594; Evidence &#8594; Source chain</h3>'
+        f'<ul>{hyp_list_html}</ul>'
+    )
+
+    stat_rows = "".join(
+        f'<tr><td class="mono">{_esc(s["statistical_series_id"])}</td>'
+        f'<td class="mono">{_esc(s["source_id"])}</td>'
+        f'<td>{_status("CONNECTED" if s["source_id"] != "NOT_CONNECTED" else "NOT_CONNECTED")}</td></tr>'
+        for s in chain["statistical_chain"]
+    )
+    stat_section = (
+        '<h3>Claim &#8594; Statistical Series &#8594; Source</h3>'
+        '<div class="table-wrap"><table><tr><th>Statistical Series</th><th>Source</th>'
+        f'<th>Connectivity</th></tr>{stat_rows}</table></div>'
+        if chain["statistical_chain"] else
+        '<h3>Claim &#8594; Statistical Series &#8594; Source</h3><p class="empty">none for this report</p>'
+    )
+    return _shell(f"Provenance {report_id}", None, header + hyp_section + stat_section, depth=2)
+
+
 PAGES = {
-    "overview": render_overview, "reports": render_reports, "gaps": render_gaps,
+    "overview": render_overview, "intelligence_index": render_intelligence_index,
+    "reports": render_reports, "gaps": render_gaps,
     "rights": render_rights, "sources": render_sources, "source_health": render_source_health,
 }
 
@@ -281,6 +499,33 @@ def build_operator_pages(site_dir):
             validator=apub.json_validator)
         if sources_result["status"] != "PUBLISHED":
             status["errors"].append({"page": "sources_full.json", "error": sources_result["error"]})
+
+        # Report Inspector + Provenance Inspector -- one pair of pages per real, on-disk report
+        # version (Sections 11-17). Each report_id gets its own directory so every version is
+        # independently reachable, matching report_versions_for_intelligence()'s file listing.
+        report_paths = sorted(re_.REPORTS_DIR.glob("report_intel_*_v*.json"))
+        for path in report_paths:
+            report_id = path.stem
+            try:
+                r_dir = operator_dir / "report" / report_id
+                r_dir.mkdir(parents=True, exist_ok=True)
+                res = apub.atomic_write(r_dir / "index.html", render_report_inspector(report_id),
+                                         validator=apub.html_validator)
+                if res["status"] != "PUBLISHED":
+                    raise RuntimeError(res["error"])
+                status["pages_written"].append(f"report/{report_id}")
+            except Exception as e:  # noqa: BLE001
+                status["errors"].append({"page": f"report/{report_id}", "error": str(e)})
+            try:
+                p_dir = operator_dir / "provenance" / report_id
+                p_dir.mkdir(parents=True, exist_ok=True)
+                res = apub.atomic_write(p_dir / "index.html", render_provenance_inspector(report_id),
+                                         validator=apub.html_validator)
+                if res["status"] != "PUBLISHED":
+                    raise RuntimeError(res["error"])
+                status["pages_written"].append(f"provenance/{report_id}")
+            except Exception as e:  # noqa: BLE001
+                status["errors"].append({"page": f"provenance/{report_id}", "error": str(e)})
     except Exception as e:  # noqa: BLE001
         status["errors"].append({"page": None, "error": str(e)})
     return status

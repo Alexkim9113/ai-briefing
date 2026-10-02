@@ -23,7 +23,9 @@ def test_build_operator_pages_writes_every_page():
     try:
         status = ou.build_operator_pages(tmp)
         assert status["errors"] == []
-        assert set(status["pages_written"]) == set(ou.PAGES.keys())
+        # O-1E: pages_written now also includes one report/ and provenance/ page per real,
+        # on-disk report version, in addition to the fixed PAGES set.
+        assert set(ou.PAGES.keys()).issubset(set(status["pages_written"]))
         for name in ou.PAGES:
             assert (tmp / "operator" / name / "index.html").exists()
     finally:
