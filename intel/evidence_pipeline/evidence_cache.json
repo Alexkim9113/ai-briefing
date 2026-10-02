@@ -7,7 +7,64 @@
  "491ec7bec9434ea3": null,
  "4db6a8e118627698": null,
  "5047e0b5a3d3b05a": null,
- "5356e997cbe0c67e": null,
+ "5356e997cbe0c67e": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "양성수 교수는 울산대학교병원 로봇수술센터장이다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "울산대학교병원 로봇수술센터장",
+    "predicate": "소속/직책",
+    "subject": "양성수",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "양성수 교수가 한국 대표로 아시아·태평양 로봇 대장수술 전문가 회의에 참석했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "아시아·태평양 로봇 대장수술 전문가 회의",
+    "predicate": "참석하다",
+    "subject": "양성수",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 3,
+    "claim_text": "양성수 교수가 회의에서 각국의 임상 경험을 공유했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목 및 요약",
+    "object": "각국의 임상 경험",
+    "predicate": "공유하다",
+    "subject": "양성수",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_CITATION",
+    "object": "아시아·태평양 로봇 대장수술 전문가 회의",
+    "reason": "원문에서 양성수 교수가 한국 대표로 회의에 참석해 각국의 임상 경험을 공유했다고 명시됨",
+    "relation": "참석 및 임상 공유",
+    "source_claim_ids": [
+     1,
+     2
+    ],
+    "subject": "양성수",
+    "support_type": "SUPPORT"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ },
  "552ee46dd53770f6": null,
  "5af42d7c7081d854": null,
  "5f43327bc9c00df9": null,

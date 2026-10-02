@@ -41,7 +41,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_10": {
@@ -95,7 +95,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_11": {
@@ -105,19 +105,17 @@
   "contradicts_ids": [],
   "created_at": "2026-10-01T05:33:55.719025+00:00",
   "direction": null,
-  "document_id": "a6575ff74981de4c",
+  "document_id": "9aac76b6f2c6084f",
   "domain_scope": [],
   "domains": [],
-  "entities": [
-   "Nvidia"
-  ],
+  "entities": [],
   "epistemic_status": "NOT_VERIFIED",
   "evidence_record_id": "evr_11",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
   "fact_id": null,
-  "first_seen": "2026-09-29T11:03:00+09:00",
+  "first_seen": "2026-09-29T11:04:44+09:00",
   "geographic_scope": null,
   "history": [
    {
@@ -129,20 +127,20 @@
   "institutions": [],
   "interpretation_method": "GEMINI_CANDIDATE",
   "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T11:03:00+09:00",
-  "object": "미국 뉴욕",
+  "last_seen": "2026-09-29T11:04:44+09:00",
+  "object": "아시아·태평양 로봇 대장수술 전문가 회의",
   "population_scope": null,
-  "relation": "만남",
+  "relation": "참석 및 임상 공유",
   "resources": [],
-  "source_id": "src_khan_co_kr",
+  "source_id": "src_newsis_com",
   "source_type": null,
   "structural_change_id_hint": null,
-  "subject": "젠슨 황, 이재용, 최태원",
+  "subject": "양성수",
   "support_type": "UNKNOWN",
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_12": {
@@ -177,6 +175,53 @@
   "interpretation_method": "GEMINI_CANDIDATE",
   "interpretation_status": "CANDIDATE",
   "last_seen": "2026-09-29T11:03:00+09:00",
+  "object": "미국 뉴욕",
+  "population_scope": null,
+  "relation": "만남",
+  "resources": [],
+  "source_id": "src_khan_co_kr",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "젠슨 황, 이재용, 최태원",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
+  "value": null
+ },
+ "evr_13": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-02T02:36:39.889163+00:00",
+  "direction": null,
+  "document_id": "a6575ff74981de4c",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [
+   "Nvidia"
+  ],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_13",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T11:03:00+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-02T02:37:05.242579+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T11:03:00+09:00",
   "object": "2026 밴 플리트상",
   "population_scope": null,
   "relation": "수상",
@@ -189,7 +234,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_2": {
@@ -234,7 +279,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_3": {
@@ -288,7 +333,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_4": {
@@ -340,7 +385,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_5": {
@@ -388,7 +433,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_6": {
@@ -433,7 +478,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_7": {
@@ -478,7 +523,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_8": {
@@ -523,7 +568,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  },
  "evr_9": {
@@ -571,7 +616,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-01T23:27:02.174465+00:00",
+  "updated_at": "2026-10-02T02:36:39.889163+00:00",
   "value": null
  }
 }
