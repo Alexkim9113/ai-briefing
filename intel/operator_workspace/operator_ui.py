@@ -217,28 +217,44 @@ def _daily_discovery_section_html(items):
         )
     cards = []
     for it in items:
+        sources = it.get("sources") or [{"institution": it.get("source"), "url": it.get("url")}]
+        sources_html = "".join(
+            f'<li>{_esc(s.get("institution"))}: {_safe_link(s.get("url"))}</li>' for s in sources
+        ) if len(sources) > 1 else ""
+        field = it.get("field")
+        country = it.get("country")
+        tags = " &middot; ".join(x for x in (
+            f'분야(Field): {_esc(field)}' if field else "",
+            f'지역(Region): {_esc(country)}' if country else "",
+        ) if x)
         cards.append(
             '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
             f'<div><strong>{_esc(it["title_ko"])}</strong></div>'
             f'<div>출처(Source): {_esc(it["source"])} (Tier {_esc(it["source_tier"])}) &middot; '
             f'날짜(Date): {_esc(it["date"])}</div>'
-            f'<div>왜 중요한가(Why it matters): {_esc(it["why_it_matters"])}</div>'
+            + (f'<div>{tags}</div>' if tags else "")
+            + f'<div>왜 중요한가(Why it matters): {_esc(it["why_it_matters"])}</div>'
             f'<div>연관 Intelligence: {_esc(it["related_intelligence"])}</div>'
             f'<div>{_safe_link(it["url"])}</div>'
-            f'<div class="empty">{_esc(it["evidence_status"])}</div>'
+            + (f'<div>병합된 출처(Merged sources, {len(sources)}): <ul>{sources_html}</ul></div>'
+               if sources_html else "")
+            + f'<div class="empty">{_esc(it["evidence_status"])}</div>'
             '</div>'
         )
     return (
         f'<h2>오늘의 핵심 Discovery / Today\'s Key Discovery ({len(items)})</h2>'
         '<p class="empty">결정론적(non-LLM) 중요도 필터: Tier 1 출처 또는 정책/규제 키워드 일치. '
-        'claims.json에 기록되지 않는 Discovery 전용 항목입니다 (근접 중복 제거는 이번 라운드에서 '
-        '적용되지 않음 -- known limitation).</p>'
+        'claims.json에 기록되지 않는 Discovery 전용 항목입니다. 같은 사건을 보도한 근접 중복 '
+        '기사는 event_service.cluster_events()로 하나의 카드로 병합되며(해당 시 아래 카드의 '
+        '출처 목록에 모두 표시), 보수적 병합 기준에 맞지 않으면 분리된 카드로 남습니다.</p>'
         f'<div class="kpi-row">{"".join(cards)}</div>'
     )
 
 
 def _change_watch_section_html():
-    """Section 4 -- Intelligence 변화 가능성 (Change Watch)."""
+    """Section 4 -- Intelligence 변화 가능성 (Change Watch). Section 27 -- counterevidence is now
+    its own clearly identifiable subsection/card-group (previously folded invisibly into this
+    section in Round 1), reusing the SAME contradicting_evidence data -- no new engine."""
     watch = op.intelligence_change_watch()
     contested = watch["contested_hypotheses"]
     if contested:
@@ -255,8 +271,67 @@ def _change_watch_section_html():
         contested_block = '<p class="empty">현재 반증이 연결된 가설이 없습니다 (no hypothesis currently carries contradicting_evidence).</p>'
     return (
         '<h2>Intelligence 변화 가능성 / Judgment-Change Watch</h2>'
-        f'<h3>반증이 연결된 가설 (contradicting_evidence wired)</h3>{contested_block}'
+        f'<h3 id="counterevidence">반증 자료 (Counterevidence) <span class="empty">'
+        f'({len(contested)}개 가설에 연결됨)</span></h3>{contested_block}'
     )
+
+
+def _emerging_issues_section_html(result):
+    """Section 13-16 -- '새롭게 떠오르는 이슈'. Honest NOT_ENOUGH_HISTORY empty state when fewer
+    than daily_discovery.MIN_HISTORY_DAYS real data/*.json files exist -- never a fabricated
+    trend from a single day."""
+    if result["status"] == dd.NOT_ENOUGH_HISTORY:
+        return (
+            '<h2>새롭게 떠오르는 이슈 / Emerging Issues</h2>'
+            f'<p class="empty">충분한 실제 이력 데이터가 없습니다 (NOT_ENOUGH_HISTORY: '
+            f'{_esc(result["days_available"])}/{_esc(result["days_required"])}일 확보됨). '
+            '추세를 조작하지 않고 정직하게 비워둡니다.</p>'
+        )
+    issues = result["issues"]
+    if not issues:
+        return (
+            '<h2>새롭게 떠오르는 이슈 / Emerging Issues</h2>'
+            f'<p class="empty">{_esc(result["days_available"])}일 이력 확인됨, 반복 등장하는 이슈는 '
+            '아직 확인되지 않았습니다.</p>'
+        )
+    cards = "".join(
+        '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+        f'<div><strong>{_esc(i["issue_name"])}</strong> &middot; {_esc(i["field"])} &middot; '
+        f'{_esc(i["region"])} &middot; {_status(i["status"])}</div>'
+        f'<div>관련 이벤트(Related events): {_esc(i["related_event_count"])} &middot; '
+        f'독립 출처(Independent sources): {_esc(i["independent_source_count"])} &middot; '
+        f'반복 일수(Recurring days): {_esc(i["recurring_days"])}</div>'
+        f'<div>관련 Intelligence 토픽: {_esc(i["related_intelligence_topic"] or "없음")}</div>'
+        f'<div class="empty">{_esc(i["claim_status"])}</div>'
+        '</div>'
+        for i in issues
+    )
+    return (
+        f'<h2>새롭게 떠오르는 이슈 / Emerging Issues ({len(issues)}, '
+        f'{_esc(result["days_available"])}일 이력 기반)</h2>'
+        f'<div class="kpi-row">{cards}</div>'
+    )
+
+
+def _editorial_queue_section_html(buckets):
+    """Section 17-18 -- '편집 검토 대기열'. Read-only categorization over already-computed
+    Discovery + Change Watch data (see daily_discovery.editorial_queue -- no mutating function
+    exists anywhere in this module or that one). EDITORIAL_PRIORITY and EVIDENCE_QUALITY are
+    always shown as two separate labels, never merged into one score."""
+    parts = []
+    for bucket in dd.EDITORIAL_BUCKETS:
+        rows = buckets.get(bucket) or []
+        if not rows:
+            continue
+        items = "".join(
+            f'<li>{_esc(r["label"])} -- {_esc(r["detail"])} &middot; '
+            f'<span class="status">PRIORITY: {_esc(r["editorial_priority"])}</span> '
+            f'<span class="status">EVIDENCE: {_esc(r["evidence_quality"])}</span></li>'
+            for r in rows
+        )
+        parts.append(f'<h3>{_esc(bucket)} <span class="empty">({len(rows)})</span></h3><ul>{items}</ul>')
+    body = "".join(parts) if parts else '<p class="empty">현재 편집 검토 대기열에 항목이 없습니다.</p>'
+    return f'<h2>편집 검토 대기열 / Editorial Queue</h2>{body}'
 
 
 def _gap_categories_section_html():
@@ -320,12 +395,21 @@ def render_overview():
     )
 
     discovery_items = dd.daily_discovery_items(data_dir=str(op.ROOT / "data"))
+    emerging = dd.emerging_issues(data_dir=str(op.ROOT / "data"))
+    watch = op.intelligence_change_watch()
+    editorial_buckets = dd.editorial_queue(discovery_items, watch["contested_hypotheses"])
 
+    # Section 26 reorder: 오늘의 핵심 Discovery -> Emerging Issues -> Change Watch (incl. its own
+    # Counterevidence subsection, section 27) -> Editorial Queue -> 열린 쟁점 -> Portfolio ->
+    # 최신 보고서 -> (반대근거/대안설명 already live inside Change Watch's Counterevidence
+    # subsection -- not duplicated as a second section) -> Source Health -> System 상태 (last).
     return _shell(f"{_ko('overview')} / Overview", "overview", (
         f'{PUBLIC_SAFE_BANNER}'
         f'{_daily_discovery_section_html(discovery_items)}'
         f'{_key_signals_section_html()}'
+        f'{_emerging_issues_section_html(emerging)}'
         f'{_change_watch_section_html()}'
+        f'{_editorial_queue_section_html(editorial_buckets)}'
         f'{gaps_section}'
         f'{_portfolio_section_html()}'
         f'{reports_section}'
