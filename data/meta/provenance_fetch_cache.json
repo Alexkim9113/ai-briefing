@@ -3018,5 +3018,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-02T15:45:21.029351+00:00"
+ },
+ "2e690f908eb174452678af3e36fa57564a5344fb9effb97d23885b038af31f0a": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=226985",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:49:58.376773+00:00"
+ },
+ "7b8bd428ba1c9db7531e3efe1c4bd3b5785f0d56179f49ef4f3e248acea8b3f2": {
+  "url": "https://www.khan.co.kr/article/202610021828001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:49:59.628806+00:00"
+ },
+ "18630145dda6127a550b5ebeca25a26145c55a47b3f3b65733bc5605c5fd9191": {
+  "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003272294",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:02.492084+00:00"
+ },
+ "94aa61076d0cc74401ea8015f8825e88a35c3302c1c5f7d117fb31429501c44d": {
+  "url": "https://www.aitimes.kr/news/articleView.html?idxno=42173",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:04.583163+00:00"
+ },
+ "ee0596d7f2817a372b361d573eab76b762b69dbddc9e1d9a0b0b36b2c76a7e0d": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215930",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:06.809329+00:00"
+ },
+ "0cd840e19383a2123e344d1db0fa40548f4af9edd66c43d164ecb7e1578fa644": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:08.962608+00:00"
+ },
+ "abc73583a88b1c7e21daa34c5ba2a16319b556fe9061d9df17546fddea163ed6": {
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVjZ4NEZvVEpMeE8teWhzNnZPMGRVenRheml1SS1oRzBrOXF6VVFLb09qZXQzbjdlNjVuZTQzZGVRMEF4SUI1MlpLUEZpR0J1TlpvQUVkZUpSYnhOYzZIc0JQa2RXV2RGUzVQWWVJdllsOUtoa2pvZ0hsR3dQYS1KMzhZUHZJTDZKb01UTjViU19CX2dLMDV0V3Yxa29fT2M5?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T15:50:09.169413+00:00"
+ },
+ "de8327b2974a0aeffcf3a9b33a9134a833f7167dccd6b8af657193368735f465": {
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9aQTZpU0N2U0xLcEttaEhUYkFxUmEzMDk0OXRGaTRnbGJJbXVJWmQzV3dMS0FxYldwaHdhdXBDVy1Md2Z6WnV4VEpGUTdobkM2QUtDaHdaLTE4M1Vod0QwNlVBeE1FdHVkank4?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-02T15:50:09.372553+00:00"
+ },
+ "e81b1dea7ce0fb42c97855621c52f6a49d0893d2f06b0ac1c6c329bdc3da8830": {
+  "url": "https://huggingface.co/blog/allenai/astabrief",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:09.513319+00:00"
+ },
+ "252529d3d826fcccb753d3b8742c83248345f002cef11ab40198d98e0444569e": {
+  "url": "https://www.zdnet.com/tech/tap-to-pay-trouble-pixel-phones-google-wallet-nfc/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-02T15:50:09.625060+00:00"
  }
 }

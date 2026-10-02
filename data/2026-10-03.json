@@ -1,6 +1,6 @@
 {
  "date": "2026-10-03",
- "generated_at": "2026-10-03T00:44+09:00",
+ "generated_at": "2026-10-03T00:49+09:00",
  "items": [
   {
    "id": "daaf8f4e533ea417",
@@ -12,7 +12,7 @@
    "published": "2026-10-02T23:27:00+09:00",
    "summary": "신한, KB국민, 하나은행 등 국내 대형 시중은행 3곳과 지방은행인 BNK부산은행 등 모두 4곳의 은행에서 고객 정보가 동시다발적으로 유출되는 초유의 해킹 사고가 발생했다. 우리은행과 NH농협은행 역시 해킹 공격을 받았으나 아직까지는 정보 유출 피해가 없는 것으로 확인됐다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "39546116e3568626",
@@ -1412,6 +1412,18 @@
    }
   },
   {
+   "id": "f23d0efd3c84a0ef",
+   "title": "[AI그래픽] 2026 아이치·나고야 아시안게임 한국 '메달 리스트' 집계 (10월2일)",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE92WDhUc1k2cllNUHY0SjZIN1RjejBqMS1HQWNudG1tRGtxeTd1dWFTcXhHZUZpYV9HQmhtY0M3TUtVajlPZW9EaWtIV2hzTklUQ1ZtSzhPZWZ1bWh3?oc=5",
+   "source": "뉴스핌",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-02T14:59:00+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx_try": 1
+  },
+  {
    "id": "a6f35b4fd21ad568",
    "title": "Horde of Obsolete Humanoid Robots Made to Hurl Themselves Into Vat of Liquid Steel for Total Obliteration",
    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSU1nRmxGSnRxZFo0QS10bHlLMDE4QU5tWDlWZmFlLUNILUxpemt2VHQwU1pnRXVpc2dTYkZ1cXR5cW0zbTVMTjd2VzJOTFVFOHk2Qk45ZEw1UnNuNHVyVm9PN3p5U2NHaFRhVWVMVEY2VHBjbTZzRXhWWHA1UGNORl94SG9DU0F1cThJOHVOQ2hpQQ?oc=5",
@@ -1680,7 +1692,7 @@
    "summary": "[파이낸셜뉴스] 코스콤이 경기 안양시에 아동·청소년을 위한 디지털 교육 공간을 마련하고 미래 IT 인재 양성 지원에 나섰다. 인공지능(AI)과 코딩 등 디지털 기술을 직접 배우고 체험할 수 있는 교육 환경을 조성해 지역·계층 간 교육 격차를 줄이고 미래세대의 디지털 역량을 강화한다는 취지다.",
    "detail": "[파이낸셜뉴스] 코스콤이 경기 안양시에 아동·청소년을 위한 디지털 교육 공간을 마련하고 미래 IT 인재 양성 지원에 나섰다.\n코스콤은 지난달 30일 경기 안양시 비산종합사회복지관에서 '코스콤 IT희망교실' 1호 공간 개소식을 개최했다고 2일 밝혔다.\nIT희망교실은 아동·청소년이 AI와 코딩 등 디지털 기술을 배우고 체험할 수 있도록 조성한 교육 공간이다.\n코스콤은 안양시 및 초록우산과 협력해 복지관 프로그램실을 디지털 교육 공간으로 탈바꿈시켰다.",
    "thumb": "",
-   "mx_try": 2
+   "mx_try": 3
   },
   {
    "id": "063509925cd724d2",
@@ -2696,6 +2708,44 @@
    }
   },
   {
+   "id": "ae9722c009714bb4",
+   "title": "FedEx CEO Raj Subramaniam on Advancing Physical AI",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQemUxVjVpUGxuUkhWcjJudzZ0NnIxc3lEdEtaTWRPQ3B3UmtTYzl6eDZOVnRjWG1ZckFaT3B1MFRhMEZHQUlBMUJrRTV3cnNqdldOemd0aExhOURNbXZwOEdTV1Z1RzUwOFNLeWdpaGNaczk4dGlaN2x4TmZwQVB5SEJvTTVuNnhHczJBWjUxX1J0b1JTY05tY3RtaHJlVVNpNVU3cDhPb2FUa3VFTjJhdWtoTGJWNmx1ak9zcFdSS1ZFNE9CWU9lclpwcWFPeFpGdlpWRXhpajF1QlZPeU01b05kWC1qdGZt?oc=5",
+   "source": "WSJ",
+   "field": "피지컬 AI",
+   "category": "news_global",
+   "published": "2026-10-02T13:04:09+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "FedEx CEO 라지 수브라마니아, 물리적 AI 발전에 대해 논하다",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "FedEx의 Raj Subramaniam CEO가 물류 현장에서의 피지컬 AI 도입과 발전 방향을 조명했다.",
+    "p": "물류 거물급 기업의 피지컬 AI 강조는 로보틱스와 자동화 기술이 실험 단계를 넘어 실제 공급망과 운영 효율성을 좌우하는 핵심 인프라로 자리 잡고 있음을 보여준다.",
+    "t": [
+     "FedEx",
+     "피지컬AI",
+     "물류",
+     "로보틱스"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ae9722c009714bb4",
+     "point_text": "물류 거물급 기업의 피지컬 AI 강조는 로보틱스와 자동화 기술이 실험 단계를 넘어 실제 공급망과 운영 효율성을 좌우하는 핵심 인프라로 자리 잡고 있음을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ae9722c009714bb4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.338986+00:00"
+    }
+   }
+  },
+  {
    "id": "c36bf0a2d7526f4e",
    "title": "The AI Chatbots That Tech Companies Are Aggressively Pushing to Billions of Users Appear to Be Causing Serious Psychological Harms, New Research Finds",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNOWY5QXY5OUxjSnF5LWtuVmpBUTlOeHBPSzRoNU5DVHBQSmdtazdnUV9pb3FGVjZZM0JCdTZNUzhyTzZkbGNjcnFiWi1sdVdfY3FObzR0b2JEbC1jRXhXZ2d0NW1PMTZLVE5IQ0xGbjR4aWJJX1dtT0p0U2ZXY3k1XzZoZ0g0Y2pYdXdOSQ?oc=5",
@@ -3134,6 +3184,44 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-02T15:45:39.521860+00:00"
+    }
+   }
+  },
+  {
+   "id": "53631d5875ea9747",
+   "title": "Mikelorobotics Bets on Physical AI With Robots That Mimic Skilled Painters",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE44ZWI4TnNSUlNtVVc3NVUyR1haYVNYZkk3QmtSa0Z5eUt1bHpZUUxiQmdwbWhsWThmaWp5d1Q1MGQzRzFVdkpCVE53MUY1UGo0WVRsY3h2SWlZSWFFSzd2S3RhNzROQkE?oc=5",
+   "source": "thelec.net",
+   "field": "로봇",
+   "category": "news_global",
+   "published": "2026-10-02T12:32:35+00:00",
+   "summary": "",
+   "thumb": "",
+   "title_ko": "미켈로보틱스, 숙련된 화가를 흉내 내는 로봇으로 물리적 AI에 주목",
+   "tr": "deepl",
+   "trv": 2,
+   "mx": {
+    "b": "Mikelorobotics가 숙련된 도장공의 동작을 모방하는 로봇을 통해 피지컬 AI 시장 진출을 선언했다.",
+    "p": "정교한 수작업을 요하는 도장 공정에 피지컬 AI 로봇을 적용하려는 시도는 제조업 내 숙련공 부족 문제를 해결하고 자동화 한계를 극복하는 방향성을 제시한다.",
+    "t": [
+     "Mikelorobotics",
+     "피지컬AI",
+     "로봇",
+     "제조업"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_53631d5875ea9747",
+     "point_text": "정교한 수작업을 요하는 도장 공정에 피지컬 AI 로봇을 적용하려는 시도는 제조업 내 숙련공 부족 문제를 해결하고 자동화 한계를 극복하는 방향성을 제시한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "53631d5875ea9747"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.339068+00:00"
     }
    }
   },
@@ -5538,7 +5626,31 @@
    "category": "news_ko",
    "published": "2026-10-02T09:00:36+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "그래파이가 AI FESTA 2026에서 AI 데이터 엔진 '아카식DB'를 공개했다.",
+    "p": "AI 고도화의 핵심 병목인 데이터 처리와 관리 효율성을 높이기 위한 전용 데이터 엔진의 등장은 다양한 산업군에서 맞춤형 AI 모델 구축을 가속화하는 요인이 된다.",
+    "t": [
+     "그래파이",
+     "아카식DB",
+     "AI데이터",
+     "데이터엔진"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1780605d0eeca558",
+     "point_text": "AI 고도화의 핵심 병목인 데이터 처리와 관리 효율성을 높이기 위한 전용 데이터 엔진의 등장은 다양한 산업군에서 맞춤형 AI 모델 구축을 가속화하는 요인이 된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1780605d0eeca558"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.339131+00:00"
+    }
+   }
   },
   {
    "id": "e60bc0d91dc8537d",
@@ -5552,7 +5664,31 @@
    "thumb": "",
    "title_ko": "데이터 센터 투자 비용을 회수하려면 연간 6조 달러의 AI 매출이 필요하다",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "대규모 데이터센터 투자 비용을 회수하기 위해서는 연간 6조 달러 규모의 AI 관련 매출이 필요하다는 분석이 제기되었다.",
+    "p": "천문학적인 인프라 투자 비용 대비 실질적인 수익 창출 압박이 커지면서, AI 산업의 지속 가능성은 향후 실질적인 비즈니스 모델 발굴과 ROI 입증에 좌우될 전망이다.",
+    "t": [
+     "데이터센터",
+     "AI투자",
+     "수익성",
+     "인프라"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e60bc0d91dc8537d",
+     "point_text": "천문학적인 인프라 투자 비용 대비 실질적인 수익 창출 압박이 커지면서, AI 산업의 지속 가능성은 향후 실질적인 비즈니스 모델 발굴과 ROI 입증에 좌우될 전망이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e60bc0d91dc8537d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "FORECAST",
+     "generated_at": "2026-10-02T15:50:19.339186+00:00"
+    }
+   }
   },
   {
    "id": "5d41b92506d5cdf5",
@@ -5563,7 +5699,31 @@
    "category": "papers",
    "published": "2026-10-02T08:58:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "루닛이 'ESMO 2026' 학회에 참가해 AI 바이오마커 관련 연구 성과 5편을 발표한다.",
+    "p": "의료 AI 기업의 국제 학술대회 대규모 연구 발표는 기술의 임상적 신뢰도를 높이고 정밀 의료 분야에서의 상용화 가능성을 검증받는 중요한 지표가 된다.",
+    "t": [
+     "루닛",
+     "ESMO",
+     "바이오마커",
+     "의료AI"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5d41b92506d5cdf5",
+     "point_text": "의료 AI 기업의 국제 학술대회 대규모 연구 발표는 기술의 임상적 신뢰도를 높이고 정밀 의료 분야에서의 상용화 가능성을 검증받는 중요한 지표가 된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5d41b92506d5cdf5"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.339238+00:00"
+    }
+   }
   },
   {
    "id": "32a01f1899d380c0",
@@ -5577,7 +5737,31 @@
    "thumb": "",
    "title_ko": "텔레포니카와 레이나 소피아 음악원이 인공지능과 교향악을 결합해 관객의 감정에 목소리를 불어넣다",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "텔레포니카와 레이나 소피아 음악원이 인공지능과 교향악을 결합해 청중의 감정을 표현하는 프로젝트를 선보였다.",
+    "p": "예술과 AI의 융합은 기술이 단순한 효율성 도구를 넘어 인간의 감정 영역을 시각화하고 확장하는 창의적 매개체로 활용될 수 있음을 보여준다.",
+    "t": [
+     "텔레포니카",
+     "인공지능",
+     "음악",
+     "감정"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_32a01f1899d380c0",
+     "point_text": "예술과 AI의 융합은 기술이 단순한 효율성 도구를 넘어 인간의 감정 영역을 시각화하고 확장하는 창의적 매개체로 활용될 수 있음을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "32a01f1899d380c0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.339294+00:00"
+    }
+   }
   },
   {
    "id": "cf804646493b3446",
@@ -5588,7 +5772,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:45:39+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "부처 간 협력을 강화하기 위한 제5차 인공지능책임관협의회가 개최되었다.",
+    "p": "인공지능 관련 정책의 부처 간 칸막이를 허물고 이음매를 잇는 조율 작업은 급변하는 AI 기술 환경에서 일관성 있는 규제와 지원 체계를 확립하는 데 필수적이다.",
+    "t": [
+     "인공지능책임관협의회",
+     "AI정책",
+     "정부부처",
+     "규제"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_cf804646493b3446",
+     "point_text": "인공지능 관련 정책의 부처 간 칸막이를 허물고 이음매를 잇는 조율 작업은 급변하는 AI 기술 환경에서 일관성 있는 규제와 지원 체계를 확립하는 데 필수적이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "cf804646493b3446"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:19.339343+00:00"
+    }
+   }
   },
   {
    "id": "a9d8a2505f0f02c9",
@@ -5599,7 +5807,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:41:21+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "무암은 단독 쇼케이스와 콘퍼런스를 개최하여 AI 하이브리드 지식재산권(IP) 7편을 공개했다.",
+    "p": "콘텐츠 산업에서 AI 기술을 접목한 하이브리드 IP 개발이 실제 작품 공개로 이어지며 상용화 국면에 접어들고 있다.",
+    "t": [
+     "무암",
+     "인공지능",
+     "지식재산권",
+     "콘텐츠"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a9d8a2505f0f02c9",
+     "point_text": "콘텐츠 산업에서 AI 기술을 접목한 하이브리드 IP 개발이 실제 작품 공개로 이어지며 상용화 국면에 접어들고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a9d8a2505f0f02c9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551224+00:00"
+    }
+   }
   },
   {
    "id": "76fd6331252ec5e9",
@@ -5610,7 +5842,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:36:06+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "해일교육은 인공지능 기반 면접 대비 서비스인 '면접 스튜디오'를 출시했다.",
+    "p": "취업 준비 과정에서 AI를 활용한 맞춤형 실전 모의고사가 보편화되면서 교육 서비스의 디지털 전환이 가속화되고 있다.",
+    "t": [
+     "해일교육",
+     "면접스튜디오",
+     "에듀테크",
+     "인공지능"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_76fd6331252ec5e9",
+     "point_text": "취업 준비 과정에서 AI를 활용한 맞춤형 실전 모의고사가 보편화되면서 교육 서비스의 디지털 전환이 가속화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "76fd6331252ec5e9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551311+00:00"
+    }
+   }
   },
   {
    "id": "d0c2d2cd4257154a",
@@ -5624,7 +5880,31 @@
    "thumb": "",
    "title_ko": "View / AI 업계, 트럼프와 변화하는 워싱턴 사이에서 균형을 잡다",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "미국 워싱턴 정가의 변화와 트럼프 행정부 기조 속에서 인공지능 산업계가 규제와 정책 대응 방안을 조율하고 있다.",
+    "p": "정치권의 권력 재편과 정책 기조 변화는 AI 기업들의 글로벌 거버넌스 전략과 규제 준수 리스크 관리에 직접적인 영향을 미친다.",
+    "t": [
+     "미국정부",
+     "인공지능",
+     "규제",
+     "정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d0c2d2cd4257154a",
+     "point_text": "정치권의 권력 재편과 정책 기조 변화는 AI 기업들의 글로벌 거버넌스 전략과 규제 준수 리스크 관리에 직접적인 영향을 미친다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d0c2d2cd4257154a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551369+00:00"
+    }
+   }
   },
   {
    "id": "ca398240674b3f19",
@@ -5635,7 +5915,31 @@
    "category": "papers",
    "published": "2026-10-02T08:32:12+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "아모레퍼시픽은 인공지능을 활용해 피부 노화를 예측하는 연구 결과를 국제학회에서 발표했다.",
+    "p": "뷰티 산업이 단순 화장품 제조를 넘어 AI 기반 바이오·피부 데이터 분석 역량을 결합한 고도화된 연구개발 체제로 진화하고 있다.",
+    "t": [
+     "아모레퍼시픽",
+     "피부노화",
+     "인공지능",
+     "바이오"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ca398240674b3f19",
+     "point_text": "뷰티 산업이 단순 화장품 제조를 넘어 AI 기반 바이오·피부 데이터 분석 역량을 결합한 고도화된 연구개발 체제로 진화하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ca398240674b3f19"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551458+00:00"
+    }
+   }
   },
   {
    "id": "a5879cb7d031a9d4",
@@ -5646,7 +5950,31 @@
    "category": "papers",
    "published": "2026-10-02T08:20:32+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "오픈아이는 민감한 정보 취급 규정을 위반한 직원들을 해고 조치했다.",
+    "p": "급성장하는 AI 기업 내부에서 강력한 보안 의식과 정보 보호 규율 준수가 핵심 내부 통제 과제로 부각되고 있다.",
+    "t": [
+     "오픈아이",
+     "보안",
+     "정보보호",
+     "인사"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a5879cb7d031a9d4",
+     "point_text": "급성장하는 AI 기업 내부에서 강력한 보안 의식과 정보 보호 규율 준수가 핵심 내부 통제 과제로 부각되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a5879cb7d031a9d4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551510+00:00"
+    }
+   }
   },
   {
    "id": "b3dedc8242af516b",
@@ -5657,7 +5985,31 @@
    "category": "policy",
    "published": "2026-10-02T08:19:43+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "중국 해커 조직이 앤트로픽 고위 간부를 사칭하여 미국 인공지능 관련 정보를 탈취하려 했다.",
+    "p": "AI 핵심 기술을 확보하기 위한 국가 간 사이버 스파이 활동이 고도화되면서 기업들의 보안 위협 대응 역량이 필수가 되었다.",
+    "t": [
+     "앤트로픽",
+     "사이버보안",
+     "중국해커",
+     "인공지능"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_b3dedc8242af516b",
+     "point_text": "AI 핵심 기술을 확보하기 위한 국가 간 사이버 스파이 활동이 고도화되면서 기업들의 보안 위협 대응 역량이 필수가 되었다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "b3dedc8242af516b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551560+00:00"
+    }
+   }
   },
   {
    "id": "0171e0d63f5ead88",
@@ -5668,7 +6020,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:16:51+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "꾸그티처스가 중소벤처기업부 협업지원사업에 선정되면서 국산 피지컬 AI 교육로봇의 공공조달 시장 진출 기반을 마련했다.",
+    "p": "정부 지원 사업을 발판으로 국산 하드웨어 기반 AI 교육 로봇이 공공 부문 교육 시장으로 저변을 확대하고 있다.",
+    "t": [
+     "꾸그티처스",
+     "피지컬AI",
+     "교육로봇",
+     "공공조달"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_0171e0d63f5ead88",
+     "point_text": "정부 지원 사업을 발판으로 국산 하드웨어 기반 AI 교육 로봇이 공공 부문 교육 시장으로 저변을 확대하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "0171e0d63f5ead88"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551612+00:00"
+    }
+   }
   },
   {
    "id": "2bcbaed35a713352",
@@ -5679,7 +6055,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:13:19+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "본에이아이는 기체부터 인공지능까지 자체 개발하는 풀스택 피지컬 AI 역량을 바탕으로 국방 및 재난 시장을 겨냥하고 있다.",
+    "p": "하드웨어와 소프트웨어를 아우르는 자체 기술력이 국방 및 재난 안전 분야의 특수 목적형 AI 솔루션 도입을 주도하고 있다.",
+    "t": [
+     "본에이아이",
+     "피지컬AI",
+     "국방",
+     "재난"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_2bcbaed35a713352",
+     "point_text": "하드웨어와 소프트웨어를 아우르는 자체 기술력이 국방 및 재난 안전 분야의 특수 목적형 AI 솔루션 도입을 주도하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "2bcbaed35a713352"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551664+00:00"
+    }
+   }
   },
   {
    "id": "034d69e4574455b6",
@@ -5690,7 +6090,31 @@
    "category": "news_ko",
    "published": "2026-10-02T08:12:43+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "일본 정부는 고성능 인공지능의 사회 전반 도입을 가속하기 위해 연내 'AI 액션플랜'을 마련할 예정이다.",
+    "p": "국가 차원의 구체적인 실행 계획 수립을 통해 AI 기술의 산업 및 사회적 인프라 통합이 한층 속도를 낼 전망이다.",
+    "t": [
+     "일본정부",
+     "AI액션플랜",
+     "인공지능",
+     "정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_034d69e4574455b6",
+     "point_text": "국가 차원의 구체적인 실행 계획 수립을 통해 AI 기술의 산업 및 사회적 인프라 통합이 한층 속도를 낼 전망이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "034d69e4574455b6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "FORECAST",
+     "generated_at": "2026-10-02T15:50:28.551712+00:00"
+    }
+   }
   },
   {
    "id": "5a5d06801f738ef1",
@@ -5701,7 +6125,31 @@
    "category": "policy",
    "published": "2026-10-02T08:12:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "조원철 의원은 인공지능 행정 환경 변화에 대응하기 위한 행정기본법 개정 추진 의사를 밝혔다.",
+    "p": "행정 시스템의 디지털 전환과 AI 도입 확산에 따라, 법적 안정성과 책임 소재를 명확히 하는 제도적 정비가 본격화되고 있다.",
+    "t": [
+     "행정기본법",
+     "인공지능",
+     "행정",
+     "법제도"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5a5d06801f738ef1",
+     "point_text": "행정 시스템의 디지털 전환과 AI 도입 확산에 따라, 법적 안정성과 책임 소재를 명확히 하는 제도적 정비가 본격화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5a5d06801f738ef1"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:28.551760+00:00"
+    }
+   }
   },
   {
    "id": "e60857777688c873",
@@ -5712,7 +6160,32 @@
    "category": "papers",
    "published": "2026-10-02T08:07:52+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "충북 학생들이 인공지능과 탄소 포집 등 첨단 과학 분야를 다룬 연구 과제 18점으로 전국 대회에서 전원 입상했다.",
+    "p": "초중고 교육 현장에서도 인공지능과 환경 기술 등 실질적인 산업 과제를 연구 주제로 다루는 탐구 활동이 보편화되고 있다.",
+    "t": [
+     "충북",
+     "과학연구",
+     "AI",
+     "탄소포집",
+     "학생"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e60857777688c873",
+     "point_text": "초중고 교육 현장에서도 인공지능과 환경 기술 등 실질적인 산업 과제를 연구 주제로 다루는 탐구 활동이 보편화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e60857777688c873"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874168+00:00"
+    }
+   }
   },
   {
    "id": "a396bed222475982",
@@ -5723,7 +6196,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:47:54+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "동원몰이 쇼핑 플랫폼에 생성형 인공지능 기술을 도입해 사용자 편의성을 높인다.",
+    "p": "이커머스 업계에서 상품 검색과 추천을 넘어 AI 기반의 대화형 쇼핑 경험을 구축하는 사례가 늘고 있다.",
+    "t": [
+     "동원몰",
+     "생성형AI",
+     "쇼핑",
+     "이커머스"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a396bed222475982",
+     "point_text": "이커머스 업계에서 상품 검색과 추천을 넘어 AI 기반의 대화형 쇼핑 경험을 구축하는 사례가 늘고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a396bed222475982"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874231+00:00"
+    }
+   }
   },
   {
    "id": "04d98120de4d2243",
@@ -5734,7 +6231,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:30:31+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "청강문화산업대학교가 인공지능 기술을 접목한 문화콘텐츠 창작 및 교육 성과를 공개했다.",
+    "p": "예술 및 문화콘텐츠 교육 기관에서도 AI 툴을 활용한 실무 제작 능력을 교육과정에 적극적으로 편입하고 있다.",
+    "t": [
+     "청강문화산업대",
+     "AI",
+     "문화콘텐츠",
+     "교육"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_04d98120de4d2243",
+     "point_text": "예술 및 문화콘텐츠 교육 기관에서도 AI 툴을 활용한 실무 제작 능력을 교육과정에 적극적으로 편입하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "04d98120de4d2243"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874279+00:00"
+    }
+   }
   },
   {
    "id": "4541839f86faf4a6",
@@ -5745,7 +6266,31 @@
    "category": "papers",
    "published": "2026-10-02T07:30:01+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "국내 스타트업이 빅테크 기업을 거치지 않고 독자적으로 글로벌 인공지능 플랫폼 연구기관 인증을 획득했다.",
+    "p": "국내 중소·스타트업 생태계에서도 독자적인 기술력과 연구 역량을 글로벌 무대에서 공인받는 사례가 창출되고 있다.",
+    "t": [
+     "스타트업",
+     "AI",
+     "연구기관",
+     "글로벌"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4541839f86faf4a6",
+     "point_text": "국내 중소·스타트업 생태계에서도 독자적인 기술력과 연구 역량을 글로벌 무대에서 공인받는 사례가 창출되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4541839f86faf4a6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874327+00:00"
+    }
+   }
   },
   {
    "id": "7f5ba2b97ee9542f",
@@ -5756,7 +6301,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:30:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "챗GPT 등 인공지능 챗봇 사용이 늘어나면서 직장인들의 일상적인 업무 말투와 커뮤니케이션 방식에 변화가 나타나고 있다.",
+    "p": "생성형 AI가 단순한 생산성 도구를 넘어 인간의 언어 습관과 소통 양식까지 직접적으로 재구성하는 사회적 현상이 관찰된다.",
+    "t": [
+     "챗GPT",
+     "직장인",
+     "말투",
+     "AI커뮤니케이션"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7f5ba2b97ee9542f",
+     "point_text": "생성형 AI가 단순한 생산성 도구를 넘어 인간의 언어 습관과 소통 양식까지 직접적으로 재구성하는 사회적 현상이 관찰된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7f5ba2b97ee9542f"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874375+00:00"
+    }
+   }
   },
   {
    "id": "3d1a02964ef5f926",
@@ -5773,7 +6342,31 @@
    "tr": "deepl",
    "trv": 2,
    "summary_ko": "온라인 프라이버시란 예전에는 공유하는 내용에 주의를 기울이는 것을 의미했습니다. 또한, 다른 사람들이 자신에 대해 공유하는 정보에 대해서도 어느 정도 통제권을 행사할 수 있었는데, 그 정보의 상당 부분이 공개되어 있었기 때문입니다.",
-   "detail_ko": "온라인 프라이버시란 예전에는 공유하는 내용에 주의를 기울이는 것을 의미했습니다.\n또한, 다른 사람들이 당신에 대해 공유한 정보의 상당 부분이 공개되어 있었기 때문에, 당신은 그 정보에 대해 어느 정도 통제권을 행사할 수 있었습니다.\n예를 들어, 친구에게 페이스북에 올라온 그 별로 안 예쁘게 나온 사진을 내려달라고 부탁할 수도 있습니다."
+   "detail_ko": "온라인 프라이버시란 예전에는 공유하는 내용에 주의를 기울이는 것을 의미했습니다.\n또한, 다른 사람들이 당신에 대해 공유한 정보의 상당 부분이 공개되어 있었기 때문에, 당신은 그 정보에 대해 어느 정도 통제권을 행사할 수 있었습니다.\n예를 들어, 친구에게 페이스북에 올라온 그 별로 안 예쁘게 나온 사진을 내려달라고 부탁할 수도 있습니다.",
+   "mx": {
+    "b": "호주에서 챗봇이 야기하는 프라이버시 위험을 통제하기 위한 새로운 법안이 제안되었다.",
+    "p": "생성형 AI의 확산에 따라 개인정보 보호 책임을 이용자 개인에게만 전가하지 않고 서비스 제공 영역까지 규제하려는 입법적 시도가 이어지고 있다.",
+    "t": [
+     "호주",
+     "프라이버시",
+     "챗봇",
+     "규제법안"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_3d1a02964ef5f926",
+     "point_text": "생성형 AI의 확산에 따라 개인정보 보호 책임을 이용자 개인에게만 전가하지 않고 서비스 제공 영역까지 규제하려는 입법적 시도가 이어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "3d1a02964ef5f926"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874485+00:00"
+    }
+   }
   },
   {
    "id": "0591a2e8cddf5be8",
@@ -5784,7 +6377,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:20:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "회장 골프장에 동원된 외국인 노동자들이 강제퇴거 위기에 처하는 사건이 발생했다.",
+    "p": "이주노동자 인권 보호와 노동권 사각지대 해소가 기업 윤리 및 사회적 책임 측면에서 주요 과제로 대두된다.",
+    "t": [
+     "외국인노동자",
+     "강제퇴거",
+     "노동인권",
+     "사회"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_0591a2e8cddf5be8",
+     "point_text": "이주노동자 인권 보호와 노동권 사각지대 해소가 기업 윤리 및 사회적 책임 측면에서 주요 과제로 대두된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "0591a2e8cddf5be8"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874535+00:00"
+    }
+   }
   },
   {
    "id": "ff4ecda738dd6d09",
@@ -5795,7 +6412,31 @@
    "category": "papers",
    "published": "2026-10-02T07:16:31+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "아모레퍼시픽이 인공지능 기술을 활용한 뷰티 연구 개발 성과를 외부에 공개했다.",
+    "p": "전통적인 화장품 제조 산업이 AI를 결합한 개인화 뷰티 및 바이오 연구 역량 강화에 집중하고 있다.",
+    "t": [
+     "아모레퍼시픽",
+     "AI뷰티",
+     "연구성과",
+     "뷰티테크"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ff4ecda738dd6d09",
+     "point_text": "전통적인 화장품 제조 산업이 AI를 결합한 개인화 뷰티 및 바이오 연구 역량 강화에 집중하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ff4ecda738dd6d09"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874576+00:00"
+    }
+   }
   },
   {
    "id": "974d3a50b476535d",
@@ -5806,7 +6447,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:10:47+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "허일섭 GC 회장이 창립 59주년 기념사에서 인공지능을 통한 혁신과 계열사 간 시너지 창출을 강조했다.",
+    "p": "제약·바이오 기업들이 경영 전반의 체질 개선과 성장 동력 확보를 위해 AI 기반의 디지털 전환을 핵심 전략으로 삼고 있다.",
+    "t": [
+     "GC",
+     "허일섭",
+     "AI혁신",
+     "계열사시너지"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_974d3a50b476535d",
+     "point_text": "제약·바이오 기업들이 경영 전반의 체질 개선과 성장 동력 확보를 위해 AI 기반의 디지털 전환을 핵심 전략으로 삼고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "974d3a50b476535d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874623+00:00"
+    }
+   }
   },
   {
    "id": "4634544c8bbda9e4",
@@ -5817,7 +6482,31 @@
    "category": "news_ko",
    "published": "2026-10-02T07:10:09+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "에스토니아 교육부장관이 수원의 한봄고등학교를 방문해 인공지능 융합 직업교육 현장을 참관했다.",
+    "p": "한국의 특성화고 AI 융합 교육 모델이 디지털 강국인 유럽 국가들의 정책 벤치마킹 대상으로 주목받고 있다.",
+    "t": [
+     "에스토니아",
+     "교육부장관",
+     "한봄고",
+     "직업교육"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4634544c8bbda9e4",
+     "point_text": "한국의 특성화고 AI 융합 교육 모델이 디지털 강국인 유럽 국가들의 정책 벤치마킹 대상으로 주목받고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4634544c8bbda9e4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:36.874667+00:00"
+    }
+   }
   },
   {
    "id": "95860f088d1bb695",
@@ -5828,7 +6517,30 @@
    "category": "news_ko",
    "published": "2026-10-02T07:02:31+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "경북전문대가 산업 현장의 수요를 반영한 인공지능 교육 과정을 구축하기 위해 기업 의견을 청취했다.",
+    "p": "지역 대학들이 단순 기술 습득을 넘어 현업 중심의 실무형 AI 인재 양성으로 교육 체계를 재편하는 흐름을 보여준다.",
+    "t": [
+     "경북전문대",
+     "인공지능교육",
+     "산학협력"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_95860f088d1bb695",
+     "point_text": "지역 대학들이 단순 기술 습득을 넘어 현업 중심의 실무형 AI 인재 양성으로 교육 체계를 재편하는 흐름을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "95860f088d1bb695"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569464+00:00"
+    }
+   }
   },
   {
    "id": "ba8a70c419209576",
@@ -5839,7 +6551,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:58:23+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능 도입에 따른 직업 세계의 변화와 미래 진로 설계, 그리고 가짜 영상 대응 방안이 논의됐다.",
+    "p": "기술 확산에 따른 고용 구조 변화와 함께 딥페이크 등 부작용에 대응하는 사회적 소양 교육의 필요성이 커지고 있다.",
+    "t": [
+     "직업변화",
+     "가짜영상",
+     "미래진로"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ba8a70c419209576",
+     "point_text": "기술 확산에 따른 고용 구조 변화와 함께 딥페이크 등 부작용에 대응하는 사회적 소양 교육의 필요성이 커지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ba8a70c419209576"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569536+00:00"
+    }
+   }
   },
   {
    "id": "5d4bd3abbf766085",
@@ -5850,7 +6585,30 @@
    "category": "papers",
    "published": "2026-10-02T06:45:38+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능, 윤리, 기후 거버넌스를 다루는 2026년 펠로십 프로그램의 지원자 모집이 시작됐다.",
+    "p": "기술 발전이 기후 위기와 맞물리면서 AI 윤리와 환경 정책을 통합적으로 연구하는 국제적 지원 사업이 확대되고 있다.",
+    "t": [
+     "AI윤리",
+     "기후거버넌스",
+     "펠로십"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5d4bd3abbf766085",
+     "point_text": "기술 발전이 기후 위기와 맞물리면서 AI 윤리와 환경 정책을 통합적으로 연구하는 국제적 지원 사업이 확대되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5d4bd3abbf766085"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569592+00:00"
+    }
+   }
   },
   {
    "id": "5be3af53d74aa18e",
@@ -5862,7 +6620,30 @@
    "published": "2026-10-02T06:22:02+09:00",
    "summary": "엔비디아(NVDA)가 장기적인 반도체 매출 성장 기대감이 부각되며 다시 230달러대를 회복했다. 1일(현지시간) 정규장 거래에서 엔비디아 주가는 전일 대비 0.43% 오르며 230.86달러에 거래를 마쳤다.",
    "detail": "엔비디아(NVDA)가 장기적인 반도체 매출 성장 기대감이 부각되며 다시 230달러대를 회복했다.\n1일(현지시간) 정규장 거래에서 엔비디아 주가는 전일 대비 0.43% 오르며 230.86달러에 거래를 마쳤다.\n이 후 현지시간 이날 오후 5시 15분 시간외 거래에서도 0.09% 오름세를 이어가며 231.06달러까지 안착을 시도 중이다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "엔비디아 주가가 반도체 장기 수요 성장 기대감에 힘입어 정규장과 시간외 거래에서 230달러대를 회복했다.",
+    "p": "하드웨어 시장에서 AI 반도체 수요가 단기 조정을 거쳐 지속적인 성장 국면으로 안착하고 있음을 시사한다.",
+    "t": [
+     "엔비디아",
+     "주가",
+     "반도체"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5be3af53d74aa18e",
+     "point_text": "하드웨어 시장에서 AI 반도체 수요가 단기 조정을 거쳐 지속적인 성장 국면으로 안착하고 있음을 시사한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5be3af53d74aa18e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569666+00:00"
+    }
+   }
   },
   {
    "id": "3eb7b77ae0d6625e",
@@ -5873,7 +6654,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:22:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "대구시가 개최한 제조 공정 난제를 해결하기 위한 피지컬 AI 챌린지가 높은 관심을 받았다.",
+    "p": "가상 공간을 넘어 실제 제조 현장의 물리적 문제를 해결하는 피지컬 AI 기술이 산업계의 핵심 실증 과제로 부상했다.",
+    "t": [
+     "피지컬AI",
+     "대구시",
+     "로봇"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_3eb7b77ae0d6625e",
+     "point_text": "가상 공간을 넘어 실제 제조 현장의 물리적 문제를 해결하는 피지컬 AI 기술이 산업계의 핵심 실증 과제로 부상했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "3eb7b77ae0d6625e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569715+00:00"
+    }
+   }
   },
   {
    "id": "4c664c883f3b9a10",
@@ -5884,7 +6688,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:21:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "삼성전자가 HBM4E 고도화 과정에서 발생하는 발열 문제를 해결하기 위해 AI 칩 받침판 크기를 대폭 확대하는 방안을 검토 중이다.",
+    "p": "초고성능 메모리 반도체로 갈수록 심화되는 발열과 패키징 한계를 극복하기 위해 물리적 구조 혁신이 필수가 되고 있다.",
+    "t": [
+     "삼성전자",
+     "HBM4E",
+     "발열해결"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4c664c883f3b9a10",
+     "point_text": "초고성능 메모리 반도체로 갈수록 심화되는 발열과 패키징 한계를 극복하기 위해 물리적 구조 혁신이 필수가 되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4c664c883f3b9a10"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569768+00:00"
+    }
+   }
   },
   {
    "id": "dfb15b8326158850",
@@ -5895,7 +6722,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:18:52+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "국립창원대가 인공지능 전환 시대에 발맞춰 대학의 교육 및 운영 전략을 논의했다.",
+    "p": "학령인구 감소와 AI 기술 확산이라는 복합적 위기 속에서 대학들이 생존을 위한 구조적 혁신 방안을 모색하고 있다.",
+    "t": [
+     "국립창원대",
+     "대학혁신",
+     "미래전략"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_dfb15b8326158850",
+     "point_text": "학령인구 감소와 AI 기술 확산이라는 복합적 위기 속에서 대학들이 생존을 위한 구조적 혁신 방안을 모색하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "dfb15b8326158850"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569811+00:00"
+    }
+   }
   },
   {
    "id": "d16d9316a129cce4",
@@ -5906,7 +6756,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:05:25+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "한국동서발전이 경영공시 데이터 검증 과정에 생성형 인공지능을 도입해 사전 오류 점검 체계를 구축했다.",
+    "p": "공공기관이 행정 투명성과 정확도를 높이기 위해 문서 검증 업무에 생성형 AI를 실무 적용하는 사례가 늘고 있다.",
+    "t": [
+     "동서발전",
+     "생성형AI",
+     "공시검증"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d16d9316a129cce4",
+     "point_text": "공공기관이 행정 투명성과 정확도를 높이기 위해 문서 검증 업무에 생성형 AI를 실무 적용하는 사례가 늘고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d16d9316a129cce4"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569858+00:00"
+    }
+   }
   },
   {
    "id": "9881613098b66755",
@@ -5917,7 +6790,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:00:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "도널드 트럼프 전 대통령이 인공지능의 답변을 참고해 베네수엘라 마두로 정권 축출 실행 시기를 결정했다고 언급했다.",
+    "p": "정치·외교적 의사결정 과정에서 AI의 분석 결과가 전략 수립에 실질적인 영향을 미치는 사례를 보여준다.",
+    "t": [
+     "트럼프",
+     "베네수엘라",
+     "외교정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_9881613098b66755",
+     "point_text": "정치·외교적 의사결정 과정에서 AI의 분석 결과가 전략 수립에 실질적인 영향을 미치는 사례를 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "9881613098b66755"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569906+00:00"
+    }
+   }
   },
   {
    "id": "e64798e0b5419194",
@@ -5928,7 +6824,30 @@
    "category": "news_ko",
    "published": "2026-10-02T06:00:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "이재용 삼성전자 회장의 뉴욕 회동과 김승연 한화 회장의 국방 AI 강화 행보가 주목받았다.",
+    "p": "주요 대기업 총수들이 글로벌 네트워크 확장과 차세대 방산 AI 기술 확보 등 미래 먹거리에 집중하고 있다.",
+    "t": [
+     "이재용",
+     "김승연",
+     "국방AI"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e64798e0b5419194",
+     "point_text": "주요 대기업 총수들이 글로벌 네트워크 확장과 차세대 방산 AI 기술 확보 등 미래 먹거리에 집중하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e64798e0b5419194"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:45.569949+00:00"
+    }
+   }
   },
   {
    "id": "92a0bd66a916c12a",
@@ -5939,7 +6858,30 @@
    "category": "policy",
    "published": "2026-10-02T05:54:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "AI 기술의 급격한 확산에 따른 속도 조절론이 제기되며 규제와 제동의 필요성이 대두되고 있다.",
+    "p": "기술 발전 속도와 사회적 수용성 간의 간극을 좁히기 위한 제도적 논의가 본격화되는 국면이다.",
+    "t": [
+     "AI규제",
+     "정책",
+     "AI속도조절론"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_92a0bd66a916c12a",
+     "point_text": "기술 발전 속도와 사회적 수용성 간의 간극을 좁히기 위한 제도적 논의가 본격화되는 국면이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "92a0bd66a916c12a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074636+00:00"
+    }
+   }
   },
   {
    "id": "37c85f9f6f544eeb",
@@ -5950,7 +6892,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:50:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능이 코끼리의 울음소리를 분석해 단순한 소음이 아닌 집단 간 소통 수단임을 밝혀냈다.",
+    "p": "동물의 복잡한 음성 신호를 해석하는 데 AI가 도입되면서 비인간 생태계 연구의 지평이 넓어지고 있다.",
+    "t": [
+     "AI분석",
+     "동물행동학",
+     "자연어처리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_37c85f9f6f544eeb",
+     "point_text": "동물의 복잡한 음성 신호를 해석하는 데 AI가 도입되면서 비인간 생태계 연구의 지평이 넓어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "37c85f9f6f544eeb"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074710+00:00"
+    }
+   }
   },
   {
    "id": "3a1afdb82d484854",
@@ -5961,7 +6926,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:48:14+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "LG전자가 서울숲에서 개최한 아트포레스트 행사를 통해 AI 기술을 결합한 미디어아트 작품을 공개했다.",
+    "p": "제조 중심의 대기업이 문화 예술 공간에서 AI 시각 기술을 선보이며 대중 접점을 넓히는 사례이다.",
+    "t": [
+     "LG전자",
+     "미디어아트",
+     "AI예술"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_3a1afdb82d484854",
+     "point_text": "제조 중심의 대기업이 문화 예술 공간에서 AI 시각 기술을 선보이며 대중 접점을 넓히는 사례이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "3a1afdb82d484854"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074763+00:00"
+    }
+   }
   },
   {
    "id": "88a1a070cc167ef8",
@@ -5972,7 +6960,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:46:28+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "뉴로메카가 별도의 손목 카메라 없이도 정밀한 작업 수행이 가능한 로봇용 AI 기술을 개발했다.",
+    "p": "외부 센서 의존도를 낮춘 로봇 제어 기술은 제조 현장의 하드웨어 구축 비용을 낮추는 실질적 요인이 된다.",
+    "t": [
+     "뉴로메카",
+     "로봇AI",
+     "제조자동화"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_88a1a070cc167ef8",
+     "point_text": "외부 센서 의존도를 낮춘 로봇 제어 기술은 제조 현장의 하드웨어 구축 비용을 낮추는 실질적 요인이 된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "88a1a070cc167ef8"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074812+00:00"
+    }
+   }
   },
   {
    "id": "e500721916025f8a",
@@ -5983,7 +6994,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:38:46+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "대구 순회전에서 인공지능 기술을 활용해 1907년 국채보상운동의 역사적 순간을 재현해 관람객의 호응을 얻었다.",
+    "p": "역사 기록물과 AI 시각 복원 기술의 결합이 박물관 및 전시 관람 경험을 몰입형으로 전환하고 있다.",
+    "t": [
+     "역사콘텐츠",
+     "AI복원",
+     "전시"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e500721916025f8a",
+     "point_text": "역사 기록물과 AI 시각 복원 기술의 결합이 박물관 및 전시 관람 경험을 몰입형으로 전환하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e500721916025f8a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074862+00:00"
+    }
+   }
   },
   {
    "id": "ebe58c6ac74883cb",
@@ -5994,7 +7028,30 @@
    "category": "papers",
    "published": "2026-10-02T05:36:49+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "아모레퍼시픽이 세계화장품학회에서 AI 기반의 뷰티 연구 성과를 발표하며 모발 형성에 도움을 주는 새로운 펩타이드를 발굴했다.",
+    "p": "전통적인 화장품 R&D 영역에 AI 물질 탐색 기술이 결합해 신소재 발굴 속도가 가속화되고 있다.",
+    "t": [
+     "아모레퍼시픽",
+     "AI바이오",
+     "신소재"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ebe58c6ac74883cb",
+     "point_text": "전통적인 화장품 R&D 영역에 AI 물질 탐색 기술이 결합해 신소재 발굴 속도가 가속화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ebe58c6ac74883cb"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074914+00:00"
+    }
+   }
   },
   {
    "id": "513e7ebc2b43e38f",
@@ -6005,7 +7062,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:33:08+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "노상방뇨를 제지하다가 집단폭행을 당해 피해자가 피투성이가 되는 사건이 발생했다.",
+    "p": "일상적인 공공장소에서의 시비가 중대 폭력 범죄로 이어지는 사회적 안전망 공백 문제를 드러낸다.",
+    "t": [
+     "사건사고",
+     "폭행",
+     "사회안전"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_513e7ebc2b43e38f",
+     "point_text": "일상적인 공공장소에서의 시비가 중대 폭력 범죄로 이어지는 사회적 안전망 공백 문제를 드러낸다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "513e7ebc2b43e38f"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.074957+00:00"
+    }
+   }
   },
   {
    "id": "a7603d80d01a5039",
@@ -6016,7 +7096,30 @@
    "category": "papers",
    "published": "2026-10-02T05:30:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "자율주행차가 현실화된 과정과 향후 기술 발전 방향에 대한 연구 및 고찰이 다뤄졌다.",
+    "p": "자율주행 기술이 개념 검증 단계를 넘어 실제 상용화 환경에서 마주하는 한계와 다음 단계의 과제를 짚고 있다.",
+    "t": [
+     "자율주행",
+     "미래교통",
+     "연구"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a7603d80d01a5039",
+     "point_text": "자율주행 기술이 개념 검증 단계를 넘어 실제 상용화 환경에서 마주하는 한계와 다음 단계의 과제를 짚고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a7603d80d01a5039"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.075005+00:00"
+    }
+   }
   },
   {
    "id": "aa45e4a4c6d2739c",
@@ -6027,7 +7130,30 @@
    "category": "news_ko",
    "published": "2026-10-02T05:25:49+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능을 활용한 에너지저장장치(ESS) 열폭주 예방 시스템이 350건의 사고를 막으며 약 4000억 원의 손실을 절감했다.",
+    "p": "고위험 대형 화재로 이어질 수 있는 산업 설비 사고를 AI 기반 실시간 모니터링으로 방어한 경제적 효과를 증명한다.",
+    "t": [
+     "ESS",
+     "AI모니터링",
+     "재난예방"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_aa45e4a4c6d2739c",
+     "point_text": "고위험 대형 화재로 이어질 수 있는 산업 설비 사고를 AI 기반 실시간 모니터링으로 방어한 경제적 효과를 증명한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "aa45e4a4c6d2739c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.075060+00:00"
+    }
+   }
   },
   {
    "id": "51ff8d07c5138a44",
@@ -6073,7 +7199,30 @@
    "category": "papers",
    "published": "2026-10-02T05:17:26+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "건국대 중원도서관이 김성훈 교수를 초청해 AI를 활용한 연구 기획 방법론 특강을 개최했다.",
+    "p": "대학 연구 현장에서 학술 기획 및 데이터 탐색 과정에 AI 활용 교육이 필수적인 역량으로 자리 잡고 있다.",
+    "t": [
+     "건국대",
+     "연구기획",
+     "AI교육"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_77520eb1ad48e508",
+     "point_text": "대학 연구 현장에서 학술 기획 및 데이터 탐색 과정에 AI 활용 교육이 필수적인 역량으로 자리 잡고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "77520eb1ad48e508"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:50:54.075108+00:00"
+    }
+   }
   },
   {
    "id": "ed956c81a049bbfa",
@@ -6084,7 +7233,31 @@
    "category": "news_ko",
    "published": "2026-10-02T05:14:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "일본 청년들 사이에서 인공지능이 대체하기 어려운 블루칼라 직종이 인기를 끌고 있다.",
+    "p": "자동화 확산에 따라 노동 시장에서 인간 고유의 물리적 노동과 손길이 필요한 현장 직무의 가치가 재평가받고 있다.",
+    "t": [
+     "일본",
+     "블루칼라",
+     "고용시장",
+     "AI"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_ed956c81a049bbfa",
+     "point_text": "자동화 확산에 따라 노동 시장에서 인간 고유의 물리적 노동과 손길이 필요한 현장 직무의 가치가 재평가받고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "ed956c81a049bbfa"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832038+00:00"
+    }
+   }
   },
   {
    "id": "2c99481ba25b9a79",
@@ -6095,7 +7268,31 @@
    "category": "news_ko",
    "published": "2026-10-02T05:04:50+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "법무법인 태평양과 고려대 로스쿨이 데이터 및 인공지능 법률 이슈를 다루는 세미나를 개최한다.",
+    "p": "법조계와 학계가 급변하는 기술 환경에 발맞추어 데이터 활용과 인공지능 규제에 관한 법적 쟁점을 심층적으로 점검한다.",
+    "t": [
+     "법무법인태평양",
+     "고려대",
+     "리걸테크",
+     "AI법"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_2c99481ba25b9a79",
+     "point_text": "법조계와 학계가 급변하는 기술 환경에 발맞추어 데이터 활용과 인공지능 규제에 관한 법적 쟁점을 심층적으로 점검한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "2c99481ba25b9a79"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832108+00:00"
+    }
+   }
   },
   {
    "id": "c4f6943412a6c38c",
@@ -6106,7 +7303,31 @@
    "category": "news_ko",
    "published": "2026-10-02T05:00:48+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "호서대가 인공지능 마음스캐너와 호스피스 체험 등을 포함한 노인공감 캠페인을 진행했다.",
+    "p": "고령화 사회에 대응하여 기술과 체험을 결합한 방식으로 노인 세대에 대한 공감대를 형성하고 복지 인식을 확산하고 있다.",
+    "t": [
+     "호서대",
+     "노인복지",
+     "AI마음스캐너",
+     "사회공헌"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_c4f6943412a6c38c",
+     "point_text": "고령화 사회에 대응하여 기술과 체험을 결합한 방식으로 노인 세대에 대한 공감대를 형성하고 복지 인식을 확산하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "c4f6943412a6c38c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832156+00:00"
+    }
+   }
   },
   {
    "id": "65f3c86c60053d70",
@@ -6117,7 +7338,31 @@
    "category": "news_ko",
    "published": "2026-10-02T05:00:05+09:00",
    "summary": "인공지능(AI)이 학교와 직장 전반으로 확산하는 가운데, 기획·아이디어 도출·최종 검증 등 사람이 직접 생각해야 할 핵심 단계에는 ‘AI프리존(AI-Free Zones)’을 둬야 한다는 제언이 나왔다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "학교와 직장에서 인공지능 활용이 늘어나는 가운데 기획과 최종 검증 등 핵심 단계에는 인간이 주도하는 'AI프리존'을 두어야 한다는 제언이 나왔다.",
+    "p": "자동화 도구의 전면적인 도입 속에서도 주체적 사고와 최종 책임은 인간이 맡아야 한다는 업무 표준과 가이드라인의 필요성을 보여준다.",
+    "t": [
+     "AI프리존",
+     "업무혁신",
+     "인간중심",
+     "생산성"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_65f3c86c60053d70",
+     "point_text": "자동화 도구의 전면적인 도입 속에서도 주체적 사고와 최종 책임은 인간이 맡아야 한다는 업무 표준과 가이드라인의 필요성을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "65f3c86c60053d70"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832218+00:00"
+    }
+   }
   },
   {
    "id": "425e13567489ff1c",
@@ -6128,7 +7373,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:55:04+09:00",
    "summary": "한국 수출이 반도체 호황과 주요 품목의 동반 증가에 힘입어 사상 첫 연간 1조달러 달성을 앞두고 있다. 현재 증가세가 이어지면 이르면 11월 말, 늦어도 12월 초에 달성할 것으로 예상된다. 반도체가 예상을 뛰어넘는 호황을 지속하고, 주요 20개 품목 가운데 11개 품목의 수출이 증가하며 뒤를 받친 덕분이다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "반도체 호황과 주력 품목 수출 증가에 힘입어 한국의 연간 수출액이 사상 첫 1조 달러를 조기 달성할 전망이다.",
+    "p": "주요 산업의 글로벌 수요 회복이 국가 경제 지표의 사상 최대 실적 경신을 이끌며 수출 주도형 성장의 저력을 증명하고 있다.",
+    "t": [
+     "수출",
+     "반도체",
+     "경제성장",
+     "무역"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_425e13567489ff1c",
+     "point_text": "주요 산업의 글로벌 수요 회복이 국가 경제 지표의 사상 최대 실적 경신을 이끌며 수출 주도형 성장의 저력을 증명하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "425e13567489ff1c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832281+00:00"
+    }
+   }
   },
   {
    "id": "4722d6cfc8009494",
@@ -6142,7 +7411,31 @@
    "thumb": "",
    "title_ko": "크로니클-KQED 토론회에서 샌프란시스코 하원 후보들, 주택 정책 실적과 AI 규제를 놓고 공방",
    "tr": "deepl",
-   "trv": 2
+   "trv": 2,
+   "mx": {
+    "b": "샌프란시스코 하원의원 후보들이 주택 정책과 인공지능 규제를 주제로 토론회에서 공방을 벌였다.",
+    "p": "지역구 현안과 함께 급부상한 첨단 기술 규제 이슈가 정치권의 핵심 쟁점으로 자리 잡았음을 보여준다.",
+    "t": [
+     "샌프란시스코",
+     "정치",
+     "AI규제",
+     "주택정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4722d6cfc8009494",
+     "point_text": "지역구 현안과 함께 급부상한 첨단 기술 규제 이슈가 정치권의 핵심 쟁점으로 자리 잡았음을 보여준다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4722d6cfc8009494"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832326+00:00"
+    }
+   }
   },
   {
    "id": "5b5dc30d5b3217e0",
@@ -6153,7 +7446,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:50:17+09:00",
    "summary": "도이체방크는 1일(현지 시간) 3분기 시장 리뷰에서 기술주가 높은 변동성에도 불구하고 주식시장 성과를 이끈 주요 동력‘ 이었다고 평가했다. 이러한 가운데, 4분기에도 기술주가 증시 수익률을 뒷받침할 것으로 전망했다.",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "도이체방크는 3분기 시장 평가를 통해 기술주가 높은 변동성 속에서도 증시 상승을 주도했으며 4분기에도 성과를 뒷받침할 것으로 전망했다.",
+    "p": "글로벌 금융 시장에서 기술 중심 기업들의 실적과 성장 모멘텀이 증시 전반의 방향성을 결정하는 주요 동력으로 작용하고 있다.",
+    "t": [
+     "도이체방크",
+     "기술주",
+     "증시",
+     "금융시장"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5b5dc30d5b3217e0",
+     "point_text": "글로벌 금융 시장에서 기술 중심 기업들의 실적과 성장 모멘텀이 증시 전반의 방향성을 결정하는 주요 동력으로 작용하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5b5dc30d5b3217e0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832411+00:00"
+    }
+   }
   },
   {
    "id": "02f5d565691a8eb0",
@@ -6164,7 +7481,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:46:55+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "박용진 전 의원이 국내 인공지능 리걸테크 산업에 불리하게 작용하는 규제들의 재점검을 촉구했다.",
+    "p": "신산업 분야의 글로벌 경쟁력 확보를 위해 법적·제도적 허들을 해소해야 한다는 규제 혁신 요구가 이어지고 있다.",
+    "t": [
+     "리걸테크",
+     "규제개혁",
+     "박용진",
+     "법률AI"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_02f5d565691a8eb0",
+     "point_text": "신산업 분야의 글로벌 경쟁력 확보를 위해 법적·제도적 허들을 해소해야 한다는 규제 혁신 요구가 이어지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "02f5d565691a8eb0"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832462+00:00"
+    }
+   }
   },
   {
    "id": "75fdc36df0df2acc",
@@ -6212,7 +7553,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:43:34+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "안산시가 생성형 인공지능 기반의 24시간 민원 상담 서비스를 도입했다.",
+    "p": "공공 행정 영역에서 시공간 제약 없는 민원 처리 체계를 구축하기 위해 대화형 인공지능 도입이 가속화되고 있다.",
+    "t": [
+     "안산시",
+     "생성형AI",
+     "공공서비스",
+     "민원상담"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_5e4dedf408447045",
+     "point_text": "공공 행정 영역에서 시공간 제약 없는 민원 처리 체계를 구축하기 위해 대화형 인공지능 도입이 가속화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "5e4dedf408447045"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832504+00:00"
+    }
+   }
   },
   {
    "id": "81adea3565dd96ef",
@@ -6223,7 +7588,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:34:03+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "전남대병원이 인공지능을 활용해 책과 논문을 작성하는 저작 교육 프로그램을 진행했다.",
+    "p": "연구 현장에서 학술적 생산성을 높이기 위해 첨단 저작 도구 활용법을 익히는 실무 교육이 점차 확산되고 있다.",
+    "t": [
+     "전남대병원",
+     "논문작성",
+     "AI교육",
+     "학술연구"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_81adea3565dd96ef",
+     "point_text": "연구 현장에서 학술적 생산성을 높이기 위해 첨단 저작 도구 활용법을 익히는 실무 교육이 점차 확산되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "81adea3565dd96ef"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:02.832550+00:00"
+    }
+   }
   },
   {
    "id": "e7a07a4883deb78d",
@@ -6234,7 +7623,8 @@
    "category": "news_ko",
    "published": "2026-10-02T04:26:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx_try": 1
   },
   {
    "id": "1940cf2b92ae0876",
@@ -6245,7 +7635,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:01:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "로앤컴퍼니가 AI 기술을 활용해 판례 정보를 제공하는 서비스를 선보였다.",
+    "p": "법률 서비스에 인공지능이 도입되면서 방대한 판례 탐색과 분석의 접근성이 한층 높아지고 있다.",
+    "t": [
+     "로앤컴퍼니",
+     "AI",
+     "법률",
+     "판례"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_1940cf2b92ae0876",
+     "point_text": "법률 서비스에 인공지능이 도입되면서 방대한 판례 탐색과 분석의 접근성이 한층 높아지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "1940cf2b92ae0876"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230349+00:00"
+    }
+   }
   },
   {
    "id": "a4c8e78f9ca5d05d",
@@ -6256,7 +7670,31 @@
    "category": "news_ko",
    "published": "2026-10-02T04:00:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "정부가 생성형 AI 확산과 산업 위기에 대응해 지역 맞춤형 직무 훈련과 노동전환 지원에 나선다.",
+    "p": "기술 변화와 산업 구조조정에 발맞추어 지역별 고용 시장의 체질 개선을 시도하는 정책적 대응이다.",
+    "t": [
+     "생성형AI",
+     "직무훈련",
+     "노동전환",
+     "정책"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a4c8e78f9ca5d05d",
+     "point_text": "기술 변화와 산업 구조조정에 발맞추어 지역별 고용 시장의 체질 개선을 시도하는 정책적 대응이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a4c8e78f9ca5d05d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230458+00:00"
+    }
+   }
   },
   {
    "id": "6fe1348ec8a794f3",
@@ -6267,7 +7705,31 @@
    "category": "news_ko",
    "published": "2026-10-02T03:47:14+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "광양시가 관내 중소 및 중견 제조기업을 대상으로 기업당 최대 3000만 원을 지원해 AI 공정 전환을 추진한다.",
+    "p": "지방자치단체 주도로 지역 전통 제조업의 생산 공정에 AI를 이식해 디지털 격차를 해소하려는 시도이다.",
+    "t": [
+     "광양시",
+     "제조업",
+     "AI",
+     "디지털전환"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_6fe1348ec8a794f3",
+     "point_text": "지방자치단체 주도로 지역 전통 제조업의 생산 공정에 AI를 이식해 디지털 격차를 해소하려는 시도이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "6fe1348ec8a794f3"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230515+00:00"
+    }
+   }
   },
   {
    "id": "e9eb1260c040e68c",
@@ -6278,7 +7740,31 @@
    "category": "news_ko",
    "published": "2026-10-02T03:13:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "LS전선이 독일 하팅과 손잡고 인공지능 데이터센터 전력 솔루션을 공동 개발한다.",
+    "p": "급증하는 AI 데이터센터 전력 수요에 대응하기 위해 글로벌 부품사와 국내 전선 기업 간의 기술 동맹이 강화되고 있다.",
+    "t": [
+     "LS전선",
+     "하팅",
+     "데이터센터",
+     "전력"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e9eb1260c040e68c",
+     "point_text": "급증하는 AI 데이터센터 전력 수요에 대응하기 위해 글로벌 부품사와 국내 전선 기업 간의 기술 동맹이 강화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e9eb1260c040e68c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230562+00:00"
+    }
+   }
   },
   {
    "id": "e8466110657ddc5d",
@@ -6289,7 +7775,31 @@
    "category": "news_ko",
    "published": "2026-10-02T03:10:39+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인권위원장이 노인에 대한 사회적 고정관념이 인공지능 알고리즘에 반영되어 차별을 재생산할 우려가 있다고 지적했다.",
+    "p": "AI 시스템의 편향성이 사회적 약자에 대한 실제 차별로 이어질 수 있어 사전 예방과 제도적 통제의 필요성이 제기된다.",
+    "t": [
+     "인권위",
+     "AI",
+     "알고리즘",
+     "차별"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e8466110657ddc5d",
+     "point_text": "AI 시스템의 편향성이 사회적 약자에 대한 실제 차별로 이어질 수 있어 사전 예방과 제도적 통제의 필요성이 제기된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e8466110657ddc5d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230609+00:00"
+    }
+   }
   },
   {
    "id": "45c7ad01c54c166c",
@@ -6300,7 +7810,31 @@
    "category": "news_ko",
    "published": "2026-10-02T03:07:02+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "엔비디아의 지원을 받는 3D AI 기업 엔닷라이트가 로봇 학습 시장 공략에 본격적으로 나선다.",
+    "p": "3D 공간 인식을 돕는 AI 기술이 로봇의 물리적 환경 적응과 자율 학습 능력을 높이는 핵심 축으로 부상하고 있다.",
+    "t": [
+     "엔닷라이트",
+     "3D",
+     "AI",
+     "로봇"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_45c7ad01c54c166c",
+     "point_text": "3D 공간 인식을 돕는 AI 기술이 로봇의 물리적 환경 적응과 자율 학습 능력을 높이는 핵심 축으로 부상하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "45c7ad01c54c166c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230652+00:00"
+    }
+   }
   },
   {
    "id": "2548e4d4df691a8a",
@@ -6311,7 +7845,31 @@
    "category": "papers",
    "published": "2026-10-02T03:05:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "서울대와 연세대 공동 연구진이 주사 한 번으로 손상된 간세포를 되살리는 체내 간 재생 기술 개발에 성공했다.",
+    "p": "줄기세포나 외과적 수술 없이 약물 주사만으로 장기 조직을 재생하는 치료법의 가능성을 열었다.",
+    "t": [
+     "서울대",
+     "연세대",
+     "바이오",
+     "간재생"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_2548e4d4df691a8a",
+     "point_text": "줄기세포나 외과적 수술 없이 약물 주사만으로 장기 조직을 재생하는 치료법의 가능성을 열었다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "2548e4d4df691a8a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230694+00:00"
+    }
+   }
   },
   {
    "id": "a98ba557f51fd03c",
@@ -6322,7 +7880,31 @@
    "category": "news_ko",
    "published": "2026-10-02T02:57:17+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "현대차가 중형급 차체에 AI 기능을 탑재한 신형 투싼을 선보였다.",
+    "p": "내연기관 중심의 전통적인 완성차 라인업에도 인공지능 기반 사용자 경험이 빠르게 확장되고 있다.",
+    "t": [
+     "투싼",
+     "현대차",
+     "AI",
+     "자동차"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_a98ba557f51fd03c",
+     "point_text": "내연기관 중심의 전통적인 완성차 라인업에도 인공지능 기반 사용자 경험이 빠르게 확장되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "a98ba557f51fd03c"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230732+00:00"
+    }
+   }
   },
   {
    "id": "7479d514d90f128e",
@@ -6333,7 +7915,31 @@
    "category": "news_ko",
    "published": "2026-10-02T02:44:20+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "스마트라이프위크 전시를 통해 인공지능 기술이 적용된 서울시의 미래 도시 모습이 공개된다.",
+    "p": "행정을 비롯한 도시 인프라 전반에 AI가 결합하는 스마트시티의 청사진을 시민들에게 가시화하고 있다.",
+    "t": [
+     "스마트라이프위크",
+     "AI",
+     "서울시",
+     "스마트시티"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7479d514d90f128e",
+     "point_text": "행정을 비롯한 도시 인프라 전반에 AI가 결합하는 스마트시티의 청사진을 시민들에게 가시화하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7479d514d90f128e"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:11.230771+00:00"
+    }
+   }
   },
   {
    "id": "8bcdee319248a63a",
@@ -6344,7 +7950,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:41:42+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "방대한 의료 AI 데이터가 축적되는 가운데, 정작 데이터의 실질적 주체인 환자와 제공자에 대한 권리 보상 체계가 미비하다는 지적이 제기됐다.",
+    "p": "의료 데이터의 상업적 활용이 가속화되면서 데이터 주권과 공정한 가치 분배 문제가 AI 산업 성장의 핵심 쟁점으로 부상했다.",
+    "t": [
+     "의료AI",
+     "데이터주권",
+     "보건의료"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_8bcdee319248a63a",
+     "point_text": "의료 데이터의 상업적 활용이 가속화되면서 데이터 주권과 공정한 가치 분배 문제가 AI 산업 성장의 핵심 쟁점으로 부상했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "8bcdee319248a63a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.321740+00:00"
+    }
+   }
   },
   {
    "id": "4e1ed1af134d2e78",
@@ -6355,7 +7984,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:17:26+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "표면적인 AI 기술 개발 속도 조절론 이면에 미·중 양국 간 패권 경쟁을 위한 국가 전략적 계산이 숨어있다는 분석이 제기됐다.",
+    "p": "AI 감속론은 단순한 기술적 숨고르기가 아니라 글로벌 주도권을 쥐기 위한 미·중 패권 전략의 연장선으로 해석된다.",
+    "t": [
+     "미중분쟁",
+     "AI전략",
+     "지정학"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4e1ed1af134d2e78",
+     "point_text": "AI 감속론은 단순한 기술적 숨고르기가 아니라 글로벌 주도권을 쥐기 위한 미·중 패권 전략의 연장선으로 해석된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4e1ed1af134d2e78"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.321830+00:00"
+    }
+   }
   },
   {
    "id": "2f849f02985bd19a",
@@ -6402,7 +8054,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:10:31+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "휴머노이드 로봇이 실생활에서 제대로 기능하려면 눈에 보이는 신체 제어를 넘어 물리적 법칙과 사회적 규범을 이해하는 세계 모델이 필수적이라는 분석이 나왔다.",
+    "p": "피지컬 AI의 한계를 극복하기 위해 로봇이 인간 사회의 맥락과 물리 법칙을 내재화하는 차세대 지능형 모델 개발이 요구된다.",
+    "t": [
+     "휴머노이드",
+     "피지컬AI",
+     "세계모델"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_91bdeeea4474b2a6",
+     "point_text": "피지컬 AI의 한계를 극복하기 위해 로봇이 인간 사회의 맥락과 물리 법칙을 내재화하는 차세대 지능형 모델 개발이 요구된다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "91bdeeea4474b2a6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.321897+00:00"
+    }
+   }
   },
   {
    "id": "d6cd31b8ebbce746",
@@ -6413,7 +8088,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:08:32+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "농촌진흥청이 영농 편의를 높이기 위해 인공지능 기반의 농사 지도 서비스 'AI 이삭이' 2.0을 공개했다.",
+    "p": "공공 부문이 농업 현장에 맞춤형 AI 솔루션을 제공함으로써 전통 산업의 디지털 전환과 생산성 향상을 지원하고 있다.",
+    "t": [
+     "농촌진흥청",
+     "AI이삭이",
+     "스마트팜"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_d6cd31b8ebbce746",
+     "point_text": "공공 부문이 농업 현장에 맞춤형 AI 솔루션을 제공함으로써 전통 산업의 디지털 전환과 생산성 향상을 지원하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "d6cd31b8ebbce746"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.321948+00:00"
+    }
+   }
   },
   {
    "id": "f78479407ab17fd2",
@@ -6424,7 +8122,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:08:10+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "인공지능을 평가하는 주체이면서 동시에 AI의 평가와 추천에 둘러싸여 자라나는 요즘 아이들의 교육적 환경 변화를 조명했다.",
+    "p": "AI 기술의 일상화가 아동의 인지 발달과 평가 방식에 직접적인 영향을 미치며 새로운 교육적 화두를 던지고 있다.",
+    "t": [
+     "교육",
+     "인지발달",
+     "AI윤리"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_f78479407ab17fd2",
+     "point_text": "AI 기술의 일상화가 아동의 인지 발달과 평가 방식에 직접적인 영향을 미치며 새로운 교육적 화두를 던지고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "f78479407ab17fd2"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.321999+00:00"
+    }
+   }
   },
   {
    "id": "4510b299754e1bfe",
@@ -6435,7 +8156,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:05:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "도시바가 필리핀 공장에 600억 엔을 투자해 AI 데이터센터용 하드디스크 드라이브(HDD) 생산 능력을 두 배로 확대한다.",
+    "p": "AI 인프라 확장에 따른 대용량 데이터 저장 장치 수요 급증에 대응하기 위해 주요 하드웨어 제조사들의 설비 투자가 가속화되고 있다.",
+    "t": [
+     "도시바",
+     "데이터센터",
+     "HDD"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4510b299754e1bfe",
+     "point_text": "AI 인프라 확장에 따른 대용량 데이터 저장 장치 수요 급증에 대응하기 위해 주요 하드웨어 제조사들의 설비 투자가 가속화되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4510b299754e1bfe"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.322051+00:00"
+    }
+   }
   },
   {
    "id": "02141c4dbf42e624",
@@ -6446,7 +8190,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:02:10+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "대한민국 여자 양궁 대표팀이 인도에 패배하며 28년 만에 아시안게임 금메달 사냥에 실패했다.",
+    "p": "세계 최정상을 지켜온 한국 양궁이 아시아 국가들의 거센 추격과 전력 평준화 흐름 속에서 이례적인 결과를 마주했다.",
+    "t": [
+     "양궁",
+     "스포츠",
+     "국제대회"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_02141c4dbf42e624",
+     "point_text": "세계 최정상을 지켜온 한국 양궁이 아시아 국가들의 거센 추격과 전력 평준화 흐름 속에서 이례적인 결과를 마주했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "02141c4dbf42e624"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.322097+00:00"
+    }
+   }
   },
   {
    "id": "4b1cf46019f4383d",
@@ -6457,7 +8224,30 @@
    "category": "news_ko",
    "published": "2026-10-02T02:00:04+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "금융위원회가 자살 예방, 청년 자산 형성, AI 보안 분야에서 두드러진 성과를 낸 소속 직원 3명을 포상했다.",
+    "p": "공공 부문 내에서 AI 보안 등 혁신 과제를 수행한 실무진에 대한 격려가 조직 내 디지털 전환 동력을 제공한다.",
+    "t": [
+     "금융위원회",
+     "AI보안",
+     "공공부문"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_4b1cf46019f4383d",
+     "point_text": "공공 부문 내에서 AI 보안 등 혁신 과제를 수행한 실무진에 대한 격려가 조직 내 디지털 전환 동력을 제공한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "4b1cf46019f4383d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.322145+00:00"
+    }
+   }
   },
   {
    "id": "bdab0884c6c1f871",
@@ -6468,7 +8258,30 @@
    "category": "news_ko",
    "published": "2026-10-02T01:57:00+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "10조 원 규모의 국민성장펀드가 이달 출범하며 첨단 산업과 AI, 반도체 분야를 둘러싼 민관 투자 경쟁이 본격화된다.",
+    "p": "대규모 정책 자금이 AI와 반도체 생태계로 유입되면서 국내 기술 경쟁력 강화를 위한 투자가 급물살을 탈 전망이다.",
+    "t": [
+     "국민성장펀드",
+     "반도체",
+     "AI투자"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_bdab0884c6c1f871",
+     "point_text": "대규모 정책 자금이 AI와 반도체 생태계로 유입되면서 국내 기술 경쟁력 강화를 위한 투자가 급물살을 탈 전망이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "bdab0884c6c1f871"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "FORECAST",
+     "generated_at": "2026-10-02T15:51:20.322192+00:00"
+    }
+   }
   },
   {
    "id": "156f302398a5836b",
@@ -6479,7 +8292,30 @@
    "category": "news_ko",
    "published": "2026-10-02T01:52:14+00:00",
    "summary": "",
-   "thumb": ""
+   "thumb": "",
+   "mx": {
+    "b": "제주 지역 여성 15명이 236시간의 AI 교육을 수료한 뒤 전원 사업화에 성공하고 국내외 공모전에서 수상 성과를 거뒀다.",
+    "p": "지역 맞춤형 AI 교육 프로그램이 단순 학습을 넘어 실제 창업과 경제 활동으로 이어지는 실효성 있는 모델을 입증했다.",
+    "t": [
+     "제주",
+     "AI교육",
+     "여성창업"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_156f302398a5836b",
+     "point_text": "지역 맞춤형 AI 교육 프로그램이 단순 학습을 넘어 실제 창업과 경제 활동으로 이어지는 실효성 있는 모델을 입증했다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "156f302398a5836b"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-02T15:51:20.322243+00:00"
+    }
+   }
   },
   {
    "id": "a0c7ef0c05f8064e",
@@ -7940,13 +9776,13 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 64
+   "fetched": 63
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 2,
-   "fetched": 60
+   "fetched": 61
   },
   {
    "name": "Research: 윤리·철학 · 윤리·철학",
@@ -8036,7 +9872,7 @@
    "name": "Topic: AI 철학 · AI 철학",
    "ok": true,
    "count": 2,
-   "fetched": 42
+   "fetched": 41
   },
   {
    "name": "Topic: 로봇 · 로봇",
@@ -8060,7 +9896,7 @@
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 81
+   "fetched": 84
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -8072,13 +9908,13 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 55
+   "fetched": 54
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 53
+   "fetched": 52
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -8090,19 +9926,19 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 78
+   "fetched": 79
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
    "ok": true,
    "count": 2,
-   "fetched": 93
+   "fetched": 94
   },
   {
    "name": "VentureBeat AI",
@@ -8252,7 +10088,7 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 39
+   "fetched": 40
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
@@ -8270,7 +10106,7 @@
    "name": "국내 연구: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 3,
-   "fetched": 44
+   "fetched": 45
   },
   {
    "name": "국내 연구: 사회·경제 · 사회·경제",
@@ -8282,7 +10118,7 @@
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
    "ok": true,
    "count": 3,
-   "fetched": 37
+   "fetched": 35
   },
   {
    "name": "국내 연구: 청소년·가족·여성 · 청소년·가족·여성",
@@ -8462,7 +10298,7 @@
    "name": "주제: 가족·출산 · 가족·출산",
    "ok": true,
    "count": 3,
-   "fetched": 47
+   "fetched": 46
   },
   {
    "name": "주제: 경제 · 경제",
@@ -8504,13 +10340,13 @@
    "name": "주제: 법률 · 법률",
    "ok": true,
    "count": 3,
-   "fetched": 35
+   "fetched": 36
   },
   {
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
@@ -8528,7 +10364,7 @@
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "주제: 저작권 · 저작권",
@@ -8546,7 +10382,7 @@
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
@@ -8576,7 +10412,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 5,
-   "fetched": 214
+   "fetched": 215
   },
   {
    "name": "프레시안",
