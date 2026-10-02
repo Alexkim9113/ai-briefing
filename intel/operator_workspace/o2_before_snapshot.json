@@ -1,0 +1,24 @@
+{
+ "phase": "O-2",
+ "computed_at": "2026-10-02",
+ "git_head_before": "b7a42bf",
+ "git_status_before": "clean (ff-only merged with origin/main before start)",
+ "claims_count": 14,
+ "hypotheses_count": 8,
+ "statistical_evidence_count": 4,
+ "intelligence_objects": {
+  "intel_87210a61730c22b9": {"topic": "AI_ENERGY_INFRA", "version": 6},
+  "intel_dbab7b01963396b5": {"topic": "AI_LABOR", "version": 1}
+ },
+ "latest_report_ai_energy_infra": "report_intel_87210a61730c22b9_v4",
+ "latest_report_ai_labor": "report_intel_dbab7b01963396b5_v1",
+ "canonical_file_sha256_before": {
+  "intel/claims/claims.json": "324e41c7425a6171e9bfaf9906bd1ad9c3487e8cc9a94cda6a3033bbd2088b0b",
+  "intel/hypothesis/hypotheses.json": "f295d1f8d9770a72d25eb3b8b4389aba5fe900835a8271029426eafffd73bbe2",
+  "intel/intelligence_objects/intelligence_objects.json": "82d00cc37fde1d7b657f7da73f2532b5f8b890596aba879cc2ab9d38d78a8a6a",
+  "intel/statistical_evidence/statistical_evidence.json": "a36fd8bc821a32ac8bd2abe622d5f85387abb54cfa395f55cd343be322f14ff1",
+  "intel/report_engine/reports/report_intel_87210a61730c22b9_v4.json": "beb034796e62d93f9a1921c450dca441812fdd56f99fc42eef46c9a2a9ca9420",
+  "intel/report_engine/reports/report_intel_dbab7b01963396b5_v1.json": "73a97e5a577b81558b2ff0a840b10162429c7a309ad21bb04c05d0518a70a6ef"
+ },
+ "note": "This snapshot was recorded as Phase 1 of O-2 (AI_LABOR expansion). No further phases (2-15) were executed in this round: the agent invocation for this round carried a very small effort/turn budget, insufficient for the real WebSearch-based evidence collection, Claim/Hypothesis authoring, and report/site regeneration that the O-2 brief requires to be done honestly. Rather than fabricate evidence, claims, or hypotheses to appear complete, this round stopped at a clean checkpoint after Phase 1 only. AI_ENERGY_INFRA and AI_LABOR canonical files are confirmed unchanged from their pre-existing state (hashes above were computed directly from the live repo files at HEAD b7a42bf, matching what O-1G's final snapshot recorded)."
+}
