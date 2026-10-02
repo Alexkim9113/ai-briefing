@@ -1,0 +1,543 @@
+{
+ "report_id": "report_intel_dbab7b01963396b5_v2",
+ "intelligence_id": "intel_dbab7b01963396b5",
+ "topic": "AI_LABOR",
+ "version": 2,
+ "generated_at": "2026-10-02T02:56:50.510890+00:00",
+ "source_snapshot": "450d082835498cb6",
+ "claim_snapshot": "6927f0734921b68e",
+ "evidence_snapshot": "fefe68ccc8afa64a",
+ "readiness": "CONDITIONALLY_READY",
+ "sections": {
+  "KEY_CLAIMS": {
+   "section_id": "sec_key_claims",
+   "section_type": "KEY_CLAIMS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_4765a68987d86c67",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_931b08c7ebfc9604",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_4731da53eae6b843",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "INTERPRETATION",
+     "text": "현재 증거만으로 판단하기 어렵다.",
+     "claim_id": "claim_fe878b52922b46a4",
+     "claim_status": "OPEN",
+     "claim_type": "CAUSAL"
+    },
+    {
+     "type": "INTERPRETATION",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_8fd5da8f27c9fc2b",
+     "claim_status": "OPEN",
+     "claim_type": "ATTRIBUTION"
+    },
+    {
+     "type": "INTERPRETATION",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_30fdf98bc1a9c818",
+     "claim_status": "OPEN",
+     "claim_type": "PREDICTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_8e305d0c30d23514",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    },
+    {
+     "type": "FACT",
+     "text": "현재 확인되지 않았다.",
+     "claim_id": "claim_0da20db21fe1463a",
+     "claim_status": "OPEN",
+     "claim_type": "DESCRIPTIVE"
+    }
+   ],
+   "claim_ids": [
+    "claim_4765a68987d86c67",
+    "claim_931b08c7ebfc9604",
+    "claim_4731da53eae6b843",
+    "claim_fe878b52922b46a4",
+    "claim_8fd5da8f27c9fc2b",
+    "claim_30fdf98bc1a9c818",
+    "claim_8e305d0c30d23514",
+    "claim_0da20db21fe1463a"
+   ],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510473+00:00"
+  },
+  "STATISTICAL_CONTEXT": {
+   "section_id": "sec_statistical_context",
+   "section_type": "STATISTICAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "type": "EVIDENCE_SUMMARY",
+     "indicator": "SL.TLF.ACTI.ZS",
+     "source": "src_worldbank_api",
+     "geography": "USA",
+     "period": "2010-2022",
+     "observation_count": 13,
+     "trend_status": "STABLE",
+     "limitations": []
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [
+    "series_c302bf9e2576ad47"
+   ],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510545+00:00"
+  },
+  "RESEARCH_EVIDENCE": {
+   "section_id": "sec_research_evidence",
+   "section_type": "RESEARCH_EVIDENCE",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [
+    "intel/hypothesis/hypotheses.json#HL1",
+    "intel/hypothesis/hypotheses.json#HL2",
+    "intel/hypothesis/hypotheses.json#HL3",
+    "intel/hypothesis/hypotheses.json#HL4"
+   ],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510555+00:00"
+  },
+  "POLICY_CONTEXT": {
+   "section_id": "sec_policy_context",
+   "section_type": "POLICY_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510560+00:00"
+  },
+  "COUNTEREVIDENCE": {
+   "section_id": "sec_counterevidence",
+   "section_type": "COUNTEREVIDENCE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "direction": "null-result / no-significant-divergence",
+     "status": "EVIDENCE_FOUND",
+     "source": "Kauhanen & Rouvinen (ETLA, Finland, Applied Economics Letters 2025) population-level wage/employment data, 2 years post-ChatGPT"
+    },
+    {
+     "direction": "aggregate-labor-market-no-change",
+     "status": "EVIDENCE_FOUND",
+     "source": "US BLS JOLTS Aug 2026 release -- openings/hires/separations each little changed, no AI attribution in release"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510564+00:00",
+   "search_outcome": "EVIDENCE_FOUND",
+   "search_outcome_note": "반대 증거를 찾음"
+  },
+  "ALTERNATIVE_EXPLANATIONS": {
+   "section_id": "sec_alternative_explanations",
+   "section_type": "ALTERNATIVE_EXPLANATIONS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "GENERAL_POST_2022_TECH_SECTOR_HIRING_SLOWDOWN",
+    "DIFFERING_LABOR_MARKET_INSTITUTIONS_US_VS_FINLAND",
+    "EXPOSURE_NOT_YET_REALIZED_AS_DISPLACEMENT (OECD framing)",
+    "FORECAST_HORIZON_NOT_YET_ELAPSED (KDI 10-year projection)"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510569+00:00"
+  },
+  "UNCERTAINTIES": {
+   "section_id": "sec_uncertainties",
+   "section_type": "UNCERTAINTIES",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+    },
+    {
+     "cause": "SOURCE_TIER_CLASSIFICATION_GAP",
+     "detail": "none of the 7 new AI_LABOR claims carry an `evidence_independence` field yet (unlike several AI_ENERGY_INFRA claims), so evidence_evaluation.classify_source_tier() resolves them all to UNKNOWN tier; this is why HL1 and HL3 compute to PARTIALLY_SUPPORTED rather than SUPPORTED despite having a single, uncontradicted, real source each -- the guard is doing its job (source quality was never actually checked), not reflecting a weakness in the underlying evidence itself."
+    },
+    {
+     "cause": "SHARED_CREATED_FROM_LABEL",
+     "detail": "four of the round-3 claims (Stanford SIEPR, KDI, ETLA, Fed FEDS Note) share the generic created_from label 'O-2 round 3 WebFetch research' rather than a document-specific identifier (unlike the AI_ENERGY_INFRA corpus's per-document created_from values); this means evidence_evaluation._origin_family_key() would treat them as members of one shared origin family if they were ever combined as multiple supporting items on a single hypothesis in a future round, which could spuriously trip the Derivative Evidence Guard despite being four genuinely independent documents. Not an issue for the 4 hypotheses built this round (each only places at most one of these as supporting evidence), but flagged for a future round before combining them."
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510573+00:00"
+  },
+  "WHAT_WE_KNOW": {
+   "section_id": "sec_what_we_know",
+   "section_type": "WHAT_WE_KNOW",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510586+00:00"
+  },
+  "WHAT_WE_DO_NOT_KNOW": {
+   "section_id": "sec_what_we_do_not_know",
+   "section_type": "WHAT_WE_DO_NOT_KNOW",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no sector/occupation-level decomposition linking the original aggregate labor-force-participation indicator to AI adoption specifically -- still true after this round's additions, which rest on separate, newer claims rather than decomposing this indicator"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "PARTIALLY_RESOLVED this round -- ETLA/Finland null-result and BLS JOLTS aggregate-no-change evidence now connected as real counterevidence to a broad AI-displacement reading; still no counterevidence specifically targeting the narrow Stanford SIEPR early-career finding itself (e.g. no replication attempt or alternative explanation study of that specific cohort/occupation set)"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over -- still NOT_READY"
+    },
+    {
+     "gap_type": "AI_DISPLACEMENT_VS_PRODUCTIVITY_DISAGGREGATION_GAP",
+     "reason": "across all 7 new claims, only NBER w31161 (productivity) and Stanford SIEPR (narrow-cohort employment) give any causal/attribution-level evidence; OECD, BLS, KDI, ETLA, and Fed sources are each explicitly scoped to methodology, aggregate-no-attribution, forecast, null-result, or adoption-only respectively -- no source in this corpus yet measures an economy-wide, AI-attributed net employment effect for the general working-age population in any single geography."
+    },
+    {
+     "cause": "ATTRIBUTION_UNCERTAINTY",
+     "detail": "aggregate participation rate cannot be decomposed by AI-exposure occupation/sector from this indicator alone"
+    },
+    {
+     "cause": "SOURCE_TIER_CLASSIFICATION_GAP",
+     "detail": "none of the 7 new AI_LABOR claims carry an `evidence_independence` field yet (unlike several AI_ENERGY_INFRA claims), so evidence_evaluation.classify_source_tier() resolves them all to UNKNOWN tier; this is why HL1 and HL3 compute to PARTIALLY_SUPPORTED rather than SUPPORTED despite having a single, uncontradicted, real source each -- the guard is doing its job (source quality was never actually checked), not reflecting a weakness in the underlying evidence itself."
+    },
+    {
+     "cause": "SHARED_CREATED_FROM_LABEL",
+     "detail": "four of the round-3 claims (Stanford SIEPR, KDI, ETLA, Fed FEDS Note) share the generic created_from label 'O-2 round 3 WebFetch research' rather than a document-specific identifier (unlike the AI_ENERGY_INFRA corpus's per-document created_from values); this means evidence_evaluation._origin_family_key() would treat them as members of one shared origin family if they were ever combined as multiple supporting items on a single hypothesis in a future round, which could spuriously trip the Derivative Evidence Guard despite being four genuinely independent documents. Not an issue for the 4 hypotheses built this round (each only places at most one of these as supporting evidence), but flagged for a future round before combining them."
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510592+00:00"
+  },
+  "EVIDENCE_GAPS": {
+   "section_id": "sec_evidence_gaps",
+   "section_type": "EVIDENCE_GAPS",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "gap_type": "ATTRIBUTION_GAP",
+     "reason": "no sector/occupation-level decomposition linking the original aggregate labor-force-participation indicator to AI adoption specifically -- still true after this round's additions, which rest on separate, newer claims rather than decomposing this indicator"
+    },
+    {
+     "gap_type": "COUNTEREVIDENCE_GAP",
+     "reason": "PARTIALLY_RESOLVED this round -- ETLA/Finland null-result and BLS JOLTS aggregate-no-change evidence now connected as real counterevidence to a broad AI-displacement reading; still no counterevidence specifically targeting the narrow Stanford SIEPR early-career finding itself (e.g. no replication attempt or alternative explanation study of that specific cohort/occupation set)"
+    },
+    {
+     "gap_type": "POLICY_RESEARCH_GAP",
+     "reason": "carried over -- still NOT_READY"
+    },
+    {
+     "gap_type": "AI_DISPLACEMENT_VS_PRODUCTIVITY_DISAGGREGATION_GAP",
+     "reason": "across all 7 new claims, only NBER w31161 (productivity) and Stanford SIEPR (narrow-cohort employment) give any causal/attribution-level evidence; OECD, BLS, KDI, ETLA, and Fed sources are each explicitly scoped to methodology, aggregate-no-attribution, forecast, null-result, or adoption-only respectively -- no source in this corpus yet measures an economy-wide, AI-attributed net employment effect for the general working-age population in any single geography."
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [
+    "ATTRIBUTION_GAP",
+    "COUNTEREVIDENCE_GAP",
+    "POLICY_RESEARCH_GAP",
+    "AI_DISPLACEMENT_VS_PRODUCTIVITY_DISAGGREGATION_GAP"
+   ],
+   "generated_at": "2026-10-02T02:56:50.510600+00:00"
+  },
+  "METAXIS_POINT": {
+   "section_id": "sec_metaxis_point",
+   "section_type": "METAXIS_POINT",
+   "status": "NOT_APPLICABLE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510604+00:00"
+  },
+  "EVIDENCE_MAP": {
+   "section_id": "sec_evidence_map",
+   "section_type": "EVIDENCE_MAP",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "node_type": "STATISTIC",
+     "id": "series_c302bf9e2576ad47"
+    },
+    {
+     "node_type": "EVIDENCE_RELATION",
+     "id": "rel_0ad164c8796a074d"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_4765a68987d86c67"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_931b08c7ebfc9604"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_4731da53eae6b843"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_fe878b52922b46a4"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_8fd5da8f27c9fc2b"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_30fdf98bc1a9c818"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_8e305d0c30d23514"
+    },
+    {
+     "node_type": "CLAIM",
+     "id": "claim_0da20db21fe1463a"
+    },
+    {
+     "node_type": "INTELLIGENCE_OBJECT",
+     "id": "intel_dbab7b01963396b5"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510616+00:00"
+  },
+  "SOURCE_PROVENANCE": {
+   "section_id": "sec_source_provenance",
+   "section_type": "SOURCE_PROVENANCE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "source_id": "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.oecd.org/en/publications/the-oecd-ai-exposure-measure_f3da0f0a-en.html",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.bls.gov/news.release/jolts.nr0.htm",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.nber.org/papers/w31161",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://mobile.newsis.com/view/NISX20260722_0003718118",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.etla.fi/julkaisut/akateemiset-julkaisut/assessing-early-labour-market-effects-of-generative-ai-evidence-from-population-data.md",
+     "note": "non-document provenance reference"
+    },
+    {
+     "source_id": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+     "note": "non-document provenance reference"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [
+    "https://api.worldbank.org/v2/country/USA/indicator/SL.TLF.ACTI.ZS?date=2010:2022&format=json&per_page=100",
+    "https://www.oecd.org/en/publications/the-oecd-ai-exposure-measure_f3da0f0a-en.html",
+    "https://www.bls.gov/news.release/jolts.nr0.htm",
+    "https://www.nber.org/papers/w31161",
+    "https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial",
+    "https://mobile.newsis.com/view/NISX20260722_0003718118",
+    "https://www.etla.fi/julkaisut/akateemiset-julkaisut/assessing-early-labour-market-effects-of-generative-ai-evidence-from-population-data.md",
+    "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+    "intel/hypothesis/hypotheses.json#HL1-HL4"
+   ],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510628+00:00"
+  },
+  "CURRENT_STATE": {
+   "section_id": "sec_current_state",
+   "section_type": "CURRENT_STATE",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect. [O-2 round 4 update] Real evidence has since been added beyond the World Bank participation-rate series: (1) OECD AI Exposure Measure methodology -- exposure/capability-gap only, explicitly NOT displacement; (2) US BLS JOLTS Aug 2026 aggregate labor-flow data, little-changed month-over-month, no AI attribution in the release; (3) NBER w31161 field experiment: generative-AI assistant raised customer-support productivity 14% on average (34% for novices), a firm-level productivity finding, NOT employment/headcount evidence; (4) Stanford SIEPR 'Canaries in the Coal Mine': 13% relative employment decline for early-career (22-25) US workers in high-AI-exposure occupations since generative AI adoption -- direct observed employment-effect evidence, but scoped narrowly to that cohort; (5) KDI Korea macro FORECAST (not observed): +3.5% TFP over 10 years, ~256,000 jobs/year displaced; (6) ETLA/Finland peer-reviewed population-level study found NO statistically significant wage/employment divergence by AI exposure in the 2 years after ChatGPT's launch -- genuine counterevidence to a broad displacement reading; (7) Fed FEDS Note: US firm/worker AI-adoption rates (18% of firms by end-2025; 41% of workforce using generative AI at work; adoption only, not a productivity or employment-effect measurement). Four real Hypotheses (HL1-HL4) were constructed this round from this evidence base via the canonical determine_canonical_status() write path: HL1 (US AI adoption is measurably increasing) = PARTIALLY_SUPPORTED (single Fed synthesis source, source-tier not yet classified -> UNKNOWN-tier guard fires); HL2 (direct observed employment effect concentrated in early-career US workers) = CONTESTED (Stanford SIEPR support vs. ETLA/Finland null-result contradiction -- a genuine geography/population tension, surfaced not resolved, with the OECD exposure!=displacement framing recorded as a generalization guard); HL3 (measurable productivity effect scoped strictly to generative-AI customer support) = PARTIALLY_SUPPORTED (same UNKNOWN-source-tier guard as HL1); HL4 (AI is driving large-scale, economy-wide job displacement beyond the early-career cohort) = WEAKENED (KDI's 10-year forecast is not yet corroborated, and is actively weakened, by observed aggregate US BLS data showing no AI-attributed change and by Finland's observed null result -- a forecast-vs-observed divergence, not a rejection, since the forecast horizon has not elapsed and geography differs)."
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510634+00:00"
+  },
+  "GEOGRAPHIC_CONTEXT": {
+   "section_id": "sec_geographic_context",
+   "section_type": "GEOGRAPHIC_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "geography": "USA",
+     "basis": "statistic geography field (World Bank country code)",
+     "scope": "event_country=UNKNOWN"
+    },
+    {
+     "geography": "OECD_CROSS_COUNTRY",
+     "basis": "OECD AI Exposure Measure methodology paper",
+     "scope": "cross-country exposure/capability-gap methodology, not a per-country displacement measurement"
+    },
+    {
+     "geography": "USA",
+     "basis": "BLS JOLTS, NBER w31161, Stanford SIEPR, Fed FEDS Note",
+     "scope": "US-specific adoption, productivity (customer-support only), and early-career-cohort employment evidence -- not generalized to the full US labor market"
+    },
+    {
+     "geography": "KR",
+     "basis": "KDI macroeconomic forecast",
+     "scope": "South Korea 10-year FORECAST only, not an observed outcome; never merged with US/Finland observed data"
+    },
+    {
+     "geography": "FI",
+     "basis": "Kauhanen & Rouvinen / ETLA population-level study",
+     "scope": "Finland national wage-earner population data, 2 years post-ChatGPT; a genuine counterevidence data point to a broad early-career-displacement generalization, not a refutation of the narrower US Stanford SIEPR finding"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510637+00:00"
+  },
+  "TEMPORAL_CONTEXT": {
+   "section_id": "sec_temporal_context",
+   "section_type": "TEMPORAL_CONTEXT",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    {
+     "period_start": "2010",
+     "period_end": "2022",
+     "source": "series_c302bf9e2576ad47"
+    },
+    {
+     "period_start": "2022-11",
+     "period_end": "2026-09",
+     "source": "claims: OECD/BLS/NBER/Stanford-SIEPR/ETLA/Fed-FEDS (see key_claims)",
+     "note": "post-ChatGPT (Nov 2022) observed-evidence window; kept explicitly separate from the KDI 2026-2036 FORECAST horizon, which must never be read as already observed"
+    }
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510640+00:00"
+  },
+  "HISTORICAL_CONTEXT": {
+   "section_id": "sec_historical_context",
+   "section_type": "HISTORICAL_CONTEXT",
+   "status": "INSUFFICIENT_EVIDENCE",
+   "content_blocks": [],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510643+00:00"
+  },
+  "KEY_QUESTION": {
+   "section_id": "sec_key_question",
+   "section_type": "KEY_QUESTION",
+   "status": "AVAILABLE",
+   "content_blocks": [
+    "is AI adoption measurably shifting US labor force participation?"
+   ],
+   "claim_ids": [],
+   "evidence_ids": [],
+   "source_ids": [],
+   "intelligence_ids": [],
+   "uncertainty_ids": [],
+   "gap_ids": [],
+   "generated_at": "2026-10-02T02:56:50.510648+00:00"
+  }
+ }
+}

@@ -115,9 +115,18 @@ def test_gap_inspector_never_hides_a_known_gap():
 
 
 def test_gap_inspector_filters_by_topic():
+    # O-2 round 5: IO v2 added a new AI_LABOR known_gaps entry (AI_DISPLACEMENT_VS_PRODUCTIVITY_
+    # DISAGGREGATION_GAP), so the real, current gap count is checked against the live source of
+    # truth (the IO's own known_gaps) rather than a round-specific hardcoded number.
+    import json
+    io_path = Path(__file__).resolve().parents[2] / "intelligence_objects" / "intelligence_objects.json"
+    objects = json.loads(io_path.read_text(encoding="utf-8"))
+    io = next(o for o in objects if o.get("intelligence_id") == "intel_dbab7b01963396b5") \
+        if isinstance(objects, list) else objects["intel_dbab7b01963396b5"]
+    expected = len(io.get("known_gaps", []))
     gaps = op.gap_inspector(topic="AI_LABOR")
     assert all(g["topic"] == "AI_LABOR" for g in gaps)
-    assert len(gaps) == 3
+    assert len(gaps) == expected
 
 
 def test_gap_inspector_honest_unknown_when_no_rich_next_action_exists():

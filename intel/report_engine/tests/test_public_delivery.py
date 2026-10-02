@@ -81,9 +81,15 @@ def test_report_index_lists_only_latest_version_per_intelligence_id():
     assert len(energy_rows) == 1
     assert energy_rows[0]["version"] == 4
     assert energy_rows[0]["report_id"] == "report_intel_87210a61730c22b9_v4"
+    # O-2 round 5: AI_LABOR advanced to v2 (real HL1-HL4 hypotheses) -- assert dynamically against
+    # whatever is actually the highest version on disk rather than a round-specific hardcoded
+    # number, so this test keeps being a real check instead of drifting stale each round.
+    labor_versions = sorted(int(p.stem.rsplit("_v", 1)[1])
+                             for p in pd.discover_real_reports()
+                             if p.stem.startswith("report_intel_dbab7b01963396b5_v"))
     labor_rows = [e for e in index if e["intelligence_id"] == "intel_dbab7b01963396b5"]
     assert len(labor_rows) == 1
-    assert labor_rows[0]["version"] == 1
+    assert labor_rows[0]["version"] == max(labor_versions)
 
 
 def test_latest_report_paths_picks_highest_version_per_prefix():
@@ -93,7 +99,11 @@ def test_latest_report_paths_picks_highest_version_per_prefix():
     assert "report_intel_87210a61730c22b9_v1.json" not in names
     assert "report_intel_87210a61730c22b9_v2.json" not in names
     assert "report_intel_87210a61730c22b9_v3.json" not in names
-    assert "report_intel_dbab7b01963396b5_v1.json" in names
+    # O-2 round 5: AI_LABOR's highest version is now v2 -- the older v1 must NOT be the one kept
+    # as the primary/listed path (v1's detail page still exists on disk separately, per
+    # discover_real_reports(), just not as the latest_report_paths() entry).
+    assert "report_intel_dbab7b01963396b5_v1.json" not in names
+    assert "report_intel_dbab7b01963396b5_v2.json" in names
 
 
 def main():
