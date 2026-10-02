@@ -60,6 +60,28 @@ a:focus-visible{outline:2px solid #4b3f8a;outline-offset:2px}
 
 NAV_ITEMS = ("overview", "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
 
+# Korean-first labels (Te's O-2C mapping). Presentation text only -- never changes route slugs,
+# internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
+KO_LABELS = {
+    "overview": "운영 현황",
+    "intelligence_index": "인텔리전스 포트폴리오",
+    "reports": "보고서",
+    "gaps": "미해결 쟁점",
+    "rights": "권리·사용 범위",
+    "sources": "출처",
+    "source_health": "출처 상태",
+    "counterevidence": "반증 자료",
+    "evidence": "근거",
+}
+
+
+def _ko(slug, fallback=None):
+    return KO_LABELS.get(slug, fallback or slug.replace("_", " ").title())
+
+
+def _nav_label(slug):
+    return f'{_esc(_ko(slug))} <span style="opacity:.6;font-size:.85em">({_esc(slug.upper())})</span>'
+
 
 def _esc(x):
     return _html.escape(str(x)) if x is not None else ""
@@ -73,7 +95,7 @@ def _status(value):
 def _nav(active, depth=1):
     up = "../" * depth
     links = "".join(
-        f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{n.upper()}</a>'
+        f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{_nav_label(n)}</a>'
         for n in NAV_ITEMS
     )
     return f"<nav aria-label='Operator navigation'>{links}</nav>"
@@ -102,6 +124,34 @@ PUBLIC_SAFE_BANNER = (
 )
 
 
+def _portfolio_rows():
+    """Reuses op.intelligence_index() + op.hypotheses_for_topic() -- no new fields invented,
+    just a decision-oriented rollup of data the backend already exposes (Te's home-page ask)."""
+    rows = []
+    for row in op.intelligence_index():
+        hyps = op.hypotheses_for_topic(row["topic"])
+        has_counterev = any((h.get("contradicting_evidence") or []) for h in hyps)
+        rows.append({**row, "has_counterevidence": has_counterev})
+    return rows
+
+
+def _portfolio_section_html():
+    rows = _portfolio_rows()
+    cards = "".join(
+        f'<div class="kpi" style="flex:0 0 calc(50% - 7px);max-width:calc(50% - 7px)">'
+        f'<div class="l">{_esc(r["topic"])}</div>'
+        f'<div>{_status(r["readiness"])} &middot; IO v{_esc(r["io_version"])} '
+        f'&middot; updated {_esc(r["updated"])}</div>'
+        f'<div>보고서(Report): {_esc(r["latest_report_version"])} &middot; '
+        f'근거(Evidence): {_esc(r["evidence_count"])} &middot; '
+        f'반증(Counterevidence): {"있음 (YES)" if r["has_counterevidence"] else "없음 (NONE)"} &middot; '
+        f'미해결 쟁점(Open Gaps): {_esc(r["known_gap_count"])}</div>'
+        f'<div>{_index_detail_link(r)}</div></div>'
+        for r in rows
+    )
+    return f'<h2>인텔리전스 포트폴리오 / Intelligence Portfolio</h2><div class="kpi-row">{cards}</div>'
+
+
 def render_overview():
     o = op.overview()
     kpis = "".join(
@@ -114,15 +164,35 @@ def render_overview():
         for k, v in live.items() if k not in ("run_id", "head_sha", "completed_at", "environment")
     )
     live_section = (
-        f'<h2>Last Live Acquisition</h2>'
+        f'<h2>최근 라이브 수집 / Last Live Acquisition</h2>'
         f'<p class="mono">RUN_ID={_esc(live["run_id"])} HEAD_SHA={_esc(live["head_sha"])} '
         f'COMPLETED_AT={_esc(live["completed_at"])} ENVIRONMENT={_esc(live["environment"])}</p>'
         f'<div class="kpi-row">{live_kpis}</div>'
     )
-    return _shell("Overview", "overview", (
+    gaps = op.gap_inspector()
+    open_gaps = [g for g in gaps if str(g.get("status", "")).upper() not in ("RESOLVED", "CLOSED")]
+    gaps_section = (
+        '<h2>열린 쟁점 / Open Issues</h2>'
+        + (f'<p>{len(open_gaps)} open of {len(gaps)} recorded. See '
+           f'<a href="../gaps/">{_ko("gaps")} / Gaps</a> for the full list.</p>'
+           if gaps else '<p class="empty">No known gaps recorded.</p>')
+    )
+    reports_section = (
+        f'<h2>최신 보고서 / Latest Reports</h2>'
+        f'<p>See <a href="../reports/">{_ko("reports")} / Reports</a> and '
+        f'<a href="../intelligence_index/">{_ko("intelligence_index")}</a> for per-topic detail.</p>'
+    )
+    return _shell(f"{_ko('overview')} / Overview", "overview", (
         f'{PUBLIC_SAFE_BANNER}'
+        f'<h2>오늘의 핵심 신호 / Today\'s Key Signals</h2>'
         f'<div class="kpi-row">{kpis}</div>'
-        f'<p>Source Health (minimal contract): {_status(o["source_health"])}</p>'
+        f'{_portfolio_section_html()}'
+        f'{gaps_section}'
+        f'{reports_section}'
+        f'<h2>출처 상태 / Source Health</h2>'
+        f'<p>Source Health (minimal contract): {_status(o["source_health"])}. '
+        f'See <a href="../source_health/">{_ko("source_health")} / Source Health</a>.</p>'
+        f'<h2>시스템 상태 / System Status</h2>'
         f'{live_section}'
     ))
 
@@ -140,13 +210,13 @@ def render_reports():
             f'<th>Generated</th><th>HTML</th><th>PDF</th></tr>{body_rows}</table></div>')
     if not rows:
         table = '<p class="empty">No reports built yet.</p>'
-    return _shell("Reports", "reports", table)
+    return _shell(f"{_ko('reports')} / Reports", "reports", table)
 
 
 def render_gaps():
     rows = op.gap_inspector()
     if not rows:
-        return _shell("Gaps", "gaps", '<p class="empty">No known gaps recorded.</p>')
+        return _shell(f"{_ko('gaps')} / Gaps", "gaps", '<p class="empty">No known gaps recorded.</p>')
     body_rows = "".join(
         f'<tr><td class="mono">{_esc(g["gap_id"])}</td><td>{_esc(g["topic"])}</td>'
         f'<td>{_esc(g["gap_type"])}</td><td>{_status(g["status"])}</td>'
@@ -155,7 +225,7 @@ def render_gaps():
     )
     table = ('<div class="table-wrap">' + f'<table><tr><th>Gap ID</th><th>Topic</th><th>Type</th><th>Status</th>'
             f'<th>Description</th><th>Next Possible Action</th></tr>{body_rows}</table></div>')
-    return _shell("Gaps", "gaps", f"<p>{len(rows)} known gap(s) -- none hidden.</p>{table}")
+    return _shell(f"{_ko('gaps')} / Gaps", "gaps", f"<p>{len(rows)} known gap(s) -- none hidden.</p>{table}")
 
 
 def render_rights():
@@ -170,7 +240,7 @@ def render_rights():
             f'<th>Public Allowed</th><th>Fulltext Allowed</th><th>Private Only</th></tr>{body_rows}</table></div>')
     if not rows:
         table = '<p class="empty">No rights-tracked sources referenced by any report yet.</p>'
-    return _shell("Rights", "rights", table)
+    return _shell(f"{_ko('rights')} / Rights", "rights", table)
 
 
 def render_sources():
@@ -191,7 +261,7 @@ def render_sources():
         for r in sample
     )
     table = '<div class="table-wrap">' + f'<table><tr><th>Source ID</th><th>Name</th><th>Type</th><th>Health</th></tr>{body_rows}</table></div>'
-    return _shell("Sources", "sources", (
+    return _shell(f"{_ko('sources')} / Sources", "sources", (
         f'<p>{len(rows)} registered sources.</p><div class="kpi-row">{kpis}</div>'
         f'<p>Showing first {len(sample)} (see index.json for the full registry).</p>{table}'
     ))
@@ -247,7 +317,7 @@ def render_source_health():
             f'<th>Last Checked</th><th>Known Limitation</th></tr>{live_rows}</table></div>'
         )
 
-    return _shell("Source Health", "source_health", sandbox_block + live_block)
+    return _shell(f"{_ko('source_health')} / Source Health", "source_health", sandbox_block + live_block)
 
 
 def _index_detail_link(row):
@@ -278,7 +348,7 @@ def render_intelligence_index():
              f'<th>Detail</th></tr>{body_rows}</table></div>')
     note = ('<p class="empty">No overall quality score is shown here by design -- these are '
             'independent counts only, each traceable to its own backend field.</p>')
-    return _shell("Intelligence Index", "intelligence_index", f"{table}{note}")
+    return _shell(f"{_ko('intelligence_index')} / Intelligence Portfolio", "intelligence_index", f"{table}{note}")
 
 
 def _hyp_rows_html(hyps):
@@ -301,7 +371,7 @@ def render_report_sources(r):
     stripping it -- Operator must never lose provenance depth that Public legitimately withholds."""
     sources = sreg.build_sources_for_report(r)
     if not sources:
-        return '<h3>Sources (시출)</h3><p class="empty">No independently-cited real-URL sources recorded for this report version.</p>'
+        return '<h3>Sources (출처)</h3><p class="empty">No independently-cited real-URL sources recorded for this report version.</p>'
     rows = "".join(
         f'<tr><td class="mono">{_esc(s["claim_id"] or "UNMATCHED")}</td>'
         f'<td>{_esc(s["institution"])}</td><td>{_esc(s["title"])}</td><td>{_esc(s["year"])}</td>'
@@ -316,7 +386,7 @@ def render_report_sources(r):
         '<th>Year</th><th>Tier</th><th>Observation/Forecast</th><th>Access Status</th>'
         f'<th>Real URL</th><th>Link Verification</th></tr>{rows}</table></div>'
     )
-    return f'<h3>Sources (시출) -- {len(sources)} actually used</h3>{table}'
+    return f'<h3>Sources (출처) -- {len(sources)} actually used</h3>{table}'
 
 
 def render_report_inspector(report_id):
@@ -350,7 +420,7 @@ def render_report_inspector(report_id):
 
     hyp_block = f'<h3>Hypotheses (canonical status)</h3>{_hyp_rows_html(hyps)}'
     claims_block = _section("Claims (Key Claims)", "KEY_CLAIMS")
-    evidence_block = _section("Research Evidence", "RESEARCH_EVIDENCE")
+    evidence_block = _section(f"{_ko('evidence')} / Research Evidence", "RESEARCH_EVIDENCE")
     stats_obs = r["sections"].get("STATISTICAL_CONTEXT", {})
     # Section 11 -- Observation and Forecast kept as two visually separated lists, never merged.
     obs_blocks = [b for b in stats_obs.get("content_blocks", []) if isinstance(b, dict) and b.get("temporal_type", "").upper() != "FORECAST"]
@@ -364,7 +434,7 @@ def render_report_inspector(report_id):
         f'<h4>Observation</h4>{_stat_list(obs_blocks)}'
         f'<h4>Forecast</h4>{_stat_list(fcst_blocks)}'
     )
-    counterev_block = _section("Counterevidence", "COUNTEREVIDENCE")
+    counterev_block = _section(f"{_ko('counterevidence')} / Counterevidence", "COUNTEREVIDENCE")
     altexp_block = _section("Alternative Explanations", "ALTERNATIVE_EXPLANATIONS")
     geo_block = _section("Geographic Applicability", "GEOGRAPHIC_CONTEXT")
     temp_block = _section("Temporal Applicability", "TEMPORAL_CONTEXT")
