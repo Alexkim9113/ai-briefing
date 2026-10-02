@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-10-02T02:36:39.939598+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=36956137758)",
+  "attempted_at": "2026-10-02T07:39:44.288903+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=36979453245)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 5,
@@ -10,11 +10,56 @@
       "source_tier": "TIER_1",
       "gap_type": "MISSING_REGULATORY_HISTORY",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&per_page=5&order=newest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-10-02T02:36:39.939598+00:00",
+      "attempted_at": "2026-10-02T07:39:44.288903+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
       "documents_canonicalized": [
+        {
+          "document_id": "fedreg_2026-20321",
+          "content_hash": "ba6f419f7093435d",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Inaugurating the Era of Super Intelligence",
+          "abstract_excerpt": null,
+          "document_kind": "Presidential Document",
+          "citation": "91 FR 63129",
+          "agencies": [
+            "Executive Office of the President"
+          ],
+          "published": "2026-10-02",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+          "provenance_id": "prov_fedreg_2026-20321_2026-10-02T07:39:44.288903+00:00"
+        },
+        {
+          "document_id": "fedreg_2026-20281",
+          "content_hash": "ae2946bcf270d242",
+          "document_type": "POLICY",
+          "source_id": "src_federal_register",
+          "source_name": "US Federal Register API",
+          "source_tier": "TIER_1",
+          "source_type": "GOVERNMENT",
+          "title": "Global Benchmark for Efficient Drug Pricing (GLOBE) Model",
+          "abstract_excerpt": "This final rule implements the Global Benchmark for Efficient Drug Pricing Model (GLOBE Model), a new mandatory Medicare payment model under section 1115A of the Social Security Act. The GLOBE Model will test whether a payment model that uses an alternative method for calculating Medicare Part B drug inflation rebate amounts for certain separately payable Medicare Part B drugs and biological products reduces costs for Original Medicare (OM) beneficiaries and the Medicare program while preserving",
+          "document_kind": "Rule",
+          "citation": "91 FR 62936",
+          "agencies": [
+            "Health and Human Services Department",
+            "Centers for Medicare & Medicaid Services"
+          ],
+          "published": "2026-10-02",
+          "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model",
+          "rights_mode": "LINK_ONLY",
+          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
+          "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+          "provenance_id": "prov_fedreg_2026-20281_2026-10-02T07:39:44.288903+00:00"
+        },
         {
           "document_id": "fedreg_2026-20143",
           "content_hash": "c80e2f66f677d5af",
@@ -34,8 +79,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-02T02:36:39.939598+00:00",
-          "provenance_id": "prov_fedreg_2026-20143_2026-10-02T02:36:39.939598+00:00"
+          "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+          "provenance_id": "prov_fedreg_2026-20143_2026-10-02T07:39:44.288903+00:00"
         },
         {
           "document_id": "fedreg_2026-20023",
@@ -57,8 +102,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-02T02:36:39.939598+00:00",
-          "provenance_id": "prov_fedreg_2026-20023_2026-10-02T02:36:39.939598+00:00"
+          "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+          "provenance_id": "prov_fedreg_2026-20023_2026-10-02T07:39:44.288903+00:00"
         },
         {
           "document_id": "fedreg_2026-20005",
@@ -79,53 +124,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-02T02:36:39.939598+00:00",
-          "provenance_id": "prov_fedreg_2026-20005_2026-10-02T02:36:39.939598+00:00"
-        },
-        {
-          "document_id": "fedreg_2026-19964",
-          "content_hash": "07e61fe17c7ec8fd",
-          "document_type": "POLICY",
-          "source_id": "src_federal_register",
-          "source_name": "US Federal Register API",
-          "source_tier": "TIER_1",
-          "source_type": "GOVERNMENT",
-          "title": "The Safer Affordable Fuel-Efficient (SAFE) Vehicles Rule III for Model Years 2022 to 2031 Passenger Cars and Light Trucks",
-          "abstract_excerpt": "NHTSA, on behalf of the U.S. Department of Transportation (DOT), is substantially recalibrating the Corporate Average Fuel Economy (CAFE) program to bring the program into compliance with the law and to remove previous regulatory distortions which have induced manufacturers to make design decisions that have neither aligned with market demand and the needs of American families nor have delivered the consistent improvements in the fuel economy performance of manufacturer fleets, as Congress inten",
-          "document_kind": "Rule",
-          "citation": "91 FR 61988",
-          "agencies": [
-            "Transportation Department",
-            "National Highway Traffic Safety Administration"
-          ],
-          "published": "2026-09-30",
-          "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger",
-          "rights_mode": "LINK_ONLY",
-          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-02T02:36:39.939598+00:00",
-          "provenance_id": "prov_fedreg_2026-19964_2026-10-02T02:36:39.939598+00:00"
-        },
-        {
-          "document_id": "fedreg_2026-19860",
-          "content_hash": "5f6c5e4de9f2594f",
-          "document_type": "POLICY",
-          "source_id": "src_federal_register",
-          "source_name": "US Federal Register API",
-          "source_tier": "TIER_1",
-          "source_type": "GOVERNMENT",
-          "title": "Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act",
-          "abstract_excerpt": "The Board of Governors of the Federal Reserve System (Board) proposes to issue regulations to implement the Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act) with respect to Board-supervised permitted payment stablecoin issuers (PPSIs) and certain other entities that are subject to the Board's jurisdiction. In addition, the Board proposes to issue regulations to implement the prohibition on tying in section 4(a)(8) of the GENIUS Act, which is applicable generally",
-          "document_kind": "Proposed Rule",
-          "citation": "91 FR 61580",
-          "agencies": [
-            "Federal Reserve System"
-          ],
-          "published": "2026-09-29",
-          "canonical_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
-          "rights_mode": "LINK_ONLY",
-          "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-02T02:36:39.939598+00:00",
-          "provenance_id": "prov_fedreg_2026-19860_2026-10-02T02:36:39.939598+00:00"
+          "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+          "provenance_id": "prov_fedreg_2026-20005_2026-10-02T07:39:44.288903+00:00"
         }
       ],
       "overall_status": "SUCCESS",
