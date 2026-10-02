@@ -5,6 +5,7 @@
 # the editor, feeds -- is written the same way by briefing.py's build()). No new renderer, no
 # request-time computation: this runs only at build time, same as the rest of the site.
 import json
+import re as _re
 import sys
 from pathlib import Path
 
@@ -46,13 +47,46 @@ def discover_real_reports():
     return sorted(REPORTS_DIR.glob("report_intel_*_v*.json"))
 
 
+def build_index_card_summary(report):
+    """Section 7 (O-3 revision) -- a short (3-5 sentence), Korean-first reader summary for the
+    Public Intelligence Index card. Previously this was the raw CURRENT_STATE[0] content block --
+    the full multi-thousand-character canonical synthesis paragraph, unsuitable as a card summary
+    and exposing internal enum tags verbatim. This now composes a short summary ONLY from fields
+    already derived by presentation_model.build_executive_card() (current_state sentence,
+    key_signal, major_uncertainty) -- no new text is invented, no LLM paraphrase, nothing beyond
+    what the Presentation Model already computes from the canonical Report JSON. Each component
+    still goes through product_html's PUBLIC-view id-stripping + editorial translation layer, so
+    the card never shows a raw enum/id/internal phrase either."""
+    card = pm.build_executive_card(report)
+    current_state = ph._strip_internal_ids(ph._narrative_text(card["current_state"]), "PUBLIC")
+    key_signal_raw = ph._narrative_text(card["key_signal"])
+    major_uncertainty = ph._strip_internal_ids(ph._narrative_text(card["major_uncertainty"]), "PUBLIC")
+
+    def _first_sentences(text, n, max_chars):
+        # Split on sentence-ending punctuation NOT immediately preceded/followed by a digit, so a
+        # decimal number (e.g. "12393.4") or a numbered clause doesn't get mistaken for a
+        # sentence break.
+        parts = [p.strip() for p in _re.split(r"(?<![0-9])[.!?](?!\d)\s+", text) if p.strip()]
+        out = " ".join(parts[:n]) if parts else text
+        if len(out) > max_chars:
+            out = out[:max_chars].rsplit(" ", 1)[0] + "..."
+        return out
+
+    sentences = [_first_sentences(current_state, 2, 220)]
+    if card["key_signal_status"] == "KEY_SIGNAL_PRESENT":
+        key_signal = ph._strip_internal_ids(key_signal_raw, "PUBLIC")
+        sentences.append("현재 판단: " + _first_sentences(key_signal, 1, 160))
+    else:
+        sentences.append("현재 판단: 아직 확정적으로 뒷받침된 핵심 신호가 없습니다.")
+    if major_uncertainty and major_uncertainty not in ("없음", "UNKNOWN"):
+        sentences.append("아직 불확실한 점: " + _first_sentences(major_uncertainty, 1, 120))
+    return " ".join(s for s in sentences if s).strip()
+
+
 def build_intelligence_index_entry(report_path):
     r = json.loads(report_path.read_text(encoding="utf-8"))
     pdf_path = REPORTS_DIR / f"{report_path.stem}.pdf"
-    # Section 7 -- short summary comes straight from the report's own real CURRENT_STATE text,
-    # never a separately written description that could drift from the canonical content.
-    current_state_blocks = r["sections"].get("CURRENT_STATE", {}).get("content_blocks") or []
-    summary = current_state_blocks[0] if current_state_blocks else "UNKNOWN"
+    summary = build_index_card_summary(r)
     # Priority 4 (O-2C reader-flow review): same presentation-only human-readable headline as the
     # detail page (pm.TOPIC_DISPLAY_TITLES) -- the Index listing is the first thing a reader sees,
     # so it must not show the raw topic_id either. r["topic"] itself is untouched.
@@ -188,6 +222,15 @@ def build_public_intelligence_pages(site_dir):
     return status
 
 
+# O-3: Index card "evidence status" pill in Korean, a UI label over the existing report-level
+# `readiness` enum (READY/CONDITIONALLY_READY/BLOCKED) -- never a new status, never recomputed.
+_READINESS_KO = {
+    "READY": "근거 충분",
+    "CONDITIONALLY_READY": "조건부 근거 확인",
+    "BLOCKED": "근거 부족",
+}
+
+
 def _render_index_page(index):
     import html as _html
 
@@ -196,15 +239,21 @@ def _render_index_page(index):
         if e["available_formats"]["pdf"]:
             href = _html.escape(e["report_id"]) + "/report.pdf"
             pdf_link = f" <a class='pdf' href='{href}'>PDF</a>"
-        # O-1F: the index page's summary is the report's own raw CURRENT_STATE text (see
-        # build_intelligence_index_entry above) and can embed the same internal ids/repo file
-        # paths the detail page's product_html renderer strips -- reuse that exact helper here
-        # rather than duplicating the stripping logic.
+        # O-3: summary is now already a short, derived, PUBLIC-stripped card summary (see
+        # build_index_card_summary) -- this defensive strip is kept in case of future callers that
+        # pass a raw block, never relied on to do the shortening itself.
         summary = ph._strip_internal_ids(str(e["summary"]), "PUBLIC")
-        return (f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
-                f'<p>{_html.escape(summary)}</p>'
-                f'<p><span class="badge">Evidence Status: {_html.escape(e["readiness"])}</span> '
-                f'<span class="meta">Updated {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p></li>')
+        readiness_ko = _READINESS_KO.get(e["readiness"], e["readiness"])
+        return (
+            f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
+            f'<p>{_html.escape(summary)}</p>'
+            f'<p class="pills">'
+            f'<span class="badge">{_html.escape(e.get("topic", ""))}</span> '
+            f'<span class="badge">근거 상태: {_html.escape(readiness_ko)}</span> '
+            f'<span class="badge">v{_html.escape(str(e.get("version", "")))}</span> '
+            f'<span class="meta">업데이트 {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p>'
+            f'<p><a class="detail-link" href="{_html.escape(e["report_id"])}/">보고서 보기 →</a></p></li>'
+        )
 
     rows = "".join(_row(e) for e in index)
     # Priority 2 (O-2C responsive measurement): this page had no stylesheet at all, so a long

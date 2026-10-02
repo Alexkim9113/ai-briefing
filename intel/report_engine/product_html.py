@@ -338,6 +338,16 @@ def _clean_dev_phase_language(text):
 # or evidence-gap content is added, removed, or reworded beyond the phrase itself. Longer phrases
 # are listed first so a specific phrase is matched before a shorter one it contains.
 _EDITORIAL_TRANSLATIONS = [
+    # O-3: structural enum markers embedded in canonical narrative text (e.g.
+    # "AI_ATTRIBUTION=PARTIAL", bare "FORECAST"/"OBSERVED" labels) translated into natural Korean
+    # clauses instead of a bare inline enum swap -- PUBLIC view only, same substitution-only
+    # contract as the rest of this list (meaning preserved, nothing added/removed beyond the
+    # phrase itself). Longer/more specific phrases listed first.
+    ("AI_ATTRIBUTION=PARTIAL", "(AI의 영향이 일부 확인되지만 다른 요인도 함께 작용함)"),
+    ("AI_ATTRIBUTION=INDIRECT", "(AI의 영향이 간접적으로만 추정되며 직접 인과관계는 확인되지 않음)"),
+    ("AI_ATTRIBUTION=DIRECT", "(AI의 직접적인 영향으로 확인됨)"),
+    ("AI_ATTRIBUTION=NONE", "(AI의 영향으로 확인되지 않음)"),
+    ("AI_ATTRIBUTION=UNKNOWN", "(AI 귀속 여부가 아직 확인되지 않음)"),
     ("Evidence Evaluation Contract", "근거 평가 기준"),
     ("canonical_status_diagnostics field", "현재 판단의 근거 정보"),
     ("canonical_status_diagnostics", "현재 판단의 근거"),
