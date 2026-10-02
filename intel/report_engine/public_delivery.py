@@ -276,6 +276,15 @@ _READINESS_KO = {
     "BLOCKED": "근거 부족",
 }
 
+# O-2F Reader Summary Closure: Index pill showed the raw internal topic code
+# (e.g. "AI_ENERGY_INFRA") verbatim -- an internal identifier, not reader-facing text. This maps
+# it to the same plain-language field label Te's spec example uses ("에너지·인프라"), never a new
+# taxonomy -- report['topic'] itself is left completely unchanged everywhere else.
+_TOPIC_FIELD_KO = {
+    "AI_ENERGY_INFRA": "에너지·인프라",
+    "AI_LABOR": "노동·경제",
+}
+
 
 def _render_index_page(index):
     import html as _html
@@ -292,12 +301,13 @@ def _render_index_page(index):
         readiness_ko = _READINESS_KO.get(e["readiness"], e["readiness"])
         top_signal = ph._strip_internal_ids(str(e.get("top_signal") or ""), "PUBLIC")
         signal_html = f'<p class="top-signal">핵심 신호: {_html.escape(top_signal)}</p>' if top_signal else ""
+        field_ko = _TOPIC_FIELD_KO.get(e.get("topic", ""), e.get("topic", ""))
         return (
             f'<li><h2><a href="{_html.escape(e["report_id"])}/">{_html.escape(e["title"])}</a></h2>'
             f'<p>{_html.escape(summary)}</p>'
             f'{signal_html}'
             f'<p class="pills">'
-            f'<span class="badge">{_html.escape(e.get("topic", ""))}</span> '
+            f'<span class="badge">{_html.escape(field_ko)}</span> '
             f'<span class="badge">근거 상태: {_html.escape(readiness_ko)}</span> '
             f'<span class="badge">v{_html.escape(str(e.get("version", "")))}</span> '
             f'<span class="meta">업데이트 {_html.escape(e["updated_at"][:10])}</span>{pdf_link}</p>'
