@@ -789,6 +789,32 @@
   "title": "Carroll County Supervisors Weigh AI Policy At Monday’s Meeting",
   "updated_at": "2026-09-29T02:25:26.293652+00:00"
  },
+ "1503d0b2a2159ba7": {
+  "abstract_excerpt": null,
+  "agencies": [
+   "Executive Office of the President"
+  ],
+  "authors": null,
+  "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
+  "category": "policy",
+  "citation": "91 FR 63129",
+  "content_hash": "ba6f419f7093435d",
+  "country": "US",
+  "created_at": "2026-10-02T07:39:55.593447+00:00",
+  "document_id": "1503d0b2a2159ba7",
+  "document_type": "POLICY",
+  "doi": null,
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": "Presidential Document",
+  "journal_or_venue": null,
+  "jurisdiction": "US_FEDERAL",
+  "published": "2026-10-02",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_federal_register",
+  "title": "Inaugurating the Era of Super Intelligence",
+  "updated_at": "2026-10-02T07:39:55.593447+00:00"
+ },
  "1543742ca214e323": {
   "_identifiers": [],
   "canonical_url": "https://www.fnnews.com/news/202609290514176868",
@@ -3778,6 +3804,33 @@
   "source_id": "src_federal_register",
   "title": "Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act",
   "updated_at": "2026-09-30T11:45:29.888964+00:00"
+ },
+ "6389f8193cbf433a": {
+  "abstract_excerpt": "This final rule implements the Global Benchmark for Efficient Drug Pricing Model (GLOBE Model), a new mandatory Medicare payment model under section 1115A of the Social Security Act. The GLOBE Model will test whether a payment model that uses an alternative method for calculating Medicare Part B drug inflation rebate amounts for certain separately payable Medicare Part B drugs and biological products reduces costs for Original Medicare (OM) beneficiaries and the Medicare program while preserving",
+  "agencies": [
+   "Health and Human Services Department",
+   "Centers for Medicare & Medicaid Services"
+  ],
+  "authors": null,
+  "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model",
+  "category": "policy",
+  "citation": "91 FR 62936",
+  "content_hash": "ae2946bcf270d242",
+  "country": "US",
+  "created_at": "2026-10-02T07:39:55.593507+00:00",
+  "document_id": "6389f8193cbf433a",
+  "document_type": "POLICY",
+  "doi": null,
+  "effective_date": null,
+  "field": null,
+  "government_document_kind": "Rule",
+  "journal_or_venue": null,
+  "jurisdiction": "US_FEDERAL",
+  "published": "2026-10-02",
+  "rights_mode": "LINK_ONLY",
+  "source_id": "src_federal_register",
+  "title": "Global Benchmark for Efficient Drug Pricing (GLOBE) Model",
+  "updated_at": "2026-10-02T07:39:55.593507+00:00"
  },
  "641a71ff188a7303": {
   "_identifiers": [],

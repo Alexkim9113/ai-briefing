@@ -6457,5 +6457,45 @@
   "reason": "document_id and content_hash already present in documents.json -- no change",
   "source": "src_federal_register",
   "timestamp": "2026-10-02T02:37:11.284517+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2026-20321",
+  "decision": "ADMITTED",
+  "document_id": "1503d0b2a2159ba7",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T07:39:55.593365+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2026-20281",
+  "decision": "ADMITTED",
+  "document_id": "6389f8193cbf433a",
+  "reason": "new document, identity resolved, all checks passed",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T07:39:55.593365+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2026-20143",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "9a370eedbc7cd51f",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T07:39:55.593365+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2026-20023",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "db0be1a0cfc1d481",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T07:39:55.593365+00:00"
+ },
+ {
+  "candidate_id": "fedreg_2026-20005",
+  "decision": "DUPLICATE_EXISTING",
+  "document_id": "dfeca8bdbe271f85",
+  "reason": "document_id and content_hash already present in documents.json -- no change",
+  "source": "src_federal_register",
+  "timestamp": "2026-10-02T07:39:55.593365+00:00"
  }
 ]

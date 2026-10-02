@@ -91,6 +91,23 @@
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
+ "1503d0b2a2159ba7": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-10-02T07:39:55.593365+00:00",
+  "document_id": "1503d0b2a2159ba7",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+  "source_organization": [
+   "Executive Office of the President"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
  "168f0b33ecd2b448": {
   "admission_status": "REMOVED_INVALID_PUBLICATION_DATE",
   "admitted_at": "2026-09-30T12:35:50.646126+00:00",
@@ -227,6 +244,24 @@
   "source_tier": "TIER_1",
   "source_type": "GOVERNMENT",
   "source_url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+  "update_kind": "NEW_DOCUMENT",
+  "validation_status": "VALIDATION_OK"
+ },
+ "6389f8193cbf433a": {
+  "admission_status": "ADMITTED",
+  "admitted_at": "2026-10-02T07:39:55.593365+00:00",
+  "document_id": "6389f8193cbf433a",
+  "fetch_status": "FETCH_OK",
+  "history": [],
+  "parse_status": "PARSE_OK",
+  "retrieved_at": "2026-10-02T07:39:44.288903+00:00",
+  "source_organization": [
+   "Health and Human Services Department",
+   "Centers for Medicare & Medicaid Services"
+  ],
+  "source_tier": "TIER_1",
+  "source_type": "GOVERNMENT",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model",
   "update_kind": "NEW_DOCUMENT",
   "validation_status": "VALIDATION_OK"
  },
