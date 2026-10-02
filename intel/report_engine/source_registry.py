@@ -40,8 +40,11 @@ _SOURCE_META = {
         "tier": "PRIMARY",
         "access_status": "OFFICIAL_DATA_PAGE",
         "observation_or_forecast": "OBSERVATION",
-        "verification": "UNVERIFIED -- WebFetch timed out (PROVENANCE_REQUIRED) and direct curl through "
-                         "the sandbox proxy returned 403 on both retries; not independently re-fetched this pass.",
+        "verification": "UNVERIFIED/ACCESS_BLOCKED -- re-attempted O-2B 2026-10-02: WebFetch again refused "
+                         "with PROVENANCE_REQUIRED, and a direct curl retry through the sandbox agent proxy "
+                         "failed with CONNECT tunnel 403 (organization policy denies egress to "
+                         "api.worldbank.org). Two independent access paths tried, both blocked; left "
+                         "UNVERIFIED rather than forced to VERIFIED.",
     },
     "claim_4765a68987d86c67": {
         "institution": "World Bank",
@@ -51,8 +54,11 @@ _SOURCE_META = {
         "tier": "PRIMARY",
         "access_status": "OFFICIAL_DATA_PAGE",
         "observation_or_forecast": "OBSERVATION",
-        "verification": "UNVERIFIED -- WebFetch timed out (PROVENANCE_REQUIRED) and direct curl through "
-                         "the sandbox proxy returned 403 on both retries; not independently re-fetched this pass.",
+        "verification": "UNVERIFIED/ACCESS_BLOCKED -- re-attempted O-2B 2026-10-02: WebFetch again refused "
+                         "with PROVENANCE_REQUIRED, and a direct curl retry through the sandbox agent proxy "
+                         "failed with CONNECT tunnel 403 (organization policy denies egress to "
+                         "api.worldbank.org). Two independent access paths tried, both blocked; left "
+                         "UNVERIFIED rather than forced to VERIFIED.",
     },
     "claim_afe7cc7b19317ee0": {
         "institution": "International Energy Agency (IEA)",

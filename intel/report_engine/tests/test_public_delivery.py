@@ -99,11 +99,18 @@ def test_latest_report_paths_picks_highest_version_per_prefix():
     assert "report_intel_87210a61730c22b9_v1.json" not in names
     assert "report_intel_87210a61730c22b9_v2.json" not in names
     assert "report_intel_87210a61730c22b9_v3.json" not in names
-    # O-2 round 5: AI_LABOR's highest version is now v2 -- the older v1 must NOT be the one kept
-    # as the primary/listed path (v1's detail page still exists on disk separately, per
+    # O-2B: AI_LABOR's highest version keeps advancing (v2 -> v3 this round) -- assert dynamically
+    # against whatever is actually on disk (O-1E precedent) rather than re-pinning a version number
+    # that a future round will bump again. The older v1 must NOT be the one kept as the
+    # primary/listed path (v1's detail page still exists on disk separately, per
     # discover_real_reports(), just not as the latest_report_paths() entry).
+    labor_versions = [
+        int(p.stem.rsplit("_v", 1)[1])
+        for p in pd.re_.REPORTS_DIR.glob("report_intel_dbab7b01963396b5_v*.json")
+    ]
+    highest_labor = max(labor_versions)
     assert "report_intel_dbab7b01963396b5_v1.json" not in names
-    assert "report_intel_dbab7b01963396b5_v2.json" in names
+    assert f"report_intel_dbab7b01963396b5_v{highest_labor}.json" in names
 
 
 def main():

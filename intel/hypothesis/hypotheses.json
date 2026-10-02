@@ -894,11 +894,14 @@
     ],
     "contradicting_evidence": [
       "claim_4731da53eae6b843:websearch_bls_jolts",
-      "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+      "claim_8e305d0c30d23514:O-2 round 3 WebFetch research",
+      "claim_1a69cf2e8f4f0f92:O-2B WebFetch research",
+      "claim_cfb369e965025922:O-2B WebFetch research"
     ],
     "alternative_explanations": [
       "KDI's projection is a macro-structural model (TFP-based), not a direct observation, and may simply not have had time to materialize yet in observed data",
-      "US and Finnish labor markets may not be representative of Korea's AI-exposure/occupational structure"
+      "US and Finnish labor markets may not be representative of Korea's AI-exposure/occupational structure",
+      "US aggregate job-growth slowdown (2022-2025) attributed primarily to immigration-policy and demographic factors (Axios/Goolsbee), with AI's relative contribution currently indistinguishable from these"
     ],
     "status": "WEAKENED",
     "uncertainty": [
@@ -907,7 +910,7 @@
         "detail": "KDI's ~256k jobs/year displacement figure is explicitly a 10-year macro forecast, not an observed outcome; current observed aggregate US labor-flow data (BLS JOLTS Aug 2026) shows no AI-attributed change, and Finnish population-level data shows no significant employment/wage divergence by AI exposure 2 years post-ChatGPT -- this hypothesis is honestly WEAKENED by that absence of corroborating observed evidence, not rejected, since the forecast horizon has not yet elapsed and geography differs"
       }
     ],
-    "last_updated": "2026-10-02T02:50:42.304851+00:00",
+    "last_updated": "2026-10-02T05:15:49.741082+00:00",
     "hypothesis_code": "HL4",
     "geographic_scope": "South Korea (forecast); United States and Finland (observed, contradicting)",
     "time_scope": "Forecast horizon 2026-2036 (KDI) vs. observed 2022-2026 (BLS, ETLA)",
@@ -922,7 +925,9 @@
       "unresolved_supporting_evidence": [],
       "resolved_contradicting_evidence": [
         "claim_4731da53eae6b843:websearch_bls_jolts",
-        "claim_8e305d0c30d23514:O-2 round 3 WebFetch research"
+        "claim_8e305d0c30d23514:O-2 round 3 WebFetch research",
+        "claim_1a69cf2e8f4f0f92:O-2B WebFetch research",
+        "claim_cfb369e965025922:O-2B WebFetch research"
       ],
       "unresolved_contradicting_evidence": [],
       "guard_trail": []

@@ -305,7 +305,7 @@
     "intelligence_id": "intel_dbab7b01963396b5",
     "topic": "AI_LABOR",
     "question": "is AI adoption measurably shifting US labor force participation?",
-    "current_state": "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect. [O-2 round 4 update] Real evidence has since been added beyond the World Bank participation-rate series: (1) OECD AI Exposure Measure methodology -- exposure/capability-gap only, explicitly NOT displacement; (2) US BLS JOLTS Aug 2026 aggregate labor-flow data, little-changed month-over-month, no AI attribution in the release; (3) NBER w31161 field experiment: generative-AI assistant raised customer-support productivity 14% on average (34% for novices), a firm-level productivity finding, NOT employment/headcount evidence; (4) Stanford SIEPR 'Canaries in the Coal Mine': 13% relative employment decline for early-career (22-25) US workers in high-AI-exposure occupations since generative AI adoption -- direct observed employment-effect evidence, but scoped narrowly to that cohort; (5) KDI Korea macro FORECAST (not observed): +3.5% TFP over 10 years, ~256,000 jobs/year displaced; (6) ETLA/Finland peer-reviewed population-level study found NO statistically significant wage/employment divergence by AI exposure in the 2 years after ChatGPT's launch -- genuine counterevidence to a broad displacement reading; (7) Fed FEDS Note: US firm/worker AI-adoption rates (18% of firms by end-2025; 41% of workforce using generative AI at work; adoption only, not a productivity or employment-effect measurement). Four real Hypotheses (HL1-HL4) were constructed this round from this evidence base via the canonical determine_canonical_status() write path: HL1 (US AI adoption is measurably increasing) = PARTIALLY_SUPPORTED (single Fed synthesis source, source-tier not yet classified -> UNKNOWN-tier guard fires); HL2 (direct observed employment effect concentrated in early-career US workers) = CONTESTED (Stanford SIEPR support vs. ETLA/Finland null-result contradiction -- a genuine geography/population tension, surfaced not resolved, with the OECD exposure!=displacement framing recorded as a generalization guard); HL3 (measurable productivity effect scoped strictly to generative-AI customer support) = PARTIALLY_SUPPORTED (same UNKNOWN-source-tier guard as HL1); HL4 (AI is driving large-scale, economy-wide job displacement beyond the early-career cohort) = WEAKENED (KDI's 10-year forecast is not yet corroborated, and is actively weakened, by observed aggregate US BLS data showing no AI-attributed change and by Finland's observed null result -- a forecast-vs-observed divergence, not a rejection, since the forecast horizon has not elapsed and geography differs).",
+    "current_state": "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect. [O-2 round 4 update] Real evidence has since been added beyond the World Bank participation-rate series: (1) OECD AI Exposure Measure methodology -- exposure/capability-gap only, explicitly NOT displacement; (2) US BLS JOLTS Aug 2026 aggregate labor-flow data, little-changed month-over-month, no AI attribution in the release; (3) NBER w31161 field experiment: generative-AI assistant raised customer-support productivity 14% on average (34% for novices), a firm-level productivity finding, NOT employment/headcount evidence; (4) Stanford SIEPR 'Canaries in the Coal Mine': 13% relative employment decline for early-career (22-25) US workers in high-AI-exposure occupations since generative AI adoption -- direct observed employment-effect evidence, but scoped narrowly to that cohort; (5) KDI Korea macro FORECAST (not observed): +3.5% TFP over 10 years, ~256,000 jobs/year displaced; (6) ETLA/Finland peer-reviewed population-level study found NO statistically significant wage/employment divergence by AI exposure in the 2 years after ChatGPT's launch -- genuine counterevidence to a broad displacement reading; (7) Fed FEDS Note: US firm/worker AI-adoption rates (18% of firms by end-2025; 41% of workforce using generative AI at work; adoption only, not a productivity or employment-effect measurement). Four real Hypotheses (HL1-HL4) were constructed this round from this evidence base via the canonical determine_canonical_status() write path: HL1 (US AI adoption is measurably increasing) = PARTIALLY_SUPPORTED (single Fed synthesis source, source-tier not yet classified -> UNKNOWN-tier guard fires); HL2 (direct observed employment effect concentrated in early-career US workers) = CONTESTED (Stanford SIEPR support vs. ETLA/Finland null-result contradiction -- a genuine geography/population tension, surfaced not resolved, with the OECD exposure!=displacement framing recorded as a generalization guard); HL3 (measurable productivity effect scoped strictly to generative-AI customer support) = PARTIALLY_SUPPORTED (same UNKNOWN-source-tier guard as HL1); HL4 (AI is driving large-scale, economy-wide job displacement beyond the early-career cohort) = WEAKENED (KDI's 10-year forecast is not yet corroborated, and is actively weakened, by observed aggregate US BLS data showing no AI-attributed change and by Finland's observed null result -- a forecast-vs-observed divergence, not a rejection, since the forecast horizon has not elapsed and geography differs). [O-2B update] 7 additional real claims added (Lightcast wage premium, NBER w33509 firm-level AI-utilization/pay correlation, Atlanta Fed skill-demand-by-education diffusion, ECB euro-area adoption/no-employment-reduction survey, Korea Employment Information Service occupational outlook, Axios/Chicago-Fed non-AI alternative explanation for the 2022-2025 US job-growth slowdown, and Vanguard broad-occupation counterevidence to mass displacement). Of these, the Vanguard counterevidence and the Korea Employment Information Service outlook were wired as new CONTRADICTING evidence on HL4 (economy-wide displacement), and the Axios alternative explanation was added to HL4's alternative_explanations, via the real determine_canonical_status()/upsert_hypothesis() pipeline -- HL4 recomputed and remained WEAKENED (no status flip). The ECB claim was deliberately left UNWIRED from HL4 given HL4's explicit US/Korea/Finland geographic scope; the Lightcast and Atlanta Fed skill-demand claims were deliberately left UNWIRED from HL1 as adoption-ADJACENT rather than direct adoption-rate evidence. A first Synthesis document for this IO was also authored this round (o2b_synthesis_intel_dbab7b01963396b5.json), covering OBSERVED/FORECAST/ADOPTION/EXPOSURE/PRODUCTIVITY/EMPLOYMENT/WAGES/SKILLS/GEOGRAPHIC-DIFFERENCES/TEMPORAL-LIMITS/COUNTEREVIDENCE/ALTERNATIVE-EXPLANATIONS/ATTRIBUTION-LIMITS/WHAT-WE-KNOW/WHAT-WE-DO-NOT-KNOW, grounded only in this IO's existing 15 claims and HL1-HL4.",
     "key_claims": [
       "claim_4765a68987d86c67",
       "claim_931b08c7ebfc9604",
@@ -314,7 +314,14 @@
       "claim_8fd5da8f27c9fc2b",
       "claim_30fdf98bc1a9c818",
       "claim_8e305d0c30d23514",
-      "claim_0da20db21fe1463a"
+      "claim_0da20db21fe1463a",
+      "claim_46bf083230ad547e",
+      "claim_67e1764a3b61ca91",
+      "claim_c195b340a92a8d90",
+      "claim_ea807921100c2653",
+      "claim_cfb369e965025922",
+      "claim_25cb5dc45e396783",
+      "claim_1a69cf2e8f4f0f92"
     ],
     "supporting_evidence": [
       "rel_0ad164c8796a074d"
@@ -329,13 +336,24 @@
         "direction": "aggregate-labor-market-no-change",
         "status": "EVIDENCE_FOUND",
         "source": "US BLS JOLTS Aug 2026 release -- openings/hires/separations each little changed, no AI attribution in release"
+      },
+      {
+        "direction": "broad-occupation-wage-employment-growth (counter to mass-displacement narrative)",
+        "status": "EVIDENCE_FOUND",
+        "source": "Vanguard (Axios-reported, Dec 2025) -- high-AI-exposure US occupations grew FASTER in wages and employment, Q2 2023-Q2 2025"
+      },
+      {
+        "direction": "same-country-forecast-disagreement (Korea)",
+        "status": "EVIDENCE_FOUND",
+        "source": "Korea Employment Information Service 2025-2035 occupational outlook -- no occupations forecast to decline, versus KDI's AI-specific 256k/yr displacement forecast for the same country"
       }
     ],
     "alternative_explanations": [
       "GENERAL_POST_2022_TECH_SECTOR_HIRING_SLOWDOWN",
       "DIFFERING_LABOR_MARKET_INSTITUTIONS_US_VS_FINLAND",
       "EXPOSURE_NOT_YET_REALIZED_AS_DISPLACEMENT (OECD framing)",
-      "FORECAST_HORIZON_NOT_YET_ELAPSED (KDI 10-year projection)"
+      "FORECAST_HORIZON_NOT_YET_ELAPSED (KDI 10-year projection)",
+      "US_JOB_GROWTH_SLOWDOWN_2022_2025_ATTRIBUTED_TO_IMMIGRATION_AND_DEMOGRAPHICS_NOT_AI (Axios/Chicago Fed)"
     ],
     "statistics": [
       "series_c302bf9e2576ad47"
@@ -429,12 +447,20 @@
       "https://mobile.newsis.com/view/NISX20260722_0003718118",
       "https://www.etla.fi/julkaisut/akateemiset-julkaisut/assessing-early-labour-market-effects-of-generative-ai-evidence-from-population-data.md",
       "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
-      "intel/hypothesis/hypotheses.json#HL1-HL4"
+      "intel/hypothesis/hypotheses.json#HL1-HL4",
+      "https://lightcast.io/resources/blog/beyond-the-buzz-press-release-2025-07-23",
+      "https://nber.org/papers/w33509",
+      "https://www.frbsf.org/research-and-insights/publications/system-research-atlanta-fed/2025/08/by-degrees-measuring-employer-demand-ai-skills-educational-requirements/",
+      "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html",
+      "https://www.venturesquare.net/1085101/",
+      "https://www.axios.com/2025/08/19/trump-immigration-jobs-growth",
+      "https://www.axios.com/2025/12/17/ai-jobs-market-wages",
+      "intel/intelligence_objects/o2b_synthesis_intel_dbab7b01963396b5.json"
     ],
-    "last_updated": "2026-10-02T02:52:37.056015+00:00",
+    "last_updated": "2026-10-02T05:18:19.137438+00:00",
     "readiness": "CONDITIONALLY_READY",
-    "version": 2,
-    "previous_version": 1,
+    "version": 3,
+    "previous_version": 2,
     "revision_history": [
       {
         "version": 2,
@@ -463,6 +489,31 @@
           "provenance"
         ],
         "change_reason": "O-2 round 4: constructed 4 real Hypotheses (HL1-HL4) for AI_LABOR from the 7 claims added in rounds 2-3 (OECD exposure methodology, BLS JOLTS, NBER w31161 customer-support productivity, Stanford SIEPR early-career employment decline, KDI Korea macro forecast, ETLA Finland null result, Fed FEDS Note adoption rates), using the real determine_canonical_status() write path (no status hand-set). Computed: HL1=PARTIALLY_SUPPORTED, HL2=CONTESTED, HL3=PARTIALLY_SUPPORTED, HL4=WEAKENED. Linked all 7 new claims into key_claims; recorded ETLA and BLS JOLTS as real counterevidence; surfaced the Stanford-SIEPR-vs-ETLA geography/population tension explicitly rather than resolving it; flagged a new SOURCE_TIER_CLASSIFICATION_GAP (new claims lack evidence_independence metadata, so HL1/HL3 downgrade from count-based SUPPORTED to PARTIALLY_SUPPORTED via the UNKNOWN-source-tier guard) and a SHARED_CREATED_FROM_LABEL caution for a future round. This is this IO's first material content change since v1 (the original skeleton carried only the World Bank participation-rate series with zero hypotheses).",
+        "impact_event": "STATE_CHANGED"
+      },
+      {
+        "version": 2,
+        "snapshot_current_state": "US labor force participation rate (World Bank SL.TLF.ACTI.ZS) ranged 71.58-73.02% over 2010-2022. Trend classification: STABLE. No evidence yet connects this aggregate movement specifically to AI adoption -- a general participation-rate change is not treated as an AI effect. [O-2 round 4 update] Real evidence has since been added beyond the World Bank participation-rate series: (1) OECD AI Exposure Measure methodology -- exposure/capability-gap only, explicitly NOT displacement; (2) US BLS JOLTS Aug 2026 aggregate labor-flow data, little-changed month-over-month, no AI attribution in the release; (3) NBER w31161 field experiment: generative-AI assistant raised customer-support productivity 14% on average (34% for novices), a firm-level productivity finding, NOT employment/headcount evidence; (4) Stanford SIEPR 'Canaries in the Coal Mine': 13% relative employment decline for early-career (22-25) US workers in high-AI-exposure occupations since generative AI adoption -- direct observed employment-effect evidence, but scoped narrowly to that cohort; (5) KDI Korea macro FORECAST (not observed): +3.5% TFP over 10 years, ~256,000 jobs/year displaced; (6) ETLA/Finland peer-reviewed population-level study found NO statistically significant wage/employment divergence by AI exposure in the 2 years after ChatGPT's launch -- genuine counterevidence to a broad displacement reading; (7) Fed FEDS Note: US firm/worker AI-adoption rates (18% of firms by end-2025; 41% of workforce using generative AI at work; adoption only, not a productivity or employment-effect measurement). Four real Hypotheses (HL1-HL4) were constructed this round from this evidence base via the canonical determine_canonical_status() write path: HL1 (US AI adoption is measurably increasing) = PARTIALLY_SUPPORTED (single Fed synthesis source, source-tier not yet classified -> UNKNOWN-tier guard fires); HL2 (direct observed employment effect concentrated in early-career US workers) = CONTESTED (Stanford SIEPR support vs. ETLA/Finland null-result contradiction -- a genuine geography/population tension, surfaced not resolved, with the OECD exposure!=displacement framing recorded as a generalization guard); HL3 (measurable productivity effect scoped strictly to generative-AI customer support) = PARTIALLY_SUPPORTED (same UNKNOWN-source-tier guard as HL1); HL4 (AI is driving large-scale, economy-wide job displacement beyond the early-career cohort) = WEAKENED (KDI's 10-year forecast is not yet corroborated, and is actively weakened, by observed aggregate US BLS data showing no AI-attributed change and by Finland's observed null result -- a forecast-vs-observed divergence, not a rejection, since the forecast horizon has not elapsed and geography differs).",
+        "updated_at": "2026-10-02T02:52:37.056015+00:00",
+        "trigger_evidence": [
+          "claim_46bf083230ad547e",
+          "claim_67e1764a3b61ca91",
+          "claim_c195b340a92a8d90",
+          "claim_ea807921100c2653",
+          "claim_cfb369e965025922",
+          "claim_25cb5dc45e396783",
+          "claim_1a69cf2e8f4f0f92",
+          "HL4_CONTRADICTING_EVIDENCE_WIRED",
+          "AI_LABOR_SYNTHESIS_V1"
+        ],
+        "changed_fields": [
+          "key_claims",
+          "counterevidence",
+          "alternative_explanations",
+          "provenance",
+          "current_state"
+        ],
+        "change_reason": "O-2B Priority C+D: wired 2 of the 7 sidecar AI_LABOR claims (Vanguard counterevidence, Korea Employment Information Service outlook) into HL4 as contradicting evidence and 1 (Axios alt-explanation) into HL4's alternative_explanations, via the real hypothesis pipeline (determine_canonical_status/upsert_hypothesis) -- HL4 recomputed and stayed WEAKENED, a genuine no-status-change result, not a skipped evaluation. The Atlanta Fed skill-demand and Lightcast wage-premium claims were evaluated against HL1's exact statement and judged adoption-ADJACENT rather than direct adoption-rate evidence, so left unwired. The ECB claim was evaluated against HL4's exact geographic_scope (South Korea/US/Finland) and judged out of scope for that hypothesis without a scope amendment, so left unwired and logged instead as a geographic-applicability note. Also authored this IO's first Synthesis document per Section 32 (Synthesis is itself a listed Material-Change trigger), summarizing all 15 claims and HL1-HL4 with explicit UNKNOWN/not-yet-researched markers where the corpus is thin (EU: 1 claim; no China/Japan/India coverage).",
         "impact_event": "STATE_CHANGED"
       }
     ]
