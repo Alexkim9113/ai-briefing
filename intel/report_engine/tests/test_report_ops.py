@@ -11,14 +11,31 @@ import pdf_pipeline as pp  # noqa: E402
 
 
 def test_build_or_no_change_returns_no_change_for_unaltered_corpus():
-    result = ro.build_or_no_change("intel_87210a61730c22b9")
+    # DYNAMIC CONTRACT (O-1E Part 1, Te spec 43-44): do not hardcode an expected
+    # version number here -- the intelligence object legitimately advances over
+    # time (v1->v2->v3->v4->...) as real evidence is linked in, which would make
+    # a hardcoded "_v3" (or any other fixed literal) go stale again the next time
+    # the corpus grows. Instead, independently discover "the latest valid report
+    # file on disk for this topic" by globbing the same REPORTS_DIR the code under
+    # test reads, parsing out the version integer from each filename, and taking
+    # the max. The test then asserts build_or_no_change()'s result matches THAT
+    # dynamically-discovered latest version, so it stays correct no matter which
+    # version number is current.
+    topic_id = "intel_87210a61730c22b9"
+    existing = re_.REPORTS_DIR.glob(f"report_{topic_id}_v*.json")
+    versions = []
+    for p in existing:
+        stem = p.stem  # report_intel_..._vN
+        suffix = stem.rsplit("_v", 1)[-1]
+        if suffix.isdigit():
+            versions.append(int(suffix))
+    assert versions, "expected at least one existing report file for this topic"
+    latest_version = max(versions)
+    expected_report_id = f"report_{topic_id}_v{latest_version}"
+
+    result = ro.build_or_no_change(topic_id)
     assert result["status"] == "NO_CHANGE"
-    # O-0: AI_ENERGY_INFRA intelligence object legitimately advanced to v2 (real new
-    # IEA/arXiv/GridLab evidence), so the real latest saved report was v2, not v1.
-    # O-1: the intelligence object legitimately advanced again (v3/v4: LBNL/Ireland/Korea/
-    # EU-EED/China evidence linked into key_claims/supporting_evidence), so the real latest
-    # saved report is now v3, not v2.
-    assert result["report_id"] == "report_intel_87210a61730c22b9_v3"
+    assert result["report_id"] == expected_report_id
 
 
 def test_build_or_no_change_never_creates_a_file_on_no_change():

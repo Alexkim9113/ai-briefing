@@ -6,14 +6,31 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 import operator_api as op  # noqa: E402
+sys.path.insert(0, str(HERE.parent.parent / "report_engine"))
+import report_engine as re_  # noqa: E402
 
 
 def test_overview_counts_match_known_real_corpus_scale():
+    # DYNAMIC CONTRACT (O-1E Part 1, Te spec 43-44): the corpus grows over time via an
+    # unrelated automated daily acquisition cron job, so a hardcoded literal (e.g.
+    # documents == 601) goes stale on its own schedule, independent of any code change.
+    # Instead of comparing against a fixed number, or calling overview() twice (which
+    # would just compare the function to itself), this test re-reads the same raw
+    # source files overview() reads and recomputes each count with its own simple,
+    # independent counting logic. If overview()'s internal counting logic and this
+    # test's counting logic ever diverge, the test will genuinely fail -- which is the
+    # point: it is now a correctness check against the raw corpus, not a snapshot.
     o = op.overview()
-    assert o["documents"] == 601
-    assert o["intelligence_objects"] == 2
-    assert o["reports"] == 2
-    assert o["claims"] == 2
+
+    documents = op._load(re_.DOCUMENTS_PATH)
+    claims = op._load(re_.CLAIMS_PATH)
+    objects = op._load(op.ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+    reports = list(re_.REPORTS_DIR.glob("report_intel_*_v*.json"))
+
+    assert o["documents"] == len(documents)
+    assert o["intelligence_objects"] == len(objects)
+    assert o["reports"] == len(reports)
+    assert o["claims"] == len(claims)
 
 
 def test_overview_source_health_honestly_not_instrumented_when_no_monitor_exists():
@@ -43,10 +60,33 @@ def test_report_inspector_never_mutates_canonical_report_file():
 
 
 def test_provenance_inspector_uses_real_claim_and_source_ids_not_new_ones():
-    prov = op.provenance_inspector("report_intel_87210a61730c22b9_v1")
+    # DYNAMIC CONTRACT (O-1E Part 1, Te spec 43-44): a specific hardcoded claim_id/
+    # source_id string can stop existing as the underlying data evolves. Instead of
+    # hardcoding one, this test independently resolves the real claim_id straight out
+    # of the report JSON file on disk (the same thing provenance_inspector() reads),
+    # and independently resolves a real statistical source_id by reading the
+    # intelligence object's own "statistics" list and looking each series up in
+    # statistical_evidence.json -- the same raw sources provenance_inspector() uses,
+    # read here with separate, parallel logic. The test then asserts
+    # provenance_inspector() actually surfaces those same real, currently-existing ids.
+    report_id = "report_intel_87210a61730c22b9_v1"
+    report = op._load(re_.REPORTS_DIR / f"{report_id}.json")
+    expected_claim_ids = report["sections"]["KEY_CLAIMS"].get("claim_ids", [])
+    assert expected_claim_ids, "expected the real report to reference at least one claim"
+    expected_claim_id = expected_claim_ids[0]
+
+    objects = op._load(op.ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+    obj = objects[report["intelligence_id"]]
+    stat_ids = obj.get("statistics") or []
+    assert stat_ids, "expected the real intelligence object to reference at least one statistical series"
+    stats_by_id = op._load(re_.STAT_PATH)
+    expected_source_id = stats_by_id[stat_ids[0]].get("source_id")
+    assert expected_source_id
+
+    prov = op.provenance_inspector(report_id)
     assert prov["status"] == "FOUND"
-    assert prov["claim_chain"][0]["claim_id"] == "claim_7f1bc452c4ffc128"
-    assert prov["statistical_chain"][0]["source_id"] == "src_worldbank_api"
+    assert prov["claim_chain"][0]["claim_id"] == expected_claim_id
+    assert prov["statistical_chain"][0]["source_id"] == expected_source_id
 
 
 def test_provenance_inspector_not_connected_for_object_with_no_claims():
@@ -55,10 +95,23 @@ def test_provenance_inspector_not_connected_for_object_with_no_claims():
 
 
 def test_gap_inspector_never_hides_a_known_gap():
+    # DYNAMIC CONTRACT (O-1E Part 1, Te spec 43-44): the real known_gaps count grows as
+    # new gap types are legitimately discovered (e.g. O-1C/O-1D added
+    # AI_ONLY_ATTRIBUTION_DISAGGREGATION_GAP), so a hardcoded literal count goes stale
+    # on its own schedule. Instead, this test independently reads
+    # intelligence_objects.json itself and sums len(known_gaps) across every IO with its
+    # own simple loop -- the same raw source gap_inspector() reads -- and asserts
+    # gap_inspector()'s output has exactly that many rows (gap_inspector does not add or
+    # remove gaps, only joins in richer optional metadata), so the test can never hide a
+    # future gap addition or removal by comparing against a frozen number.
+    objects = op._load(op.ROOT / "intel" / "intelligence_objects" / "intelligence_objects.json")
+    expected_total = sum(len(o.get("known_gaps") or []) for o in objects.values())
+    expected_topics = {o.get("topic") for o in objects.values() if o.get("known_gaps")}
+
     gaps = op.gap_inspector()
-    assert len(gaps) == 7  # matches the real known_gaps_total across both objects
+    assert len(gaps) == expected_total
     topics = {g["topic"] for g in gaps}
-    assert topics == {"AI_ENERGY_INFRA", "AI_LABOR"}
+    assert topics == expected_topics
 
 
 def test_gap_inspector_filters_by_topic():
