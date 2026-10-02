@@ -257,5 +257,57 @@
     "created_from": "websearch_nber_w31161",
     "provenance": "https://www.nber.org/papers/w31161",
     "created_at": "2026-10-02T02:44:34.640240+00:00"
+  },
+  "claim_8fd5da8f27c9fc2b": {
+    "claim_id": "claim_8fd5da8f27c9fc2b",
+    "claim_text": "A Stanford SIEPR working paper (Brynjolfsson, Chandar, Chen, 'Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence', Aug 2025), using large-scale US payroll processor data, found early-career workers (ages 22-25) in the most AI-exposed occupations experienced an estimated 13% relative decline in employment since the widespread adoption of generative AI tools, compared to stable or growing employment for more experienced workers in the same occupations and for workers in less-exposed occupations; the paper reports adjustment occurring through employment levels rather than compensation, and attributes the pattern primarily to roles where AI automates (vs. augments) tasks.",
+    "topic": "AI_LABOR",
+    "claim_type": "ATTRIBUTION",
+    "scope": "US labor market; early-career (ages 22-25) workers in high-AI-exposure occupations, since generative AI adoption (post-2022)",
+    "time_scope": "2022-2025 (payroll data through ~2025); published Aug 2025",
+    "geographic_scope": "United States",
+    "status": "OPEN",
+    "created_from": "O-2 round 3 WebFetch research",
+    "provenance": "https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial",
+    "created_at": "2026-10-02T02:47:51.069023+00:00"
+  },
+  "claim_30fdf98bc1a9c818": {
+    "claim_id": "claim_30fdf98bc1a9c818",
+    "claim_text": "Korea Development Institute (KDI) report '인공지능(AI)의 거시경제 영향 분석' (Analysis of AI's Macroeconomic Impact, released July 22, 2026) FORECASTS that over a 10-year horizon AI diffusion could raise Korea's total factor productivity by up to 3.5% (annual gains of roughly 0.15-0.35 percentage points), while projecting approximately 256,000 jobs per year could be displaced (about 2.1% of Korea's 2024 employed workforce), concentrated in mid-to-high-skill professional, administrative, and sales roles; separately, the report estimates 72% of occupations have some AI-automatable tasks today but only 1.4% of jobs (1.8% by revenue) are currently economically viable to automate immediately.",
+    "topic": "AI_LABOR",
+    "claim_type": "PREDICTIVE",
+    "scope": "Korea; national macroeconomic projection, 10-year horizon forecast -- NOT an observed/realized outcome",
+    "time_scope": "Forecast horizon 2026-2036; published July 22, 2026",
+    "geographic_scope": "South Korea",
+    "status": "OPEN",
+    "created_from": "O-2 round 3 WebFetch research",
+    "provenance": "https://mobile.newsis.com/view/NISX20260722_0003718118",
+    "created_at": "2026-10-02T02:47:51.069069+00:00"
+  },
+  "claim_8e305d0c30d23514": {
+    "claim_id": "claim_8e305d0c30d23514",
+    "claim_text": "A peer-reviewed study (Kauhanen & Rouvinen, 'Assessing Early Labour Market Effects of Generative AI: Evidence from Population Data', Applied Economics Letters, published online June 10, 2025, ETLA/Finland) using comprehensive Finnish wage-earner population data found NO statistically significant differences in wage or employment changes between more-exposed and less-exposed occupations in the two years following ChatGPT's November 2022 launch, in contrast to some online-labour-market-based studies; the authors note generative AI may simultaneously complement some tasks and substitute others in ways that have not yet produced a detectable net employment or wage effect at the national population level.",
+    "topic": "AI_LABOR",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "Finland; national population-level wage/employment data by occupational AI-exposure, 2 years post-ChatGPT launch -- counterevidence to displacement hypothesis",
+    "time_scope": "November 2022 - 2024/2025; published June 2025",
+    "geographic_scope": "Finland (EU)",
+    "status": "OPEN",
+    "created_from": "O-2 round 3 WebFetch research",
+    "provenance": "https://www.etla.fi/julkaisut/akateemiset-julkaisut/assessing-early-labour-market-effects-of-generative-ai-evidence-from-population-data.md",
+    "created_at": "2026-10-02T02:47:51.069076+00:00"
+  },
+  "claim_0da20db21fe1463a": {
+    "claim_id": "claim_0da20db21fe1463a",
+    "claim_text": "A Federal Reserve Board FEDS Note ('Monitoring AI Adoption in the U.S. Economy', Jeffrey S. Allen, April 3, 2026) synthesizing three US government/Fed surveys found: per the Census Bureau's Business Trends and Outlook Survey (BTOS), 18% of US firms had adopted AI by end of 2025; per the Real-Time Population Survey (RPS), 41% of the US workforce reported using generative AI at work as of November 2025; and per the Atlanta Fed's Survey of Business Uncertainty (SBU, Nov 2025, n=1,032 executives), 78% of the labor force works at an AI-adopting firm and 54% at a firm using large language models specifically; work-related generative AI adoption grew 31% year-over-year, with professional services (33%) and financial services (30%) leading sector adoption rates. This is firm/worker-level AI ADOPTION data, not evidence of productivity or employment effect.",
+    "topic": "AI_LABOR",
+    "claim_type": "DESCRIPTIVE",
+    "scope": "US firm and worker-level AI adoption rates (ADOPTION only -- not productivity or employment effect)",
+    "time_scope": "Survey waves through November 2025; published April 3, 2026",
+    "geographic_scope": "United States",
+    "status": "OPEN",
+    "created_from": "O-2 round 3 WebFetch research",
+    "provenance": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+    "created_at": "2026-10-02T02:47:51.069083+00:00"
   }
 }
