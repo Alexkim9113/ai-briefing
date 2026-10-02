@@ -26,7 +26,7 @@
  "evidence_records": 14,
  "external_api_calls": 15,
  "facts_verified": 57,
- "gemini_cache_hits": 6,
+ "gemini_cache_hits": 7,
  "gemini_calls_added": 15,
  "human_review_by_priority": {
   "HIGH": 69,
