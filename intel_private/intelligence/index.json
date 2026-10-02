@@ -1,0 +1,34 @@
+[
+ {
+  "report_id": "report_intel_87210a61730c22b9_v4",
+  "intelligence_id": "intel_87210a61730c22b9",
+  "topic": "AI_ENERGY_INFRA",
+  "title": "AI 확산과 전력·데이터센터 인프라",
+  "summary": "데이터센터의 전력 사용량 증가는 실제로 관측되고 있으며, IEA 등 주요 기관은 AI를 그 증가의 중요한 동인 중 하나로 지목합니다. 다만 현재 확보된 자료만으로는 전체 전력수요 증가분 중 AI만의 기여도를 수치로 분리해 확인하기는 어렵습니다. 제조업 회귀, 전기차 보급, 인구 증가 등 다른 요인도 함께 작용하고 있으며, 전력망 병목은 지역에 따라 다른 형태로 나타납니다.",
+  "top_signal": "아직 확인되지 않은 사실 (10건)",
+  "version": 4,
+  "generated_at": "2026-10-01T21:06:11.889163+00:00",
+  "updated_at": "2026-10-01T21:06:11.889163+00:00",
+  "readiness": "CONDITIONALLY_READY",
+  "available_formats": {
+   "html": true,
+   "pdf": true
+  }
+ },
+ {
+  "report_id": "report_intel_dbab7b01963396b5_v3",
+  "intelligence_id": "intel_dbab7b01963396b5",
+  "topic": "AI_LABOR",
+  "title": "AI는 노동시장을 어떻게 바꾸고 있는가",
+  "summary": "미국에서는 AI 도입이 실제로 늘어나고 있다는 근거가 있고, 특정 업무(생성형 AI를 활용한 고객지원)에서는 생산성 향상도 관측됩니다. 다만 AI 노출로 인한 고용 효과는 미국 22~25세 초기 경력층에 한정해 엇갈린 근거를 보이며, 경제 전체 수준의 대규모 일자리 대체를 뒷받침하는 근거는 약화된 상태입니다. 핀란드 등 다른 국가의 전수 자료에서는 뚜렷한 고용 영향이 나타나지 않아, 미국의 특정 집단 결과를 세계 노동시장 전체로 일반화할 수는 없습니다.",
+  "top_signal": "아직 확인되지 않은 사실 (14건)",
+  "version": 3,
+  "generated_at": "2026-10-02T05:18:27.506330+00:00",
+  "updated_at": "2026-10-02T05:18:27.506330+00:00",
+  "readiness": "CONDITIONALLY_READY",
+  "available_formats": {
+   "html": true,
+   "pdf": true
+  }
+ }
+]

@@ -1,0 +1,2394 @@
+[
+ {
+  "source_id": "src_2news_co_kr",
+  "name": "2news.co.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_404_media",
+  "name": "404 Media",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_9to5google",
+  "name": "9to5Google",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_9to5mac",
+  "name": "9to5Mac",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_aei",
+  "name": "AEI",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ai_insider",
+  "name": "AI Insider",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_aithority",
+  "name": "AiThority",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_aitimes_com",
+  "name": "AI타임스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_aitimes_kr",
+  "name": "인공지능신문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_amazon_web_services_aws",
+  "name": "Amazon Web Services (AWS)",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_anadolu_ajans",
+  "name": "Anadolu Ajansı",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_android_police",
+  "name": "Android Police",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arc_advisory_group",
+  "name": "ARC Advisory Group",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arstechnica_com",
+  "name": "Ars Technica AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_ai_ai_일반",
+  "name": "arXiv cs.AI · AI 일반",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_cl_언어_llm",
+  "name": "arXiv cs.CL · 언어·LLM",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_cy_법_윤리_정책",
+  "name": "arXiv cs.CY · 법·윤리·정책",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_ma_에이전트",
+  "name": "arXiv cs.MA · 에이전트",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_ro_로봇_피지컬_ai",
+  "name": "arXiv cs.RO · 로봇·피지컬 AI",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_cs_si_사회_미디어",
+  "name": "arXiv cs.SI · 사회·미디어",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_econ_gn_경제",
+  "name": "arXiv econ.GN · 경제",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_eess_sy_에너지_환경",
+  "name": "arXiv eess.SY · 에너지·환경",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_physics_soc_ph_사회",
+  "name": "arXiv physics.soc-ph · 사회",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_arxiv_음악_미디어_hci_문화_예술",
+  "name": "arXiv 음악·미디어·HCI · 문화·예술",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_asce_library",
+  "name": "ASCE Library",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_asiatoday_co_kr",
+  "name": "asiatoday.co.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_axios",
+  "name": "Axios",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_bbntimes_com",
+  "name": "bbntimes.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_biz_heraldcorp_com",
+  "name": "헤럴드경제",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_blog_adafruit_com",
+  "name": "blog.adafruit.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_blog_google",
+  "name": "Google AI Blog",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_bosa_co_kr",
+  "name": "bosa.co.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cambridge_day",
+  "name": "Cambridge Day",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_carroll_broadcasting_company",
+  "name": "Carroll Broadcasting Company",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cbs_news",
+  "name": "CBS News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cfo_dive",
+  "name": "CFO Dive",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_chosun_com",
+  "name": "조선일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_chosunbiz",
+  "name": "Chosunbiz",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cloudflare_blog",
+  "name": "Cloudflare Blog",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cnbc",
+  "name": "CNBC",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cnb뉴스",
+  "name": "CNB뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cnn",
+  "name": "CNN",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ct_mirror",
+  "name": "CT Mirror",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cupnews_kr",
+  "name": "기독연합뉴스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_cureus",
+  "name": "Cureus",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_dailian_co_kr",
+  "name": "데일리안",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_daily_nous",
+  "name": "Daily Nous",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_dallas_news",
+  "name": "Dallas News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_deepmind_google",
+  "name": "Google DeepMind",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_defensescoop",
+  "name": "DefenseScoop",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_deloitte_com",
+  "name": "deloitte.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_donga_science",
+  "name": "DongA Science",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_down_to_earth",
+  "name": "Down To Earth",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_dvidshub_net",
+  "name": "dvidshub.net",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ebi_ac_uk",
+  "name": "Europe PMC",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_edaily_co_kr",
+  "name": "edaily.co.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_edtech_innovation_hub",
+  "name": "EdTech Innovation Hub",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_edtech_magazine",
+  "name": "EdTech Magazine",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ein_news",
+  "name": "EIN News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ein_presswire",
+  "name": "EIN Presswire",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_engadget_com",
+  "name": "Engadget",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_engineering_virginia_edu",
+  "name": "engineering.virginia.edu",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_erp_today",
+  "name": "ERP Today",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ewtn_news",
+  "name": "EWTN News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ezyeconomy_com",
+  "name": "ezyeconomy.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_fast_company",
+  "name": "Fast Company",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_federal_news_network",
+  "name": "Federal News Network",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_finance_biggo_com",
+  "name": "finance.biggo.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_fnnews_com",
+  "name": "fnnews.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_forbes",
+  "name": "Forbes",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_fox_business",
+  "name": "Fox Business",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_gooddailynews_co_kr",
+  "name": "굿데일리",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_google_news_ai",
+  "name": "Google News: AI",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_google_news_ai_regulation",
+  "name": "Google News: AI regulation",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_gukjenews_com",
+  "name": "국제뉴스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_gurufocus",
+  "name": "GuruFocus",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_gyeonggi1news_com",
+  "name": "gyeonggi1news.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hai_stanford_edu",
+  "name": "hai.stanford.edu",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hani_co_kr",
+  "name": "한겨레",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hankookilbo_com",
+  "name": "한국일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hankyung_com",
+  "name": "한국경제",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hedgeweek",
+  "name": "Hedgeweek",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_houston_public_media",
+  "name": "Houston Public Media",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_huggingface_co_hugging_face_blog",
+  "name": "Hugging Face Blog",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_huggingface_co_hugging_face_오늘의_논문",
+  "name": "Hugging Face 오늘의 논문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_hunt_scanlon_media",
+  "name": "Hunt Scanlon Media",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ibulgyo_com",
+  "name": "불교신문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_independent_co_uk",
+  "name": "independent.co.uk",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_investing_com",
+  "name": "Investing.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_investing_com_한국어",
+  "name": "Investing.com 한국어",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_investor_s_business_daily",
+  "name": "Investor's Business Daily",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_itbiznews_com",
+  "name": "IT비즈뉴스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_it조선",
+  "name": "IT조선",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_joongang_co_kr",
+  "name": "중앙일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_junews_com",
+  "name": "아주경제",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_kansan_com",
+  "name": "kansan.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_kb_think",
+  "name": "KB Think",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_khan_co_kr",
+  "name": "경향신문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_kmib_co_kr",
+  "name": "국민일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_law_com",
+  "name": "law.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_lawleader_co_kr",
+  "name": "로리더",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_lawsites",
+  "name": "LawSites",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_lec_co_kr",
+  "name": "법률저널",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_lynn_university",
+  "name": "Lynn University",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mashable",
+  "name": "Mashable",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mcdermott_will_schulte",
+  "name": "McDermott Will & Schulte",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mediapost",
+  "name": "MediaPost",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_middle_east_institute",
+  "name": "Middle East Institute",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mit_news_mit_연구",
+  "name": "MIT News · MIT 연구",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mit_sloan",
+  "name": "MIT Sloan",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mk_co_kr",
+  "name": "매일경제",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_montclair_local_news",
+  "name": "Montclair Local News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_motherjones_com",
+  "name": "motherjones.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_msit_go_kr",
+  "name": "과학기술정보통신부 보도자료",
+  "source_type": "GOVERNMENT",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_mt_co_kr",
+  "name": "머니투데이",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_munhwa_com",
+  "name": "문화일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_naewaynews_com",
+  "name": "내외신문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_national_news_desk",
+  "name": "National News Desk",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_nature_machine_intelligence",
+  "name": "Nature Machine Intelligence",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_nature_기후변화",
+  "name": "Nature 기후변화",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_nature_머신러닝",
+  "name": "Nature 머신러닝",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_nature_법",
+  "name": "Nature 법",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_nature_에너지",
+  "name": "Nature 에너지",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_com_npj_digital_medicine",
+  "name": "npj Digital Medicine",
+  "source_type": "JOURNAL",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_machine_intelligence_ai_일반",
+  "name": "Nature Machine Intelligence · AI 일반",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nature_머신러닝_ai_일반",
+  "name": "Nature 머신러닝 · AI 일반",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_nbn_시사경제",
+  "name": "nbn 시사경제",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_new_university",
+  "name": "New University",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_new_york_university",
+  "name": "New York University",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_news_bloomberglaw_com",
+  "name": "news.bloomberglaw.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_news_kicpa_or_kr",
+  "name": "news.kicpa.or.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_news_mit_edu",
+  "name": "MIT News",
+  "source_type": "ACADEMIC_INSTITUTION",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_news_northeastern_edu",
+  "name": "news.northeastern.edu",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_newsis_com",
+  "name": "뉴시스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_newspim_com",
+  "name": "newspim.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_npr",
+  "name": "NPR",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_openai_com",
+  "name": "OpenAI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_osv_news",
+  "name": "OSV News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_pepperdine_graphic",
+  "name": "Pepperdine Graphic",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_pinpointnews_co_kr",
+  "name": "pinpointnews.co.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_politico_com",
+  "name": "politico.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_poynter",
+  "name": "Poynter",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_pr_newswire",
+  "name": "PR Newswire",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_pressian_com",
+  "name": "프레시안",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_purdue_exponent",
+  "name": "Purdue Exponent",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_research_사회_경제_사회_경제",
+  "name": "Research: 사회·경제 · 사회·경제",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_resultsense",
+  "name": "Resultsense",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_reuters",
+  "name": "Reuters",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rhode_island_lawyers_weekly",
+  "name": "Rhode Island Lawyers Weekly",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_ai",
+  "name": "arXiv cs.AI",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_cl",
+  "name": "arXiv cs.CL",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_cy",
+  "name": "arXiv cs.CY",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_ma",
+  "name": "arXiv cs.MA",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_ro",
+  "name": "arXiv cs.RO",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_cs_si",
+  "name": "arXiv cs.SI",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_econ_gn",
+  "name": "arXiv econ.GN",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_eess_sy",
+  "name": "arXiv eess.SY",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_physics_soc_ph",
+  "name": "arXiv physics.soc-ph",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_arxiv_org_arxiv_음악_미디어_hci",
+  "name": "arXiv 음악·미디어·HCI",
+  "source_type": "RESEARCH_REPOSITORY",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_donga_com",
+  "name": "동아일보",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_edaily_co_kr",
+  "name": "이데일리",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rss_ohmynews_com",
+  "name": "오마이뉴스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_rttnews",
+  "name": "RTTNews",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_san_francisco_state_university",
+  "name": "San Francisco State University",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_sao5_org",
+  "name": "sao5.org",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_seoul_co_kr",
+  "name": "서울신문",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_siatoday_co_kr",
+  "name": "아시아투데이",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_siliconangle",
+  "name": "SiliconANGLE",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_siliconangle_com",
+  "name": "SiliconANGLE AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_spectrum_news",
+  "name": "Spectrum News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_spencer_fane",
+  "name": "Spencer Fane",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_spyglass_org",
+  "name": "spyglass.org",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_stamford_advocate",
+  "name": "Stamford Advocate",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_stratnewsglobal_com",
+  "name": "stratnewsglobal.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_studlife_com",
+  "name": "studlife.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_supple_kr",
+  "name": "supple.kr",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_t_rkiye_today",
+  "name": "Türkiye Today",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_tech_policy_press",
+  "name": "Tech Policy Press",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_techcrunch",
+  "name": "TechCrunch",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_techcrunch_com",
+  "name": "TechCrunch AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_technical_ly",
+  "name": "Technical.ly",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_technologyreview_com",
+  "name": "MIT Technology Review",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_techxplore_com",
+  "name": "TechXplore AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_tenant_news",
+  "name": "TENANT news",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_tf_co_kr",
+  "name": "더팩트",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_cool_down",
+  "name": "The Cool Down",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_decoder_com",
+  "name": "The Decoder",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_economist",
+  "name": "The Economist",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_economy_korea",
+  "name": "The Economy Korea",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_fabricator",
+  "name": "The Fabricator",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_guardian",
+  "name": "The Guardian",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_hill",
+  "name": "The Hill",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_intercept",
+  "name": "The Intercept",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_new_york_times",
+  "name": "The New York Times",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_regulatory_review",
+  "name": "The Regulatory Review",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_robot_report",
+  "name": "The Robot Report",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_salt_lake_tribune",
+  "name": "The Salt Lake Tribune",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_stanford_daily",
+  "name": "The Stanford Daily",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_tech_buzz",
+  "name": "The Tech Buzz",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_times_of_india",
+  "name": "The Times of India",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_the_verge",
+  "name": "The Verge",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_theverge_com",
+  "name": "The Verge AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_topic_사회_노동_사회_노동",
+  "name": "Topic: 사회·노동 · 사회·노동",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_tradingview",
+  "name": "TradingView",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_trendingtopics_eu",
+  "name": "trendingtopics.eu",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_truckinginfo_com",
+  "name": "truckinginfo.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_university_of_cincinnati",
+  "name": "University of Cincinnati",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_unmanned_airspace",
+  "name": "Unmanned airspace",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_usa_today",
+  "name": "USA Today",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_v_daum_net",
+  "name": "v.daum.net",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_venturebeat_com",
+  "name": "VentureBeat AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_venturesquare_net",
+  "name": "venturesquare.net",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_vietnam_vn",
+  "name": "Vietnam.vn",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_washington_examiner",
+  "name": "Washington Examiner",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_washingtonpost_com",
+  "name": "washingtonpost.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wbtv",
+  "name": "WBTV",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wcuquad_com",
+  "name": "WCUQuad.com",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wired_com",
+  "name": "WIRED AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wolters_kluwer",
+  "name": "Wolters Kluwer",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wosu_public_media",
+  "name": "WOSU Public Media",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wrdw",
+  "name": "WRDW",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wsj",
+  "name": "WSJ",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_wxxv_news_25",
+  "name": "WXXV News 25",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_yahoo_finance",
+  "name": "Yahoo Finance",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_yahoo_finance_canada",
+  "name": "Yahoo! Finance Canada",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_yahoo_finance_uk",
+  "name": "Yahoo Finance UK",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_yale_daily_news",
+  "name": "Yale Daily News",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_yna_co_kr",
+  "name": "연합뉴스",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_a16z",
+  "name": "a16z",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_big_think",
+  "name": "Big Think",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_dwarkesh_patel",
+  "name": "Dwarkesh Patel",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_eo_korea",
+  "name": "EO Korea",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_lex_fridman",
+  "name": "Lex Fridman",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_sequoia_capital",
+  "name": "Sequoia Capital",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_stanford_gsb",
+  "name": "Stanford GSB",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_ted",
+  "name": "TED",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_ted_ed",
+  "name": "TED-Ed",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_tedx_talks",
+  "name": "TEDx Talks",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_world_economic_forum",
+  "name": "World Economic Forum",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_y_combinator",
+  "name": "Y Combinator",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_youtube_com_스테이지5",
+  "name": "스테이지5",
+  "source_type": "VIDEO_PLATFORM",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_ytn",
+  "name": "YTN",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_zdnet_com",
+  "name": "ZDNET AI",
+  "source_type": "NEWS_MEDIA",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_강원신문",
+  "name": "강원신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_경기종합뉴스",
+  "name": "경기종합뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_광역행정신문",
+  "name": "광역행정신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_광흥타임즈",
+  "name": "광흥타임즈",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_교수신문",
+  "name": "교수신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_교육플러스",
+  "name": "교육플러스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_구글뉴스_ai_정책",
+  "name": "구글뉴스: AI 정책",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_국내_연구_국방_안보_국방_안보",
+  "name": "국내 연구: 국방·안보 · 국방·안보",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_글로벌경제신문",
+  "name": "글로벌경제신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_금융소비자뉴스",
+  "name": "금융소비자뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_기계신문",
+  "name": "기계신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_뉴데일리_충청세종",
+  "name": "뉴데일리 충청세종",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_뉴스1",
+  "name": "뉴스1",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_뉴스더보이스헬스케어",
+  "name": "뉴스더보이스헬스케어",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_뉴스후플러스",
+  "name": "뉴스후플러스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_대전mbc",
+  "name": "대전MBC",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_더구루",
+  "name": "더구루",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_더글로벌기빙뉴스",
+  "name": "더글로벌기빙뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_디지털데일리",
+  "name": "디지털데일리",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_디지털포용뉴스",
+  "name": "디지털포용뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_마켓인",
+  "name": "마켓인",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_매일신문",
+  "name": "매일신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_매일일보",
+  "name": "매일일보",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_메디칼업저버",
+  "name": "메디칼업저버",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_메트로신문",
+  "name": "메트로신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_바이오타임즈",
+  "name": "바이오타임즈",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_베리타스알파",
+  "name": "베리타스알파",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_부천신문",
+  "name": "부천신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_브레이크뉴스",
+  "name": "브레이크뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_산학뉴스",
+  "name": "산학뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_서울pn",
+  "name": "서울Pn",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_서울경제tv",
+  "name": "서울경제TV",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_시대일보",
+  "name": "시대일보",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_아시아경제",
+  "name": "아시아경제",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_에너지경제신문",
+  "name": "에너지경제신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_위키리크스한국",
+  "name": "위키리크스한국",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_의약뉴스",
+  "name": "의약뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_이로운넷",
+  "name": "이로운넷",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_이코노미스트",
+  "name": "이코노미스트",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_인포스탁데일리",
+  "name": "인포스탁데일리",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_일간투데이",
+  "name": "일간투데이",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_임팩트온",
+  "name": "임팩트온",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_전국도민일보",
+  "name": "전국도민일보",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_전북중앙",
+  "name": "전북중앙",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_전자신문",
+  "name": "전자신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_정책브리핑",
+  "name": "정책브리핑",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_중소기업투데이",
+  "name": "중소기업투데이",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_지디넷코리아",
+  "name": "지디넷코리아",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_천지일보",
+  "name": "천지일보",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_타임뉴스",
+  "name": "타임뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_톡톡뉴스",
+  "name": "톡톡뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_파이낸스투데이",
+  "name": "파이낸스투데이",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_프레스뉴스",
+  "name": "프레스뉴스",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_한국언론연합",
+  "name": "한국언론연합",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_한의신문",
+  "name": "한의신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ },
+ {
+  "source_id": "src_호남교육신문",
+  "name": "호남교육신문",
+  "source_type": "OTHER",
+  "country": "UNKNOWN",
+  "health_status": "NOT_INSTRUMENTED",
+  "last_checked": "UNKNOWN"
+ }
+]
