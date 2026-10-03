@@ -509,6 +509,10 @@ margin-bottom:10px}
 .mx-item p{margin:6px 0;color:var(--ink);font-size:0.92em}
 .mx-meta{color:var(--sub);font-size:0.8em}
 .mx-meta span{margin-right:10px}
+.openclaw-section{margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
+.openclaw-label{margin:0 0 4px 0;color:var(--sub);font-size:0.75em;text-transform:uppercase;
+letter-spacing:0.04em}
+.openclaw-metrics{margin-top:14px;color:var(--sub);font-size:0.82em}
 """
 
 
@@ -843,6 +847,81 @@ def _daily_taxonomy_live():
         return None
 
 
+_OPENCLAW_REGION_LABEL = {"KR": "한국", "US": "미국", "CN": "중국", "EU": "유럽"}
+
+
+def _openclaw_item_card_html(item):
+    """One OpenClaw discovery item. CONTENT FIRST per client directive: 원문 제목(라벨 명시),
+    Source/지역/분야/발행일/원문 언어, 캡처된 스니펫(있는 경우), 원문 보기 링크 -- in that order.
+    No translation/summarization has happened yet (Discover-and-preserve only phase), so the
+    title is shown labeled as '원문 제목' rather than presented as if it were already in Korean."""
+    title = _esc(item.get("original_title", "UNKNOWN"))
+    region = _esc(_OPENCLAW_REGION_LABEL.get(item.get("source_region"), item.get("source_region", "UNKNOWN")))
+    source_type = _esc(item.get("source_type", "UNKNOWN"))
+    published = _esc(item.get("published_at") or "미상")
+    lang = _esc(item.get("original_language", "und"))
+    snippet = _esc(item.get("summary")) if item.get("summary") else ""
+    link_html = _safe_link(item.get("canonical_url"), item.get("original_title", "원문 보기")) if item.get("canonical_url") else ""
+    return (
+        '<div class="mx-item openclaw-item">'
+        f'<p class="openclaw-label">원문 제목 (미번역)</p>'
+        f'<h3>{title}</h3>'
+        + (f'<p>{snippet}</p>' if snippet else '')
+        + f'<div class="mx-meta"><span>{_esc(item.get("source_name", "UNKNOWN"))}</span>'
+          f'<span>{region}</span><span>{source_type}</span><span>{published}</span>'
+          f'<span>원문 언어: {lang}</span></div>'
+        + (f'<p>{link_html} →</p>' if link_html else '')
+        + '</div>'
+    )
+
+
+def _openclaw_section_html():
+    """OpenClaw(Operator 전용 KR/US/CN/EU 탐색) 결과를 '수집정보' 페이지 안에 읽기 전용으로 노출한다.
+    daily_discovery.openclaw_discoveries()는 완전히 분리된 파일(intel/openclaw/discoveries.json)만
+    읽으며, 이 섹션은 그 결과를 그대로 보여줄 뿐 Public 파이프라인/data/*.json에는 전혀 영향이 없다.
+    클라이언트 요구: CONTENT 먼저, METRICS는 그 다음 한 줄 요약으로만 -- 절대 역순이 아님."""
+    result = dd.openclaw_discoveries()
+    if result is None:
+        return (
+            '<section class="openclaw-section">'
+            '<h2>OpenClaw (Operator 전용 탐색)</h2>'
+            '<p class="empty">OpenClaw 아직 실행되지 않음 (GitHub Actions에서 다음 cron 실행 시 반영)</p>'
+            '</section>'
+        )
+
+    regions = result.get("regions", {})
+    all_items = []
+    for region_items in regions.values():
+        all_items.extend(region_items)
+
+    if not all_items:
+        cards_html = '<p class="empty">이번 실행에서 새로 발견된 항목 없음 (중복 제외 또는 소스 미검증)</p>'
+    else:
+        cards_html = '<div id="openclaw-list">' + "".join(_openclaw_item_card_html(it) for it in all_items) + '</div>'
+
+    counts = result.get("counts", {})
+    counts_str = ", ".join(f'{_OPENCLAW_REGION_LABEL.get(r, r)} {n}건' for r, n in counts.items())
+    verification = result.get("verification", {})
+    verified_n = len(verification.get("verified", []))
+    unverified_n = len(verification.get("unverified", []))
+    metrics_html = (
+        '<p class="openclaw-metrics">'
+        f'운영 지표 -- 실행 시각: {_esc(result.get("run_at", "UNKNOWN"))} · '
+        f'신규 발견: {_esc(result.get("total_unique_discoveries", 0))}건 ({_esc(counts_str)}) · '
+        f'중복 제외: {_esc(result.get("total_duplicates_skipped", 0))}건 · '
+        f'소스 상태: 검증됨 {verified_n} / 미검증 {unverified_n}'
+        '</p>'
+    )
+
+    return (
+        '<section class="openclaw-section">'
+        '<h2>OpenClaw (Operator 전용 탐색)</h2>'
+        f'{cards_html}'
+        f'{metrics_html}'
+        '</section>'
+    )
+
+
 def render_daily_discovery():
     """METAXIS OPERATOR -- FRONTEND FIRST (2026-10-03): '수집정보' is now a human-browsable archive
     of every item METAXIS has ever collected (reads data/*.json directly, the same source-of-truth
@@ -851,10 +930,13 @@ def render_daily_discovery():
     분야, 지역, Source. The old gate-based summary view (_daily_taxonomy_live) is NOT deleted, just
     no longer rendered here."""
     rows = dd.archive_items(data_dir=str(op.ROOT / "data"))
+    openclaw_html = _openclaw_section_html()
     if not rows:
         return _shell(f"{_ko('daily_discovery')} / Archive", "daily_discovery",
+                       f'<style>{_MX_FILTER_CSS}</style>'
                        '<h2>수집정보</h2>'
-                       '<p class="empty">아직 수집된 데이터가 없습니다.</p>')
+                       '<p class="empty">아직 수집된 데이터가 없습니다.</p>'
+                       f'{openclaw_html}')
 
     dates = sorted({r["date"] for r in rows if r.get("date")}, reverse=True)
     fields_present = sorted({r["field"] for r in rows})
@@ -872,6 +954,7 @@ def render_daily_discovery():
         '</div>'
         f'<div id="mx-list">{cards}</div>'
         f'{_MX_FILTER_JS}'
+        f'{openclaw_html}'
     )
     return _shell(f"{_ko('daily_discovery')} / Archive", "daily_discovery", (
         f'<style>{_MX_FILTER_CSS}</style>{body}'
