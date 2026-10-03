@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-10-03T00:29:08.930437+00:00",
-  "execution_environment": "GITHUB_ACTIONS (run_id=37082024925)",
+  "attempted_at": "2026-10-03T02:08:49.194537+00:00",
+  "execution_environment": "GITHUB_ACTIONS (run_id=37088533984)",
   "sources_attempted": 1,
   "sources_reaching_success": 1,
   "total_documents_canonicalized": 5,
@@ -10,7 +10,7 @@
       "source_tier": "TIER_1",
       "gap_type": "MISSING_REGULATORY_HISTORY",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=artificial+intelligence&per_page=5&order=newest&fields%5B%5D=title&fields%5B%5D=type&fields%5B%5D=abstract&fields%5B%5D=document_number&fields%5B%5D=html_url&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=agencies&fields%5B%5D=citation",
-      "attempted_at": "2026-10-03T00:29:08.930437+00:00",
+      "attempted_at": "2026-10-03T02:08:49.194537+00:00",
       "fetch_status": "FETCH_OK",
       "fetch_status_code": 200,
       "fetch_error": null,
@@ -34,8 +34,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-03T00:29:08.930437+00:00",
-          "provenance_id": "prov_fedreg_2026-20321_2026-10-03T00:29:08.930437+00:00"
+          "retrieved_at": "2026-10-03T02:08:49.194537+00:00",
+          "provenance_id": "prov_fedreg_2026-20321_2026-10-03T02:08:49.194537+00:00"
         },
         {
           "document_id": "fedreg_2026-20281",
@@ -57,8 +57,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-03T00:29:08.930437+00:00",
-          "provenance_id": "prov_fedreg_2026-20281_2026-10-03T00:29:08.930437+00:00"
+          "retrieved_at": "2026-10-03T02:08:49.194537+00:00",
+          "provenance_id": "prov_fedreg_2026-20281_2026-10-03T02:08:49.194537+00:00"
         },
         {
           "document_id": "fedreg_2026-20143",
@@ -79,8 +79,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-03T00:29:08.930437+00:00",
-          "provenance_id": "prov_fedreg_2026-20143_2026-10-03T00:29:08.930437+00:00"
+          "retrieved_at": "2026-10-03T02:08:49.194537+00:00",
+          "provenance_id": "prov_fedreg_2026-20143_2026-10-03T02:08:49.194537+00:00"
         },
         {
           "document_id": "fedreg_2026-20023",
@@ -102,8 +102,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-03T00:29:08.930437+00:00",
-          "provenance_id": "prov_fedreg_2026-20023_2026-10-03T00:29:08.930437+00:00"
+          "retrieved_at": "2026-10-03T02:08:49.194537+00:00",
+          "provenance_id": "prov_fedreg_2026-20023_2026-10-03T02:08:49.194537+00:00"
         },
         {
           "document_id": "fedreg_2026-20005",
@@ -124,8 +124,8 @@
           "canonical_url": "https://www.federalregister.gov/documents/2026/09/30/2026-20005/renewal-of-the-consumer-protection-and-accessibility-advisory-committee",
           "rights_mode": "LINK_ONLY",
           "gap_type_addressed": "MISSING_REGULATORY_HISTORY",
-          "retrieved_at": "2026-10-03T00:29:08.930437+00:00",
-          "provenance_id": "prov_fedreg_2026-20005_2026-10-03T00:29:08.930437+00:00"
+          "retrieved_at": "2026-10-03T02:08:49.194537+00:00",
+          "provenance_id": "prov_fedreg_2026-20005_2026-10-03T02:08:49.194537+00:00"
         }
       ],
       "overall_status": "SUCCESS",
