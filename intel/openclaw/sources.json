@@ -18,8 +18,8 @@
           "url": "https://www.msit.go.kr/bbs/rss.do?bbsSeqNo=94",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:14.113561+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:29.992942+00:00"
         },
         {
           "id": "kr_pipc",
@@ -28,8 +28,8 @@
           "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticleRss.do?bbsId=BS074",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:14.355770+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:31.845250+00:00"
         },
         {
           "id": "kr_kcc",
@@ -38,8 +38,8 @@
           "url": "https://kcc.go.kr/rss/press.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:14.574755+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:33.667936+00:00"
         },
         {
           "id": "kr_ftc",
@@ -48,8 +48,8 @@
           "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:14.841450+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:34.440800+00:00"
         },
         {
           "id": "kr_fsc",
@@ -58,8 +58,8 @@
           "url": "https://www.fsc.go.kr/rss/pressrelease.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:15.033168+00:00"
+          "verify_note": "확인 불가 (파싱 실패: junk after document element: line 20, column 0)",
+          "verify_checked_at": "2026-10-03T13:43:35.301317+00:00"
         },
         {
           "id": "kr_motie",
@@ -68,8 +68,8 @@
           "url": "https://www.motie.go.kr/motie/rss/motieRss.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:15.237636+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:37.116185+00:00"
         },
         {
           "id": "kr_moel",
@@ -78,8 +78,8 @@
           "url": "https://www.moel.go.kr/rss/news.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:15.505383+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:37.901115+00:00"
         },
         {
           "id": "kr_mfds",
@@ -88,8 +88,8 @@
           "url": "https://www.mfds.go.kr/rss/news.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:15.745815+00:00"
+          "verify_note": "확인 불가 (파싱 실패: mismatched tag: line 40, column 8)",
+          "verify_checked_at": "2026-10-03T13:43:39.871323+00:00"
         },
         {
           "id": "kr_mcst",
@@ -98,8 +98,8 @@
           "url": "https://www.mcst.go.kr/kor/s_notice/press/pressList.jsp?rss=Y",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:15.909318+00:00"
+          "verify_note": "확인 불가 (파싱 실패: syntax error: line 3, column 0)",
+          "verify_checked_at": "2026-10-03T13:43:45.122642+00:00"
         },
         {
           "id": "kr_kcc_copyright",
@@ -108,8 +108,8 @@
           "url": "https://www.copyright.or.kr/rss/notice.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:16.137450+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:47.944494+00:00"
         },
         {
           "id": "kr_kipo",
@@ -118,8 +118,8 @@
           "url": "https://www.kipo.go.kr/rss/press.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:16.435297+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:48.878439+00:00"
         },
         {
           "id": "kr_assembly_bills",
@@ -128,8 +128,8 @@
           "url": "https://likms.assembly.go.kr/bill/rss/billList.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:16.648807+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:50.303797+00:00"
         },
         {
           "id": "kr_court_decisions",
@@ -138,8 +138,8 @@
           "url": "https://glaw.scourt.go.kr/wsjo/panre/rss.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:16.776466+00:00"
+          "verify_note": "확인 불가 (URLError [Errno -2] Name or service not known)",
+          "verify_checked_at": "2026-10-03T13:43:50.646067+00:00"
         },
         {
           "id": "kr_kisdi",
@@ -148,8 +148,8 @@
           "url": "https://www.kisdi.re.kr/rss/report.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:17.002713+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:51.708191+00:00"
         },
         {
           "id": "kr_nia",
@@ -158,8 +158,8 @@
           "url": "https://www.nia.or.kr/rss/press.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:17.211322+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:52.908879+00:00"
         },
         {
           "id": "kr_etri",
@@ -168,8 +168,8 @@
           "url": "https://www.etri.re.kr/rss/press.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:17.531426+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:53.915876+00:00"
         },
         {
           "id": "kr_kaist_ai",
@@ -178,8 +178,8 @@
           "url": "https://gsai.kaist.ac.kr/feed/",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:17.767505+00:00"
+          "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 224)",
+          "verify_checked_at": "2026-10-03T13:43:54.935952+00:00"
         }
       ]
     },
@@ -193,9 +193,9 @@
           "source_type": "PRIMARY",
           "url": "https://www.nist.gov/news-events/news/rss.xml",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:17.939786+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 40개 항목)",
+          "verify_checked_at": "2026-10-03T13:43:55.123369+00:00"
         },
         {
           "id": "us_copyright_office",
@@ -203,9 +203,9 @@
           "source_type": "PRIMARY",
           "url": "https://www.copyright.gov/rss/newsnet.xml",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:18.145613+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 25개 항목)",
+          "verify_checked_at": "2026-10-03T13:43:55.369193+00:00"
         },
         {
           "id": "us_ftc",
@@ -213,9 +213,9 @@
           "source_type": "PRIMARY",
           "url": "https://www.ftc.gov/feeds/press-release.xml",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:18.343982+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 10개 항목)",
+          "verify_checked_at": "2026-10-03T13:43:55.567049+00:00"
         },
         {
           "id": "us_congress_ai",
@@ -224,8 +224,8 @@
           "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22artificial+intelligence%22%7D&format=rss",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:18.601773+00:00"
+          "verify_note": "확인 불가 (HTTPError 403)",
+          "verify_checked_at": "2026-10-03T13:43:55.707900+00:00"
         },
         {
           "id": "us_ostp",
@@ -234,8 +234,8 @@
           "url": "https://www.whitehouse.gov/ostp/feed/",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:18.863753+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:43:56.462162+00:00"
         },
         {
           "id": "us_federal_register_ai",
@@ -244,8 +244,8 @@
           "url": "https://www.federalregister.gov/documents/search.rss?conditions%5Bterm%5D=artificial+intelligence",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:18.980084+00:00"
+          "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 16, column 67)",
+          "verify_checked_at": "2026-10-03T13:43:56.877445+00:00"
         },
         {
           "id": "us_stanford_hai",
@@ -254,8 +254,8 @@
           "url": "https://hai.stanford.edu/news/rss.xml",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:19.169523+00:00"
+          "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 4837)",
+          "verify_checked_at": "2026-10-03T13:43:57.187070+00:00"
         },
         {
           "id": "us_arxiv_cscy",
@@ -263,9 +263,9 @@
           "source_type": "RESEARCH",
           "url": "https://arxiv.org/rss/cs.CY",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:19.360280+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 0개 항목)",
+          "verify_checked_at": "2026-10-03T13:43:57.384253+00:00"
         },
         {
           "id": "us_arxiv_csai",
@@ -273,9 +273,9 @@
           "source_type": "RESEARCH",
           "url": "https://arxiv.org/rss/cs.AI",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:19.623254+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 0개 항목)",
+          "verify_checked_at": "2026-10-03T13:43:57.460265+00:00"
         },
         {
           "id": "us_brookings_ai",
@@ -284,8 +284,8 @@
           "url": "https://www.brookings.edu/topic/artificial-intelligence/feed/",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:19.863169+00:00"
+          "verify_note": "확인 불가 (파싱 실패: undefined entity: line 33, column 0)",
+          "verify_checked_at": "2026-10-03T13:43:58.275023+00:00"
         }
       ]
     },
@@ -300,8 +300,8 @@
           "url": "http://www.cac.gov.cn/rss/xwzx.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (HTTPError 403)",
-          "verify_checked_at": "2026-10-03T13:36:20.072758+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:02.348301+00:00"
         },
         {
           "id": "cn_miit",
@@ -310,8 +310,8 @@
           "url": "https://www.miit.gov.cn/xwdt/rss.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:20.287206+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:07.757865+00:00"
         },
         {
           "id": "cn_cnipa",
@@ -320,8 +320,8 @@
           "url": "https://www.cnipa.gov.cn/rss/xwdt.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:20.475395+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:09.522182+00:00"
         },
         {
           "id": "cn_ncac",
@@ -330,8 +330,8 @@
           "url": "https://www.ncac.gov.cn/rss/tzgg.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:20.756205+00:00"
+          "verify_note": "확인 불가 (파싱 실패: syntax error: line 2, column 0)",
+          "verify_checked_at": "2026-10-03T13:44:13.327814+00:00"
         },
         {
           "id": "cn_caict",
@@ -340,8 +340,8 @@
           "url": "http://www.caict.ac.cn/rss/yw.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (HTTPError 403)",
-          "verify_checked_at": "2026-10-03T13:36:21.034479+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:14.734005+00:00"
         },
         {
           "id": "cn_caixin",
@@ -350,8 +350,8 @@
           "url": "https://www.caixin.com/rss/feed.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:21.302310+00:00"
+          "verify_note": "확인 불가 (파싱 실패: mismatched tag: line 14, column 2)",
+          "verify_checked_at": "2026-10-03T13:44:17.773931+00:00"
         },
         {
           "id": "cn_36kr",
@@ -360,8 +360,8 @@
           "url": "https://36kr.com/feed",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:21.546591+00:00"
+          "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 9, column 542)",
+          "verify_checked_at": "2026-10-03T13:44:20.004610+00:00"
         },
         {
           "id": "cn_yicai",
@@ -370,8 +370,8 @@
           "url": "https://www.yicai.com/rss/news.xml",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:21.760644+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:24.409668+00:00"
         },
         {
           "id": "cn_cls",
@@ -380,8 +380,8 @@
           "url": "https://www.cls.cn/rss",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:21.958004+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:26.489430+00:00"
         },
         {
           "id": "cn_thepaper",
@@ -390,8 +390,8 @@
           "url": "https://www.thepaper.cn/rss_news.jsp",
           "original_language": "zh",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:22.087207+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:29.494183+00:00"
         }
       ],
       "ai_copyright_axis": {
@@ -404,9 +404,9 @@
             "source_type": "NEWS",
             "url": "https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E8%91%97%E4%BD%9C%E6%9D%83&hl=zh-CN&gl=CN&ceid=CN:zh",
             "original_language": "zh",
-            "verified": false,
-            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-            "verify_checked_at": "2026-10-03T13:36:22.368594+00:00"
+            "verified": true,
+            "verify_note": "검증됨 (HTTP 200, 100개 항목)",
+            "verify_checked_at": "2026-10-03T13:44:31.021183+00:00"
           },
           {
             "id": "cn_ai_copyright_q2",
@@ -414,9 +414,9 @@
             "source_type": "NEWS",
             "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E7%89%88%E6%9D%83%20%E7%BA%A0%E7%BA%B7&hl=zh-CN&gl=CN&ceid=CN:zh",
             "original_language": "zh",
-            "verified": false,
-            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-            "verify_checked_at": "2026-10-03T13:36:22.589698+00:00"
+            "verified": true,
+            "verify_note": "검증됨 (HTTP 200, 51개 항목)",
+            "verify_checked_at": "2026-10-03T13:44:32.085102+00:00"
           },
           {
             "id": "cn_ai_copyright_q3",
@@ -424,9 +424,9 @@
             "source_type": "NEWS",
             "url": "https://news.google.com/rss/search?q=AI%20%E4%BE%B5%E6%9D%83%20%E5%88%A4%E5%86%B3&hl=zh-CN&gl=CN&ceid=CN:zh",
             "original_language": "zh",
-            "verified": false,
-            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-            "verify_checked_at": "2026-10-03T13:36:22.830798+00:00"
+            "verified": true,
+            "verify_note": "검증됨 (HTTP 200, 60개 항목)",
+            "verify_checked_at": "2026-10-03T13:44:33.319851+00:00"
           }
         ]
       }
@@ -441,9 +441,9 @@
           "source_type": "PRIMARY",
           "url": "https://digital-strategy.ec.europa.eu/en/rss.xml",
           "original_language": "en",
-          "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:22.991259+00:00"
+          "verified": true,
+          "verify_note": "검증됨 (HTTP 200, 10개 항목)",
+          "verify_checked_at": "2026-10-03T13:44:34.074850+00:00"
         },
         {
           "id": "eu_eurlex_ai_act",
@@ -452,8 +452,8 @@
           "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myLexUriServ=...",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:23.186530+00:00"
+          "verify_note": "확인 불가 (HTTPError 404)",
+          "verify_checked_at": "2026-10-03T13:44:34.767025+00:00"
         },
         {
           "id": "eu_parliament_news",
@@ -462,8 +462,8 @@
           "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:23.436923+00:00"
+          "verify_note": "확인 불가 (파싱 실패: no element found: line 1, column 0)",
+          "verify_checked_at": "2026-10-03T13:44:35.205605+00:00"
         },
         {
           "id": "eu_edps",
@@ -472,8 +472,8 @@
           "url": "https://edps.europa.eu/rss.xml",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:23.695536+00:00"
+          "verify_note": "확인 불가 (HTTPError 403)",
+          "verify_checked_at": "2026-10-03T13:44:36.717191+00:00"
         },
         {
           "id": "eu_ceps",
@@ -482,8 +482,8 @@
           "url": "https://www.ceps.eu/feed/",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:23.919552+00:00"
+          "verify_note": "확인 불가 (HTTPError 500)",
+          "verify_checked_at": "2026-10-03T13:44:38.159853+00:00"
         },
         {
           "id": "eu_bruegel",
@@ -492,8 +492,8 @@
           "url": "https://www.bruegel.org/rss.xml",
           "original_language": "en",
           "verified": false,
-          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
-          "verify_checked_at": "2026-10-03T13:36:24.115948+00:00"
+          "verify_note": "확인 불가 (HTTPError 403)",
+          "verify_checked_at": "2026-10-03T13:44:38.538787+00:00"
         }
       ]
     }

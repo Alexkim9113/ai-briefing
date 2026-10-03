@@ -1,346 +1,545 @@
 {
   "codename": "OpenClaw",
-  "run_at": "2026-10-03T13:36:24.115989+00:00",
+  "run_at": "2026-10-03T13:44:38.538811+00:00",
   "scope": "KR/US/CN/EU Operator-only discovery, read-only vs Public data, never merged into briefing.py output",
   "regions": {
     "KR": [],
-    "US": [],
-    "CN": [],
-    "EU": []
+    "US": [
+      {
+        "id": "360836525e06dee6",
+        "original_title": "NIST Provides Updates on National Construction Safety Team Activities",
+        "source_name": "NIST News",
+        "source_type": "PRIMARY",
+        "source_region": "US",
+        "original_language": "en",
+        "published_at": "Mon, 28 Sep 2026 12:00:00 +0000",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-provides-updates-national-construction-safety-team-activities",
+        "collected_at": "2026-10-03T13:43:55.123418+00:00",
+        "feed_id": "us_nist",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "62356808261bbf5d",
+        "original_title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+        "source_name": "NIST News",
+        "source_type": "PRIMARY",
+        "source_region": "US",
+        "original_language": "en",
+        "published_at": "Fri, 18 Sep 2026 12:00:00 +0000",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
+        "collected_at": "2026-10-03T13:43:55.123434+00:00",
+        "feed_id": "us_nist",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "133fbcad9c5e3788",
+        "original_title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
+        "source_name": "NIST News",
+        "source_type": "PRIMARY",
+        "source_region": "US",
+        "original_language": "en",
+        "published_at": "Tue, 15 Sep 2026 12:00:00 +0000",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+        "collected_at": "2026-10-03T13:43:55.123446+00:00",
+        "feed_id": "us_nist",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "e8b24aef11fe5aec",
+        "original_title": "NIST Finalizes Guidelines on Protecting Online Identity and Access Tokens From Misuse",
+        "source_name": "NIST News",
+        "source_type": "PRIMARY",
+        "source_region": "US",
+        "original_language": "en",
+        "published_at": "Tue, 15 Sep 2026 12:00:00 +0000",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens",
+        "collected_at": "2026-10-03T13:43:55.123456+00:00",
+        "feed_id": "us_nist",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "086251e30b024450",
+        "original_title": "NIST-Developed Quantum Sensors Improve Nuclear Monitoring",
+        "source_name": "NIST News",
+        "source_type": "PRIMARY",
+        "source_region": "US",
+        "original_language": "en",
+        "published_at": "Thu, 10 Sep 2026 12:00:00 +0000",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
+        "collected_at": "2026-10-03T13:43:55.123464+00:00",
+        "feed_id": "us_nist",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      }
+    ],
+    "CN": [
+      {
+        "id": "7e9cfbee477fa939",
+        "original_title": "AI剧遭改名盗播侵权吗？全省首例AI短剧著作权侵权案判定赔偿2万元- 湖北日报新闻客户端 - 湖北日报传媒集团",
+        "source_name": "人工智能 著作权",
+        "source_type": "NEWS",
+        "source_region": "CN",
+        "original_language": "zh",
+        "published_at": "Sun, 20 Sep 2026 09:17:08 GMT",
+        "canonical_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16UFZBdEJ4VWowU0E1WlBKQ3l3SWZKUktwVVdKU3FQcDhuMjk3M1p2a2RGaWZQOGF0MS1MbWV2SFVXY2liX2pyRURQT3F4U0Z3bUlYMHFHSXFySGVUdXc?oc=5",
+        "collected_at": "2026-10-03T13:44:31.021246+00:00",
+        "feed_id": "cn_ai_copyright_q1",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "ba87d5d5c5ec569c",
+        "original_title": "上海首例AI大模型著作权侵权案“美杜莎”案审理心得 - 中国知识产权律师网",
+        "source_name": "人工智能 著作权",
+        "source_type": "NEWS",
+        "source_region": "CN",
+        "original_language": "zh",
+        "published_at": "Fri, 18 Sep 2026 07:00:00 GMT",
+        "canonical_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5aRUhZN3RocTJ2OW1xMEd5a2RsTkhobjdJQTVRalplbnZjYmlod3Bid3M2NlRqcHhpVXdHSDVsR3EwVUhiSzgxU0VGUjhpQ2s5QXQyX19jU3E?oc=5",
+        "collected_at": "2026-10-03T13:44:31.021261+00:00",
+        "feed_id": "cn_ai_copyright_q1",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "c21888f22c276d68",
+        "original_title": "AI训练碰上版权保护，这账该怎么算 - chinanews.com.cn",
+        "source_name": "人工智能 著作权",
+        "source_type": "NEWS",
+        "source_region": "CN",
+        "original_language": "zh",
+        "published_at": "Fri, 18 Sep 2026 05:39:51 GMT",
+        "canonical_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oYktJbGgtaDF3S19MeFdxMEY4cGJaSDZnVmpsZ25PcW9jX2wzUnRUYXZDRVJZREkyTm9ta2wzd0xpUnQ2d0pFTDg4Y3lMdVFCbjZ5N0lBdXhXY3BwaWNHQkhwWEc4Q2RS?oc=5",
+        "collected_at": "2026-10-03T13:44:31.021272+00:00",
+        "feed_id": "cn_ai_copyright_q1",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "dbb7b92adeb62b5c",
+        "original_title": "国家版权局：“十五五”将研究起草生成式人工智能版权规则 - 安全内参",
+        "source_name": "人工智能 著作权",
+        "source_type": "NEWS",
+        "source_region": "CN",
+        "original_language": "zh",
+        "published_at": "Tue, 08 Sep 2026 07:00:00 GMT",
+        "canonical_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5QSmM3NVB1OUs1UVhFOVA5SWotMm4tU1pVT3Z3c1VwTmtmNkdpNXFrNkNRV2p3d20zWnJ6XzRQRVdMTmZxU2xrTWtURWRJZw?oc=5",
+        "collected_at": "2026-10-03T13:44:31.021281+00:00",
+        "feed_id": "cn_ai_copyright_q1",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "289f98fadbf5df2c",
+        "original_title": "AI按词元收费，数据和版权如何分钱？ - 知产力",
+        "source_name": "人工智能 著作权",
+        "source_type": "NEWS",
+        "source_region": "CN",
+        "original_language": "zh",
+        "published_at": "Thu, 17 Sep 2026 16:56:24 GMT",
+        "canonical_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBrMU9RX0M2UUtlV09qV0FtbnpSZHF0UG9jMEdFblRFQ2M5ajJZaDhsN2FVNThKR0F1Wi1wYktoRWxUd2VDMDRXY2VsaEpaejBBaTUwejVpc1A?oc=5",
+        "collected_at": "2026-10-03T13:44:31.021290+00:00",
+        "feed_id": "cn_ai_copyright_q1",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      }
+    ],
+    "EU": [
+      {
+        "id": "918df580362b5429",
+        "original_title": "Targeted consultation to support a better copyright environment for creativity and innovation",
+        "source_name": "European Commission -- AI Office / Digital news",
+        "source_type": "PRIMARY",
+        "source_region": "EU",
+        "original_language": "en",
+        "published_at": "Tue, 29 Sep 2026 08:15:00 +0000",
+        "canonical_url": "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-support-better-copyright-environment-creativity-and-innovation",
+        "collected_at": "2026-10-03T13:44:34.074909+00:00",
+        "feed_id": "eu_ec_ai_office",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "d3a0ea29c6adc912",
+        "original_title": "Data Union Conference",
+        "source_name": "European Commission -- AI Office / Digital news",
+        "source_type": "PRIMARY",
+        "source_region": "EU",
+        "original_language": "en",
+        "published_at": "Fri, 18 Sep 2026 07:43:00 +0000",
+        "canonical_url": "https://digital-strategy.ec.europa.eu/en/events/data-union-conference",
+        "collected_at": "2026-10-03T13:44:34.074919+00:00",
+        "feed_id": "eu_ec_ai_office",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "2becf188185b4d97",
+        "original_title": "EU KIDS Act to restrict social media platforms’ access to children in the EU",
+        "source_name": "European Commission -- AI Office / Digital news",
+        "source_type": "PRIMARY",
+        "source_region": "EU",
+        "original_language": "en",
+        "published_at": "Thu, 17 Sep 2026 07:36:00 +0000",
+        "canonical_url": "https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu",
+        "collected_at": "2026-10-03T13:44:34.074934+00:00",
+        "feed_id": "eu_ec_ai_office",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "64bddb0acafc3d50",
+        "original_title": "Proposal for EU KIDS Act - 'EU Keeping Internet Digital Spaces Accountable and Trustworthy'",
+        "source_name": "European Commission -- AI Office / Digital news",
+        "source_type": "PRIMARY",
+        "source_region": "EU",
+        "original_language": "en",
+        "published_at": "Thu, 17 Sep 2026 07:21:00 +0000",
+        "canonical_url": "https://digital-strategy.ec.europa.eu/en/library/proposal-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trustworthy",
+        "collected_at": "2026-10-03T13:44:34.074944+00:00",
+        "feed_id": "eu_ec_ai_office",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      },
+      {
+        "id": "a06ada525ba56011",
+        "original_title": "Apply AI Summit",
+        "source_name": "European Commission -- AI Office / Digital news",
+        "source_type": "PRIMARY",
+        "source_region": "EU",
+        "original_language": "en",
+        "published_at": "Mon, 07 Sep 2026 13:58:15 +0000",
+        "canonical_url": "https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit",
+        "collected_at": "2026-10-03T13:44:34.074951+00:00",
+        "feed_id": "eu_ec_ai_office",
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+      }
+    ]
   },
   "counts": {
     "KR": 0,
-    "US": 0,
-    "CN": 0,
-    "EU": 0
+    "US": 5,
+    "CN": 5,
+    "EU": 5
   },
-  "cn_ai_copyright_axis_count": 0,
+  "cn_ai_copyright_axis_count": 5,
   "total_duplicates_skipped": 0,
-  "total_unique_discoveries": 0,
+  "total_unique_discoveries": 15,
   "verification": {
-    "verified": [],
-    "unverified": [
-      {
-        "id": "kr_msit",
-        "region": "KR",
-        "name": "과학기술정보통신부 보도자료",
-        "url": "https://www.msit.go.kr/bbs/rss.do?bbsSeqNo=94",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_pipc",
-        "region": "KR",
-        "name": "개인정보보호위원회 보도자료",
-        "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticleRss.do?bbsId=BS074",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_kcc",
-        "region": "KR",
-        "name": "방송통신위원회 보도자료",
-        "url": "https://kcc.go.kr/rss/press.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_ftc",
-        "region": "KR",
-        "name": "공정거래위원회 보도자료",
-        "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_fsc",
-        "region": "KR",
-        "name": "금융위원회 보도자료",
-        "url": "https://www.fsc.go.kr/rss/pressrelease.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_motie",
-        "region": "KR",
-        "name": "산업통상자원부 보도자료",
-        "url": "https://www.motie.go.kr/motie/rss/motieRss.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_moel",
-        "region": "KR",
-        "name": "고용노동부 보도자료",
-        "url": "https://www.moel.go.kr/rss/news.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_mfds",
-        "region": "KR",
-        "name": "식품의약품안전처 보도자료",
-        "url": "https://www.mfds.go.kr/rss/news.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_mcst",
-        "region": "KR",
-        "name": "문화체육관광부 보도자료",
-        "url": "https://www.mcst.go.kr/kor/s_notice/press/pressList.jsp?rss=Y",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_kcc_copyright",
-        "region": "KR",
-        "name": "한국저작권위원회 공지사항",
-        "url": "https://www.copyright.or.kr/rss/notice.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_kipo",
-        "region": "KR",
-        "name": "특허청 보도자료",
-        "url": "https://www.kipo.go.kr/rss/press.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_assembly_bills",
-        "region": "KR",
-        "name": "국회 의안정보시스템 (AI 관련 입법)",
-        "url": "https://likms.assembly.go.kr/bill/rss/billList.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_court_decisions",
-        "region": "KR",
-        "name": "대법원 종합법률정보 최신판례",
-        "url": "https://glaw.scourt.go.kr/wsjo/panre/rss.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_kisdi",
-        "region": "KR",
-        "name": "정보통신정책연구원(KISDI) 발간물",
-        "url": "https://www.kisdi.re.kr/rss/report.do",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_nia",
-        "region": "KR",
-        "name": "한국지능정보사회진흥원(NIA) 보도자료",
-        "url": "https://www.nia.or.kr/rss/press.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_etri",
-        "region": "KR",
-        "name": "한국전자통신연구원(ETRI) 보도자료",
-        "url": "https://www.etri.re.kr/rss/press.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "kr_kaist_ai",
-        "region": "KR",
-        "name": "KAIST AI대학원 소식",
-        "url": "https://gsai.kaist.ac.kr/feed/",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
+    "verified": [
       {
         "id": "us_nist",
         "region": "US",
         "name": "NIST News",
         "url": "https://www.nist.gov/news-events/news/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 40개 항목)"
       },
       {
         "id": "us_copyright_office",
         "region": "US",
         "name": "U.S. Copyright Office Newsroom",
         "url": "https://www.copyright.gov/rss/newsnet.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 25개 항목)"
       },
       {
         "id": "us_ftc",
         "region": "US",
         "name": "FTC Press Releases",
         "url": "https://www.ftc.gov/feeds/press-release.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "us_congress_ai",
-        "region": "US",
-        "name": "Congress.gov AI-related bills search",
-        "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22artificial+intelligence%22%7D&format=rss",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "us_ostp",
-        "region": "US",
-        "name": "White House OSTP Briefing Room",
-        "url": "https://www.whitehouse.gov/ostp/feed/",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "us_federal_register_ai",
-        "region": "US",
-        "name": "Federal Register (AI-tagged documents)",
-        "url": "https://www.federalregister.gov/documents/search.rss?conditions%5Bterm%5D=artificial+intelligence",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "us_stanford_hai",
-        "region": "US",
-        "name": "Stanford HAI News",
-        "url": "https://hai.stanford.edu/news/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 10개 항목)"
       },
       {
         "id": "us_arxiv_cscy",
         "region": "US",
         "name": "arXiv cs.CY (Computers and Society)",
         "url": "https://arxiv.org/rss/cs.CY",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 0개 항목)"
       },
       {
         "id": "us_arxiv_csai",
         "region": "US",
         "name": "arXiv cs.AI",
         "url": "https://arxiv.org/rss/cs.AI",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "us_brookings_ai",
-        "region": "US",
-        "name": "Brookings AI research",
-        "url": "https://www.brookings.edu/topic/artificial-intelligence/feed/",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_cac",
-        "region": "CN",
-        "name": "国家互联网信息办公室 (CAC) 政策发布",
-        "url": "http://www.cac.gov.cn/rss/xwzx.xml",
-        "note": "확인 불가 (HTTPError 403)"
-      },
-      {
-        "id": "cn_miit",
-        "region": "CN",
-        "name": "工业和信息化部 新闻发布",
-        "url": "https://www.miit.gov.cn/xwdt/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_cnipa",
-        "region": "CN",
-        "name": "国家知识产权局 (CNIPA) 新闻",
-        "url": "https://www.cnipa.gov.cn/rss/xwdt.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_ncac",
-        "region": "CN",
-        "name": "国家版权局 (NCAC) 通知公告",
-        "url": "https://www.ncac.gov.cn/rss/tzgg.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_caict",
-        "region": "CN",
-        "name": "中国信息通信研究院 (CAICT) 要闻",
-        "url": "http://www.caict.ac.cn/rss/yw.xml",
-        "note": "확인 불가 (HTTPError 403)"
-      },
-      {
-        "id": "cn_caixin",
-        "region": "CN",
-        "name": "财新网 Caixin",
-        "url": "https://www.caixin.com/rss/feed.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_36kr",
-        "region": "CN",
-        "name": "36氪",
-        "url": "https://36kr.com/feed",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_yicai",
-        "region": "CN",
-        "name": "第一财经",
-        "url": "https://www.yicai.com/rss/news.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_cls",
-        "region": "CN",
-        "name": "财联社",
-        "url": "https://www.cls.cn/rss",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
-      },
-      {
-        "id": "cn_thepaper",
-        "region": "CN",
-        "name": "澎湃新闻",
-        "url": "https://www.thepaper.cn/rss_news.jsp",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 0개 항목)"
       },
       {
         "id": "cn_ai_copyright_q1",
         "region": "CN",
         "name": "人工智能 著作权",
         "url": "https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E8%91%97%E4%BD%9C%E6%9D%83&hl=zh-CN&gl=CN&ceid=CN:zh",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 100개 항목)"
       },
       {
         "id": "cn_ai_copyright_q2",
         "region": "CN",
         "name": "生成式人工智能 版权 纠纷",
         "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E7%89%88%E6%9D%83%20%E7%BA%A0%E7%BA%B7&hl=zh-CN&gl=CN&ceid=CN:zh",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 51개 항목)"
       },
       {
         "id": "cn_ai_copyright_q3",
         "region": "CN",
         "name": "AI 侵权 判决",
         "url": "https://news.google.com/rss/search?q=AI%20%E4%BE%B5%E6%9D%83%20%E5%88%A4%E5%86%B3&hl=zh-CN&gl=CN&ceid=CN:zh",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 60개 항목)"
       },
       {
         "id": "eu_ec_ai_office",
         "region": "EU",
         "name": "European Commission -- AI Office / Digital news",
         "url": "https://digital-strategy.ec.europa.eu/en/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "검증됨 (HTTP 200, 10개 항목)"
+      }
+    ],
+    "unverified": [
+      {
+        "id": "kr_msit",
+        "region": "KR",
+        "name": "과학기술정보통신부 보도자료",
+        "url": "https://www.msit.go.kr/bbs/rss.do?bbsSeqNo=94",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_pipc",
+        "region": "KR",
+        "name": "개인정보보호위원회 보도자료",
+        "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticleRss.do?bbsId=BS074",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_kcc",
+        "region": "KR",
+        "name": "방송통신위원회 보도자료",
+        "url": "https://kcc.go.kr/rss/press.do",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_ftc",
+        "region": "KR",
+        "name": "공정거래위원회 보도자료",
+        "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_fsc",
+        "region": "KR",
+        "name": "금융위원회 보도자료",
+        "url": "https://www.fsc.go.kr/rss/pressrelease.xml",
+        "note": "확인 불가 (파싱 실패: junk after document element: line 20, column 0)"
+      },
+      {
+        "id": "kr_motie",
+        "region": "KR",
+        "name": "산업통상자원부 보도자료",
+        "url": "https://www.motie.go.kr/motie/rss/motieRss.do",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_moel",
+        "region": "KR",
+        "name": "고용노동부 보도자료",
+        "url": "https://www.moel.go.kr/rss/news.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_mfds",
+        "region": "KR",
+        "name": "식품의약품안전처 보도자료",
+        "url": "https://www.mfds.go.kr/rss/news.xml",
+        "note": "확인 불가 (파싱 실패: mismatched tag: line 40, column 8)"
+      },
+      {
+        "id": "kr_mcst",
+        "region": "KR",
+        "name": "문화체육관광부 보도자료",
+        "url": "https://www.mcst.go.kr/kor/s_notice/press/pressList.jsp?rss=Y",
+        "note": "확인 불가 (파싱 실패: syntax error: line 3, column 0)"
+      },
+      {
+        "id": "kr_kcc_copyright",
+        "region": "KR",
+        "name": "한국저작권위원회 공지사항",
+        "url": "https://www.copyright.or.kr/rss/notice.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_kipo",
+        "region": "KR",
+        "name": "특허청 보도자료",
+        "url": "https://www.kipo.go.kr/rss/press.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_assembly_bills",
+        "region": "KR",
+        "name": "국회 의안정보시스템 (AI 관련 입법)",
+        "url": "https://likms.assembly.go.kr/bill/rss/billList.do",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_court_decisions",
+        "region": "KR",
+        "name": "대법원 종합법률정보 최신판례",
+        "url": "https://glaw.scourt.go.kr/wsjo/panre/rss.do",
+        "note": "확인 불가 (URLError [Errno -2] Name or service not known)"
+      },
+      {
+        "id": "kr_kisdi",
+        "region": "KR",
+        "name": "정보통신정책연구원(KISDI) 발간물",
+        "url": "https://www.kisdi.re.kr/rss/report.do",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_nia",
+        "region": "KR",
+        "name": "한국지능정보사회진흥원(NIA) 보도자료",
+        "url": "https://www.nia.or.kr/rss/press.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_etri",
+        "region": "KR",
+        "name": "한국전자통신연구원(ETRI) 보도자료",
+        "url": "https://www.etri.re.kr/rss/press.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "kr_kaist_ai",
+        "region": "KR",
+        "name": "KAIST AI대학원 소식",
+        "url": "https://gsai.kaist.ac.kr/feed/",
+        "note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 224)"
+      },
+      {
+        "id": "us_congress_ai",
+        "region": "US",
+        "name": "Congress.gov AI-related bills search",
+        "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22artificial+intelligence%22%7D&format=rss",
+        "note": "확인 불가 (HTTPError 403)"
+      },
+      {
+        "id": "us_ostp",
+        "region": "US",
+        "name": "White House OSTP Briefing Room",
+        "url": "https://www.whitehouse.gov/ostp/feed/",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "us_federal_register_ai",
+        "region": "US",
+        "name": "Federal Register (AI-tagged documents)",
+        "url": "https://www.federalregister.gov/documents/search.rss?conditions%5Bterm%5D=artificial+intelligence",
+        "note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 16, column 67)"
+      },
+      {
+        "id": "us_stanford_hai",
+        "region": "US",
+        "name": "Stanford HAI News",
+        "url": "https://hai.stanford.edu/news/rss.xml",
+        "note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 4837)"
+      },
+      {
+        "id": "us_brookings_ai",
+        "region": "US",
+        "name": "Brookings AI research",
+        "url": "https://www.brookings.edu/topic/artificial-intelligence/feed/",
+        "note": "확인 불가 (파싱 실패: undefined entity: line 33, column 0)"
+      },
+      {
+        "id": "cn_cac",
+        "region": "CN",
+        "name": "国家互联网信息办公室 (CAC) 政策发布",
+        "url": "http://www.cac.gov.cn/rss/xwzx.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_miit",
+        "region": "CN",
+        "name": "工业和信息化部 新闻发布",
+        "url": "https://www.miit.gov.cn/xwdt/rss.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_cnipa",
+        "region": "CN",
+        "name": "国家知识产权局 (CNIPA) 新闻",
+        "url": "https://www.cnipa.gov.cn/rss/xwdt.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_ncac",
+        "region": "CN",
+        "name": "国家版权局 (NCAC) 通知公告",
+        "url": "https://www.ncac.gov.cn/rss/tzgg.xml",
+        "note": "확인 불가 (파싱 실패: syntax error: line 2, column 0)"
+      },
+      {
+        "id": "cn_caict",
+        "region": "CN",
+        "name": "中国信息通信研究院 (CAICT) 要闻",
+        "url": "http://www.caict.ac.cn/rss/yw.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_caixin",
+        "region": "CN",
+        "name": "财新网 Caixin",
+        "url": "https://www.caixin.com/rss/feed.xml",
+        "note": "확인 불가 (파싱 실패: mismatched tag: line 14, column 2)"
+      },
+      {
+        "id": "cn_36kr",
+        "region": "CN",
+        "name": "36氪",
+        "url": "https://36kr.com/feed",
+        "note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 9, column 542)"
+      },
+      {
+        "id": "cn_yicai",
+        "region": "CN",
+        "name": "第一财经",
+        "url": "https://www.yicai.com/rss/news.xml",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_cls",
+        "region": "CN",
+        "name": "财联社",
+        "url": "https://www.cls.cn/rss",
+        "note": "확인 불가 (HTTPError 404)"
+      },
+      {
+        "id": "cn_thepaper",
+        "region": "CN",
+        "name": "澎湃新闻",
+        "url": "https://www.thepaper.cn/rss_news.jsp",
+        "note": "확인 불가 (HTTPError 404)"
       },
       {
         "id": "eu_eurlex_ai_act",
         "region": "EU",
         "name": "EUR-Lex -- AI Act related documents",
         "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myLexUriServ=...",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "확인 불가 (HTTPError 404)"
       },
       {
         "id": "eu_parliament_news",
         "region": "EU",
         "name": "European Parliament -- News (AI topic)",
         "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "확인 불가 (파싱 실패: no element found: line 1, column 0)"
       },
       {
         "id": "eu_edps",
         "region": "EU",
         "name": "European Data Protection Supervisor (EDPS) press",
         "url": "https://edps.europa.eu/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "확인 불가 (HTTPError 403)"
       },
       {
         "id": "eu_ceps",
         "region": "EU",
         "name": "CEPS (Centre for European Policy Studies)",
         "url": "https://www.ceps.eu/feed/",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "확인 불가 (HTTPError 500)"
       },
       {
         "id": "eu_bruegel",
         "region": "EU",
         "name": "Bruegel",
         "url": "https://www.bruegel.org/rss.xml",
-        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+        "note": "확인 불가 (HTTPError 403)"
       }
     ]
   }
