@@ -3368,5 +3368,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-10-03T02:06:48.498438+00:00"
+ },
+ "d8a40b2866dbaeea51d9cb78c7f8a04a1e01e5473f988cbddb62d60b94971023": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215939",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:36.311544+00:00"
+ },
+ "197d92802c52f4cf8818b3f0dab74b1c737dc5ecdafbf2793cbaf24b6d3f04eb": {
+  "url": "https://www.yna.co.kr/view/AKR20261003025000001",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:38.321504+00:00"
+ },
+ "3f77f5efc3dd76431f8dcfb6f5cfe84f545f2f033b9b31f67f8ce0ec9ddcec95": {
+  "url": "https://www.hankyung.com/article/202609289305i",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:38.600928+00:00"
+ },
+ "0031fcdebaed2d9a2d514994ba1b1169e9443fb872ee72f5b232b7f8981de4d9": {
+  "url": "https://www.yna.co.kr/view/AKR20261002162800017",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:40.985133+00:00"
+ },
+ "c70a0cbf0ceebc69c24a61d7e6ea5f0eeb6c4853e12da6d63c7e25379b7620d5": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215935",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:42.249445+00:00"
+ },
+ "9c5779669692edc8e0c82a1c90cb8e43a0c8bea573a75a78170f044ab0c292bb": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215929",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:43.823336+00:00"
+ },
+ "616fe5fa5d7f04501f7ee39eb3b318d5e3427bfc68205fcea0eed3f29cb6ab93": {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAtRWZUSUtkTno5TnROVWV4M1BHZ05oUHdjQU9wYl9qLS0yWFU4RzBvMHBvTm8zb2Z5cTAteHBzaFg4emh3aEpCOG9BTmU5M0FUV05SaHJrWW1fUUdNdk5rWFZhOHNkUklwcVdpXw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T02:39:44.121541+00:00"
+ },
+ "2060860e00ea99bbeaa4b9e06bf4795d72e5934c266b2b547884597f69eb5eba": {
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9QZ25uUmdNYkdOX1BuSHFJQWhna3BfUUNsYkpJUnlJQjdWR3FKWnBtb2c3MnozRUxZSXBNRXZSVVFhd25Yd1FCWXU2Q3RPRmNpaXlldHc1N2lqU0pfU1JrTkZCSmZ6NnFOaUZR?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T02:39:44.361759+00:00"
+ },
+ "27473090be186fd0d320dcb828d170c10a926b7975945fdca1d4d9299b068f62": {
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YYW9RX2xUTVlrVkloX1hMUU4wZlJvT2Jtd05yTDZGY2VMNFJuSlhab2N4NGhwWWpCeXVQeGlIbTZDMVVlMlB2Q21pZEF3VWY1U0h4TVNHSHdMZFozdGg3S0V0VUhINFFCQmtn?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T02:39:44.594849+00:00"
+ },
+ "60993d1e5261f8513cf3129cab0b6a981cab624a19f3dfab36c8059ccc4cd051": {
+  "url": "https://www.zdnet.com/tech/iphone-18-pro-max-att-no-service-free-replacement/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:39:44.692939+00:00"
  }
 }
