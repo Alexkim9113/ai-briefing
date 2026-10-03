@@ -7,12 +7,12 @@
       "field": "법·제도",
       "region": "CHINA",
       "recurring_days": 7,
-      "independent_source_count": 43,
-      "related_event_count": 58,
+      "independent_source_count": 42,
+      "related_event_count": 57,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "7일 연속 반복, 독립 출처 43개",
+      "reason": "7일 연속 반복, 독립 출처 42개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -35,12 +35,12 @@
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 7,
-      "independent_source_count": 28,
-      "related_event_count": 39,
+      "independent_source_count": 29,
+      "related_event_count": 40,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "7일 연속 반복, 독립 출처 28개",
+      "reason": "7일 연속 반복, 독립 출처 29개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -72,31 +72,31 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
+      "candidate_id": "cand_47304fccdd0fa14c",
+      "title": "앤트로픽 관련 동향: 클로드 ‘Computer Use’는 어떻게 사람처럼 컴퓨터를 조작하는가...김용덕 변리사, 앤트로픽의 AI 에이전트 특허 분석",
+      "field": "기술",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 7,
+      "independent_source_count": 17,
+      "related_event_count": 19,
+      "tier1_present": false,
+      "related_intelligence_topic": null,
+      "evidence_quality": "UNKNOWN",
+      "reason": "7일 연속 반복, 독립 출처 17개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
       "candidate_id": "cand_b83147ec1608ef02",
       "title": "구글",
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 7,
-      "independent_source_count": 12,
-      "related_event_count": 14,
+      "independent_source_count": 13,
+      "related_event_count": 15,
       "tier1_present": false,
       "related_intelligence_topic": "AI_ENERGY_INFRA",
       "evidence_quality": "UNKNOWN",
-      "reason": "7일 연속 반복, 독립 출처 12개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_0c47e99ef5af5290",
-      "title": "앤트로픽 관련 동향: 클로드 ‘Computer Use’는 어떻게 사람처럼 컴퓨터를 조작하는가...김용덕 변리사, 앤트로픽의 AI 에이전트 특허 분석",
-      "field": "정책·국제질서",
-      "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 6,
-      "independent_source_count": 16,
-      "related_event_count": 18,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
-      "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 16개",
+      "reason": "7일 연속 반복, 독립 출처 13개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -128,17 +128,17 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_6cd5d3985f4dd95e",
+      "candidate_id": "cand_eb8094e1d3de93b2",
       "title": "한국",
-      "field": "산업·경제",
+      "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 6,
-      "independent_source_count": 11,
-      "related_event_count": 11,
+      "independent_source_count": 10,
+      "related_event_count": 10,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 11개",
+      "reason": "6일 연속 반복, 독립 출처 10개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
