@@ -2,6 +2,20 @@
   "status": "OK",
   "candidates": [
     {
+      "candidate_id": "cand_9157f1a94527c4d9",
+      "title": "엔비디아 관련 동향: LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
+      "field": "에너지·환경",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 7,
+      "independent_source_count": 32,
+      "related_event_count": 40,
+      "tier1_present": false,
+      "related_intelligence_topic": "AI_ENERGY_INFRA",
+      "evidence_quality": "UNKNOWN",
+      "reason": "7일 연속 반복, 독립 출처 32개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
       "candidate_id": "cand_5b10d6c5d5fed530",
       "title": "오픈AI",
       "field": "기술",
@@ -16,17 +30,17 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_2b35ee3d9209e767",
+      "candidate_id": "cand_6769d4add52bf3aa",
       "title": "미국",
-      "field": "산업·경제",
+      "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 7,
-      "independent_source_count": 20,
-      "related_event_count": 22,
+      "independent_source_count": 19,
+      "related_event_count": 21,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "7일 연속 반복, 독립 출처 20개",
+      "reason": "7일 연속 반복, 독립 출처 19개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -55,20 +69,6 @@
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "6일 연속 반복, 독립 출처 37개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_1c72fff4ebc495e8",
-      "title": "엔비디아 관련 동향: LG전자, AI 데이터센터 냉각솔루션 분야 엔비디아 공식 파트너 됐다",
-      "field": "기술",
-      "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 6,
-      "independent_source_count": 31,
-      "related_event_count": 39,
-      "tier1_present": false,
-      "related_intelligence_topic": "AI_ENERGY_INFRA",
-      "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 31개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -105,12 +105,12 @@
       "field": "교육·사회",
       "region": "KOREA",
       "recurring_days": 6,
-      "independent_source_count": 11,
-      "related_event_count": 11,
+      "independent_source_count": 12,
+      "related_event_count": 12,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 11개",
+      "reason": "6일 연속 반복, 독립 출처 12개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -128,31 +128,17 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_ff0290f8ecbf9f3a",
-      "title": "삼성 관련 동향: 삼성전기, 국내·베트남 기판 증설에 6조7천억원 투자(종합)",
-      "field": "기술",
-      "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 6,
-      "independent_source_count": 8,
-      "related_event_count": 12,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
-      "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 8개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
       "candidate_id": "cand_d75c07e1054af551",
       "title": "메타 관련 동향: 美, AI 의료기기 목록 정비…中은 병원체 메타게놈 검사 시약 허가",
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 5,
-      "independent_source_count": 11,
-      "related_event_count": 12,
+      "independent_source_count": 12,
+      "related_event_count": 13,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "5일 연속 반복, 독립 출처 11개",
+      "reason": "5일 연속 반복, 독립 출처 12개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -167,6 +153,20 @@
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "5일 연속 반복, 독립 출처 8개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
+      "candidate_id": "cand_ff0290f8ecbf9f3a",
+      "title": "삼성 관련 동향: 삼성전기, 국내·베트남 기판 증설에 6조7천억원 투자(종합)",
+      "field": "기술",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 5,
+      "independent_source_count": 7,
+      "related_event_count": 11,
+      "tier1_present": false,
+      "related_intelligence_topic": null,
+      "evidence_quality": "UNKNOWN",
+      "reason": "5일 연속 반복, 독립 출처 7개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -189,12 +189,12 @@
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 4,
-      "independent_source_count": 6,
-      "related_event_count": 6,
+      "independent_source_count": 7,
+      "related_event_count": 7,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "4일 연속 반복, 독립 출처 6개",
+      "reason": "4일 연속 반복, 독립 출처 7개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -212,9 +212,9 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_aa89d80c163a3c4f",
+      "candidate_id": "cand_465b8ad41aa71e98",
       "title": "아마존",
-      "field": "산업·경제",
+      "field": "교육·사회",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 3,
       "independent_source_count": 8,
@@ -231,12 +231,12 @@
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 3,
-      "independent_source_count": 7,
-      "related_event_count": 7,
+      "independent_source_count": 8,
+      "related_event_count": 8,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "3일 연속 반복, 독립 출처 7개",
+      "reason": "3일 연속 반복, 독립 출처 8개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -314,20 +314,6 @@
       "title": "네이버",
       "field": "법·제도",
       "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 2,
-      "independent_source_count": 2,
-      "related_event_count": 2,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
-      "evidence_quality": "UNKNOWN",
-      "reason": "2일 연속 반복, 독립 출처 2개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_fce8b4f02fadd315",
-      "title": "인도 관련 동향: AI 부담과 고객들의 신중한 태도가 9월 분기 인도 IT 업계 실적에 먹구름을 드리웠다",
-      "field": "산업·경제",
-      "region": "INDIA",
       "recurring_days": 2,
       "independent_source_count": 2,
       "related_event_count": 2,
