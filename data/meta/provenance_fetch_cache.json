@@ -3788,5 +3788,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-10-03T13:51:22.987297+00:00"
+ },
+ "7d3d838ff6870e9f00904cfc0959cf7dfbb4c2721d8868ddbb79d8d358fecaab": {
+  "url": "https://www.donga.com/news/Inter/article/all/20261003/134780806/1",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T14:24:15.017427+00:00"
+ },
+ "35bf681a9b5ec763be6ebcc2c38105307a0a3f050e5309efb20227b6d4511edf": {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBrYWVacDY5Sm0xeUJzR2Q5NWZ2eUZtUU9FQlJ1T20tclo0UVlKX0VwRFNwdkxfMDh0ZzRfTEZfSWZUVS0zU3pnLU52eERXZHR0YVpkcG9RVWREbFc0UE04WlhfQklPNVUtNEE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:15.365598+00:00"
+ },
+ "11efdcf3776abc992cae9d52546152dcbb3d2c0196ce82aa8b1e784bc30be362": {
+  "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE0wWHBTN3QyWEJvTHpRMm9QRWZxS2d6bnZkRlRlR19WWkV1aVNxbHRrbWZsZVhUU1AzRUxjWXR5R1BMMlU?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:15.683236+00:00"
+ },
+ "0779e88b8a0fdcf3300bbaf5ea312a6d0b15812ebe1548fe8bc22380df183fd1": {
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeUV0c0JlMGU1RVBVSGtWUEJFOHpXaVNwY3dXNllWVVpFMWNYY1RhNWYxOEU0MExUR1pWajF1NWM2eGtrZEFXSmhSSi1DdE1lTENkUmRubVBFSGc1a2NGSTF0MGNYaXczeEEzcEpDcEhYY3VOOTlYYTl3NG9xVlJ2Tm5tY3Jibm9Ya1ZpMldsNGVtSWdCRnB2SVpEMA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:16.007240+00:00"
+ },
+ "c05618ab8a514b4bd1a78b2bd19f8a3a1be706fef998cacfc03b5ed75332cb97": {
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLWFTSzc4eHl6b3FkNVAzbm1hSG13VlYzTHlTMTFlWFNsRHBLMndPSldyT2JnaGJCTVh1S2FMaW1mV1BPRkJLRnFSOUlncXAtV0FDTEtOUG9fUHFLd0piN2ZxMXBhRURidUdMZlBidl9EXzYtemwtMXI1SnA1OW1yRjJRM0twcjYyVGFCckFwNXg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:16.363980+00:00"
+ },
+ "17d8d70e853f81479e216b92c197c90b0d667abd179976692389b56fd0cd1b68": {
+  "url": "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T14:24:17.550288+00:00"
+ },
+ "3c49c40e0ec38e267dc70e67aeb7579adfaaab9000cccad343c354c9c4087cd9": {
+  "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T14:24:17.670533+00:00"
+ },
+ "d4eb94c8bf6d2c776b04ca4c908cfb6411c8bcc2d481f3d0000e3f0382c76ffc": {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBjWTRuUjJ2MTFUT3hfTktPck1Jd2tMc1hUSElObU5kZGw5QnNxQ3EyeVRpaUNfMW4yU3hDWHJtZFo4dTRQc09NTll5cUVpaDBWTkZ1V0wtUkk1QUZZZnpONmxSLW1qdEtVMnB6T2FNUDZ5UQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:18.005315+00:00"
+ },
+ "53ce6e5ae12861da367244aa89baa8f063ae697b01f767a1705c5224cf18ab73": {
+  "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uakpQaG1ZUnBoMlRBTS1yY3BoaTF6TGNNZzhDSGo4d3NxdTdlVTNsUXh4MUdZZFMyT1ZCS0Y0N3pOMDhqaEhMUlh2R0NiWG1CdkpzbUhycFJSTmVL?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:18.307093+00:00"
+ },
+ "8885b969d6b08a6834d22a889c0f551d2aef9a54cb9a8a55734db92c06753864": {
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWG54a21IT0hTbkVqenlxbmEwMEJlejB4bERvWi1Bb0djR2ZMZlYtMDFLbG1UNTdPams2Z3lSTTRCMWZnUlJVLUE3UjJyX3g4QXBReWZmcHpjWE85X3NRMjRFTWJQSVdUUEd2bmlxVUctd0RaR3lmX09VRzFDUG1KdEtrUHZoZ1ZRVldrOEIzUlZlZlBGa1JHSQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T14:24:18.663077+00:00"
  }
 }
