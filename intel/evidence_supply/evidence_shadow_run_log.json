@@ -28,10 +28,10 @@
    "OTHER": 24
   },
   "evidence_records": 27,
-  "external_api_calls": 12,
+  "external_api_calls": 11,
   "facts_verified": 57,
-  "gemini_cache_hits": 12,
-  "gemini_calls_added": 12,
+  "gemini_cache_hits": 13,
+  "gemini_calls_added": 11,
   "human_review_by_priority": {
    "HIGH": 98,
    "LOW": 548,
@@ -73,7 +73,7 @@
   "reports_on_relationships_created": 0,
   "self_references": 3
  },
- "run_at": "2026-10-03T18:52:21.864634+00:00",
+ "run_at": "2026-10-03T21:53:08.392787+00:00",
  "shadow_mode": true,
  "status": "SUCCESS"
 }

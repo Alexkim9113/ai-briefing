@@ -2503,6 +2503,28 @@
   },
   {
    "change_ids": [],
+   "claim_id": "4acccc39c6d4489d:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "4acccc39c6d4489d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.yna.co.kr/view/AKR20260929074800055",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "4acccc39c6d4489d:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "4acccc39c6d4489d",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.yna.co.kr/view/AKR20260929074800055",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "4b0bc5a0dbd05b45:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "4b0bc5a0dbd05b45",
@@ -7952,28 +7974,6 @@
    ],
    "evidence_record_ids": [],
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "4acccc39c6d4489d:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "4acccc39c6d4489d",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.yna.co.kr/view/AKR20260929074800055",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "4acccc39c6d4489d:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "4acccc39c6d4489d",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://www.yna.co.kr/view/AKR20260929074800055",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
