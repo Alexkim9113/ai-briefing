@@ -55,6 +55,7 @@ background:var(--grad);-webkit-background-clip:text;background-clip:text;color:t
 nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em;background:var(--bg)}
 nav a{color:var(--sub);text-decoration:none;padding:4px 10px;border-radius:99px}
 nav a:hover,nav a.active{background:var(--soft);color:var(--accent)}
+nav.subnav{padding-top:0;border-bottom:none;font-size:0.8em;opacity:.85}
 main{max-width:980px;margin:0 auto;padding:24px}
 .table-wrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:0.92em;min-width:420px}
@@ -84,6 +85,19 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 NAV_ITEMS = ("overview", "daily_discovery", "emerging_issues", "research_queue",
              "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
+
+# METAXIS MASTER DIRECTION section 25/30 (2026-10-03): Operator keeps only 6 top-level user-facing
+# areas; the slugs/routes/data above are unchanged (nothing deleted, nothing renamed), they are only
+# grouped into these 6 areas for navigation. GROUP_LABELS order is the display order of the top nav.
+GROUPS = (
+    ("운영 현황", ("overview",)),
+    ("데일리 디스커버리", ("daily_discovery",)),
+    ("관측 범위 / 출처", ("sources", "source_health")),
+    ("이머징 이슈", ("emerging_issues",)),
+    ("인텔리전스", ("intelligence_index", "reports", "gaps", "rights")),
+    ("리서치", ("research_queue",)),
+)
+GROUP_OF = {slug: label for label, slugs in GROUPS for slug in slugs}
 
 # Korean-first labels (Te's O-2C mapping). Presentation text only -- never changes route slugs,
 # internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
@@ -139,11 +153,20 @@ def _priority_badge(level, reason):
 
 def _nav(active, depth=1):
     up = "../" * depth
-    links = "".join(
-        f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{_nav_label(n)}</a>'
-        for n in NAV_ITEMS
+    active_group = GROUP_OF.get(active)
+    group_links = "".join(
+        f'<a href="{up}{slugs[0]}/" class="{"active" if label == active_group else ""}">{_esc(label)}</a>'
+        for label, slugs in GROUPS
     )
-    return f"<nav aria-label='Operator navigation'>{links}</nav>"
+    top = f"<nav aria-label='Operator areas'>{group_links}</nav>"
+    members = GROUPS[[g for g, _ in GROUPS].index(active_group)][1] if active_group else NAV_ITEMS
+    if len(members) > 1:
+        sub_links = "".join(
+            f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{_nav_label(n)}</a>'
+            for n in members
+        )
+        top += f"<nav aria-label='Operator sub-navigation' class='subnav'>{sub_links}</nav>"
+    return top
 
 
 def _shell(title, active, body, depth=1):
