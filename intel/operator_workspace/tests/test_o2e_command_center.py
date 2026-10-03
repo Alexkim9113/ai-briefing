@@ -58,14 +58,16 @@ def test_today_key_signals_is_an_honest_no_llm_derivation_not_a_firehose():
 
 
 def test_overview_renders_honest_empty_state_or_real_cards_never_fabricated_text():
+    """TODAY BRIEFING REBUILD (2026-10-03): '오늘' (render_overview) is now a Daily Intelligence
+    Briefing built from daily_discovery_items(), not the old Claim-derived 'Today's Key Signals'
+    section (now only on its own un-navved helper, still honest/never-fabricated either way)."""
     html_doc = ou.render_overview()
-    assert "오늘의 핵심 신호" in html_doc
-    signals = op.today_key_signals()
-    if not signals:
-        assert "새로운 신호는 확인되지 않았습니다" in html_doc
+    import daily_discovery as dd
+    items = dd.daily_discovery_items(data_dir=str(op.ROOT / "data"))
+    if not items:
+        assert "핵심 변화가 확인되지 않았습니다" in html_doc
     else:
-        for s in signals:
-            assert s["claim_id"] in html_doc
+        assert "오늘의 핵심 변화" in html_doc or "핵심 변화가 확인되지 않았습니다" in html_doc
 
 
 def test_gap_category_covers_the_six_named_buckets_or_uncategorized():

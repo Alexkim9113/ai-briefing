@@ -88,9 +88,10 @@ def test_html_section_empty_state():
 
 
 def test_daily_discovery_section_is_first_in_overview():
+    """TODAY BRIEFING REBUILD (2026-10-03): render_overview() ('오늘') no longer carries the old
+    '오늘의 핵심 Discovery'/'오늘의 핵심 신호' sections -- it is now a standalone Daily Intelligence
+    Briefing (_today_briefing_section_html). The raw Discovery data these sections used still
+    renders, unmodified, on its own page: render_daily_discovery() ('정보')."""
     html_doc = ou.render_overview()
-    idx_discovery = html_doc.find("오늘의 핵심 Discovery")
-    idx_change_watch = html_doc.find("오늘의 핵심 신호")
-    assert idx_discovery != -1
-    assert idx_change_watch != -1
-    assert idx_discovery < idx_change_watch
+    assert "Daily Intelligence Briefing" in html_doc
+    assert ou.render_daily_discovery()  # the old Discovery content lives on its own page now

@@ -190,24 +190,21 @@ def test_editorial_queue_section_escapes_hostile_input():
 # --- (i) Operator Home reorder -----------------------------------------------------------------
 
 def test_overview_section_order_round2():
-    html_doc = ou.render_overview()
-    idx_discovery = html_doc.find("오늘의 핵심 Discovery")
-    idx_emerging = html_doc.find("새롭게 떠오르는 이슈")
-    idx_change_watch = html_doc.find("Intelligence 변화 가능성")
-    idx_editorial = html_doc.find("편집 검토 대기열")
-    idx_gaps = html_doc.find("열린 쟁점")
-    idx_portfolio = html_doc.find("Intelligence Portfolio")
-    idx_reports = html_doc.find("최신 Evidence")
-    idx_source_health = html_doc.find("Source Health")
-    idx_system = html_doc.find("Pipeline / System Health")
-    for idx in (idx_discovery, idx_emerging, idx_change_watch, idx_editorial, idx_gaps,
-                idx_portfolio, idx_reports, idx_source_health, idx_system):
-        assert idx != -1
-    assert idx_discovery < idx_emerging < idx_change_watch < idx_editorial < idx_gaps \
-        < idx_portfolio < idx_reports < idx_source_health < idx_system
+    """TODAY BRIEFING REBUILD (2026-10-03): the old 9-section stack this test pinned (Discovery ->
+    Emerging Issues -> Change Watch -> Editorial Queue -> Gaps -> Portfolio -> Reports -> Source
+    Health -> System Health) no longer lives on '오늘' (render_overview). Each section still exists,
+    unmodified, on its own dedicated page -- this test now checks that relocation instead of an
+    order on a page the directive explicitly replaced."""
+    assert "Daily Intelligence Briefing" in ou.render_overview()
+    assert "새롭게 떠오르는 이슈" in ou.render_emerging_issues()
+    assert "Intelligence 변화 가능성" in ou.render_intelligence_index()
+    assert ou.render_gaps()  # gap data still reachable on its own page (unlinked from top nav)
+    assert "Intelligence Portfolio" in ou.render_intelligence_index()
+    assert "Source Health" in ou.render_source_health()
 
 
 def test_counterevidence_is_its_own_subsection():
-    html_doc = ou.render_overview()
+    """Moved from '오늘' to '인텔리전스' (render_intelligence_index) in the TODAY BRIEFING REBUILD."""
+    html_doc = ou.render_intelligence_index()
     assert 'id="counterevidence"' in html_doc
     assert "반증 자료 (Counterevidence)" in html_doc

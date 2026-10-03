@@ -9,6 +9,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 import operator_ui as ou  # noqa: E402
+import operator_api as op  # noqa: E402
 
 
 def test_all_pages_render_without_raising():
@@ -43,11 +44,14 @@ def test_overview_never_fabricates_healthy_source_status():
     assert "FAKE" not in html_doc.upper()
 
 
-def test_overview_shows_last_live_acquisition_section():
-    html_doc = ou.render_overview()
-    assert "Last Live Acquisition" in html_doc
-    assert "RUN_ID=" in html_doc
-    assert "ENVIRONMENT=" in html_doc
+def test_live_run_status_backend_still_available_but_not_on_today_page():
+    """TODAY BRIEFING REBUILD (2026-10-03): '오늘' (render_overview) is a Daily Intelligence
+    Briefing now and deliberately no longer shows Pipeline/System Health (RUN_ID/ENVIRONMENT) --
+    section 2 of the directive explicitly excludes internal pipeline state from this page. The
+    backend function itself is untouched and still callable."""
+    live = op.live_run_status()
+    assert "run_id" in live and "environment" in live
+    assert "Pipeline / System Health" not in ou.render_overview()
 
 
 def test_overview_live_run_section_never_shows_secrets_or_headers():

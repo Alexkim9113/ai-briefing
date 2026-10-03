@@ -339,6 +339,77 @@ def daily_discovery_items(data_dir="data", top_n=15):
     return results[:top_n]
 
 
+@lru_cache(maxsize=4)
+def _clustered_week(data_dir, lookback_days, files_signature):
+    """Same conservative event clustering as _clustered_candidates(), but over every item from the
+    last `lookback_days` real data/*.json files combined (not just the latest day), so a story that
+    developed across several days clusters as one Issue instead of one card per day. Cached by
+    (data_dir, lookback_days, files_signature) -- files_signature is a tuple of each file's own
+    mtime, so any change to any of the lookback window's files invalidates the cache."""
+    files = _all_data_files(data_dir)[-lookback_days:]
+    raw_items = []
+    for f in files:
+        raw_items.extend(it for it in _load_items(f) if isinstance(it, dict) and it.get("link") and it.get("id"))
+    if not raw_items:
+        return ()
+    # same id can appear in more than one day's file (re-fetched); de-dup by id, keep first seen.
+    seen_ids = set()
+    deduped = []
+    for it in raw_items:
+        if it["id"] not in seen_ids:
+            seen_ids.add(it["id"])
+            deduped.append(it)
+    _load_dedup_deps()
+    if not DEDUP_AVAILABLE:
+        return tuple((it,) for it in deduped)
+    try:
+        doc_items = [(it["id"], it) for it in deduped]
+        events, _doc_event, _log = _cluster_events(_briefing, doc_items, _normalized_topic_of,
+                                                     _normalized_entities_of)
+        by_id = {it["id"]: it for it in deduped}
+        clusters = []
+        clustered_ids = set()
+        for rec in events.values():
+            member_ids = [d for d in rec["document_ids"] if d in by_id]
+            clusters.append(tuple(by_id[d] for d in member_ids))
+            clustered_ids.update(member_ids)
+        for it in deduped:
+            if it["id"] not in clustered_ids:
+                clusters.append((it,))
+        return tuple(clusters)
+    except Exception:
+        return tuple((it,) for it in deduped)
+
+
+def weekly_issue_candidates(data_dir="data", lookback_days=7, top_n=5):
+    """METAXIS OPERATOR SYNTHESIS LAYER PILOT (2026-10-03), Private-Operator-only: clusters the
+    last `lookback_days` days of real, already-collected items into events exactly like
+    daily_discovery_items() does for one day, then ranks by how well-evidenced the event is
+    (independent source count, falling back to Tier 1 presence) rather than raw recency, and
+    returns up to `top_n` cards -- never padded to meet that count. Every card's sources/urls are
+    real; nothing here is published to Public (callers must keep this to intel_private/ only, per
+    the directive's unidirectional Public -> Operator data flow)."""
+    files = _all_data_files(data_dir)[-lookback_days:]
+    if not files:
+        return []
+    signature = tuple(f.stat().st_mtime for f in files if f.exists())
+    clusters = _clustered_week(data_dir, lookback_days, signature)
+    if not clusters:
+        return []
+    results = []
+    for members in clusters:
+        if any(_passes_filter(m)[0] for m in members):
+            card = _build_card(members)
+            card["independent_source_count"] = len({s["institution"] for s in card["sources"]})
+            results.append(card)
+    # Rank by evidentiary strength: more independent sources first, Tier 1 as a tiebreak, then
+    # most recent -- never an arbitrary or fabricated "importance score".
+    results.sort(key=lambda r: str(r["date"]), reverse=True)
+    results.sort(key=lambda r: r["source_tier"])
+    results.sort(key=lambda r: r["independent_source_count"], reverse=True)
+    return results[:top_n]
+
+
 # ---------------------------------------------------------------------------------------------
 # Section 13-16 -- Emerging Issues.
 # ---------------------------------------------------------------------------------------------

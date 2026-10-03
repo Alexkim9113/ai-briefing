@@ -388,72 +388,111 @@ def _gap_categories_section_html():
     return '<h2>조사 필요 항목 / Gap Categories</h2>' + "".join(parts)
 
 
+# METAXIS OPERATOR -- TODAY BRIEFING REBUILD (2026-10-03), scoped to the "오늘" page only.
+# Deterministic-only (section 12 of the directive allows an LLM synthesis step for the narrative
+# sentences, but does not require one this STEP, and this environment has no model key configured
+# -- so every sentence below is built only from fields daily_discovery.daily_discovery_items()
+# already computes from real, already-collected items: title, source, sources[], field, country,
+# why_it_matters, evidence_status. Nothing here invents a fact not present in that data.
+_FIELD_WATCHPOINTS = {
+    "기술": ("관련 기업의 신제품·기술 발표", "경쟁사 대응 동향", "특허·기술표준 동향"),
+    "산업·경제": ("투자·M&A 동향", "실적 발표", "공급망 변화"),
+    "노동·고용": ("고용·채용 지표 변화", "노동조합·정책 대응", "기업 인력 재배치"),
+    "법·제도": ("관련 법안 발의·통과 여부", "규제기관의 추가 조치", "법원 판결"),
+    "정책·국제질서": ("정부·국제기구의 후속 조치", "주요국 정책 비교", "외교적 대응"),
+    "의료·헬스케어": ("임상·규제 승인 여부", "의료기관 도입 현황", "안전성 이슈"),
+    "에너지·환경": ("전력 계약 및 인프라 투자", "에너지 정책·규제 변화", "환경영향 평가"),
+    "국방·안보": ("주요국 군사·안보 대응", "수출통제 조치", "기술 유출 이슈"),
+    "교육·사회": ("교육기관 도입 현황", "여론 반응", "사회적 논쟁 확산 여부"),
+    "문화·예술": ("창작자·업계 반응", "저작권 관련 논의", "대중 수용도"),
+    "미디어·콘텐츠": ("플랫폼 정책 변화", "콘텐츠 유통 구조 변화", "규제당국 대응"),
+}
+
+
+def _why_it_matters_sentence(why_it_matters):
+    """Expands daily_discovery.py's terse why_it_matters code into a one-sentence explanation,
+    without adding any fact that code didn't already encode."""
+    w = why_it_matters or ""
+    if w.startswith("정책 키워드:"):
+        kw = w.split(":", 1)[1].strip()
+        return f"'{kw}' 관련 정책·규제 키워드가 포함되어 있어, 법·제도 변화로 이어질 가능성을 시사한다."
+    if w == "Tier 1 출처":
+        return "공신력 있는 Tier 1 출처에서 보도되어 신뢰도가 높은 사안이다."
+    return None  # honest: no fabricated interpretation when the signal itself is unclear
+
+
+def _today_briefing_card(item):
+    sources = item.get("sources") or [{"institution": item.get("source"), "url": item.get("url")}]
+    why = _why_it_matters_sentence(item.get("why_it_matters"))
+    if why is None:
+        return None  # section 7: never show an interpretation that wasn't actually derived
+    title = _esc(item["title_ko"])
+    fact = title
+    if len(sources) > 1:
+        fact += f" 관련 보도가 {len(sources)}개 독립 출처에서 확인됐다."
+    field = item.get("field")
+    watch = _FIELD_WATCHPOINTS.get(field, ())
+    watch_html = "".join(f"<li>{_esc(w)}</li>" for w in watch) if watch else ""
+    tags = " &middot; ".join(x for x in (_esc(field) if field else "", _esc(item.get("country")) if item.get("country") else "") if x)
+    sources_list_html = "".join(
+        f'<li>{_esc(s.get("institution"))}: {_safe_link(s.get("url"))}</li>' for s in sources
+    )
+    return (
+        '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+        f'<div><strong>{title}</strong></div>'
+        + (f'<div class="empty">{tags}</div>' if tags else "")
+        + f'<div><b>무슨 일이 있었나</b><br>{fact}</div>'
+        f'<div><b>왜 중요한가</b><br>{_esc(why)}</div>'
+        + (f'<div><b>무엇을 봐야 하나</b><ul>{watch_html}</ul></div>' if watch_html else "")
+        + f'<div class="empty">Sources {len(sources)}<ul>{sources_list_html}</ul></div>'
+        '</div>'
+    )
+
+
+def _today_briefing_section_html(discovery_items, top_n=10):
+    """The '오늘' landing page per the TODAY BRIEFING REBUILD directive: Issue/Event-level cards
+    with 무슨 일이 있었나/왜 중요한가/무엇을 봐야 하나, never raw internal fields (DISCOVERY_ONLY,
+    Claim 아님, GLOBAL/UNKNOWN, candidate/event/source counts, long RSS URLs). Built from
+    daily_discovery_items() -- already event-clustered across sources, already real sources/urls
+    -- never claims.json, never a fabricated example. Honestly empty when nothing passes."""
+    cards = [c for c in (_today_briefing_card(it) for it in discovery_items[:top_n]) if c]
+    raw_date = discovery_items[0].get("date") if discovery_items else None
+    date_str = raw_date[:10] if isinstance(raw_date, str) and len(raw_date) >= 10 else None
+    subtitle = f'{date_str.replace("-", ".")} &middot; Daily Intelligence Briefing' if date_str else "Daily Intelligence Briefing"
+    if not cards:
+        return (
+            f'<p class="empty">{subtitle}</p>'
+            '<h2>오늘의 핵심 변화</h2>'
+            '<p class="empty">오늘 운영자가 읽을 만한 핵심 변화가 확인되지 않았습니다 '
+            '(정직한 결과이며, 조작된 예시를 넣지 않습니다). 전체 수집 자료는 '
+            f'<a href="../daily_discovery/">정보</a>에서 확인할 수 있습니다.</p>'
+        )
+    return (
+        f'<p class="empty">{subtitle}</p>'
+        f'<h2>오늘의 핵심 변화 ({len(cards)})</h2>'
+        f'<div class="kpi-row">{"".join(cards)}</div>'
+        f'<p class="empty">전체 수집 자료는 <a href="../daily_discovery/">정보</a>에서 확인할 수 있습니다.</p>'
+    )
+
+
 def render_overview():
-    """Section 1 -- information hierarchy per Te's O-2E spec, reordered so Intelligence content
-    always comes before system/pipeline status:
-    1 Today's Key Signals, 2 Change Watch, 3 Open Issues/Gaps, 4 Portfolio, 5 latest Reports
-    pointer, 6 Gap Categories, 7 (counterevidence is embedded in Change Watch/portfolio),
-    8 Source Health, 9 System/Pipeline Health (last)."""
-    o = op.overview()
-    gaps = op.gap_inspector()
-    open_gaps = [g for g in gaps if str(g.get("status", "")).upper() not in ("RESOLVED", "CLOSED")]
-    gaps_section = (
-        '<h2>열린 쟁점 / Evidence Gap</h2>'
-        + (f'<p>{len(open_gaps)} open of {len(gaps)} recorded. See '
-           f'<a href="../gaps/">{_ko("gaps")} / Gaps</a> for the full list.</p>'
-           if gaps else '<p class="empty">No known gaps recorded.</p>')
-    )
-    reports_section = (
-        f'<h2>최신 Evidence / Latest Reports</h2>'
-        f'<p>See <a href="../reports/">{_ko("reports")} / Reports</a> and '
-        f'<a href="../intelligence_index/">{_ko("intelligence_index")}</a> for per-topic detail.</p>'
-    )
-    source_health_section = (
-        '<h2>Source Health</h2>'
-        f'<p>Source Health (minimal contract): {_status(o["source_health"])}. '
-        f'See <a href="../source_health/">{_ko("source_health")} / Source Health</a>.</p>'
-    )
+    """TODAY BRIEFING REBUILD (2026-10-03): '오늘' is now a Daily Intelligence Briefing, not a
+    console dump of internal pipeline/evidence state. The previous version of this page (Today's
+    Key Signals, Change Watch, Editorial Queue, Open Gaps, Portfolio, Reports pointer, Gap
+    Categories, Source Health, Pipeline/System Health) is NOT deleted -- every one of those is
+    still reachable at its own existing URL (../gaps/, ../intelligence_index/, ../source_health/,
+    ../reports/ etc. -- just unlinked from top nav per the NAVIGATION FINAL RESTRUCTURE directive).
+    This page now shows only real, evidence-backed Issue/Event cards -- see
+    _today_briefing_section_html().
 
-    live = op.live_run_status()
-    live_kpis = "".join(
-        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
-        for k, v in live.items() if k not in ("run_id", "head_sha", "completed_at", "environment")
-    )
-    kpis = "".join(
-        f'<div class="kpi"><div class="n">{_esc(v)}</div><div class="l">{_esc(k.replace("_", " "))}</div></div>'
-        for k, v in o.items() if k != "source_health"
-    )
-    system_health_section = (
-        '<h2>Pipeline / System Health</h2>'
-        f'<div class="kpi-row">{kpis}</div>'
-        f'<h3>최근 라이브 수집 / Last Live Acquisition</h3>'
-        f'<p class="mono">RUN_ID={_esc(live["run_id"])} HEAD_SHA={_esc(live["head_sha"])} '
-        f'COMPLETED_AT={_esc(live["completed_at"])} ENVIRONMENT={_esc(live["environment"])}</p>'
-        f'<div class="kpi-row">{live_kpis}</div>'
-    )
-
-    discovery_items = dd.daily_discovery_items(data_dir=str(op.ROOT / "data"))
-    emerging = dd.emerging_issues(data_dir=str(op.ROOT / "data"))
-    watch = op.intelligence_change_watch()
-    editorial_buckets = dd.editorial_queue(discovery_items, watch["contested_hypotheses"])
-
-    # Section 26 reorder: 오늘의 핵심 Discovery -> Emerging Issues -> Change Watch (incl. its own
-    # Counterevidence subsection, section 27) -> Editorial Queue -> 열린 쟁점 -> Portfolio ->
-    # 최신 보고서 -> (반대근거/대안설명 already live inside Change Watch's Counterevidence
-    # subsection -- not duplicated as a second section) -> Source Health -> System 상태 (last).
-    return _shell(f"{_ko('overview')} / Overview", "overview", (
+    SYNTHESIS LAYER PILOT (2026-10-03): the Pilot asked for up to 5 meaningful Issues built from
+    the last 7 real days of data (clustered across days, not just today), rather than one day's
+    top_n=10 raw cards -- so this now calls weekly_issue_candidates() instead of
+    daily_discovery_items(). Never padded to 5; an honest empty/partial state still applies."""
+    discovery_items = dd.weekly_issue_candidates(data_dir=str(op.ROOT / "data"), lookback_days=7, top_n=5)
+    return _shell(f"{_ko('overview')} / Today", "overview", (
         f'{PUBLIC_SAFE_BANNER}'
-        f'{_daily_discovery_section_html(discovery_items)}'
-        f'{_key_signals_section_html()}'
-        f'{_emerging_issues_section_html(emerging)}'
-        f'{_change_watch_section_html()}'
-        f'{_editorial_queue_section_html(editorial_buckets)}'
-        f'{gaps_section}'
-        f'{_portfolio_section_html()}'
-        f'{reports_section}'
-        f'{_gap_categories_section_html()}'
-        f'{source_health_section}'
-        f'{system_health_section}'
+        f'{_today_briefing_section_html(discovery_items, top_n=5)}'
     ))
 
 
