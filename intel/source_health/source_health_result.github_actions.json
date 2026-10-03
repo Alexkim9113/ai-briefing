@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-10-03T05:45:20.056523+00:00",
+ "checked_at": "2026-10-03T11:37:58.681952+00:00",
  "environment": "GITHUB_ACTIONS",
  "results": [
   {
    "source_id": "src_worldbank_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-03T05:45:14.059725+00:00",
+   "last_checked": "2026-10-03T11:37:50.227325+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -19,7 +19,7 @@
   {
    "source_id": "src_eia_api",
    "status": "AUTH_REQUIRED",
-   "last_checked": "2026-10-03T05:45:14.403882+00:00",
+   "last_checked": "2026-10-03T11:37:50.338532+00:00",
    "last_http_status": 403,
    "last_success": false,
    "failure_count": 1,
@@ -33,7 +33,7 @@
   {
    "source_id": "src_crossref_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-03T05:45:15.703635+00:00",
+   "last_checked": "2026-10-03T11:37:51.560416+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -47,7 +47,7 @@
   {
    "source_id": "src_federal_register_api",
    "status": "HEALTHY",
-   "last_checked": "2026-10-03T05:45:15.789174+00:00",
+   "last_checked": "2026-10-03T11:37:51.761666+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -61,7 +61,7 @@
   {
    "source_id": "src_ilo",
    "status": "HEALTHY",
-   "last_checked": "2026-10-03T05:45:16.201771+00:00",
+   "last_checked": "2026-10-03T11:37:52.103522+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
@@ -75,7 +75,7 @@
   {
    "source_id": "src_riss",
    "status": "HEALTHY",
-   "last_checked": "2026-10-03T05:45:20.056501+00:00",
+   "last_checked": "2026-10-03T11:37:58.681931+00:00",
    "last_http_status": 200,
    "last_success": true,
    "failure_count": 0,
