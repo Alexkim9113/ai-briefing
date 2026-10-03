@@ -16,7 +16,27 @@
         "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-provides-updates-national-construction-safety-team-activities",
         "collected_at": "2026-10-03T13:53:02.047449+00:00",
         "feed_id": "us_nist",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "안전·평가",
+        "secondary_domains": [],
+        "topics": [],
+        "entities": [
+          "NIST"
+        ],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://www.nist.gov/news-events/news/2026/09/nist-provides-updates-national-construction-safety-team-activities"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "62356808261bbf5d",
@@ -29,7 +49,29 @@
         "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
         "collected_at": "2026-10-03T13:53:02.047470+00:00",
         "feed_id": "us_nist",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "산업·경제",
+        "secondary_domains": [
+          "사이버보안"
+        ],
+        "topics": [],
+        "entities": [
+          "NIST"
+        ],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "133fbcad9c5e3788",
@@ -42,7 +84,27 @@
         "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
         "collected_at": "2026-10-03T13:53:02.047486+00:00",
         "feed_id": "us_nist",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "산업·경제",
+        "secondary_domains": [],
+        "topics": [],
+        "entities": [
+          "NIST"
+        ],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "e8b24aef11fe5aec",
@@ -55,7 +117,32 @@
         "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens",
         "collected_at": "2026-10-03T13:53:02.047499+00:00",
         "feed_id": "us_nist",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "NEEDS_REVIEW",
+          "matched_keywords": [
+            "\\baccess token",
+            "\\bidentity\\b.*\\btoken"
+          ],
+          "reason": "AI와 연관 가능한 주제(저작권/신원·토큰/알고리즘 등)는 있으나 AI가 핵심 대상/원인이라는 직접적 표현은 없음 -- 사람 검토 필요"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "법·제도",
+        "secondary_domains": [],
+        "topics": [
+          "디지털신원"
+        ],
+        "entities": [
+          "NIST"
+        ],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "086251e30b024450",
@@ -68,7 +155,27 @@
         "canonical_url": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
         "collected_at": "2026-10-03T13:53:02.047509+00:00",
         "feed_id": "us_nist",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "국방·안보",
+        "secondary_domains": [],
+        "topics": [],
+        "entities": [
+          "NIST"
+        ],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       }
     ],
     "CN": [
@@ -83,7 +190,38 @@
         "canonical_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16UFZBdEJ4VWowU0E1WlBKQ3l3SWZKUktwVVdKU3FQcDhuMjk3M1p2a2RGaWZQOGF0MS1MbWV2SFVXY2liX2pyRURQT3F4U0Z3bUlYMHFHSXFySGVUdXc?oc=5",
         "collected_at": "2026-10-03T13:53:31.770461+00:00",
         "feed_id": "cn_ai_copyright_q1",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "AI(?=[一-鿿])",
+            "(?<=[一-鿿])AI",
+            "AI剧"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER2_NEWS",
+        "primary_domain": "저작권·지식재산",
+        "secondary_domains": [
+          "법·제도",
+          "문화·예술"
+        ],
+        "topics": [
+          "AI생성물",
+          "저작권침해",
+          "판결"
+        ],
+        "entities": [
+          "후베이"
+        ],
+        "canonical_resolution": {
+          "status": "CANONICAL_NOT_RESOLVED",
+          "resolved_url": null
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "ba87d5d5c5ec569c",
@@ -96,7 +234,38 @@
         "canonical_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5aRUhZN3RocTJ2OW1xMEd5a2RsTkhobjdJQTVRalplbnZjYmlod3Bid3M2NlRqcHhpVXdHSDVsR3EwVUhiSzgxU0VGUjhpQ2s5QXQyX19jU3E?oc=5",
         "collected_at": "2026-10-03T13:53:31.770486+00:00",
         "feed_id": "cn_ai_copyright_q1",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "AI(?=[一-鿿])",
+            "(?<=[一-鿿])AI",
+            "大模型",
+            "AI大模型"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER2_NEWS",
+        "primary_domain": "저작권·지식재산",
+        "secondary_domains": [
+          "법·제도",
+          "모델·서비스"
+        ],
+        "topics": [
+          "저작권침해",
+          "판결"
+        ],
+        "entities": [
+          "상하이 법원"
+        ],
+        "canonical_resolution": {
+          "status": "CANONICAL_NOT_RESOLVED",
+          "resolved_url": null
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "c21888f22c276d68",
@@ -109,7 +278,30 @@
         "canonical_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oYktJbGgtaDF3S19MeFdxMEY4cGJaSDZnVmpsZ25PcW9jX2wzUnRUYXZDRVJZREkyTm9ta2wzd0xpUnQ2d0pFTDg4Y3lMdVFCbjZ5N0lBdXhXY3BwaWNHQkhwWEc4Q2RS?oc=5",
         "collected_at": "2026-10-03T13:53:31.770504+00:00",
         "feed_id": "cn_ai_copyright_q1",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "AI(?=[一-鿿])",
+            "AI训练"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER2_NEWS",
+        "primary_domain": "저작권·지식재산",
+        "secondary_domains": [],
+        "topics": [
+          "AI 학습데이터"
+        ],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "CANONICAL_NOT_RESOLVED",
+          "resolved_url": null
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "dbb7b92adeb62b5c",
@@ -122,7 +314,35 @@
         "canonical_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5QSmM3NVB1OUs1UVhFOVA5SWotMm4tU1pVT3Z3c1VwTmtmNkdpNXFrNkNRV2p3d20zWnJ6XzRQRVdMTmZxU2xrTWtURWRJZw?oc=5",
         "collected_at": "2026-10-03T13:53:31.770517+00:00",
         "feed_id": "cn_ai_copyright_q1",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "人工智能",
+            "生成式人工智能"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER2_NEWS",
+        "primary_domain": "정책·행정",
+        "secondary_domains": [
+          "저작권·지식재산"
+        ],
+        "topics": [
+          "AI생성물",
+          "정책"
+        ],
+        "entities": [
+          "국가판권국(国家版权局)"
+        ],
+        "canonical_resolution": {
+          "status": "CANONICAL_NOT_RESOLVED",
+          "resolved_url": null
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "289f98fadbf5df2c",
@@ -135,7 +355,29 @@
         "canonical_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBrMU9RX0M2UUtlV09qV0FtbnpSZHF0UG9jMEdFblRFQ2M5ajJZaDhsN2FVNThKR0F1Wi1wYktoRWxUd2VDMDRXY2VsaEpaejBBaTUwejVpc1A?oc=5",
         "collected_at": "2026-10-03T13:53:31.770528+00:00",
         "feed_id": "cn_ai_copyright_q1",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "AI(?=[一-鿿])"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER2_NEWS",
+        "primary_domain": "산업·경제",
+        "secondary_domains": [
+          "저작권·지식재산"
+        ],
+        "topics": [],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "CANONICAL_NOT_RESOLVED",
+          "resolved_url": null
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       }
     ],
     "EU": [
@@ -150,7 +392,32 @@
         "canonical_url": "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-support-better-copyright-environment-creativity-and-innovation",
         "collected_at": "2026-10-03T13:53:36.137078+00:00",
         "feed_id": "eu_ec_ai_office",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "NEEDS_REVIEW",
+          "matched_keywords": [
+            "\\bcopyright\\b"
+          ],
+          "reason": "AI와 연관 가능한 주제(저작권/신원·토큰/알고리즘 등)는 있으나 AI가 핵심 대상/원인이라는 직접적 표현은 없음 -- 사람 검토 필요"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "저작권·지식재산",
+        "secondary_domains": [
+          "정책·행정",
+          "문화·예술"
+        ],
+        "topics": [
+          "정책"
+        ],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-support-better-copyright-environment-creativity-and-innovation"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       },
       {
         "id": "d3a0ea29c6adc912",
@@ -163,7 +430,25 @@
         "canonical_url": "https://digital-strategy.ec.europa.eu/en/events/data-union-conference",
         "collected_at": "2026-10-03T13:53:36.137091+00:00",
         "feed_id": "eu_ec_ai_office",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "기타",
+        "secondary_domains": [],
+        "topics": [],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://digital-strategy.ec.europa.eu/en/events/data-union-conference"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "2becf188185b4d97",
@@ -176,7 +461,29 @@
         "canonical_url": "https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu",
         "collected_at": "2026-10-03T13:53:36.137109+00:00",
         "feed_id": "eu_ec_ai_office",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "사회",
+        "secondary_domains": [
+          "정책·행정"
+        ],
+        "topics": [
+          "아동보호"
+        ],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "64bddb0acafc3d50",
@@ -189,7 +496,25 @@
         "canonical_url": "https://digital-strategy.ec.europa.eu/en/library/proposal-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trustworthy",
         "collected_at": "2026-10-03T13:53:36.137122+00:00",
         "feed_id": "eu_ec_ai_office",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "FAIL",
+          "matched_keywords": [],
+          "reason": "제목/설명 어디에도 AI 관련 키워드가 없음 (출처 신뢰도와 무관하게 FAIL)"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "정책·행정",
+        "secondary_domains": [],
+        "topics": [],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://digital-strategy.ec.europa.eu/en/library/proposal-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trustworthy"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "NOT_SYNTHESIZED_FAIL_GATE"
       },
       {
         "id": "a06ada525ba56011",
@@ -202,7 +527,29 @@
         "canonical_url": "https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit",
         "collected_at": "2026-10-03T13:53:36.137131+00:00",
         "feed_id": "eu_ec_ai_office",
-        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님"
+        "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+        "ai_relevance": {
+          "status": "PASS",
+          "matched_keywords": [
+            "\\bAI\\b"
+          ],
+          "reason": "제목/설명에 AI 핵심 키워드가 직접 등장함"
+        },
+        "source_tier": "TIER1_PRIMARY",
+        "primary_domain": "국제질서·지정학",
+        "secondary_domains": [],
+        "topics": [
+          "컨퍼런스"
+        ],
+        "entities": [],
+        "canonical_resolution": {
+          "status": "ALREADY_CANONICAL",
+          "resolved_url": "https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit"
+        },
+        "ko_title": null,
+        "ko_summary": null,
+        "why_it_matters": null,
+        "status": "PENDING_KOREAN_SYNTHESIS"
       }
     ]
   },
@@ -542,5 +889,144 @@
         "note": "확인 불가 (HTTPError 403)"
       }
     ]
-  }
+  },
+  "ai_relevance_counts": {
+    "PASS": 6,
+    "NEEDS_REVIEW": 2,
+    "FAIL": 7
+  },
+  "canonical_resolution_counts": {
+    "RESOLVED": 0,
+    "ALREADY_CANONICAL": 10,
+    "CANONICAL_NOT_RESOLVED": 5
+  },
+  "events": [
+    {
+      "event_id": "evt_360836525e06dee6",
+      "region": "US",
+      "document_ids": [
+        "360836525e06dee6"
+      ],
+      "representative_document_id": "360836525e06dee6"
+    },
+    {
+      "event_id": "evt_62356808261bbf5d",
+      "region": "US",
+      "document_ids": [
+        "62356808261bbf5d"
+      ],
+      "representative_document_id": "62356808261bbf5d"
+    },
+    {
+      "event_id": "evt_133fbcad9c5e3788",
+      "region": "US",
+      "document_ids": [
+        "133fbcad9c5e3788"
+      ],
+      "representative_document_id": "133fbcad9c5e3788"
+    },
+    {
+      "event_id": "evt_e8b24aef11fe5aec",
+      "region": "US",
+      "document_ids": [
+        "e8b24aef11fe5aec"
+      ],
+      "representative_document_id": "e8b24aef11fe5aec"
+    },
+    {
+      "event_id": "evt_086251e30b024450",
+      "region": "US",
+      "document_ids": [
+        "086251e30b024450"
+      ],
+      "representative_document_id": "086251e30b024450"
+    },
+    {
+      "event_id": "evt_7e9cfbee477fa939",
+      "region": "CN",
+      "document_ids": [
+        "7e9cfbee477fa939"
+      ],
+      "representative_document_id": "7e9cfbee477fa939"
+    },
+    {
+      "event_id": "evt_ba87d5d5c5ec569c",
+      "region": "CN",
+      "document_ids": [
+        "ba87d5d5c5ec569c"
+      ],
+      "representative_document_id": "ba87d5d5c5ec569c"
+    },
+    {
+      "event_id": "evt_c21888f22c276d68",
+      "region": "CN",
+      "document_ids": [
+        "c21888f22c276d68"
+      ],
+      "representative_document_id": "c21888f22c276d68"
+    },
+    {
+      "event_id": "evt_dbb7b92adeb62b5c",
+      "region": "CN",
+      "document_ids": [
+        "dbb7b92adeb62b5c"
+      ],
+      "representative_document_id": "dbb7b92adeb62b5c"
+    },
+    {
+      "event_id": "evt_289f98fadbf5df2c",
+      "region": "CN",
+      "document_ids": [
+        "289f98fadbf5df2c"
+      ],
+      "representative_document_id": "289f98fadbf5df2c"
+    },
+    {
+      "event_id": "evt_918df580362b5429",
+      "region": "EU",
+      "document_ids": [
+        "918df580362b5429"
+      ],
+      "representative_document_id": "918df580362b5429"
+    },
+    {
+      "event_id": "evt_d3a0ea29c6adc912",
+      "region": "EU",
+      "document_ids": [
+        "d3a0ea29c6adc912"
+      ],
+      "representative_document_id": "d3a0ea29c6adc912"
+    },
+    {
+      "event_id": "evt_2becf188185b4d97",
+      "region": "EU",
+      "document_ids": [
+        "2becf188185b4d97"
+      ],
+      "representative_document_id": "2becf188185b4d97"
+    },
+    {
+      "event_id": "evt_64bddb0acafc3d50",
+      "region": "EU",
+      "document_ids": [
+        "64bddb0acafc3d50"
+      ],
+      "representative_document_id": "64bddb0acafc3d50"
+    },
+    {
+      "event_id": "evt_a06ada525ba56011",
+      "region": "EU",
+      "document_ids": [
+        "a06ada525ba56011"
+      ],
+      "representative_document_id": "a06ada525ba56011"
+    }
+  ],
+  "structured_document_count": 15,
+  "korean_synthesis": {
+    "gemini_key_present": false,
+    "calls_attempted": 8,
+    "calls_succeeded": 0
+  },
+  "knowledge_synthesis_version": "O-4B"
 }

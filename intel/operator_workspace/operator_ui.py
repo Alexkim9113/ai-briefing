@@ -6,6 +6,7 @@
 # NOT_INSTRUMENTED label -- never a fabricated metric to fill a panel.
 import html as _html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -981,39 +982,130 @@ def _daily_taxonomy_live():
         return None
 
 
-_OPENCLAW_REGION_LABEL = {"KR": "한국", "US": "미국", "CN": "중국", "EU": "유럽"}
+_OPENCLAW_REGION_LABEL = {"KR": "한국", "US": "미국", "CN": "중국", "EU": "유럽", "JP": "일본", "IN": "인도"}
+_OPENCLAW_RELEVANCE_LABEL = {"PASS": "PASS", "NEEDS_REVIEW": "NEEDS_REVIEW", "FAIL": "FAIL"}
+
+
+def _openclaw_date_bucket(published_at):
+    """Best-effort YYYY-MM-DD extraction for the date filter -- published_at comes straight from
+    RSS pubDate/Atom published strings in whatever format the source used, so this never raises;
+    an unparsable date simply gets no date-filter bucket (never a fabricated date)."""
+    if not published_at:
+        return None
+    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", published_at)
+    if m:
+        return m.group(0)
+    m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})", published_at)
+    if m:
+        months = {"Jan": "01", "Feb": "02", "Mar": "03", "Apr": "04", "May": "05", "Jun": "06",
+                  "Jul": "07", "Aug": "08", "Sep": "09", "Oct": "10", "Nov": "11", "Dec": "12"}
+        mo = months.get(m.group(2))
+        if mo:
+            return f"{m.group(3)}-{mo}-{int(m.group(1)):02d}"
+    return None
 
 
 def _openclaw_item_card_html(item):
-    """One OpenClaw discovery item. CONTENT FIRST per client directive: 원문 제목(라벨 명시),
-    Source/지역/분야/발행일/원문 언어, 캡처된 스니펫(있는 경우), 원문 보기 링크 -- in that order.
-    No translation/summarization has happened yet (Discover-and-preserve only phase), so the
-    title is shown labeled as '원문 제목' rather than presented as if it were already in Korean."""
-    title = _esc(item.get("original_title", "UNKNOWN"))
-    region = _esc(_OPENCLAW_REGION_LABEL.get(item.get("source_region"), item.get("source_region", "UNKNOWN")))
-    source_type = _esc(item.get("source_type", "UNKNOWN"))
+    """One OpenClaw discovery item, CONTENT FIRST per client directive section 13: 한국어 제목 ->
+    핵심내용(3~5문장) -> 왜 중요한가(1~3문장) -> Source/지역/분야/Topic/AI Relevance/발행일 ->
+    원문 보기. ko_title/ko_summary/why_it_matters are null until Korean synthesis actually ran
+    (directive section 7) -- shown transparently as '준비 중', never as a disguised rule-based
+    translation. The original_title/canonical_url are always shown too (section 3: 원문 보존)."""
+    region_code = item.get("source_region", "UNKNOWN")
+    region = _esc(_OPENCLAW_REGION_LABEL.get(region_code, region_code))
+    relevance = item.get("ai_relevance", {}).get("status", "UNKNOWN")
+    primary_domain = _esc(item.get("primary_domain") or "미분류")
+    secondary = item.get("secondary_domains") or []
+    topics = item.get("topics") or []
+    topics_str = _esc(" / ".join(t.upper() if t.isascii() else t for t in topics)) if topics else ""
     published = _esc(item.get("published_at") or "미상")
-    lang = _esc(item.get("original_language", "und"))
-    snippet = _esc(item.get("summary")) if item.get("summary") else ""
-    link_html = _safe_link(item.get("canonical_url"), item.get("original_title", "원문 보기")) if item.get("canonical_url") else ""
+    source_name = _esc(item.get("source_name", "UNKNOWN"))
+    date_bucket = _openclaw_date_bucket(item.get("published_at")) or ""
+
+    ko_title = item.get("ko_title")
+    ko_summary = item.get("ko_summary")
+    why = item.get("why_it_matters")
+    original_title = _esc(item.get("original_title", "UNKNOWN"))
+
+    if ko_title:
+        heading_html = f'<h3>{_esc(ko_title)}</h3><p class="openclaw-original">원문: {original_title}</p>'
+    else:
+        heading_html = (
+            f'<h3>{original_title}</h3>'
+            '<p class="openclaw-pending">한국어 요약 준비 중 (LLM 연결 대기)</p>'
+        )
+    body_html = f'<p>{_esc(ko_summary)}</p>' if ko_summary else ""
+    why_html = f'<p><b>왜 중요한가:</b> {_esc(why)}</p>' if why else ""
+
+    link_html = (_safe_link(item.get("canonical_url"), "원문 보기")
+                 if item.get("canonical_url") else "")
+    canon_status = item.get("canonical_resolution", {}).get("status", "")
+    canon_note = (f' <span class="openclaw-canon-note">(원출처 미확인 -- Google News 경유)</span>'
+                  if canon_status == "CANONICAL_NOT_RESOLVED" else "")
+
+    domain_line = _esc(region_code) + " · " + primary_domain
+    if secondary:
+        domain_line += " (" + _esc(", ".join(secondary)) + ")"
+
     return (
-        '<div class="mx-item openclaw-item">'
-        f'<p class="openclaw-label">원문 제목 (미번역)</p>'
-        f'<h3>{title}</h3>'
-        + (f'<p>{snippet}</p>' if snippet else '')
-        + f'<div class="mx-meta"><span>{_esc(item.get("source_name", "UNKNOWN"))}</span>'
-          f'<span>{region}</span><span>{source_type}</span><span>{published}</span>'
-          f'<span>원문 언어: {lang}</span></div>'
-        + (f'<p>{link_html} →</p>' if link_html else '')
+        '<div class="mx-item openclaw-item" '
+        f'data-region="{_esc(region_code)}" data-domain="{primary_domain}" '
+        f'data-relevance="{_esc(relevance)}" data-source-type="{_esc(item.get("source_type", ""))}" '
+        f'data-date="{_esc(date_bucket)}">'
+        f'{heading_html}'
+        f'{body_html}'
+        f'{why_html}'
+        f'<div class="mx-meta"><span>{domain_line}</span>'
+        + (f'<span>{topics_str}</span>' if topics_str else "")
+        + f'<span>AI Relevance: {_esc(relevance)}</span></div>'
+        f'<div class="mx-meta"><span>{source_name}</span><span>{published}</span></div>'
+        + (f'<p>{link_html}{canon_note}</p>' if link_html else "")
         + '</div>'
     )
 
 
+_OPENCLAW_FILTER_JS = """
+<script>
+function openclawFilter(){
+  var d=document.getElementById('oc-f-date'); d=d?d.value:'';
+  var r=document.getElementById('oc-f-region'); r=r?r.value:'';
+  var dom=document.getElementById('oc-f-domain'); dom=dom?dom.value:'';
+  var rel=document.getElementById('oc-f-relevance'); rel=rel?rel.value:'';
+  var st=document.getElementById('oc-f-sourcetype'); st=st?st.value:'';
+  var now=new Date(); var cutoff=null;
+  if(d==='today'){cutoff=new Date(now.getFullYear(),now.getMonth(),now.getDate());}
+  else if(d==='7d'){cutoff=new Date(now.getTime()-7*86400000);}
+  else if(d==='30d'){cutoff=new Date(now.getTime()-30*86400000);}
+  var items=document.querySelectorAll('#openclaw-list .openclaw-item');
+  var shown=0;
+  items.forEach(function(el){
+    var ok=true;
+    if(r && el.dataset.region!==r){ok=false;}
+    if(dom && el.dataset.domain!==dom){ok=false;}
+    if(rel){ if(el.dataset.relevance!==rel){ok=false;} }
+    else { if(el.dataset.relevance==='FAIL'){ok=false;} }
+    if(st && el.dataset.sourceType!==st){ok=false;}
+    if(ok && cutoff){
+      var dv=el.dataset.date;
+      if(!dv){ok=false;}
+      else{var dt=new Date(dv); if(isNaN(dt)||dt<cutoff){ok=false;}}
+    }
+    el.style.display=ok?'':'none';
+    if(ok){shown++;}
+  });
+  var cnt=document.getElementById('openclaw-count');
+  if(cnt){cnt.textContent=shown;}
+}
+</script>
+"""
+
+
 def _openclaw_section_html():
-    """OpenClaw(Operator 전용 KR/US/CN/EU 탐색) 결과를 '수집정보' 페이지 안에 읽기 전용으로 노출한다.
+    """OpenClaw(Operator 전용 KR/US/CN/EU 탐색) 결과를'수집정보' 페이지 안에 읽기 전용으로 노출한다.
     daily_discovery.openclaw_discoveries()는 완전히 분리된 파일(intel/openclaw/discoveries.json)만
     읽으며, 이 섹션은 그 결과를 그대로 보여줄 뿐 Public 파이프라인/data/*.json에는 전혀 영향이 없다.
-    클라이언트 요구: CONTENT 먼저, METRICS는 그 다음 한 줄 요약으로만 -- 절대 역순이 아님."""
+    O-4B: CONTENT FIRST, 숫자는 상단 보조 한 줄로만(섹션 16) -- 기본 화면은 PASS+NEEDS_REVIEW,
+    FAIL은 필터로만 노출(섹션 15, 데이터 자체는 삭제하지 않음)."""
     result = dd.openclaw_discoveries()
     if result is None:
         return (
@@ -1028,30 +1120,64 @@ def _openclaw_section_html():
     for region_items in regions.values():
         all_items.extend(region_items)
 
+    counts = result.get("ai_relevance_counts", {"PASS": 0, "NEEDS_REVIEW": 0, "FAIL": 0})
+    visible_items = [it for it in all_items
+                     if it.get("ai_relevance", {}).get("status") in ("PASS", "NEEDS_REVIEW")]
+    hidden_fail = len(all_items) - len(visible_items)
+
     if not all_items:
         cards_html = '<p class="empty">이번 실행에서 새로 발견된 항목 없음 (중복 제외 또는 소스 미검증)</p>'
+        filters_html = ""
     else:
-        cards_html = '<div id="openclaw-list">' + "".join(_openclaw_item_card_html(it) for it in all_items) + '</div>'
+        # Rendered items include FAIL too (data never deleted), but FAIL starts hidden via the
+        # default filter value and is only revealed by picking AI Relevance = FAIL (directive 15).
+        dates = ["today", "7d", "30d"]
+        regions_present = sorted({it.get("source_region", "UNKNOWN") for it in all_items})
+        domains_present = sorted({it.get("primary_domain", "미분류") for it in all_items})
+        source_types_present = sorted({it.get("source_type", "UNKNOWN") for it in all_items})
+        date_opts_html = (
+            '<option value="">날짜 전체</option>'
+            '<option value="today">오늘</option>'
+            '<option value="7d">최근 7일</option>'
+            '<option value="30d">최근 30일</option>'
+        )
+        # 지역 select는 값으로 KR/US/CN/EU 코드를 써야 data-region과 매칭된다(_mx_select 범용
+        # 헬퍼는 값=라벨 그대로 쓰므로 여기는 직접 렌더링).
+        region_opts = '<option value="">지역 전체</option>' + "".join(
+            f'<option value="{_esc(r)}">{_esc(_OPENCLAW_REGION_LABEL.get(r, r))}</option>' for r in regions_present
+        )
+        filters_html = (
+            '<div class="mx-filters">'
+            f'<select id="oc-f-date" onchange="openclawFilter()" aria-label="날짜">{date_opts_html}</select>'
+            f'<select id="oc-f-region" onchange="openclawFilter()" aria-label="지역">{region_opts}</select>'
+            f'{_mx_select("oc-f-domain", "분야", domains_present, "분야 전체", onchange="openclawFilter()")}'
+            f'{_mx_select("oc-f-relevance", "AI Relevance", ["PASS", "NEEDS_REVIEW", "FAIL"], "PASS+NEEDS_REVIEW (기본)", onchange="openclawFilter()")}'
+            f'{_mx_select("oc-f-sourcetype", "Source Type", source_types_present, "Source Type 전체", onchange="openclawFilter()")}'
+            '</div>'
+        )
+        cards_html = ('<div id="openclaw-list">'
+                      + "".join(_openclaw_item_card_html(it) for it in all_items)
+                      + '</div>')
 
-    counts = result.get("counts", {})
-    counts_str = ", ".join(f'{_OPENCLAW_REGION_LABEL.get(r, r)} {n}건' for r, n in counts.items())
-    verification = result.get("verification", {})
-    verified_n = len(verification.get("verified", []))
-    unverified_n = len(verification.get("unverified", []))
     metrics_html = (
         '<p class="openclaw-metrics">'
-        f'운영 지표 -- 실행 시각: {_esc(result.get("run_at", "UNKNOWN"))} · '
-        f'신규 발견: {_esc(result.get("total_unique_discoveries", 0))}건 ({_esc(counts_str)}) · '
-        f'중복 제외: {_esc(result.get("total_duplicates_skipped", 0))}건 · '
-        f'소스 상태: 검증됨 {verified_n} / 미검증 {unverified_n}'
+        f'오늘 수집 {len(all_items)} · PASS {counts.get("PASS", 0)} · '
+        f'검토 {counts.get("NEEDS_REVIEW", 0)} · FAIL {counts.get("FAIL", 0)}건(기본 숨김, 필터로 확인) · '
+        f'표시중 <span id="openclaw-count">{len(visible_items)}</span>건'
         '</p>'
     )
+
+    init_js = (
+        '<script>document.addEventListener("DOMContentLoaded",function(){openclawFilter();});</script>'
+    ) if all_items else ""
 
     return (
         '<section class="openclaw-section">'
         '<h2>OpenClaw (Operator 전용 탐색)</h2>'
-        f'{cards_html}'
         f'{metrics_html}'
+        f'{filters_html}'
+        f'{cards_html}'
+        f'{_OPENCLAW_FILTER_JS}{init_js}'
         '</section>'
     )
 

@@ -231,6 +231,9 @@ def run(do_verify=True, write_sources_back=True):
                     "collected_at": collected_at_now(),
                     "feed_id": feed_id,
                     "evidence_status": "OPENCLAW_DISCOVERY_ONLY -- Claim 아님",
+                    # O-4B: 피드가 제공하는 원문 설명/요약 그대로 보존(가공·번역 없음). relevance_gate.py가
+                    # 제목만이 아니라 이 텍스트까지 함께 보고 AI 관련성을 판정하는 데 쓰인다.
+                    "raw_description": raw.get("summary", ""),
                 }
                 discoveries[region].append(item)
                 if region == "CN" and feed_id.startswith("cn_ai_copyright"):
