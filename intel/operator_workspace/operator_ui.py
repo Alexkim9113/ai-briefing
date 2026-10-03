@@ -55,7 +55,6 @@ background:var(--grad);-webkit-background-clip:text;background-clip:text;color:t
 nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em;background:var(--bg)}
 nav a{color:var(--sub);text-decoration:none;padding:4px 10px;border-radius:99px}
 nav a:hover,nav a.active{background:var(--soft);color:var(--accent)}
-nav.subnav{padding-top:0;border-bottom:none;font-size:0.8em;opacity:.85}
 main{max-width:980px;margin:0 auto;padding:24px}
 .table-wrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:0.92em;min-width:420px}
@@ -86,18 +85,18 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 NAV_ITEMS = ("overview", "daily_discovery", "emerging_issues", "research_queue",
              "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
 
-# METAXIS MASTER DIRECTION section 25/30 (2026-10-03): Operator keeps only 6 top-level user-facing
-# areas; the slugs/routes/data above are unchanged (nothing deleted, nothing renamed), they are only
-# grouped into these 6 areas for navigation. GROUP_LABELS order is the display order of the top nav.
-GROUPS = (
-    ("운영 현황", ("overview",)),
-    ("데일리 디스커버리", ("daily_discovery",)),
-    ("관측 범위 / 출처", ("sources", "source_health")),
-    ("이머징 이슈", ("emerging_issues",)),
-    ("인텔리전스", ("intelligence_index", "reports", "gaps", "rights")),
-    ("리서치", ("research_queue",)),
+# METAXIS OPERATOR CORE ARCHITECTURE DIRECTIVE (2026-10-03), STEP 1 ONLY: supersedes the previous
+# 6-area grouping. Top-level Navigation is now exactly these 5 user-facing areas; every slug/route/
+# backend object above is unchanged (nothing deleted, nothing renamed, nothing rebuilt this step).
+# research_queue/gaps/rights/sources/source_health stay reachable at their existing URLs but are
+# deliberately NOT linked from the top nav per the directive (section 1) -- that is STEP 3/5/7 work.
+TOP_NAV = (
+    ("운영 현황", "overview"),
+    ("수집 정보", "daily_discovery"),
+    ("이슈", "emerging_issues"),
+    ("인텔리전스", "intelligence_index"),
+    ("보고서", "reports"),
 )
-GROUP_OF = {slug: label for label, slugs in GROUPS for slug in slugs}
 
 # Korean-first labels (Te's O-2C mapping). Presentation text only -- never changes route slugs,
 # internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
@@ -119,10 +118,6 @@ KO_LABELS = {
 
 def _ko(slug, fallback=None):
     return KO_LABELS.get(slug, fallback or slug.replace("_", " ").title())
-
-
-def _nav_label(slug):
-    return f'{_esc(_ko(slug))} <span style="opacity:.6;font-size:.85em">({_esc(slug.upper())})</span>'
 
 
 def _esc(x):
@@ -153,20 +148,11 @@ def _priority_badge(level, reason):
 
 def _nav(active, depth=1):
     up = "../" * depth
-    active_group = GROUP_OF.get(active)
-    group_links = "".join(
-        f'<a href="{up}{slugs[0]}/" class="{"active" if label == active_group else ""}">{_esc(label)}</a>'
-        for label, slugs in GROUPS
+    links = "".join(
+        f'<a href="{up}{slug}/" class="{"active" if slug == active else ""}">{_esc(label)}</a>'
+        for label, slug in TOP_NAV
     )
-    top = f"<nav aria-label='Operator areas'>{group_links}</nav>"
-    members = GROUPS[[g for g, _ in GROUPS].index(active_group)][1] if active_group else NAV_ITEMS
-    if len(members) > 1:
-        sub_links = "".join(
-            f'<a href="{up}{n}/" class="{"active" if n == active else ""}">{_nav_label(n)}</a>'
-            for n in members
-        )
-        top += f"<nav aria-label='Operator sub-navigation' class='subnav'>{sub_links}</nav>"
-    return top
+    return f"<nav aria-label='Operator navigation'>{links}</nav>"
 
 
 def _shell(title, active, body, depth=1):
