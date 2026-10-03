@@ -2,10 +2,15 @@
   // O-3.6B: Operator(intel_private/operator)를 Cloudflare Workers 정적 자산으로 배포하기 위한
   // 최소 설정. 빌드 단계가 없다 -- intel_private/operator는 24/7 Cloud Worker가 매 실행마다
   // 이미 완성된 HTML/JSON으로 만들어 커밋해두므로, Wrangler는 이 폴더를 그대로 올리기만 한다.
-  // Cloudflare Access가 이 Worker 전체(경로 "/")를 보호한다(대시보드에서 설정, 이 파일과 무관).
+  // O-3.6C: Cloudflare Access(이메일 인증) 대신 "main"이 비밀번호(HTTP Basic Auth)를 검사한
+  // 뒤에만 정적 자산을 서빙한다 (src/operator_auth_worker.js). 비밀번호는 Cloudflare 대시보드
+  // Settings > Variables and Secrets > OPERATOR_PASSWORD 에 Te가 직접 등록한다 (이 레포에는
+  // 절대 평문으로 커밋하지 않는다).
   "name": "ai-briefing",
   "compatibility_date": "2026-10-03",
+  "main": "src/operator_auth_worker.js",
   "assets": {
-    "directory": "intel_private/operator"
+    "directory": "intel_private/operator",
+    "binding": "ASSETS"
   }
 }
