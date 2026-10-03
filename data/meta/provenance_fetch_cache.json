@@ -3858,5 +3858,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-10-03T14:24:18.663077+00:00"
+ },
+ "4318f7559e3678e8008660fbe49ec265a8d8b5661e2137174f660234a5b5d832": {
+  "url": "https://www.newsis.com/view/NISX20261003_0003813417",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T15:14:51.889555+00:00"
+ },
+ "7391f511ea2cdcc53c05e66c09d3c4610ca4219e9ed6728cd16cc70e75eabadd": {
+  "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5nOXk2NUdBLVRRS0ItTGFqbzVUanc0LWphMGJ4YW5UVVVUZFF2YTY2Y29YdExzWlVEd3Y0dHMxYWppZncxakVYWXJYc3h2NnU1RHhQVWtaYW5Na1BZVWVnRTVoZFNIZw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:52.089142+00:00"
+ },
+ "82306d589592755b9a73ff7722ddeef0c66e110aa53fabf2963f1048bdab6e65": {
+  "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBQWWE4cW5vNmlXSGIyeVNpaUlsdXEyTzFFakFaaUoyVVFiR1ZtQlRwQ2NRakhwdjZ4dy01dWxGOEZFZ1N1bF9sVGxnZ2VfTHJQeFlMRzF30gFQQVVfeXFMTlFPOFhCSzFUUnRkeXhEQnQ3S2JvdkxGblJjdnQwVW9lbnRYUEk5M1o0ZldSNG14UFBjSnh5M1ZEeFNVVlJ6Vks1T2N2QlNWbXA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:52.288208+00:00"
+ },
+ "c4bc3dd4a96223fb0bd55e1eb941dd98db664e058a8e0e1972e87d1c3670a713": {
+  "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mRVYtOExvQ2NpZE94V2tYamRmWEUyaVVYZk5ramF1SFhMaG5fV3JCUlBJR0l3MFdoZTdPWm5aNmtGSEliREwzejBIdG5zd2VqMVN4WjQ3Wm1YZ9IBVEFVX3lxTE1wVl8xT1pzZndDTGVSYzFxMGRRb3JJWlh4cC00cUtoc2JIeThEVTdUTEZteGFCUnkwRDRxTEVUXzEyazVqRGlHTGdkUVVKYUs1czJsbA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:52.472893+00:00"
+ },
+ "424d4a9f8107368d35fbd185087652bc07f67e57307dd45b71deeb1f4bb091c1": {
+  "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZTBlQU9MYU5DM185dms2UkM2SnJOTF96YXZkbFIyVEh0MEw5blE4N1pLNnZmU2NYd1VybG45UHhkSGdSY0ctRGt3QjZzVjdXLV9vZEJDNGhVTzZFLXc1SllhX3RVeEZpWjE4TURtQnNfRVJZOEhCZkVOUW9xQ1o3OTRKbzdKRDJ6UlNXUHRIVlZpdEF6TXlibGExeXY1dWlLX3JHSXpvVHpBNnFWU3lncGhiWE9pYXExeTdNSFhpUnUwZV8tTFo0VEFGVVRITDYxbXfSAdcBQVVfeXFMTy1FcXB5Sjc3QmVsMTJjUWdrN1V5aGYxLVo4NHNudFp6bnVpRm43ZHl0Rjl4N1MwQm9IZVZOT0xuYkxJOGxCVmRDNXV5a2x3SHJidTBNSDNKTl91VUZ6NDBGaFNuNV9OTjRidkhZN1hvbWk2UkF1Y21wb094dnFHWGlFTmxWZTlHN2szSU9XaG1zVUNoLXVMa2llUlNYS0V0TzV6ZmxKSFg1RGtNNDNEVzdRc3UyZ3pkN0pxem9XT29WWS1KRnFLdl8yVnlmcU5xWWNoUlNWVGs?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:52.648862+00:00"
+ },
+ "b2a6a89473e96578dffe609a9b70c77d7decb47e845cb6ee35c22ab609cf1287": {
+  "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOckkzOXhJRkdtY0tjUjd5eU5OMXVGTEhpY0k2enpzQWI0QWhFZW51LUV0bVRVbXdIZkpOU1RmWkdGQ2hBVVQ0cXk1anRhY0p6V0wzTDFhZlZzQnNEXzBLcVdFdEE5d29adU1BQlRYd25XaXVZVDNpYUV3d19GWnY0UThtR0ZDbkZad2RSN0U2b1NXc1NLRUV4MHQ2d2JNSHFfUEZOcVVDTXdyNHRrRlJKMmF1dHpVUWJUaC1vdEFvbnpMSHh1WHlGLXBsTF9WR20zcDNrV3d4NEVJS0hrVkk0TGJhVFlYYVQ4ME9DdzZ0eVI5Tkh4c3JMQnRyU3k5dw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:52.809708+00:00"
+ },
+ "2937bd4e55e14ca018eaae87c8375cf24868065193e07cf258fd13d1919158b8": {
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZWowRUlUbUJ1U2NITFZzdWF1RDF3aVVmV1pMaENBZmR5ZGNjbGtFY0plQU1wcFpMNjVMUUZRTHlrbm01MnJYVHNnM3VRbmNrWmZuWVd0S3lTWHBHWEVqZ1hxbkVWY2kyQWRKcXprbE9mS0s2N0N1RWp1UUFwLW9xemxTVUJrUUNmdzZZOS1R?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:53.225580+00:00"
+ },
+ "ca15dad42cd0f2e4248ec056277f1a59aa88aac26bddb320331809fa84de7c98": {
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNV09LVUhlaFNaTERwM2xWQ2pzNVNiTFVjS29SaDd0eDY4d0dKZjlpYUVEOHB4S0hGOEsyT3ZVVURpeF9tLUxMcE5QTk5Sb05jTU1pRVZlR0hjNXkwam5neTR1SGRkaFJ5THhhcnJzdkRJOVA2eUZ3M2FnZjR3NnZTaDRPUQ?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:53.407318+00:00"
+ },
+ "1e557d590035fb86fcf62241ae31003ca0d1e62dfad274c559e3cc174ab539f2": {
+  "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T15:14:54.705791+00:00"
+ },
+ "061af6a986650d8022f60b575a85f207c8caa052a86f56e544c49e20aafcc966": {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5fdnprbEJCV0FEYlZIaW5TWmZ3WEdYZ3VIZGhSbXlGaDdHb3VzSUxEai1fV1dDZnVBVXhHdFR5T1pYYmY4S0ZUdEVqQ1NIbk1EN2NLcnBIVUxBWmVmdXZYekJ1aUlvRWV2Y0diOA?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T15:14:54.875895+00:00"
  }
 }
