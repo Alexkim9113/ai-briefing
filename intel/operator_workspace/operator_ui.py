@@ -677,20 +677,154 @@ def render_overview():
     ))
 
 
+_REPORTS_CSS = """
+.rpt-head{text-align:center;margin:0 0 10px}
+.rpt-hr{border:none;border-top:1px solid var(--line);margin:0 0 18px}
+.rpt-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px}
+.rpt-count{color:var(--sub);font-size:0.88em}
+.rpt-count .mono{color:var(--ink)}
+.rpt-controls{display:flex;flex-wrap:wrap;gap:8px}
+.rpt-controls select,.rpt-controls input{background:var(--soft);color:var(--ink);border:1px solid var(--line);
+border-radius:8px;padding:6px 10px;font-family:inherit;font-size:0.9em}
+.rpt-btn{border-radius:8px;padding:6px 14px;font-size:0.9em;font-weight:600;border:1px solid var(--line);
+cursor:pointer;font-family:inherit}
+.rpt-btn-search{background:#e08a2e;color:#1a1340;border-color:#e08a2e}
+.rpt-btn-reset{background:#3a3a46;color:var(--ink)}
+table.rpt-table td.num,table.rpt-table td.views{text-align:right;font-family:'Space Grotesk','Pretendard',monospace}
+table.rpt-table td.attach{text-align:center;color:var(--sub);font-size:0.9em}
+.rpt-pager{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:16px 0 0}
+.rpt-pager button{background:var(--soft);color:var(--text);border:1px solid var(--line);border-radius:8px;
+padding:5px 11px;font-size:0.85em;cursor:pointer;font-family:inherit}
+.rpt-pager button.active{background:linear-gradient(var(--soft),var(--soft)) padding-box,var(--grad) border-box;
+border:1.5px solid transparent;color:var(--ink);font-weight:700}
+.rpt-pager button:disabled{opacity:.4;cursor:default}
+"""
+
+_REPORTS_JS = """
+<script>
+(function(){
+  var PAGE_SIZE = 15;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#rpt-body tr'));
+  var visible = rows.slice();
+  var page = 1;
+
+  function applyFilter(){
+    var field = document.getElementById('rpt-field'); field = field ? field.value : 'title';
+    var q = document.getElementById('rpt-q'); q = q ? q.value.trim().toLowerCase() : '';
+    visible = rows.filter(function(tr){
+      if(!q) return true;
+      var val = (tr.dataset[field] || '').toLowerCase();
+      return val.indexOf(q) !== -1;
+    });
+    page = 1;
+    render();
+  }
+
+  function resetFilter(){
+    var q = document.getElementById('rpt-q'); if(q) q.value = '';
+    visible = rows.slice();
+    page = 1;
+    render();
+  }
+
+  function pageCount(){
+    return Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
+  }
+
+  function render(){
+    var total = pageCount();
+    if(page > total) page = total;
+    rows.forEach(function(tr){ tr.style.display = 'none'; });
+    var start = (page - 1) * PAGE_SIZE;
+    visible.slice(start, start + PAGE_SIZE).forEach(function(tr){ tr.style.display = ''; });
+
+    var countEl = document.getElementById('rpt-shown-count');
+    if(countEl) countEl.textContent = visible.length;
+    var pageEl = document.getElementById('rpt-page-no');
+    if(pageEl) pageEl.textContent = page;
+    var totalEl = document.getElementById('rpt-page-total');
+    if(totalEl) totalEl.textContent = total;
+
+    var pager = document.getElementById('rpt-pager');
+    if(!pager) return;
+    var html = '';
+    html += '<button ' + (page <= 1 ? 'disabled' : '') + ' onclick="window.__rptGo(' + (page - 1) + ')">‹ 이전</button>';
+    for(var p = 1; p <= total; p++){
+      html += '<button class="' + (p === page ? 'active' : '') + '" onclick="window.__rptGo(' + p + ')">' + p + '</button>';
+    }
+    html += '<button ' + (page >= total ? 'disabled' : '') + ' onclick="window.__rptGo(' + (page + 1) + ')">다음 ›</button>';
+    pager.innerHTML = html;
+  }
+
+  window.__rptGo = function(p){ page = p; render(); };
+  window.__rptSearch = applyFilter;
+  window.__rptReset = resetFilter;
+  render();
+})();
+</script>
+"""
+
+
 def render_reports():
     rows = op.list_reports()
+    total = len(rows)
     body_rows = "".join(
-        f'<tr><td><a href="../../intelligence/{_esc(r["report_id"])}/">{_esc(r["report_id"])}</a></td>'
-        f'<td>{_esc(r["topic"])}</td><td>{_esc(r["version"])}</td>'
-        f'<td>{_status(r["readiness"])}</td><td class="mono">{_esc(r["generated_at"])}</td>'
-        f'<td>{_status(r["html_status"])}</td><td>{_status(r["pdf_status"])}</td></tr>'
-        for r in rows
+        f'<tr data-title="{_esc(r["topic"])}">'
+        f'<td class="num">{idx}</td>'
+        f'<td><a href="../../intelligence/{_esc(r["report_id"])}/">{_esc(r["topic"])} '
+        f'<span class="mono empty">{_esc(r["report_id"])}</span></a></td>'
+        f'<td class="mono">{_esc(r["generated_at"].split("T")[0])}</td>'
+        f'<td class="attach">{_attach_cell(r)}</td>'
+        f'<td class="views">v{_esc(r["version"])}</td></tr>'
+        # 번호 is computed in Python, descending from total down to 1 (newest row = highest number).
+        # 조회수 (view count) has no equivalent in op.list_reports() -- it carries no access/analytics
+        # field at all, only report_id/intelligence_id/topic/version/readiness/generated_at/
+        # html_status/pdf_status. Inventing a view count would be fabricated data, which this
+        # workspace explicitly forbids (see module docstring). The honest, real, analogous field is
+        # report "version" (how many times this report has been regenerated), so that column is
+        # relabeled accordingly rather than mislabeled as 조회수.
+        for idx, r in zip(range(total, 0, -1), rows)
     )
-    table = ('<div class="table-wrap">' + f'<table><tr><th>Report</th><th>Topic</th><th>Version</th><th>Readiness</th>'
-            f'<th>Generated</th><th>HTML</th><th>PDF</th></tr>{body_rows}</table></div>')
     if not rows:
-        table = '<p class="empty">No reports built yet.</p>'
-    return _shell(f"{_ko('reports')} / Reports", "reports", table)
+        return _shell(f"{_ko('reports')} / Reports", "reports", (
+            f'<h2 class="rpt-head">{_ko("reports")}</h2><hr class="rpt-hr">'
+            '<p class="empty">No reports built yet.</p>'
+        ))
+
+    control_bar = (
+        '<div class="rpt-bar">'
+        f'<div class="rpt-count">총 <span class="mono" id="rpt-shown-count">{total}</span>건 '
+        '(Page : <span class="mono" id="rpt-page-no">1</span>/<span class="mono" id="rpt-page-total">1</span>)</div>'
+        '<div class="rpt-controls">'
+        '<select id="rpt-field" aria-label="검색 필드"><option value="title">제목</option></select>'
+        '<input id="rpt-q" type="text" placeholder="검색어" aria-label="검색어" '
+        'onkeydown="if(event.key===\'Enter\')window.__rptSearch()">'
+        '<button type="button" class="rpt-btn rpt-btn-search" onclick="window.__rptSearch()">🔍 검색</button>'
+        '<button type="button" class="rpt-btn rpt-btn-reset" onclick="window.__rptReset()">⟳ 초기화</button>'
+        '</div></div>'
+    )
+    table = (
+        '<div class="table-wrap"><table class="rpt-table">'
+        '<tr><th>번호</th><th>제목</th><th>등록일</th><th>첨부</th><th>버전</th></tr>'
+        f'<tbody id="rpt-body">{body_rows}</tbody>'
+        '</table></div>'
+        '<div class="rpt-pager" id="rpt-pager"></div>'
+    )
+    return _shell(f"{_ko('reports')} / Reports", "reports", (
+        f'<style>{_REPORTS_CSS}</style>'
+        f'<h2 class="rpt-head">{_ko("reports")}</h2><hr class="rpt-hr">'
+        f'{control_bar}{table}{_REPORTS_JS}'
+    ))
+
+
+def _attach_cell(r):
+    """Honest attachment count: how many of this report's two possible artifacts (HTML, PDF) have
+    actually been built, per op.list_reports()'s html_status/pdf_status -- never a fabricated
+    number. Blank (no paperclip) when neither artifact exists yet."""
+    n = (1 if r["html_status"] == "HTML_READY" else 0) + (1 if r["pdf_status"] == "PDF_READY" else 0)
+    if n == 0:
+        return ""
+    return f'📎 {n}'
 
 
 def render_gaps():

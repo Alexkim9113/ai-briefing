@@ -58,4 +58,87 @@ footer{margin-top:56px;padding:20px 24px 40px;border-top:1px solid var(--line);f
   .kpi-row{gap:10px}
   .kpi{flex:0 0 calc(50% - 5px);max-width:calc(50% - 5px);padding:12px 14px}
 }
-</style></head><body><header><h1><span class='mx'>METAXIS</span> Intelligence Workbench (Operator)</h1></header><nav aria-label='Operator navigation'><a href="../overview/" class="">오늘</a><a href="../daily_discovery/" class="">수집정보</a><a href="../emerging_issues/" class="">이슈</a><a href="../intelligence_index/" class="">인텔리전스</a><a href="../reports/" class="active">보고서</a></nav><main aria-label='Operator workspace'><div class="table-wrap"><table><tr><th>Report</th><th>Topic</th><th>Version</th><th>Readiness</th><th>Generated</th><th>HTML</th><th>PDF</th></tr><tr><td><a href="../../intelligence/report_intel_87210a61730c22b9_v1/">report_intel_87210a61730c22b9_v1</a></td><td>AI_ENERGY_INFRA</td><td>1</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-01T05:37:21.777263+00:00</td><td><span class="status status-html_ready">HTML_READY</span></td><td><span class="status status-pdf_ready">PDF_READY</span></td></tr><tr><td><a href="../../intelligence/report_intel_87210a61730c22b9_v2/">report_intel_87210a61730c22b9_v2</a></td><td>AI_ENERGY_INFRA</td><td>2</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-01T11:10:28.104446+00:00</td><td><span class="status status-html_not_built">HTML_NOT_BUILT</span></td><td><span class="status status-pdf_not_built">PDF_NOT_BUILT</span></td></tr><tr><td><a href="../../intelligence/report_intel_87210a61730c22b9_v3/">report_intel_87210a61730c22b9_v3</a></td><td>AI_ENERGY_INFRA</td><td>3</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-01T11:50:11.491350+00:00</td><td><span class="status status-html_not_built">HTML_NOT_BUILT</span></td><td><span class="status status-pdf_not_built">PDF_NOT_BUILT</span></td></tr><tr><td><a href="../../intelligence/report_intel_87210a61730c22b9_v4/">report_intel_87210a61730c22b9_v4</a></td><td>AI_ENERGY_INFRA</td><td>4</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-01T21:06:11.889163+00:00</td><td><span class="status status-html_ready">HTML_READY</span></td><td><span class="status status-pdf_ready">PDF_READY</span></td></tr><tr><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v1/">report_intel_dbab7b01963396b5_v1</a></td><td>AI_LABOR</td><td>1</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-01T05:37:21.781785+00:00</td><td><span class="status status-html_ready">HTML_READY</span></td><td><span class="status status-pdf_ready">PDF_READY</span></td></tr><tr><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v2/">report_intel_dbab7b01963396b5_v2</a></td><td>AI_LABOR</td><td>2</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-02T02:56:50.510890+00:00</td><td><span class="status status-html_ready">HTML_READY</span></td><td><span class="status status-pdf_ready">PDF_READY</span></td></tr><tr><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v3/">report_intel_dbab7b01963396b5_v3</a></td><td>AI_LABOR</td><td>3</td><td><span class="status status-conditionally_ready">CONDITIONALLY_READY</span></td><td class="mono">2026-10-02T05:18:27.506330+00:00</td><td><span class="status status-html_ready">HTML_READY</span></td><td><span class="status status-pdf_ready">PDF_READY</span></td></tr></table></div></main><footer>METAXIS Operator &middot; Private Workspace</footer></body></html>
+</style></head><body><header><h1><span class='mx'>METAXIS</span> Intelligence Workbench (Operator)</h1></header><nav aria-label='Operator navigation'><a href="../overview/" class="">오늘</a><a href="../daily_discovery/" class="">수집정보</a><a href="../emerging_issues/" class="">이슈</a><a href="../intelligence_index/" class="">인텔리전스</a><a href="../reports/" class="active">보고서</a></nav><main aria-label='Operator workspace'><style>
+.rpt-head{text-align:center;margin:0 0 10px}
+.rpt-hr{border:none;border-top:1px solid var(--line);margin:0 0 18px}
+.rpt-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px}
+.rpt-count{color:var(--sub);font-size:0.88em}
+.rpt-count .mono{color:var(--ink)}
+.rpt-controls{display:flex;flex-wrap:wrap;gap:8px}
+.rpt-controls select,.rpt-controls input{background:var(--soft);color:var(--ink);border:1px solid var(--line);
+border-radius:8px;padding:6px 10px;font-family:inherit;font-size:0.9em}
+.rpt-btn{border-radius:8px;padding:6px 14px;font-size:0.9em;font-weight:600;border:1px solid var(--line);
+cursor:pointer;font-family:inherit}
+.rpt-btn-search{background:#e08a2e;color:#1a1340;border-color:#e08a2e}
+.rpt-btn-reset{background:#3a3a46;color:var(--ink)}
+table.rpt-table td.num,table.rpt-table td.views{text-align:right;font-family:'Space Grotesk','Pretendard',monospace}
+table.rpt-table td.attach{text-align:center;color:var(--sub);font-size:0.9em}
+.rpt-pager{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:16px 0 0}
+.rpt-pager button{background:var(--soft);color:var(--text);border:1px solid var(--line);border-radius:8px;
+padding:5px 11px;font-size:0.85em;cursor:pointer;font-family:inherit}
+.rpt-pager button.active{background:linear-gradient(var(--soft),var(--soft)) padding-box,var(--grad) border-box;
+border:1.5px solid transparent;color:var(--ink);font-weight:700}
+.rpt-pager button:disabled{opacity:.4;cursor:default}
+</style><h2 class="rpt-head">보고서</h2><hr class="rpt-hr"><div class="rpt-bar"><div class="rpt-count">총 <span class="mono" id="rpt-shown-count">7</span>건 (Page : <span class="mono" id="rpt-page-no">1</span>/<span class="mono" id="rpt-page-total">1</span>)</div><div class="rpt-controls"><select id="rpt-field" aria-label="검색 필드"><option value="title">제목</option></select><input id="rpt-q" type="text" placeholder="검색어" aria-label="검색어" onkeydown="if(event.key==='Enter')window.__rptSearch()"><button type="button" class="rpt-btn rpt-btn-search" onclick="window.__rptSearch()">🔍 검색</button><button type="button" class="rpt-btn rpt-btn-reset" onclick="window.__rptReset()">⟳ 초기화</button></div></div><div class="table-wrap"><table class="rpt-table"><tr><th>번호</th><th>제목</th><th>등록일</th><th>첨부</th><th>버전</th></tr><tbody id="rpt-body"><tr data-title="AI_ENERGY_INFRA"><td class="num">7</td><td><a href="../../intelligence/report_intel_87210a61730c22b9_v1/">AI_ENERGY_INFRA <span class="mono empty">report_intel_87210a61730c22b9_v1</span></a></td><td class="mono">2026-10-01</td><td class="attach">📎 2</td><td class="views">v1</td></tr><tr data-title="AI_ENERGY_INFRA"><td class="num">6</td><td><a href="../../intelligence/report_intel_87210a61730c22b9_v2/">AI_ENERGY_INFRA <span class="mono empty">report_intel_87210a61730c22b9_v2</span></a></td><td class="mono">2026-10-01</td><td class="attach"></td><td class="views">v2</td></tr><tr data-title="AI_ENERGY_INFRA"><td class="num">5</td><td><a href="../../intelligence/report_intel_87210a61730c22b9_v3/">AI_ENERGY_INFRA <span class="mono empty">report_intel_87210a61730c22b9_v3</span></a></td><td class="mono">2026-10-01</td><td class="attach"></td><td class="views">v3</td></tr><tr data-title="AI_ENERGY_INFRA"><td class="num">4</td><td><a href="../../intelligence/report_intel_87210a61730c22b9_v4/">AI_ENERGY_INFRA <span class="mono empty">report_intel_87210a61730c22b9_v4</span></a></td><td class="mono">2026-10-01</td><td class="attach">📎 2</td><td class="views">v4</td></tr><tr data-title="AI_LABOR"><td class="num">3</td><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v1/">AI_LABOR <span class="mono empty">report_intel_dbab7b01963396b5_v1</span></a></td><td class="mono">2026-10-01</td><td class="attach">📎 2</td><td class="views">v1</td></tr><tr data-title="AI_LABOR"><td class="num">2</td><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v2/">AI_LABOR <span class="mono empty">report_intel_dbab7b01963396b5_v2</span></a></td><td class="mono">2026-10-02</td><td class="attach">📎 2</td><td class="views">v2</td></tr><tr data-title="AI_LABOR"><td class="num">1</td><td><a href="../../intelligence/report_intel_dbab7b01963396b5_v3/">AI_LABOR <span class="mono empty">report_intel_dbab7b01963396b5_v3</span></a></td><td class="mono">2026-10-02</td><td class="attach">📎 2</td><td class="views">v3</td></tr></tbody></table></div><div class="rpt-pager" id="rpt-pager"></div>
+<script>
+(function(){
+  var PAGE_SIZE = 15;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#rpt-body tr'));
+  var visible = rows.slice();
+  var page = 1;
+
+  function applyFilter(){
+    var field = document.getElementById('rpt-field'); field = field ? field.value : 'title';
+    var q = document.getElementById('rpt-q'); q = q ? q.value.trim().toLowerCase() : '';
+    visible = rows.filter(function(tr){
+      if(!q) return true;
+      var val = (tr.dataset[field] || '').toLowerCase();
+      return val.indexOf(q) !== -1;
+    });
+    page = 1;
+    render();
+  }
+
+  function resetFilter(){
+    var q = document.getElementById('rpt-q'); if(q) q.value = '';
+    visible = rows.slice();
+    page = 1;
+    render();
+  }
+
+  function pageCount(){
+    return Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
+  }
+
+  function render(){
+    var total = pageCount();
+    if(page > total) page = total;
+    rows.forEach(function(tr){ tr.style.display = 'none'; });
+    var start = (page - 1) * PAGE_SIZE;
+    visible.slice(start, start + PAGE_SIZE).forEach(function(tr){ tr.style.display = ''; });
+
+    var countEl = document.getElementById('rpt-shown-count');
+    if(countEl) countEl.textContent = visible.length;
+    var pageEl = document.getElementById('rpt-page-no');
+    if(pageEl) pageEl.textContent = page;
+    var totalEl = document.getElementById('rpt-page-total');
+    if(totalEl) totalEl.textContent = total;
+
+    var pager = document.getElementById('rpt-pager');
+    if(!pager) return;
+    var html = '';
+    html += '<button ' + (page <= 1 ? 'disabled' : '') + ' onclick="window.__rptGo(' + (page - 1) + ')">‹ 이전</button>';
+    for(var p = 1; p <= total; p++){
+      html += '<button class="' + (p === page ? 'active' : '') + '" onclick="window.__rptGo(' + p + ')">' + p + '</button>';
+    }
+    html += '<button ' + (page >= total ? 'disabled' : '') + ' onclick="window.__rptGo(' + (page + 1) + ')">다음 ›</button>';
+    pager.innerHTML = html;
+  }
+
+  window.__rptGo = function(p){ page = p; render(); };
+  window.__rptSearch = applyFilter;
+  window.__rptReset = resetFilter;
+  render();
+})();
+</script>
+</main><footer>METAXIS Operator &middot; Private Workspace</footer></body></html>
