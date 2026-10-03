@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-03T13:52:42.885734+00:00",
+ "run_at": "2026-10-03T14:26:04.342105+00:00",
  "environment": "GITHUB_ACTIONS",
  "note": "N-6 Priority 4 -- live policy research acquisition attempt. No evidence item is admitted into any Intelligence Object/Claim from this run unless acquisition_outcome == SEARCH_RUN_NO_EVIDENCE or better; ACCESS_BLOCKED/SEARCH_NOT_RUN/NO_REGISTERED_SOURCE rows contribute nothing to the evidence graph.",
  "results": [
@@ -11,7 +11,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T13:52:42.368085+00:00"
+   "checked_at": "2026-10-03T14:26:03.582824+00:00"
   },
   {
    "topic": "AI_ENERGY_INFRA",
@@ -21,7 +21,7 @@
    "acquisition_outcome": "ACCESS_BLOCKED",
    "http_status": "AUTH_REQUIRED",
    "proxy_error": "1 attempt(s) failed: HTTP Error 403: Forbidden",
-   "checked_at": "2026-10-03T13:52:42.620150+00:00"
+   "checked_at": "2026-10-03T14:26:03.852228+00:00"
   },
   {
    "topic": "AI_LABOR",
@@ -31,7 +31,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T13:52:42.662322+00:00"
+   "checked_at": "2026-10-03T14:26:03.900828+00:00"
   },
   {
    "topic": "AI_LABOR",
@@ -41,7 +41,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T13:52:42.885699+00:00"
+   "checked_at": "2026-10-03T14:26:04.342062+00:00"
   },
   {
    "topic": "AI_ENERGY_INFRA",
