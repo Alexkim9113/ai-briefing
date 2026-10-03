@@ -64,7 +64,7 @@
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 7,
       "independent_source_count": 18,
-      "related_event_count": 19,
+      "related_event_count": 20,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
@@ -119,12 +119,12 @@
       "field": "국방·안보",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 6,
-      "independent_source_count": 10,
-      "related_event_count": 10,
+      "independent_source_count": 11,
+      "related_event_count": 11,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 10개",
+      "reason": "6일 연속 반복, 독립 출처 11개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -240,6 +240,20 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
+      "candidate_id": "cand_76756f28967f6feb",
+      "title": "유럽 관련 동향: AI와 U-space의 만남 – 유럽이 아직 해결하지 못한 규제 상의 충돌",
+      "field": "기술",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 3,
+      "independent_source_count": 4,
+      "related_event_count": 4,
+      "tier1_present": false,
+      "related_intelligence_topic": null,
+      "evidence_quality": "UNKNOWN",
+      "reason": "3일 연속 반복, 독립 출처 4개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
       "candidate_id": "cand_47f19b503b3dcb72",
       "title": "SK하이닉스",
       "field": "기술",
@@ -263,20 +277,6 @@
       "related_event_count": 3,
       "tier1_present": false,
       "related_intelligence_topic": "AI_ENERGY_INFRA",
-      "evidence_quality": "UNKNOWN",
-      "reason": "2일 연속 반복, 독립 출처 3개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_31e6bcfc40a1388a",
-      "title": "유럽 관련 동향: AI와 U-space의 만남 – 유럽이 아직 해결하지 못한 규제 상의 충돌",
-      "field": "법·제도",
-      "region": "GLOBAL/UNKNOWN",
-      "recurring_days": 2,
-      "independent_source_count": 3,
-      "related_event_count": 3,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "2일 연속 반복, 독립 출처 3개",
       "status": "INTELLIGENCE_CANDIDATE"
