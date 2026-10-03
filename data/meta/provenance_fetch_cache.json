@@ -3508,5 +3508,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-03T05:43:23.745861+00:00"
+ },
+ "ddf1fd6b4dfb5eff2ed77ac6d92400b4c461cfbfb0dd586454c60d7311da4ecd": {
+  "url": "https://www.donga.com/news/Society/article/all/20261002/134776767/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:00.332692+00:00"
+ },
+ "63d491c1dfda6719be5ef59a7f95b9c6b04e59278a9341fc6b1fad32df52cc22": {
+  "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003271819",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:02.538727+00:00"
+ },
+ "45ac3f294e4108cb229e05e6fe24453ae38417ec5885585c86b56cb65f32940d": {
+  "url": "https://www.newsis.com/view/NISX20261003_0003813691",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:03.213706+00:00"
+ },
+ "eb8a4f0db6870fe3a2829f6c2840ca53892f9810e6eb0fb5e8e5523f887119a7": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3712644",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:05.070519+00:00"
+ },
+ "b0ceb739c5e9c935e348d4988170fc8e896dbc5b4db06777ffa34cbce3a95cb4": {
+  "url": "https://www.mk.co.kr/news/politics/12167836",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:05.602238+00:00"
+ },
+ "95b98b1c634412561716460f0672511b51712cee13fbacf23551bffcdccf39b7": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215940",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:06.872883+00:00"
+ },
+ "b3b887244c232e15af643f803030956e3eedc32598219f082c06eb906c4f1471": {
+  "url": "https://www.donga.com/news/Economy/article/all/20261002/134775793/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:08.650390+00:00"
+ },
+ "9eee4a3af23d00c0b92aa1f7ce16e947203f4b012100c5bbd33de90b60c1f403": {
+  "url": "https://www.newsis.com/view/NISX20261003_0003813645",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:09.362922+00:00"
+ },
+ "fcaa2b3d14b2782107ea7f4ff674ba58429ba19f7236bc7b2edf49e193eb2008": {
+  "url": "https://www.gukjenews.com/news/articleView.html?idxno=3712602",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:10.719172+00:00"
+ },
+ "d826af8f963ab3cb6bc4e42badd018273d46e0070e5b31b751deff3ee2b68028": {
+  "url": "https://www.yna.co.kr/view/AKR20261003038151002",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T11:35:11.857461+00:00"
  }
 }
