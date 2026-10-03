@@ -65,7 +65,63 @@
   "relations": [],
   "uncertainties": []
  },
- "552ee46dd53770f6": null,
+ "552ee46dd53770f6": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "Okta builds shared architecture for agent runtime security",
+    "claim_type": "statement",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "shared architecture for agent runtime security",
+    "predicate": "builds",
+    "subject": "Okta",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "Agent runtime security requires controls across the technology stack as enterprises move AI agents into production.",
+    "claim_type": "statement",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "controls across the technology stack",
+    "predicate": "requires",
+    "subject": "Agent runtime security",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "direct_quote",
+    "object": "shared architecture for agent runtime security",
+    "reason": "제목에서 Okta가 agent runtime security를 위한 공유 아키텍처를 구축한다고 직접 명시함",
+    "relation": "builds",
+    "source_claim_ids": [
+     "Okta builds shared architecture for agent runtime security"
+    ],
+    "subject": "Okta",
+    "support_type": "explicit_mention"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "direct_quote",
+    "object": "controls across the technology stack",
+    "reason": "요약에서 기업들이 AI 에이전트를 프로덕션으로 전환함에 따라 기술 스택 전반에 걸친 통제가 필요하다고 직접 명시함",
+    "relation": "requires",
+    "source_claim_ids": [
+     "Agent runtime security requires controls across the technology stack as enterprises move AI agents into production."
+    ],
+    "subject": "Agent runtime security",
+    "support_type": "explicit_mention"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ },
  "5af42d7c7081d854": {
   "claims": [
    {

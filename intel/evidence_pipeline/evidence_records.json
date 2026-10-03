@@ -6,7 +6,7 @@
   "contradicts_ids": [],
   "created_at": "2026-09-29T09:10:55.689432+00:00",
   "direction": null,
-  "document_id": "2075b886be535ebc",
+  "document_id": "02de2b66c27b37fc",
   "domain_scope": [],
   "domains": [],
   "entities": [],
@@ -16,7 +16,7 @@
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
   "fact_id": null,
-  "first_seen": "2026-09-28T21:20:01-04:00",
+  "first_seen": "2026-09-29T01:24:18+00:00",
   "geographic_scope": null,
   "history": [
    {
@@ -28,20 +28,20 @@
   "institutions": [],
   "interpretation_method": "GEMINI_CANDIDATE",
   "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-28T21:20:01-04:00",
-  "object": "the future of imaging",
+  "last_seen": "2026-09-29T01:24:18+00:00",
+  "object": "shared architecture for agent runtime security",
   "population_scope": null,
-  "relation": "are shaping",
+  "relation": "builds",
   "resources": [],
-  "source_id": "src_techxplore_com",
+  "source_id": "src_siliconangle_com",
   "source_type": null,
   "structural_change_id_hint": null,
-  "subject": "AI and physics",
+  "subject": "Okta",
   "support_type": "UNKNOWN",
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
  "evr_10": {
@@ -74,6 +74,96 @@
   "interpretation_method": "GEMINI_CANDIDATE",
   "interpretation_status": "CANDIDATE",
   "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "Surge seed investment ceiling to $5M",
+  "population_scope": null,
+  "relation": "increased_investment_ceiling",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
+  "value": null
+ },
+ "evr_11": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-01T05:33:55.719025+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_11",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-01T05:34:06.214608+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "global markets",
+  "population_scope": null,
+  "relation": "market_focus",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV's Surge cohort",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
+  "value": null
+ },
+ "evr_12": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-01T05:33:55.719025+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_12",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-01T05:34:06.214611+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
   "object": "India",
   "population_scope": null,
   "relation": "geographic_distribution",
@@ -86,15 +176,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_11": {
+ "evr_13": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-01T05:33:55.719025+00:00",
+  "created_at": "2026-10-02T02:36:39.889163+00:00",
   "direction": null,
   "document_id": "626a1a31b56e8ec9",
   "domain_scope": [],
@@ -104,7 +194,7 @@
    "네이버"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_11",
+  "evidence_record_id": "evr_13",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -113,7 +203,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-01T05:34:06.214608+00:00",
+    "at": "2026-10-02T02:37:05.242579+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -134,10 +224,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_12": {
+ "evr_14": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -147,7 +237,7 @@
   "claim_id": "688c6d92f147a96b:c1",
   "claim_type": "MEDIA_REPORTED",
   "contradicts_ids": [],
-  "created_at": "2026-10-01T05:33:55.719025+00:00",
+  "created_at": "2026-10-02T09:02:20.382060+00:00",
   "direction": null,
   "document_id": "688c6d92f147a96b",
   "domain_scope": [],
@@ -156,7 +246,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_12",
+  "evidence_record_id": "evr_14",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -165,7 +255,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-01T05:34:06.214611+00:00",
+    "at": "2026-10-02T09:02:51.316420+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -188,22 +278,22 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_13": {
+ "evr_15": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-02T02:36:39.889163+00:00",
+  "created_at": "2026-10-02T15:52:09.580433+00:00",
   "direction": null,
   "document_id": "875cad4e1ea46687",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_13",
+  "evidence_record_id": "evr_15",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -212,7 +302,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-02T02:37:05.242579+00:00",
+    "at": "2026-10-02T15:52:22.184836+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -233,22 +323,22 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_14": {
+ "evr_16": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-02T09:02:20.382060+00:00",
+  "created_at": "2026-10-02T15:52:09.580433+00:00",
   "direction": null,
   "document_id": "9aac76b6f2c6084f",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_14",
+  "evidence_record_id": "evr_16",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -257,7 +347,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-02T09:02:51.316420+00:00",
+    "at": "2026-10-02T15:52:22.184838+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -278,15 +368,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_15": {
+ "evr_17": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-02T15:52:09.580433+00:00",
+  "created_at": "2026-10-03T11:37:46.437742+00:00",
   "direction": null,
   "document_id": "a6575ff74981de4c",
   "domain_scope": [],
@@ -295,7 +385,7 @@
    "Nvidia"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_15",
+  "evidence_record_id": "evr_17",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -304,7 +394,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-02T15:52:22.184836+00:00",
+    "at": "2026-10-03T11:38:15.397915+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -325,15 +415,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_16": {
+ "evr_18": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-02T15:52:09.580433+00:00",
+  "created_at": "2026-10-03T11:37:46.437742+00:00",
   "direction": null,
   "document_id": "a6575ff74981de4c",
   "domain_scope": [],
@@ -342,7 +432,7 @@
    "Nvidia"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_16",
+  "evidence_record_id": "evr_18",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -351,7 +441,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-02T15:52:22.184838+00:00",
+    "at": "2026-10-03T11:38:15.397917+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -372,10 +462,55 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
  "evr_2": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "02de2b66c27b37fc",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_2",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T01:24:18+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798127+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T01:24:18+00:00",
+  "object": "controls across the technology stack",
+  "population_scope": null,
+  "relation": "requires",
+  "resources": [],
+  "source_id": "src_siliconangle_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Agent runtime security",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
+  "value": null
+ },
+ "evr_3": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
@@ -387,7 +522,7 @@
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_2",
+  "evidence_record_id": "evr_3",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -396,7 +531,52 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798127+00:00",
+    "at": "2026-09-29T09:10:55.798128+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "HUMAN_REJECTED",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-28T21:20:01-04:00",
+  "object": "the future of imaging",
+  "population_scope": null,
+  "relation": "are shaping",
+  "resources": [],
+  "source_id": "src_techxplore_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "AI and physics",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
+  "value": null
+ },
+ "evr_4": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "direction": null,
+  "document_id": "2075b886be535ebc",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_4",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T21:20:01-04:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-09-29T09:10:55.798130+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -417,10 +597,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_3": {
+ "evr_5": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -430,7 +610,7 @@
   "claim_id": "22177298ebd0d964:c1",
   "claim_type": "MEDIA_REPORTED",
   "contradicts_ids": [],
-  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "created_at": "2026-09-29T23:14:32.377619+00:00",
   "direction": null,
   "document_id": "22177298ebd0d964",
   "domain_scope": [],
@@ -439,7 +619,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_3",
+  "evidence_record_id": "evr_5",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -448,11 +628,11 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798128+00:00",
+    "at": "2026-09-29T23:14:41.180526+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
-  "human_review_status": "HUMAN_REJECTED",
+  "human_review_status": "PENDING",
   "institutions": [],
   "interpretation_method": "RULE_MAPPING",
   "interpretation_status": "CANDIDATE",
@@ -471,22 +651,22 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_4": {
+ "evr_6": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-09-29T09:10:55.689432+00:00",
+  "created_at": "2026-09-30T01:50:44.594430+00:00",
   "direction": null,
   "document_id": "243bfa5dd690514d",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_4",
+  "evidence_record_id": "evr_6",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -495,7 +675,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T09:10:55.798130+00:00",
+    "at": "2026-09-30T01:51:04.884521+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -516,22 +696,22 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_5": {
+ "evr_7": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-09-29T23:14:32.377619+00:00",
+  "created_at": "2026-09-30T04:56:27.408009+00:00",
   "direction": null,
   "document_id": "243bfa5dd690514d",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_5",
+  "evidence_record_id": "evr_7",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -540,7 +720,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-29T23:14:41.180526+00:00",
+    "at": "2026-09-30T04:56:53.656487+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -561,10 +741,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_6": {
+ "evr_8": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -574,14 +754,14 @@
   "claim_id": "3458780fabb08a16:c1",
   "claim_type": "MEDIA_REPORTED",
   "contradicts_ids": [],
-  "created_at": "2026-09-30T01:50:44.594430+00:00",
+  "created_at": "2026-09-30T09:01:51.372770+00:00",
   "direction": null,
   "document_id": "3458780fabb08a16",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_6",
+  "evidence_record_id": "evr_8",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -590,7 +770,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-30T01:51:04.884521+00:00",
+    "at": "2026-09-30T09:02:38.011813+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -613,15 +793,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  },
- "evr_7": {
+ "evr_9": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-09-30T04:56:27.408009+00:00",
+  "created_at": "2026-09-30T09:01:51.372770+00:00",
   "direction": null,
   "document_id": "3b69094bd9c06432",
   "domain_scope": [],
@@ -631,7 +811,7 @@
    "xAI"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_7",
+  "evidence_record_id": "evr_9",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -640,7 +820,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-09-30T04:56:53.656487+00:00",
+    "at": "2026-09-30T09:02:38.011816+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -661,97 +841,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
-  "value": null
- },
- "evr_8": {
-  "_type_specific": {},
-  "claim_id": null,
-  "claim_type": null,
-  "contradicts_ids": [],
-  "created_at": "2026-09-30T09:01:51.372770+00:00",
-  "direction": null,
-  "document_id": "597975da49400eea",
-  "domain_scope": [],
-  "domains": [],
-  "entities": [],
-  "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_8",
-  "evidence_strength": "LOW",
-  "evidence_type": "OTHER",
-  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T00:30:00+00:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-09-30T09:02:38.011813+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "PENDING",
-  "institutions": [],
-  "interpretation_method": "GEMINI_CANDIDATE",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T00:30:00+00:00",
-  "object": "Surge seed investment ceiling to $5M",
-  "population_scope": null,
-  "relation": "increased_investment_ceiling",
-  "resources": [],
-  "source_id": "src_techcrunch_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "Peak XV",
-  "support_type": "DIRECT_SUPPORT",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
-  "value": null
- },
- "evr_9": {
-  "_type_specific": {},
-  "claim_id": null,
-  "claim_type": null,
-  "contradicts_ids": [],
-  "created_at": "2026-09-30T09:01:51.372770+00:00",
-  "direction": null,
-  "document_id": "597975da49400eea",
-  "domain_scope": [],
-  "domains": [],
-  "entities": [],
-  "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_9",
-  "evidence_strength": "LOW",
-  "evidence_type": "OTHER",
-  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T00:30:00+00:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-09-30T09:02:38.011816+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "PENDING",
-  "institutions": [],
-  "interpretation_method": "GEMINI_CANDIDATE",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T00:30:00+00:00",
-  "object": "global markets",
-  "population_scope": null,
-  "relation": "market_focus",
-  "resources": [],
-  "source_id": "src_techcrunch_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "Peak XV's Surge cohort",
-  "support_type": "DIRECT_SUPPORT",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-10-03T05:45:12.192364+00:00",
+  "updated_at": "2026-10-03T11:37:46.437742+00:00",
   "value": null
  }
 }
