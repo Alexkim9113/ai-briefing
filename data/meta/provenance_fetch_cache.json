@@ -3928,5 +3928,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-10-03T15:14:54.875895+00:00"
+ },
+ "a5d70dadb1a5902090c8b0a00a2ade7be47ac5f358b3941dfe6461b0a250058c": {
+  "url": "https://www.itbiznews.com/news/articleView.html?idxno=227018",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T16:46:44.304717+00:00"
+ },
+ "f30c9853d2688e3c39474ea870bc7e6be8a33474d57a324b305ea7ea931842e5": {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBkR3M2QWthMVNJczRIZ2RpaWNIZ2RvaGw3ZGpjNkhhOWFFX1BwQnhGZXlybmxHeFJZLXdkX0lHSERzZHpiQVQ2ajZDWmJmd21XOURtVlRXNWRtbzlnQlVENXN0RlBXTHloX09FTTNIb2xldw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:44.615565+00:00"
+ },
+ "647c37987e055f19e65a8299286cf1a65f3b65f8be88d389f83e434b8f3da04c": {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBrUVJFRExrSnBqNV9FeTl6c3NNMHhueExZYVNnR3VVTU50MkZ2T2JVUUI2anpleUJ5eHRFa2VWQzNTZGJReFN1YXNlMUJBdHkwVENBNV81U3hEVXluaTh0bktxd3RoQkhxcHFCcHRLcGtkdw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:44.759608+00:00"
+ },
+ "4fcb1a6a318769848d322e497f90de168803fbfc41dec3837bab3d688362677c": {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE05bVpfcjRvb1pqLUFvRkRzVFpBMEFLTHFsTkJZcEx4R3NmZTNoRkdQVWFPeHp0bHk4TWpzZDduVW9ibVdHdXB0c3hjcnR3QWVRZWZWeFFsellEcFNtWklaSll2NGhRMGlJdHY2ZXdIQkVydw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:44.919623+00:00"
+ },
+ "eb9947327ac58f284498a01de7b4949f132e42c3a4307d909439a5d9824458ad": {
+  "url": "https://www.engadget.com/2276577/former-openai-employee-says-ai-should-be-regulated-like-nuclear-power-plants/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T16:46:45.087971+00:00"
+ },
+ "5380119dd92f35f1a63655c92a06d613d9aa217ee2ef4f077afc8de28ff2db4d": {
+  "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE82V0x1UVplRlloV3VtLTZGbTZEbnRDYkwzbEJxb3pLVmRVX01EWGpEZF9BQ3Bzajd4NGl5dzcxZUZBbEpnMmJ6cl80cUxsb2dITFdBVHR1LVRRaFRNU2o2MURpRndGMEVfckZqem9wT1laY2pzMUVB?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:45.242829+00:00"
+ },
+ "6062cb7996a4ee77899d1f89761b157f0076bd54f964bf382ef7c5e656fe1976": {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9iUV9qV3hrNXg5YUwtSjJ5aW52NWVzMGgtcV9IeFRQWGlTLVM3TGVmYVV3b1ZwUHUyUkZPeGtfeDAzakRsTFdJMFJpX2tLSzFrQ19vSGlaMlI5aTlMVEk3bWlqOE9PZlM3WlE?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:45.432667+00:00"
+ },
+ "7db03e09c393f1329447b94c8a2e71e83056e1ccc426205b43c159f720241996": {
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNeTEyaUJIWnRaNWFyUXJoaHhQcy0wRDJFVjl5RXliTXE1bjZzMlc1OVBFY0JpODc5b2t6djNPS0JvOUxuWXRUU1VDazE1YUdKeEw4ajB6UVZQNTVBdGtrS0l6Nm0zNHY3UndXb0U2WHhDN0RFOTdYMEI1b0tlam9ZNE4yQm5ZOFFQNzF4TGhNeHZSODU3X2ZoMmJVME5MUFR3?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:45.629799+00:00"
+ },
+ "3d571d08ba3da062982eea9e22ad58c13c7d555072298c5d2be883dfb3511e64": {
+  "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVEdtTjZaRDkzNDVmT2xFendtbWxMaDJtVEpudWZlX2JGWmVFbkxjN1htbDR4MnZOVXltb1N4Ty1iNWFIMEs3aS1JX0tOZkVKckRIdS1UdG5wQV9WV2xMZjV0ZXlOZW5Kb05kSTJDMDg4YjdoUGlOR3FaTUtNR3FJZWhEa1RLdDhNYnJSYg?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:45.775941+00:00"
+ },
+ "fc4b4ae4aeb0bd1626407d4905fdbd55484acc8822df54dfa03bcffb0b2529f4": {
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORG96X2d2YlZHeXRKVFZMamFsVklneUVYNzBnV3RJdWFndV9ONkdheE9IZktfQXU0dnF1b1BLY0VDb3c3TDk1RmUwaS1DcFJtYWNhVWZ2MTNHS21JbkE0SHVoV2lxMm1RWjNwSmJYZ0tOX054UE1mUTVCWFAxRGhJbDBfcHVWZ1ZHNXpRLW1pbw?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T16:46:45.950436+00:00"
  }
 }
