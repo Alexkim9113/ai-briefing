@@ -1,6 +1,6 @@
 {
  "date": "2026-10-03",
- "generated_at": "2026-10-03T22:41+09:00",
+ "generated_at": "2026-10-03T22:50+09:00",
  "items": [
   {
    "id": "b9518e3d741f7cd4",
@@ -49,7 +49,7 @@
    "summary": "실리콘밸리가 부풀려 놓은 AI 기업들의 몸값에 대해 월스트리트가 잇달아 제동을 걸고 나섰다. 천문학적인 인프라 투자 비용 대비 실질적 수익성에 대한 회의론이 월가를 압도하면서, AI 거품 붕괴 시 미국과 세계 경제 전반에 시스템적 위험을 초래할 수 있다는 경고가 전면에 등장하고 있다.",
    "detail": "실리콘밸리가 부풀려 놓은 AI 기업들의 몸값에 대해 월스트리트가 잇달아 제동을 걸고 나섰다.\n천문학적인 인프라 투자 비용 대비 실질적 수익성에 대한 회의론이 월가를 압도하면서, AI 거품 붕괴 시 미국과 세계 경제 전반에 시스템적 위험을 초래할 수 있다는 경고가 전면에 등장하고 있다.\n철도 붐이나 닷컴 버블을 뛰어넘는 자금이 유입되고 있으나, 이를 뒷받침할 구체적인 성과는 턱없이 부족하다는 지적이다.\n특히 앤트로픽의 기업공개(IPO)를 앞두고 월가의 냉각 기류가 구체화되고 있다.",
    "thumb": "",
-   "mx_try": 1
+   "mx_try": 2
   },
   {
    "id": "acba49763ce48301",
@@ -132,7 +132,31 @@
    "summary": "빅테크 기업들이 AI에 대한 대중의 거부감과 불안감을 해소하기 위해 귀여운 마스코트를 잇달아 내세우는 마케팅 전환을 시도하고 있다. AI가 가져올 일자리 감소나 인류에 대한 실존적 위협이라는 중대한 과제를 가벼운 이미지 뒤로 가리려는 시도라는 분석이다.",
    "detail": "빅테크 기업들이 AI에 대한 대중의 거부감과 불안감을 해소하기 위해 귀여운 마스코트를 잇달아 내세우는 마케팅 전환을 시도하고 있다.\nAI가 가져올 일자리 감소나 인류에 대한 실존적 위협이라는 중대한 과제를 가벼운 이미지 뒤로 가리려는 시도라는 분석이다.\n이러한 전략의 최전선에는 메타가 9월 선보인 AI 개인 비서 앱 '뮤즈(Muse)'와 이를 지휘한 Z세대 알렉산드르 왕 최고 AI책임자(CAIO)가 있다.",
    "thumb": "",
-   "mx_try": 2
+   "mx": {
+    "b": "메타가 AI 개인 비서 앱 '뮤즈'를 출시하는 등 빅테크 기업들이 AI에 대한 대중의 불안감과 거부감을 줄이기 위해 친근한 캐릭터 마스코트를 전면에 내세우고 있다.",
+    "p": "일자리 위협이나 실존적 위험 같은 무거운 사회적 의제를 희석하고 일반 대중의 심리적 장벽을 낮추기 위해 AI 인터페이스가 감성적 소비자 브랜딩으로 전환되고 있다.",
+    "t": [
+     "메타",
+     "뮤즈",
+     "알렉산드르 왕",
+     "AI 캐릭터",
+     "사용자 경험"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_f3089a4fb41393b6",
+     "point_text": "일자리 위협이나 실존적 위험 같은 무거운 사회적 의제를 희석하고 일반 대중의 심리적 장벽을 낮추기 위해 AI 인터페이스가 감성적 소비자 브랜딩으로 전환되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "f3089a4fb41393b6"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221654+00:00"
+    }
+   }
   },
   {
    "id": "f3d9c6473825c506",
@@ -217,7 +241,30 @@
    "summary": "김여정 북한 노동당 총무부장은 북한이 3일 오전 동해상에서 중거리전략미사일 발사훈련을 진행했다고 밝혔다. 김 부장은 이날 조선중앙통신을 통해 발표한 담화에서 “오늘 새벽 우리나라 동해상으로 전략무기발사훈련이 진행됐다”며 “훈련에는 중거리전략미사일이 사용됐다”고 했다.",
    "detail": "김여정 북한 노동당 총무부장은 북한이 3일 오전 동해상에서 중거리전략미사일 발사훈련을 진행했다고 밝혔다.\n김 부장은 이날 조선중앙통신을 통해 발표한 담화에서 “오늘 새벽 우리나라 동해상으로 전략무기발사훈련이 진행됐다”며 “훈련에는 중거리전략미사일이 사용됐다”고 했다.\n김 부장은 이날 담화에서 우리 군과 일본 방위성이 발표한 비행거리에도 의미를 부여했다.\n그는 “한국합동참모본부는 미사일이 700㎞ 이상, 일본방위성은 약 680㎞이라고 각각 발표했다”며 “흥미로운 숫자”라고 했다.",
    "thumb": "",
-   "mx_try": 2
+   "mx": {
+    "b": "북한 김여정 총무부장이 동해상 중거리전략미사일 발사훈련 진행 사실을 밝히며 한일 당국의 비행거리 탐지 결과에 대해 언급했다.",
+    "p": "군사 훈련 발표 및 대외 담화 차원의 주장으로, 구체적인 기술 적용이나 세부 군사 스펙에 대해서는 확인된 검증 내용이 제한적이다.",
+    "t": [
+     "북한",
+     "미사일",
+     "국방",
+     "안보"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e4185939bcbaca9a",
+     "point_text": "군사 훈련 발표 및 대외 담화 차원의 주장으로, 구체적인 기술 적용이나 세부 군사 스펙에 대해서는 확인된 검증 내용이 제한적이다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e4185939bcbaca9a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221749+00:00"
+    }
+   }
   },
   {
    "id": "dbb586b64738b2c7",
@@ -853,6 +900,42 @@
    }
   },
   {
+   "id": "7c776ee8b355a855",
+   "title": "울산과학대, 생성형 AI 답변 검증·개인정보 보호 가르친다",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MWHN3R0pQMWRuZlBjLWJRTGRnOTBrU0tacmhyRUhiWmdkOVZ6cU9UMnIwYVl4UG9rSlVXR1RBS3dBQnRiTVJ1alB5TTIwS3d5OTUxQnotQnlXZ2ZBNFFLZGo2N0JLUmNqeUlITQ?oc=5",
+   "source": "중도일보",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-03T13:45:30+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "울산과학대학교가 생성형 AI 답변의 신뢰성을 검증하고 개인정보를 보호하는 교육 과정을 운영한다.",
+    "p": "생성형 AI의 활용 능력을 넘어 환각 현상 검증과 데이터 보안 등 AI 리터러시 및 안전 윤리 교육이 대학 실무 교육으로 확산되고 있다.",
+    "t": [
+     "울산과학대",
+     "생성형 AI",
+     "개인정보 보호",
+     "AI 윤리",
+     "AI 교육"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7c776ee8b355a855",
+     "point_text": "생성형 AI의 활용 능력을 넘어 환각 현상 검증과 데이터 보안 등 AI 리터러시 및 안전 윤리 교육이 대학 실무 교육으로 확산되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7c776ee8b355a855"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221795+00:00"
+    }
+   }
+  },
+  {
    "id": "aa96ce1a5a3cfc51",
    "title": "영상 기획부터 편집까지 AI 활용…LG유플러스, 구글과 크리에이터 교육",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52N0RRVG5KUW5jclgtS09oQm9aOW1QTU85NjlDaEdGTThDc2VwVUlYc2hjZjUxVUl4WWk3QWVOYjV3Z1pZOGdtb3gzY3hPbDQyYVFzZEg1bTNTNGMtYmVsV0YxdzNkcXc?oc=5",
@@ -1241,6 +1324,41 @@
    }
   },
   {
+   "id": "e093d196afe17902",
+   "title": "천안서여중, 몽골 학생들과 AI·체육 공동수업…4년째 교육교류",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE51MDlWUGJVT0JmNTI2V2RrQ3dPOWUtQlNVTE9VMTFCNXpUZWs1T1ViSERaRUVUUlE5NkZEaUdSVGsyT09YajdpY3VfREt1R25ieUw0?oc=5",
+   "source": "아산데일리",
+   "field": "청소년",
+   "category": "news_ko",
+   "published": "2026-10-03T12:15:51+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "천안서여자중학교가 몽골 학생들과 4년째 AI 및 체육 분야 공동수업을 진행하며 교육 교류를 이어갔다.",
+    "p": "AI 기술 실습이 국가 간 청소년 교류 프로그램의 핵심 협력 도구로 활용 범위를 넓히고 있다.",
+    "t": [
+     "천안서여중",
+     "AI 교육",
+     "국제 교류",
+     "교육 프로그램"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_e093d196afe17902",
+     "point_text": "AI 기술 실습이 국가 간 청소년 교류 프로그램의 핵심 협력 도구로 활용 범위를 넓히고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "e093d196afe17902"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221832+00:00"
+    }
+   }
+  },
+  {
    "id": "ad100f96e5d4788e",
    "title": "James Altucher: The Real Ceiling on Artificial Intelligence Isn't Chips or Code. It's Electricity, and He Says Elon Musk Just Found a Way Around It.",
    "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNVk5qQXNsYnlreHN5OE41UW9Cbm0tY1YteUV2QmFzZXh5ZjdqR0ZKZ3NGRVlSUXRXbDl4dHdPZDgxSXBySXBodWdwcXF6VHV3NFBmR0xuQWdWVTRuckZyMUVTMXNNc2tpUV9hSDZZWXNxUU9lZ3NnVWpkR0stWDlneUwyTHZFeXhPVExTUS1uY1FmM1NHdHlMTURSQjBIOGl1cXhyWlBSTHpMWXJpQzJNWTBlamNTVk9PX3oyVFJkamlPSEdVeFBueXprUU5fZXZDbEFsalBSVGxMNWQ2UEk2QUIwWkdQdVVnQ05DVHFicGVDcUgweEJSbnpKTXhkcjc4Z01kNTYtNE5iV0J4d0t1UVhGUGFjRUV6LXRzUXljTUxFQnNkNmVfVFhzMlNiQS1pWFA3N0xSTnUyLXRn0gHCAkFVX3lxTE9WdVpEV0NOb0h3V2ItemhOMXozNVUybGRQY2VNTHREWGM5cWhkbkw2Tm5zeElJWlFKb0hZQVNFeFB6bWJoazVmNUQtLWFLS1VHZE9qcUgxUzBGYXlKZXpKVm4ydXFIMTFPTVkzUDlxaFdDbHd4WnhMNjhhWjU3MGtZc1ZxYjRVc2FSZm5IZWF1YzVMNEI0YVpjb0xXdkpxcDRDakRWWTFoYmlmdERZR0ZPYnRTQUlPczBGU01OQkxLTlV1TFAzdFJVSmhyZWZQWlBMTDdNTU56UUJ4VjBMMjNoNlJXaWZoTlZYLWV3Qjd2cjU3VVNCTXpZbC1WZ0xxQjZWSDdwelJpRjVjTFQ3V1VKb3FOZE1OYjViZGxGX1lHQzVYWi1ZaGwzTmMxR2RxdGNPNnVsNXlqV1lZMGpJcG1kT2c?oc=5",
@@ -1385,6 +1503,40 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-03T11:35:44.449628+00:00"
+    }
+   }
+  },
+  {
+   "id": "36c50cf6ba566f2d",
+   "title": "Pushing the needle too far on AI",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPOG84ZzVDRjliUWxLd1owcGh3NTJVQ0VlVXdid2dtak5LX0pWa1pQa1lYQ1lPc196bzNIdXdCMEVJakVWc0JJdkpkb1kxck05WFpwRUsyVFNSYUhHWFlnZkY2SXBoTzVwb2VYeVF5cEVINmdOU1RKT1UxT0l5R0xINmtB?oc=5",
+   "source": "Halston Media Group",
+   "field": "문화·미디어",
+   "category": "papers",
+   "published": "2026-10-03T12:05:46+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "AI 도입과 활용 범위의 과도한 확장이 미칠 영향에 대한 비판적 시각을 다룬 글이다.",
+    "p": "무분별한 AI 기술 적용에 대한 속도 조절과 적정 활용 기준 마련 필요성이 지속해서 제기되고 있다.",
+    "t": [
+     "AI 비판",
+     "기술 수용",
+     "AI 리스크"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_36c50cf6ba566f2d",
+     "point_text": "무분별한 AI 기술 적용에 대한 속도 조절과 적정 활용 기준 마련 필요성이 지속해서 제기되고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "36c50cf6ba566f2d"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221864+00:00"
     }
    }
   },
@@ -3177,7 +3329,7 @@
      "generated_at": "2026-10-03T02:06:59.352704+00:00"
     }
    },
-   "hot": 6
+   "hot": 5
   },
   {
    "id": "beba8441b8504bfc",
@@ -3962,6 +4114,41 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-03T11:36:13.590580+00:00"
+    }
+   }
+  },
+  {
+   "id": "7998e28bdc988d64",
+   "title": "한성숙 총리 AI 기본사회 실현…민생 개선에 더욱 집중",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9la3E2Zk83MTA3WTVkVTBpMzkyc2U1Mk5pSy1PT3laVlU4QUdfRnVlWjlWcnZTbGhfYUFNdjA1Vnc1d2R4QmV2OHhsMHpFVGsyMFYyLWVuWWNrd9IBWEFVX3lxTE56UTNqLUt6d3EtMENLVEI1WVJ1QUpxQjU3NFFqeTJoRm9idms4RVo1VWo0aWRzaVE3SUlFdlhLbEQyYXF2WVVJdlhiZkliYUNxRzgzd2hqZkg?oc=5",
+   "source": "아주경제",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-03T08:18:57+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "정부 차원에서 AI 기본사회를 구현하고 이를 통해 민생 문제를 개선하겠다는 정책 방향을 제시했다.",
+    "p": "AI 정책의 초점이 단순 산업 육성을 넘어 복지와 민생 개선 등 사회 인프라 전반의 체질 개선으로 이동하고 있다.",
+    "t": [
+     "AI 기본사회",
+     "정책",
+     "공공 AI",
+     "민생"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_7998e28bdc988d64",
+     "point_text": "AI 정책의 초점이 단순 산업 육성을 넘어 복지와 민생 개선 등 사회 인프라 전반의 체질 개선으로 이동하고 있다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "7998e28bdc988d64"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221897+00:00"
     }
    }
   },
@@ -5462,6 +5649,40 @@
    }
   },
   {
+   "id": "42a3025394994ed9",
+   "title": "2026-10-02 서울신문",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5vQnZEWjU4aVlqM0tiaGJrMXhWMEdpSzlyNTY5RjlyX2xOcFNid2pPeXlXdHFHd3Q3VHR1R19wQlliRm1QLUU0dXgxdE9FSDZXdHJVMDcxMUQyRDNPeXo0SG8zV1NtY2hXVXFMMGY1RURZQ1U?oc=5",
+   "source": "서울신문",
+   "field": "",
+   "category": "news_ko",
+   "published": "2026-10-03T04:39:21+00:00",
+   "summary": "",
+   "thumb": "",
+   "mx": {
+    "b": "2026년 10월 2일자 서울신문 기사 모음이다.",
+    "p": "제공된 정보 내에 세부 내용이 포함되지 않았다.",
+    "t": [
+     "언론",
+     "종합 뉴스",
+     "서울신문"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_42a3025394994ed9",
+     "point_text": "제공된 정보 내에 세부 내용이 포함되지 않았다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "42a3025394994ed9"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.221919+00:00"
+    }
+   }
+  },
+  {
    "id": "d970909d28419932",
    "title": "20조원 클러스터가 '훈련장'...피지컬 AI 속도내는 中 창사-Xinhua",
    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE54azFkRDZHQ0tCUFkzUjNTVWs2aHhZWlpmZGFTTUgtZU9IYzhocFl1QV82RHMxaDRBLWUtTEVDVDV0SWFTcmRyNVdPQURORkd4ZmhDM3JBMG1nZmhwT0p2SjJkeHc5N3RTZ3VmN0l1Rl9La3hmWmh6U1lJUHY?oc=5",
@@ -6388,111 +6609,6 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-03T05:44:10.447154+00:00"
-    }
-   }
-  },
-  {
-   "id": "4e4b74e67d9286e5",
-   "title": "AI 로봇, 용광로에 스스로 뛰어들어…‘터미네이터’ 현실로",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjMVpJaElWS2NVRFJGaDBnOW5HWXRBYTNqSTc5NFZ6Ymk3T3ViVGlkNVMzWThyWDJGOXRJV0ZEOVMxWUQ5WkZseF9OR1dhdmh0STBmRTh2WFRrWjZmekEzR09JYUs5STczM1NB?oc=5",
-   "source": "한겨레",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-03T02:57:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "hot": 0,
-   "mx": {
-    "b": "AI 로봇이 용광로에 스스로 뛰어드는 상황이 현실화되었다.",
-    "p": "고위험 작업 환경에서 AI 로봇의 자율 행동이 증가함에 따라 물리적 안전 관리와 윤리적 통제 체계의 필요성이 커지고 있다.",
-    "t": [
-     "AI로봇",
-     "자동화",
-     "로보틱스",
-     "안전"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_4e4b74e67d9286e5",
-     "point_text": "고위험 작업 환경에서 AI 로봇의 자율 행동이 증가함에 따라 물리적 안전 관리와 윤리적 통제 체계의 필요성이 커지고 있다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "4e4b74e67d9286e5"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-03T05:43:34.350755+00:00"
-    }
-   }
-  },
-  {
-   "id": "53ced39dfa587022",
-   "title": "아마존, 美데이터센터 반발에 5년간 1.3조원 지역상생 투자 발표",
-   "link": "https://www.yna.co.kr/view/AKR20261003002100091",
-   "source": "연합뉴스",
-   "field": "",
-   "category": "news_ko",
-   "published": "2026-10-03T02:51:31+09:00",
-   "summary": "(샌프란시스코=연합뉴스) 권영전 특파원 = 세계 1위 클라우드 기업 아마존이 인공지능(AI) 데이터센터 급증에 따른 반발을 무마하고자 대규모 지...",
-   "thumb": "",
-   "mx": {
-    "b": "클라우드 기업 아마존이 AI 데이터센터 급증에 따른 지역 사회의 반발을 완화하기 위해 향후 5년간 1조 3,000억 원 규모의 지역 상생 투자를 단행한다고 발표했다.",
-    "p": "AI 인프라 확충에 필수적인 데이터센터 건립이 지역 사회의 환경 및 자원 소모 우려로 갈등을 빚으면서, 빅테크 기업들의 대규모 지역 상생 투자가 필수적인 대응책으로 자리 잡고 있다.",
-    "t": [
-     "아마존",
-     "데이터센터",
-     "지역상생",
-     "클라우드"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_53ced39dfa587022",
-     "point_text": "AI 인프라 확충에 필수적인 데이터센터 건립이 지역 사회의 환경 및 자원 소모 우려로 갈등을 빚으면서, 빅테크 기업들의 대규모 지역 상생 투자가 필수적인 대응책으로 자리 잡고 있다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "53ced39dfa587022"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-02T20:41:27.488820+00:00"
-    }
-   }
-  },
-  {
-   "id": "9fdbcdb74500e0fb",
-   "title": "한성숙 총리, 개천절 연설 \"AI 기본사회 실현…모두 이롭게 할 것\"",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STVwcWZtZzBJX1YxcjRuOUhBWnlwQV9YN0NTV3Y3MnNZYVJmeFpXcVZFbEE1azcxV0NGQ0ZiRkZlYllEM0RSRUdGcTRmZWRHYWd2N29hc3V1aTUz?oc=5",
-   "source": "뉴스핌",
-   "field": "사회·노동",
-   "category": "news_ko",
-   "published": "2026-10-03T02:46:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "한성숙 총리가 개천절 연설에서 인공지능 기본사회를 실현하여 모두에게 이로운 기술 환경을 만들겠다고 밝혔다.",
-    "p": "AI 기술의 혜택을 전 국민으로 확산하고 공공성을 강화하는 국가 차원의 정책 방향을 시사한다.",
-    "t": [
-     "정부",
-     "AI기본사회",
-     "정책"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_9fdbcdb74500e0fb",
-     "point_text": "AI 기술의 혜택을 전 국민으로 확산하고 공공성을 강화하는 국가 차원의 정책 방향을 시사한다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "9fdbcdb74500e0fb"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-03T05:44:10.447234+00:00"
     }
    }
   },
@@ -10892,46 +11008,6 @@
    }
   },
   {
-   "id": "67bff46b5d5d3c90",
-   "title": "Trump’s Crazy AI Rebrand Was a Loyalty Test for Tech Execs—and It Worked",
-   "link": "https://www.wired.com/story/trumps-crazy-ai-rebrand-was-a-loyalty-test-for-tech-execs-and-it-worked/",
-   "source": "WIRED AI",
-   "field": "",
-   "category": "news_global",
-   "published": "2026-10-02T15:00:00+00:00",
-   "summary": "For years these billionaires gushed obsessively about AI. But they meekly went along when Trump cancelled the term.",
-   "thumb": "",
-   "title_ko": "트럼프의 기상천외한 AI 브랜드 개편은 기술 업계 임원들에 대한 충성심 테스트였으며, 그 전략은 성공했다",
-   "tr": "deepl",
-   "trv": 2,
-   "summary_ko": "수년 동안 이 억만장자들은 AI에 대해 집요할 정도로 열광해 왔다. 하지만 트럼프가 이 용어를 폐기했을 때, 그들은 순순히 따랐다.",
-   "detail_ko": "수년 동안 이 억만장자들은 AI에 대해 집요할 정도로 열광해 왔다.\n하지만 트럼프가 임기를 취소했을 때 그들은 순순히 따랐다.",
-   "mx": {
-    "b": "트럼프 행정부의 인공지능 명칭 변경 지침에 주요 기술 기업 경영진이 별다른 반발 없이 순응했다.",
-    "p": "정치적 권력 구조 앞에서는 거대 빅테크 기업의 자율성이나 기술적 철학보다 정권과의 충성도가 우선시되는 현실을 보여준다.",
-    "t": [
-     "정치",
-     "AI",
-     "빅테크",
-     "규제"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_67bff46b5d5d3c90",
-     "point_text": "정치적 권력 구조 앞에서는 거대 빅테크 기업의 자율성이나 기술적 철학보다 정권과의 충성도가 우선시되는 현실을 보여준다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "67bff46b5d5d3c90"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-02T15:31:05.973868+00:00"
-    }
-   }
-  },
-  {
    "id": "aa71d47157a77b97",
    "title": "Russia’s Latest Propaganda? A.I.-Generated War Songs.",
    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOG8yVU1aUnRKU1BST0JNbTJvYkVCa2UzQVEyQ3B2dkR5N1J2MmowcGp1T0pGd3p1bkRYNWk2Z3Z6M1RHLW95eE45TEZjOEZsQWRFUG42NkxjbUk1SGQzX2dXWE1GZkppcjJtSk1xX1o5ejgwbnF1a2Rtbng3bGVSNWx6ajRPSU56cVE?oc=5",
@@ -11239,41 +11315,6 @@
      "grounding_status": "SOURCE_SUPPORTED",
      "interpretation_type": "DESCRIPTIVE",
      "generated_at": "2026-10-02T15:31:23.942018+00:00"
-    }
-   }
-  },
-  {
-   "id": "bfe82569d4d36523",
-   "title": "OpenAI fires researchers for sharing data with AI safety advocacy group: Report",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRThlSzJNX2x4QU1xOFRhM0ZxTnVGcTRaOW1sOWdJMmdjcmI5OUF4TXZsclN5UFpvdkhJRlhQNzM0Q3BnZ1NfNm03eVRkTzIycVNVbjBpeW5lclo5MklzNFVZaW9QMVJKT3RXSVVlSjZ6SzNTbHl3eXVvUlZQSFFPV3p6N18zMEllbkNTa0VSLTZvc2wtbTJnd3NjUTVQR3lBTnV5bWVYNV9Dd2I1NklIbklPcVdJbDcwUEdpSE1GMWZLQQ?oc=5",
-   "source": "washingtonexaminer.com",
-   "field": "문화·미디어",
-   "category": "papers",
-   "published": "2026-10-02T13:43:00+00:00",
-   "summary": "",
-   "thumb": "",
-   "mx": {
-    "b": "오픈에이아이(OpenAI)가 내부 데이터를 AI 안전성 옹호 단체에 무단 공유한 연구원들을 해고한 것으로 알려졌다.",
-    "p": "AI 안전성과 내부 보안 정책, 그리고 외부 감시 단체와의 정보 공유를 둘러싸고 선두 기업 내부의 갈등과 통제 강화 기조가 드러났다.",
-    "t": [
-     "OpenAI",
-     "AI안전",
-     "내부고발",
-     "연구원"
-    ],
-    "v": 1,
-    "prov": {
-     "point_id": "mxp_bfe82569d4d36523",
-     "point_text": "AI 안전성과 내부 보안 정책, 그리고 외부 감시 단체와의 정보 공유를 둘러싸고 선두 기업 내부의 갈등과 통제 강화 기조가 드러났다.",
-     "claim_ids": [],
-     "evidence_ids": [],
-     "intelligence_ids": [],
-     "source_ids": [
-      "bfe82569d4d36523"
-     ],
-     "grounding_status": "SOURCE_SUPPORTED",
-     "interpretation_type": "DESCRIPTIVE",
-     "generated_at": "2026-10-02T16:34:56.254880+00:00"
     }
    }
   },
@@ -14287,6 +14328,86 @@
    }
   },
   {
+   "id": "f9ed3d0d2c1adb27",
+   "title": "Make Sparse Rewards Count: Density-Aware Reward Aggregation for Multi-Reward RL",
+   "link": "https://huggingface.co/papers/2610.00574",
+   "source": "Hugging Face 오늘의 논문 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-29T20:00:00+00:00",
+   "summary": "Multi-reward reinforcement learning trains large language models to satisfy multiple behavioral objectives simultaneously.",
+   "thumb": "",
+   "summary_ko": "다중 보상 강화 학습은 대규모 언어 모델이 여러 행동 목표를 동시에 달성하도록 훈련시킵니다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "다중 보상 강화 학습은 대규모 언어 모델이 여러 행동 목표를 동시에 달성하도록 훈련시킵니다.",
+   "mx": {
+    "b": "대형언어모델이 여러 행동 목표를 동시에 충족할 수 있도록 희소한 보상을 밀도 기반으로 통합 처리하는 다중 보상 강화학습 방법론을 다룬 연구다.",
+    "p": "복합적인 피드백 환경에서 분산된 보상 신호를 효율적으로 취합해 정렬 학습의 수렴성과 성능을 높이려는 연구 흐름을 반영한다.",
+    "t": [
+     "강화학습",
+     "LLM",
+     "다중 보상",
+     "정렬",
+     "보상 모델"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_f9ed3d0d2c1adb27",
+     "point_text": "복합적인 피드백 환경에서 분산된 보상 신호를 효율적으로 취합해 정렬 학습의 수렴성과 성능을 높이려는 연구 흐름을 반영한다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "f9ed3d0d2c1adb27"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.224163+00:00"
+    }
+   }
+  },
+  {
+   "id": "20e4802c8daeed3a",
+   "title": "EgoTools: Towards Tool-Centric Reasoning in Real-World Egocentric Videos",
+   "link": "https://huggingface.co/papers/2609.39378",
+   "source": "Hugging Face 오늘의 논문 · AI 일반",
+   "field": "AI 일반",
+   "category": "papers",
+   "published": "2026-09-29T20:00:00+00:00",
+   "summary": "Real-world embodied tasks, from everyday activities to professional procedures, require agents to act under physical constraints while tracking evolving object and task states.",
+   "thumb": "",
+   "summary_ko": "일상적인 활동부터 전문적인 절차에 이르기까지 실제 환경에서 수행되는 신체적 과제는, 에이전트가 물리적 제약 조건 하에서 행동하는 동시에 변화하는 대상 및 과제 상태를 추적할 것을 요구합니다.",
+   "tr": "deepl",
+   "trv": 2,
+   "detail_ko": "일상적인 활동부터 전문적인 절차에 이르기까지 실제 환경에서 수행되는 신체적 과제는, 에이전트가 물리적 제약 조건 하에서 행동하는 동시에 변화하는 대상 및 과제 상태를 추적해야 합니다.",
+   "mx": {
+    "b": "실제 환경의 1인칭 시점 영상에서 물리적 제약과 물체 및 작업 상태 변화를 추적해 도구 중심의 추론을 수행하는 'EgoTools' 벤치마크 및 방법론 연구다.",
+    "p": "체화 AI 에이전트가 현실 환경에서 복잡한 도구를 조작하고 작업을 수행하기 위한 시각적 상태 추론 기술의 기초를 다진다.",
+    "t": [
+     "체화 AI",
+     "1인칭 비디오",
+     "도구 조작",
+     "컴퓨터 비전",
+     "비디오 추론"
+    ],
+    "v": 1,
+    "prov": {
+     "point_id": "mxp_20e4802c8daeed3a",
+     "point_text": "체화 AI 에이전트가 현실 환경에서 복잡한 도구를 조작하고 작업을 수행하기 위한 시각적 상태 추론 기술의 기초를 다진다.",
+     "claim_ids": [],
+     "evidence_ids": [],
+     "intelligence_ids": [],
+     "source_ids": [
+      "20e4802c8daeed3a"
+     ],
+     "grounding_status": "SOURCE_SUPPORTED",
+     "interpretation_type": "DESCRIPTIVE",
+     "generated_at": "2026-10-03T13:51:34.224213+00:00"
+    }
+   }
+  },
+  {
    "id": "c7e47bc5bd77151c",
    "title": "과기정통부, 서울대에 ‘인공지능(AI) 반도체 혁신연구소’ 개소... 산·학 협력으로 차세대 인공지능 반도체 기술개발·핵심인재 양성",
    "link": "https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187812",
@@ -14375,7 +14496,7 @@
    "name": "Google News: AI regulation",
    "ok": true,
    "count": 12,
-   "fetched": 85
+   "fetched": 87
   },
   {
    "name": "Google News: AI 기업",
@@ -14399,7 +14520,7 @@
    "name": "Google News: European Commission AI · 정책·국제질서",
    "ok": true,
    "count": 4,
-   "fetched": 65
+   "fetched": 63
   },
   {
    "name": "Google News: European Parliament AI · 정책·국제질서",
@@ -14447,7 +14568,7 @@
    "name": "Google News: NITI Aayog AI (India) · 정책·국제질서",
    "ok": true,
    "count": 0,
-   "fetched": 3
+   "fetched": 5
   },
   {
    "name": "Hugging Face Blog",
@@ -14500,8 +14621,8 @@
   {
    "name": "Nature 머신러닝 · AI 일반",
    "ok": true,
-   "count": 5,
-   "fetched": 30
+   "count": 0,
+   "fetched": 0
   },
   {
    "name": "Nature 법 · 법·윤리·정책",
@@ -14525,7 +14646,7 @@
    "name": "Research: 문화·미디어 · 문화·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 57
+   "fetched": 58
   },
   {
    "name": "Research: 사회·경제 · 사회·경제",
@@ -14537,7 +14658,7 @@
    "name": "Research: 윤리·철학 · 윤리·철학",
    "ok": true,
    "count": 2,
-   "fetched": 68
+   "fetched": 66
   },
   {
    "name": "Research: 청소년·정신건강 · 청소년·정신건강",
@@ -14549,7 +14670,7 @@
    "name": "Research: 환경·동물 · 환경·동물",
    "ok": true,
    "count": 2,
-   "fetched": 56
+   "fetched": 57
   },
   {
    "name": "Sequoia Capital",
@@ -14639,13 +14760,13 @@
    "name": "Topic: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 2,
-   "fetched": 76
+   "fetched": 74
   },
   {
    "name": "Topic: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 2,
-   "fetched": 65
+   "fetched": 63
   },
   {
    "name": "Topic: 에이전트 · 에이전트",
@@ -14657,13 +14778,13 @@
    "name": "Topic: 여성 · 여성",
    "ok": true,
    "count": 2,
-   "fetched": 47
+   "fetched": 48
   },
   {
    "name": "Topic: 저작권·미디어 · 저작권·미디어",
    "ok": true,
    "count": 2,
-   "fetched": 54
+   "fetched": 53
   },
   {
    "name": "Topic: 정치·국방 · 정치·국방",
@@ -14675,13 +14796,13 @@
    "name": "Topic: 철학·윤리·예술 · 철학·윤리·예술",
    "ok": true,
    "count": 2,
-   "fetched": 76
+   "fetched": 77
   },
   {
    "name": "Topic: 청소년·가족 · 청소년·가족",
    "ok": true,
    "count": 2,
-   "fetched": 47
+   "fetched": 50
   },
   {
    "name": "Topic: 피지컬 AI · 피지컬 AI",
@@ -14813,13 +14934,13 @@
    "name": "구글뉴스 주요 뉴스: IT",
    "ok": true,
    "count": 10,
-   "fetched": 58
+   "fetched": 59
   },
   {
    "name": "구글뉴스: AI 정책",
    "ok": true,
    "count": 12,
-   "fetched": 61
+   "fetched": 59
   },
   {
    "name": "구글뉴스: 생성형 AI",
@@ -14837,13 +14958,13 @@
    "name": "국내 대학·연구소 · 국내 연구",
    "ok": true,
    "count": 6,
-   "fetched": 38
+   "fetched": 39
   },
   {
    "name": "국내 분야별 연구 · 국내 연구",
    "ok": true,
    "count": 3,
-   "fetched": 98
+   "fetched": 96
   },
   {
    "name": "국내 연구: 국방·안보 · 국방·안보",
@@ -14861,7 +14982,7 @@
    "name": "국내 연구: 사회·경제 · 사회·경제",
    "ok": true,
    "count": 3,
-   "fetched": 48
+   "fetched": 47
   },
   {
    "name": "국내 연구: 윤리·철학·법 · 윤리·철학·법",
@@ -14885,7 +15006,7 @@
    "name": "국민일보",
    "ok": true,
    "count": 5,
-   "fetched": 67
+   "fetched": 66
   },
   {
    "name": "국제뉴스",
@@ -14927,13 +15048,13 @@
    "name": "더팩트",
    "ok": true,
    "count": 5,
-   "fetched": 37
+   "fetched": 36
   },
   {
    "name": "데일리안",
    "ok": true,
    "count": 5,
-   "fetched": 89
+   "fetched": 88
   },
   {
    "name": "동아일보",
@@ -15041,7 +15162,7 @@
    "name": "주제: AI 철학 · AI 철학",
    "ok": true,
    "count": 3,
-   "fetched": 60
+   "fetched": 58
   },
   {
    "name": "주제: 가족·출산 · 가족·출산",
@@ -15053,7 +15174,7 @@
    "name": "주제: 경제 · 경제",
    "ok": true,
    "count": 3,
-   "fetched": 66
+   "fetched": 64
   },
   {
    "name": "주제: 국방·전쟁 · 국방·전쟁",
@@ -15065,7 +15186,7 @@
    "name": "주제: 동물 · 동물",
    "ok": true,
    "count": 3,
-   "fetched": 56
+   "fetched": 54
   },
   {
    "name": "주제: 로봇 · 로봇",
@@ -15077,13 +15198,13 @@
    "name": "주제: 문화·예술 · 문화·예술",
    "ok": true,
    "count": 3,
-   "fetched": 50
+   "fetched": 51
   },
   {
    "name": "주제: 미디어 · 미디어",
    "ok": true,
    "count": 3,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "주제: 법률 · 법률",
@@ -15095,31 +15216,31 @@
    "name": "주제: 사회·노동 · 사회·노동",
    "ok": true,
    "count": 3,
-   "fetched": 41
+   "fetched": 42
   },
   {
    "name": "주제: 에너지·환경 · 에너지·환경",
    "ok": true,
    "count": 3,
-   "fetched": 53
+   "fetched": 54
   },
   {
    "name": "주제: 에이전트 · 에이전트",
    "ok": true,
    "count": 3,
-   "fetched": 59
+   "fetched": 58
   },
   {
    "name": "주제: 여성 · 여성",
    "ok": true,
    "count": 3,
-   "fetched": 42
+   "fetched": 45
   },
   {
    "name": "주제: 저작권 · 저작권",
    "ok": true,
    "count": 3,
-   "fetched": 31
+   "fetched": 33
   },
   {
    "name": "주제: 정신건강 · 정신건강",
@@ -15131,13 +15252,13 @@
    "name": "주제: 정치 · 정치",
    "ok": true,
    "count": 3,
-   "fetched": 58
+   "fetched": 57
   },
   {
    "name": "주제: 철학·윤리 · 철학·윤리",
    "ok": true,
    "count": 3,
-   "fetched": 52
+   "fetched": 51
   },
   {
    "name": "주제: 청소년 · 청소년",
@@ -15161,7 +15282,7 @@
    "name": "파이낸셜뉴스",
    "ok": true,
    "count": 3,
-   "fetched": 51
+   "fetched": 50
   },
   {
    "name": "프레시안",
@@ -15185,7 +15306,7 @@
    "name": "한국일보",
    "ok": true,
    "count": 5,
-   "fetched": 94
+   "fetched": 95
   },
   {
    "name": "헤럴드경제",
