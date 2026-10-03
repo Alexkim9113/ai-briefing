@@ -4,8 +4,8 @@
  "gemini_enabled": true,
  "pipeline_metrics": {
   "claims_by_status": {
-   "INSUFFICIENT_SOURCE": 358,
-   "SECONDARY_ONLY": 203,
+   "INSUFFICIENT_SOURCE": 357,
+   "SECONDARY_ONLY": 204,
    "SOURCE_LOCATED": 89,
    "SUMMARY_DERIVED": 57
   },
@@ -45,7 +45,7 @@
    "syndication_collapsed": 0
   },
   "interpretation_candidates": 27,
-  "level3_flagged_documents": 146,
+  "level3_flagged_documents": 147,
   "lineage_stopped_at_distribution": {
    "CLAIM": 704,
    "EVIDENCE_RECORD": 3
@@ -73,7 +73,7 @@
   "reports_on_relationships_created": 0,
   "self_references": 3
  },
- "run_at": "2026-10-03T21:53:08.392787+00:00",
+ "run_at": "2026-10-03T22:09:46.599012+00:00",
  "shadow_mode": true,
  "status": "SUCCESS"
 }
