@@ -85,14 +85,16 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 NAV_ITEMS = ("overview", "daily_discovery", "emerging_issues", "research_queue",
              "intelligence_index", "reports", "gaps", "rights", "sources", "source_health")
 
-# METAXIS OPERATOR CORE ARCHITECTURE DIRECTIVE (2026-10-03), STEP 1 ONLY: supersedes the previous
-# 6-area grouping. Top-level Navigation is now exactly these 5 user-facing areas; every slug/route/
-# backend object above is unchanged (nothing deleted, nothing renamed, nothing rebuilt this step).
-# research_queue/gaps/rights/sources/source_health stay reachable at their existing URLs but are
-# deliberately NOT linked from the top nav per the directive (section 1) -- that is STEP 3/5/7 work.
+# METAXIS OPERATOR -- NAVIGATION FINAL RESTRUCTURE (2026-10-03), STEP 1 ONLY: supersedes earlier
+# nav attempts same day. Top-level Navigation is now exactly these 5 user-facing areas, with "오늘"
+# as the default landing page (operator/index.html already renders render_overview(), see
+# build_operator_pages). Every slug/route/backend object above is unchanged (nothing deleted,
+# nothing renamed, nothing rebuilt this step). research_queue/gaps/rights/sources/source_health
+# stay reachable at their existing URLs but are deliberately NOT linked from the top nav -- that is
+# later-STEP work (STEP 2 = Report 구조/생성 방식 개편, per Te's instruction).
 TOP_NAV = (
-    ("운영 현황", "overview"),
-    ("수집 정보", "daily_discovery"),
+    ("오늘", "overview"),
+    ("정보", "daily_discovery"),
     ("이슈", "emerging_issues"),
     ("인텔리전스", "intelligence_index"),
     ("보고서", "reports"),
@@ -101,7 +103,7 @@ TOP_NAV = (
 # Korean-first labels (Te's O-2C mapping). Presentation text only -- never changes route slugs,
 # internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
 KO_LABELS = {
-    "overview": "운영 현황",
+    "overview": "오늘",
     "daily_discovery": "데일리 디스커버리",
     "emerging_issues": "이머징 이슈",
     "research_queue": "리서치",
