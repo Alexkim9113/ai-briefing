@@ -58,16 +58,16 @@ def test_today_key_signals_is_an_honest_no_llm_derivation_not_a_firehose():
 
 
 def test_overview_renders_honest_empty_state_or_real_cards_never_fabricated_text():
-    """TODAY BRIEFING REBUILD (2026-10-03): '오늘' (render_overview) is now a Daily Intelligence
-    Briefing built from daily_discovery_items(), not the old Claim-derived 'Today's Key Signals'
-    section (now only on its own un-navved helper, still honest/never-fabricated either way)."""
+    """DAILY IMPORTANCE SELECTION DIRECTIVE (2026-10-03): '오늘' (render_overview) now shows
+    today_important_events() (Importance-Gate-scored real Events), never a fabricated/sample
+    result -- honest empty state when nothing qualifies."""
     html_doc = ou.render_overview()
     import daily_discovery as dd
-    items = dd.daily_discovery_items(data_dir=str(op.ROOT / "data"))
-    if not items:
-        assert "핵심 변화가 확인되지 않았습니다" in html_doc
+    important = dd.today_important_events(data_dir=str(op.ROOT / "data"))
+    if not important:
+        assert "주요 사건이 확인되지 않았습니다" in html_doc
     else:
-        assert "오늘의 핵심 변화" in html_doc or "핵심 변화가 확인되지 않았습니다" in html_doc
+        assert "오늘의 주요 정보" in html_doc
 
 
 def test_gap_category_covers_the_six_named_buckets_or_uncategorized():
@@ -124,9 +124,14 @@ def test_key_signal_cards_never_fabricate_a_url_and_always_escape_claim_text():
 
 
 def test_overview_never_leaks_internal_evidence_ids_or_vault_terms():
+    """FRONTEND FIRST (2026-10-03): '오늘' now renders real, unfiltered collected article titles
+    verbatim, so a bare 'secret' substring check would false-positive on a genuine headline (e.g.
+    a real Nature article titled '...Secret Watermark...'). Checks the actual internal-leak
+    patterns (a vault term, an assigned credential, an auth header) instead of an English word
+    that can legitimately appear in real news titles."""
     html_doc = ou.render_overview()
     lowered = html_doc.lower()
-    for forbidden in ("private_research_vault", "secret", "api_key", "authorization:"):
+    for forbidden in ("private_research_vault", "api_key=", "authorization:", "x-api-key"):
         assert forbidden not in lowered
 
 

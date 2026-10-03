@@ -267,11 +267,15 @@ def _build_card(members):
         "source": lead.get("source") or "UNKNOWN",
         "date": lead.get("published", "UNKNOWN"),
         "url": lead.get("link"),
+        "summary": lead.get("summary") or lead.get("detail") or "",
         "sources": sources,
         "source_tier": best_tier,
         "why_it_matters": _why_it_matters(best_tier, matched_keyword),
         "related_intelligence": _related_intelligence(title),
-        "field": _matched_field(title),
+        # Te's canonical 11-field taxonomy (daily_taxonomy/taxonomy.py), reused live -- same
+        # classifier raw_items_for_day()/archive_items() use, replacing the narrower 8-bucket
+        # _matched_field() so every Operator page shares one field vocabulary.
+        "field": _classify_field_live(lead),
         "country": _matched_country(title),
         "evidence_status": EVIDENCE_STATUS,
     }
@@ -408,6 +412,239 @@ def weekly_issue_candidates(data_dir="data", lookback_days=7, top_n=5):
     results.sort(key=lambda r: r["source_tier"])
     results.sort(key=lambda r: r["independent_source_count"], reverse=True)
     return results[:top_n]
+
+
+# ---------------------------------------------------------------------------------------------
+# METAXIS OPERATOR -- FRONTEND FIRST (2026-10-03). Te's directive: Synthesis/Issue/Pipeline work
+# is paused; the real problem is that the Operator never lets anyone actually READ what
+# briefing.py collected. These two functions back the '오늘' and '수집정보' pages: no importance
+# filter, no event clustering -- every real, already-collected item, straight from data/*.json,
+# with its real title/summary/field/region/source/time/link. weekly_issue_candidates() and the
+# Issue-synthesis code above are NOT removed, just not called from these two pages right now.
+# ---------------------------------------------------------------------------------------------
+_taxonomy_mod = None
+TAXONOMY_AVAILABLE = False
+
+
+def _load_taxonomy_deps():
+    """Best-effort, import-only wiring of the real daily_taxonomy/taxonomy.py 11-field classifier
+    (Te's canonical FIELDS tuple) -- reused exactly as-is, never a new field list. Never raises: on
+    any failure TAXONOMY_AVAILABLE stays False and _classify_field_live() honestly falls back to
+    the lighter _matched_field() keyword classifier already used elsewhere in this module."""
+    global _taxonomy_mod, TAXONOMY_AVAILABLE
+    if TAXONOMY_AVAILABLE:
+        return
+    try:
+        for sub in ("daily_taxonomy", "ai_relevance_gate", "topic_classification", "geographic_evidence"):
+            p = str(ROOT / "intel" / sub)
+            if p not in sys.path:
+                sys.path.insert(0, p)
+        import taxonomy as _tax  # noqa: E402
+        _taxonomy_mod = _tax
+        TAXONOMY_AVAILABLE = True
+    except Exception:
+        TAXONOMY_AVAILABLE = False
+
+
+def _classify_field_live(item):
+    """Classifies one raw collector item into Te's 11-field taxonomy, live and per-item -- reuses
+    taxonomy.classify_fields()+domain_classifier.classify_document() exactly as the real pipeline
+    does, but runs directly off data/*.json's own title (no dependency on documents.json/the AI
+    Relevance Gate sidecar, which only covers gate-PASSed items and can be stale relative to
+    today's raw feed). Falls back to the existing _matched_field() keyword bucket if the real
+    taxonomy module is unavailable in this environment -- never a hardcoded/fabricated field."""
+    title = _title_of(item)
+    _load_taxonomy_deps()
+    if not TAXONOMY_AVAILABLE:
+        return _matched_field(title)
+    try:
+        doc = {"field": item.get("field") or None, "title": title}
+        dom_info = _taxonomy_mod._domain.classify_document(doc)
+        primary, _secondary = _taxonomy_mod.classify_fields(
+            title, dom_info["domains"], doc.get("field"), dom_info.get("basis"), dom_info.get("confidence"))
+        return primary or "기타"
+    except Exception:
+        return _matched_field(title)
+
+
+def _dated_data_file(data_dir, date):
+    p = Path(data_dir) / f"{date}.json"
+    return p if p.exists() else None
+
+
+def _raw_row(item, date_str=None):
+    title = _title_of(item)
+    return {
+        "id": item.get("id"),
+        "title": title,
+        "summary": item.get("summary") or item.get("detail") or "",
+        "field": _classify_field_live(item),
+        "region": _matched_country(title),
+        "source": item.get("source") or "UNKNOWN",
+        "published": item.get("published") or "UNKNOWN",
+        "url": item.get("link"),
+        "date": date_str,
+    }
+
+
+def raw_items_for_day(data_dir="data", date=None):
+    """ALL items collected on one real day (default: the latest/today data/*.json file) -- no
+    importance filter, no event clustering. Returns (items, date_str); date_str is None when no
+    data file exists. Every field is real, straight from the source-of-truth collector file --
+    nothing fabricated, nothing re-crawled from Public HTML."""
+    path = _dated_data_file(data_dir, date) if date else _latest_data_file(data_dir)
+    if path is None:
+        return [], None
+    date_str = date or path.stem
+    items = [it for it in _load_items(path) if isinstance(it, dict) and it.get("link")]
+    rows = [_raw_row(it, date_str) for it in items]
+    rows.sort(key=lambda r: str(r["published"]), reverse=True)
+    return rows, date_str
+
+
+def available_archive_dates(data_dir="data"):
+    return [f.stem for f in _all_data_files(data_dir)]
+
+
+def archive_items(data_dir="data", date=None, field=None, region=None, source=None):
+    """Every real collected item across every data/*.json file (or just `date` if given),
+    optionally filtered by field/region/source -- the full, human-browsable METAXIS archive the
+    '수집정보' page needs. Never samples, never caps silently."""
+    files = [p for p in [_dated_data_file(data_dir, date)] if p] if date else _all_data_files(data_dir)
+    rows = []
+    for f in files:
+        date_str = f.stem
+        for it in _load_items(f):
+            if not isinstance(it, dict) or not it.get("link"):
+                continue
+            row = _raw_row(it, date_str)
+            if field and row["field"] != field:
+                continue
+            if region and row["region"] != region:
+                continue
+            if source and row["source"] != source:
+                continue
+            rows.append(row)
+    rows.sort(key=lambda r: str(r["published"]), reverse=True)
+    return rows
+
+
+# ---------------------------------------------------------------------------------------------
+# METAXIS -- DAILY IMPORTANCE SELECTION DIRECTIVE (2026-10-03). Separates "전체 정보"
+# (archive_items(), unchanged, everything preserved) from "중요 정보" (오늘), by scoring each
+# already-deduped EVENT (not raw article count) against a deterministic, explainable 6-factor
+# rubric. The Importance Gate is NOT a KEEP/DELETE filter -- nothing collected is ever dropped,
+# it only decides what '오늘' highlights. Score is an internal ranking aid only, never shown to
+# the user (directive section 17); every point traces to a real, already-computed signal
+# (matched policy keyword, field, source tier, independent source count, related_intelligence
+# match, cross-day recurrence) -- never an opaque or fabricated number, never a "famous company"
+# bonus (section 6: OpenAI/Google/etc. in a title adds nothing on its own).
+# ---------------------------------------------------------------------------------------------
+IMPORTANCE_QUALIFY_THRESHOLD = 45  # roughly "real signal on at least 2-3 of the 6 factors"
+
+
+def _importance_score(card, is_continuing):
+    """card: a _build_card() event dict. is_continuing: True if this event (or a member of it)
+    was already part of an event cluster on an earlier day (section F -- 신규성, lower score for
+    a repeat of something already reported, not a search-volume or SNS-buzz measure)."""
+    title = card["title_ko"]
+    matched_kw = _matched_policy_keyword(title)
+    a = 25 if matched_kw else 8  # 변화성
+    n_sources = len({s["institution"] for s in card["sources"]})
+    b = 20 if n_sources >= 3 else (12 if n_sources == 2 else 6)  # 영향 범위 (coverage breadth proxy)
+    c = 15 if card["related_intelligence"] != "연관 Intelligence 없음" else 5  # 구조적 의미
+    d = {1: 15, 2: 9, 3: 3}.get(card["source_tier"], 3)  # 근거 신뢰도 (existing Source Tier, reused)
+    e = 8 if (matched_kw and card["related_intelligence"] != "연관 Intelligence 없음") else 3  # 확산 가능성
+    f = 4 if is_continuing else 9  # 신규성
+    return a + b + c + d + e + f
+
+
+def _continuing_event_ids(data_dir, today_str):
+    """Real items that were already part of an event cluster on an earlier day, via the SAME
+    2-day event clustering weekly_issue_candidates() already uses -- never a new similarity
+    engine. Returns a set of item ids; empty (honestly) if fewer than 2 days of data exist yet."""
+    files2 = _all_data_files(data_dir)[-2:]
+    if len(files2) < 2:
+        return set()
+    sig2 = tuple(f.stat().st_mtime for f in files2 if f.exists())
+    clusters2 = _clustered_week(data_dir, 2, sig2)
+    continuing = set()
+    for members in clusters2:
+        dates = {str(m.get("published") or "")[:10] for m in members}
+        if len(dates) > 1 or (dates and today_str not in dates):
+            continuing.update(m.get("id") for m in members)
+    return continuing
+
+
+def today_important_events(data_dir="data", max_n=10):
+    """Today's real Events (same event-level dedup as daily_discovery_items() -- 7 articles about
+    one event score as ONE event, never 7), ranked by the Importance Gate and cut to the
+    highest-scoring ones (directive section 9: ~5-10, never padded to hit a count, never fewer
+    just to round a number down). Every underlying source/url/title is real; archive_items() still
+    carries every raw item regardless of what qualifies here."""
+    path = _latest_data_file(data_dir)
+    if path is None:
+        return []
+    try:
+        mtime = Path(path).stat().st_mtime
+    except OSError:
+        return []
+    clusters = _clustered_candidates(str(path), mtime)
+    if not clusters:
+        return []
+    today_str = path.stem
+    continuing_ids = _continuing_event_ids(data_dir, today_str)
+
+    scored = []
+    for members in clusters:
+        card = _build_card(members)
+        is_continuing = bool({m.get("id") for m in members} & continuing_ids)
+        card["importance_score"] = _importance_score(card, is_continuing)
+        scored.append(card)
+    scored.sort(key=lambda c: c["importance_score"], reverse=True)
+    qualifying = [c for c in scored if c["importance_score"] >= IMPORTANCE_QUALIFY_THRESHOLD]
+    return qualifying[:max_n]
+
+
+def today_core_issues(important_events):
+    """Groups today's important Events into an Issue ONLY when >=2 of them share the same field
+    AND the same matched policy/regulatory keyword (directive section 12: shared keyword alone is
+    not enough elsewhere, but same field + same concrete keyword is the narrowest, most honest
+    deterministic proxy available without an LLM for 'same direction of change' -- conservative by
+    design, never forcing a narrative). Returns [] when nothing qualifies, which is the expected,
+    honest common case. Every field in the returned dict is built from real titles/sources --
+    nothing here is a fabricated interpretation beyond directly-observable facts."""
+    groups = {}
+    for ev in important_events:
+        kw = _matched_policy_keyword(ev["title_ko"])
+        if not kw:
+            continue
+        key = (ev["field"], kw)
+        groups.setdefault(key, []).append(ev)
+
+    issues = []
+    for (field, kw), members in groups.items():
+        if len(members) < 2:
+            continue
+        members_sorted = sorted(members, key=lambda e: str(e["date"]), reverse=True)
+        sources = []
+        seen_urls = set()
+        for ev in members_sorted:
+            for s in ev["sources"]:
+                if s["url"] not in seen_urls:
+                    seen_urls.add(s["url"])
+                    sources.append(s)
+        issues.append({
+            "field": field,
+            "matched_keyword": kw,
+            "event_titles": [ev["title_ko"] for ev in members_sorted],
+            "why_it_matters": f"'{kw}' 관련 사건이 {field} 분야에서 {len(members_sorted)}건 연달아 확인됐다.",
+            "whats_changing": f"개별 사건이 아니라 {field} 분야에서 '{kw}' 관련 변화가 동시다발적으로 나타나고 있다.",
+            "sources": sources,
+            "related_event_count": len(members_sorted),
+        })
+    issues.sort(key=lambda i: i["related_event_count"], reverse=True)
+    return issues
 
 
 # ---------------------------------------------------------------------------------------------

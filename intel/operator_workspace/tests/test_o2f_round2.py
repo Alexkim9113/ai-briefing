@@ -190,12 +190,12 @@ def test_editorial_queue_section_escapes_hostile_input():
 # --- (i) Operator Home reorder -----------------------------------------------------------------
 
 def test_overview_section_order_round2():
-    """TODAY BRIEFING REBUILD (2026-10-03): the old 9-section stack this test pinned (Discovery ->
-    Emerging Issues -> Change Watch -> Editorial Queue -> Gaps -> Portfolio -> Reports -> Source
-    Health -> System Health) no longer lives on '오늘' (render_overview). Each section still exists,
-    unmodified, on its own dedicated page -- this test now checks that relocation instead of an
-    order on a page the directive explicitly replaced."""
-    assert "Daily Intelligence Briefing" in ou.render_overview()
+    """DAILY IMPORTANCE SELECTION DIRECTIVE (2026-10-03): the old 9-section stack this test pinned
+    (Discovery -> Emerging Issues -> Change Watch -> Editorial Queue -> Gaps -> Portfolio ->
+    Reports -> Source Health -> System Health) no longer lives on '오늘' (render_overview). Each
+    section still exists, unmodified, on its own dedicated page -- this test now checks that
+    relocation instead of an order on a page the directive explicitly replaced."""
+    assert "오늘의 관측" in ou.render_overview()
     assert "새롭게 떠오르는 이슈" in ou.render_emerging_issues()
     assert "Intelligence 변화 가능성" in ou.render_intelligence_index()
     assert ou.render_gaps()  # gap data still reachable on its own page (unlinked from top nav)

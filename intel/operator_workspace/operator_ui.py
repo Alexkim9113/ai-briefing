@@ -94,7 +94,7 @@ NAV_ITEMS = ("overview", "daily_discovery", "emerging_issues", "research_queue",
 # later-STEP work (STEP 2 = Report 구조/생성 방식 개편, per Te's instruction).
 TOP_NAV = (
     ("오늘", "overview"),
-    ("정보", "daily_discovery"),
+    ("수집정보", "daily_discovery"),
     ("이슈", "emerging_issues"),
     ("인텔리전스", "intelligence_index"),
     ("보고서", "reports"),
@@ -104,7 +104,7 @@ TOP_NAV = (
 # internal IDs, or data. English kept as a small secondary label alongside the Korean primary.
 KO_LABELS = {
     "overview": "오늘",
-    "daily_discovery": "데일리 디스커버리",
+    "daily_discovery": "수집정보",
     "emerging_issues": "이머징 이슈",
     "research_queue": "리서치",
     "intelligence_index": "인텔리전스 포트폴리오",
@@ -475,24 +475,153 @@ def _today_briefing_section_html(discovery_items, top_n=10):
     )
 
 
-def render_overview():
-    """TODAY BRIEFING REBUILD (2026-10-03): '오늘' is now a Daily Intelligence Briefing, not a
-    console dump of internal pipeline/evidence state. The previous version of this page (Today's
-    Key Signals, Change Watch, Editorial Queue, Open Gaps, Portfolio, Reports pointer, Gap
-    Categories, Source Health, Pipeline/System Health) is NOT deleted -- every one of those is
-    still reachable at its own existing URL (../gaps/, ../intelligence_index/, ../source_health/,
-    ../reports/ etc. -- just unlinked from top nav per the NAVIGATION FINAL RESTRUCTURE directive).
-    This page now shows only real, evidence-backed Issue/Event cards -- see
-    _today_briefing_section_html().
+_MX_FILTER_CSS = """
+.mx-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.mx-filters select{background:var(--soft);color:var(--ink);border:1px solid var(--line);
+border-radius:8px;padding:6px 10px;font-family:inherit;font-size:0.9em}
+.mx-item{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);
+margin-bottom:10px}
+.mx-item h3{margin:0 0 6px 0;font-size:1em}
+.mx-item h3 a{color:var(--ink);text-decoration:none}
+.mx-item h3 a:hover{color:var(--accent)}
+.mx-item p{margin:6px 0;color:var(--ink);font-size:0.92em}
+.mx-meta{color:var(--sub);font-size:0.8em}
+.mx-meta span{margin-right:10px}
+"""
 
-    SYNTHESIS LAYER PILOT (2026-10-03): the Pilot asked for up to 5 meaningful Issues built from
-    the last 7 real days of data (clustered across days, not just today), rather than one day's
-    top_n=10 raw cards -- so this now calls weekly_issue_candidates() instead of
-    daily_discovery_items(). Never padded to 5; an honest empty/partial state still applies."""
-    discovery_items = dd.weekly_issue_candidates(data_dir=str(op.ROOT / "data"), lookback_days=7, top_n=5)
+
+def _raw_item_card_html(row):
+    """One real collected item, exactly as briefing.py stored it -- title (linked to the real
+    original URL), a readable 2-3 line summary, field/region/source/published time. Never a raw
+    internal code, never a synthesized Issue -- per the FRONTEND FIRST directive (2026-10-03),
+    every collected item must be individually readable, not filtered down to an 'important' few."""
+    title = _esc(row["title"])
+    link = _safe_link(row["url"], title) if row.get("url") else f'<span>{title}</span>'
+    summary = _esc(row["summary"]) if row.get("summary") else '<span class="empty">요약 없음</span>'
+    return (
+        f'<div class="mx-item" data-field="{_esc(row["field"])}" data-region="{_esc(row["region"])}" '
+        f'data-source="{_esc(row["source"])}" data-date="{_esc(row.get("date") or "")}">'
+        f'<h3>{link}</h3>'
+        f'<p>{summary}</p>'
+        f'<div class="mx-meta"><span>{_esc(row["field"])}</span><span>{_esc(row["region"])}</span>'
+        f'<span>{_esc(row["source"])}</span><span>{_esc(row["published"])}</span></div>'
+        '</div>'
+    )
+
+
+_MX_FILTER_JS = """
+<script>
+function mxFilter(){
+  var f=document.getElementById('mx-f-field'); f=f?f.value:'';
+  var r=document.getElementById('mx-f-region'); r=r?r.value:'';
+  var s=document.getElementById('mx-f-source'); s=s?s.value:'';
+  var d=document.getElementById('mx-f-date'); d=d?d.value:'';
+  var items=document.querySelectorAll('#mx-list .mx-item');
+  var shown=0;
+  items.forEach(function(el){
+    var ok=(!f||el.dataset.field===f)&&(!r||el.dataset.region===r)&&(!s||el.dataset.source===s)&&(!d||el.dataset.date===d);
+    el.style.display=ok?'':'none';
+    if(ok){shown++;}
+  });
+  var cnt=document.getElementById('mx-count');
+  if(cnt){cnt.textContent=shown;}
+}
+</script>
+"""
+
+
+def _mx_select(id_, label, options, selected_all_label):
+    opts = f'<option value="">{_esc(selected_all_label)}</option>' + "".join(
+        f'<option value="{_esc(o)}">{_esc(o)}</option>' for o in options
+    )
+    return f'<select id="{id_}" onchange="mxFilter()" aria-label="{_esc(label)}">{opts}</select>'
+
+
+def _event_card_to_row(card):
+    """Adapts a daily_discovery._build_card() event dict to the same row shape
+    _raw_item_card_html() renders -- so '오늘의 주요 정보' cards look identical in structure to
+    '수집정보' cards (제목/핵심 내용/분야/지역/Source/날짜/원문 URL), per directive section 13.C."""
+    return {
+        "title": card["title_ko"], "summary": card.get("summary") or "",
+        "field": card["field"], "region": card["country"],
+        "source": card["source"], "published": card["date"], "url": card["url"],
+        "date": None,
+    }
+
+
+def _issue_card_html(issue):
+    watch = _FIELD_WATCHPOINTS.get(issue["field"], ())
+    watch_html = "".join(f"<li>{_esc(w)}</li>" for w in watch) if watch else ""
+    events_html = "".join(f"<li>{_esc(t)}</li>" for t in issue["event_titles"])
+    sources_html = "".join(
+        f'<li>{_esc(s["institution"])}: {_safe_link(s["url"])}</li>' for s in issue["sources"]
+    )
+    return (
+        '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
+        f'<div><strong>{_esc(issue["field"])} &middot; \'{_esc(issue["matched_keyword"])}\'</strong></div>'
+        f'<div><b>무슨 일이 있었나</b><ul>{events_html}</ul></div>'
+        f'<div><b>왜 중요한가</b><br>{_esc(issue["why_it_matters"])}</div>'
+        f'<div><b>무엇이 변하고 있는가</b><br>{_esc(issue["whats_changing"])}</div>'
+        + (f'<div><b>앞으로 볼 것</b><ul>{watch_html}</ul></div>' if watch_html else "")
+        + f'<div class="empty">Sources {len(issue["sources"])}<ul>{sources_html}</ul></div>'
+        '</div>'
+    )
+
+
+def render_overview():
+    """METAXIS -- DAILY IMPORTANCE SELECTION DIRECTIVE (2026-10-03): '오늘' is built in three
+    layers over real, already-collected data (never re-crawled, never sample/hardcoded):
+      A. 오늘의 관측 -- one honest, factual line (count of qualifying Issues/Events). No LLM is
+         available in this session, so no interpretive narrative is generated here; forcing one
+         without real synthesis would be fabrication, which section 0 explicitly forbids.
+      B. 오늘의 핵심 Issue -- today_core_issues(): only emitted when >=2 Importance-Gate-qualifying
+         Events genuinely share a field + matched keyword (directive section 12). Honestly empty
+         most days.
+      C. 오늘의 주요 정보 -- today_important_events(): event-level (not raw article count), scored
+         by the 6-factor Importance Gate and cut to the highest scorers (~5-10, never padded).
+    '수집정보' (render_daily_discovery) is unchanged and still carries every raw collected item --
+    the Importance Gate only decides what surfaces here, nothing is ever deleted."""
+    important = dd.today_important_events(data_dir=str(op.ROOT / "data"))
+    issues = dd.today_core_issues(important)
+    _rows, date_str = dd.raw_items_for_day(data_dir=str(op.ROOT / "data"))
+    subtitle = f'{date_str.replace("-", ".")}' if date_str else "오늘"
+
+    if not important:
+        return _shell(f"{_ko('overview')} / Today", "overview", (
+            f'{PUBLIC_SAFE_BANNER}<p class="empty">{_esc(subtitle)}</p>'
+            '<h2>오늘의 관측</h2>'
+            '<p class="empty">오늘 Importance Gate를 통과한 주요 사건이 확인되지 않았습니다 '
+            '(정직한 결과이며, 예시를 넣지 않습니다). 전체 수집 자료는 '
+            f'<a href="../daily_discovery/">수집정보</a>에서 확인할 수 있습니다.</p>'
+        ))
+
+    observation = (
+        f'오늘 Importance Gate를 통과한 사건 {len(important)}건'
+        + (f', 그중 핵심 Issue {len(issues)}건이 확인됐습니다.' if issues else '이 확인됐습니다. 오늘은 여러 사건을 묶을 만한 뚜렷한 Issue는 없었습니다.')
+    )
+
+    issue_section = ""
+    if issues:
+        issue_section = (
+            f'<h2>오늘의 핵심 Issue ({len(issues)})</h2>'
+            f'<div class="kpi-row">{"".join(_issue_card_html(i) for i in issues)}</div>'
+        )
+
+    fields_present = sorted({ev["field"] for ev in important})
+    info_cards = "".join(_raw_item_card_html(_event_card_to_row(ev)) for ev in important)
+    info_section = (
+        f'<h2>오늘의 주요 정보 ({len(important)})</h2>'
+        f'<div class="mx-filters">{_mx_select("mx-f-field", "분야", fields_present, "분야 전체")}</div>'
+        f'<div id="mx-list">{info_cards}</div>'
+        f'{_MX_FILTER_JS}'
+    )
+
     return _shell(f"{_ko('overview')} / Today", "overview", (
-        f'{PUBLIC_SAFE_BANNER}'
-        f'{_today_briefing_section_html(discovery_items, top_n=5)}'
+        f'{PUBLIC_SAFE_BANNER}<style>{_MX_FILTER_CSS}</style>'
+        f'<p class="empty">{_esc(subtitle)}</p>'
+        f'<h2>오늘의 관측</h2><p>{_esc(observation)}</p>'
+        f'{issue_section}{info_section}'
+        f'<p class="empty">전체 수집 자료는 <a href="../daily_discovery/">수집정보</a>에서 확인할 수 있습니다.</p>'
     ))
 
 
@@ -667,50 +796,37 @@ def _daily_taxonomy_live():
 
 
 def render_daily_discovery():
-    result = _daily_taxonomy_live()
-    if not result:
-        return _shell(f"{_ko('daily_discovery')} / Daily Discovery", "daily_discovery",
-                       '<h2>데일리 디스커버리</h2>'
-                       '<p class="empty">NOT_AVAILABLE -- daily_taxonomy 파이프라인이 아직 실행되지 '
-                       '않았습니다.</p>')
+    """METAXIS OPERATOR -- FRONTEND FIRST (2026-10-03): '수집정보' is now a human-browsable archive
+    of every item METAXIS has ever collected (reads data/*.json directly, the same source-of-truth
+    briefing.py writes -- never the AI Relevance Gate/daily_taxonomy_result.json sidecar, which
+    only covers gate-PASSed items from whenever that separate pipeline last ran). Filters: 날짜,
+    분야, 지역, Source. The old gate-based summary view (_daily_taxonomy_live) is NOT deleted, just
+    no longer rendered here."""
+    rows = dd.archive_items(data_dir=str(op.ROOT / "data"))
+    if not rows:
+        return _shell(f"{_ko('daily_discovery')} / Archive", "daily_discovery",
+                       '<h2>수집정보</h2>'
+                       '<p class="empty">아직 수집된 데이터가 없습니다.</p>')
 
-    field_counts = result["field_counts_any"]
-    region_counts = result["region_counts"]
-    total = result["total_pass_documents"]
-
-    region_order = ["KR", "US", "CN", "EU", "JP", "IN", "UNKNOWN"]
-    region_pills = "".join(
-        f'<span class="badge">{_esc(r)}: {_esc(region_counts.get(r, 0))}</span> '
-        for r in region_order if r in region_counts or r != "UNKNOWN"
+    dates = sorted({r["date"] for r in rows if r.get("date")}, reverse=True)
+    fields_present = sorted({r["field"] for r in rows})
+    regions_present = sorted({r["region"] for r in rows})
+    sources_present = sorted({r["source"] for r in rows})
+    cards = "".join(_raw_item_card_html(r) for r in rows)
+    body = (
+        f'<p class="empty">전체 수집 <span id="mx-count">{len(rows)}</span>건</p>'
+        '<h2>수집정보</h2>'
+        '<div class="mx-filters">'
+        f'{_mx_select("mx-f-date", "날짜", dates, "날짜 전체")}'
+        f'{_mx_select("mx-f-field", "분야", fields_present, "분야 전체")}'
+        f'{_mx_select("mx-f-region", "지역", regions_present, "지역 전체")}'
+        f'{_mx_select("mx-f-source", "Source", sources_present, "Source 전체")}'
+        '</div>'
+        f'<div id="mx-list">{cards}</div>'
+        f'{_MX_FILTER_JS}'
     )
-    other_regions = {k: v for k, v in region_counts.items() if k not in region_order}
-    if other_regions:
-        region_pills += "".join(f'<span class="badge">{_esc(k)}: {_esc(v)}</span> '
-                                  for k, v in other_regions.items())
-
-    sections = []
-    for field in _taxonomy.FIELDS:
-        docs = [d for d in result["per_document"].values()
-                if field in ([d["primary_field"]] if d["primary_field"] else []) + d["secondary_fields"]]
-        rows = "".join(
-            f'<li>{_esc(d["title"])} &middot; {_esc(d["country"])} &middot; '
-            f'{_esc(d["ai_relevance"]["gate"])}</li>'
-            for d in docs[:20]
-        )
-        sections.append(
-            f'<details><summary><strong>{_esc(field)}</strong> ({len(docs)}건)</summary>'
-            + (f'<ul>{rows}</ul>' if rows else '<p class="empty">실제 corpus에 이 분야 항목이 없습니다 '
-                                                 '(NO_DISCOVERY_IN_CURRENT_CORPUS).</p>')
-            + (f'<p class="empty">상위 20건만 표시, 전체 {len(docs)}건</p>' if len(docs) > 20 else "")
-            + '</details>'
-        )
-
-    return _shell(f"{_ko('daily_discovery')} / Daily Discovery", "daily_discovery", (
-        f'<h2>오늘의 AI Intelligence Discovery</h2>'
-        f'<p>AI Relevance Gate PASS {total}건 기준 (전체 {_esc(_ai_gate_total())}건 중). '
-        '분야는 복수 라벨 가능(primary+secondary 합산 표시), 지역은 추측 없이 실제 출처 메타데이터 기반.</p>'
-        f'<h3>지역 필터</h3><p>{region_pills}</p>'
-        f'<h3>분야별</h3>{"".join(sections)}'
+    return _shell(f"{_ko('daily_discovery')} / Archive", "daily_discovery", (
+        f'<style>{_MX_FILTER_CSS}</style>{body}'
     ))
 
 
