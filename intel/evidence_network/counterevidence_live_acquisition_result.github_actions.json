@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-03T11:37:59.950378+00:00",
+ "run_at": "2026-10-03T12:07:33.362716+00:00",
  "environment": "GITHUB_ACTIONS",
  "note": "N-6 Priority 5 -- live counterevidence acquisition attempt. No counterevidence item is admitted into any Intelligence Object/Claim from this run unless acquisition_outcome == SEARCH_RUN_NO_EVIDENCE or better; ACCESS_BLOCKED/SEARCH_NOT_RUN/NO_REGISTERED_SOURCE rows contribute nothing to the evidence graph (and never render as 'no counterevidence exists').",
  "results": [
@@ -11,7 +11,7 @@
    "acquisition_outcome": "ACCESS_BLOCKED",
    "http_status": "AUTH_REQUIRED",
    "proxy_error": "1 attempt(s) failed: HTTP Error 403: Forbidden",
-   "checked_at": "2026-10-03T11:37:59.502542+00:00"
+   "checked_at": "2026-10-03T12:07:32.565477+00:00"
   },
   {
    "topic": "AI_ENERGY_INFRA",
@@ -21,7 +21,7 @@
    "acquisition_outcome": "ACCESS_BLOCKED",
    "http_status": "AUTH_REQUIRED",
    "proxy_error": "1 attempt(s) failed: HTTP Error 403: Forbidden",
-   "checked_at": "2026-10-03T11:37:59.588552+00:00"
+   "checked_at": "2026-10-03T12:07:32.825002+00:00"
   },
   {
    "topic": "AI_ENERGY_INFRA",
@@ -31,7 +31,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T11:37:59.612259+00:00"
+   "checked_at": "2026-10-03T12:07:32.857549+00:00"
   },
   {
    "topic": "AI_LABOR",
@@ -41,7 +41,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T11:37:59.640239+00:00"
+   "checked_at": "2026-10-03T12:07:32.890489+00:00"
   },
   {
    "topic": "AI_LABOR",
@@ -51,7 +51,7 @@
    "acquisition_outcome": "SEARCH_RUN_NO_EVIDENCE",
    "http_status": "HEALTHY",
    "proxy_error": "single live check, not continuous monitoring",
-   "checked_at": "2026-10-03T11:37:59.950339+00:00"
+   "checked_at": "2026-10-03T12:07:33.362664+00:00"
   }
  ]
 }
