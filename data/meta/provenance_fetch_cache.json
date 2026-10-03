@@ -3298,5 +3298,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-03T00:27:02.519028+00:00"
+ },
+ "c6d81740d82b8c454a1adda60e83b301122226a7b6d23caa157823bed7c1539a": {
+  "url": "https://www.newsis.com/view/NISX20261003_0003813445",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:35.861081+00:00"
+ },
+ "797d0097077db362798b100026eed1b5abbe48331107e9f6df563579ae0e0939": {
+  "url": "https://www.yna.co.kr/view/AKR20261002137200980",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:37.743350+00:00"
+ },
+ "8f985d8ebb587e9a69a8566f301aabc7f1d226a5d9b49e893f0831a2785841ee": {
+  "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003269885",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:40.695692+00:00"
+ },
+ "0865289cce1dfd1299d8d6917aaf39f81e61642923d5eea623719f3fd9846b36": {
+  "url": "https://www.hankyung.com/article/202610029399i",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:40.806687+00:00"
+ },
+ "d7d9e762e0c5e1754b969fca091d1f0edfe043ed85d01064bcc74b976b75f3a8": {
+  "url": "https://www.donga.com/news/Economy/article/all/20261002/134774330/1",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:42.675171+00:00"
+ },
+ "1842e0c1237cefbd85676d283f4b41c6ee977c642fcedfefbe72a005117a544c": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215934",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:44.401073+00:00"
+ },
+ "29d7582930f5c647dc1decb030926baf65111f833bd37479b60fb7433c9565d0": {
+  "url": "https://www.yna.co.kr/view/AKR20261003020000091",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:46.707886+00:00"
+ },
+ "f0cf94b72b938f6ddf50b5e37469b0198bb2993313e70e8912ade204df8c06ba": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215882",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:48.136674+00:00"
+ },
+ "c9870ac1d420cb0ab22108eca4aea4e32e5a40a0770cf4b1f254af58b9ea8f21": {
+  "url": "https://www.hankyung.com/article/202610031364i",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T02:06:48.268611+00:00"
+ },
+ "659c49a9d144184cd2f1f74dcbfd19208b2f771b9c0e37b8ead7a9a717bf6486": {
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAtRngtRjhMZnU4eTlsSWtGMlFUVDJLTFVGNjBycGU1Y2kxbDlHX0N5cTRWQk9zLW1BNkhKaEczWlJaYmVnbXhSSHdXcUZFNFQ3N0JDa1lTOFhzd2VaaVRxRTB6bkFMbkFBUlNjM2N5dTkzcy13?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T02:06:48.498438+00:00"
  }
 }
