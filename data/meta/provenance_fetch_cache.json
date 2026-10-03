@@ -3228,5 +3228,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-02T20:41:00.470468+00:00"
+ },
+ "240aa471fc81fa89d4ee56df6159690438365308e78a0435ba97dcd136c2e549": {
+  "url": "https://www.newsis.com/view/NISX20261002_0003812002",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:50.844261+00:00"
+ },
+ "b04627e1b7524703fd2c0ed491075c8494454811753723fd2ec911841addd02a": {
+  "url": "https://www.newsis.com/view/NISX20261003_0003813399",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:52.765523+00:00"
+ },
+ "097e13b29dc4471551474710342475f49fa4387e867cf68f452dd49674ddb2f6": {
+  "url": "https://www.yna.co.kr/view/AKR20261002064300054",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:54.026003+00:00"
+ },
+ "332a573e6df3b0950ff5f95b91e374ee6138014319907feb1e6a0231ffe9021f": {
+  "url": "https://www.hankyung.com/article/2026100314867",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:54.198777+00:00"
+ },
+ "1eaf06c624b293f31a7db28843c42fa018e4aff8ffeed1f56519cc4dacfc9294": {
+  "url": "https://www.yna.co.kr/view/AKR20261002141100005",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:55.852455+00:00"
+ },
+ "09305f755edcb3ea6e1dd4ce1d07b9d18885d398edade6fe946a19027fb24dba": {
+  "url": "https://www.khan.co.kr/article/202610030800011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:57.823734+00:00"
+ },
+ "f053347f74f50676dea5024d6b360d049ad3260dbb4a13033537c675af5da56f": {
+  "url": "https://www.newsis.com/view/NISX20260923_0003801422",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:58.528534+00:00"
+ },
+ "423449b1fbcfb29fcfd43f7b7208153f7a80edf093e7c286c252381231fb1056": {
+  "url": "https://www.yna.co.kr/view/AKR20261003013900091",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:26:59.791326+00:00"
+ },
+ "c3a0d773dc4b201de9352c9a5f7db2e9cfef583c5f5abf486461f83c1194f330": {
+  "url": "https://www.yna.co.kr/view/AKR20261003009200091",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:27:01.363579+00:00"
+ },
+ "e5b8b21f45a290043cd0c79de1457abc271f96fa4761f013b7621798351001e1": {
+  "url": "https://www.yna.co.kr/view/AKR20261002143500017",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T00:27:02.519028+00:00"
  }
 }
