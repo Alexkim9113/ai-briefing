@@ -501,6 +501,28 @@
   },
   {
    "change_ids": [],
+   "claim_id": "1041885bfad2900b:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1041885bfad2900b",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1041885bfad2900b:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1041885bfad2900b",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "10d76142cf0ed76d:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "10d76142cf0ed76d",
@@ -1092,6 +1114,50 @@
    "change_ids": [],
    "claim_id": "1f545e2495b93dba:c1",
    "claim_status": "SUMMARY_DERIVED",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g4",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "1f545e2495b93dba",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -2531,6 +2597,28 @@
    "change_ids": [],
    "claim_id": "4e3f6a460e8216d7:c1",
    "claim_status": "SUMMARY_DERIVED",
+   "document_id": "4e3f6a460e8216d7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "4e3f6a460e8216d7:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "4e3f6a460e8216d7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "4e3f6a460e8216d7:g2",
+   "claim_status": "SECONDARY_ONLY",
    "document_id": "4e3f6a460e8216d7",
    "event_ids": [],
    "evidence_record_ids": [],
@@ -7858,95 +7946,18 @@
   },
   {
    "change_ids": [],
-   "claim_id": "1041885bfad2900b:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1041885bfad2900b",
+   "claim_id": "bf9a036b8cc40d8d:c1",
+   "claim_status": "SOURCE_LOCATED",
+   "document_id": "bf9a036b8cc40d8d",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "1041885bfad2900b:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1041885bfad2900b",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "1f545e2495b93dba:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1f545e2495b93dba",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "1f545e2495b93dba:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1f545e2495b93dba",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "1f545e2495b93dba:g3",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1f545e2495b93dba",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "1f545e2495b93dba:g4",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "1f545e2495b93dba",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "4e3f6a460e8216d7:g1",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "4e3f6a460e8216d7",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
-   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
-   "stopped_at": "CLAIM"
-  },
-  {
-   "change_ids": [],
-   "claim_id": "4e3f6a460e8216d7:g2",
-   "claim_status": "SECONDARY_ONLY",
-   "document_id": "4e3f6a460e8216d7",
-   "event_ids": [],
-   "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
+   "source_url": "https://www.federalregister.gov/documents/2026/10/05/2026-20311/potential-designation-of-chartered-financial-analyst-designation-as-qualifying-natural-persons-for",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 701,
+  "CLAIM": 702,
   "EVIDENCE_RECORD": 3
  }
 }

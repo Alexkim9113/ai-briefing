@@ -6,51 +6,51 @@
   "claims_by_status": {
    "INSUFFICIENT_SOURCE": 358,
    "SECONDARY_ONLY": 201,
-   "SOURCE_LOCATED": 88,
+   "SOURCE_LOCATED": 89,
    "SUMMARY_DERIVED": 57
   },
   "claims_by_type": {
    "COMPANY_REPORTED": 31,
    "COURT_FINDING": 1,
-   "GOVERNMENT_REPORTED": 31,
+   "GOVERNMENT_REPORTED": 32,
    "MEASURED": 10,
    "MEDIA_REPORTED": 538,
    "OTHER": 36,
    "RESEARCH_FINDING": 57
   },
-  "claims_extracted": 704,
+  "claims_extracted": 705,
   "claude_calls_added": 0,
   "counter_evidence_pairs": 0,
-  "documents_examined": 604,
+  "documents_examined": 605,
   "embedding_calls": 0,
   "evidence_by_type": {
    "BOTTLENECK": 3,
    "OTHER": 22
   },
   "evidence_records": 25,
-  "external_api_calls": 15,
+  "external_api_calls": 12,
   "facts_verified": 57,
-  "gemini_cache_hits": 9,
-  "gemini_calls_added": 15,
+  "gemini_cache_hits": 12,
+  "gemini_calls_added": 12,
   "human_review_by_priority": {
-   "HIGH": 93,
+   "HIGH": 94,
    "LOW": 548,
    "MEDIUM": 88
   },
-  "human_review_pending": 729,
+  "human_review_pending": 730,
   "independence_overall": {
-   "independent_document_count": 604,
+   "independent_document_count": 605,
    "independent_source_count": 257,
-   "raw_document_count": 604,
+   "raw_document_count": 605,
    "syndication_collapsed": 0
   },
   "interpretation_candidates": 25,
   "level3_flagged_documents": 146,
   "lineage_stopped_at_distribution": {
-   "CLAIM": 701,
+   "CLAIM": 702,
    "EVIDENCE_RECORD": 3
   },
-  "primary_sources_resolved": 88,
+  "primary_sources_resolved": 89,
   "secondary_only_claims": 616,
   "source_verified_claims": 0,
   "structural_evidence_input_records": 0,
@@ -64,7 +64,7 @@
  "reports_on_run": {
   "arxiv_primary_documents": 52,
   "case_number_pattern_hits_unmatched": 0,
-  "documents_examined": 604,
+  "documents_examined": 605,
   "doi_primary_documents": 9,
   "identifier_candidates_reviewed": 3,
   "matches": 0,
@@ -73,7 +73,7 @@
   "reports_on_relationships_created": 0,
   "self_references": 3
  },
- "run_at": "2026-10-03T12:07:26.959457+00:00",
+ "run_at": "2026-10-03T13:43:28.921452+00:00",
  "shadow_mode": true,
  "status": "SUCCESS"
 }
