@@ -571,21 +571,46 @@ def _event_card_to_row(card):
     }
 
 
+# TODAY CURATION QUALITY FIX -- question-form watchpoints for Issue cards only (directive section
+# 6: verifiable observation questions, not bare noun phrases). Scoped to _issue_card_html; the
+# noun-phrase _FIELD_WATCHPOINTS above is left untouched since other pages (Issue Knowledge Layer
+# detail) still use it and are out of scope for this fix.
+_ISSUE_WATCH_QUESTIONS = {
+    "기술": ("관련 기업이 후속 제품·기술을 추가로 발표하는가?", "경쟁사들이 비슷한 대응에 나서는가?"),
+    "산업·경제": ("관련 투자·계약 규모가 더 커지는가?", "공급망 다른 축에서도 비슷한 움직임이 나타나는가?"),
+    "노동·고용": ("실제 고용·채용 지표에 변화가 나타나는가?", "노동조합이나 정부가 대응에 나서는가?"),
+    "법·제도": ("관련 법안이 실제로 발의·통과되는가?", "규제기관이 추가 조치를 내는가?"),
+    "정책·국제질서": ("다른 나라도 비슷한 정책을 추진하는가?", "국제기구가 후속 논의를 시작하는가?"),
+    "의료·헬스케어": ("임상·규제 승인이 실제로 이뤄지는가?", "의료 현장에서 도입이 확산되는가?"),
+    "에너지·환경": ("주요 사업자가 장기 전력 확보 계약을 확대하는가?", "원전·재생에너지 중 어느 쪽에 투자가 집중되는가?"),
+    "국방·안보": ("관련국이 추가 군사·안보 조치를 취하는가?", "수출통제 범위가 더 넓어지는가?"),
+    "교육·사회": ("교육 현장에서 실제 도입이 확산되는가?", "여론·사회적 논쟁이 더 커지는가?"),
+    "문화·예술": ("창작자·업계의 반응이 구체적인 행동으로 이어지는가?", "저작권 관련 논의가 제도화되는가?"),
+    "미디어·콘텐츠": ("플랫폼이 실제 정책을 바꾸는가?", "규제당국이 대응에 나서는가?"),
+}
+
+
+def _issue_source_link(s):
+    """TODAY CURATION QUALITY FIX section 8 -- never print a raw URL (Google News RSS links are
+    especially long); show '기관 -- 실제 기사 제목 ↗' with the title as the clickable label."""
+    label = f'{s["institution"]} — {s.get("title") or s["url"]}'
+    return f'<li>{_safe_link(s["url"], label)} ↗</li>'
+
+
 def _issue_card_html(issue):
-    watch = _FIELD_WATCHPOINTS.get(issue["field"], ())
+    watch = _ISSUE_WATCH_QUESTIONS.get(issue["field"], ())
     watch_html = "".join(f"<li>{_esc(w)}</li>" for w in watch) if watch else ""
-    events_html = "".join(f"<li>{_esc(t)}</li>" for t in issue["event_titles"])
-    sources_html = "".join(
-        f'<li>{_esc(s["institution"])}: {_safe_link(s["url"])}</li>' for s in issue["sources"]
-    )
+    sources_html = "".join(_issue_source_link(s) for s in issue["sources"])
+    n = issue["related_event_count"]
     return (
         '<div class="kpi" style="flex:0 0 100%;max-width:100%">'
-        f'<div><strong>{_esc(issue["field"])} &middot; \'{_esc(issue["matched_keyword"])}\'</strong></div>'
-        f'<div><b>무슨 일이 있었나</b><ul>{events_html}</ul></div>'
-        f'<div><b>왜 중요한가</b><br>{_esc(issue["why_it_matters"])}</div>'
-        f'<div><b>무엇이 변하고 있는가</b><br>{_esc(issue["whats_changing"])}</div>'
-        + (f'<div><b>앞으로 볼 것</b><ul>{watch_html}</ul></div>' if watch_html else "")
-        + f'<div class="empty">Sources {len(issue["sources"])}<ul>{sources_html}</ul></div>'
+        f'<div><strong>{_esc(issue["headline"])}</strong></div>'
+        f'<div class="empty">{_esc(issue["field"])} &middot; \'{_esc(issue["matched_keyword"])}\'</div>'
+        f'<div style="margin-top:10px"><b>무슨 일이 있었나</b><br>{_esc(issue["summary"])}</div>'
+        f'<div style="margin-top:10px"><b>왜 중요한가</b><br>{_esc(issue["why_it_matters"])}</div>'
+        f'<div style="margin-top:10px"><b>무엇이 변하고 있는가</b><br>{_esc(issue["whats_changing"])}</div>'
+        + (f'<div style="margin-top:10px"><b>앞으로 볼 것</b><ul>{watch_html}</ul></div>' if watch_html else "")
+        + f'<div class="empty" style="margin-top:10px">관련 사건 {n}건 &middot; Sources {len(issue["sources"])}<ul>{sources_html}</ul></div>'
         '</div>'
     )
 
@@ -612,14 +637,15 @@ def render_overview():
         return _shell(f"{_ko('overview')} / Today", "overview", (
             f'{PUBLIC_SAFE_BANNER}<p class="empty">{_esc(subtitle)}</p>'
             '<h2>오늘의 관측</h2>'
-            '<p class="empty">오늘 Importance Gate를 통과한 주요 사건이 확인되지 않았습니다 '
+            '<p class="empty">오늘 수집된 정보 가운데 따로 짚을 만큼 의미 있는 변화는 확인되지 않았습니다 '
             '(정직한 결과이며, 예시를 넣지 않습니다). 전체 수집 자료는 '
             f'<a href="../daily_discovery/">수집정보</a>에서 확인할 수 있습니다.</p>'
         ))
 
     observation = (
-        f'오늘 Importance Gate를 통과한 사건 {len(important)}건'
-        + (f', 그중 핵심 Issue {len(issues)}건이 확인됐습니다.' if issues else '이 확인됐습니다. 오늘은 여러 사건을 묶을 만한 뚜렷한 Issue는 없었습니다.')
+        f'오늘 수집된 정보 가운데 의미 있는 변화 {len(important)}건을 선별했'
+        + (f'으며, 서로 연결되는 핵심 이슈 {len(issues)}건이 포착됐습니다.' if issues
+           else '습니다. 다만 오늘은 여러 사건을 하나의 흐름으로 묶을 만큼 뚜렷한 이슈는 없었습니다.')
     )
 
     issue_section = ""

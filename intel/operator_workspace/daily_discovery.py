@@ -259,7 +259,7 @@ def _build_card(members):
     kws = [kw for m in members_sorted for kw in [_matched_policy_keyword(_title_of(m))] if kw]
     matched_keyword = kws[0] if kws else None
     sources = [
-        {"institution": m.get("source") or "UNKNOWN", "url": m.get("link")}
+        {"institution": m.get("source") or "UNKNOWN", "url": m.get("link"), "title": _title_of(m)}
         for m in members_sorted if m.get("link")
     ]
     return {
@@ -606,6 +606,75 @@ def today_important_events(data_dir="data", max_n=10):
     return qualifying[:max_n]
 
 
+# METAXIS -- TODAY CURATION QUALITY FIX (2026-10-03): field+keyword bucketing was already the
+# grouping rule (kept, per directive section 13: don't rebuild Event/Gate structure) -- what this
+# fix changes is everything written INTO the issue dict below. No LLM is wired into this pipeline
+# (pending Te's decision on an API key), so every sentence here is still template-built from real
+# titles/counts, but the templates are written to (a) never read as a pipeline-status sentence
+# ("N건이 확인됐다"), (b) hedge explicitly on sample size instead of asserting a trend from 2
+# events, and (c) keep the field/keyword as metadata, not the headline. This is NOT the LLM
+# synthesis section 10 asks for -- it is the best honest substitute until that's wired in.
+_FIELD_CHANGE_FRAME = {
+    "기술": "기술 경쟁의 구도",
+    "산업·경제": "산업의 비용·경쟁 구조",
+    "노동·고용": "노동시장의 조건",
+    "법·제도": "법·제도적 제약",
+    "정책·국제질서": "정책·국제질서의 방향",
+    "에너지·환경": "에너지·인프라 확보 방식",
+    "국방·안보": "안보·기술통제 구도",
+    "교육·사회": "사회적 수용과 제도",
+    "문화·예술": "창작·저작권을 둘러싼 환경",
+    "미디어·콘텐츠": "콘텐츠 유통·규제 구조",
+}
+
+
+def _ga(word):
+    """Correct Korean subject particle (이/가) for a word ending in a consonant vs vowel, so
+    templated sentences read naturally instead of mechanically concatenated."""
+    if not word:
+        return "가"
+    last = word[-1]
+    if "가" <= last <= "힣":
+        return "이" if (ord(last) - 0xAC00) % 28 != 0 else "가"
+    return "가"
+
+
+def _issue_headline(field, kw, n):
+    frame = _FIELD_CHANGE_FRAME.get(field, f"{field} 분야의 조건")
+    return f"'{kw}' 관련 움직임이 반복되며 {frame}에 새로운 변수로 떠오르고 있다"
+
+
+def _issue_summary(members_sorted):
+    """Joins real event titles into one flowing paragraph instead of a bare bullet list -- still
+    no fact beyond what each title itself states, just connected with natural transition words."""
+    titles = [m["title_ko"] for m in members_sorted]
+    if len(titles) == 1:
+        return titles[0] + "."
+    parts = [titles[0]]
+    joiners = ["그런가 하면", "한편", "동시에", "또한"]
+    for i, t in enumerate(titles[1:]):
+        joiner = joiners[i % len(joiners)]
+        parts.append(f"{joiner} {t}")
+    return " ".join(p if p.endswith((".", "다", "다.")) else p + "." for p in parts)
+
+
+def _issue_why_it_matters(field, kw, n):
+    frame = _FIELD_CHANGE_FRAME.get(field, f"{field} 분야의 조건")
+    base = f"'{kw}' 관련 사건이 한 번이 아니라 여러 차례 나타난 것은, {frame}{_ga(frame)} 개별 사건 단위가 아니라 흐름 차원에서 바뀌고 있을 가능성을 시사한다."
+    if n < 3:
+        base += " 다만 사례가 아직 많지 않아 단정하기보다는 반복 여부를 계속 지켜볼 필요가 있다."
+    return base
+
+
+def _issue_whats_changing(field, kw, n):
+    frame = _FIELD_CHANGE_FRAME.get(field, f"{field} 분야의 조건")
+    if n < 3:
+        return (f"아직 {n}건의 사례만으로 {frame}{_ga(frame)} 구조적으로 전환됐다고 판단하기는 이르다. "
+                f"다만 '{kw}' 관련 움직임이 앞으로도 반복되는지는 관찰할 가치가 있다.")
+    return (f"{frame}을 둘러싼 조건이 개별 사건이 아니라 '{kw}'를 축으로 동시다발적으로 움직이는 신호가 "
+            f"나타나고 있다.")
+
+
 def today_core_issues(important_events):
     """Groups today's important Events into an Issue ONLY when >=2 of them share the same field
     AND the same matched policy/regulatory keyword (directive section 12: shared keyword alone is
@@ -627,6 +696,7 @@ def today_core_issues(important_events):
         if len(members) < 2:
             continue
         members_sorted = sorted(members, key=lambda e: str(e["date"]), reverse=True)
+        n = len(members_sorted)
         sources = []
         seen_urls = set()
         for ev in members_sorted:
@@ -637,11 +707,13 @@ def today_core_issues(important_events):
         issues.append({
             "field": field,
             "matched_keyword": kw,
+            "headline": _issue_headline(field, kw, n),
             "event_titles": [ev["title_ko"] for ev in members_sorted],
-            "why_it_matters": f"'{kw}' 관련 사건이 {field} 분야에서 {len(members_sorted)}건 연달아 확인됐다.",
-            "whats_changing": f"개별 사건이 아니라 {field} 분야에서 '{kw}' 관련 변화가 동시다발적으로 나타나고 있다.",
+            "summary": _issue_summary(members_sorted),
+            "why_it_matters": _issue_why_it_matters(field, kw, n),
+            "whats_changing": _issue_whats_changing(field, kw, n),
             "sources": sources,
-            "related_event_count": len(members_sorted),
+            "related_event_count": n,
         })
     issues.sort(key=lambda i: i["related_event_count"], reverse=True)
     return issues
