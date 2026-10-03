@@ -3998,5 +3998,75 @@
   "diagnostic_stage": "extraction",
   "diagnostic_code": "EXTRACTION_TOO_SHORT",
   "ts": "2026-10-03T16:46:45.950436+00:00"
+ },
+ "dd8591e1da0d51e46af9620c977783ff772b361732f6a5498cb19c98dcc23254": {
+  "url": "https://www.newsis.com/view/NISX20261002_0003812932",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T18:49:41.747477+00:00"
+ },
+ "67dac9f5f51307d87730bad3285619039bd68b26bc1dae26995bbbeb1ffca7ca": {
+  "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T18:49:41.851099+00:00"
+ },
+ "505bbeb51bdc640bb42dba33bfad1466d52752910b8b6c9bf559f0ce8105a018": {
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcFdnMUFiSmRmZ1l2MFhXeXczTmFyWEdNbDNUVXV4c1g3VTdMYk9DSmcySGoydHd5S0w5ejA4ZVR3aHE2X2FMWGRfa2ttbXk5cV9pSDJJaG8tWVhlM2lLbDJVOUFSRmY4YmhhZ0JXU25YTVNBMGpEUklPZTRsdU5lbnRXLWZuYk1f?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:42.176441+00:00"
+ },
+ "d82bb973324c5a062f2228e918b6134d56be35966ce11f72c82492bdb77357e2": {
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYWhXOFk2RHJpTndfQkNIX0NyM3M0U2pkMXZFcDdTR0Q4UEE3WVNjS3ZHeXpwamNVZFVHNXBXcHRqQkFkX1VUd3RpSWNEVHh0em1JTWFqTkJFZ3ZBRlgyVkpQX0NjOWdreXZwOG5GTEN1SVdVUmkyLTc4N1lwYnc5bHZOdGZYUlpqUVk5b2V4RzNMYTgxNE8yZWNyZURPZm_SAbMBQVVfeXFMTkZiWmJMdk44UVo2aE5YcFFCbFNOTk43ZGhuWFludFBVWnJCaWdzWUwyb2VwMDBfenZfRHY0UWRieGNUajR4RW5wQ1RLNkJIWmpJaEU4djhfd0JuakdFMkZxanpWMFFTaUNMeTV1QWZKQldIeG8zRndmb3ZQUEhPQlJFcFVBdjFLdWFqOHIxVzNvQzdlNXBsU3VsaHlmeUFMcmtfb1JUWW12aWl3R1pBcGlUVFU?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:42.352608+00:00"
+ },
+ "152214468fde5411b6b602af8d433bb68e1b98657e45304b50e1f82b6acae2d5": {
+  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbThpMkFaMVNWdWZPRnlTeUpFa1lyZk1aT1hISE1jYmZFRHJpdUV6ZmN5a3NEMGExeDM1akYxdUQyeFI0bl9wSy1GWWpEb25uNVcyWlhyaElhMkZhY05Nb0VweGFveGx0NWZNWlV4NzJBemxoUjVIX2FOZk9zMEdIVDZZYkxtdmM?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:42.538493+00:00"
+ },
+ "ad91660f59c415eb59a10a52094a10fa3b9f20a3ce4a8053da8fe0016f4748d6": {
+  "url": "https://www.engadget.com/2276597/capcom-plans-to-use-ai-to-speed-up-the-game-development-process/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T18:49:42.714097+00:00"
+ },
+ "6e8935ee95eee2f783677112b6ee87e402ae37818f8cb0b42a604f437a929a33": {
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNG9NRHU1azR5TzV3V2ZHRmdjUWFvbW9veHo4bkFRMXYzOVJqbU1WVkp5cy1jazlUUExXcWlVZjJkbEtwLWc0ZXF4NHBwdE1INTVvWGpPUGpCYnhFdnVpSlBSMms3empSLWhxdHppTGNaSE5adHNLaWxQOWhhb2pacmdhOS1sUkQ1?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:42.921641+00:00"
+ },
+ "2464439697723245109354bcbf1e56b931672b259400fdcbc6329b643d7a076b": {
+  "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE14bThJOGJJbU9DT3c0eGtWUWFLWWlwbXU1Q1hzVW52X2RyeWRUeGdYMWNOSGNLU0FXclhoYWFMb1Fsdk43c2stZlduaDRHY2c?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:43.106620+00:00"
+ },
+ "ce17a6975f093aca8bfe4605930ba51669d0c4185efe0f74c273bf19f184056a": {
+  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWmVZb1hxZnBMUWw5Z1NDNEVwMzhiMVdyeHVZaGtSTm1nUGMyOEEtWUR0c01KbkNFTzhfYjRQVnZuYTJnQWxabHp4WEd1ekRRMmo1aEVreVZhUkdHdmlmcGJJSjQ5LW9TQVRSelo5LXRRc0lMelg5R0d6NlBHSngybmt1anduUXZ1Y1JiYWpYZXFJUVFBR3o1WEZ5M0xJX3dnRlIzS1EzVV9OSmh3ZG4wV2lCV08?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:43.291155+00:00"
+ },
+ "41ffb2bb4dbe425605e1233a8997a93fb5d868399b6a8e3659e001ad643e8216": {
+  "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1NUlZOVkdXNm1scGFQRHRzMnZlS3BqTTk5SkNVVFFEdGkxNi1pX19FS3Itc0lFOGdsbjZWSDM2Wlotb3M?oc=5",
+  "status": "FETCH_FAILED",
+  "diagnostic_stage": "extraction",
+  "diagnostic_code": "EXTRACTION_TOO_SHORT",
+  "ts": "2026-10-03T18:49:43.477308+00:00"
  }
 }
