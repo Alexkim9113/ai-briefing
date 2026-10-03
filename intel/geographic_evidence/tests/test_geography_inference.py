@@ -138,6 +138,18 @@ def test_real_corpus_produces_a_defensible_nonzero_result():
     assert report["after_unknown_country_count"] > 0  # never claim full resolution
 
 
+def test_eu_jp_in_cn_government_tlds_section_8_10_11():
+    # O-3D.5: new Tier-1 institutional TLD rules must classify correctly, and must never fire on
+    # a generic ccTLD (no bare ".eu"/".jp"/".in"/".cn" rule exists -- only the specific official
+    # government/EU-institution domains).
+    assert gi.infer_by_tld("https://ec.europa.eu/some/page")[0] == "EU"
+    assert gi.infer_by_tld("https://www.meti.go.jp/press/release")[0] == "JP"
+    assert gi.infer_by_tld("https://www.meity.gov.in/notice")[0] == "IN"
+    assert gi.infer_by_tld("https://www.gov.cn/notice")[0] == "CN"
+    # a generic .com under a similar-looking domain must not be misclassified
+    assert gi.infer_by_tld("https://example.com/eu-news") is None
+
+
 def run_all():
     tests = [v for k, v in globals().items() if k.startswith("test_")]
     for t in tests:

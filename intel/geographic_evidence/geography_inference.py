@@ -63,6 +63,18 @@ TLD_RULES = (
     (".or.kr", "KR", None, "Korean organization ccTLD (*.or.kr)"),
     (".kr", "KR", None, "Korean ccTLD (*.kr)"),
     (".gov", "US", "US_FEDERAL", "US government TLD (*.gov is reserved for US federal/state government)"),
+    # O-3D.5 section 8/10/11: official government/EU-institution domains added to support the
+    # new EU/JP/IN Tier-1 source candidates. Each is an unambiguous official-institution domain
+    # (never a generic ccTLD like a bare ".eu"/".jp"/".in"/".cn"), so this is the same
+    # publisher-IS-the-institution case as the existing .gov/.go.kr rules, not a language/TLD guess.
+    (".europa.eu", "EU", "EU_INSTITUTION",
+     "EU institution domain (*.europa.eu is reserved for official European Union institutions)"),
+    (".go.jp", "JP", "JP_GOVERNMENT",
+     "Japanese government TLD (*.go.jp is reserved for Japanese government agencies)"),
+    (".gov.in", "IN", "IN_GOVERNMENT",
+     "Indian government TLD (*.gov.in is reserved for Indian government agencies)"),
+    (".gov.cn", "CN", "CN_GOVERNMENT",
+     "Chinese government TLD (*.gov.cn is reserved for Chinese government agencies)"),
 )
 
 # Real, publicly-identifiable publishers/organizations behind a source_id that is NOT already

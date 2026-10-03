@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-10-03T02:00:38.593449+00:00",
+  "registered_by_country": {
+    "KR": 58,
+    "US": 0,
+    "CN": 2,
+    "EU": 3,
+    "JP": 3,
+    "IN": 3
+  },
+  "registered_uncounted": 80,
+  "registered_total_sources": 149,
+  "active_source_ids_by_country": {
+    "KR": [
+      "src_asiatoday_co_kr",
+      "src_biz_heraldcorp_com",
+      "src_chosunbiz",
+      "src_cupnews_kr",
+      "src_dailian_co_kr",
+      "src_fnnews_com",
+      "src_gukjenews_com",
+      "src_hani_co_kr",
+      "src_hankookilbo_com",
+      "src_hankyung_com",
+      "src_itbiznews_com",
+      "src_it조선",
+      "src_junews_com",
+      "src_khan_co_kr",
+      "src_mk_co_kr",
+      "src_mt_co_kr",
+      "src_newsis_com",
+      "src_rss_donga_com",
+      "src_rss_edaily_co_kr",
+      "src_seoul_co_kr",
+      "src_yna_co_kr",
+      "src_글로벌경제신문",
+      "src_기계신문",
+      "src_뉴스1",
+      "src_매일일보",
+      "src_브레이크뉴스",
+      "src_아시아경제",
+      "src_에너지경제신문",
+      "src_일간투데이",
+      "src_임팩트온",
+      "src_천지일보",
+      "src_호남교육신문"
+    ],
+    "US": [
+      "src_aei",
+      "src_amazon_web_services_aws",
+      "src_arstechnica_com",
+      "src_cnbc",
+      "src_cnn",
+      "src_engadget_com",
+      "src_federal_register",
+      "src_fox_business",
+      "src_investor_s_business_daily",
+      "src_siliconangle_com",
+      "src_techcrunch",
+      "src_techcrunch_com",
+      "src_the_new_york_times",
+      "src_theverge_com",
+      "src_wsj",
+      "src_zdnet_com"
+    ],
+    "CN": [],
+    "EU": [],
+    "JP": [],
+    "IN": []
+  },
+  "active_source_count_by_country": {
+    "KR": 32,
+    "US": 16,
+    "CN": 0,
+    "EU": 0,
+    "JP": 0,
+    "IN": 0
+  },
+  "matrix_rows": {
+    "정부": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "입법": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "규제기관": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "법·제도": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "개인정보": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "저작권/IP": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "공식 통계": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "산업·경제": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "노동": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "연구·과학": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "의료": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "에너지·환경": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "국방·안보": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "교육·사회": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "문화·예술": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "미디어·콘텐츠": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "AI 정책": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    },
+    "국제질서": {
+      "KR": null,
+      "US": null,
+      "CN": null,
+      "EU": null,
+      "JP": null,
+      "IN": null
+    }
+  },
+  "matrix_row_note": "분야 x 국가 세부 Coverage는 현재 데이터로 산출 불가 (NOT_AVAILABLE) -- 가짜 Coverage를 표시하지 않기 위해 모든 셀을 비워둠 (section 4/39)."
+}

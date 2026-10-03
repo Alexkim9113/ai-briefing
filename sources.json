@@ -20,151 +20,1540 @@
     "talks": "영상·강연"
   },
   "manual": [
-    {"url": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988", "outlet": "로리더", "category": "news_ko", "feed": "https://www.lawleader.co.kr/rss/allArticle.xml", "field": "법률", "tags": ["헌법", "변호사", "AI", "참정권"], "note": "토론에 AI 플랫폼을 활용해 참정권과 미래 헌법을 논의했다"}
+    {
+      "url": "https://www.lawleader.co.kr/news/articleView.html?idxno=19988",
+      "outlet": "로리더",
+      "category": "news_ko",
+      "feed": "https://www.lawleader.co.kr/rss/allArticle.xml",
+      "field": "법률",
+      "tags": [
+        "헌법",
+        "변호사",
+        "AI",
+        "참정권"
+      ],
+      "note": "토론에 AI 플랫폼을 활용해 참정권과 미래 헌법을 논의했다"
+    }
   ],
   "sources": [
-    {"name": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/allArticle.xml", "tz": 9, "require_ai": true},
-    {"name": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/allArticle.xml", "tz": 9},
-    {"name": "구글뉴스: 인공지능", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 15},
-    {"name": "구글뉴스: 생성형 AI", "category": "news_ko", "url": "https://news.google.com/rss/search?q=%EC%83%9D%EC%84%B1%ED%98%95+AI+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 10},
-
-    {"name": "TechCrunch AI", "category": "news_global", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
-    {"name": "The Verge AI", "category": "news_global", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
-    {"name": "MIT Technology Review", "category": "news_global", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "max_age_days": 4},
-    {"name": "VentureBeat AI", "category": "news_global", "url": "https://venturebeat.com/category/ai/feed/"},
-    {"name": "OpenAI", "category": "news_global", "url": "https://openai.com/news/rss.xml", "max_age_days": 4},
-    {"name": "Google AI Blog", "category": "news_global", "url": "https://blog.google/technology/ai/rss/", "max_age_days": 4},
-    {"name": "Google DeepMind", "category": "news_global", "url": "https://deepmind.google/blog/rss.xml", "max_age_days": 4},
-    {"name": "Hugging Face Blog", "category": "news_global", "url": "https://huggingface.co/blog/feed.xml", "max_age_days": 4},
-    {"name": "Google News: AI", "category": "news_global", "url": "https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
-    {"name": "Google News: AI 기업", "category": "news_global", "url": "https://news.google.com/rss/search?q=(OpenAI+OR+Anthropic+OR+Nvidia+OR+Gemini+OR+%22Meta+AI%22+OR+xAI)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
-    {"name": "The Decoder", "category": "news_global", "url": "https://the-decoder.com/feed/"},
-    {"name": "Engadget", "category": "news_global", "url": "https://www.engadget.com/rss.xml", "filter": true, "limit": 5},
-    {"name": "SiliconANGLE AI", "category": "news_global", "url": "https://siliconangle.com/category/ai/feed/", "limit": 6},
-    {"name": "TechXplore AI", "category": "news_global", "url": "https://techxplore.com/rss-feed/machine-learning-ai-news/", "limit": 6},
-    {"name": "Ars Technica AI", "category": "news_global", "url": "https://arstechnica.com/ai/feed/", "max_age_days": 4, "limit": 5},
-    {"name": "WIRED AI", "category": "news_global", "url": "https://www.wired.com/feed/tag/ai/latest/rss", "max_age_days": 4, "limit": 5},
-    {"name": "ZDNET AI", "category": "news_global", "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml", "max_age_days": 4, "limit": 5},
-    {"name": "AI타임스 많이 본 기사", "outlet": "AI타임스", "category": "news_ko", "url": "https://www.aitimes.com/rss/clickTop.xml", "tz": 9, "require_ai": true, "hot": true, "max_age_days": 2, "limit": 10},
-    {"name": "인공지능신문 많이 본 기사", "outlet": "인공지능신문", "category": "news_ko", "url": "https://www.aitimes.kr/rss/clickTop.xml", "tz": 9, "require_ai": true, "hot": true, "max_age_days": 2, "limit": 10},
-    {"name": "구글뉴스 주요 뉴스: IT", "category": "news_ko", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "title_only": true, "hot": true, "max_age_days": 2, "limit": 10},
-    {"name": "조선일보", "outlet": "조선일보", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:chosun.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "중앙일보", "outlet": "중앙일보", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:joongang.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "동아일보", "category": "news_ko", "url": "https://rss.donga.com/total.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "문화일보", "outlet": "문화일보", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:munhwa.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "국민일보", "outlet": "국민일보", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:kmib.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "한겨레", "category": "news_ko", "url": "https://www.hani.co.kr/rss/", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "경향신문", "category": "news_ko", "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "서울신문", "outlet": "서울신문", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:seoul.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "한국일보", "outlet": "한국일보", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:hankookilbo.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "한국경제", "category": "news_ko", "url": "https://www.hankyung.com/feed/all-news", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "매일경제", "category": "news_ko", "url": "https://www.mk.co.kr/rss/30000001/", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "머니투데이", "outlet": "머니투데이", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:mt.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "이데일리", "category": "news_ko", "url": "http://rss.edaily.co.kr/edaily_news.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "아주경제", "outlet": "아주경제", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:ajunews.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "오마이뉴스", "category": "news_ko", "url": "http://rss.ohmynews.com/rss/ohmynews.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "프레시안", "outlet": "프레시안", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:pressian.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "기독연합뉴스", "category": "news_ko", "url": "https://www.cupnews.kr/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 3},
-    {"name": "불교신문", "category": "news_ko", "url": "https://www.ibulgyo.com/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 3},
-    {"name": "연합뉴스", "category": "news_ko", "url": "https://www.yna.co.kr/rss/news.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "뉴시스", "category": "news_ko", "url": "https://newsis.com/RSS/sokbo.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "더팩트", "outlet": "더팩트", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:tf.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "아시아투데이", "outlet": "아시아투데이", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:asiatoday.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "로리더", "category": "news_ko", "url": "https://www.lawleader.co.kr/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 3},
-    {"name": "법률저널", "category": "news_ko", "url": "https://www.lec.co.kr/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 3},
-    {"name": "뉴스핌", "outlet": "뉴스핌", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:newspim.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "IT비즈뉴스", "category": "news_ko", "url": "https://www.itbiznews.com/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "헤럴드경제", "category": "news_ko", "url": "https://biz.heraldcorp.com/rss/google/it", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "파이낸셜뉴스", "category": "news_ko", "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "국제뉴스", "category": "news_ko", "url": "https://www.gukjenews.com/rss/allArticle.xml", "tz": 9, "require_ai": true, "limit": 5},
-    {"name": "데일리안", "outlet": "데일리안", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:dailian.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 5},
-    {"name": "내외신문", "outlet": "내외신문", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:naewaynews.com+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 3},
-    {"name": "굿데일리", "outlet": "굿데일리", "category": "news_ko", "url": "https://news.google.com/rss/search?q=AI+site:gooddailynews.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 3},
-    {"name": "주제: 사회·노동", "field": "사회·노동", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%82%AC%ED%9A%8C+OR+%EB%B6%88%ED%8F%89%EB%93%B1+OR+%EC%9D%BC%EC%9E%90%EB%A6%AC+OR+%EB%85%B8%EB%8F%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 저작권", "field": "저작권", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%A0%80%EC%9E%91%EA%B6%8C+OR+%EC%B0%BD%EC%9E%91%EC%9E%90+OR+%ED%91%9C%EC%A0%88)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 에너지·환경", "field": "에너지·환경", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%97%90%EB%84%88%EC%A7%80+OR+%EC%A0%84%EB%A0%A5+OR+%ED%99%98%EA%B2%BD+OR+%EA%B8%B0%ED%9B%84+OR+%ED%83%84%EC%86%8C)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 동물", "field": "동물", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%8F%99%EB%AC%BC+OR+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+OR+%EC%95%BC%EC%83%9D%EB%8F%99%EB%AC%BC)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 정신건강", "field": "정신건강", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%9E%90%EC%82%B4+OR+%EC%9A%B0%EC%9A%B8%EC%A6%9D+OR+%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 청소년", "field": "청소년", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%AD%EC%86%8C%EB%85%84+OR+%ED%95%99%EC%83%9D+OR+%EC%95%84%EB%8F%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 경제", "field": "경제", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B2%BD%EC%A0%9C+OR+%EA%B8%88%EC%9C%B5+OR+%EB%AC%BC%EA%B0%80+OR+%EC%A6%9D%EC%8B%9C)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 미디어", "field": "미디어", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%AF%B8%EB%94%94%EC%96%B4+OR+%EC%96%B8%EB%A1%A0+OR+%EB%94%A5%ED%8E%98%EC%9D%B4%ED%81%AC+OR+%EA%B0%80%EC%A7%9C%EB%89%B4%EC%8A%A4)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 철학·윤리", "field": "철학·윤리", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%A0%ED%95%99+OR+%EC%9C%A4%EB%A6%AC+OR+%EC%9D%B8%EB%AC%B8%ED%95%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 정치", "field": "정치", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%A0%95%EC%B9%98+OR+%EC%84%A0%EA%B1%B0+OR+%EA%B5%AD%ED%9A%8C)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 문화·예술", "field": "문화·예술", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%98%88%EC%88%A0+OR+%EC%9D%8C%EC%95%85+OR+%EC%98%81%ED%99%94+OR+%EB%AF%B8%EC%88%A0+OR+%EB%AC%B8%ED%95%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 국방·전쟁", "field": "국방·전쟁", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B5%AD%EB%B0%A9+OR+%EA%B5%B0%EC%82%AC+OR+%EC%A0%84%EC%9F%81+OR+%EB%AC%B4%EA%B8%B0)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 가족·출산", "field": "가족·출산", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B0%80%EC%A1%B1+OR+%EC%B6%9C%EC%82%B0+OR+%EC%A0%80%EC%B6%9C%EC%83%9D+OR+%EC%9C%A1%EC%95%84)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 여성", "field": "여성", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%97%AC%EC%84%B1+OR+%EC%84%B1%ED%8F%89%EB%93%B1+OR+%EC%A0%A0%EB%8D%94)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 법률", "field": "법률", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%B2%95%EB%A5%A0+OR+%EB%B3%80%ED%98%B8%EC%82%AC+OR+%EB%B2%95%EC%9B%90+OR+%ED%8C%90%EA%B2%B0+OR+%EC%86%8C%EC%86%A1+OR+%EB%A1%9C%ED%8E%8C+OR+%EB%A6%AC%EA%B1%B8%ED%85%8C%ED%81%AC)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 피지컬 AI", "field": "피지컬 AI", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%22%ED%94%BC%EC%A7%80%EC%BB%AC+AI%22+OR+%22physical+AI%22+OR+%ED%9C%B4%EB%A8%B8%EB%85%B8%EC%9D%B4%EB%93%9C+OR+%22%EC%B2%B4%ED%99%94+AI%22)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 에이전트", "field": "에이전트", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%22AI+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%22+OR+%22%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1%22+OR+%22agentic%22+OR+%22AI+agent%22)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: AI 철학", "field": "AI 철학", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%A0%ED%95%99+OR+%EC%9D%98%EC%8B%9D+OR+%EC%9D%B8%EA%B0%84%EC%84%B1+OR+%EC%A1%B4%EC%9E%AC+OR+%EC%82%AC%EC%9C%A0)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "주제: 로봇", "field": "로봇", "category": "news_ko", "url": "https://news.google.com/rss/search?q=(%EB%A1%9C%EB%B4%87+OR+%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4+OR+%EB%A1%9C%EB%B4%87%EA%B3%B5%ED%95%99)+(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "Google News Top: Technology", "category": "news_global", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en", "require_ai": true, "title_only": true, "hot": true, "max_age_days": 2, "limit": 10},
-    {"name": "Topic: 사회·노동", "field": "사회·노동", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(society+OR+jobs+OR+inequality+OR+workers)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 저작권·미디어", "field": "저작권·미디어", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(copyright+OR+artists+OR+journalism+OR+deepfake)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 에너지·환경", "field": "에너지·환경", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(energy+OR+climate+OR+environment+OR+animals)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 청소년·가족", "field": "청소년·가족", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(teens+OR+children+OR+suicide+OR+%22mental+health%22+OR+family)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 정치·국방", "field": "정치·국방", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(election+OR+military+OR+war+OR+defense)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 철학·윤리·예술", "field": "철학·윤리·예술", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(ethics+OR+philosophy+OR+art+OR+music)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 여성", "field": "여성", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(women+OR+gender)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 법률", "field": "법률", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(lawsuit+OR+court+OR+lawyers+OR+%22law+firm%22+OR+legal)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 피지컬 AI", "field": "피지컬 AI", "category": "news_global", "url": "https://news.google.com/rss/search?q=(%22physical+AI%22+OR+humanoid+OR+%22embodied+AI%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 에이전트", "field": "에이전트", "category": "news_global", "url": "https://news.google.com/rss/search?q=(%22AI+agent%22+OR+%22AI+agents%22+OR+agentic)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: AI 철학", "field": "AI 철학", "category": "news_global", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(philosophy+OR+consciousness+OR+philosopher)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Topic: 로봇", "field": "로봇", "category": "news_global", "url": "https://news.google.com/rss/search?q=(robot+OR+robotics+OR+robots)+(AI+OR+%22artificial+intelligence%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-
-    {"name": "Hugging Face 오늘의 논문", "category": "papers", "field": "AI 일반", "url": "https://huggingface.co/api/daily_papers", "type": "hf_papers", "limit": 10},
-    {"name": "arXiv cs.AI", "category": "papers", "field": "AI 일반", "url": "https://rss.arxiv.org/rss/cs.AI", "limit": 6},
-    {"name": "arXiv cs.CL", "category": "papers", "field": "언어·LLM", "url": "https://rss.arxiv.org/rss/cs.CL", "limit": 4},
-    {"name": "Nature Machine Intelligence", "category": "papers", "field": "AI 일반", "url": "https://www.nature.com/natmachintell.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "limit": 5},
-    {"name": "Nature 머신러닝", "category": "papers", "field": "AI 일반", "url": "https://www.nature.com/subjects/machine-learning.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "limit": 5},
-    {"name": "Europe PMC", "category": "papers", "field": "의료", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE%3A%22artificial+intelligence%22+OR+TITLE%3A%22machine+learning%22+OR+TITLE%3A%22deep+learning%22+OR+TITLE%3A%22large+language+model%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=10&sort=P_PDATE_D+desc", "type": "europepmc", "limit": 3},
-    {"name": "npj Digital Medicine", "category": "papers", "field": "의료", "url": "https://www.nature.com/npjdigitalmed.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "filter": true, "limit": 3},
-    {"name": "arXiv cs.CY", "category": "papers", "field": "법·윤리·정책", "url": "https://rss.arxiv.org/rss/cs.CY", "keywords": ["law", "legal", "regulation", "policy", "governance", "ethic", "copyright", "privacy", "accountability", "fairness"], "limit": 5},
-    {"name": "Nature 법", "category": "papers", "field": "법·윤리·정책", "url": "https://www.nature.com/subjects/law.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "filter": true, "limit": 4},
-    {"name": "Nature 에너지", "category": "papers", "field": "에너지·환경", "url": "https://www.nature.com/subjects/energy.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "filter": true, "limit": 4},
-    {"name": "Nature 기후변화", "category": "papers", "field": "에너지·환경", "url": "https://www.nature.com/subjects/climate-change.rss", "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)", "filter": true, "limit": 4},
-    {"name": "arXiv eess.SY", "category": "papers", "field": "에너지·환경", "url": "https://rss.arxiv.org/rss/eess.SY", "keywords": ["energy", "grid", "power system", "battery", "renewable", "solar", "wind", "carbon", "climate"], "require_ai": true, "limit": 4},
-    {"name": "arXiv 음악·미디어·HCI", "category": "papers", "field": "문화·예술", "url": "https://rss.arxiv.org/rss/cs.SD+cs.MM+cs.HC", "keywords": ["music", "art", "artist", "creative", "creativity", "cultural", "painting", "film", "poetry", "dance", "museum", "heritage", "design", "story"], "require_ai": true, "limit": 5},
-    {"name": "arXiv cs.CY", "category": "papers", "field": "교육", "url": "https://rss.arxiv.org/rss/cs.CY", "keywords": ["education", "student", "teacher", "classroom", "tutor", "learning analytics", "curriculum"], "limit": 4},
-    {"name": "MIT News", "category": "papers", "field": "MIT 연구", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "limit": 5},
-    {"name": "Stanford", "category": "papers", "field": "스탠퍼드 연구", "url": "https://news.google.com/rss/search?q=Stanford+%28AI+OR+%22artificial+intelligence%22%29+%28study+OR+research+OR+researchers%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen", "limit": 5},
-    {"name": "국내 대학·연구소", "category": "papers", "field": "국내 연구", "url": "https://news.google.com/rss/search?q=AI+%28%EC%97%B0%EA%B5%AC%ED%8C%80+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84%29+%28KAIST+OR+%EC%84%9C%EC%9A%B8%EB%8C%80+OR+%ED%8F%AC%EC%8A%A4%ED%85%8D+OR+%EC%97%B0%EC%84%B8%EB%8C%80+OR+%EA%B3%A0%EB%A0%A4%EB%8C%80+OR+ETRI%29+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako", "limit": 6},
-    {"name": "국내 분야별 연구", "category": "papers", "field": "국내 연구", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+%28%EB%B2%95%EB%A5%A0+OR+%EC%97%90%EB%84%88%EC%A7%80+OR+%ED%99%98%EA%B2%BD+OR+%EC%98%88%EC%88%A0+OR+%EB%AC%B8%ED%99%94%29+%28%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8%29+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako", "limit": 3},
-    {"name": "국내 연구: 사회·경제", "field": "사회·경제", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%82%AC%ED%9A%8C+OR+%EA%B2%BD%EC%A0%9C+OR+%EB%85%B8%EB%8F%99+OR+%EC%A0%95%EC%B9%98)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "국내 연구: 윤리·철학·법", "field": "윤리·철학·법", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%9C%A4%EB%A6%AC+OR+%EC%B2%A0%ED%95%99+OR+%EC%A0%80%EC%9E%91%EA%B6%8C+OR+%EB%B2%95%ED%95%99)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "국내 연구: 환경·에너지·동물", "field": "환경·에너지·동물", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%ED%99%98%EA%B2%BD+OR+%EC%97%90%EB%84%88%EC%A7%80+OR+%EA%B8%B0%ED%9B%84+OR+%EB%8F%99%EB%AC%BC+OR+%EC%83%9D%ED%83%9C)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "국내 연구: 청소년·가족·여성", "field": "청소년·가족·여성", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%B2%AD%EC%86%8C%EB%85%84+OR+%EC%95%84%EB%8F%99+OR+%EA%B0%80%EC%A1%B1+OR+%EC%B6%9C%EC%82%B0+OR+%EC%97%AC%EC%84%B1+OR+%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "국내 연구: 문화·미디어", "field": "문화·미디어", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%98%88%EC%88%A0+OR+%EB%AC%B8%ED%99%94+OR+%EB%AF%B8%EB%94%94%EC%96%B4+OR+%EC%96%B8%EB%A1%A0)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "국내 연구: 국방·안보", "field": "국방·안보", "category": "papers", "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EA%B5%AD%EB%B0%A9+OR+%EA%B5%B0%EC%82%AC+OR+%EC%95%88%EB%B3%B4)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko", "require_ai": true, "limit": 3},
-    {"name": "Research: 사회·경제", "field": "사회·경제", "category": "papers", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(society+OR+economy+OR+jobs+OR+politics)+when:3d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Research: 윤리·철학", "field": "윤리·철학", "category": "papers", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(ethics+OR+philosophy+OR+copyright)+when:3d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Research: 환경·동물", "field": "환경·동물", "category": "papers", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(climate+OR+environment+OR+energy+OR+animals)+when:3d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Research: 청소년·정신건강", "field": "청소년·정신건강", "category": "papers", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(teens+OR+children+OR+%22mental+health%22+OR+women)+when:3d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "Research: 문화·미디어", "field": "문화·미디어", "category": "papers", "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(art+OR+music+OR+media+OR+journalism)+when:3d&hl=en-US&gl=US&ceid=US:en", "require_ai": true, "limit": 2},
-    {"name": "arXiv econ.GN", "field": "경제", "category": "papers", "url": "https://rss.arxiv.org/rss/econ.GN", "require_ai": true, "limit": 2},
-    {"name": "arXiv physics.soc-ph", "field": "사회", "category": "papers", "url": "https://rss.arxiv.org/rss/physics.soc-ph", "require_ai": true, "limit": 2},
-    {"name": "arXiv cs.SI", "field": "사회·미디어", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.SI", "require_ai": true, "limit": 2},
-    {"name": "arXiv cs.RO", "field": "로봇·피지컬 AI", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.RO", "limit": 3},
-    {"name": "arXiv cs.MA", "field": "에이전트", "category": "papers", "url": "https://rss.arxiv.org/rss/cs.MA", "limit": 3},
-
-    {"name": "구글뉴스: AI 정책", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(%EC%A0%95%EC%B1%85+OR+%EA%B7%9C%EC%A0%9C+OR+%EA%B8%B0%EB%B3%B8%EB%B2%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko", "limit": 12},
-    {"name": "Google News: AI regulation", "category": "policy", "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en", "limit": 12},
-    {"name": "과학기술정보통신부 보도자료", "category": "policy", "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94", "filter": true, "tz": 9},
-
-    {"name": "TED", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true, "limit": 2},
-    {"name": "TEDx Talks", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true, "limit": 2},
-    {"name": "TED-Ed", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능"], "max_age_days": 30, "title_only": true, "limit": 2},
-    {"name": "스테이지5", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCzA4Y2mkO0sF7TM4WZ38bw", "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이아이", "챗GPT", "로봇", "알고리즘", "머신러닝", "딥러닝", "자동화"], "max_age_days": 30, "title_only": true, "limit": 2},
-    {"name": "Lex Fridman", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "Dwarkesh Patel", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "Y Combinator", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "World Economic Forum", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCw-kH-Od73XDAt7qtH9uBYA", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "Stanford GSB", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGwuxdEeCf0TIA2RbPOj-8g", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "Big Think", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvQECJukTDE2i6aCoMnS-Vg", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "Sequoia Capital", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWrF0oN6unbXrWsTN7RctTw", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "a16z", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]},
-    {"name": "EO Korea", "category": "talks", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQ2DWm5Md16Dc3xRwwhVE7Q", "max_age_days": 14, "title_only": true, "limit": 2, "keywords": ["AI", "A.I.", "artificial intelligence", "machine learning", "deep learning", "robot", "algorithm", "ChatGPT", "chatbot", "neural", "automation", "LLM", "OpenAI", "AGI", "superintelligence", "인공지능", "에이전트", "생성형", "로봇"]}
+    {
+      "name": "AI타임스",
+      "category": "news_ko",
+      "url": "https://www.aitimes.com/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true
+    },
+    {
+      "name": "인공지능신문",
+      "category": "news_ko",
+      "url": "https://www.aitimes.kr/rss/allArticle.xml",
+      "tz": 9
+    },
+    {
+      "name": "구글뉴스: 인공지능",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 15
+    },
+    {
+      "name": "구글뉴스: 생성형 AI",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=%EC%83%9D%EC%84%B1%ED%98%95+AI+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 10
+    },
+    {
+      "name": "TechCrunch AI",
+      "category": "news_global",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "name": "The Verge AI",
+      "category": "news_global",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    },
+    {
+      "name": "MIT Technology Review",
+      "category": "news_global",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "max_age_days": 4
+    },
+    {
+      "name": "VentureBeat AI",
+      "category": "news_global",
+      "url": "https://venturebeat.com/category/ai/feed/"
+    },
+    {
+      "name": "OpenAI",
+      "category": "news_global",
+      "url": "https://openai.com/news/rss.xml",
+      "max_age_days": 4
+    },
+    {
+      "name": "Google AI Blog",
+      "category": "news_global",
+      "url": "https://blog.google/technology/ai/rss/",
+      "max_age_days": 4
+    },
+    {
+      "name": "Google DeepMind",
+      "category": "news_global",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "max_age_days": 4
+    },
+    {
+      "name": "Hugging Face Blog",
+      "category": "news_global",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "max_age_days": 4
+    },
+    {
+      "name": "Google News: AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 12
+    },
+    {
+      "name": "Google News: AI 기업",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(OpenAI+OR+Anthropic+OR+Nvidia+OR+Gemini+OR+%22Meta+AI%22+OR+xAI)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 12
+    },
+    {
+      "name": "The Decoder",
+      "category": "news_global",
+      "url": "https://the-decoder.com/feed/"
+    },
+    {
+      "name": "Engadget",
+      "category": "news_global",
+      "url": "https://www.engadget.com/rss.xml",
+      "filter": true,
+      "limit": 5
+    },
+    {
+      "name": "SiliconANGLE AI",
+      "category": "news_global",
+      "url": "https://siliconangle.com/category/ai/feed/",
+      "limit": 6
+    },
+    {
+      "name": "TechXplore AI",
+      "category": "news_global",
+      "url": "https://techxplore.com/rss-feed/machine-learning-ai-news/",
+      "limit": 6
+    },
+    {
+      "name": "Ars Technica AI",
+      "category": "news_global",
+      "url": "https://arstechnica.com/ai/feed/",
+      "max_age_days": 4,
+      "limit": 5
+    },
+    {
+      "name": "WIRED AI",
+      "category": "news_global",
+      "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+      "max_age_days": 4,
+      "limit": 5
+    },
+    {
+      "name": "ZDNET AI",
+      "category": "news_global",
+      "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+      "max_age_days": 4,
+      "limit": 5
+    },
+    {
+      "name": "AI타임스 많이 본 기사",
+      "outlet": "AI타임스",
+      "category": "news_ko",
+      "url": "https://www.aitimes.com/rss/clickTop.xml",
+      "tz": 9,
+      "require_ai": true,
+      "hot": true,
+      "max_age_days": 2,
+      "limit": 10
+    },
+    {
+      "name": "인공지능신문 많이 본 기사",
+      "outlet": "인공지능신문",
+      "category": "news_ko",
+      "url": "https://www.aitimes.kr/rss/clickTop.xml",
+      "tz": 9,
+      "require_ai": true,
+      "hot": true,
+      "max_age_days": 2,
+      "limit": 10
+    },
+    {
+      "name": "구글뉴스 주요 뉴스: IT",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "title_only": true,
+      "hot": true,
+      "max_age_days": 2,
+      "limit": 10
+    },
+    {
+      "name": "조선일보",
+      "outlet": "조선일보",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:chosun.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "중앙일보",
+      "outlet": "중앙일보",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:joongang.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "동아일보",
+      "category": "news_ko",
+      "url": "https://rss.donga.com/total.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "문화일보",
+      "outlet": "문화일보",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:munhwa.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "국민일보",
+      "outlet": "국민일보",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:kmib.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "한겨레",
+      "category": "news_ko",
+      "url": "https://www.hani.co.kr/rss/",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "경향신문",
+      "category": "news_ko",
+      "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "서울신문",
+      "outlet": "서울신문",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:seoul.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "한국일보",
+      "outlet": "한국일보",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:hankookilbo.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "한국경제",
+      "category": "news_ko",
+      "url": "https://www.hankyung.com/feed/all-news",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "매일경제",
+      "category": "news_ko",
+      "url": "https://www.mk.co.kr/rss/30000001/",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "머니투데이",
+      "outlet": "머니투데이",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:mt.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "이데일리",
+      "category": "news_ko",
+      "url": "http://rss.edaily.co.kr/edaily_news.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "아주경제",
+      "outlet": "아주경제",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:ajunews.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "오마이뉴스",
+      "category": "news_ko",
+      "url": "http://rss.ohmynews.com/rss/ohmynews.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "프레시안",
+      "outlet": "프레시안",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:pressian.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "기독연합뉴스",
+      "category": "news_ko",
+      "url": "https://www.cupnews.kr/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "불교신문",
+      "category": "news_ko",
+      "url": "https://www.ibulgyo.com/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "연합뉴스",
+      "category": "news_ko",
+      "url": "https://www.yna.co.kr/rss/news.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "뉴시스",
+      "category": "news_ko",
+      "url": "https://newsis.com/RSS/sokbo.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "더팩트",
+      "outlet": "더팩트",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:tf.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "아시아투데이",
+      "outlet": "아시아투데이",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:asiatoday.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "로리더",
+      "category": "news_ko",
+      "url": "https://www.lawleader.co.kr/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "법률저널",
+      "category": "news_ko",
+      "url": "https://www.lec.co.kr/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "뉴스핌",
+      "outlet": "뉴스핌",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:newspim.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "IT비즈뉴스",
+      "category": "news_ko",
+      "url": "https://www.itbiznews.com/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "헤럴드경제",
+      "category": "news_ko",
+      "url": "https://biz.heraldcorp.com/rss/google/it",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "파이낸셜뉴스",
+      "category": "news_ko",
+      "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "국제뉴스",
+      "category": "news_ko",
+      "url": "https://www.gukjenews.com/rss/allArticle.xml",
+      "tz": 9,
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "데일리안",
+      "outlet": "데일리안",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:dailian.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 5
+    },
+    {
+      "name": "내외신문",
+      "outlet": "내외신문",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:naewaynews.com+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 3
+    },
+    {
+      "name": "굿데일리",
+      "outlet": "굿데일리",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=AI+site:gooddailynews.co.kr+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 3
+    },
+    {
+      "name": "주제: 사회·노동",
+      "field": "사회·노동",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%82%AC%ED%9A%8C+OR+%EB%B6%88%ED%8F%89%EB%93%B1+OR+%EC%9D%BC%EC%9E%90%EB%A6%AC+OR+%EB%85%B8%EB%8F%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 저작권",
+      "field": "저작권",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%A0%80%EC%9E%91%EA%B6%8C+OR+%EC%B0%BD%EC%9E%91%EC%9E%90+OR+%ED%91%9C%EC%A0%88)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 에너지·환경",
+      "field": "에너지·환경",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%97%90%EB%84%88%EC%A7%80+OR+%EC%A0%84%EB%A0%A5+OR+%ED%99%98%EA%B2%BD+OR+%EA%B8%B0%ED%9B%84+OR+%ED%83%84%EC%86%8C)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 동물",
+      "field": "동물",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%8F%99%EB%AC%BC+OR+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+OR+%EC%95%BC%EC%83%9D%EB%8F%99%EB%AC%BC)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 정신건강",
+      "field": "정신건강",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%9E%90%EC%82%B4+OR+%EC%9A%B0%EC%9A%B8%EC%A6%9D+OR+%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 청소년",
+      "field": "청소년",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%AD%EC%86%8C%EB%85%84+OR+%ED%95%99%EC%83%9D+OR+%EC%95%84%EB%8F%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 경제",
+      "field": "경제",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B2%BD%EC%A0%9C+OR+%EA%B8%88%EC%9C%B5+OR+%EB%AC%BC%EA%B0%80+OR+%EC%A6%9D%EC%8B%9C)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 미디어",
+      "field": "미디어",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%AF%B8%EB%94%94%EC%96%B4+OR+%EC%96%B8%EB%A1%A0+OR+%EB%94%A5%ED%8E%98%EC%9D%B4%ED%81%AC+OR+%EA%B0%80%EC%A7%9C%EB%89%B4%EC%8A%A4)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 철학·윤리",
+      "field": "철학·윤리",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%A0%ED%95%99+OR+%EC%9C%A4%EB%A6%AC+OR+%EC%9D%B8%EB%AC%B8%ED%95%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 정치",
+      "field": "정치",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%A0%95%EC%B9%98+OR+%EC%84%A0%EA%B1%B0+OR+%EA%B5%AD%ED%9A%8C)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 문화·예술",
+      "field": "문화·예술",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%98%88%EC%88%A0+OR+%EC%9D%8C%EC%95%85+OR+%EC%98%81%ED%99%94+OR+%EB%AF%B8%EC%88%A0+OR+%EB%AC%B8%ED%95%99)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 국방·전쟁",
+      "field": "국방·전쟁",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B5%AD%EB%B0%A9+OR+%EA%B5%B0%EC%82%AC+OR+%EC%A0%84%EC%9F%81+OR+%EB%AC%B4%EA%B8%B0)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 가족·출산",
+      "field": "가족·출산",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EA%B0%80%EC%A1%B1+OR+%EC%B6%9C%EC%82%B0+OR+%EC%A0%80%EC%B6%9C%EC%83%9D+OR+%EC%9C%A1%EC%95%84)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 여성",
+      "field": "여성",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%97%AC%EC%84%B1+OR+%EC%84%B1%ED%8F%89%EB%93%B1+OR+%EC%A0%A0%EB%8D%94)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 법률",
+      "field": "법률",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EB%B2%95%EB%A5%A0+OR+%EB%B3%80%ED%98%B8%EC%82%AC+OR+%EB%B2%95%EC%9B%90+OR+%ED%8C%90%EA%B2%B0+OR+%EC%86%8C%EC%86%A1+OR+%EB%A1%9C%ED%8E%8C+OR+%EB%A6%AC%EA%B1%B8%ED%85%8C%ED%81%AC)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 피지컬 AI",
+      "field": "피지컬 AI",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%22%ED%94%BC%EC%A7%80%EC%BB%AC+AI%22+OR+%22physical+AI%22+OR+%ED%9C%B4%EB%A8%B8%EB%85%B8%EC%9D%B4%EB%93%9C+OR+%22%EC%B2%B4%ED%99%94+AI%22)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 에이전트",
+      "field": "에이전트",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%22AI+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%22+OR+%22%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1%22+OR+%22agentic%22+OR+%22AI+agent%22)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: AI 철학",
+      "field": "AI 철학",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+(%EC%B2%A0%ED%95%99+OR+%EC%9D%98%EC%8B%9D+OR+%EC%9D%B8%EA%B0%84%EC%84%B1+OR+%EC%A1%B4%EC%9E%AC+OR+%EC%82%AC%EC%9C%A0)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "주제: 로봇",
+      "field": "로봇",
+      "category": "news_ko",
+      "url": "https://news.google.com/rss/search?q=(%EB%A1%9C%EB%B4%87+OR+%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4+OR+%EB%A1%9C%EB%B4%87%EA%B3%B5%ED%95%99)+(%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+OR+AI)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "Google News Top: Technology",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "title_only": true,
+      "hot": true,
+      "max_age_days": 2,
+      "limit": 10
+    },
+    {
+      "name": "Topic: 사회·노동",
+      "field": "사회·노동",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(society+OR+jobs+OR+inequality+OR+workers)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 저작권·미디어",
+      "field": "저작권·미디어",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(copyright+OR+artists+OR+journalism+OR+deepfake)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 에너지·환경",
+      "field": "에너지·환경",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(energy+OR+climate+OR+environment+OR+animals)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 청소년·가족",
+      "field": "청소년·가족",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(teens+OR+children+OR+suicide+OR+%22mental+health%22+OR+family)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 정치·국방",
+      "field": "정치·국방",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(election+OR+military+OR+war+OR+defense)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 철학·윤리·예술",
+      "field": "철학·윤리·예술",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(ethics+OR+philosophy+OR+art+OR+music)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 여성",
+      "field": "여성",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(women+OR+gender)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 법률",
+      "field": "법률",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(lawsuit+OR+court+OR+lawyers+OR+%22law+firm%22+OR+legal)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 피지컬 AI",
+      "field": "피지컬 AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(%22physical+AI%22+OR+humanoid+OR+%22embodied+AI%22)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 에이전트",
+      "field": "에이전트",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(%22AI+agent%22+OR+%22AI+agents%22+OR+agentic)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: AI 철학",
+      "field": "AI 철학",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(philosophy+OR+consciousness+OR+philosopher)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Topic: 로봇",
+      "field": "로봇",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=(robot+OR+robotics+OR+robots)+(AI+OR+%22artificial+intelligence%22)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Hugging Face 오늘의 논문",
+      "category": "papers",
+      "field": "AI 일반",
+      "url": "https://huggingface.co/api/daily_papers",
+      "type": "hf_papers",
+      "limit": 10
+    },
+    {
+      "name": "arXiv cs.AI",
+      "category": "papers",
+      "field": "AI 일반",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "limit": 6
+    },
+    {
+      "name": "arXiv cs.CL",
+      "category": "papers",
+      "field": "언어·LLM",
+      "url": "https://rss.arxiv.org/rss/cs.CL",
+      "limit": 4
+    },
+    {
+      "name": "Nature Machine Intelligence",
+      "category": "papers",
+      "field": "AI 일반",
+      "url": "https://www.nature.com/natmachintell.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "limit": 5
+    },
+    {
+      "name": "Nature 머신러닝",
+      "category": "papers",
+      "field": "AI 일반",
+      "url": "https://www.nature.com/subjects/machine-learning.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "limit": 5
+    },
+    {
+      "name": "Europe PMC",
+      "category": "papers",
+      "field": "의료",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE%3A%22artificial+intelligence%22+OR+TITLE%3A%22machine+learning%22+OR+TITLE%3A%22deep+learning%22+OR+TITLE%3A%22large+language+model%22%29+AND+SRC%3AMED&format=json&resultType=core&pageSize=10&sort=P_PDATE_D+desc",
+      "type": "europepmc",
+      "limit": 3
+    },
+    {
+      "name": "npj Digital Medicine",
+      "category": "papers",
+      "field": "의료",
+      "url": "https://www.nature.com/npjdigitalmed.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "filter": true,
+      "limit": 3
+    },
+    {
+      "name": "arXiv cs.CY",
+      "category": "papers",
+      "field": "법·윤리·정책",
+      "url": "https://rss.arxiv.org/rss/cs.CY",
+      "keywords": [
+        "law",
+        "legal",
+        "regulation",
+        "policy",
+        "governance",
+        "ethic",
+        "copyright",
+        "privacy",
+        "accountability",
+        "fairness"
+      ],
+      "limit": 5
+    },
+    {
+      "name": "Nature 법",
+      "category": "papers",
+      "field": "법·윤리·정책",
+      "url": "https://www.nature.com/subjects/law.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "filter": true,
+      "limit": 4
+    },
+    {
+      "name": "Nature 에너지",
+      "category": "papers",
+      "field": "에너지·환경",
+      "url": "https://www.nature.com/subjects/energy.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "filter": true,
+      "limit": 4
+    },
+    {
+      "name": "Nature 기후변화",
+      "category": "papers",
+      "field": "에너지·환경",
+      "url": "https://www.nature.com/subjects/climate-change.rss",
+      "ua": "METAXIS-briefing/1.0 (+https://github.com/Alexkim9113/ai-briefing)",
+      "filter": true,
+      "limit": 4
+    },
+    {
+      "name": "arXiv eess.SY",
+      "category": "papers",
+      "field": "에너지·환경",
+      "url": "https://rss.arxiv.org/rss/eess.SY",
+      "keywords": [
+        "energy",
+        "grid",
+        "power system",
+        "battery",
+        "renewable",
+        "solar",
+        "wind",
+        "carbon",
+        "climate"
+      ],
+      "require_ai": true,
+      "limit": 4
+    },
+    {
+      "name": "arXiv 음악·미디어·HCI",
+      "category": "papers",
+      "field": "문화·예술",
+      "url": "https://rss.arxiv.org/rss/cs.SD+cs.MM+cs.HC",
+      "keywords": [
+        "music",
+        "art",
+        "artist",
+        "creative",
+        "creativity",
+        "cultural",
+        "painting",
+        "film",
+        "poetry",
+        "dance",
+        "museum",
+        "heritage",
+        "design",
+        "story"
+      ],
+      "require_ai": true,
+      "limit": 5
+    },
+    {
+      "name": "arXiv cs.CY",
+      "category": "papers",
+      "field": "교육",
+      "url": "https://rss.arxiv.org/rss/cs.CY",
+      "keywords": [
+        "education",
+        "student",
+        "teacher",
+        "classroom",
+        "tutor",
+        "learning analytics",
+        "curriculum"
+      ],
+      "limit": 4
+    },
+    {
+      "name": "MIT News",
+      "category": "papers",
+      "field": "MIT 연구",
+      "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+      "limit": 5
+    },
+    {
+      "name": "Stanford",
+      "category": "papers",
+      "field": "스탠퍼드 연구",
+      "url": "https://news.google.com/rss/search?q=Stanford+%28AI+OR+%22artificial+intelligence%22%29+%28study+OR+research+OR+researchers%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen",
+      "limit": 5
+    },
+    {
+      "name": "국내 대학·연구소",
+      "category": "papers",
+      "field": "국내 연구",
+      "url": "https://news.google.com/rss/search?q=AI+%28%EC%97%B0%EA%B5%AC%ED%8C%80+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84%29+%28KAIST+OR+%EC%84%9C%EC%9A%B8%EB%8C%80+OR+%ED%8F%AC%EC%8A%A4%ED%85%8D+OR+%EC%97%B0%EC%84%B8%EB%8C%80+OR+%EA%B3%A0%EB%A0%A4%EB%8C%80+OR+ETRI%29+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+      "limit": 6
+    },
+    {
+      "name": "국내 분야별 연구",
+      "category": "papers",
+      "field": "국내 연구",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+%28%EB%B2%95%EB%A5%A0+OR+%EC%97%90%EB%84%88%EC%A7%80+OR+%ED%99%98%EA%B2%BD+OR+%EC%98%88%EC%88%A0+OR+%EB%AC%B8%ED%99%94%29+%28%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8%29+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 사회·경제",
+      "field": "사회·경제",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%82%AC%ED%9A%8C+OR+%EA%B2%BD%EC%A0%9C+OR+%EB%85%B8%EB%8F%99+OR+%EC%A0%95%EC%B9%98)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 윤리·철학·법",
+      "field": "윤리·철학·법",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%9C%A4%EB%A6%AC+OR+%EC%B2%A0%ED%95%99+OR+%EC%A0%80%EC%9E%91%EA%B6%8C+OR+%EB%B2%95%ED%95%99)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 환경·에너지·동물",
+      "field": "환경·에너지·동물",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%ED%99%98%EA%B2%BD+OR+%EC%97%90%EB%84%88%EC%A7%80+OR+%EA%B8%B0%ED%9B%84+OR+%EB%8F%99%EB%AC%BC+OR+%EC%83%9D%ED%83%9C)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 청소년·가족·여성",
+      "field": "청소년·가족·여성",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%B2%AD%EC%86%8C%EB%85%84+OR+%EC%95%84%EB%8F%99+OR+%EA%B0%80%EC%A1%B1+OR+%EC%B6%9C%EC%82%B0+OR+%EC%97%AC%EC%84%B1+OR+%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 문화·미디어",
+      "field": "문화·미디어",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EC%98%88%EC%88%A0+OR+%EB%AC%B8%ED%99%94+OR+%EB%AF%B8%EB%94%94%EC%96%B4+OR+%EC%96%B8%EB%A1%A0)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "국내 연구: 국방·안보",
+      "field": "국방·안보",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+(%EA%B5%AD%EB%B0%A9+OR+%EA%B5%B0%EC%82%AC+OR+%EC%95%88%EB%B3%B4)+(%EC%97%B0%EA%B5%AC+OR+%EB%85%BC%EB%AC%B8+OR+%EC%97%B0%EA%B5%AC%EC%A7%84+OR+%EC%97%B0%EA%B5%AC%ED%8C%80)+when:3d&hl=ko&gl=KR&ceid=KR:ko",
+      "require_ai": true,
+      "limit": 3
+    },
+    {
+      "name": "Research: 사회·경제",
+      "field": "사회·경제",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(society+OR+economy+OR+jobs+OR+politics)+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Research: 윤리·철학",
+      "field": "윤리·철학",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(ethics+OR+philosophy+OR+copyright)+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Research: 환경·동물",
+      "field": "환경·동물",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(climate+OR+environment+OR+energy+OR+animals)+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Research: 청소년·정신건강",
+      "field": "청소년·정신건강",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(teens+OR+children+OR+%22mental+health%22+OR+women)+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "Research: 문화·미디어",
+      "field": "문화·미디어",
+      "category": "papers",
+      "url": "https://news.google.com/rss/search?q=(AI+OR+%22artificial+intelligence%22)+(study+OR+researchers+OR+paper)+(art+OR+music+OR+media+OR+journalism)+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "arXiv econ.GN",
+      "field": "경제",
+      "category": "papers",
+      "url": "https://rss.arxiv.org/rss/econ.GN",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "arXiv physics.soc-ph",
+      "field": "사회",
+      "category": "papers",
+      "url": "https://rss.arxiv.org/rss/physics.soc-ph",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "arXiv cs.SI",
+      "field": "사회·미디어",
+      "category": "papers",
+      "url": "https://rss.arxiv.org/rss/cs.SI",
+      "require_ai": true,
+      "limit": 2
+    },
+    {
+      "name": "arXiv cs.RO",
+      "field": "로봇·피지컬 AI",
+      "category": "papers",
+      "url": "https://rss.arxiv.org/rss/cs.RO",
+      "limit": 3
+    },
+    {
+      "name": "arXiv cs.MA",
+      "field": "에이전트",
+      "category": "papers",
+      "url": "https://rss.arxiv.org/rss/cs.MA",
+      "limit": 3
+    },
+    {
+      "name": "구글뉴스: AI 정책",
+      "category": "policy",
+      "url": "https://news.google.com/rss/search?q=AI+(%EC%A0%95%EC%B1%85+OR+%EA%B7%9C%EC%A0%9C+OR+%EA%B8%B0%EB%B3%B8%EB%B2%95)+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+      "limit": 12
+    },
+    {
+      "name": "Google News: AI regulation",
+      "category": "policy",
+      "url": "https://news.google.com/rss/search?q=AI+(regulation+OR+policy+OR+%22AI+Act%22)+when:1d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 12
+    },
+    {
+      "name": "과학기술정보통신부 보도자료",
+      "category": "policy",
+      "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94",
+      "filter": true,
+      "tz": 9
+    },
+    {
+      "name": "TED",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug",
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능"
+      ],
+      "max_age_days": 30,
+      "title_only": true,
+      "limit": 2
+    },
+    {
+      "name": "TEDx Talks",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q",
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능"
+      ],
+      "max_age_days": 30,
+      "title_only": true,
+      "limit": 2
+    },
+    {
+      "name": "TED-Ed",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA",
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능"
+      ],
+      "max_age_days": 30,
+      "title_only": true,
+      "limit": 2
+    },
+    {
+      "name": "스테이지5",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCzA4Y2mkO0sF7TM4WZ38bw",
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이아이",
+        "챗GPT",
+        "로봇",
+        "알고리즘",
+        "머신러닝",
+        "딥러닝",
+        "자동화"
+      ],
+      "max_age_days": 30,
+      "title_only": true,
+      "limit": 2
+    },
+    {
+      "name": "Lex Fridman",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Dwarkesh Patel",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Y Combinator",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "World Economic Forum",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCw-kH-Od73XDAt7qtH9uBYA",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Stanford GSB",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGwuxdEeCf0TIA2RbPOj-8g",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Big Think",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvQECJukTDE2i6aCoMnS-Vg",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Sequoia Capital",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWrF0oN6unbXrWsTN7RctTw",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "a16z",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "EO Korea",
+      "category": "talks",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQ2DWm5Md16Dc3xRwwhVE7Q",
+      "max_age_days": 14,
+      "title_only": true,
+      "limit": 2,
+      "keywords": [
+        "AI",
+        "A.I.",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "robot",
+        "algorithm",
+        "ChatGPT",
+        "chatbot",
+        "neural",
+        "automation",
+        "LLM",
+        "OpenAI",
+        "AGI",
+        "superintelligence",
+        "인공지능",
+        "에이전트",
+        "생성형",
+        "로봇"
+      ]
+    },
+    {
+      "name": "Google News: European Commission AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:ec.europa.eu+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "EU"
+    },
+    {
+      "name": "Google News: European Parliament AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:europarl.europa.eu+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "EU"
+    },
+    {
+      "name": "Google News: EU AI Act (EUR-Lex)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=%22AI+Act%22+site:eur-lex.europa.eu+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "법·제도",
+      "country_hint": "EU"
+    },
+    {
+      "name": "Google News: METI AI (Japan)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:meti.go.jp+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "JP"
+    },
+    {
+      "name": "Google News: Japan Digital Agency AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:digital.go.jp+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "JP"
+    },
+    {
+      "name": "Google News: Japan Cabinet Office AI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:cao.go.jp+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "JP"
+    },
+    {
+      "name": "Google News: MeitY AI (India)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:meity.gov.in+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "IN"
+    },
+    {
+      "name": "Google News: IndiaAI",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=site:indiaai.gov.in+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": false,
+      "field": "정책·국제질서",
+      "country_hint": "IN"
+    },
+    {
+      "name": "Google News: NITI Aayog AI (India)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:niti.gov.in+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "IN"
+    },
+    {
+      "name": "Google News: China State Council AI (experimental)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:gov.cn+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "CN"
+    },
+    {
+      "name": "Google News: MIIT AI (China, experimental)",
+      "category": "news_global",
+      "url": "https://news.google.com/rss/search?q=AI+site:miit.gov.cn+when:3d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5,
+      "require_ai": true,
+      "field": "정책·국제질서",
+      "country_hint": "CN"
+    }
   ],
-  "ai_keywords": ["AI", "A.I.", "인공지능", "생성형", "LLM", "GPT", "챗GPT", "ChatGPT", "Claude", "Gemini", "딥러닝", "머신러닝", "machine learning", "deep learning", "neural", "신경망", "에이전트", "agent", "로봇", "OpenAI", "Anthropic", "엔비디아", "Nvidia", "알고리즘", "artificial intelligence", "superintelligence", "초지능", "범용인공지능", "AGI", "오픈AI", "앤트로픽", "제미나이", "클로드", "코파일럿", "Copilot", "딥마인드", "DeepMind", "xAI", "그록", "Grok", "Llama", "Mistral", "미스트랄", "AX", "AI 에이전트", "피지컬 AI", "휴머노이드", "humanoid", "자율주행", "sLLM", "소버린 AI", "하이퍼클로바", "HyperCLOVA", "엑사원", "EXAONE"]
+  "ai_keywords": [
+    "AI",
+    "A.I.",
+    "인공지능",
+    "생성형",
+    "LLM",
+    "GPT",
+    "챗GPT",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "딥러닝",
+    "머신러닝",
+    "machine learning",
+    "deep learning",
+    "neural",
+    "신경망",
+    "에이전트",
+    "agent",
+    "로봇",
+    "OpenAI",
+    "Anthropic",
+    "엔비디아",
+    "Nvidia",
+    "알고리즘",
+    "artificial intelligence",
+    "superintelligence",
+    "초지능",
+    "범용인공지능",
+    "AGI",
+    "오픈AI",
+    "앤트로픽",
+    "제미나이",
+    "클로드",
+    "코파일럿",
+    "Copilot",
+    "딥마인드",
+    "DeepMind",
+    "xAI",
+    "그록",
+    "Grok",
+    "Llama",
+    "Mistral",
+    "미스트랄",
+    "AX",
+    "AI 에이전트",
+    "피지컬 AI",
+    "휴머노이드",
+    "humanoid",
+    "자율주행",
+    "sLLM",
+    "소버린 AI",
+    "하이퍼클로바",
+    "HyperCLOVA",
+    "엑사원",
+    "EXAONE"
+  ]
 }

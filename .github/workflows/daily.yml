@@ -3,6 +3,10 @@ name: 매일 AI 브리핑
 on:
   schedule:
     - cron: "7,37 * * * *"   # 30분마다 수집(정각은 GitHub 서버가 붐벼 7분·37분에 실행)
+    # O-3D.5 section 24/26: 느려도 되는 historical/academic pilot 계열 job은 30분마다 돌 필요가
+    # 없다(외부 소스 자체가 거의 static). 6시간마다만 추가로 깨워서, 아래 SLOW_SCHEDULE로 게이팅된
+    # job들만 이 cron에서 실행되게 한다(빠른 job은 영향 없음 -- 7,37분 cron에서 계속 매 30분 실행).
+    - cron: "50 */6 * * *"
   workflow_dispatch:        # Actions 탭에서 수동 실행 가능
     inputs:
       since:
@@ -120,6 +124,10 @@ jobs:
           python intel/ai_relevance_gate/gate.py || echo "[ai_relevance_gate] 생성 건너뜀(비치명적)"
           python intel/daily_taxonomy/taxonomy.py || echo "[daily_taxonomy] 생성 건너뜀(비치명적)"
           python intel/intelligence_candidate/candidate_engine.py || echo "[candidate_engine] 생성 건너뜀(비치명적)"
+          # O-3D.5 GLOBAL SOURCE NETWORK: Global Source Coverage Matrix -- 등록/관측 소스 수를
+          # 국가별로 집계하는 읽기 전용 감사. 가짜 Coverage를 만들지 않으며(section 39), 새 모듈을
+          # 만들지 않고 기존 sources.json/documents.json/geography_inference.py만 읽는다.
+          python intel/global_source_network/coverage_matrix.py || echo "[coverage_matrix] 생성 건너뜀(비치명적)"
           python intel/operator_workspace/operator_ui.py intel_private/ || echo "[operator] 생성 건너뜀(비치명적)"
       - name: Operator 빌드 결과 저장(private main 브랜치, gh-pages 아님)
         run: |
@@ -129,7 +137,8 @@ jobs:
                   intel/intelligence_candidate/intelligence_candidates.json \
                   intel/intelligence_candidate/research_queue.json \
                   intel/topic_classification/domain_classification_result.json \
-                  intel/geographic_evidence/geography_inference_result.json
+                  intel/geographic_evidence/geography_inference_result.json \
+                  intel/global_source_network/coverage_matrix_result.json
           git diff --cached --quiet || git commit -m "Operator 빌드 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
           for i in 1 2 3; do
             git push && break
@@ -192,7 +201,7 @@ jobs:
   # tested official-source hosts (World Bank, KOSIS, ECOS, OECD SDMX) at the outbound proxy.
   reality_shadow:
     needs: build
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: reality-shadow
@@ -287,7 +296,7 @@ jobs:
   # fabricated as a GitHub Actions result here.
   federal_register_shadow:
     needs: build
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: federal-register-shadow
@@ -330,7 +339,7 @@ jobs:
   # outbound proxy, and that fact is not fabricated as a GitHub Actions result here.
   crossref_shadow:
     needs: build
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: crossref-shadow
@@ -373,7 +382,7 @@ jobs:
     # never write documents.json concurrently -- avoids a documents.json merge race between
     # two shadow sources admitting in the same run.
     needs: [build, crossref_shadow, evidence_admission]
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: evidence-admission-crossref
@@ -416,7 +425,7 @@ jobs:
   # date-range query is only observable once this actually runs; not fabricated here.
   federal_register_historical_shadow:
     needs: build
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: federal-register-historical-shadow
@@ -459,7 +468,7 @@ jobs:
   # evidence_admission_crossref's needs list.
   evidence_admission_fedreg_historical:
     needs: [build, federal_register_historical_shadow, evidence_admission, evidence_admission_crossref]
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: evidence-admission-fedreg-historical
@@ -502,7 +511,7 @@ jobs:
   # reachability is only observable once this actually runs; not fabricated here.
   transition_evidence_energy_shadow:
     needs: build
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: transition-evidence-energy-shadow
@@ -548,7 +557,7 @@ jobs:
   # concurrently in the same run -- same race-avoidance reasoning as the other admission jobs.
   evidence_admission_transition_energy:
     needs: [build, transition_evidence_energy_shadow, evidence_admission, evidence_admission_crossref, evidence_admission_fedreg_historical]
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: evidence-admission-transition-energy
@@ -595,7 +604,7 @@ jobs:
   # contention right after build, 3 attempts can exhaust without ever landing a push.
   evidence_admission_real_historical:
     needs: [build, evidence_admission, evidence_admission_crossref, evidence_admission_fedreg_historical, evidence_admission_transition_energy]
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: evidence-admission-real-historical
@@ -627,7 +636,7 @@ jobs:
   # concurrently in the same run. 8-retry push loop per the same infrastructure fix.
   evidence_admission_real_counterevidence:
     needs: [build, evidence_admission, evidence_admission_crossref, evidence_admission_fedreg_historical, evidence_admission_transition_energy, evidence_admission_real_historical]
-    if: always()
+    if: always() && (github.event_name != 'schedule' || github.event.schedule == '50 */6 * * *')
     runs-on: ubuntu-latest
     concurrency:
       group: evidence-admission-real-counterevidence

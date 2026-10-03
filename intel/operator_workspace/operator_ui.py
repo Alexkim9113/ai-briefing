@@ -23,8 +23,10 @@ import source_registry as sreg  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "daily_taxonomy"))
 sys.path.insert(0, str(HERE.parent / "intelligence_candidate"))
 sys.path.insert(0, str(HERE.parent / "ai_relevance_gate"))
+sys.path.insert(0, str(HERE.parent / "global_source_network"))
 import taxonomy as _taxonomy  # noqa: E402
 import candidate_engine as _candidates  # noqa: E402
+import coverage_matrix as _coverage  # noqa: E402
 
 CSS = """
 :root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a;--accent:#3552c9;--soft:#eef1fb}
@@ -496,7 +498,36 @@ def render_sources():
     return _shell(f"{_ko('sources')} / Sources", "sources", (
         f'<p>{len(rows)} registered sources.</p><div class="kpi-row">{kpis}</div>'
         f'<p>Showing first {len(sample)} (see index.json for the full registry).</p>{table}'
+        f'{_render_coverage_section()}'
     ))
+
+
+def _render_coverage_section():
+    """Section 37/38: 관측 범위(Global Source Coverage) -- folded into the existing 출처 page
+    rather than a new nav item (section 50: UI 확장 금지). Honest NOT_AVAILABLE when the sidecar
+    hasn't been produced yet; never a fabricated number."""
+    if not _coverage.OUT_PATH.exists():
+        return (
+            '<h2>관측 범위 (Global Source Coverage)</h2>'
+            '<p class="empty">아직 Coverage Matrix 결과가 없습니다 (NOT_AVAILABLE).</p>'
+        )
+    result = json.loads(_coverage.OUT_PATH.read_text(encoding="utf-8"))
+    core = ("KR", "US", "CN", "EU", "JP", "IN")
+    reg = result.get("registered_by_country", {})
+    act = result.get("active_source_count_by_country", {})
+    rows = "".join(
+        f'<tr><td>{_esc(c)}</td><td>{_esc(reg.get(c, 0))}</td><td>{_esc(act.get(c, 0))}</td></tr>'
+        for c in core
+    )
+    return (
+        '<h2>관측 범위 (Global Source Coverage)</h2>'
+        f'<p>생성 시각: {_esc(result.get("generated_at", "UNKNOWN"))} '
+        f'(등록 미분류 {_esc(result.get("registered_uncounted", 0))}건)</p>'
+        '<div class="table-wrap"><table>'
+        '<tr><th>국가</th><th>등록 Source</th><th>최근 관측 Source</th></tr>'
+        f'{rows}</table></div>'
+        f'<p class="empty">{_esc(result.get("matrix_row_note", ""))}</p>'
+    )
 
 
 def render_source_health():
