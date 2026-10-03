@@ -19,7 +19,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:36.572039+00:00"
+          "verify_checked_at": "2026-10-03T18:52:22.574132+00:00"
         },
         {
           "id": "kr_pipc",
@@ -29,7 +29,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:38.964247+00:00"
+          "verify_checked_at": "2026-10-03T18:52:23.856684+00:00"
         },
         {
           "id": "kr_kcc",
@@ -39,7 +39,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:41.050960+00:00"
+          "verify_checked_at": "2026-10-03T18:52:25.283350+00:00"
         },
         {
           "id": "kr_ftc",
@@ -48,8 +48,8 @@
           "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:41.752625+00:00"
+          "verify_note": "확인 불가 (URLError timed out)",
+          "verify_checked_at": "2026-10-03T18:52:40.460541+00:00"
         },
         {
           "id": "kr_fsc",
@@ -59,7 +59,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: junk after document element: line 20, column 0)",
-          "verify_checked_at": "2026-10-03T16:49:42.591317+00:00"
+          "verify_checked_at": "2026-10-03T18:52:41.333658+00:00"
         },
         {
           "id": "kr_motie",
@@ -69,7 +69,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:44.152885+00:00"
+          "verify_checked_at": "2026-10-03T18:52:42.936002+00:00"
         },
         {
           "id": "kr_moel",
@@ -79,7 +79,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:44.806690+00:00"
+          "verify_checked_at": "2026-10-03T18:52:43.590055+00:00"
         },
         {
           "id": "kr_mfds",
@@ -88,8 +88,8 @@
           "url": "https://www.mfds.go.kr/rss/news.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (파싱 실패: mismatched tag: line 40, column 8)",
-          "verify_checked_at": "2026-10-03T16:49:46.667402+00:00"
+          "verify_note": "확인 불가 (URLError timed out)",
+          "verify_checked_at": "2026-10-03T18:52:58.887375+00:00"
         },
         {
           "id": "kr_mcst",
@@ -99,7 +99,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: syntax error: line 3, column 0)",
-          "verify_checked_at": "2026-10-03T16:49:51.185216+00:00"
+          "verify_checked_at": "2026-10-03T18:53:06.824727+00:00"
         },
         {
           "id": "kr_kcc_copyright",
@@ -109,7 +109,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:54.074028+00:00"
+          "verify_checked_at": "2026-10-03T18:53:12.225439+00:00"
         },
         {
           "id": "kr_kipo",
@@ -118,8 +118,8 @@
           "url": "https://www.kipo.go.kr/rss/press.xml",
           "original_language": "ko",
           "verified": false,
-          "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:54.934853+00:00"
+          "verify_note": "확인 불가 (URLError timed out)",
+          "verify_checked_at": "2026-10-03T18:53:27.673518+00:00"
         },
         {
           "id": "kr_assembly_bills",
@@ -129,7 +129,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:56.344157+00:00"
+          "verify_checked_at": "2026-10-03T18:53:28.951439+00:00"
         },
         {
           "id": "kr_court_decisions",
@@ -139,7 +139,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (URLError [Errno -2] Name or service not known)",
-          "verify_checked_at": "2026-10-03T16:49:56.992603+00:00"
+          "verify_checked_at": "2026-10-03T18:53:29.514198+00:00"
         },
         {
           "id": "kr_kisdi",
@@ -149,7 +149,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:57.968686+00:00"
+          "verify_checked_at": "2026-10-03T18:53:30.412645+00:00"
         },
         {
           "id": "kr_nia",
@@ -159,7 +159,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:58.823573+00:00"
+          "verify_checked_at": "2026-10-03T18:53:31.161192+00:00"
         },
         {
           "id": "kr_etri",
@@ -169,7 +169,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:49:59.786913+00:00"
+          "verify_checked_at": "2026-10-03T18:53:32.024815+00:00"
         },
         {
           "id": "kr_kaist_ai",
@@ -179,7 +179,7 @@
           "original_language": "ko",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 224)",
-          "verify_checked_at": "2026-10-03T16:50:01.031413+00:00"
+          "verify_checked_at": "2026-10-03T18:53:33.129609+00:00"
         }
       ]
     },
@@ -195,7 +195,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 40개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:01.116023+00:00"
+          "verify_checked_at": "2026-10-03T18:53:33.279919+00:00"
         },
         {
           "id": "us_copyright_office",
@@ -205,7 +205,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 25개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:01.228165+00:00"
+          "verify_checked_at": "2026-10-03T18:53:33.494132+00:00"
         },
         {
           "id": "us_ftc",
@@ -215,7 +215,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 10개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:01.349154+00:00"
+          "verify_checked_at": "2026-10-03T18:53:33.675924+00:00"
         },
         {
           "id": "us_congress_ai",
@@ -225,7 +225,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 403)",
-          "verify_checked_at": "2026-10-03T16:50:01.431208+00:00"
+          "verify_checked_at": "2026-10-03T18:53:33.781704+00:00"
         },
         {
           "id": "us_ostp",
@@ -235,7 +235,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:01.835640+00:00"
+          "verify_checked_at": "2026-10-03T18:53:34.173304+00:00"
         },
         {
           "id": "us_federal_register_ai",
@@ -245,7 +245,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 16, column 67)",
-          "verify_checked_at": "2026-10-03T16:50:02.027943+00:00"
+          "verify_checked_at": "2026-10-03T18:53:34.711447+00:00"
         },
         {
           "id": "us_stanford_hai",
@@ -255,7 +255,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 1, column 4837)",
-          "verify_checked_at": "2026-10-03T16:50:02.130979+00:00"
+          "verify_checked_at": "2026-10-03T18:53:34.880191+00:00"
         },
         {
           "id": "us_arxiv_cscy",
@@ -265,7 +265,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 0개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:02.321965+00:00"
+          "verify_checked_at": "2026-10-03T18:53:35.347636+00:00"
         },
         {
           "id": "us_arxiv_csai",
@@ -275,7 +275,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 0개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:02.733434+00:00"
+          "verify_checked_at": "2026-10-03T18:53:35.738960+00:00"
         },
         {
           "id": "us_brookings_ai",
@@ -285,7 +285,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: undefined entity: line 33, column 0)",
-          "verify_checked_at": "2026-10-03T16:50:03.388011+00:00"
+          "verify_checked_at": "2026-10-03T18:53:36.349578+00:00"
         }
       ]
     },
@@ -301,7 +301,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:07.287930+00:00"
+          "verify_checked_at": "2026-10-03T18:53:38.376634+00:00"
         },
         {
           "id": "cn_miit",
@@ -311,7 +311,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:09.737344+00:00"
+          "verify_checked_at": "2026-10-03T18:53:40.622425+00:00"
         },
         {
           "id": "cn_cnipa",
@@ -321,7 +321,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:10.868372+00:00"
+          "verify_checked_at": "2026-10-03T18:53:42.056061+00:00"
         },
         {
           "id": "cn_ncac",
@@ -331,7 +331,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: syntax error: line 2, column 0)",
-          "verify_checked_at": "2026-10-03T16:50:18.097687+00:00"
+          "verify_checked_at": "2026-10-03T18:53:45.145973+00:00"
         },
         {
           "id": "cn_caict",
@@ -341,7 +341,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:21.111731+00:00"
+          "verify_checked_at": "2026-10-03T18:53:46.081176+00:00"
         },
         {
           "id": "cn_caixin",
@@ -351,7 +351,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: mismatched tag: line 14, column 2)",
-          "verify_checked_at": "2026-10-03T16:50:23.050616+00:00"
+          "verify_checked_at": "2026-10-03T18:53:47.422587+00:00"
         },
         {
           "id": "cn_36kr",
@@ -361,7 +361,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: not well-formed (invalid token): line 9, column 542)",
-          "verify_checked_at": "2026-10-03T16:50:24.156866+00:00"
+          "verify_checked_at": "2026-10-03T18:53:48.410436+00:00"
         },
         {
           "id": "cn_yicai",
@@ -371,7 +371,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:25.500960+00:00"
+          "verify_checked_at": "2026-10-03T18:53:49.730163+00:00"
         },
         {
           "id": "cn_cls",
@@ -381,7 +381,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:26.648004+00:00"
+          "verify_checked_at": "2026-10-03T18:53:50.424464+00:00"
         },
         {
           "id": "cn_thepaper",
@@ -391,7 +391,7 @@
           "original_language": "zh",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:30.620804+00:00"
+          "verify_checked_at": "2026-10-03T18:53:53.069870+00:00"
         }
       ],
       "ai_copyright_axis": {
@@ -406,7 +406,7 @@
             "original_language": "zh",
             "verified": true,
             "verify_note": "검증됨 (HTTP 200, 100개 항목)",
-            "verify_checked_at": "2026-10-03T16:50:31.321928+00:00"
+            "verify_checked_at": "2026-10-03T18:53:53.861801+00:00"
           },
           {
             "id": "cn_ai_copyright_q2",
@@ -415,8 +415,8 @@
             "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E7%89%88%E6%9D%83%20%E7%BA%A0%E7%BA%B7&hl=zh-CN&gl=CN&ceid=CN:zh",
             "original_language": "zh",
             "verified": true,
-            "verify_note": "검증됨 (HTTP 200, 50개 항목)",
-            "verify_checked_at": "2026-10-03T16:50:31.869843+00:00"
+            "verify_note": "검증됨 (HTTP 200, 51개 항목)",
+            "verify_checked_at": "2026-10-03T18:53:54.425987+00:00"
           },
           {
             "id": "cn_ai_copyright_q3",
@@ -426,7 +426,7 @@
             "original_language": "zh",
             "verified": true,
             "verify_note": "검증됨 (HTTP 200, 60개 항목)",
-            "verify_checked_at": "2026-10-03T16:50:32.358031+00:00"
+            "verify_checked_at": "2026-10-03T18:53:54.899314+00:00"
           }
         ]
       }
@@ -443,7 +443,7 @@
           "original_language": "en",
           "verified": true,
           "verify_note": "검증됨 (HTTP 200, 10개 항목)",
-          "verify_checked_at": "2026-10-03T16:50:32.713983+00:00"
+          "verify_checked_at": "2026-10-03T18:53:55.272912+00:00"
         },
         {
           "id": "eu_eurlex_ai_act",
@@ -453,7 +453,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 404)",
-          "verify_checked_at": "2026-10-03T16:50:32.978900+00:00"
+          "verify_checked_at": "2026-10-03T18:53:55.750978+00:00"
         },
         {
           "id": "eu_parliament_news",
@@ -463,7 +463,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (파싱 실패: no element found: line 1, column 0)",
-          "verify_checked_at": "2026-10-03T16:50:33.145558+00:00"
+          "verify_checked_at": "2026-10-03T18:53:56.110481+00:00"
         },
         {
           "id": "eu_edps",
@@ -473,7 +473,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 403)",
-          "verify_checked_at": "2026-10-03T16:50:34.056358+00:00"
+          "verify_checked_at": "2026-10-03T18:53:57.602203+00:00"
         },
         {
           "id": "eu_ceps",
@@ -483,7 +483,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 500)",
-          "verify_checked_at": "2026-10-03T16:50:35.241293+00:00"
+          "verify_checked_at": "2026-10-03T18:53:58.990630+00:00"
         },
         {
           "id": "eu_bruegel",
@@ -493,7 +493,7 @@
           "original_language": "en",
           "verified": false,
           "verify_note": "확인 불가 (HTTPError 403)",
-          "verify_checked_at": "2026-10-03T16:50:35.446704+00:00"
+          "verify_checked_at": "2026-10-03T18:53:59.292914+00:00"
         }
       ]
     }
