@@ -41,7 +41,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_10": {
@@ -95,7 +95,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_11": {
@@ -140,7 +140,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_12": {
@@ -185,7 +185,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_13": {
@@ -237,7 +237,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_14": {
@@ -285,7 +285,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_15": {
@@ -295,7 +295,7 @@
   "contradicts_ids": [],
   "created_at": "2026-10-02T15:52:09.580433+00:00",
   "direction": null,
-  "document_id": "4e3f6a460e8216d7",
+  "document_id": "4acccc39c6d4489d",
   "domain_scope": [],
   "domains": [],
   "entities": [],
@@ -305,11 +305,101 @@
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
   "fact_id": null,
-  "first_seen": "2026-09-28T22:11:17+00:00",
+  "first_seen": "2026-09-29T11:00:48+09:00",
   "geographic_scope": null,
   "history": [
    {
     "at": "2026-10-02T15:52:22.184836+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T11:00:48+09:00",
+  "object": "민선 9기 조직개편안",
+  "population_scope": null,
+  "relation": "조직개편안 발표",
+  "resources": [],
+  "source_id": "src_yna_co_kr",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "전북특별자치도",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
+  "value": null
+ },
+ "evr_16": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-02T15:52:09.580433+00:00",
+  "direction": null,
+  "document_id": "4acccc39c6d4489d",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_16",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T11:00:48+09:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-02T15:52:22.184838+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T11:00:48+09:00",
+  "object": "AI홍보국, 에너지국 신설",
+  "population_scope": null,
+  "relation": "포함 기구",
+  "resources": [],
+  "source_id": "src_yna_co_kr",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "민선 9기 조직개편안",
+  "support_type": "UNKNOWN",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
+  "value": null
+ },
+ "evr_17": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-03T11:37:46.437742+00:00",
+  "direction": null,
+  "document_id": "4e3f6a460e8216d7",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_17",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-28T22:11:17+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-03T11:38:15.397915+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -330,22 +420,22 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_16": {
+ "evr_18": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-02T15:52:09.580433+00:00",
+  "created_at": "2026-10-03T11:37:46.437742+00:00",
   "direction": null,
   "document_id": "4e3f6a460e8216d7",
   "domain_scope": [],
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_16",
+  "evidence_record_id": "evr_18",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -354,7 +444,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-02T15:52:22.184838+00:00",
+    "at": "2026-10-03T11:38:15.397917+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -375,97 +465,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
-  "value": null
- },
- "evr_17": {
-  "_type_specific": {},
-  "claim_id": null,
-  "claim_type": null,
-  "contradicts_ids": [],
-  "created_at": "2026-10-03T11:37:46.437742+00:00",
-  "direction": null,
-  "document_id": "597975da49400eea",
-  "domain_scope": [],
-  "domains": [],
-  "entities": [],
-  "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_17",
-  "evidence_strength": "LOW",
-  "evidence_type": "OTHER",
-  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T00:30:00+00:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-10-03T11:38:15.397915+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "PENDING",
-  "institutions": [],
-  "interpretation_method": "GEMINI_CANDIDATE",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T00:30:00+00:00",
-  "object": "Surge seed investment ceiling to $5M",
-  "population_scope": null,
-  "relation": "increased_investment_ceiling",
-  "resources": [],
-  "source_id": "src_techcrunch_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "Peak XV",
-  "support_type": "DIRECT_SUPPORT",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
-  "value": null
- },
- "evr_18": {
-  "_type_specific": {},
-  "claim_id": null,
-  "claim_type": null,
-  "contradicts_ids": [],
-  "created_at": "2026-10-03T11:37:46.437742+00:00",
-  "direction": null,
-  "document_id": "597975da49400eea",
-  "domain_scope": [],
-  "domains": [],
-  "entities": [],
-  "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_18",
-  "evidence_strength": "LOW",
-  "evidence_type": "OTHER",
-  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
-  "fact_id": null,
-  "first_seen": "2026-09-29T00:30:00+00:00",
-  "geographic_scope": null,
-  "history": [
-   {
-    "at": "2026-10-03T11:38:15.397917+00:00",
-    "interpretation_status": "CANDIDATE"
-   }
-  ],
-  "human_review_status": "PENDING",
-  "institutions": [],
-  "interpretation_method": "GEMINI_CANDIDATE",
-  "interpretation_status": "CANDIDATE",
-  "last_seen": "2026-09-29T00:30:00+00:00",
-  "object": "global markets",
-  "population_scope": null,
-  "relation": "market_focus",
-  "resources": [],
-  "source_id": "src_techcrunch_com",
-  "source_type": null,
-  "structural_change_id_hint": null,
-  "subject": "Peak XV's Surge cohort",
-  "support_type": "DIRECT_SUPPORT",
-  "supports_ids": [],
-  "temporal_scope": null,
-  "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_19": {
@@ -498,19 +498,19 @@
   "interpretation_method": "GEMINI_CANDIDATE",
   "interpretation_status": "CANDIDATE",
   "last_seen": "2026-09-29T00:30:00+00:00",
-  "object": "India",
+  "object": "Surge seed investment ceiling to $5M",
   "population_scope": null,
-  "relation": "geographic_distribution",
+  "relation": "increased_investment_ceiling",
   "resources": [],
   "source_id": "src_techcrunch_com",
   "source_type": null,
   "structural_change_id_hint": null,
-  "subject": "Peak XV's Surge cohort",
+  "subject": "Peak XV",
   "support_type": "DIRECT_SUPPORT",
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_2": {
@@ -555,10 +555,100 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_20": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-03T12:07:27.249967+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_20",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-03T12:07:45.918872+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "global markets",
+  "population_scope": null,
+  "relation": "market_focus",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV's Surge cohort",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
+  "value": null
+ },
+ "evr_21": {
+  "_type_specific": {},
+  "claim_id": null,
+  "claim_type": null,
+  "contradicts_ids": [],
+  "created_at": "2026-10-03T12:07:27.249967+00:00",
+  "direction": null,
+  "document_id": "597975da49400eea",
+  "domain_scope": [],
+  "domains": [],
+  "entities": [],
+  "epistemic_status": "NOT_VERIFIED",
+  "evidence_record_id": "evr_21",
+  "evidence_strength": "LOW",
+  "evidence_type": "OTHER",
+  "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
+  "fact_id": null,
+  "first_seen": "2026-09-29T00:30:00+00:00",
+  "geographic_scope": null,
+  "history": [
+   {
+    "at": "2026-10-03T12:07:45.918874+00:00",
+    "interpretation_status": "CANDIDATE"
+   }
+  ],
+  "human_review_status": "PENDING",
+  "institutions": [],
+  "interpretation_method": "GEMINI_CANDIDATE",
+  "interpretation_status": "CANDIDATE",
+  "last_seen": "2026-09-29T00:30:00+00:00",
+  "object": "India",
+  "population_scope": null,
+  "relation": "geographic_distribution",
+  "resources": [],
+  "source_id": "src_techcrunch_com",
+  "source_type": null,
+  "structural_change_id_hint": null,
+  "subject": "Peak XV's Surge cohort",
+  "support_type": "DIRECT_SUPPORT",
+  "supports_ids": [],
+  "temporal_scope": null,
+  "unit": null,
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
+  "value": null
+ },
+ "evr_22": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
@@ -573,7 +663,7 @@
    "네이버"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_20",
+  "evidence_record_id": "evr_22",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -582,7 +672,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918872+00:00",
+    "at": "2026-10-03T12:07:45.918876+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -603,10 +693,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_21": {
+ "evr_23": {
   "_type_specific": {
    "affected_system": "AI_INFRASTRUCTURE",
    "controller_if_known": null,
@@ -625,7 +715,7 @@
   ],
   "entities": [],
   "epistemic_status": "INSUFFICIENT_SOURCE",
-  "evidence_record_id": "evr_21",
+  "evidence_record_id": "evr_23",
   "evidence_strength": "LOW",
   "evidence_type": "BOTTLENECK",
   "extraction_method": "LEVEL2_RULE",
@@ -634,7 +724,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918874+00:00",
+    "at": "2026-10-03T12:07:45.918879+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -657,10 +747,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_22": {
+ "evr_24": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
@@ -672,7 +762,7 @@
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_22",
+  "evidence_record_id": "evr_24",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -681,7 +771,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918876+00:00",
+    "at": "2026-10-03T12:07:45.918883+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -702,10 +792,10 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_23": {
+ "evr_25": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
@@ -717,7 +807,7 @@
   "domains": [],
   "entities": [],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_23",
+  "evidence_record_id": "evr_25",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -726,7 +816,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918879+00:00",
+    "at": "2026-10-03T12:07:45.918885+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -747,15 +837,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_24": {
+ "evr_26": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-03T12:07:27.249967+00:00",
+  "created_at": "2026-10-03T18:52:22.117388+00:00",
   "direction": null,
   "document_id": "a6575ff74981de4c",
   "domain_scope": [],
@@ -764,7 +854,7 @@
    "Nvidia"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_24",
+  "evidence_record_id": "evr_26",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -773,7 +863,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918883+00:00",
+    "at": "2026-10-03T18:52:30.961877+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -794,15 +884,15 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
- "evr_25": {
+ "evr_27": {
   "_type_specific": {},
   "claim_id": null,
   "claim_type": null,
   "contradicts_ids": [],
-  "created_at": "2026-10-03T12:07:27.249967+00:00",
+  "created_at": "2026-10-03T18:52:22.117388+00:00",
   "direction": null,
   "document_id": "a6575ff74981de4c",
   "domain_scope": [],
@@ -811,7 +901,7 @@
    "Nvidia"
   ],
   "epistemic_status": "NOT_VERIFIED",
-  "evidence_record_id": "evr_25",
+  "evidence_record_id": "evr_27",
   "evidence_strength": "LOW",
   "evidence_type": "OTHER",
   "extraction_method": "LEVEL3_GEMINI_CANDIDATE",
@@ -820,7 +910,7 @@
   "geographic_scope": null,
   "history": [
    {
-    "at": "2026-10-03T12:07:45.918885+00:00",
+    "at": "2026-10-03T18:52:30.961880+00:00",
     "interpretation_status": "CANDIDATE"
    }
   ],
@@ -841,7 +931,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_3": {
@@ -886,7 +976,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_4": {
@@ -931,7 +1021,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_5": {
@@ -976,7 +1066,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_6": {
@@ -1021,7 +1111,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_7": {
@@ -1066,7 +1156,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_8": {
@@ -1111,7 +1201,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  },
  "evr_9": {
@@ -1156,7 +1246,7 @@
   "supports_ids": [],
   "temporal_scope": null,
   "unit": null,
-  "updated_at": "2026-10-03T16:49:37.293244+00:00",
+  "updated_at": "2026-10-03T18:52:22.117388+00:00",
   "value": null
  }
 }

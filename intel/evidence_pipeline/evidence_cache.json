@@ -261,7 +261,63 @@
   "relations": [],
   "uncertainties": []
  },
- "67d7b1e1ec32a1d7": null,
+ "67d7b1e1ec32a1d7": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "전북특별자치도의 민선 9기 조직개편안이 나왔다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목 및 요약문 본문",
+    "object": "민선 9기 조직개편안",
+    "predicate": "나왔다",
+    "subject": "전북특별자치도",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "조직개편안에 AI홍보국과 에너지국 신설이 포함되어 있다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목 (AI홍보국·에너지국 신설)",
+    "object": "전북도 민선 9기 조직개편안",
+    "predicate": "신설",
+    "subject": "AI홍보국·에너지국",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "DIRECT_TEXT",
+    "object": "민선 9기 조직개편안",
+    "reason": "제목과 요약에 전북특별자치도의 민선 9기 조직개편안이 나왔다고 직접 명시되어 있음",
+    "relation": "조직개편안 발표",
+    "source_claim_ids": [
+     0
+    ],
+    "subject": "전북특별자치도",
+    "support_type": "SUPPORTS"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "DIRECT_TEXT",
+    "object": "AI홍보국, 에너지국 신설",
+    "reason": "제목에 AI홍보국·에너지국 신설 내용이 직접 언급되어 있음",
+    "relation": "포함 기구",
+    "source_claim_ids": [
+     1
+    ],
+    "subject": "민선 9기 조직개편안",
+    "support_type": "SUPPORTS"
+   }
+  ],
+  "relations": [],
+  "uncertainties": []
+ },
  "6d193c08d6641aad": null,
  "6dd0a57e7128f977": null,
  "6e6a7d9210996856": null,
