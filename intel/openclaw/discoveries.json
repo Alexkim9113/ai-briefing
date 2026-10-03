@@ -1,0 +1,347 @@
+{
+  "codename": "OpenClaw",
+  "run_at": "2026-10-03T13:24:30.780452+00:00",
+  "scope": "KR/US/CN/EU Operator-only discovery, read-only vs Public data, never merged into briefing.py output",
+  "regions": {
+    "KR": [],
+    "US": [],
+    "CN": [],
+    "EU": []
+  },
+  "counts": {
+    "KR": 0,
+    "US": 0,
+    "CN": 0,
+    "EU": 0
+  },
+  "cn_ai_copyright_axis_count": 0,
+  "total_duplicates_skipped": 0,
+  "total_unique_discoveries": 0,
+  "verification": {
+    "verified": [],
+    "unverified": [
+      {
+        "id": "kr_msit",
+        "region": "KR",
+        "name": "과학기술정보통신부 보도자료",
+        "url": "https://www.msit.go.kr/bbs/rss.do?bbsSeqNo=94",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_pipc",
+        "region": "KR",
+        "name": "개인정보보호위원회 보도자료",
+        "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticleRss.do?bbsId=BS074",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_kcc",
+        "region": "KR",
+        "name": "방송통신위원회 보도자료",
+        "url": "https://kcc.go.kr/rss/press.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_ftc",
+        "region": "KR",
+        "name": "공정거래위원회 보도자료",
+        "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_fsc",
+        "region": "KR",
+        "name": "금융위원회 보도자료",
+        "url": "https://www.fsc.go.kr/rss/pressrelease.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_motie",
+        "region": "KR",
+        "name": "산업통상자원부 보도자료",
+        "url": "https://www.motie.go.kr/motie/rss/motieRss.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_moel",
+        "region": "KR",
+        "name": "고용노동부 보도자료",
+        "url": "https://www.moel.go.kr/rss/news.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_mfds",
+        "region": "KR",
+        "name": "식품의약품안전처 보도자료",
+        "url": "https://www.mfds.go.kr/rss/news.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_mcst",
+        "region": "KR",
+        "name": "문화체육관광부 보도자료",
+        "url": "https://www.mcst.go.kr/kor/s_notice/press/pressList.jsp?rss=Y",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_kcc_copyright",
+        "region": "KR",
+        "name": "한국저작권위원회 공지사항",
+        "url": "https://www.copyright.or.kr/rss/notice.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_kipo",
+        "region": "KR",
+        "name": "특허청 보도자료",
+        "url": "https://www.kipo.go.kr/rss/press.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_assembly_bills",
+        "region": "KR",
+        "name": "국회 의안정보시스템 (AI 관련 입법)",
+        "url": "https://likms.assembly.go.kr/bill/rss/billList.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_court_decisions",
+        "region": "KR",
+        "name": "대법원 종합법률정보 최신판례",
+        "url": "https://glaw.scourt.go.kr/wsjo/panre/rss.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_kisdi",
+        "region": "KR",
+        "name": "정보통신정책연구원(KISDI) 발간물",
+        "url": "https://www.kisdi.re.kr/rss/report.do",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_nia",
+        "region": "KR",
+        "name": "한국지능정보사회진흥원(NIA) 보도자료",
+        "url": "https://www.nia.or.kr/rss/press.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_etri",
+        "region": "KR",
+        "name": "한국전자통신연구원(ETRI) 보도자료",
+        "url": "https://www.etri.re.kr/rss/press.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "kr_kaist_ai",
+        "region": "KR",
+        "name": "KAIST AI대학원 소식",
+        "url": "https://gsai.kaist.ac.kr/feed/",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_nist",
+        "region": "US",
+        "name": "NIST News",
+        "url": "https://www.nist.gov/news-events/news/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_copyright_office",
+        "region": "US",
+        "name": "U.S. Copyright Office Newsroom",
+        "url": "https://www.copyright.gov/rss/newsnet.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_ftc",
+        "region": "US",
+        "name": "FTC Press Releases",
+        "url": "https://www.ftc.gov/feeds/press-release.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_congress_ai",
+        "region": "US",
+        "name": "Congress.gov AI-related bills search",
+        "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22artificial+intelligence%22%7D&format=rss",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_ostp",
+        "region": "US",
+        "name": "White House OSTP Briefing Room",
+        "url": "https://www.whitehouse.gov/ostp/feed/",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_federal_register_ai",
+        "region": "US",
+        "name": "Federal Register (AI-tagged documents)",
+        "url": "https://www.federalregister.gov/documents/search.rss?conditions%5Bterm%5D=artificial+intelligence",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_stanford_hai",
+        "region": "US",
+        "name": "Stanford HAI News",
+        "url": "https://hai.stanford.edu/news/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_arxiv_cscy",
+        "region": "US",
+        "name": "arXiv cs.CY (Computers and Society)",
+        "url": "https://arxiv.org/rss/cs.CY",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_arxiv_csai",
+        "region": "US",
+        "name": "arXiv cs.AI",
+        "url": "https://arxiv.org/rss/cs.AI",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "us_brookings_ai",
+        "region": "US",
+        "name": "Brookings AI research",
+        "url": "https://www.brookings.edu/topic/artificial-intelligence/feed/",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_cac",
+        "region": "CN",
+        "name": "国家互联网信息办公室 (CAC) 政策发布",
+        "url": "http://www.cac.gov.cn/rss/xwzx.xml",
+        "note": "확인 불가 (HTTPError 403)"
+      },
+      {
+        "id": "cn_miit",
+        "region": "CN",
+        "name": "工业和信息化部 新闻发布",
+        "url": "https://www.miit.gov.cn/xwdt/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_cnipa",
+        "region": "CN",
+        "name": "国家知识产权局 (CNIPA) 新闻",
+        "url": "https://www.cnipa.gov.cn/rss/xwdt.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_ncac",
+        "region": "CN",
+        "name": "国家版权局 (NCAC) 通知公告",
+        "url": "https://www.ncac.gov.cn/rss/tzgg.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_caict",
+        "region": "CN",
+        "name": "中国信息通信研究院 (CAICT) 要闻",
+        "url": "http://www.caict.ac.cn/rss/yw.xml",
+        "note": "확인 불가 (HTTPError 403)"
+      },
+      {
+        "id": "cn_caixin",
+        "region": "CN",
+        "name": "财新网 Caixin",
+        "url": "https://www.caixin.com/rss/feed.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_36kr",
+        "region": "CN",
+        "name": "36氪",
+        "url": "https://36kr.com/feed",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_yicai",
+        "region": "CN",
+        "name": "第一财经",
+        "url": "https://www.yicai.com/rss/news.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_cls",
+        "region": "CN",
+        "name": "财联社",
+        "url": "https://www.cls.cn/rss",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_thepaper",
+        "region": "CN",
+        "name": "澎湃新闻",
+        "url": "https://www.thepaper.cn/rss_news.jsp",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_ai_copyright_q1",
+        "region": "CN",
+        "name": "人工智能 著作权",
+        "url": "https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E8%91%97%E4%BD%9C%E6%9D%83&hl=zh-CN&gl=CN&ceid=CN:zh",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_ai_copyright_q2",
+        "region": "CN",
+        "name": "生成式人工智能 版权 纠纷",
+        "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E7%89%88%E6%9D%83%20%E7%BA%A0%E7%BA%B7&hl=zh-CN&gl=CN&ceid=CN:zh",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "cn_ai_copyright_q3",
+        "region": "CN",
+        "name": "AI 侵权 判决",
+        "url": "https://news.google.com/rss/search?q=AI%20%E4%BE%B5%E6%9D%83%20%E5%88%A4%E5%86%B3&hl=zh-CN&gl=CN&ceid=CN:zh",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_ec_ai_office",
+        "region": "EU",
+        "name": "European Commission -- AI Office / Digital news",
+        "url": "https://digital-strategy.ec.europa.eu/en/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_eurlex_ai_act",
+        "region": "EU",
+        "name": "EUR-Lex -- AI Act related documents",
+        "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myLexUriServ=...",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_parliament_news",
+        "region": "EU",
+        "name": "European Parliament -- News (AI topic)",
+        "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_edps",
+        "region": "EU",
+        "name": "European Data Protection Supervisor (EDPS) press",
+        "url": "https://edps.europa.eu/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_ceps",
+        "region": "EU",
+        "name": "CEPS (Centre for European Policy Studies)",
+        "url": "https://www.ceps.eu/feed/",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      },
+      {
+        "id": "eu_bruegel",
+        "region": "EU",
+        "name": "Bruegel",
+        "url": "https://www.bruegel.org/rss.xml",
+        "note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)"
+      }
+    ]
+  }
+}

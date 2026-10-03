@@ -1,0 +1,501 @@
+{
+  "_meta": {
+    "name": "OpenClaw candidate source registry",
+    "purpose": "Operator-only discovery pass. NOT the Public pipeline. Never consumed by briefing.py.",
+    "rule": "A feed may only carry \"verified\": true after an actual HTTP fetch in this environment returned parseable RSS/Atom/XML. Anything not actually fetched-and-parsed must stay \"verified\": false with a \"verify_note\" explaining why (e.g. blocked by network policy, 404, non-XML response). The collector refuses to poll a feed whose \"verified\" is not literally true.",
+    "last_verification_attempt": "2026-10-03",
+    "verification_environment_note": "This session's outbound network policy denies ALL external HTTPS hosts (confirmed via curl CONNECT to news.google.com, www.nist.gov, arxiv.org, www.federalregister.gov, example.com -- every one returned 'CONNECT tunnel failed, response 403' from the agent egress proxy, not a site-specific error). No candidate below could be given a real HTTP fetch in this run. All are therefore registered as verified:false / '확인 불가 (네트워크 정책 차단)'. To actually verify and start collecting, run collector.py --verify from an environment whose Allowed domains (Project settings > Cloud environment) include the hosts listed here."
+  },
+  "regions": {
+    "KR": {
+      "max_new_per_run": 5,
+      "focus": "gap-fill only (PRIMARY + RESEARCH, not news -- briefing.py already covers KR news)",
+      "sources": [
+        {
+          "id": "kr_msit",
+          "name": "과학기술정보통신부 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.msit.go.kr/bbs/rss.do?bbsSeqNo=94",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:18.616478+00:00"
+        },
+        {
+          "id": "kr_pipc",
+          "name": "개인정보보호위원회 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticleRss.do?bbsId=BS074",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:18.822346+00:00"
+        },
+        {
+          "id": "kr_kcc",
+          "name": "방송통신위원회 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://kcc.go.kr/rss/press.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:19.069058+00:00"
+        },
+        {
+          "id": "kr_ftc",
+          "name": "공정거래위원회 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.ftc.go.kr/www/rss/pressRss.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:19.296510+00:00"
+        },
+        {
+          "id": "kr_fsc",
+          "name": "금융위원회 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.fsc.go.kr/rss/pressrelease.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:19.497095+00:00"
+        },
+        {
+          "id": "kr_motie",
+          "name": "산업통상자원부 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.motie.go.kr/motie/rss/motieRss.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:19.680866+00:00"
+        },
+        {
+          "id": "kr_moel",
+          "name": "고용노동부 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.moel.go.kr/rss/news.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:19.832010+00:00"
+        },
+        {
+          "id": "kr_mfds",
+          "name": "식품의약품안전처 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.mfds.go.kr/rss/news.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:20.030149+00:00"
+        },
+        {
+          "id": "kr_mcst",
+          "name": "문화체육관광부 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.mcst.go.kr/kor/s_notice/press/pressList.jsp?rss=Y",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:20.225255+00:00"
+        },
+        {
+          "id": "kr_kcc_copyright",
+          "name": "한국저작권위원회 공지사항",
+          "source_type": "PRIMARY",
+          "url": "https://www.copyright.or.kr/rss/notice.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:20.429718+00:00"
+        },
+        {
+          "id": "kr_kipo",
+          "name": "특허청 보도자료",
+          "source_type": "PRIMARY",
+          "url": "https://www.kipo.go.kr/rss/press.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:20.656912+00:00"
+        },
+        {
+          "id": "kr_assembly_bills",
+          "name": "국회 의안정보시스템 (AI 관련 입법)",
+          "source_type": "PRIMARY",
+          "url": "https://likms.assembly.go.kr/bill/rss/billList.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:20.873187+00:00"
+        },
+        {
+          "id": "kr_court_decisions",
+          "name": "대법원 종합법률정보 최신판례",
+          "source_type": "PRIMARY",
+          "url": "https://glaw.scourt.go.kr/wsjo/panre/rss.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:21.100987+00:00"
+        },
+        {
+          "id": "kr_kisdi",
+          "name": "정보통신정책연구원(KISDI) 발간물",
+          "source_type": "RESEARCH",
+          "url": "https://www.kisdi.re.kr/rss/report.do",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:21.345810+00:00"
+        },
+        {
+          "id": "kr_nia",
+          "name": "한국지능정보사회진흥원(NIA) 보도자료",
+          "source_type": "RESEARCH",
+          "url": "https://www.nia.or.kr/rss/press.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:21.470990+00:00"
+        },
+        {
+          "id": "kr_etri",
+          "name": "한국전자통신연구원(ETRI) 보도자료",
+          "source_type": "RESEARCH",
+          "url": "https://www.etri.re.kr/rss/press.xml",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:21.655949+00:00"
+        },
+        {
+          "id": "kr_kaist_ai",
+          "name": "KAIST AI대학원 소식",
+          "source_type": "RESEARCH",
+          "url": "https://gsai.kaist.ac.kr/feed/",
+          "original_language": "ko",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:21.863625+00:00"
+        }
+      ]
+    },
+    "US": {
+      "max_new_per_run": 5,
+      "focus": "PRIMARY + RESEARCH + news gaps",
+      "sources": [
+        {
+          "id": "us_nist",
+          "name": "NIST News",
+          "source_type": "PRIMARY",
+          "url": "https://www.nist.gov/news-events/news/rss.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:22.121162+00:00"
+        },
+        {
+          "id": "us_copyright_office",
+          "name": "U.S. Copyright Office Newsroom",
+          "source_type": "PRIMARY",
+          "url": "https://www.copyright.gov/rss/newsnet.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:22.340963+00:00"
+        },
+        {
+          "id": "us_ftc",
+          "name": "FTC Press Releases",
+          "source_type": "PRIMARY",
+          "url": "https://www.ftc.gov/feeds/press-release.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:22.582645+00:00"
+        },
+        {
+          "id": "us_congress_ai",
+          "name": "Congress.gov AI-related bills search",
+          "source_type": "PRIMARY",
+          "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22artificial+intelligence%22%7D&format=rss",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:22.792470+00:00"
+        },
+        {
+          "id": "us_ostp",
+          "name": "White House OSTP Briefing Room",
+          "source_type": "PRIMARY",
+          "url": "https://www.whitehouse.gov/ostp/feed/",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:22.986926+00:00"
+        },
+        {
+          "id": "us_federal_register_ai",
+          "name": "Federal Register (AI-tagged documents)",
+          "source_type": "PRIMARY",
+          "url": "https://www.federalregister.gov/documents/search.rss?conditions%5Bterm%5D=artificial+intelligence",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:23.223920+00:00"
+        },
+        {
+          "id": "us_stanford_hai",
+          "name": "Stanford HAI News",
+          "source_type": "RESEARCH",
+          "url": "https://hai.stanford.edu/news/rss.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:23.418788+00:00"
+        },
+        {
+          "id": "us_arxiv_cscy",
+          "name": "arXiv cs.CY (Computers and Society)",
+          "source_type": "RESEARCH",
+          "url": "https://arxiv.org/rss/cs.CY",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:23.687546+00:00"
+        },
+        {
+          "id": "us_arxiv_csai",
+          "name": "arXiv cs.AI",
+          "source_type": "RESEARCH",
+          "url": "https://arxiv.org/rss/cs.AI",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:23.877009+00:00"
+        },
+        {
+          "id": "us_brookings_ai",
+          "name": "Brookings AI research",
+          "source_type": "RESEARCH",
+          "url": "https://www.brookings.edu/topic/artificial-intelligence/feed/",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:24.080119+00:00"
+        }
+      ]
+    },
+    "CN": {
+      "max_new_per_run": 5,
+      "focus": "government/court/regulator, news, dedicated AI x copyright axis",
+      "sources": [
+        {
+          "id": "cn_cac",
+          "name": "国家互联网信息办公室 (CAC) 政策发布",
+          "source_type": "PRIMARY",
+          "url": "http://www.cac.gov.cn/rss/xwzx.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (HTTPError 403)",
+          "verify_checked_at": "2026-10-03T13:24:24.303861+00:00"
+        },
+        {
+          "id": "cn_miit",
+          "name": "工业和信息化部 新闻发布",
+          "source_type": "PRIMARY",
+          "url": "https://www.miit.gov.cn/xwdt/rss.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:24.501260+00:00"
+        },
+        {
+          "id": "cn_cnipa",
+          "name": "国家知识产权局 (CNIPA) 新闻",
+          "source_type": "PRIMARY",
+          "url": "https://www.cnipa.gov.cn/rss/xwdt.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:24.778248+00:00"
+        },
+        {
+          "id": "cn_ncac",
+          "name": "国家版权局 (NCAC) 通知公告",
+          "source_type": "PRIMARY",
+          "url": "https://www.ncac.gov.cn/rss/tzgg.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:24.979836+00:00"
+        },
+        {
+          "id": "cn_caict",
+          "name": "中国信息通信研究院 (CAICT) 要闻",
+          "source_type": "RESEARCH",
+          "url": "http://www.caict.ac.cn/rss/yw.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (HTTPError 403)",
+          "verify_checked_at": "2026-10-03T13:24:27.667022+00:00"
+        },
+        {
+          "id": "cn_caixin",
+          "name": "财新网 Caixin",
+          "source_type": "NEWS",
+          "url": "https://www.caixin.com/rss/feed.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:27.877800+00:00"
+        },
+        {
+          "id": "cn_36kr",
+          "name": "36氪",
+          "source_type": "NEWS",
+          "url": "https://36kr.com/feed",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:28.089213+00:00"
+        },
+        {
+          "id": "cn_yicai",
+          "name": "第一财经",
+          "source_type": "NEWS",
+          "url": "https://www.yicai.com/rss/news.xml",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:28.296167+00:00"
+        },
+        {
+          "id": "cn_cls",
+          "name": "财联社",
+          "source_type": "NEWS",
+          "url": "https://www.cls.cn/rss",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:28.551656+00:00"
+        },
+        {
+          "id": "cn_thepaper",
+          "name": "澎湃新闻",
+          "source_type": "NEWS",
+          "url": "https://www.thepaper.cn/rss_news.jsp",
+          "original_language": "zh",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:28.861528+00:00"
+        }
+      ],
+      "ai_copyright_axis": {
+        "description": "China-focused 'AI x copyright' via Chinese-language Google News RSS. Pattern verified structurally against known Google News RSS format but NOT confirmed with a real HTTP fetch in this session (news.google.com was itself unreachable -- see _meta.verification_environment_note). Query terms below are the candidate set; none may be registered as verified until actually fetched.",
+        "pattern": "https://news.google.com/rss/search?q=<url-encoded Chinese query>&hl=zh-CN&gl=CN&ceid=CN:zh",
+        "queries": [
+          {
+            "id": "cn_ai_copyright_q1",
+            "query": "人工智能 著作权",
+            "source_type": "NEWS",
+            "url": "https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E8%91%97%E4%BD%9C%E6%9D%83&hl=zh-CN&gl=CN&ceid=CN:zh",
+            "original_language": "zh",
+            "verified": false,
+            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+            "verify_checked_at": "2026-10-03T13:24:29.087691+00:00"
+          },
+          {
+            "id": "cn_ai_copyright_q2",
+            "query": "生成式人工智能 版权 纠纷",
+            "source_type": "NEWS",
+            "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%20%E7%89%88%E6%9D%83%20%E7%BA%A0%E7%BA%B7&hl=zh-CN&gl=CN&ceid=CN:zh",
+            "original_language": "zh",
+            "verified": false,
+            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+            "verify_checked_at": "2026-10-03T13:24:29.279279+00:00"
+          },
+          {
+            "id": "cn_ai_copyright_q3",
+            "query": "AI 侵权 判决",
+            "source_type": "NEWS",
+            "url": "https://news.google.com/rss/search?q=AI%20%E4%BE%B5%E6%9D%83%20%E5%88%A4%E5%86%B3&hl=zh-CN&gl=CN&ceid=CN:zh",
+            "original_language": "zh",
+            "verified": false,
+            "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+            "verify_checked_at": "2026-10-03T13:24:29.547504+00:00"
+          }
+        ]
+      }
+    },
+    "EU": {
+      "max_new_per_run": 5,
+      "focus": "EU institutions (Primary-source-first), research",
+      "sources": [
+        {
+          "id": "eu_ec_ai_office",
+          "name": "European Commission -- AI Office / Digital news",
+          "source_type": "PRIMARY",
+          "url": "https://digital-strategy.ec.europa.eu/en/rss.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:29.669313+00:00"
+        },
+        {
+          "id": "eu_eurlex_ai_act",
+          "name": "EUR-Lex -- AI Act related documents",
+          "source_type": "PRIMARY",
+          "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myLexUriServ=...",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:29.904623+00:00"
+        },
+        {
+          "id": "eu_parliament_news",
+          "name": "European Parliament -- News (AI topic)",
+          "source_type": "PRIMARY",
+          "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:30.160946+00:00"
+        },
+        {
+          "id": "eu_edps",
+          "name": "European Data Protection Supervisor (EDPS) press",
+          "source_type": "PRIMARY",
+          "url": "https://edps.europa.eu/rss.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:30.396327+00:00"
+        },
+        {
+          "id": "eu_ceps",
+          "name": "CEPS (Centre for European Policy Studies)",
+          "source_type": "RESEARCH",
+          "url": "https://www.ceps.eu/feed/",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:30.592278+00:00"
+        },
+        {
+          "id": "eu_bruegel",
+          "name": "Bruegel",
+          "source_type": "RESEARCH",
+          "url": "https://www.bruegel.org/rss.xml",
+          "original_language": "en",
+          "verified": false,
+          "verify_note": "확인 불가 (URLError Tunnel connection failed: 403 Forbidden)",
+          "verify_checked_at": "2026-10-03T13:24:30.780358+00:00"
+        }
+      ]
+    }
+  }
+}

@@ -1069,3 +1069,26 @@ def editorial_queue(discovery_items, change_watch_contested):
         })
 
     return buckets
+
+
+# ---------------------------------------------------------------------------
+# OpenClaw surface (read-only). Entirely separate feature: discovers items NOT
+# already in data/*.json via intel/openclaw/collector.py (KR/US/CN/EU gap-fill,
+# never Public-facing, never Claim/Evidence). This function only READS the
+# already-written intel/openclaw/discoveries.json -- it runs no fetch itself and
+# never writes anywhere, same contract as the rest of this module. Missing or
+# unreadable file is not an error: the UI should render "실행 전" / empty state.
+# ---------------------------------------------------------------------------
+
+OPENCLAW_DISCOVERIES_PATH = ROOT / "intel" / "openclaw" / "discoveries.json"
+
+
+def openclaw_discoveries():
+    """Returns the last OpenClaw collector run's output dict, or None if it has
+    never been run in this environment. Read-only; never triggers a collection."""
+    try:
+        if not OPENCLAW_DISCOVERIES_PATH.exists():
+            return None
+        return json.loads(OPENCLAW_DISCOVERIES_PATH.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001 -- a bad/partial file must never break the Operator UI
+        return None
