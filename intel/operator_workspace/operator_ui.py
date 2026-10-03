@@ -28,16 +28,31 @@ import taxonomy as _taxonomy  # noqa: E402
 import candidate_engine as _candidates  # noqa: E402
 import coverage_matrix as _coverage  # noqa: E402
 
+FONT_LINKS = (
+    '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>'
+    '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&text=METAXIS&display=swap">'
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap">'
+    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">'
+)
+
+# O-3.6B: Public(metaxis.kr)과 같은 METAXIS 디자인 시스템(다크 테마, Pretendard/Noto Serif KR,
+# cyan-blue-violet 그라데이션 포인트)을 Operator에 그대로 적용한다. briefing.py의 :root 다크
+# 테마 변수와 동일한 값을 쓴다 -- 새 디자인을 만드는 것이 아니라 이미 있는 Public 디자인을 재사용.
 CSS = """
-:root{--ink:#1a1a1a;--sub:#5a5a5a;--line:#e3e6f0;--bg:#ffffff;--warn:#8a5a00;--bad:#b3261e;--ok:#1e5c3a;--accent:#3552c9;--soft:#eef1fb}
+:root{--bg:#07061a;--card:#0f0d26;--ink:#eceef6;--sub:#9097b3;--line:#1f1c40;--warn:#f3c969;--bad:#ff6b7a;--ok:#5fd394;--accent:#9ab8ff;--soft:#16143a;--grad:linear-gradient(90deg,#12e3ff,#3b7bff 55%,#8b2cff)}
 html{overflow-x:hidden}
 *{box-sizing:border-box}
-body{font-family:'Pretendard Variable','Pretendard',-apple-system,sans-serif;color:var(--ink);background:var(--bg);
+body{font-family:'Pretendard Variable','Pretendard',-apple-system,sans-serif;color:var(--ink);
+background:radial-gradient(ellipse at 50% -10%,#1b1840 0%,var(--bg) 55%) fixed,var(--bg);
 margin:0;padding:0;line-height:1.6;font-size:15px;overflow-wrap:break-word}
 .mono{font-family:'Space Grotesk','Pretendard',monospace;overflow-wrap:anywhere;word-break:break-word}
-header{border-bottom:1px solid var(--line);padding:16px 24px}
+header{border-bottom:1px solid var(--line);padding:16px 24px;background:rgba(6,5,13,.86)}
 header h1{font-family:'Noto Serif KR','Pretendard Variable',serif;letter-spacing:-.02em;font-size:1.1em;margin:0;overflow-wrap:break-word}
-nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em}
+header h1 .mx{font-family:Unbounded,'Pretendard Variable',sans-serif;font-weight:700;letter-spacing:.08em;
+background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;flex-wrap:wrap;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);font-size:0.85em;background:var(--bg)}
 nav a{color:var(--sub);text-decoration:none;padding:4px 10px;border-radius:99px}
 nav a:hover,nav a.active{background:var(--soft);color:var(--accent)}
 main{max-width:980px;margin:0 auto;padding:24px}
@@ -52,10 +67,11 @@ th{background:var(--soft);font-weight:600}
 .status-not_instrumented,.status-unknown,.status-not_available{border-color:var(--sub);color:var(--sub)}
 .empty{color:var(--sub);font-style:italic}
 .kpi-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-.kpi{border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-sizing:border-box;
+.kpi{border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-sizing:border-box;background:var(--card);
 flex:0 0 calc(33.333% - 7px);max-width:calc(33.333% - 7px);min-width:0;overflow-wrap:break-word}
-.kpi .n{font-family:'Space Grotesk',monospace;font-size:1.4em}
+.kpi .n{font-family:'Space Grotesk',monospace;font-size:1.4em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .kpi .l{color:var(--sub);font-size:0.78em;text-transform:uppercase;overflow-wrap:break-word}
+a{color:var(--accent)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .status{overflow-wrap:break-word;display:inline-block;max-width:100%}
 @media (max-width: 480px){
@@ -134,8 +150,8 @@ def _shell(title, active, body, depth=1):
     return (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
-        f"<title>Operator -- {_esc(title)}</title><style>{CSS}</style></head><body>"
-        "<header><h1>METAXIS Intelligence Workbench (Operator)</h1></header>"
+        f"<title>Operator -- {_esc(title)}</title>{FONT_LINKS}<style>{CSS}</style></head><body>"
+        "<header><h1><span class='mx'>METAXIS</span> Intelligence Workbench (Operator)</h1></header>"
         f"{_nav(active, depth)}<main aria-label='Operator workspace'>{body}</main></body></html>"
     )
 
@@ -144,11 +160,10 @@ PUBLIC_SAFE_BANNER = (
     '<div style="border:1px solid var(--line);background:var(--soft);padding:10px 14px;'
     'margin-bottom:16px;font-size:0.85em">'
     '<strong>METAXIS OPERATOR / PRIVATE WORKSPACE</strong><br>'
-    'Since O-3A this workspace is built only into intel_private/ on this repository\'s private '
-    'main branch -- it is no longer published to the public gh-pages site/metaxis.kr. It is '
-    'reachable only to GitHub accounts with repository access (git clone/pull), not via a '
-    'client-side password gate. A browsable, logged-in web Operator is a separate, not-yet-built '
-    'Authentication Phase (O-3 section 34). See '
+    'This workspace is built from intel_private/ on this repository\'s private main branch, and '
+    '(since O-3.6B) deployed as a separate, access-controlled site -- never published to the '
+    'public gh-pages site/metaxis.kr. Real-identity-verified login only (Cloudflare Access + '
+    'email one-time PIN), never a client-side password gate. See '
     '<code>intel/operator_workspace/operator_boundary_contract.json</code> for the full boundary.'
     '</div>'
 )
