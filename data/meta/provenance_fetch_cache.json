@@ -3578,5 +3578,75 @@
   "diagnostic_stage": "success",
   "diagnostic_code": null,
   "ts": "2026-10-03T11:35:11.857461+00:00"
+ },
+ "7a2b177ccb67dc7d169452ab62cef0d1b096829941fbc082ce4b5ae95b731315": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215941",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:03.951243+00:00"
+ },
+ "5a49c52e7ff8abffb9f3c37550bffe18a625b2441e4237449860f93c3f7bd91f": {
+  "url": "https://www.donga.com/news/Politics/article/all/20261003/134780608/2",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:05.752453+00:00"
+ },
+ "468e9273bb43336a041128814220f50d755af8405fc4f74fdeb9aa79ff1787f1": {
+  "url": "http://www.cupnews.kr/news/articleView.html?idxno=30336",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:06.709382+00:00"
+ },
+ "66c882b9c3ad34c873c858fade262c6aa8bec566c270c87a70d01a73bcb2ab5c": {
+  "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003272383",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:08.749186+00:00"
+ },
+ "94adafeaad76a9503f9fd3e8ea32179cc570f1aa8e1e5e8eafd5f0d7d68f09e2": {
+  "url": "https://www.mk.co.kr/news/economy/12167792",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:09.931519+00:00"
+ },
+ "1125f25109a8d743c1492fae67d99d77fb60249f39e1e8eef01d2efe4b20ddc0": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215693",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:11.658592+00:00"
+ },
+ "d511ccf315034502edcaedf6e8934475a777dd64b8ca8cd9910aa754b5947a05": {
+  "url": "https://www.yna.co.kr/view/AKR20261003033100017",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:13.493781+00:00"
+ },
+ "5e50adfcf9d7427188d0e3fff45c6742c677945c6f342177b4983e6bf9c6c601": {
+  "url": "https://www.aitimes.com/news/articleView.html?idxno=215937",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:15.037029+00:00"
+ },
+ "ad393042d9d2e1ef175c81a981d8b560a1e3e57a39bd9e522f9c0841cb60e396": {
+  "url": "https://www.hankyung.com/article/202609220337i",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:15.164081+00:00"
+ },
+ "a19d7659d96f014d54939ba062f50a645ca0fe5afeee2221e374f1576fea93ea": {
+  "url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/",
+  "status": "FULL_TEXT",
+  "diagnostic_stage": "success",
+  "diagnostic_code": null,
+  "ts": "2026-10-03T12:05:15.362614+00:00"
  }
 }
