@@ -1,9 +1,9 @@
 {
   "generated_from": "intel/documents.json (real collected document pool)",
-  "document_count": 604,
+  "document_count": 605,
   "counts": {
     "PASS": 459,
-    "FAIL": 145,
+    "FAIL": 146,
     "NEEDS_REVIEW": 0
   },
   "results": {
@@ -2273,6 +2273,11 @@
       "reason": "제목에 독립된 AI 토큰이 등장"
     },
     "bf61df88840874c2": {
+      "gate": "FAIL",
+      "category": "GENERAL_NEWS",
+      "reason": "AI 관련 근거 없음 -- 일반 뉴스"
+    },
+    "bf9a036b8cc40d8d": {
       "gate": "FAIL",
       "category": "GENERAL_NEWS",
       "reason": "AI 관련 근거 없음 -- 일반 뉴스"
