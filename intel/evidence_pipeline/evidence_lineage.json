@@ -136,6 +136,28 @@
   },
   {
    "change_ids": [],
+   "claim_id": "02de2b66c27b37fc:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "02de2b66c27b37fc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/okta-builds-shared-architecture-agent-runtime-security-oktane/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "02de2b66c27b37fc:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "02de2b66c27b37fc",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/okta-builds-shared-architecture-agent-runtime-security-oktane/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
    "claim_id": "03265759f277b5fb:c1",
    "claim_status": "INSUFFICIENT_SOURCE",
    "document_id": "03265759f277b5fb",
@@ -1227,7 +1249,7 @@
    "document_id": "22177298ebd0d964",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_5"
+    "evr_10"
    ],
    "source_url": "https://www.donga.com/news/Opinion/article/all/20260928/134747915/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -1705,7 +1727,7 @@
    "document_id": "3458780fabb08a16",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_8"
+    "evr_13"
    ],
    "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wQi1KWm8yQ3dZcnhQdHhpSVN1Vl8tQ243OVlhZGFod2NieEZBeXV6bVJaMVdTM2MzRVB5T3pXaG5NUkF2VXRRVEVqcWIweFhJVlhXOVNRNXJHdw?oc=5",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -3428,7 +3450,7 @@
    "document_id": "688c6d92f147a96b",
    "event_ids": [],
    "evidence_record_ids": [
-    "evr_14"
+    "evr_21"
    ],
    "source_url": "https://www.donga.com/news/Economy/article/all/20260929/134748520/2",
    "stop_reason": "이 문서가 어떤 Production Event에도 속하지 않음(단독 문서, 이벤트 미형성)",
@@ -7836,29 +7858,95 @@
   },
   {
    "change_ids": [],
-   "claim_id": "02de2b66c27b37fc:g1",
+   "claim_id": "1041885bfad2900b:g1",
    "claim_status": "SECONDARY_ONLY",
-   "document_id": "02de2b66c27b37fc",
+   "document_id": "1041885bfad2900b",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/okta-builds-shared-architecture-agent-runtime-security-oktane/",
+   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   },
   {
    "change_ids": [],
-   "claim_id": "02de2b66c27b37fc:g2",
+   "claim_id": "1041885bfad2900b:g2",
    "claim_status": "SECONDARY_ONLY",
-   "document_id": "02de2b66c27b37fc",
+   "document_id": "1041885bfad2900b",
    "event_ids": [],
    "evidence_record_ids": [],
-   "source_url": "https://siliconangle.com/2026/09/28/okta-builds-shared-architecture-agent-runtime-security-oktane/",
+   "source_url": "https://siliconangle.com/2026/09/28/ninjatech-ais-ninja-enterprise-bundles-ai-employees-and-gpus-into-one-fixed-yearly-fee/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "1f545e2495b93dba:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "1f545e2495b93dba",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/agentic-ai-is-breaking-the-token-meter-and-enterprises-need-a-plan-for-what-comes-next/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "4e3f6a460e8216d7:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "4e3f6a460e8216d7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "4e3f6a460e8216d7:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "4e3f6a460e8216d7",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://siliconangle.com/2026/09/28/enterprise-ai-data-readiness-dell-dellaidataplatform/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 693,
+  "CLAIM": 701,
   "EVIDENCE_RECORD": 3
  }
 }
