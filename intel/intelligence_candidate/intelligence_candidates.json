@@ -21,12 +21,12 @@
       "field": "기술",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 7,
-      "independent_source_count": 29,
-      "related_event_count": 42,
+      "independent_source_count": 28,
+      "related_event_count": 41,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "7일 연속 반복, 독립 출처 29개",
+      "reason": "7일 연속 반복, 독립 출처 28개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -184,17 +184,17 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_3d28651f4723f84a",
+      "candidate_id": "cand_b22f8248941eb84a",
       "title": "그록",
-      "field": "기술",
+      "field": "법·제도",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 4,
-      "independent_source_count": 7,
-      "related_event_count": 7,
+      "independent_source_count": 6,
+      "related_event_count": 6,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "4일 연속 반복, 독립 출처 7개",
+      "reason": "4일 연속 반복, 독립 출처 6개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -217,12 +217,12 @@
       "field": "교육·사회",
       "region": "GLOBAL/UNKNOWN",
       "recurring_days": 3,
-      "independent_source_count": 8,
-      "related_event_count": 10,
+      "independent_source_count": 9,
+      "related_event_count": 11,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "3일 연속 반복, 독립 출처 8개",
+      "reason": "3일 연속 반복, 독립 출처 9개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
