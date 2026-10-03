@@ -1943,6 +1943,7 @@ html:not(.op).cap .protect{filter:blur(18px);transition:filter .05s}
 .post .body blockquote{margin:20px 0;padding:4px 18px;border-left:3px solid var(--accent);color:var(--muted)}
 .post .body a{color:var(--accent);text-decoration:underline}
 .post .body figure{margin:22px auto;max-width:100%}.post .body figure img{margin:0 auto;width:100%}.post .body hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.post .body video{display:block;max-width:100%;border-radius:12px;margin:22px auto}.post .body figure video{margin:0 auto;width:100%}
 .post .body mark{background:#fff27a;color:#111;padding:0 2px;border-radius:2px}.post .body ul,.post .body ol{padding-left:1.4em}
 .post .body [style*="background-color"]{color:#111;border-radius:2px;padding:0 1px}
 .credits li{margin-bottom:6px;font-size:14px}
@@ -2160,9 +2161,10 @@ const saveSel=()=>{const s=getSelection();if(s.rangeCount&&ED.contains(s.anchorN
 document.addEventListener('selectionchange',saveSel);['mouseup','keyup','touchend'].forEach(ev=>ED.addEventListener(ev,saveSel));
 const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 const FCTRL=`<button type="button" class="fx" aria-label="사진 빼기">✕</button><span class="fsz"><button type="button" data-w="33">작게</button><button type="button" data-w="50">중간</button><button type="button" data-w="75">크게</button><button type="button" data-w="100">꽉 차게</button></span><span class="fh" title="끌어서 크기 조절"></span>`;
-function fig(name,src){return `<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt="">${FCTRL}</figure>`;}
-function decorate(){ED.querySelectorAll('figure').forEach(f=>{const im=f.querySelector('img');if(!im)return f.remove();
- const src=im.getAttribute('src')||'';f.contentEditable='false';f.dataset.n=f.dataset.n||src.replace(/^img\//,'');
+function fig(name,src){return isVid(name)?`<figure contenteditable="false" data-n="${esc(name)}"><video src="${esc(src)}" controls playsinline></video>${FCTRL}</figure>`
+ :`<figure contenteditable="false" data-n="${esc(name)}"><img src="${esc(src)}" alt="">${FCTRL}</figure>`;}
+function decorate(){ED.querySelectorAll('figure').forEach(f=>{const el=f.querySelector('img,video');if(!el)return f.remove();
+ const src=el.getAttribute('src')||'';f.contentEditable='false';f.dataset.n=f.dataset.n||src.replace(/^img\//,'').replace(/^vid\//,'');
  f.querySelectorAll('button,span').forEach(x=>x.remove());f.insertAdjacentHTML('beforeend',FCTRL);});}
 function setBody(md,fmt){if(fmt==='html'){ED.innerHTML=md;decorate();return;}ED.innerHTML=md.replace(/\r/g,'').split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean).map(b=>{
   const m=b.match(/^!\[[^\]]*\]\((img\/[\w.-]+|https:\/\/[^)\s]+)\)$/);if(m)return fig(m[1].replace(/^img\//,''),m[1]);
@@ -2170,8 +2172,9 @@ function setBody(md,fmt){if(fmt==='html'){ED.innerHTML=md;decorate();return;}ED.
 function txt(el){let o='';el.childNodes.forEach(n=>{if(n.nodeType===3)o+=n.textContent;else if(n.nodeName==='BR')o+='\n';
   else if(/^(B|STRONG)$/.test(n.nodeName)){const t=txt(n).trim();o+=t?`**${t}**`:'';}else o+=txt(n);});return o;}
 function getBody(){const c=ED.cloneNode(true); // 편집용 표시(✕ 버튼, 미리보기 사진)를 걷어내고 게시용 HTML로
- c.querySelectorAll('figure').forEach(f=>{const n=f.dataset.n,w=parseInt(f.style.width)||100,g=document.createElement('figure');
-  g.innerHTML=`<img src="${/^https:/.test(n)?n:'img/'+n}" alt="">`;if(w<100)g.style.width=w+'%';f.replaceWith(g);});
+ c.querySelectorAll('figure').forEach(f=>{const n=f.dataset.n,w=parseInt(f.style.width)||100,g=document.createElement('figure'),
+  srcp=/^https:/.test(n)?n:(isVid(n)?'vid/'+n:'img/'+n);
+  g.innerHTML=isVid(n)?`<video src="${srcp}" controls playsinline></video>`:`<img src="${srcp}" alt="">`;if(w<100)g.style.width=w+'%';f.replaceWith(g);});
  c.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));
  const base=getComputedStyle(ED).color; // 편집기가 저절로 붙인 기본 글자색·inherit 값은 지워서 밝은/어두운 화면 모두에서 읽히게
  c.querySelectorAll('[style]').forEach(e=>{const st=e.style;for(const k of [...st])if(st.getPropertyValue(k)==='inherit')st.removeProperty(k);
@@ -2210,6 +2213,14 @@ $('#cover-del').onclick=()=>{cur.cover='';cur.noCover=true;drawThumbs();};
 $('#file').onchange=async e=>{for(const f of e.target.files){if(!f.type.startsWith('image/'))continue;
  const name=`${cur.id}-${++seq}.jpg`;imgs[name]=await shrink(f);if(!cur.cover&&!cur.noCover)cur.cover='img/'+name;insertFigure(name,imgs[name]);}
  e.target.value='';drawThumbs();};
+const MAX_VID=5*1024*1024;  // ntfy.sh 무료 중계는 기본 메시지/첨부 용량이 넉넉하지 않고, 영상은 base64를 두 번 거치며 더 커지므로 작게 잡는다
+const readAsDataURL=f=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f);});
+$('#vfile').onchange=async e=>{for(const f of e.target.files){
+ if(!/^video\/(mp4|webm)$/.test(f.type)){msg('#edit-msg','mp4 또는 webm 영상만 올릴 수 있어요.',1);continue;}
+ if(f.size>MAX_VID){msg('#edit-msg','영상은 5MB까지만 올릴 수 있어요.',1);continue;}
+ const ext=f.type==='video/webm'?'webm':'mp4',name=`${cur.id}-${++seq}.${ext}`;
+ imgs[name]=await readAsDataURL(f);insertFigure(name,imgs[name]);}
+ e.target.value='';drawThumbs();};
 // 서식 도구: 버튼을 눌러도 글자 선택이 풀리지 않게 한다
 const T=$('#tools');['pointerdown','mousedown','touchstart'].forEach(ev=>T.addEventListener(ev,saveSel,true));T.addEventListener('mousedown',e=>{if(e.target.closest('button'))e.preventDefault();});
 T.addEventListener('pointerdown',e=>{if(e.target.closest('button')&&e.pointerType!=='mouse')e.preventDefault();});
@@ -2242,11 +2253,12 @@ ED.addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey))return;const k=e.ke
 $('#cancel').onclick=()=>{view('#v-list');renderList();};
 $('#publish').onclick=async()=>{const title=$('#title').value.trim(),body=getBody();
  if(!title||!body)return msg('#edit-msg','제목과 내용을 모두 써 주세요.',1);
- const used=n=>body.includes('img/'+n)||cur.cover==='img/'+n,up={};
- const keep=(cur.images||[]).filter(used);
+ const used=n=>body.includes((isVid(n)?'vid/':'img/')+n)||cur.cover==='img/'+n,up={};
+ const keep=[...(cur.images||[]),...(cur.videos||[])].filter(used);
  for(const [n,d] of Object.entries(imgs))if(used(n)){up[n]=d.split(',')[1];keep.push(n);}
- if(cur.cover&&!keep.includes(cur.cover.slice(4)))cur.cover=keep.length?'img/'+keep[0]:'';
- const post={id:cur.id,title,body,format:'html',cover:cur.cover,noCover:!cur.cover,images:keep,date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
+ const images=keep.filter(n=>!isVid(n)),videos=keep.filter(isVid);
+ if(cur.cover&&!images.includes(cur.cover.slice(4)))cur.cover=images.length?'img/'+images[0]:'';
+ const post={id:cur.id,title,body,format:'html',cover:cur.cover,noCover:!cur.cover,images,videos,category:cur.category||'writing',date:cur.date||new Date().toISOString(),updated:new Date().toISOString()};
  $('#publish').disabled=true;msg('#edit-msg','보내는 중…');
  try{await send('publish',{post,upload:up});msg('#edit-msg','보냈어요! 보통 1~2분 안에 사이트에 올라가요.');
   const i=POSTS.findIndex(p=>p.id===post.id);if(i<0)POSTS.unshift(post);cur=post;imgs={};
@@ -3202,7 +3214,7 @@ def font_links(fams):
 
 
 _SAFE_TAGS = {"p", "div", "br", "h2", "h3", "b", "strong", "i", "em", "u", "s", "strike", "span", "mark", "a", "ul", "ol",
-              "li", "blockquote", "hr", "figure", "img", "figcaption", "sub", "sup"}
+              "li", "blockquote", "hr", "figure", "img", "figcaption", "sub", "sup", "video"}
 _VOID = {"br", "hr", "img"}
 _COLOR = re.compile(r"#[0-9a-f]{3,8}|rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*[\d.]+\s*)?\)|transparent", re.I)
 _SIZES = {"small", "medium", "large", "x-large", "xx-large", "xxx-large"}
@@ -3266,6 +3278,11 @@ def sanitize_html(src):
                 if not (re.fullmatch(r"img/[\w.-]+", srcv) or srcv.startswith("https://")):
                     return
                 keep += f' src="{esc(srcv)}" alt="{esc(a.get("alt") or "")}" loading="lazy"'
+            if tag == "video":
+                srcv = (a.get("src") or "").strip()
+                if not (re.fullmatch(r"vid/[\w.-]+", srcv) or srcv.startswith("https://")):
+                    return
+                keep += f' src="{esc(srcv)}" controls playsinline preload="metadata" style="max-width:100%"'
             out.append(f"<{tag}{keep}>")
             if tag not in _VOID:
                 stack.append(tag)
@@ -3403,24 +3420,35 @@ def render_editor_pages(posts, cats, sc):
     (out / "img").mkdir(parents=True, exist_ok=True)
     for f in (POSTS_DIR / "img").glob("*") if (POSTS_DIR / "img").exists() else []:
         (out / "img" / f.name).write_bytes(f.read_bytes())
+    (out / "vid").mkdir(parents=True, exist_ok=True)
+    for f in (POSTS_DIR / "vid").glob("*") if (POSTS_DIR / "vid").exists() else []:
+        (out / "vid" / f.name).write_bytes(f.read_bytes())
     pages = []
     n = max(1, -(-len(posts) // PER_PAGE))
     href = lambda i: "index.html" if i == 0 else f"{i + 1}.html"
+    # 카테고리 탭(전체/글쓰기/비주얼 스터디): 분류 없이 올라온 옛 글은 모두 '글쓰기'로 본다(하위 호환)
+    cat_of = lambda p: p.get("category") if p.get("category") in ("writing", "visual") else "writing"
+    POST_CAT_NAME = {"writing": "글쓰기", "visual": "비주얼 스터디"}
+    cat_tabs = ('<div class="tabs" id="ecat"><button type="button" class="on" data-cat="all">전체</button>'
+                + "".join(f'<button type="button" data-cat="{k}">{esc(v)}</button>' for k, v in POST_CAT_NAME.items()) + "</div>")
+    cat_filter_js = ("document.querySelectorAll('#ecat button').forEach(b=>b.onclick=()=>{"
+                      "document.querySelectorAll('#ecat button').forEach(x=>x.classList.toggle('on',x===b));"
+                      "document.querySelectorAll('.elist>article').forEach(a=>a.hidden=b.dataset.cat!=='all'&&a.dataset.cat!==b.dataset.cat);});")
     for pg in range(n):
         chunk = posts[pg * PER_PAGE:(pg + 1) * PER_PAGE]
         rows = "".join(
-            f'<article>{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
+            f'<article data-cat="{cat_of(p)}">{thumb_html(post_item(p), "../", href=p["id"] + ".html", blank=False)}<div>'
             f'<h3 class="serif"><a href="{p["id"]}.html">{esc(p["title"])}</a></h3><p>{esc(p["summary"])}</p>'
             f'<div class="meta"><span class="op-only" hidden>{ICON_CLOCK}수정 {fmt_time(p.get("updated") or p.get("date"))}</span>'
             f'<a class="op-edit" href="write.html#edit={p["id"]}" hidden>✎ 수정</a></div></div></article>' for p in chunk)
         rows = rows or '<p class="empty">아직 올라온 에디터 글이 없어요.</p>'
         body = (f'<div class="ph" style="--c:{EDITOR_COLOR}"><h1 class="serif">에디터</h1><span>{esc(sc["name"])}가 직접 쓴 글 {len(posts)}편'
-                f'<a class="btn-w op-only" href="write.html" hidden>✎ 에디터 글쓰기</a></span></div>'
+                f'<a class="btn-w op-only" href="write.html" hidden>✎ 에디터 글쓰기</a></span></div>{cat_tabs}'
                 f'<div class="elist protect">{rows}</div>{pager_html(pg, n, href)}')
         path = "editor/" + ("" if pg == 0 else f"{pg + 1}.html")
         title = f"에디터{'' if pg == 0 else f' {pg + 1}쪽'} | {sc['name']}"
         (out / href(pg)).write_text(page(title, body, "../", cats, search=True, path=path, active="editor",
-                                         desc=f"{sc['name']} 에디터가 직접 쓴 AI 칼럼과 분석 글"), encoding="utf-8")
+                                         desc=f"{sc['name']} 에디터가 직접 쓴 AI 칼럼과 분석 글", script=cat_filter_js), encoding="utf-8")
         pages.append(path)
     for p in posts:
         path = f"editor/{p['id']}.html"
@@ -3444,7 +3472,7 @@ def render_editor_pages(posts, cats, sc):
                                                   active="editor", image=cover, head=font_links(fams)), encoding="utf-8")
         pages.append(path)
     (out / "posts.json").write_text(json.dumps(
-        [{k: p.get(k) for k in ("id", "title", "body", "format", "cover", "images", "date", "updated")} for p in posts],
+        [{k: p.get(k) for k in ("id", "title", "body", "format", "cover", "images", "videos", "category", "date", "updated")} for p in posts],
         ensure_ascii=False), encoding="utf-8")
     key = ROOT / "static" / "editor-key.json"
     write = (WRITE_HTML.replace("{TOPIC}", esc(sc.get("editor_topic", "")))
@@ -3474,10 +3502,11 @@ WRITE_HTML = """<div class="post" id="w" data-topic="{TOPIC}" data-key='{KEY}'><
 <section id="v-hide" hidden><p>이 기사를 사이트에서 삭제할까요? 운영자 비밀번호가 맞아야 삭제돼요.</p><p><b id="hide-t"></b></p>
 <p><input id="hide-pin" class="inp pin" inputmode="numeric" maxlength="4" type="password" autocomplete="off" placeholder="비밀번호 4자리"></p>
 <p><button id="hide-go" class="btn">삭제하기</button> <button id="hide-no" class="btn ghost">취소</button></p><p id="hide-msg" class="meta"></p></section>
-<section id="v-edit" hidden><p><input id="title" class="inp" placeholder="제목"></p>
-<div class="tools" id="tools"><button type="button" class="tb" id="t-undo" title="실행 취소 (Ctrl+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>실행 취소</button><button type="button" class="tb" id="t-redo" title="다시 실행 (Ctrl+Shift+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg>다시 실행</button><span class="tsep"></span><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
+<section id="v-edit" hidden><div class="tabs" id="cat-tabs"><button type="button" class="on" data-cat="writing">글쓰기</button><button type="button" data-cat="visual">비주얼 스터디</button></div>
+<p><input id="title" class="inp" placeholder="제목"></p>
+<div class="tools" id="tools"><button type="button" class="tb" id="t-undo" title="실행 취소 (Ctrl+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>실행 취소</button><button type="button" class="tb" id="t-redo" title="다시 실행 (Ctrl+Shift+Z)" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg>다시 실행</button><span class="tsep"></span><select id="t-font" class="tsel" title="글꼴"><option value="" style="font-family:''">기본 글꼴</option><option value="Nanum Myeongjo" style="font-family:'Nanum Myeongjo'">나눔명조</option><option value="Noto Serif KR" style="font-family:'Noto Serif KR'">노토 세리프</option><option value="Gowun Batang" style="font-family:'Gowun Batang'">고운바탕</option><option value="Nanum Gothic" style="font-family:'Nanum Gothic'">나눔고딕</option><option value="Gowun Dodum" style="font-family:'Gowun Dodum'">고운돋움</option><option value="IBM Plex Sans KR" style="font-family:'IBM Plex Sans KR'">IBM 플렉스</option><option value="Do Hyeon" style="font-family:'Do Hyeon'">도현</option><option value="Black Han Sans" style="font-family:'Black Han Sans'">검은고딕</option><option value="Nanum Pen Script" style="font-family:'Nanum Pen Script'">나눔손글씨 펜</option><option value="Gaegu" style="font-family:'Gaegu'">개구 손글씨</option></select><select id="t-size" class="tsel" title="글자 크기"><option value="">크기</option><option value="2">작게</option><option value="3">보통</option><option value="5">크게</option><option value="6">아주 크게</option><option value="7">제일 크게</option></select><span class="tsep"></span><button type="button" class="tb ic" data-c="bold" title="굵게"><b>B</b></button><button type="button" class="tb ic" data-c="italic" title="기울임"><i style="font-family:serif">I</i></button><button type="button" class="tb ic" data-c="underline" title="밑줄"><u>U</u></button><button type="button" class="tb ic" data-c="strikeThrough" title="취소선"><s>S</s></button><span class="tpop"><button type="button" class="tb ic" id="t-hl" title="형광펜"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l-5 5v4h4l5-5M14 6l4 4M9 11l5-5 4 4-5 5z"/><path d="M3 21h18" stroke="#ffd400" stroke-width="3"/></svg></button><span class="pal" id="p-hl" hidden><button type="button" data-hl="#fff27a" style="background:#fff27a" title="형광펜"></button><button type="button" data-hl="#b8f5c8" style="background:#b8f5c8" title="형광펜"></button><button type="button" data-hl="#bde0ff" style="background:#bde0ff" title="형광펜"></button><button type="button" data-hl="#ffc8e6" style="background:#ffc8e6" title="형광펜"></button><button type="button" data-hl="#ffd6a5" style="background:#ffd6a5" title="형광펜"></button><button type="button" data-hl="transparent" class="none" title="형광펜 지우기">✕</button></span></span><span class="tpop"><button type="button" class="tb ic" id="t-fc" title="글자색"><span style="font-weight:700;border-bottom:3px solid #3b7bff;line-height:1">A</span></button><span class="pal" id="p-fc" hidden><button type="button" data-fc="#e5484d" style="background:#e5484d" title="글자색"></button><button type="button" data-fc="#f76b15" style="background:#f76b15" title="글자색"></button><button type="button" data-fc="#2a9d5c" style="background:#2a9d5c" title="글자색"></button><button type="button" data-fc="#3b7bff" style="background:#3b7bff" title="글자색"></button><button type="button" data-fc="#8b2cff" style="background:#8b2cff" title="글자색"></button><button type="button" data-fc="#6b7280" style="background:#6b7280" title="글자색"></button><button type="button" data-fc="" class="none" title="기본 색">✕</button></span></span><span class="tsep"></span><button type="button" class="tb ic" data-c="justifyLeft" title="왼쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyCenter" title="가운데 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyRight" title="오른쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg></button><button type="button" class="tb ic" data-c="justifyFull" title="양쪽 정렬"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></button><span class="tsep"></span><button type="button" class="tb" data-b="h2" title="소제목">소제목</button><button type="button" class="tb ic" data-b="blockquote" title="인용"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v4c0 3-2 5-4 6M15 7h4v4c0 3-2 5-4 6"/></svg></button><button type="button" class="tb ic" data-c="insertUnorderedList" title="점 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></button><button type="button" class="tb ic" data-c="insertOrderedList" title="번호 목록"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10M4 5h1v4M4 9h2M4 14h2l-2 3h2"/></svg></button><button type="button" class="tb ic" id="t-link" title="링크"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button><button type="button" class="tb ic" data-c="insertHorizontalRule" title="구분선"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/></svg></button><label class="tb" title="커서가 있는 곳에 사진 넣기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>사진<input id="file" type="file" accept="image/*" multiple hidden></label><label class="tb" title="커서가 있는 곳에 영상 넣기(5MB까지)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M17 9.5l4-2.3v9.6l-4-2.3"/></svg>영상<input id="vfile" type="file" accept="video/mp4,video/webm" multiple hidden></label><span class="tsep"></span><button type="button" class="tb ic" data-c="removeFormat" title="서식 지우기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h14v2M11 5l-3 14M14 19H6M16 14l5 5M21 14l-5 5"/></svg></button></div>
 <div id="body" class="inp rich" contenteditable="true" data-ph="내용을 쓰세요. 글 사이에 사진을 넣고 싶은 곳을 누른 뒤 '사진 넣기'를 누르면 그 자리에 들어가요."></div>
-<p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 본문 사진을 누르면 크기 버튼과 ✕(빼기)가 나오고, 오른쪽 아래 동그라미를 끌면 비율 그대로 크기가 바뀌어요.</p>
+<p class="meta">사진은 직접 찍었거나 사용 권리가 있는 것만 올려 주세요. 본문 사진·영상을 누르면 크기 버튼과 ✕(빼기)가 나오고, 오른쪽 아래 동그라미를 끌면 비율 그대로 크기가 바뀌어요. 영상은 5MB까지만 올릴 수 있어요(무료 중계 서버 용량 제한 때문에 짧은 영상만 가능해요).</p>
 <div class="cover"><h3>대표 썸네일</h3><div id="cover-box" class="cover-box"></div>
 <p><label class="tb">사진 올리기<input id="cover-file" type="file" accept="image/*" hidden></label> <button type="button" class="tb" id="cover-del">빼기</button></p>
 <div id="thumbs" class="thumbs"></div></div>
@@ -3822,6 +3851,21 @@ def _b64d(s):
     return base64.b64decode(s)
 
 
+# 영상 업로드: ntfy.sh 무료 중계는 메시지가 길어지면 자동으로 첨부파일로 바뀌는데, 그 한도가 넉넉하지 않고
+# 영상 바이트가 (업로드용 base64) → (암호화) → (전송용 base64)로 두 번 부풀어 오르므로, 사진(8MB)보다 훨씬 작게 잡는다.
+VIDEO_MAX_BYTES = 5_000_000
+POST_CATEGORIES = {"writing", "visual"}  # 글쓰기 / 비주얼 스터디
+
+
+def _video_kind(b):
+    """MP4(ftyp 박스)·WebM(EBML 헤더) 매직 바이트만 인정한다. 그 외는 영상이 아니라고 본다."""
+    if b[:4] == b"\x1a\x45\xdf\xa3":
+        return "webm"
+    if len(b) > 8 and b[4:8] == b"ftyp":
+        return "mp4"
+    return None
+
+
 def editor_inbox():
     try:
         from cryptography.hazmat.primitives import hashes, serialization
@@ -3919,25 +3963,38 @@ def editor_inbox():
                 result(ref, False, "글 형식이 잘못됐어요")
                 continue
             (POSTS_DIR / "img").mkdir(parents=True, exist_ok=True)
+            (POSTS_DIR / "vid").mkdir(parents=True, exist_ok=True)
             imgs = [n for n in post.get("images", []) if re.fullmatch(re.escape(pid) + r"-\d{1,3}\.jpg", str(n))]
+            vids = [n for n in post.get("videos", []) if re.fullmatch(re.escape(pid) + r"-\d{1,3}\.(mp4|webm)", str(n))]
             old_f = POSTS_DIR / f"{pid}.json"
             old = json.loads(old_f.read_text(encoding="utf-8")) if old_f.exists() else {}
             for n in old.get("images", []):
                 if n not in imgs:
                     (POSTS_DIR / "img" / n).unlink(missing_ok=True)
+            for n in old.get("videos", []):
+                if n not in vids:
+                    (POSTS_DIR / "vid" / n).unlink(missing_ok=True)
             for n, data in up.items():
                 if n in imgs:
                     b = _b64d(data)
                     if b[:3] == b"\xff\xd8\xff" and len(b) < 8_000_000:  # JPEG 만
                         (POSTS_DIR / "img" / n).write_bytes(b)
+                elif n in vids:
+                    b = _b64d(data)
+                    ext = n.rsplit(".", 1)[-1].lower()
+                    if len(b) < VIDEO_MAX_BYTES and _video_kind(b) == ext:  # 확장자와 실제 매직 바이트가 맞을 때만
+                        (POSTS_DIR / "vid" / n).write_bytes(b)
             imgs = [n for n in imgs if (POSTS_DIR / "img" / n).exists()]
+            vids = [n for n in vids if (POSTS_DIR / "vid" / n).exists()]
             want = str(post.get("cover") or "")
             cover = want if want.removeprefix("img/") in imgs else ("" if post.get("noCover") else (f"img/{imgs[0]}" if imgs else ""))
             fmt = "html" if post.get("format") == "html" else "md"
             body = str(post.get("body", ""))[:300000]
+            category = post.get("category") if post.get("category") in POST_CATEGORIES else "writing"  # 분류 없는 옛 글·요청은 '글쓰기'로
             clean = {"id": pid, "title": str(post["title"])[:200], "format": fmt,
                      "body": sanitize_html(body) if fmt == "html" else body[:60000], "cover": cover,
-                     "images": imgs, "date": old.get("date") or str(post.get("date", ""))[:40] or datetime.now(KST).isoformat(),
+                     "images": imgs, "videos": vids, "category": category,
+                     "date": old.get("date") or str(post.get("date", ""))[:40] or datetime.now(KST).isoformat(),
                      "updated": datetime.now(KST).isoformat(timespec="seconds")}
             old_f.write_text(json.dumps(clean, ensure_ascii=False, indent=1), encoding="utf-8")
             result(ref, True, "게시했어요")
@@ -3967,8 +4024,11 @@ def editor_inbox():
             pid = str(req.get("id", ""))
             f = POSTS_DIR / f"{pid}.json"
             if re.fullmatch(r"[\w-]{1,40}", pid) and f.exists():
-                for n in json.loads(f.read_text(encoding="utf-8")).get("images", []):
+                old_p = json.loads(f.read_text(encoding="utf-8"))
+                for n in old_p.get("images", []):
                     (POSTS_DIR / "img" / n).unlink(missing_ok=True)
+                for n in old_p.get("videos", []):
+                    (POSTS_DIR / "vid" / n).unlink(missing_ok=True)
                 f.unlink()
                 result(ref, True, "삭제했어요")
             else:
