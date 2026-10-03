@@ -196,7 +196,10 @@ def test_overview_section_order_round2():
     section still exists, unmodified, on its own dedicated page -- this test now checks that
     relocation instead of an order on a page the directive explicitly replaced."""
     assert "오늘의 관측" in ou.render_overview()
-    assert "새롭게 떠오르는 이슈" in ou.render_emerging_issues()
+    # ISSUE KNOWLEDGE LAYER (2026-10-03): '이슈' (render_emerging_issues) now shows the persistent,
+    # full-archive Issue Knowledge Layer instead of the single-day emerging_issues() heuristic --
+    # that old function/section HTML is preserved in code, just no longer linked from this page.
+    assert "이슈" in ou.render_emerging_issues()
     assert "Intelligence 변화 가능성" in ou.render_intelligence_index()
     assert ou.render_gaps()  # gap data still reachable on its own page (unlinked from top nav)
     assert "Intelligence Portfolio" in ou.render_intelligence_index()

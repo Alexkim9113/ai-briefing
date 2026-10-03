@@ -648,6 +648,225 @@ def today_core_issues(important_events):
 
 
 # ---------------------------------------------------------------------------------------------
+# METAXIS OPERATOR -- ISSUE KNOWLEDGE LAYER (2026-10-03). A persistent, growing knowledge unit
+# above the single-day Event/Importance layer: groups real Events from the FULL real data period
+# (not one day) into an Issue when they share a field + a matched policy/regulatory keyword
+# (directive section 5/12's narrowest honest deterministic proxy for "same direction of change"
+# without an LLM), requires >=2 member Events and >=2 independent sources (section 6 -- a single
+# article never becomes an Issue), and is keyed by (field, keyword) so the SAME Issue accumulates
+# new Events over time instead of being regenerated as a new Issue every day (section 16). Status
+# (NEW/DEVELOPING/STABLE/ACCELERATING/WEAKENING) is derived only from real event-count timing, a
+# counter-signal section defaults to an honest "none found" rather than ever being fabricated
+# (section 13), and nothing here calls an LLM or Hermes (sections 20/22).
+# ---------------------------------------------------------------------------------------------
+import hashlib as _hashlib
+
+
+def _issue_id(field, keyword, anchor_title):
+    """Keyed on the EARLIEST member event's title (never the latest), so the id stays stable as
+    new Events accumulate into the same growing Issue over time (directive section 16) -- the
+    first event an Issue was built from doesn't change on a later run, even though its lead/latest
+    event and title sentence do."""
+    return _hashlib.md5(f"{field}|{keyword}|{anchor_title}".encode("utf-8")).hexdigest()[:16]
+
+
+def _full_period_clusters(data_dir):
+    """Event clusters over EVERY real data/*.json file currently on disk (directive section 4:
+    use the full observed range, which grows automatically as more days accumulate) -- reuses
+    _clustered_week's own conservative cluster_events() wiring, just with lookback_days set to
+    the full file count instead of a fixed window."""
+    files = _all_data_files(data_dir)
+    if not files:
+        return ()
+    n = len(files)
+    signature = tuple(f.stat().st_mtime for f in files if f.exists())
+    return _clustered_week(data_dir, n, signature)
+
+
+def _issue_status(member_dates, dataset_max_date):
+    """Directive section 9/16: only assign a status the real event timing actually supports --
+    never guessed. member_dates: sorted list of each member event's date string (YYYY-MM-DD)."""
+    if not member_dates:
+        return None
+    try:
+        from datetime import date as _date
+        d_first = _date.fromisoformat(member_dates[0][:10])
+        d_last = _date.fromisoformat(member_dates[-1][:10])
+        d_max = _date.fromisoformat(dataset_max_date[:10])
+    except Exception:
+        return None
+    if (d_max - d_first).days <= 3:
+        return "NEW"
+    if (d_max - d_last).days > 7:
+        return "WEAKENING"
+    midpoint = d_first + (d_last - d_first) / 2
+    earlier = sum(1 for d in member_dates if _date.fromisoformat(d[:10]) <= midpoint)
+    later = len(member_dates) - earlier
+    if later > earlier:
+        return "ACCELERATING"
+    if earlier > later:
+        return "WEAKENING"
+    return "STABLE" if len(member_dates) >= 3 else "DEVELOPING"
+
+
+def _entities_of_lead(members_sorted):
+    """members_sorted: raw item dicts for one Event, most-recent first. Reuses briefing.py's own
+    mx_actors() (via the same cached proxy _load_dedup_deps() wires) on the Event's lead item --
+    the same country/company/institution extraction already used elsewhere, never a new NER."""
+    _load_dedup_deps()
+    if not DEDUP_AVAILABLE:
+        return set()
+    try:
+        return set(_normalized_entities_of(members_sorted[0]))
+    except Exception:
+        return set()
+
+
+def _issue_knowledge_signature(data_dir):
+    files = _all_data_files(data_dir)
+    return tuple(f.stat().st_mtime for f in files if f.exists())
+
+
+@lru_cache(maxsize=4)
+def _issue_knowledge_cached(data_dir, signature):
+    return _issue_knowledge_candidates_uncached(data_dir)
+
+
+def issue_knowledge_candidates(data_dir="data"):
+    """Cached by (data_dir, each file's mtime) so one build_operator_pages() run (which calls this
+    twice -- once for the list page, once per detail page) doesn't redo the ~O(n^2) full-archive
+    clustering pass twice. Invalidates automatically whenever any data file changes."""
+    return _issue_knowledge_cached(data_dir, _issue_knowledge_signature(data_dir))
+
+
+def _issue_knowledge_candidates_uncached(data_dir="data"):
+    """Builds every qualifying Issue from the full real archive. A (field, keyword) match alone is
+    explicitly NOT enough (directive section 2/5: 'AI 규제' as a bare keyword bucket is a named
+    failure case) -- within each (field, keyword) bucket, Events are further split by shared
+    entities (country/company/institution, via mx_actors()) using union-find, so 'US AI
+    regulation' and 'EU AI regulation' and 'Korea AI Act' become separate Issues instead of one
+    inflated '규제' bucket. Returns [] (honestly) when nothing qualifies -- never a forced minimum
+    count (directive section 7)."""
+    clusters = _full_period_clusters(data_dir)
+    if not clusters:
+        return []
+    all_files = _all_data_files(data_dir)
+    dataset_dates = [f.stem for f in all_files]
+    dataset_max_date = max(dataset_dates) if dataset_dates else None
+    dataset_min_date = min(dataset_dates) if dataset_dates else None
+
+    events = []
+    for members in clusters:
+        members_sorted = sorted(
+            members, key=lambda it: (str(it.get("published") or ""), it.get("id") or ""), reverse=True)
+        card = _build_card(members)
+        kw = _matched_policy_keyword(card["title_ko"])
+        if not kw:
+            continue
+        events.append({"card": card, "keyword": kw, "entities": _entities_of_lead(members_sorted)})
+
+    buckets = {}
+    for ev in events:
+        buckets.setdefault((ev["card"]["field"], ev["keyword"]), []).append(ev)
+
+    issues = []
+    for (field, kw), bucket in buckets.items():
+        # union-find: two events in the same bucket merge only if they share a real named entity
+        # (a country, company, or institution actually mentioned in both titles) -- entity-less
+        # events never force-merge with anything, they just stay singletons. A ubiquitous entity
+        # (e.g. "OpenAI" showing up in most of this bucket's events) is excluded from triggering a
+        # merge: otherwise single-link chaining through a hub entity re-creates one giant bucket,
+        # exactly the bare-keyword failure mode directive section 2 warns against.
+        n = len(bucket)
+        entity_counts = {}
+        for ev in bucket:
+            for e in ev["entities"]:
+                entity_counts[e] = entity_counts.get(e, 0) + 1
+        hub_threshold = max(5, n * 0.25)
+        hub_entities = {e for e, c in entity_counts.items() if c > hub_threshold}
+
+        parent = list(range(n))
+
+        def find(i):
+            while parent[i] != i:
+                parent[i] = parent[parent[i]]
+                i = parent[i]
+            return i
+
+        def union(i, j):
+            ri, rj = find(i), find(j)
+            if ri != rj:
+                parent[ri] = rj
+
+        for i in range(n):
+            ei = bucket[i]["entities"] - hub_entities
+            if not ei:
+                continue
+            for j in range(i + 1, n):
+                ej = bucket[j]["entities"] - hub_entities
+                if ei & ej:
+                    union(i, j)
+
+        components = {}
+        for idx, ev in enumerate(bucket):
+            components.setdefault(find(idx), []).append(ev["card"])
+
+        for members in components.values():
+            independent_sources = {s["institution"] for ev in members for s in ev["sources"]}
+            if len(members) < 2 or len(independent_sources) < 2:
+                continue
+            members_sorted = sorted(members, key=lambda e: str(e["date"]))
+            member_dates = [str(e["date"])[:10] for e in members_sorted if e.get("date")]
+            first_observed = member_dates[0] if member_dates else None
+            last_observed = member_dates[-1] if member_dates else None
+            status = _issue_status(member_dates, dataset_max_date) if dataset_max_date else None
+
+            regions = [e["country"] for e in members_sorted]
+            region = max(set(regions), key=regions.count) if regions else "GLOBAL/UNKNOWN"
+
+            sources, seen_urls = [], set()
+            for ev in members_sorted:
+                for s in ev["sources"]:
+                    if s["url"] not in seen_urls:
+                        seen_urls.add(s["url"])
+                        sources.append(s)
+
+            # The lead (most recent) member's own real title anchors the Issue title with a
+            # concrete subject, instead of the bare field+keyword bucket name. The id is anchored
+            # to the EARLIEST member instead, so it stays stable as the Issue grows.
+            lead_title = members_sorted[-1]["title_ko"]
+            anchor_title = members_sorted[0]["title_ko"]
+            issues.append({
+                "id": _issue_id(field, kw, anchor_title),
+                "field": field,
+                "matched_keyword": kw,
+                "title": f"{lead_title} 등 '{kw}' 관련 사건이 {len(members_sorted)}건 이어지며 "
+                         f"{field} 분야 변화가 지속되고 있다",
+                "summary": f"{first_observed} ~ {last_observed} 사이 관련 사건 {len(members_sorted)}건, "
+                           f"독립 출처 {len(independent_sources)}곳에서 확인됨.",
+                "region": region,
+                "first_observed": first_observed,
+                "last_observed": last_observed,
+                "related_event_count": len(members_sorted),
+                "independent_source_count": len(independent_sources),
+                "status": status,
+                "events": members_sorted,
+                "sources": sources,
+                "data_period": {"start": dataset_min_date, "end": dataset_max_date},
+            })
+
+    issues.sort(key=lambda i: (i["related_event_count"], i["independent_source_count"]), reverse=True)
+    return issues
+
+
+def issue_by_id(data_dir, issue_id):
+    for issue in issue_knowledge_candidates(data_dir):
+        if issue["id"] == issue_id:
+            return issue
+    return None
+
+
+# ---------------------------------------------------------------------------------------------
 # Section 13-16 -- Emerging Issues.
 # ---------------------------------------------------------------------------------------------
 NOT_ENOUGH_HISTORY = "NOT_ENOUGH_HISTORY"

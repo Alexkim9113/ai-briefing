@@ -157,11 +157,12 @@ def _nav(active, depth=1):
     return f"<nav aria-label='Operator navigation'>{links}</nav>"
 
 
-def _shell(title, active, body, depth=1):
+def _shell(title, active, body, depth=1, extra_body_attrs=""):
     return (
         "<!doctype html><html lang='ko'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"
-        f"<title>Operator -- {_esc(title)}</title>{FONT_LINKS}<style>{CSS}</style></head><body>"
+        f"<title>Operator -- {_esc(title)}</title>{FONT_LINKS}<style>{CSS}</style></head>"
+        f"<body{extra_body_attrs}>"
         "<header><h1><span class='mx'>METAXIS</span> Intelligence Workbench (Operator)</h1></header>"
         f"{_nav(active, depth)}<main aria-label='Operator workspace'>{body}</main></body></html>"
     )
@@ -530,11 +531,11 @@ function mxFilter(){
 """
 
 
-def _mx_select(id_, label, options, selected_all_label):
+def _mx_select(id_, label, options, selected_all_label, onchange="mxFilter()"):
     opts = f'<option value="">{_esc(selected_all_label)}</option>' + "".join(
         f'<option value="{_esc(o)}">{_esc(o)}</option>' for o in options
     )
-    return f'<select id="{id_}" onchange="mxFilter()" aria-label="{_esc(label)}">{opts}</select>'
+    return f'<select id="{id_}" onchange="{_esc(onchange)}" aria-label="{_esc(label)}">{opts}</select>'
 
 
 def _event_card_to_row(card):
@@ -840,11 +841,143 @@ def _ai_gate_total():
         return "N/A"
 
 
-# O-3D section 28 -- dedicated 이머징 이슈 page (full list; overview keeps only a summary).
+# METAXIS OPERATOR -- ISSUE KNOWLEDGE LAYER (2026-10-03). '이슈' is now a persistent,
+# cross-day knowledge layer built from dd.issue_knowledge_candidates() over the FULL real archive
+# -- not the single-day dd.emerging_issues() this page used to show (that function and its
+# section HTML are NOT deleted, just no longer linked from this page).
+_ISSUE_STATUS_KO = {
+    "NEW": "신규", "DEVELOPING": "진행 중", "STABLE": "안정",
+    "ACCELERATING": "강화 중", "WEAKENING": "약화 중",
+}
+
+_ISSUE_FILTER_JS = """
+<script>
+function mxIssueFilter(){
+  var f=document.getElementById('mx-if-field'); f=f?f.value:'';
+  var r=document.getElementById('mx-if-region'); r=r?r.value:'';
+  var p=document.getElementById('mx-if-period'); p=p?parseInt(p.value||'0',10):0;
+  var maxDate=new Date(document.body.getAttribute('data-dataset-max'));
+  var cutoff=null;
+  if(p){ cutoff=new Date(maxDate); cutoff.setDate(cutoff.getDate()-p); }
+  var items=document.querySelectorAll('#mx-issue-list .mx-item');
+  items.forEach(function(el){
+    var ok=(!f||el.dataset.field===f)&&(!r||el.dataset.region===r);
+    if(ok && cutoff){
+      var last=new Date(el.dataset.lastObserved);
+      ok = last >= cutoff;
+    }
+    el.style.display=ok?'':'none';
+  });
+}
+</script>
+"""
+
+
+def _issue_card_summary_html(issue):
+    status = issue.get("status")
+    status_html = f'<span class="status status-ready">{_esc(_ISSUE_STATUS_KO.get(status, status))}</span>' if status else ""
+    return (
+        f'<div class="mx-item" data-field="{_esc(issue["field"])}" data-region="{_esc(issue["region"])}" '
+        f'data-last-observed="{_esc(issue["last_observed"] or "")}">'
+        f'<h3><a href="../issue/{_esc(issue["id"])}/">{_esc(issue["title"])}</a></h3>'
+        f'<p>{_esc(issue["summary"])}</p>'
+        f'<div class="mx-meta"><span>{_esc(issue["field"])}</span><span>{_esc(issue["region"])}</span>'
+        f'<span>최초 관측 {_esc(issue["first_observed"])}</span><span>최근 관측 {_esc(issue["last_observed"])}</span>'
+        f'<span>관련 Event {issue["related_event_count"]}건</span>'
+        f'<span>Sources {issue["independent_source_count"]}곳</span>{status_html}</div>'
+        '</div>'
+    )
+
+
 def render_emerging_issues():
-    emerging = dd.emerging_issues(data_dir=str(op.ROOT / "data"))
-    body = _emerging_issues_section_html(emerging)
-    return _shell(f"{_ko('emerging_issues')} / Emerging Issues", "emerging_issues", body)
+    issues = dd.issue_knowledge_candidates(data_dir=str(op.ROOT / "data"))
+    dataset_max = issues[0]["data_period"]["end"] if issues else ""
+    if not issues:
+        body = (
+            '<h2>이슈</h2>'
+            '<p class="empty">현재 데이터에서 복수 Event + 복수 Source로 뒷받침되는 Issue가 아직 확인되지 '
+            '않았습니다 (정직한 결과이며, 예시를 넣지 않습니다). 개별 중요 사건은 '
+            f'<a href="../overview/">오늘</a>의 \'오늘의 주요 정보\'에서 볼 수 있습니다.</p>'
+        )
+    else:
+        fields_present = sorted({i["field"] for i in issues})
+        regions_present = sorted({i["region"] for i in issues})
+        cards = "".join(_issue_card_summary_html(i) for i in issues)
+        body = (
+            f'<p class="empty">지금 AI 세계에서 진행 중인 변화 {len(issues)}건 '
+            f'(데이터 범위 {_esc(issues[0]["data_period"]["start"])} ~ {_esc(dataset_max)})</p>'
+            '<h2>이슈</h2>'
+            '<div class="mx-filters">'
+            f'{_mx_select("mx-if-field", "분야", fields_present, "분야 전체", onchange="mxIssueFilter()")}'
+            f'{_mx_select("mx-if-region", "지역", regions_present, "지역 전체", onchange="mxIssueFilter()")}'
+            '<select id="mx-if-period" onchange="mxIssueFilter()" aria-label="기간">'
+            '<option value="0">기간 전체</option><option value="7">최근 7일</option>'
+            '<option value="30">최근 30일</option></select>'
+            '</div>'
+            f'<div id="mx-issue-list">{cards}</div>'
+            f'{_ISSUE_FILTER_JS}'
+        )
+    return _shell(f"{_ko('emerging_issues')} / Issues", "emerging_issues", (
+        f'<style>{_MX_FILTER_CSS}</style>{body}'
+    ), extra_body_attrs=f' data-dataset-max="{_esc(dataset_max)}"')
+
+
+def _issue_timeline_html(events):
+    rows = []
+    for ev in events:
+        summary = _esc(ev.get("summary") or "")
+        rows.append(
+            '<div class="mx-item">'
+            f'<div class="mx-meta"><span class="mono">{_esc(str(ev["date"])[:10])}</span>'
+            f'<span>{_esc(ev["source"])}</span></div>'
+            f'<h3>{_safe_link(ev["url"], ev["title_ko"])}</h3>'
+            + (f'<p>{summary}</p>' if summary else '')
+            + '</div>'
+        )
+    return "".join(rows)
+
+
+def render_issue_detail(issue):
+    status = issue.get("status")
+    status_line = (
+        f'<p><b>상태</b>: {_esc(_ISSUE_STATUS_KO.get(status, status))} '
+        '<span class="empty">(실제 Event 발생 시점 기준 추정, 데이터로 판단 가능한 경우에만 표시)</span></p>'
+        if status else ''
+    )
+    watch = _FIELD_WATCHPOINTS.get(issue["field"], ())
+    watch_html = "".join(f"<li>{_esc(w)}</li>" for w in watch) if watch else '<li class="empty">분야별 기본 관찰 항목 없음</li>'
+    sources_html = "".join(
+        f'<li>{_esc(s["institution"])}: {_safe_link(s["url"])}</li>' for s in issue["sources"]
+    )
+    first_ev, last_ev = issue["events"][0], issue["events"][-1]
+    whats_changing = (
+        f'<p><b>기존</b>: {_esc(first_ev["title_ko"])} ({_esc(str(first_ev["date"])[:10])} 최초 관측)</p>'
+        f'<p><b>현재 관측</b>: 이후 {issue["related_event_count"] - 1}건의 관련 사건이 이어졌으며, '
+        f'가장 최근은 {_esc(last_ev["title_ko"])} ({_esc(str(last_ev["date"])[:10])})입니다.</p>'
+        f'<p><b>해석</b>: 독립 출처 {issue["independent_source_count"]}곳에서 관련 사건이 반복 확인되고 있어, '
+        f'{_esc(issue["field"])} 분야에서 \'{_esc(issue["matched_keyword"])}\' 관련 변화가 '
+        f'{_esc(_ISSUE_STATUS_KO.get(status, "지속"))} 추세로 관찰됩니다.</p>'
+    )
+    body = (
+        f'<p class="empty"><a href="../../emerging_issues/">&larr; 이슈 목록으로</a></p>'
+        f'<h2>{_esc(issue["title"])}</h2>'
+        f'<p>{_esc(issue["summary"])}</p>'
+        f'{status_line}'
+        '<h3>현재 상황</h3>' + whats_changing +
+        '<h3>왜 중요한가</h3>'
+        f'<p>{_esc(issue["field"])} 분야에서 서로 다른 날짜·독립 출처 {issue["independent_source_count"]}곳을 통해 '
+        f'\'{_esc(issue["matched_keyword"])}\' 관련 사건이 반복적으로 확인되고 있어, 일회성 보도가 아닌 '
+        '지속적인 변화 신호로 판단됩니다.</p>'
+        '<h3>Timeline</h3>' + f'<div class="kpi-row" style="flex-direction:column">{_issue_timeline_html(issue["events"])}</div>'
+        '<h3>Supporting Evidence</h3>'
+        f'<div class="empty">Sources {len(issue["sources"])}<ul>{sources_html}</ul></div>'
+        '<h3>반대 신호 / 불확실성</h3>'
+        '<p class="empty">현재 데이터 기준으로 확인된 명시적 반대 신호는 없습니다. 반대 방향의 실제 자료가 '
+        '확인되면 이 영역에 추가됩니다 (근거 없이 만들어내지 않습니다).</p>'
+        '<h3>앞으로 볼 것</h3>'
+        f'<ul>{watch_html}</ul>'
+    )
+    return _shell(f"이슈 / {issue['title'][:40]}", "emerging_issues", body, depth=2)
 
 
 # O-3D sections 14-18, 29 -- 리서치(Research Queue) page. Shows the real research_queue.json
@@ -1244,6 +1377,22 @@ def build_operator_pages(site_dir):
                 status["pages_written"].append(f"provenance/{report_id}")
             except Exception as e:  # noqa: BLE001
                 status["errors"].append({"page": f"provenance/{report_id}", "error": str(e)})
+
+        # Issue Knowledge Layer detail pages -- one per real, qualifying Issue (never a
+        # hardcoded/sample set). Stable id (keyed on the earliest member event) means the same
+        # Issue keeps the same URL as new Events accumulate into it over time.
+        issues = dd.issue_knowledge_candidates(data_dir=str(op.ROOT / "data"))
+        for issue in issues:
+            try:
+                i_dir = operator_dir / "issue" / issue["id"]
+                i_dir.mkdir(parents=True, exist_ok=True)
+                res = apub.atomic_write(i_dir / "index.html", render_issue_detail(issue),
+                                         validator=apub.html_validator)
+                if res["status"] != "PUBLISHED":
+                    raise RuntimeError(res["error"])
+                status["pages_written"].append(f"issue/{issue['id']}")
+            except Exception as e:  # noqa: BLE001
+                status["errors"].append({"page": f"issue/{issue['id']}", "error": str(e)})
     except Exception as e:  # noqa: BLE001
         status["errors"].append({"page": None, "error": str(e)})
     return status
