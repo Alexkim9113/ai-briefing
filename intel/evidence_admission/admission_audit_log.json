@@ -8977,5 +8977,45 @@
   "reason": "document_id and content_hash already present in documents.json -- no change",
   "source": "src_federal_register",
   "timestamp": "2026-10-03T12:07:43.761622+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.47363_jeast_2021_vid_1006",
+  "decision": "REJECTED_INVALID_SCHEMA",
+  "document_id": null,
+  "reason": "failed check PUBLICATION_DATE_VALID",
+  "source": "src_crossref",
+  "timestamp": "2026-10-03T12:07:53.052031+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.15556_ijiim.01.02.003",
+  "decision": "REJECTED_INVALID_SCHEMA",
+  "document_id": null,
+  "reason": "failed check PUBLICATION_DATE_VALID",
+  "source": "src_crossref",
+  "timestamp": "2026-10-03T12:07:53.052031+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.5040_9781718219342.ch-014",
+  "decision": "REJECTED_INVALID_SCHEMA",
+  "document_id": null,
+  "reason": "failed check PUBLICATION_DATE_VALID",
+  "source": "src_crossref",
+  "timestamp": "2026-10-03T12:07:53.052031+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.5304_jafscd.2013.041.001",
+  "decision": "REJECTED_INVALID_SCHEMA",
+  "document_id": null,
+  "reason": "failed check PUBLICATION_DATE_VALID",
+  "source": "src_crossref",
+  "timestamp": "2026-10-03T12:07:53.052031+00:00"
+ },
+ {
+  "candidate_id": "crossref_10.3384_ecp1392a41",
+  "decision": "REJECTED_INVALID_SCHEMA",
+  "document_id": null,
+  "reason": "failed check PUBLICATION_DATE_VALID",
+  "source": "src_crossref",
+  "timestamp": "2026-10-03T12:07:53.052031+00:00"
  }
 ]
