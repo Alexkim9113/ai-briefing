@@ -105,12 +105,12 @@
       "field": "교육·사회",
       "region": "KOREA",
       "recurring_days": 6,
-      "independent_source_count": 12,
-      "related_event_count": 12,
+      "independent_source_count": 11,
+      "related_event_count": 11,
       "tier1_present": false,
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "6일 연속 반복, 독립 출처 12개",
+      "reason": "6일 연속 반복, 독립 출처 11개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -125,6 +125,20 @@
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "6일 연속 반복, 독립 출처 10개",
+      "status": "INTELLIGENCE_CANDIDATE"
+    },
+    {
+      "candidate_id": "cand_216a43e0f2e954d6",
+      "title": "엘지",
+      "field": "교육·사회",
+      "region": "GLOBAL/UNKNOWN",
+      "recurring_days": 6,
+      "independent_source_count": 5,
+      "related_event_count": 6,
+      "tier1_present": false,
+      "related_intelligence_topic": "AI_ENERGY_INFRA",
+      "evidence_quality": "UNKNOWN",
+      "reason": "6일 연속 반복, 독립 출처 5개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -170,17 +184,17 @@
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
-      "candidate_id": "cand_0f49f1c66fd9462c",
-      "title": "엘지",
-      "field": "기술",
-      "region": "GLOBAL/UNKNOWN",
+      "candidate_id": "cand_09043142c6a7e19f",
+      "title": "마이크로소프트",
+      "field": "법·제도",
+      "region": "CHINA",
       "recurring_days": 5,
-      "independent_source_count": 4,
-      "related_event_count": 5,
+      "independent_source_count": 6,
+      "related_event_count": 6,
       "tier1_present": false,
-      "related_intelligence_topic": "AI_ENERGY_INFRA",
+      "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
-      "reason": "5일 연속 반복, 독립 출처 4개",
+      "reason": "5일 연속 반복, 독립 출처 6개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
@@ -195,20 +209,6 @@
       "related_intelligence_topic": null,
       "evidence_quality": "UNKNOWN",
       "reason": "4일 연속 반복, 독립 출처 6개",
-      "status": "INTELLIGENCE_CANDIDATE"
-    },
-    {
-      "candidate_id": "cand_399aadb53397239a",
-      "title": "마이크로소프트",
-      "field": "기술",
-      "region": "CHINA",
-      "recurring_days": 4,
-      "independent_source_count": 5,
-      "related_event_count": 5,
-      "tier1_present": false,
-      "related_intelligence_topic": null,
-      "evidence_quality": "UNKNOWN",
-      "reason": "4일 연속 반복, 독립 출처 5개",
       "status": "INTELLIGENCE_CANDIDATE"
     },
     {
