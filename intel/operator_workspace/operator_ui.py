@@ -635,7 +635,7 @@ def render_overview():
 
     if not important:
         return _shell(f"{_ko('overview')} / Today", "overview", (
-            f'{PUBLIC_SAFE_BANNER}<p class="empty">{_esc(subtitle)}</p>'
+            f'<p class="empty">{_esc(subtitle)}</p>'
             '<h2>오늘의 관측</h2>'
             '<p class="empty">오늘 수집된 정보 가운데 따로 짚을 만큼 의미 있는 변화는 확인되지 않았습니다 '
             '(정직한 결과이며, 예시를 넣지 않습니다). 전체 수집 자료는 '
@@ -665,7 +665,7 @@ def render_overview():
     )
 
     return _shell(f"{_ko('overview')} / Today", "overview", (
-        f'{PUBLIC_SAFE_BANNER}<style>{_MX_FILTER_CSS}</style>'
+        f'<style>{_MX_FILTER_CSS}</style>'
         f'<p class="empty">{_esc(subtitle)}</p>'
         f'<h2>오늘의 관측</h2><p>{_esc(observation)}</p>'
         f'{issue_section}{info_section}'
