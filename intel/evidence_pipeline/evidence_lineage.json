@@ -7976,10 +7976,96 @@
    "source_url": "https://www.engadget.com/2271136/meta-is-starting-an-enterprise-business-to-justify-its-massive-ai-spending/",
    "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
    "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6a095b728b64bb5:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6a095b728b64bb5",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609282131005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6a095b728b64bb5:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6a095b728b64bb5",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609282131005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6a095b728b64bb5:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6a095b728b64bb5",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609282131005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "a6a095b728b64bb5:g4",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "a6a095b728b64bb5",
+   "event_ids": [],
+   "evidence_record_ids": [],
+   "source_url": "https://www.khan.co.kr/article/202609282131005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=total_news",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "bed33a3df012443f:g1",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "bed33a3df012443f",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.yna.co.kr/view/AKR20260929075800072",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "bed33a3df012443f:g2",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "bed33a3df012443f",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [],
+   "source_url": "https://www.yna.co.kr/view/AKR20260929075800072",
+   "stop_reason": "이 Claim에서 명시적 Interpretation 트리거(제약/의존/통제/가치/관계 언어)가 발견되지 않음",
+   "stopped_at": "CLAIM"
+  },
+  {
+   "change_ids": [],
+   "claim_id": "bed33a3df012443f:g3",
+   "claim_status": "SECONDARY_ONLY",
+   "document_id": "bed33a3df012443f",
+   "event_ids": [
+    "evtprod_5dac0a21aadd247f"
+   ],
+   "evidence_record_ids": [
+    "evr_30"
+   ],
+   "source_url": "https://www.yna.co.kr/view/AKR20260929075800072",
+   "stop_reason": "이 Event를 지지 근거로 쓰는 활성 Change 없음(반려되었거나 아직 Change 미형성)",
+   "stopped_at": "EVENT"
   }
  ],
  "stopped_at_distribution": {
-  "CLAIM": 704,
+  "CLAIM": 710,
+  "EVENT": 1,
   "EVIDENCE_RECORD": 3
  }
 }

@@ -2,7 +2,102 @@
  "0293763d8a19531e": null,
  "0d4cfd6bc2f03d20": null,
  "2b98b32bb121f3a7": null,
- "33574c3c96a0076e": null,
+ "33574c3c96a0076e": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "오픈AI가 예상 밖 행동으로 훈련을 중단했다.",
+    "claim_type": "FACT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약: 오픈AI, 예상밖 행동 ‘훈련 중단’",
+    "object": "훈련",
+    "predicate": "중단하다",
+    "subject": "오픈AI",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "글로벌 은행 등 결제업계는 AI 에이전트가 잘못 구입하거나 너무 많은 돈을 쓸 수 있다고 우려한다.",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약: 글로벌 은행 등 결제업계는 우려 “잘못 구입·너무 많은 돈 쓸 수도”",
+    "object": "잘못 구입·너무 많은 돈을 쓸 가능성",
+    "predicate": "우려하다",
+    "subject": "글로벌 은행 등 결제업계",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 3,
+    "claim_text": "미국과 유럽은 사고 책임에 대해 개발사에 무게를 두고 있다.",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약: 미·유럽은 개발사에 책임 무게",
+    "object": "개발사 책임",
+    "predicate": "무게를 두다",
+    "subject": "미·유럽",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 4,
+    "claim_text": "생성형 AI가 스스로 결제하고 e메일을 보내는 AI 에이전트로 진화하면서 사고 책임을 둘러싼 논란이 커지고 있다.",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약: 생성형 인공지능(AI)이 질문에 답하는 챗봇을 넘어 스스로 결제하고 e메일을 보내는 ‘AI 에이전트’로 진화하면서 사고 책임을 둘러싼 논란도 커지고…",
+    "object": null,
+    "predicate": "커지다",
+    "subject": "사고 책임을 둘러싼 논란",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_CITATION",
+    "object": "예상 밖 행동",
+    "reason": "요약 텍스트에 오픈AI가 예상 밖 행동으로 훈련을 중단했다는 문구가 직접 명시됨",
+    "relation": "훈련 중단",
+    "source_claim_ids": [
+     0
+    ],
+    "subject": "오픈AI",
+    "support_type": "DIRECT"
+   },
+   {
+    "confidence": "HIGH",
+    "evidence_type": "TEXT_CITATION",
+    "object": "개발사",
+    "reason": "요약 텍스트에 미·유럽은 개발사에 책임 무게를 둔다고 명시됨",
+    "relation": "책임 부여",
+    "source_claim_ids": [
+     2
+    ],
+    "subject": "미·유럽",
+    "support_type": "DIRECT"
+   }
+  ],
+  "relations": [
+   {
+    "relation": "훈련 중단 원인",
+    "source": "오픈AI",
+    "target": "예상 밖 행동"
+   },
+   {
+    "relation": "책임 부과 대상",
+    "source": "미·유럽",
+    "target": "개발사"
+   }
+  ],
+  "uncertainties": [
+   "오픈AI가 중단한 훈련의 구체적 모델명이나 세부 내용 미기재",
+   "미국과 유럽이 개발사에 책임을 묻는 구체적 법안이나 규제 내용 미기재",
+   "요약 문장이 끊겨 있어(‘…’) 논란의 전체적인 맥락과 구체적 결론 미완결"
+  ]
+ },
  "370dd11921d63487": null,
  "4559fb34e8fd1018": null,
  "491ec7bec9434ea3": null,
@@ -318,7 +413,52 @@
   "relations": [],
   "uncertainties": []
  },
- "6d193c08d6641aad": null,
+ "6d193c08d6641aad": {
+  "claims": [
+   {
+    "_idx": 1,
+    "claim_text": "AI는 폭주 안해",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "않는다",
+    "predicate": "폭주하지",
+    "subject": "AI",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 2,
+    "claim_text": "인간적 속성 부여가 공포 키운 것",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "제목",
+    "object": "공포",
+    "predicate": "키웠다",
+    "subject": "인간적 속성 부여",
+    "unit": null,
+    "value": null
+   },
+   {
+    "_idx": 3,
+    "claim_text": "젠슨 황 엔비디아 최고경영자(CEO)는 28일(현지시간) 인공지능(AI)이 인간의 통제를 벗어날 수 ...",
+    "claim_type": "STATEMENT",
+    "confidence": "HIGH",
+    "evidence_locator": "요약",
+    "object": "인공지능(AI)이 인간의 통제를 벗어날 수 ...",
+    "predicate": "언급하다",
+    "subject": "젠슨 황 엔비디아 최고경영자(CEO)",
+    "unit": null,
+    "value": null
+   }
+  ],
+  "counter_evidence_candidates": [],
+  "evidence_candidates": [],
+  "relations": [],
+  "uncertainties": [
+   "요약문이 '벗어날 수 ...'로 중단되어 완전한 발언 내용을 확인할 수 없음"
+  ]
+ },
  "6dd0a57e7128f977": null,
  "6e6a7d9210996856": null,
  "6fc7a96597354c9d": {
