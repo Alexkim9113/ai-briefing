@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "intel/operator_workspace/operator_finalize.py"
+      - ".github/workflows/operator-finalize.yml"
 
 permissions:
   contents: write
