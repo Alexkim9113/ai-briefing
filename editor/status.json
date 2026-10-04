@@ -1,0 +1,120 @@
+{
+ "results": [
+  {
+   "ref": "tu1gvmnimukryfse",
+   "ok": true,
+   "msg": "비밀번호를 정했어요",
+   "at": "2026-09-28T13:58+09:00"
+  },
+  {
+   "ref": "8ttrj7shmuktc8hy",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T14:41+09:00"
+  },
+  {
+   "ref": "haantv57muktti3p",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T14:48+09:00"
+  },
+  {
+   "ref": "gs9v20dimuktzcch",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T14:52+09:00"
+  },
+  {
+   "ref": "j8lwrrarmul3n9aq",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:46+09:00"
+  },
+  {
+   "ref": "i9ohkb09mul4lcwi",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:50+09:00"
+  },
+  {
+   "ref": "j8lwrrarmul3n9aq",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:50+09:00"
+  },
+  {
+   "ref": "i9ohkb09mul4lcwi",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:50+09:00"
+  },
+  {
+   "ref": "ko2g5yu4mul4rwb7",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:55+09:00"
+  },
+  {
+   "ref": "ia5ugiaomul4sfy2",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T19:55+09:00"
+  },
+  {
+   "ref": "t55jqjgdmul54ozz",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-28T20:05+09:00"
+  },
+  {
+   "ref": "ns4w0kzcmul5qacw",
+   "ok": true,
+   "msg": "기사를 삭제했어요",
+   "at": "2026-09-28T20:21+09:00"
+  },
+  {
+   "ref": "ns4w0kzcmul5qacw",
+   "ok": true,
+   "msg": "기사를 삭제했어요",
+   "at": "2026-09-28T20:30+09:00"
+  },
+  {
+   "ref": "4mx5wwdqmuo571b1",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-30T23:02+09:00"
+  },
+  {
+   "ref": "e67ub2mtmuo6l58q",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-30T23:09+09:00"
+  },
+  {
+   "ref": "t0r8fiolmuo6mmzs",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-30T23:10+09:00"
+  },
+  {
+   "ref": "99812dv5muo6vfot",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-30T23:17+09:00"
+  },
+  {
+   "ref": "mzpuznihmuo73ycf",
+   "ok": true,
+   "msg": "게시했어요",
+   "at": "2026-09-30T23:23+09:00"
+  }
+ ],
+ "pin_set": true,
+ "removed": [
+  {
+   "id": "f28806b08e0360c3",
+   "title": "충남대병원 의료 인공지능 에이전트 현장 실증",
+   "at": "2026-09-28T20:30+09:00"
+  }
+ ]
+}
