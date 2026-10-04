@@ -1,0 +1,48 @@
+name: Operator Intelligence Finalize
+
+on:
+  schedule:
+    - cron: "20,50 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "intel/operator_workspace/operator_finalize.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: briefing
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build readable Intelligence and AI Issue Briefs
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash
+        run: python3 intel/operator_workspace/operator_finalize.py
+      - name: Save private Operator output
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intel_private
+          git diff --cached --quiet && exit 0
+          git commit -m "Operator Intelligence/Report finalize $(TZ=Asia/Seoul date '+%F %H:%M')"
+          for i in 1 2 3 4 5 6 7 8; do
+            git push && exit 0
+            git fetch origin main
+            git rebase -X theirs origin/main || { git rebase --abort || true; sleep 5; continue; }
+            sleep 3
+          done
+          echo "push failed after retries" >&2
+          exit 1
