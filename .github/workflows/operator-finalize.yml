@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "intel/operator_workspace/operator_finalize.py"
+      - "intel/operator_workspace/operator_fallback_enhance.py"
       - ".github/workflows/operator-finalize.yml"
 
 permissions:
@@ -31,7 +32,9 @@ jobs:
         env:
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
           GEMINI_MODEL: gemini-2.5-flash
-        run: python3 intel/operator_workspace/operator_finalize.py
+        run: |
+          python3 intel/operator_workspace/operator_finalize.py
+          python3 intel/operator_workspace/operator_fallback_enhance.py
       - name: Save private Operator output
         run: |
           git config user.name "briefing-bot"
